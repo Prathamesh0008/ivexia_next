@@ -1,3 +1,4 @@
+//ivexia\components\Navbar.jsx
 "use client";
 
 import { useState, useEffect, useRef } from "react";
@@ -135,11 +136,9 @@ export default function Navbar() {
   };
 
   return (
-    <nav
-      className="fixed left-0 right-0 bg-white/95 backdrop-blur-md shadow-md z-30 transition-all duration-500 ease-in-out"
-      style={{ top: isTopBarVisible ? `${topBarHeight}px` : "0px" }}
-    >
-      <div className="flex justify-between items-center px-4 md:px-8 h-16">
+    <nav className="fixed top-0 left-0 right-0 h-[72px] bg-white/95 backdrop-blur-md shadow-md z-50">
+      <div className="flex justify-between items-center px-4 md:px-8 h-[72px]">
+        
         {/* LOGO */}
         <div className="flex items-center cursor-pointer" onClick={() => goTo("/")}>
         <Image
@@ -214,31 +213,47 @@ export default function Navbar() {
             About
           </li>
 
-          {/* MAGAZINE DROPDOWN */}
-          <li
-            ref={magRef}
-            className="relative cursor-pointer hover:text-[#0d2d47]"
-            onClick={() => setMagOpen((prev) => !prev)}
-          >
-            <span className="inline-flex items-center gap-1">Ivexia Mag ▾</span>
+         {/* MAGAZINE DROPDOWN */}
+<li
+  ref={magRef}
+  className="relative cursor-pointer hover:text-[#0d2d47]"
+  onClick={() => setMagOpen((prev) => !prev)}
+>
+  <span className="inline-flex items-center gap-1">
+    Ivexia Mag ▾
+  </span>
 
-            {magOpen && (
-              <ul className="absolute right-0 mt-2 bg-white shadow-md rounded-md w-56 font-normal z-40 relative">
-                <li
-                  onClick={() => goTo("/ivexia-mag?category=news")}
-                  className="px-4 py-2 hover:bg-gray-100 text-sm"
-                >
-                  News
-                </li>
-                <li
-                  onClick={() => goTo("/ivexia-mag?category=health")}
-                  className="px-4 py-2 hover:bg-gray-100 text-sm"
-                >
-                  Health
-                </li>
-              </ul>
-            )}
-          </li>
+  {magOpen && (
+    <ul className="absolute top-full left-0 mt-2 bg-white shadow-md rounded-md w-64 font-normal z-40">
+      
+      <li
+        onClick={() => goTo("/ivexia-mag?category=news")}
+        className="px-4 py-2 hover:bg-gray-100 text-sm cursor-pointer"
+      >
+        News
+      </li>
+
+      <li
+        onClick={() => goTo("/ivexia-mag?category=health")}
+        className="px-4 py-2 hover:bg-gray-100 text-sm cursor-pointer"
+      >
+        Health
+      </li>
+
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          setMagOpen(false);
+        }}
+        className="absolute top-2 right-2 text-gray-500 hover:text-black"
+        type="button"
+      >
+        <FaTimes />
+      </button>
+
+    </ul>
+  )}
+</li>
 
           <li onClick={() => goTo("/contact")} className="hover:text-[#0d2d47] cursor-pointer">
             Contact

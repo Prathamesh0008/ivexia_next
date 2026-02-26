@@ -70,7 +70,7 @@ export default function LeadershipSection() {
     <section className="relative text-white overflow-hidden">
       {/* CEO Background Section */}
    <div
-  className="relative h-[95vh] md:h-[100vh] flex flex-col justify-center items-center text-center px-6 md:px-16"
+ className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 md:px-16 py-20"
   style={{
     backgroundImage:
       "linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.8)), url('/images/ceo.jpeg')",

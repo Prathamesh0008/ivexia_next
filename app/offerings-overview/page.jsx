@@ -10,35 +10,35 @@ export default function OfferingsOverviewPage() {
     {
       title: "Active Pharmaceutical Ingredients (API)",
       desc: "Explore our API portfolio built with quality, consistency, and global compliance in mind.",
-      img: "/overview-api.jpg",
+      img: "/images/overview-api.jpg",
       btn: "Explore API",
       link: "/products/ingredient",
     },
     {
       title: "Finished Pharmaceutical Products",
       desc: "Discover our finished dosage portfolio including key therapeutic categories for global markets.",
-      img: "/overview-products.jpg",
+      img: "/images/overview-products.jpg",
       btn: "View Products",
       link: "/products",
     },
     {
       title: "OTC & Consumer Healthcare",
       desc: "Browse OTC and consumer healthcare offerings designed for daily wellness and accessibility.",
-      img: "/overview-otc.jpg",
+      img: "/images/overview-otc.jpg",
       btn: "Explore OTC",
       link: "/otc",
     },
     {
       title: "Ivexia Magazine",
       desc: "Read updates, insights, and articles from Ivexia covering health, news, and innovation.",
-      img: "/overview-mag.jpg",
+      img: "/images/overview-mag.jpg",
       btn: "Read Magazine",
       link: "/ivexia-mag",
     },
     {
       title: "About Ivexia",
       desc: "Learn more about our mission, capabilities, leadership, and global presence.",
-      img: "/overview-company.jpg",
+      img: "/images/overview-company.jpg",
       btn: "About Company",
       link: "/about",
     },
@@ -49,7 +49,7 @@ export default function OfferingsOverviewPage() {
       {/* HERO */}
       <section className="relative w-full h-[28vh] md:h-[55vh] overflow-hidden">
         <Image
-          src="/overview-hero.jpg"
+          src="/images/overview-hero.jpg"
           alt="Offerings Overview"
           fill
           className="object-cover"

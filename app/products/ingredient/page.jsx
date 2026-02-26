@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState, useEffect, useRef } from "react";
 
 import IngredientHero from "@/components/IngredientHero";
 import IngredientStats from "@/components/IngredientStats";
@@ -24,11 +24,11 @@ export default function IngredientPage() {
   const [dosage, setDosage] = useState("All");
   const [sortBy, setSortBy] = useState("name-asc");
   const [page, setPage] = useState(1);
-
+const gridRef = useRef(null);
   // Responsive sizing
   const [pageSize, setPageSize] = useState(12);
 
-  useEffect(() => {
+useEffect(() => {
     function updatePageSize() {
       const w = window.innerWidth;
       if (w < 640) setPageSize(4);
@@ -41,8 +41,29 @@ export default function IngredientPage() {
     return () => window.removeEventListener("resize", updatePageSize);
   }, []);
 
-  useEffect(() => setPage(1), [pageSize]);
+  /* ---------------------------
+     2️⃣ Scroll On Page Change
+  ---------------------------- */
+  useEffect(() => {
+    if (!gridRef.current) return;
 
+    const y =
+      gridRef.current.getBoundingClientRect().top +
+      window.pageYOffset -
+      80; // adjust for navbar height
+
+    window.scrollTo({
+      top: y,
+      behavior: "smooth",
+    });
+  }, [page]);
+
+  /* ---------------------------
+     3️⃣ Reset Page When Size Changes
+  ---------------------------- */
+  useEffect(() => {
+    setPage(1);
+  }, [pageSize]);
   // Categories (raw keys)
   const categories = useMemo(() => {
     const unique = new Set();

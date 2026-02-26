@@ -48,7 +48,7 @@ body {
 
 /* Prevent breadcrumbs from hiding under navbar */
 body {
-  padding-top: 80px !important;
+ 
 }
 
 /* Ensure table never overflows weirdly on mobile */

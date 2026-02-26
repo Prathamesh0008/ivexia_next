@@ -1,244 +1,169 @@
-// ivexia\data\ingredients.js
-const COMMON_IMAGE = "/src/assets/logo/capsuleimage.jpg";
+const COMMON_IMAGE = "/images/capsuleimage.jpg";
 
 const INGREDIENTS = [
-  // ---- CARDIOLOGY ----
+  // =========================
+  // CARDIOLOGY
+  // =========================
   {
     id: "amiodarone",
-    nameKey: "ingredients.amiodarone.name",
-    descKey: "ingredients.amiodarone.desc",
-    categoryKey: "ingredients.categories.cardiology",
-    dosageKeys: ["ingredients.forms.tablet"],
+    name: "Amiodarone Hydrochloride",
+    category: "Cardiology",
     slug: "amiodarone-hcl",
     cas: "",
-    badges: ["GMP"],
-    synonyms: [],
-    specs: [],
-    image: COMMON_IMAGE
+    image: COMMON_IMAGE,
   },
   {
     id: "atorvastatin",
-    nameKey: "ingredients.atorvastatin.name",
-    descKey: "ingredients.atorvastatin.desc",
-    categoryKey: "ingredients.categories.cardiology",
-    dosageKeys: ["ingredients.forms.tablet"],
+    name: "Atorvastatin Calcium",
+    category: "Cardiology",
     slug: "atorvastatin-calcium",
     cas: "",
-    badges: ["GMP"],
-    synonyms: [],
-    specs: [],
-    image: COMMON_IMAGE
+    image: COMMON_IMAGE,
   },
   {
     id: "amlodipine",
-    nameKey: "ingredients.amlodipine.name",
-    descKey: "ingredients.amlodipine.desc",
-    categoryKey: "ingredients.categories.cardiology",
-    dosageKeys: ["ingredients.forms.tablet"],
+    name: "Amlodipine Besylate",
+    category: "Cardiology",
     slug: "amlodipine-besylate",
     cas: "",
-    badges: [],
-    synonyms: [],
-    specs: [],
-    image: COMMON_IMAGE
+    image: COMMON_IMAGE,
   },
 
-  // ---- ANTIBIOTICS ----
+  // =========================
+  // ANTI-INFECTIVES
+  // =========================
   {
     id: "azithromycin",
-    nameKey: "ingredients.azithromycin.name",
-    descKey: "ingredients.azithromycin.desc",
-    categoryKey: "ingredients.categories.anti_infective",
-    dosageKeys: ["ingredients.forms.tablet", "ingredients.forms.capsule"],
+    name: "Azithromycin",
+    category: "Anti-Infective",
     slug: "azithromycin",
     cas: "",
-    badges: ["GMP"],
-    synonyms: [],
-    specs: [],
-    image: COMMON_IMAGE
+    image: COMMON_IMAGE,
   },
   {
     id: "amoxicillin",
-    nameKey: "ingredients.amoxicillin.name",
-    descKey: "ingredients.amoxicillin.desc",
-    categoryKey: "ingredients.categories.anti_infective",
-    dosageKeys: ["ingredients.forms.tablet", "ingredients.forms.capsule"],
+    name: "Amoxicillin",
+    category: "Anti-Infective",
     slug: "amoxicillin",
     cas: "",
-    badges: [],
-    synonyms: [],
-    specs: [],
-    image: COMMON_IMAGE
+    image: COMMON_IMAGE,
   },
   {
     id: "clarithromycin",
-    nameKey: "ingredients.clarithromycin.name",
-    descKey: "ingredients.clarithromycin.desc",
-    categoryKey: "ingredients.categories.anti_infective",
-    dosageKeys: ["ingredients.forms.tablet"],
+    name: "Clarithromycin",
+    category: "Anti-Infective",
     slug: "clarithromycin",
     cas: "",
-    badges: [],
-    synonyms: [],
-    specs: [],
-    image: COMMON_IMAGE
+    image: COMMON_IMAGE,
   },
 
-  // ---- ANALGESIC / PAIN ----
+  // =========================
+  // ANALGESIC / PAIN
+  // =========================
   {
     id: "codeine-sulfate",
-    nameKey: "ingredients.codeine.name",
-    descKey: "ingredients.codeine.desc",
-    categoryKey: "ingredients.categories.pain",
-    dosageKeys: ["ingredients.forms.tablet"],
+    name: "Codeine Sulfate",
+    category: "Analgesic / Pain Management",
     slug: "codeine-sulfate",
     cas: "",
-    badges: ["GMP"],
-    synonyms: [],
-    specs: [],
-    image: COMMON_IMAGE
+    image: COMMON_IMAGE,
   },
   {
     id: "tramadol",
-    nameKey: "ingredients.tramadol.name",
-    descKey: "ingredients.tramadol.desc",
-    categoryKey: "ingredients.categories.pain",
-    dosageKeys: [
-      "ingredients.forms.tablet",
-      "ingredients.forms.injection"
-    ],
+    name: "Tramadol Hydrochloride",
+    category: "Analgesic / Pain Management",
     slug: "tramadol-hcl",
     cas: "",
-    badges: [],
-    synonyms: [],
-    specs: [],
-    image: COMMON_IMAGE
+    image: COMMON_IMAGE,
   },
   {
     id: "diclofenac",
-    nameKey: "ingredients.diclofenac.name",
-    descKey: "ingredients.diclofenac.desc",
-    categoryKey: "ingredients.categories.pain",
-    dosageKeys: ["ingredients.forms.tablet"],
+    name: "Diclofenac Sodium",
+    category: "Analgesic / Anti-Inflammatory",
     slug: "diclofenac-sodium",
     cas: "",
-    badges: [],
-    synonyms: [],
-    specs: [],
-    image: COMMON_IMAGE
+    image: COMMON_IMAGE,
   },
 
-  // ---- DIABETES / METABOLIC ----
+  // =========================
+  // DIABETES / ENDOCRINOLOGY
+  // =========================
   {
     id: "metformin",
-    nameKey: "ingredients.metformin.name",
-    descKey: "ingredients.metformin.desc",
-    categoryKey: "ingredients.categories.endocrinology",
-    dosageKeys: ["ingredients.forms.tablet"],
+    name: "Metformin Hydrochloride",
+    category: "Endocrinology / Diabetes",
     slug: "metformin-hcl",
     cas: "",
-    badges: ["GMP"],
-    synonyms: [],
-    specs: [],
-    image: COMMON_IMAGE
+    image: COMMON_IMAGE,
   },
   {
     id: "sitagliptin",
-    nameKey: "ingredients.sitagliptin.name",
-    descKey: "ingredients.sitagliptin.desc",
-    categoryKey: "ingredients.categories.endocrinology",
-    dosageKeys: ["ingredients.forms.tablet"],
+    name: "Sitagliptin Phosphate",
+    category: "Endocrinology / Diabetes",
     slug: "sitagliptin-phosphate",
     cas: "",
-    badges: [],
-    synonyms: [],
-    specs: [],
-    image: COMMON_IMAGE
+    image: COMMON_IMAGE,
   },
 
-  // ---- RESPIRATORY ----
+  // =========================
+  // RESPIRATORY
+  // =========================
   {
     id: "salbutamol",
-    nameKey: "ingredients.salbutamol.name",
-    descKey: "ingredients.salbutamol.desc",
-    categoryKey: "ingredients.categories.respiratory",
-    dosageKeys: ["ingredients.forms.tablet"],
+    name: "Salbutamol Sulphate",
+    category: "Respiratory",
     slug: "salbutamol-sulphate",
     cas: "",
-    badges: [],
-    synonyms: [],
-    specs: [],
-    image: COMMON_IMAGE
+    image: COMMON_IMAGE,
   },
   {
     id: "montelukast",
-    nameKey: "ingredients.montelukast.name",
-    descKey: "ingredients.montelukast.desc",
-    categoryKey: "ingredients.categories.respiratory",
-    dosageKeys: ["ingredients.forms.tablet"],
+    name: "Montelukast Sodium",
+    category: "Respiratory",
     slug: "montelukast-sodium",
     cas: "",
-    badges: [],
-    synonyms: [],
-    specs: [],
-    image: COMMON_IMAGE
+    image: COMMON_IMAGE,
   },
 
-  // ---- GASTRO ----
+  // =========================
+  // GASTROENTEROLOGY
+  // =========================
   {
     id: "omeprazole",
-    nameKey: "ingredients.omeprazole.name",
-    descKey: "ingredients.omeprazole.desc",
-    categoryKey: "ingredients.categories.gastro",
-    dosageKeys: ["ingredients.forms.capsule"],
+    name: "Omeprazole",
+    category: "Gastroenterology",
     slug: "omeprazole",
     cas: "",
-    badges: [],
-    synonyms: [],
-    specs: [],
-    image: COMMON_IMAGE
+    image: COMMON_IMAGE,
   },
   {
     id: "pantoprazole",
-    nameKey: "ingredients.pantoprazole.name",
-    descKey: "ingredients.pantoprazole.desc",
-    categoryKey: "ingredients.categories.gastro",
-    dosageKeys: ["ingredients.forms.tablet"],
+    name: "Pantoprazole Sodium",
+    category: "Gastroenterology",
     slug: "pantoprazole-sodium",
     cas: "",
-    badges: [],
-    synonyms: [],
-    specs: [],
-    image: COMMON_IMAGE
+    image: COMMON_IMAGE,
   },
 
-  // ---- VITAMINS / NUTRA ----
+  // =========================
+  // VITAMINS / NUTRACEUTICAL
+  // =========================
   {
     id: "vitamin-c",
-    nameKey: "ingredients.vitamin_c.name",
-    descKey: "ingredients.vitamin_c.desc",
-    categoryKey: "ingredients.categories.nutraceutical",
-    dosageKeys: ["ingredients.forms.tablet"],
+    name: "Vitamin C (Ascorbic Acid)",
+    category: "Nutraceutical",
     slug: "vitamin-c",
     cas: "",
-    badges: [],
-    synonyms: [],
-    specs: [],
-    image: COMMON_IMAGE
+    image: COMMON_IMAGE,
   },
   {
     id: "vitamin-b12",
-    nameKey: "ingredients.vitamin_b12.name",
-    descKey: "ingredients.vitamin_b12.desc",
-    categoryKey: "ingredients.categories.nutraceutical",
-    dosageKeys: ["ingredients.forms.tablet"],
+    name: "Vitamin B12 (Cyanocobalamin)",
+    category: "Nutraceutical",
     slug: "vitamin-b12",
     cas: "",
-    badges: [],
-    synonyms: [],
-    specs: [],
-    image: COMMON_IMAGE
-  }
+    image: COMMON_IMAGE,
+  },
 ];
 
 export default INGREDIENTS;

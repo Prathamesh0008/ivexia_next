@@ -1,3 +1,4 @@
+//ivexia\app\page.js
 "use client";
 
 import Hero from "@/components/Hero";
@@ -11,7 +12,7 @@ import LatestFromIvexia from "@/components/LatestFromIvexia";
 
 export default function Page() {
   return (
-    <div className="">
+    <div >
       <Hero />
       <IvexiaNumbers />
       <AboutVideo />

@@ -1,3 +1,4 @@
+//ivexia\components\IngredientGrid.jsx
 "use client";
 
 import { useRouter } from "next/navigation";

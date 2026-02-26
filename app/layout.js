@@ -22,19 +22,16 @@ export default function RootLayout({ children }) {
         />
       </head>
 
-<body className="pt-16">
-        
-          {/* TopBar optional */}
-          {/* <TopBar /> */}
-          <Navbar />
-<Breadcrumbs />
-          
-          <main className="flex-grow min-h-screen bg-white text-[#0d2d47]">
-            {children}
-          </main>
+      <body>
+        <Navbar />
 
-          <Footer />
-        
+        {/* 🔥 Push everything below navbar */}
+        <main className="pt-[72px] min-h-screen text-[#0d2d47]">
+          <Breadcrumbs />
+          {children}
+        </main>
+
+        <Footer />
       </body>
     </html>
   );

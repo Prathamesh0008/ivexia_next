@@ -25,7 +25,7 @@ export default function Breadcrumbs() {
   });
 
   return (
-    <div className="bg-white relative z-20">
+ <div className="bg-white relative z-20">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-2.5 md:py-3">
         <nav className="flex items-center flex-wrap gap-1.5 text-[11px] md:text-sm">
           <Link href="/" className="font-medium text-[#0d2d47] hover:text-[#19a6b5]">

@@ -1,3 +1,4 @@
+//ivexia\components\Hero.jsx
 "use client";
 
 import { useState, useEffect, useRef } from "react";
@@ -75,7 +76,7 @@ export default function Hero() {
     if (isHovered) return;
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % banners.length);
-    }, 5000); // Slightly longer for better readability
+    }, 3000); // Slightly longer for better readability
     return () => clearInterval(interval);
   }, [isHovered, banners.length]);
 
@@ -95,7 +96,7 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className="relative w-full h-[85vh] md:h-[80vh] overflow-hidden bg-[#0d2d47]"
+      className="relative w-full h-[85vh] md:h-[80vh] overflow-hidden bg-[#0d2d47] pt-0"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onTouchStart={handleTouchStart}
@@ -193,7 +194,7 @@ export default function Hero() {
           key={currentIndex}
           initial={{ width: "0%" }}
           animate={{ width: "100%" }}
-          transition={{ duration: 5, ease: "linear" }}
+          transition={{ duration: 3, ease: "linear" }}
           className="h-full bg-white"
           style={{ backgroundColor: banners[currentIndex]?.color.includes('FF7A00') ? '#FF7A00' : '#FFFFFF' }}
         />
@@ -237,14 +238,14 @@ export default function Hero() {
       </button>
 
       {/* Slide Counter */}
-      <div className="absolute top-8 right-8 z-30 bg-black/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10">
+      {/* <div className="absolute top-8 right-8 z-30 bg-black/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10">
         <span className="text-white text-sm font-medium">
           {String(currentIndex + 1).padStart(2, '0')} / {String(banners.length).padStart(2, '0')}
         </span>
-      </div>
+      </div> */}
 
       {/* Scroll Indicator */}
-      <motion.div 
+      {/* <motion.div 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.5, duration: 0.5 }}
@@ -254,7 +255,7 @@ export default function Hero() {
           <span>SCROLL</span>
           <div className="w-px h-12 bg-gradient-to-b from-white/60 to-transparent" />
         </div>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 }
