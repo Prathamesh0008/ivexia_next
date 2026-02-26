@@ -1,0 +1,5042 @@
+[
+  {
+    "CATEGORY": "ANTICANCER",
+    "MOLECULE NAME": "Carboplatin Injection",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "10 mg/ ml",
+    "DOSAGE FORM": "Injection",
+    "PACK SIZE": "150 mg/15 ml vial 450 mg/45 ml vial",
+    "TYPE OF FORMLN": "Liquid Injection",
+    "CAS-ID": "41575-94-4",
+    "id": 1
+  },
+  {
+    "CATEGORY": "ANTICANCER",
+    "MOLECULE NAME": "Cisplatin Injection",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "1 mg/ ml",
+    "DOSAGE FORM": "Injection",
+    "PACK SIZE": "10 mg/ 10 ml vial,50 mg/ 50 ml vial",
+    "TYPE OF FORMLN": "Liquid Injection",
+    "CAS-ID": "15663-27-1",
+    "id": 2
+  },
+  {
+    "CATEGORY": "ANTICANCER",
+    "MOLECULE NAME": "Cyclophosphamide for Injection",
+    "PHARM SPECN": "BP/USP",
+    "STRENGTH": "200 mg/ 15 ml, 500 mg/ 30 ml, 1000 mg/50 ml",
+    "DOSAGE FORM": "Injection",
+    "PACK SIZE": "200 mg/ 15 ml vial,500 mg/ 30 ml vial 1000 mg/ 50 ml vial",
+    "TYPE OF FORMLN": "Dry Powder For Injection",
+    "CAS-ID": "6055-19-2",
+    "id": 3
+  },
+  {
+    "CATEGORY": "ANTICANCER",
+    "MOLECULE NAME": "Doxorubicin Hydrochloride Injection",
+    "PHARM SPECN": "USP",
+    "STRENGTH": "10 mg/ 5 ml 25 ml",
+    "Column5": "50 mg/",
+    "DOSAGE FORM": "Injection",
+    "PACK SIZE": "10mg/ 5 ml vial 50 mg/ 25 ml vial",
+    "TYPE OF FORMLN": "Liquid Injection",
+    "CAS-ID": " 25316-40-9",
+    "id": 4
+  },
+  {
+    "CATEGORY": "ANTICANCER",
+    "MOLECULE NAME": "Epirubicin Hydrochloride Injection",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "10 mg/ vial vial",
+    "Column5": "50 mg/",
+    "DOSAGE FORM": "Injection",
+    "PACK SIZE": "---",
+    "TYPE OF FORMLN": "---",
+    "CAS-ID": "56390-09-1",
+    "id": 5
+  },
+  {
+    "CATEGORY": "ANTICANCER",
+    "MOLECULE NAME": "Etoposide Injection",
+    "PHARM SPECN": "USP",
+    "STRENGTH": "20 mg/ ml",
+    "DOSAGE FORM": "Injection",
+    "PACK SIZE": "100 mg/ 5 ml vial",
+    "TYPE OF FORMLN": "Liquid Injection",
+    "CAS-ID": "33419-42-0 ",
+    "id": 6
+  },
+  {
+    "CATEGORY": "ANTICANCER",
+    "MOLECULE NAME": "Fluorouracil Injection",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "50 mg/ ml",
+    "DOSAGE FORM": "Injection",
+    "PACK SIZE": "250 mg/ 5 ml vial 500 mg/10 ml vial",
+    "TYPE OF FORMLN": "Liquid Injection",
+    "CAS-ID": "51-21-8",
+    "id": 7
+  },
+  {
+    "CATEGORY": "ANTICANCER",
+    "MOLECULE NAME": "Docetaxal Injection",
+    "PHARM SPECN": "---",
+    "STRENGTH": "40 mg/ ml",
+    "DOSAGE FORM": "---",
+    "PACK SIZE": "---",
+    "TYPE OF FORMLN": "---",
+    "CAS-ID": "114977-28-5",
+    "id": 8
+  },
+  {
+    "CATEGORY": "ANTICANCER",
+    "MOLECULE NAME": "Gemcitabine Hydrochloride for Injection",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "200 mg/ vial 1gm/ vial",
+    "DOSAGE FORM": "Injection",
+    "PACK SIZE": "---",
+    "TYPE OF FORMLN": "---",
+    "CAS-ID": "122111-03-9",
+    "id": 9
+  },
+  {
+    "CATEGORY": "ANTICANCER",
+    "MOLECULE NAME": "Hydroxyurea Capsules",
+    "PHARM SPECN": "USP",
+    "STRENGTH": "500 mg",
+    "DOSAGE FORM": "Capsules",
+    "PACK SIZE": "10 x 10's",
+    "TYPE OF FORMLN": "Hard Gelatin Capsules",
+    "CAS-ID": "127-07-1",
+    "id": 10
+  },
+  {
+    "CATEGORY": "ANTICANCER",
+    "MOLECULE NAME": "Ifosfamide for Injection",
+    "PHARM SPECN": "USP",
+    "STRENGTH": "1 gm/ vial",
+    "DOSAGE FORM": "Injection",
+    "PACK SIZE": "---",
+    "TYPE OF FORMLN": "---",
+    "CAS-ID": "3778-73-2",
+    "id": 11
+  },
+  {
+    "CATEGORY": "ANTICANCER",
+    "MOLECULE NAME": "Irinotecan Hydrochloride Injection",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "20 mg/ ml",
+    "DOSAGE FORM": "Injection",
+    "PACK SIZE": "---",
+    "TYPE OF FORMLN": "---",
+    "CAS-ID": "136572-09-3",
+    "id": 12
+  },
+  {
+    "CATEGORY": "ANTICANCER",
+    "MOLECULE NAME": "Letrozole Tablets",
+    "PHARM SPECN": "USP",
+    "STRENGTH": "2.5 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK SIZE": "---",
+    "TYPE OF FORMLN": "Film Coated Tablets",
+    "CAS-ID": "112809-51-5",
+    "id": 13
+  },
+  {
+    "CATEGORY": "ANTICANCER",
+    "MOLECULE NAME": "Liposomal Doxorubicin Hydrochloride Injection",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "10 mg 50 mg",
+    "DOSAGE FORM": "Injection",
+    "PACK SIZE": "---",
+    "TYPE OF FORMLN": "---",
+    "CAS-ID": "25316-40-9",
+    "id": 14
+  },
+  {
+    "CATEGORY": "ANTICANCER",
+    "MOLECULE NAME": "Methotrexate Injection",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "25 mg/ml",
+    "DOSAGE FORM": "Injection",
+    "PACK SIZE": "2.5 mg/ 2 ml vial 50 mg/ 2 ml vial 1000 mg/ 10 ml vial",
+    "TYPE OF FORMLN": "Liquid Injection",
+    "CAS-ID": "59-05-2",
+    "id": 15
+  },
+  {
+    "CATEGORY": "ANTICANCER",
+    "MOLECULE NAME": "Methotrexate Tablets",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "2.5 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK SIZE": "10 x 10's",
+    "TYPE OF FORMLN": "Uncoated Tablets",
+    "CAS-ID": "59-05-2",
+    "id": 16
+  },
+  {
+    "CATEGORY": "ANTICANCER",
+    "MOLECULE NAME": "Paclitaxel Injection",
+    "PHARM SPECN": "USP",
+    "STRENGTH": "30 mg/5ml 100 mg/16.7 ml 260 mg/43.4 ml",
+    "DOSAGE FORM": "Injection",
+    "PACK SIZE": "Vial containing 30mg Vial containing 100mg Vial containing 260 mg",
+    "TYPE OF FORMLN": "Liquid Injection",
+    "CAS-ID": "33069-62-4",
+    "id": 17
+  },
+  {
+    "CATEGORY": "ANTICANCER",
+    "MOLECULE NAME": "Tamoxifen Tablets",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "10 mg 20 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK SIZE": "10 x 10's",
+    "TYPE OF FORMLN": "Uncoated Tablets",
+    "CAS-ID": "10540-29-1",
+    "id": 18
+  },
+  {
+    "CATEGORY": "ANTICANCER",
+    "MOLECULE NAME": "Vinblastine Sulphate Injection",
+    "STRENGTH": "1 mg/ ml",
+    "DOSAGE FORM": "Injection",
+    "TYPE OF FORMLN": "---",
+    "CAS-ID": "143-67-9",
+    "id": 19
+  },
+  {
+    "CATEGORY": "ANTICANCER",
+    "MOLECULE NAME": "Vincristine Sulphate Injection",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "1 mg/ ml",
+    "DOSAGE FORM": "Injection",
+    "TYPE OF FORMLN": "---",
+    "CAS-ID": "2068-78-2",
+    "id": 20
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Amoxicillin and Clavulanate Potassium Tablets USP",
+    "PHARM SPECN": "USP",
+    "STRENGTH": "375 mg, 625 mg 1000 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK SIZE": "2 x 6's 1 x 4's",
+    "TYPE OF FORMLN": "Film Coated Tablets",
+    "CAS-ID": "74469-00-4",
+    "id": 21
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Amoxicillin",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "250mg 500mg",
+    "DOSAGE FORM": "Capsule",
+    "CAS-ID": "54965-24-1",
+    "id": 22
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Levofloxacin + Ornidazole",
+    "STRENGTH": "250mg + 500mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK SIZE": "10X10",
+    "CAS-ID": "138199-71-0",
+    "id": 23
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Amoxycillin + Dicloxacillin",
+    "STRENGTH": "125mg + 125mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK SIZE": "10X10",
+    "API-CAS": {
+      "Amoxicillin": "26787-78-0",
+      "Dicloxacillin": "3116-76-5"
+    },
+    "id": 24
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Ampicillin",
+    "STRENGTH": "125mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK SIZE": "20X10",
+    "CAS-ID": "113-98-4",
+    "id": 25
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Ampicillin",
+    "STRENGTH": "250mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK SIZE": "10X10",
+    "CAS-ID": "113-98-4",
+    "id": 26
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Azithtromycin Despersible",
+    "STRENGTH": "100mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK SIZE": "10X10",
+    "CAS-ID": "117772-70-0",
+    "id": 27
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Azithtromycin",
+    "STRENGTH": "100mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK SIZE": "10X10",
+    "CAS-ID": "117772-70-0",
+    "id": 28
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Azithtromycin",
+    "STRENGTH": "250mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK SIZE": "10X1X6",
+    "CAS-ID": "83905-01-5",
+    "id": 29
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Azithtromycin",
+    "STRENGTH": "500mg",
+    "Column5": "Tablets",
+    "DOSAGE FORM": "10X1X3",
+    "CAS-ID": "83905-01-5",
+    "id": 30
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefpodoxime + Clavulanate Potassium",
+    "STRENGTH": "200mg + 125mg",
+    "Column5": "Tablets",
+    "DOSAGE FORM": "10X1X6",
+    "API-CAS": {
+      "Cefpodoxime Proxetil": "87239-81-4",
+      "Clavulanate Potassium": "61177-45-5"
+    },
+    "id": 31
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefpodoxime + Clavulanate Potassium",
+    "STRENGTH": "100mg + 62.5mg",
+    "Column5": "Tablets",
+    "DOSAGE FORM": "6’s",
+    "API-CAS": {
+      "Cefpodoxime Proxetil": "87239-81-4",
+      "Clavulanate Potassium": "61177-45-5"
+    },
+    "id": 32
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefpodoxime Proxetil",
+    "STRENGTH": "50mg",
+    "Column5": "Tablets",
+    "DOSAGE FORM": "10X10",
+    "CAS-ID": "87239-81-4",
+    "id": 33
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefpodoxime Proxetil + Clavulanate Potassium",
+    "STRENGTH": "100mg + 125mg",
+    "Column5": "Tablets",
+    "DOSAGE FORM": "3X10",
+    "API-CAS": {
+      "Cefpodoxime Proxetil": "87239-81-4",
+      "Clavulanate Potassium": "61177-45-5"
+    },
+    "id": 34
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Co-amoxiclav Injection",
+    "PHARM SPECN": "IH",
+    "STRENGTH": "600mg /1200mg",
+    "Column5": "Injection",
+    "API-CAS": {
+      "Amoxicillin": "26787-78-0",
+      "Clavulanic Acid": "58001-44-8",
+      "Potassium Clavulanate": "61177-45-5"
+    },
+    "id": 35
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Azithromycin Dihydrate Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "250 mg/ 500 mg.",
+    "Column5": "Tablets",
+    "DOSAGE FORM": "20 x10's",
+    "PACK SIZE": "Film Coated Tablets",
+    "CAS-ID": "117772-70-0",
+    "id": 36
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefepime for Injection",
+    "STRENGTH": "500 mg/1000 mg",
+    "Column5": "Injection",
+    "DOSAGE FORM": "---",
+    "PACK SIZE": "---",
+    "CAS-ID": "88040-23-7",
+    "id": 37
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefixime Tablets",
+    "PHARM SPECN": "USP",
+    "STRENGTH": "100 mg / 200 mg 400 mg",
+    "Column5": "Tablets",
+    "DOSAGE FORM": "10 x 10's",
+    "PACK SIZE": "Film Coated Tablets",
+    "CAS-ID": "79350-37-1",
+    "id": 38
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefixime for Oral Suspension",
+    "PHARM SPECN": "USP",
+    "STRENGTH": "50 mg/ 5ml",
+    "Column5": "Suspension",
+    "DOSAGE FORM": "Bottle of 30 ml",
+    "PACK SIZE": "Oral Liquid",
+    "CAS-ID": "79350-37-1",
+    "id": 39
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefixime Dispersible Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "50 mg / 100 mg",
+    "Column5": "Tablets",
+    "DOSAGE FORM": "10 x 10's",
+    "PACK SIZE": "Dispersible Tablets",
+    "CAS-ID": "79350-37-1",
+    "id": 40
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefpodoxime Tablets",
+    "STRENGTH": "100 mg/ 200 mg",
+    "CAS-ID": "87239-81-4",
+    "id": 41
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefalexin Capsules BP",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "250 mg / 500 mg",
+    "Column5": "Capsules",
+    "PACK SIZE": "Hard Gelatin Capsules",
+    "CAS-ID": "15686-71-2",
+    "id": 42
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefadroxil Capsules BP",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "250 mg/ 500 mg",
+    "Column5": "Capsules",
+    "PACK SIZE": "Hard Gelatin Capsules",
+    "CAS-ID": "66592-87-8",
+    "id": 43
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefadroxil Oral Suspension BP",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "125 mg/ 5ml",
+    "Column5": "Suspension",
+    "PACK SIZE": "Oral Liquid",
+    "CAS-ID": "66592-87-8",
+    "id": 44
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefadroxil Oral Suspension BP",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "250 mg/ 5ml",
+    "Column5": "Suspension",
+    "PACK SIZE": "Oral Liquid",
+    "CAS-ID": "66592-87-8",
+    "id": 45
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Chloroquine PhosphateTablets",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "250 mg /500 mg.",
+    "Column5": "Tablets",
+    "DOSAGE FORM": "50 x 10's",
+    "PACK SIZE": "Film Coated Tablets",
+    "CAS-ID": "50-63-5",
+    "id": 46
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Ciprofloxacin Tablets",
+    "PHARM SPECN": "USP",
+    "STRENGTH": "250 mg/ 500 mg.",
+    "Column5": "Tablets",
+    "DOSAGE FORM": "10 x 10's",
+    "PACK SIZE": "Film Coated Tablets",
+    "CAS-ID": "85721-33-1",
+    "id": 47
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Ceftriaxone Sodium Injection",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "1000mg/2000mg",
+    "Column5": "Injection",
+    "CAS-ID": "104376-79-6",
+    "id": 48
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefotaxime Sodium Injection",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "500mg /1000mg 2000mg",
+    "Column5": "Injection",
+    "CAS-ID": "64485-93-4",
+    "id": 49
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefazolin Sodium Injection",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "1000mg",
+    "Column5": "Injection",
+    "CAS-ID": "27164-46-1",
+    "id": 50
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Gatifloxacin Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "200 mg/ 400 mg",
+    "Column5": "Tablets",
+    "DOSAGE FORM": "10 x10's",
+    "PACK SIZE": "Film Coated Tablets",
+    "CAS-ID": "112811-59-3",
+    "id": 51
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Gentamicin Injection",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "40 mg/ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Vial of 10 ml Vial of 30 ml",
+    "PACK SIZE": "Liquid Injection",
+    "CAS-ID": "1405-41-0",
+    "id": 52
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Levofloxacin Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "250 mg / 500 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK SIZE": "Film Coated Tablets",
+    "CAS-ID": "100986-85-4",
+    "id": 53
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Ofloxacin Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "200 mg / 400 mg",
+    "DOSAGE FORM": "10 x 10's",
+    "PACK SIZE": "Film Coated Tablets",
+    "CAS-ID": "82419-36-1",
+    "id": 54
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Ofloxacin Extended Release Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "400 mg",
+    "DOSAGE FORM": "10 x 10's",
+    "PACK SIZE": "Extended Release Film Coated Tablets",
+    "CAS-ID": "82419-36-1",
+    "id": 55
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Norfloxacin Tablets",
+    "PHARM SPECN": "USP",
+    "STRENGTH": "200 mg / 400 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK SIZE": "Film Coated Tablets",
+    "CAS-ID": "70458-96-7",
+    "id": 56
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Co-Trimoxazole Tablets BP",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "480 mg / 960 mg",
+    "DOSAGE FORM": "10 x 10's, 1000's",
+    "PACK SIZE": "Uncoated Tablets",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Trimethoprim": "738-70-5",
+      "Sulfamethoxazole": "723-46-6"
+    },
+    "id": 57
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Co-Trimoxazole Oral Suspension BP 240 mg/5 ml",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "240 mg/5 ml",
+    "DOSAGE FORM": "Suspension",
+    "PACK SIZE": "Oral Liquid",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Trimethoprim": "738-70-5",
+      "Sulfamethoxazole": "723-46-6"
+    },
+    "id": 58
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Erythromycin Stearate Tablets BP",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "250 mg / 500 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK SIZE": "Film Coated Tablets",
+    "CAS-ID": "643-22-1",
+    "id": 59
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Doxycycline Capsules BP",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "100 mg",
+    "DOSAGE FORM": "Capsules",
+    "PACK SIZE": "Hard Gelatin Capsules",
+    "CAS-ID": "24390-14-5",
+    "id": 60
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Tetracycline Capsules BP",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "250 mg / 500 mg",
+    "DOSAGE FORM": "Capsules",
+    "PACK SIZE": "Hard Gelatin Capsules",
+    "CAS-ID": "60-54-8",
+    "id": 61
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Chloramphenicol Capsules BP",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "250 mg / 500 mg",
+    "DOSAGE FORM": "Capsules",
+    "PACK SIZE": "Hard Gelatin Capsules",
+    "CAS-ID": "56-75-7",
+    "id": 62
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Azithromycin Capsules USP",
+    "PHARM SPECN": "USP",
+    "STRENGTH": "250 mg / 500 mg",
+    "DOSAGE FORM": "Capsules",
+    "PACK SIZE": "Hard Gelatin Capsules",
+    "CAS-ID": "117772-70-0",
+    "id": 63
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Azithromycin For Oral Suspension USP",
+    "PHARM SPECN": "USP",
+    "STRENGTH": "500 mg / 5 ml",
+    "DOSAGE FORM": "Suspension",
+    "PACK SIZE": "Bottle of 50 ml / 100 ml",
+    "CAS-ID": "117772-70-0",
+    "id": 64
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Ceftazidime Injection",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "250 mg / 500 mg / 1000 mg / 2000 mg",
+    "DOSAGE FORM": "Injection",
+    "PACK SIZE": "---",
+    "CAS-ID": "72558-82-8",
+    "id": 65
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefuroxime for Injection",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "750 mg / 1500 mg",
+    "DOSAGE FORM": "Injection",
+    "PACK SIZE": "---",
+    "CAS-ID": "55268-75-2",
+    "id": 66
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefuroxime Axetil Tablets",
+    "PHARM SPECN": "USP",
+    "STRENGTH": "125 mg / 250 mg / 500 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK SIZE": "Film Coated Tablets",
+    "CAS-ID": "64544-07-6",
+    "id": 67
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefalexin Capsule",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "250 mg / 500 mg",
+    "DOSAGE FORM": "Capsule",
+    "CAS-ID": "15686-71-2",
+    "id": 68
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefotaxime Sodium Injection",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "500 mg / 1000 mg / 2000 mg",
+    "DOSAGE FORM": "Injection",
+    "CAS-ID": "64485-93-4",
+    "id": 69
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefpirome Inj.",
+    "STRENGTH": "1 gm",
+    "DOSAGE FORM": "Injection",
+    "CAS-ID": "84194-65-6",
+    "id": 70
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefpodoxime Proxetil Tabs",
+    "STRENGTH": "100 mg / 200 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "87239-81-4",
+    "id": 71
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefpodoxime Proxetil Dry Syrup",
+    "STRENGTH": "50 mg / 5 ml",
+    "DOSAGE FORM": "Suspension",
+    "CAS-ID": "87239-81-4",
+    "id": 72
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefadroxyl Dispersible Tabs",
+    "STRENGTH": "125 mg / 250 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "66592-87-8",
+    "id": 73
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefixime USP Tabs",
+    "STRENGTH": "100 mg / 200 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "79350-37-1",
+    "id": 74
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefixime Dry Syrup",
+    "STRENGTH": "50 mg / 5 ml",
+    "DOSAGE FORM": "Suspension",
+    "CAS-ID": "79350-37-1",
+    "id": 75
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefadroxil Dispersible Tabs",
+    "STRENGTH": "125 mg / 250 mg / 500 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "66592-87-8",
+    "id": 76
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefadroxyl Dry Syrup",
+    "STRENGTH": "125 mg / 5 ml",
+    "DOSAGE FORM": "Dry Syrup",
+    "CAS-ID": "66592-87-8",
+    "id": 77
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cephalexin Suspension",
+    "STRENGTH": "125 mg / 5 ml",
+    "DOSAGE FORM": "Suspension",
+    "CAS-ID": "15686-71-2",
+    "id": 78
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cephalexin BP Capsules",
+    "STRENGTH": "250 mg / 500 mg",
+    "DOSAGE FORM": "Capsule",
+    "CAS-ID": "15686-71-2",
+    "id": 79
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefoperazone + Sulbactam Vial",
+    "STRENGTH": "1 g / 2 g",
+    "DOSAGE FORM": "Injection",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Cefoperazone": "62893-20-3",
+      "Sulbactam": "69388-84-7"
+    },
+    "id": 80
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefepime Inj.",
+    "STRENGTH": "500 mg / 1 g",
+    "DOSAGE FORM": "Injection",
+    "CAS-ID": "88040-23-7",
+    "id": 81
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Piperacillin = Tazobactam",
+    "STRENGTH": "4 g + 0.5 g",
+    "DOSAGE FORM": "Injection",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Piperacillin": "61477-96-1",
+      "Tazobactam": "89785-84-2"
+    },
+    "id": 82
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Ampicillin Sodium BP Vial",
+    "STRENGTH": "100 mg / 250 mg / 500 mg / 1 g",
+    "DOSAGE FORM": "Injection",
+    "CAS-ID": "69-52-3",
+    "id": 83
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Ampicillin Trihydrate BP Caps",
+    "STRENGTH": "250 mg / 500 mg",
+    "DOSAGE FORM": "Capsule",
+    "CAS-ID": "7177-48-2",
+    "id": 84
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Ampicillin + Cloxacillin Vial",
+    "STRENGTH": "250 / 500 mg",
+    "DOSAGE FORM": "Injection",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Ampicillin": "69-52-3",
+      "Cloxacillin": "61-72-3"
+    },
+    "id": 85
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Ampicillin + Cloxacillin BP Caps",
+    "STRENGTH": "250 / 500 mg",
+    "DOSAGE FORM": "Capsule",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Ampicillin": "69-52-3",
+      "Cloxacillin": "61-72-3"
+    },
+    "id": 86
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Amoxycillin + Clavulanate Pot. USP Vial",
+    "STRENGTH": "150 / 300 / 600 mg / 1.2 gm",
+    "DOSAGE FORM": "Injection",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Amoxicillin": "26787-78-0",
+      "Clavulanate Potassium": "61177-45-5",
+      "Clavulanic Acid": "58001-44-8"
+    },
+    "id": 87
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Amoxycillin + Clavulanate Pot. USP Tabs",
+    "STRENGTH": "375 / 625 / 1000 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Amoxicillin": "26787-78-0",
+      "Clavulanate Potassium": "61177-45-5",
+      "Clavulanic Acid": "58001-44-8"
+    },
+    "id": 88
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Amoxycillin + Clavulanate Pot. USP",
+    "STRENGTH": "125 + 31.25 mg / 5 ml",
+    "DOSAGE FORM": "Suspension",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Amoxicillin": "26787-78-0",
+      "Clavulanate Potassium": "61177-45-5",
+      "Clavulanic Acid": "58001-44-8"
+    },
+    "id": 89
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Norfloxacin Tablets",
+    "PHARM SPECN": "USP",
+    "STRENGTH": "200 mg / 400 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK SIZE": "Film Coated Tablets",
+    "CAS-ID": "70458-96-7",
+    "id": 90
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Co-Trimoxazole Tablets BP",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "480 mg / 960 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK SIZE": "Uncoated Tablets",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Trimethoprim": "738-70-5",
+      "Sulfamethoxazole": "723-46-6"
+    },
+    "id": 91
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Co-Trimoxazole Oral Suspension BP 240 mg/5 ml",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "240 mg/5 ml",
+    "DOSAGE FORM": "Suspension",
+    "PACK SIZE": "Oral Liquid",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Trimethoprim": "738-70-5",
+      "Sulfamethoxazole": "723-46-6"
+    },
+    "id": 92
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Erythromycin Stearate Tablets BP",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "250 mg / 500 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK SIZE": "Film Coated Tablets",
+    "CAS-ID": "643-22-1",
+    "id": 93
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Doxycycline Capsules BP",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "100 mg",
+    "DOSAGE FORM": "Capsules",
+    "PACK SIZE": "Hard Gelatin Capsules",
+    "CAS-ID": "24390-14-5",
+    "id": 94
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Tetracycline Capsules BP",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "250 mg / 500 mg",
+    "DOSAGE FORM": "Capsules",
+    "PACK SIZE": "Hard Gelatin Capsules",
+    "CAS-ID": "60-54-8",
+    "id": 95
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Chloramphenicol Capsules BP",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "250 mg / 500 mg",
+    "DOSAGE FORM": "Capsules",
+    "PACK SIZE": "Hard Gelatin Capsules",
+    "CAS-ID": "56-75-7",
+    "id": 96
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Azithromycin Capsules USP",
+    "PHARM SPECN": "USP",
+    "STRENGTH": "250 mg / 500 mg",
+    "DOSAGE FORM": "Capsules",
+    "PACK SIZE": "Hard Gelatin Capsules",
+    "CAS-ID": "117772-70-0",
+    "id": 97
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Azithromycin For Oral Suspension USP",
+    "PHARM SPECN": "USP",
+    "STRENGTH": "500 mg / 5 ml",
+    "DOSAGE FORM": "Suspension",
+    "PACK SIZE": "Bottle of 50 ml / 100 ml",
+    "CAS-ID": "117772-70-0",
+    "id": 98
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Ceftazidime Injection",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "250 mg / 500 mg / 1000 mg / 2000 mg",
+    "DOSAGE FORM": "Injection",
+    "PACK SIZE": "---",
+    "CAS-ID": "72558-82-8",
+    "id": 99
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefuroxime for Injection",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "750 mg / 1500 mg",
+    "DOSAGE FORM": "Injection",
+    "PACK SIZE": "---",
+    "CAS-ID": "55268-75-2",
+    "id": 100
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefuroxime Axetil Tablets",
+    "PHARM SPECN": "USP",
+    "STRENGTH": "125 mg / 250 mg / 500 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK SIZE": "Film Coated Tablets",
+    "CAS-ID": "64544-07-6",
+    "id": 101
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefalexin Capsule",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "250 mg / 500 mg",
+    "DOSAGE FORM": "Capsule",
+    "CAS-ID": "15686-71-2",
+    "id": 102
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefotaxime Sodium Injection",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "500 mg / 1000 mg / 2000 mg",
+    "DOSAGE FORM": "Injection",
+    "CAS-ID": "64485-93-4",
+    "id": 103
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefpirome Inj.",
+    "STRENGTH": "1 gm",
+    "DOSAGE FORM": "Injection",
+    "CAS-ID": "84194-65-6",
+    "id": 104
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefpodoxime Proxetil Tabs",
+    "STRENGTH": "100 / 200 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "87239-81-4",
+    "id": 105
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefpodoxime Proxetil Dry Syrup",
+    "STRENGTH": "50 mg / 5 ml",
+    "DOSAGE FORM": "Suspension",
+    "CAS-ID": "87239-81-4",
+    "id": 106
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefadroxyl Dispersible Tabs",
+    "STRENGTH": "125 / 250 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "66592-87-8",
+    "id": 107
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefixime USP Tabs",
+    "STRENGTH": "100 / 200 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "79350-37-1",
+    "id": 108
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefixime Dry Syrup",
+    "STRENGTH": "50 mg / 5 ml",
+    "DOSAGE FORM": "Suspension",
+    "CAS-ID": "79350-37-1",
+    "id": 109
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefadroxyl Dispersible Tabs",
+    "STRENGTH": "125 / 250 / 500 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "66592-87-8",
+    "id": 110
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefadroxyl Dry Syrup",
+    "STRENGTH": "125 mg / 5 ml",
+    "DOSAGE FORM": "Dry Syrup",
+    "CAS-ID": "66592-87-8",
+    "id": 111
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cephalexin Suspension",
+    "STRENGTH": "125 mg / 5 ml",
+    "DOSAGE FORM": "Suspension",
+    "CAS-ID": "15686-71-2",
+    "id": 112
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cephalexin BP Capsules",
+    "STRENGTH": "250 mg / 500 mg",
+    "DOSAGE FORM": "Capsule",
+    "CAS-ID": "15686-71-2",
+    "id": 113
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefoperazone + Sulbactam Vial",
+    "STRENGTH": "1 g / 2 g",
+    "DOSAGE FORM": "Injection",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Cefoperazone": "62893-20-3",
+      "Sulbactam": "69388-84-7"
+    },
+    "id": 114
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cefepime Inj.",
+    "STRENGTH": "500 mg / 1 g",
+    "DOSAGE FORM": "Injection",
+    "CAS-ID": "88040-23-7",
+    "id": 115
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Piperacillin = Tazobactam",
+    "STRENGTH": "4 g + 0.5 g",
+    "DOSAGE FORM": "Injection",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Piperacillin": "61477-96-1",
+      "Tazobactam": "89785-84-2"
+    },
+    "id": 116
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Ampicillin Sodium BP Vial",
+    "STRENGTH": "100 / 250 / 500 mg / 1 g",
+    "DOSAGE FORM": "Injection",
+    "CAS-ID": "69-52-3",
+    "id": 117
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Ampicillin Trihydrate BP Caps",
+    "STRENGTH": "250 / 500 mg",
+    "DOSAGE FORM": "Capsule",
+    "CAS-ID": "7177-48-2",
+    "id": 118
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Ampicillin + Cloxacillin Vial",
+    "STRENGTH": "250 / 500 mg",
+    "DOSAGE FORM": "Injection",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Ampicillin": "69-52-3",
+      "Cloxacillin": "61-72-3"
+    },
+    "id": 119
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Ampicillin + Cloxacillin BP Caps",
+    "STRENGTH": "250 / 500 mg",
+    "DOSAGE FORM": "Capsule",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Ampicillin": "69-52-3",
+      "Cloxacillin": "61-72-3"
+    },
+    "id": 120
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Amoxycillin + Clavulanate Pot. USP Vial",
+    "STRENGTH": "150 / 300 / 600 mg / 1.2 gm",
+    "DOSAGE FORM": "Injection",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Amoxicillin": "26787-78-0",
+      "Clavulanate Potassium": "61177-45-5",
+      "Clavulanic Acid": "58001-44-8"
+    },
+    "id": 121
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Amoxycillin + Clavulanate Pot. USP Tabs",
+    "STRENGTH": "375 / 625 / 1000 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Amoxicillin": "26787-78-0",
+      "Clavulanate Potassium": "61177-45-5",
+      "Clavulanic Acid": "58001-44-8"
+    },
+    "id": 122
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Amoxycillin + Clavulanate Pot. USP",
+    "STRENGTH": "125 mg + 31.25 mg / 5 ml",
+    "DOSAGE FORM": "Suspension",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Amoxicillin": "26787-78-0",
+      "Clavulanate Potassium": "61177-45-5",
+      "Clavulanic Acid": "58001-44-8"
+    },
+    "id": 123
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Amoxycillin + Clavulanate Dry Syrup",
+    "STRENGTH": "200 mg + 28.5 mg / 5 ml",
+    "DOSAGE FORM": "Dry Syrup",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Amoxicillin": "26787-78-0",
+      "Clavulanate Potassium": "61177-45-5",
+      "Clavulanic Acid": "58001-44-8"
+    },
+    "id": 124
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Amoxicillin Sodium BP Vial",
+    "STRENGTH": "250 / 500 mg",
+    "DOSAGE FORM": "Injection",
+    "CAS-ID": "34642-77-8",
+    "id": 125
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Amoxycillin Dispersible Tabs",
+    "STRENGTH": "125 mg / 250 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "26787-78-0",
+    "id": 126
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cloxacillin Inj. BP",
+    "STRENGTH": "250 mg / 500 mg / 1 gm",
+    "DOSAGE FORM": "Injection",
+    "CAS-ID": "61-72-3",
+    "id": 127
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Amoxycillin + Lactobacillus Tabs",
+    "STRENGTH": "125 / 250 / 500 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Amoxicillin": "26787-78-0",
+      "Lactobacillus": "No CAS (biological organism)"
+    },
+    "id": 128
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Amoxycillin + Cloxacillin + Lactobacillus Tabs",
+    "STRENGTH": "125 mg + 125 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Amoxicillin": "26787-78-0",
+      "Cloxacillin": "61-72-3",
+      "Lactobacillus": "No CAS (biological organism)"
+    },
+    "id": 129
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cloxacillin BP Caps",
+    "STRENGTH": "250 / 500 mg",
+    "DOSAGE FORM": "Capsules",
+    "CAS-ID": "61-72-3",
+    "id": 130
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Ampicillin USP Dry Syrup",
+    "STRENGTH": "125 mg/5 ml, 250 mg/5 ml",
+    "DOSAGE FORM": "Dry Syrup",
+    "CAS-ID": "7177-48-2",
+    "id": 131
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Amoxycillin USP Dry Syrup",
+    "STRENGTH": "125 mg/5 ml, 250 mg/5 ml",
+    "DOSAGE FORM": "Dry Syrup",
+    "CAS-ID": "26787-78-0",
+    "id": 132
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Cloxacillin BP Dry Syrup",
+    "STRENGTH": "125 mg/5 ml",
+    "DOSAGE FORM": "Dry Syrup",
+    "CAS-ID": "61-72-3",
+    "id": 133
+  },
+  {
+    "CATEGORY": "ANTIBACTERIAL",
+    "MOLECULE NAME": "Piperacillin + Tazobactam",
+    "STRENGTH": "4 g + 0.5 g",
+    "DOSAGE FORM": "Injection",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Piperacillin": "61477-96-1",
+      "Tazobactam": "89786-04-9"
+    },
+    "id": 134
+  },
+  {
+    "CATEGORY": "ANTI DEPRESSANT",
+    "MOLECULE NAME": "Alprazolam Tablets",
+    "PHARM SPECN": "USP",
+    "STRENGTH": "0.25 mg / 0.5 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK SIZE": "10 x 10's, 20 x 10's (Uncoated Tablets)",
+    "CAS-ID": "28981-97-7",
+    "id": 135
+  },
+  {
+    "CATEGORY": "ANTI DEPRESSANT",
+    "MOLECULE NAME": "Alprazolam SR",
+    "STRENGTH": "5 mg / 2.5 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK SIZE": "5 x 6 x 10",
+    "CAS-ID": "28981-97-7",
+    "id": 136
+  },
+  {
+    "CATEGORY": "ANTI THELMINTIC",
+    "MOLECULE NAME": "Albendazole Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "400 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK SIZE": "Chewable Tablets",
+    "CAS-ID": "54965-21-8",
+    "id": 137
+  },
+  {
+    "CATEGORY": "ANTI THELMINTIC",
+    "MOLECULE NAME": "Albendazole Suspension",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "200 mg / 5 ml",
+    "DOSAGE FORM": "Suspension",
+    "PACK SIZE": "Bottle of 50 ml / 100 ml",
+    "CAS-ID": "54965-21-8",
+    "id": 138
+  },
+  {
+    "CATEGORY": "ANTI THELMINTIC",
+    "MOLECULE NAME": "Albendazole + Ivermectin",
+    "STRENGTH": "400 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "5 x 1 x 1",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Albendazole": "54965-21-8",
+      "Ivermectin": "70288-86-7"
+    },
+    "id": 139
+  },
+  {
+    "CATEGORY": "ANTI THELMINTIC",
+    "MOLECULE NAME": "Levamisol Hydrochloride Tablets",
+    "PHARM SPECN": "USP",
+    "STRENGTH": "50 mg / 150 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "Uncoated Tablets",
+    "CAS-ID": "16595-80-5",
+    "id": 140
+  },
+  {
+    "CATEGORY": "ANTIHISTAMINIC",
+    "MOLECULE NAME": "Cetirizine Dihydrochloride Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "10 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "Film Coated Tablets",
+    "CAS-ID": "83881-51-0",
+    "id": 141
+  },
+  {
+    "CATEGORY": "ANTIHISTAMINIC",
+    "MOLECULE NAME": "Levocetrizine Dihydrochloride Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "5 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "130018-87-0",
+    "id": 142
+  },
+  {
+    "CATEGORY": "ANTIHISTAMINIC",
+    "MOLECULE NAME": "Fexofenadine Hydrochloride Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "60 mg / 120 mg / 180 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "Film Coated Tablets",
+    "CAS-ID": "153439-40-8",
+    "id": 143
+  },
+  {
+    "CATEGORY": "ANTIDIABETIC",
+    "MOLECULE NAME": "Gliclazide Tablets",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "80 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "Uncoated Tablets",
+    "CAS-ID": "21187-98-4",
+    "id": 144
+  },
+  {
+    "CATEGORY": "ANTIDIABETIC",
+    "MOLECULE NAME": "Gliclazide & Metformin Hydrochloride Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "80 mg + 500 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK SIZE": "Uncoated Tablets",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Gliclazide": "21187-98-4",
+      "Metformin Hydrochloride": "1115-70-4"
+    },
+    "id": 145
+  },
+  {
+    "CATEGORY": "ANTIDIABETIC",
+    "MOLECULE NAME": "Metformin Sustained Release Tablets",
+    "PHARM SPECN": "---",
+    "STRENGTH": "500 mg / 1000 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "1115-70-4",
+    "id": 146
+  },
+  {
+    "CATEGORY": "ANTIDIABETIC",
+    "MOLECULE NAME": "Glimepiride Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "1 mg / 2 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK SIZE": "Uncoated Tablets",
+    "CAS-ID": "93479-97-1",
+    "id": 147
+  },
+  {
+    "CATEGORY": "ANTISPASMODIC",
+    "MOLECULE NAME": "Camylofin Dihydrochloride Injection",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "25 mg/ml",
+    "DOSAGE FORM": "Ampoule of 2 ml, Vial of 20 ml",
+    "PACK SIZE": "Liquid Injection",
+    "CAS-ID": "72-50-4",
+    "id": 148
+  },
+  {
+    "CATEGORY": "ANTISPASMODIC",
+    "MOLECULE NAME": "Camylofin Dihydrochloride and Paracetamol Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "25 mg + 300 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK SIZE": "Film Coated Tablets",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Camylofin Dihydrochloride": "72-50-4",
+      "Paracetamol": "103-90-2"
+    },
+    "id": 149
+  },
+  {
+    "CATEGORY": "ANTISPASMODIC",
+    "MOLECULE NAME": "Dicyclomine Hydrochloride Tablets",
+    "STRENGTH": "10 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "67-92-5",
+    "id": 150
+  },
+  {
+    "CATEGORY": "ANTISPASMODIC",
+    "MOLECULE NAME": "Camylofin Dihydrochloride and Diclofenac Sodium Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "50 mg + 50 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "Film Coated Tablets",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Camylofin Dihydrochloride": "72-50-4",
+      "Diclofenac Sodium": "15307-79-6"
+    },
+    "id": 151
+  },
+  {
+    "CATEGORY": "ANTI- OSTEOPOROTIC",
+    "MOLECULE NAME": "Oyster Shell Calcium and Vitamin D3 Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "(250 mg + 125 IU), (500 mg + 250 IU)",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "Film Coated Tablets",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Calcium Carbonate (from oyster shell)": "471-34-1",
+      "Vitamin D3 (Cholecalciferol)": "67-97-0"
+    },
+    "id": 152
+  },
+  {
+    "CATEGORY": "ANTI- OSTEOPOROTIC",
+    "MOLECULE NAME": "Sodium Alendronate Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "10 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "Uncoated",
+    "CAS-ID": "121268-17-5",
+    "id": 153
+  },
+  {
+    "CATEGORY": "ANTI- OSTEOPOROTIC",
+    "MOLECULE NAME": "Calcitrol + Calcium Citrate + Zinc",
+    "STRENGTH": "0.25 mcg + 250 mg + 7.5 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Calcitriol": "32222-06-3",
+      "Calcium Citrate": "813-94-5",
+      "Zinc": "No CAS (elemental / mineral preparation)"
+    },
+    "id": 154
+  },
+  {
+    "CATEGORY": "ANTI- OSTEOPOROTIC",
+    "MOLECULE NAME": "Calcium Carb + Alfacalcidol",
+    "STRENGTH": "500 mg + 0.25 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10 x 10",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Calcium Carbonate": "471-34-1",
+      "Alfacalcidol": "41294-56-8"
+    },
+    "id": 155
+  },
+  {
+    "CATEGORY": "ANTI- OSTEOPOROTIC",
+    "MOLECULE NAME": "Calcium Citrate + Magnesium + Zinc + Vitamin D3",
+    "STRENGTH": "1000 mg + 100 mg + 4 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10 x 10",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Calcium Citrate": "813-94-5",
+      "Magnesium": "No CAS (mineral element)",
+      "Zinc": "No CAS (mineral element)",
+      "Vitamin D3": "67-97-0"
+    },
+    "id": 156
+  },
+  {
+    "CATEGORY": "ANTI- OSTEOPOROTIC",
+    "MOLECULE NAME": "Calcium Citrate Maleate ele Cal + Vitamin D3",
+    "STRENGTH": "250 mg + 200 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10 x 10's",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Calcium Citrate Maleate": "No CAS (mixture compound)",
+      "Vitamin D3": "67-97-0"
+    },
+    "id": 157
+  },
+  {
+    "CATEGORY": "ANTIFUNGAL",
+    "MOLECULE NAME": "Clotrimoxazole Cream BP",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "1.0% w/w",
+    "DOSAGE FORM": "Cream",
+    "PACK_SIZE": "Tube of 10 gm",
+    "CAS-ID": "23593-75-1",
+    "id": 158
+  },
+  {
+    "CATEGORY": "ANTIFUNGAL",
+    "MOLECULE NAME": "Ciprofloxacin USP Tabs",
+    "STRENGTH": "250 / 500 / 750 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "86393-32-0",
+    "id": 159
+  },
+  {
+    "CATEGORY": "ANTIFUNGAL",
+    "MOLECULE NAME": "Ciprofloxacin USP Infusion",
+    "STRENGTH": "200 mg / 100 ml",
+    "DOSAGE FORM": "Suspension / Infusion",
+    "CAS-ID": "86393-32-0",
+    "id": 160
+  },
+  {
+    "CATEGORY": "ANTIFUNGAL",
+    "MOLECULE NAME": "Ciprofloxacin USP Eye/Ear Drops",
+    "STRENGTH": "100 ml",
+    "DOSAGE FORM": "Suspension",
+    "CAS-ID": "86393-32-0",
+    "id": 161
+  },
+  {
+    "CATEGORY": "ANTIFUNGAL",
+    "MOLECULE NAME": "Gatifloxacin + Ambroxol",
+    "STRENGTH": "200 mg + 30 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10 x 10",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Gatifloxacin": "112811-59-3",
+      "Ambroxol": "18683-91-5"
+    },
+    "id": 162
+  },
+  {
+    "CATEGORY": "ANTIFUNGAL",
+    "MOLECULE NAME": "Gatifloxacin + Ornidazole",
+    "STRENGTH": "200 mg + 500 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10 x 10",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Gatifloxacin": "112811-59-3",
+      "Ornidazole": "16773-42-5"
+    },
+    "id": 163
+  },
+  {
+    "CATEGORY": "ANTIFUNGAL",
+    "MOLECULE NAME": "Ciprofloxacin + Tinidazole Tabs",
+    "STRENGTH": "500 mg + 600 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10 x 10",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Ciprofloxacin": "85721-33-1",
+      "Tinidazole": "19387-91-8"
+    },
+    "id": 164
+  },
+  {
+    "CATEGORY": "ANTIFUNGAL",
+    "MOLECULE NAME": "Norfloxacin + Metronidazole",
+    "STRENGTH": "400 mg + 500 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "20 x 10",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Norfloxacin": "70458-96-7",
+      "Metronidazole": "443-48-1"
+    },
+    "id": 165
+  },
+  {
+    "CATEGORY": "ANTIFUNGAL",
+    "MOLECULE NAME": "Norfloxacin + Nitazoxanide",
+    "STRENGTH": "400 mg + 500 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "20 x 10",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Norfloxacin": "70458-96-7",
+      "Nitazoxanide": "55981-09-4"
+    },
+    "id": 166
+  },
+  {
+    "CATEGORY": "ANTIFUNGAL",
+    "MOLECULE NAME": "Norfloxacin + Ornidazole",
+    "STRENGTH": "400 mg + 500 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "20 x 10",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Norfloxacin": "70458-96-7",
+      "Ornidazole": "16773-42-5"
+    },
+    "id": 167
+  },
+  {
+    "CATEGORY": "ANTIFUNGAL",
+    "MOLECULE NAME": "Norfloxacin + Tinidazole",
+    "STRENGTH": "400 mg + 600 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "20 x 10",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Norfloxacin": "70458-96-7",
+      "Tinidazole": "19387-91-8"
+    },
+    "id": 168
+  },
+  {
+    "CATEGORY": "ANTIFUNGAL",
+    "MOLECULE NAME": "Ofloxacin + Tinidazole",
+    "STRENGTH": "200 mg + 600 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10 x 10",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Ofloxacin": "82419-36-1",
+      "Tinidazole": "19387-91-8"
+    },
+    "id": 169
+  },
+  {
+    "CATEGORY": "ANTIFUNGAL",
+    "MOLECULE NAME": "Ofloxacin Infusion",
+    "STRENGTH": "200 mg / 100 ml",
+    "DOSAGE FORM": "Suspension / Infusion",
+    "CAS-ID": "82419-36-1",
+    "id": 170
+  },
+  {
+    "CATEGORY": "ANTIFUNGAL",
+    "MOLECULE NAME": "Ofloxacin Tabs",
+    "STRENGTH": "200 / 400 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "82419-36-1",
+    "id": 171
+  },
+  {
+    "CATEGORY": "ANTIFUNGAL",
+    "MOLECULE NAME": "Ofloxacin + Ornidazole Tabs",
+    "STRENGTH": "200 mg + 500 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Ofloxacin": "82419-36-1",
+      "Ornidazole": "16773-42-5"
+    },
+    "id": 172
+  },
+  {
+    "CATEGORY": "ANTIFUNGAL",
+    "MOLECULE NAME": "Norfloxacin USP Tabs",
+    "STRENGTH": "400 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "70458-96-7",
+    "id": 173
+  },
+  {
+    "CATEGORY": "ANTIFUNGAL",
+    "MOLECULE NAME": "Norfloxacin USP Eye/Ear Drops",
+    "STRENGTH": "5 ml",
+    "DOSAGE FORM": "Suspension",
+    "CAS-ID": "70458-96-7",
+    "id": 174
+  },
+  {
+    "CATEGORY": "ANTIFUNGAL",
+    "MOLECULE NAME": "Lomefloxacin USP Tabs",
+    "STRENGTH": "400 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "98079-51-7",
+    "id": 175
+  },
+  {
+    "CATEGORY": "ANTIFUNGAL",
+    "MOLECULE NAME": "Sparfloxacin Tabs",
+    "STRENGTH": "200 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "110871-86-8",
+    "id": 176
+  },
+  {
+    "CATEGORY": "ANTIFUNGAL",
+    "MOLECULE NAME": "Levofloxacin Tabs",
+    "STRENGTH": "250 / 500 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "100986-85-4",
+    "id": 177
+  },
+  {
+    "CATEGORY": "ANTIFUNGAL",
+    "MOLECULE NAME": "Gatifloxacin Tabs",
+    "STRENGTH": "200 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "112811-59-3",
+    "id": 178
+  },
+  {
+    "CATEGORY": "ANTIFUNGAL",
+    "MOLECULE NAME": "Ofloxacin + Satranidazole Tabs",
+    "STRENGTH": "200 mg + 300 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Ofloxacin": "82419-36-1",
+      "Satranidazole": "83485-23-6"
+    },
+    "id": 179
+  },
+  {
+    "CATEGORY": "ANTIFUNGAL",
+    "MOLECULE NAME": "Gatifloxacin Tabs",
+    "STRENGTH": "200 mg / 400 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "112811-59-3",
+    "id": 180
+  },
+  {
+    "CATEGORY": "ANAESTHETIC",
+    "MOLECULE NAME": "Doxapram HCl Injection",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "20 mg/ml",
+    "DOSAGE FORM": "Injection",
+    "PACK_SIZE": "Vial of 5 ml",
+    "CAS-ID": "309-29-5",
+    "id": 181
+  },
+  {
+    "CATEGORY": "ANAESTHETIC",
+    "MOLECULE NAME": "Glycopyrrolate Injection",
+    "PHARM SPECN": "USP",
+    "STRENGTH": "0.2 mg/ml",
+    "DOSAGE FORM": "Injection",
+    "PACK_SIZE": "Ampoule of 1 ml",
+    "CAS-ID": "596-51-0",
+    "id": 182
+  },
+  {
+    "CATEGORY": "ANTIULCERANT",
+    "MOLECULE NAME": "Rabeprazole Sodium Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "10 mg / 20 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "Enteric Coated Tablets",
+    "CAS-ID": "117976-89-3",
+    "id": 183
+  },
+  {
+    "CATEGORY": "ANTITUSSIVE",
+    "MOLECULE NAME": "Prenoxdiazine HCl Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "100 mg / 20 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "Film Coated Tablets",
+    "CAS-ID": "70132-12-4",
+    "id": 184
+  },
+  {
+    "CATEGORY": "ANTITUSSIVE",
+    "MOLECULE NAME": "Salbutamol Sulphate Tablets",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "2 mg / 4 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "Uncoated Tablets",
+    "CAS-ID": "51022-70-9",
+    "id": 185
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Diclofenac Sodium Injection",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "25 mg/ml",
+    "DOSAGE FORM": "Injection",
+    "PACK_SIZE": "Ampoule of 3 ml",
+    "CAS-ID": "15307-79-6",
+    "id": 186
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Diclofenac Sodium with Paracetamol Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "50 mg + 500 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "Film Coated Tablets",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Diclofenac Sodium": "15307-79-6",
+      "Paracetamol": "103-90-2"
+    },
+    "id": 187
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Etoricoxib Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "60 mg / 90 mg / 120 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "202409-33-4",
+    "id": 188
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Tramadol + Paracetamol",
+    "STRENGTH": "50 mg + 500 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "20 x 10",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Tramadol Hydrochloride": "36282-47-0",
+      "Paracetamol": "103-90-2"
+    },
+    "id": 189
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Tramadol Hydrochloride",
+    "STRENGTH": "100 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "20 x 10",
+    "CAS-ID": "36282-47-0",
+    "id": 190
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Tramadol Hydrochloride",
+    "STRENGTH": "50 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "20 x 10",
+    "CAS-ID": "36282-47-0",
+    "id": 191
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Mosapride",
+    "STRENGTH": "5 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10 x 10",
+    "CAS-ID": "113828-51-8",
+    "id": 192
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Nimesulide + Paracetamol + Chlorzoxazone",
+    "STRENGTH": "100 mg + 325 mg + 375 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "20 x 10",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Nimesulide": "51803-78-2",
+      "Paracetamol": "103-90-2",
+      "Chlorzoxazone": "95-25-0"
+    },
+    "id": 193
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Nimesulide + Paracetamol",
+    "STRENGTH": "100 mg + 500 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10 x 10",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Nimesulide": "51803-78-2",
+      "Paracetamol": "103-90-2"
+    },
+    "id": 194
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Nimesulide + Paracetamol + Chlorzoxazone",
+    "STRENGTH": "100 mg + 500 mg + 250 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "20 x 10",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Nimesulide": "51803-78-2",
+      "Paracetamol": "103-90-2",
+      "Chlorzoxazone": "95-25-0"
+    },
+    "id": 195
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Nimesulide + Paracetamol + Tizanidine",
+    "STRENGTH": "100 mg + 500 mg + 2 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "20 x 10",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Nimesulide": "51803-78-2",
+      "Paracetamol": "103-90-2",
+      "Tizanidine": "51322-75-9"
+    },
+    "id": 196
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Nimesulide",
+    "STRENGTH": "100 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10 x 2 x 15 / 2 x 5 x 10",
+    "CAS-ID": "51803-78-2",
+    "id": 197
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Nimesulide + Paracetamol (Goden PVC)",
+    "STRENGTH": "50 mg + 500 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "20 x 10",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Nimesulide": "51803-78-2",
+      "Paracetamol": "103-90-2"
+    },
+    "id": 198
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Nimesulide B.P.",
+    "STRENGTH": "100 mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "6 x 5 x 10",
+    "CAS-ID": "51803-78-2",
+    "id": 199
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Nimesulide B.P.",
+    "STRENGTH": "50mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "2X5X10",
+    "CAS-ID": "51803-78-2",
+    "id": 200
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Diclo + Para + Chlor",
+    "STRENGTH": "50mg + 325mg + 250mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "30X6",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Diclofenac Sodium": "15307-86-5",
+      "Paracetamol": "103-90-2",
+      "Chlorzoxazone": "95-25-0"
+    },
+    "id": 201
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Diclofenac Sodium IP + Serratiopeptidase",
+    "STRENGTH": "50mg + 10mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10X10",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Diclofenac Sodium": "15307-86-5",
+      "Serratiopeptidase": "N/A (enzyme, no CAS)"
+    },
+    "id": 202
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Diclofenac Sodium / Potassium",
+    "STRENGTH": "100mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "25X10",
+    "CAS-ID": "Multiple",
+    "API-CAS": {
+      "Diclofenac Sodium": "15307-86-5",
+      "Diclofenac Potassium": "15307-81-0"
+    },
+    "id": 203
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Ibuprofen + Paracetamol",
+    "STRENGTH": "400mg + 500mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "20X15",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Ibuprofen": "15687-27-1",
+      "Paracetamol": "103-90-2"
+    },
+    "id": 204
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Aceclofenac + Paracetamol",
+    "STRENGTH": "100mg + 500mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10X10",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Aceclofenac": "89796-99-6",
+      "Paracetamol": "103-90-2"
+    },
+    "id": 205
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Aceclofenac + Paracetamol + Rabeprazole",
+    "STRENGTH": "100mg + 500mg + 10mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10X6",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Aceclofenac": "89796-99-6",
+      "Paracetamol": "103-90-2",
+      "Rabeprazole Sodium": "117976-89-3"
+    },
+    "id": 206
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Aceclofenac",
+    "STRENGTH": "100mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10X10",
+    "CAS-ID": "89796-99-6",
+    "id": 207
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Aceclofenac + Paracetamol + Chlorzoxazone",
+    "STRENGTH": "100mg + 325mg + 250mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10X10",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Aceclofenac": "89796-99-6",
+      "Paracetamol": "103-90-2",
+      "Chlorzoxazone": "95-25-0"
+    },
+    "id": 208
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Aceclofenac + Paracetamol + Serratiopeptidase",
+    "STRENGTH": "100mg + 500mg + 15mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10X10",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Aceclofenac": "89796-99-6",
+      "Paracetamol": "103-90-2",
+      "Serratiopeptidase": "N/A (enzyme)"
+    },
+    "id": 209
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Aceclofenac SR",
+    "STRENGTH": "200mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10X10",
+    "CAS-ID": "89796-99-6",
+    "id": 210
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Ibuprofen Tablets",
+    "PHARM SPECN": "USP/BP",
+    "STRENGTH": "200mg / 400mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10x10",
+    "CAS-ID": "15687-27-1",
+    "id": 211
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Nimesulide Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "100mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10 x 10’s",
+    "CAS-ID": "51803-78-2",
+    "id": 212
+  },
+  {
+    "CATEGORY": "NSAID",
+    "MOLECULE NAME": "Paracetamol Tablets",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "500mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10 x 10’s",
+    "CAS-ID": "103-90-2",
+    "id": 213
+  },
+  {
+    "CATEGORY": "CARDIO- VASCULAR",
+    "MOLECULE NAME": "Amlodipine Besilate Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "2.5mg, 5mg, 10mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "Uncoated Tablets",
+    "CAS-ID": "111470-99-6",
+    "id": 214
+  },
+  {
+    "CATEGORY": "CARDIO- VASCULAR",
+    "MOLECULE NAME": "Amlodipine Besilate and Lisinopril Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "5mg + 5mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "Uncoated Tablets",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Amlodipine Besilate": "111470-99-6",
+      "Lisinopril": "76547-98-3"
+    },
+    "id": 215
+  },
+  {
+    "CATEGORY": "CARDIO- VASCULAR",
+    "MOLECULE NAME": "Atenolol Tablets",
+    "PHARM SPECN": "BP",
+    "STRENGTH": "25mg, 50mg, 100mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10 x 14’s",
+    "CAS-ID": "29122-68-7",
+    "id": 216
+  },
+  {
+    "CATEGORY": "CARDIO- VASCULAR",
+    "MOLECULE NAME": "Amlodipine Besilate and Atenolol Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "5mg + 50mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10 x 10’s",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Amlodipine Besilate": "111470-99-6",
+      "Atenolol": "29122-68-7"
+    },
+    "id": 217
+  },
+  {
+    "CATEGORY": "CARDIO- VASCULAR",
+    "MOLECULE NAME": "Enalapril Maleate Tablets",
+    "PHARM SPECN": "USP",
+    "STRENGTH": "2.5 mg, 5mg, 10mg, 20mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10 x 10’s",
+    "CAS-ID": "76095-16-4",
+    "id": 218
+  },
+  {
+    "CATEGORY": "ANXIOLYTIC",
+    "MOLECULE NAME": "Diazepam Tablets",
+    "STRENGTH": "5 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "439-14-5",
+    "id": 219
+  },
+  {
+    "CATEGORY": "ANXIOLYTIC",
+    "MOLECULE NAME": "Diazepam injection",
+    "STRENGTH": "5 mg/ml",
+    "DOSAGE FORM": "Injection",
+    "CAS-ID": "439-14-5",
+    "id": 220
+  },
+  {
+    "CATEGORY": "SKELETAL MUSCLE RELAXANT",
+    "MOLECULE NAME": "Methocarbamol Injection",
+    "PHARM SPECN": "USP",
+    "STRENGTH": "100mg/ml",
+    "DOSAGE FORM": "Injection",
+    "PACK_SIZE": "Ampoule of 10ml",
+    "CAS-ID": "532-03-6",
+    "id": 221
+  },
+  {
+    "CATEGORY": "SKELETAL MUSCLE RELAXANT",
+    "MOLECULE NAME": "Methocarbamol Tablets",
+    "PHARM SPECN": "USP",
+    "STRENGTH": "500mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10 x 10’s",
+    "CAS-ID": "532-03-6",
+    "id": 222
+  },
+  {
+    "CATEGORY": "SKELETAL MUSCLE RELAXANT",
+    "MOLECULE NAME": "Methocarbamol & Paracetamol Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "350mg + 250mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10 x 10’s",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Methocarbamol": "532-03-6",
+      "Paracetamol": "103-90-2"
+    },
+    "id": 223
+  },
+  {
+    "CATEGORY": "SKELETAL MUSCLE RELAXANT",
+    "MOLECULE NAME": "Methocarbamol, Diclofenac Potassium and Paracetamol Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "500mg + 50mg + 325mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10 x 10’s",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Methocarbamol": "532-03-6",
+      "Diclofenac Potassium": "15307-81-0",
+      "Paracetamol": "103-90-2"
+    },
+    "id": 224
+  },
+  {
+    "CATEGORY": "SKELETAL MUSCLE RELAXANT",
+    "MOLECULE NAME": "Methocarbamol & Ibuprofen Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "750mg + 200mg, 750mg + 400mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10 x 10’s",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Methocarbamol": "532-03-6",
+      "Ibuprofen": "15687-27-1"
+    },
+    "id": 225
+  },
+  {
+    "CATEGORY": "SKELETAL MUSCLE RELAXANT",
+    "MOLECULE NAME": "Methocarbamol and Nimesulide Tablets",
+    "PHARM SPECN": "INH",
+    "STRENGTH": "1000mg + 100mg",
+    "DOSAGE FORM": "Tablets",
+    "PACK_SIZE": "10 x 10’s",
+    "CAS-ID": "N/A (combination)",
+    "API-CAS": {
+      "Methocarbamol": "532-03-6",
+      "Nimesulide": "51803-78-2"
+    },
+    "id": 226
+  },
+  {
+    "CATEGORY": "SKELETAL MUSCLE RELAXANT",
+    "MOLECULE NAME": "Tizanidine Hydrochloride Tablets",
+    "STRENGTH": "2 mg / 4 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "51322-75-9",
+    "id": 227
+  },
+  {
+    "CATEGORY": "STERIOD",
+    "MOLECULE NAME": "Prednisolone Tablets",
+    "STRENGTH": "5 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "50-24-8",
+    "id": 228
+  },
+  {
+    "CATEGORY": "ANTI-EMETIC",
+    "MOLECULE NAME": "Ondansetran Hydrochloride Dihydrate Tablets",
+    "STRENGTH": "4 mg / 8 mg",
+    "DOSAGE FORM": "Tablets",
+    "CAS-ID": "103639-04-9",
+    "id": 229
+  },
+  {
+    "CATEGORY": "ANTI-EMETIC",
+    "MOLECULE NAME": "Ondansetran Hydrochloride Dihydrate Injection",
+    "STRENGTH": "4 mg/2 ml, 8 mg/4 ml",
+    "DOSAGE FORM": "Injection",
+    "CAS-ID": "103639-04-9",
+    "id": 230
+  },
+  {
+    "CATEGORY": "OTHER ANTIBIOTICS",
+    "MOLECULE NAME": "Meropenem Inj",
+    "STRENGTH": "500 mg / 1g",
+    "Column5": "Injection",
+    "CAS_ID": "119478-56-7",
+    "id": 231
+  },
+  {
+    "CATEGORY": "OTHER ANTIBIOTICS",
+    "MOLECULE NAME": "Vancomycin Usp Inj",
+    "STRENGTH": "500 mg",
+    "Column5": "Injection",
+    "CAS_ID": "1404-93-9",
+    "id": 232
+  },
+  {
+    "CATEGORY": "OTHER ANTIBIOTICS",
+    "MOLECULE NAME": "Amikacin Sulphate Bp Inj",
+    "STRENGTH": "100 / 250 / 500 mg",
+    "Column5": "Injection",
+    "CAS_ID": "39831-55-5",
+    "id": 233
+  },
+  {
+    "CATEGORY": "OTHER ANTIBIOTICS",
+    "MOLECULE NAME": "Gentamycin Inj.",
+    "STRENGTH": "80mg/2ml, 2ml, 10ml",
+    "Column5": "Injection",
+    "CAS_ID": "1405-41-0",
+    "id": 234
+  },
+  {
+    "CATEGORY": "OTHER ANTIBIOTICS",
+    "MOLECULE NAME": "Gentamycin Drops",
+    "STRENGTH": "0.3%, 5ml",
+    "Column5": "Suspension",
+    "CAS_ID": "1405-41-0",
+    "id": 235
+  },
+  {
+    "CATEGORY": "OTHER ANTIBIOTICS",
+    "MOLECULE NAME": "Erythromycin Stearate Tabs",
+    "STRENGTH": "250mg",
+    "Column5": "Tablets",
+    "CAS_ID": "643-22-1",
+    "id": 236
+  },
+  {
+    "CATEGORY": "OTHER ANTIBIOTICS",
+    "MOLECULE NAME": "Erythromycin Estolate Dry Syrup",
+    "STRENGTH": "125mg/5ml, 250mg/5ml",
+    "Column5": "Suspension",
+    "CAS_ID": "3521-62-8",
+    "id": 237
+  },
+  {
+    "CATEGORY": "OTHER ANTIBIOTICS",
+    "MOLECULE NAME": "Dexamethasone + Chloramphenicol",
+    "STRENGTH": "0.1% + 1%, 5 ml",
+    "Column5": "Suspension",
+    "CAS_ID": {
+      "Dexamethasone": "50-02-2",
+      "Chloramphenicol": "56-75-7"
+    },
+    "id": 238
+  },
+  {
+    "CATEGORY": "OTHER ANTIBIOTICS",
+    "MOLECULE NAME": "Doxycycline Tabs",
+    "STRENGTH": "100 mg",
+    "Column5": "Tablets",
+    "CAS_ID": "24390-14-5",
+    "id": 239
+  },
+  {
+    "CATEGORY": "OTHER ANTIBIOTICS",
+    "MOLECULE NAME": "Tetracycline Caps",
+    "STRENGTH": "250 mg/500 mg",
+    "Column5": "Capsule",
+    "CAS_ID": "64-75-5",
+    "id": 240
+  },
+  {
+    "CATEGORY": "OTHER ANTIBIOTICS",
+    "MOLECULE NAME": "Satronidazole Tabs",
+    "STRENGTH": "300mg",
+    "Column5": "Tablets",
+    "CAS_ID": "55981-09-4",
+    "id": 241
+  },
+  {
+    "CATEGORY": "OTHER ANTIBIOTICS",
+    "MOLECULE NAME": "Metronidazole Bp (Uncoated) Tabs",
+    "STRENGTH": "200/400 mg",
+    "Column5": "Tablets",
+    "CAS_ID": "443-48-1",
+    "id": 242
+  },
+  {
+    "CATEGORY": "OTHER ANTIBIOTICS",
+    "MOLECULE NAME": "Metronidazole Bp Suspension",
+    "STRENGTH": "125 mg / 5ml",
+    "Column5": "Suspension",
+    "CAS_ID": "443-48-1",
+    "id": 243
+  },
+  {
+    "CATEGORY": "OTHER ANTIBIOTICS",
+    "MOLECULE NAME": "Trimethoprim + Sulphamethoxazole Bp Tabs",
+    "STRENGTH": "480/960 mg",
+    "Column5": "Tablets",
+    "CAS_ID": {
+      "Trimethoprim": "738-70-5",
+      "Sulphamethoxazole": "723-46-6"
+    },
+    "id": 244
+  },
+  {
+    "CATEGORY": "OTHER ANTIBIOTICS",
+    "MOLECULE NAME": "Cotrimoxazole Bp Suspension",
+    "STRENGTH": "240 mg / 5 ml",
+    "Column5": "Suspension",
+    "CAS_ID": {
+      "Trimethoprim": "738-70-5",
+      "Sulphamethoxazole": "723-46-6"
+    },
+    "id": 245
+  },
+  {
+    "CATEGORY": "OTHER ANTIBIOTICS",
+    "MOLECULE NAME": "Albendazole Usp Tabs",
+    "STRENGTH": "400mg",
+    "Column5": "Tablets",
+    "CAS_ID": "54965-21-8",
+    "id": 246
+  },
+  {
+    "CATEGORY": "OTHER ANTIBIOTICS",
+    "MOLECULE NAME": "Albendazole Suspension",
+    "STRENGTH": "400 mg/10ml",
+    "Column5": "Suspension",
+    "CAS_ID": "54965-21-8",
+    "id": 247
+  },
+  {
+    "CATEGORY": "OTHER ANTIBIOTICS",
+    "MOLECULE NAME": "Chloramphenicol Dry Syrup",
+    "STRENGTH": "125 mg / 5 ml",
+    "Column5": "Suspension",
+    "CAS_ID": "56-75-7",
+    "id": 248
+  },
+  {
+    "CATEGORY": "OTHER ANTIBIOTICS",
+    "MOLECULE NAME": "Chloramphenicol Drops",
+    "STRENGTH": "0.4%, 5ml",
+    "Column5": "Suspension",
+    "CAS_ID": "56-75-7",
+    "id": 249
+  },
+  {
+    "CATEGORY": "OTHER ANTIBIOTICS",
+    "MOLECULE NAME": "Sulphadoxine + Pyrimethamine Tabs",
+    "STRENGTH": "500 mg + 25 mg",
+    "Column5": "Tablets",
+    "CAS_ID": {
+      "Sulphadoxine": "2447-57-6",
+      "Pyrimethamine": "58-14-0"
+    },
+    "id": 250
+  },
+  {
+    "CATEGORY": "OTHER ANTIBIOTICS",
+    "MOLECULE NAME": "Rifampicin + Isoniazid Tabs",
+    "STRENGTH": "450 mg + 300 mg",
+    "Column5": "Tablets",
+    "CAS_ID": {
+      "Rifampicin": "13292-46-1",
+      "Isoniazid": "54-85-3"
+    },
+    "id": 251
+  },
+  {
+    "CATEGORY": "OTHER ANTIBIOTICS",
+    "MOLECULE NAME": "Rifampicin+Isoniazid+Ethambutol Tabs",
+    "STRENGTH": "450mg+300mg+800mg",
+    "Column5": "Tablets",
+    "CAS_ID": {
+      "Rifampicin": "13292-46-1",
+      "Isoniazid": "54-85-3",
+      "Ethambutol": "74-55-5"
+    },
+    "id": 252
+  },
+  {
+    "CATEGORY": "OTHER ANTIBIOTICS",
+    "MOLECULE NAME": "Rifampicin+Isoniazid+Pyrazinamide Tabs",
+    "STRENGTH": "450mg+300mg+750mg",
+    "Column5": "Tablets",
+    "CAS_ID": {
+      "Rifampicin": "13292-46-1",
+      "Isoniazid": "54-85-3",
+      "Pyrazinamide": "98-96-4"
+    },
+    "id": 253
+  },
+  {
+    "CATEGORY": "OTHER ANTIBIOTICS",
+    "MOLECULE NAME": "Rifampicin + Isoniazid + Pyrazinamide + Ethambutol Tabs",
+    "STRENGTH": "450mg+300mg+750mg+800mg",
+    "Column5": "Tablets",
+    "CAS_ID": {
+      "Rifampicin": "13292-46-1",
+      "Isoniazid": "54-85-3",
+      "Pyrazinamide": "98-96-4",
+      "Ethambutol": "74-55-5"
+    },
+    "id": 254
+  },
+  {
+    "CATEGORY": "CARDIO VASCULARS",
+    "MOLECULE NAME": "Amlodipine Tabs",
+    "STRENGTH": "2.5/ 5/ 10mg",
+    "Column5": "Tablets",
+    "CAS_ID": "88150-42-9",
+    "id": 255
+  },
+  {
+    "CATEGORY": "CARDIO VASCULARS",
+    "MOLECULE NAME": "Amlodipine + Enalapril Tabs",
+    "STRENGTH": "5mg + 5 mg",
+    "Column5": "Tablets",
+    "CAS_ID": {
+      "Amlodipine": "88150-42-9",
+      "Enalapril": "75847-73-3"
+    },
+    "id": 256
+  },
+  {
+    "CATEGORY": "CARDIO VASCULARS",
+    "MOLECULE NAME": "Amlodipine + Atenolol Tabs",
+    "STRENGTH": "5mg + 50mg",
+    "Column5": "Tablets",
+    "CAS_ID": {
+      "Amlodipine": "88150-42-9",
+      "Atenolol": "29122-68-7"
+    },
+    "id": 257
+  },
+  {
+    "CATEGORY": "CARDIO VASCULARS",
+    "MOLECULE NAME": "Lisinopril Usp Tabs",
+    "STRENGTH": "2.5/5/10mg",
+    "Column5": "Tablets",
+    "CAS_ID": "83915-83-7",
+    "id": 258
+  },
+  {
+    "CATEGORY": "CARDIO VASCULARS",
+    "MOLECULE NAME": "Carvedilol Tabs",
+    "STRENGTH": "3.125/6.25/12.5/25 mg",
+    "Column5": "Tablets",
+    "CAS_ID": "72956-09-3",
+    "id": 259
+  },
+  {
+    "CATEGORY": "CARDIO VASCULARS",
+    "MOLECULE NAME": "Losartan Potassium Tabs",
+    "STRENGTH": "25/ 50mg",
+    "Column5": "Tablets",
+    "CAS_ID": "124750-99-8",
+    "id": 260
+  },
+  {
+    "CATEGORY": "CARDIO VASCULARS",
+    "MOLECULE NAME": "Atenolol + Indapamide Tabs",
+    "STRENGTH": "50 + 1.25 mg",
+    "Column5": "Tablets",
+    "CAS_ID": {
+      "Atenolol": "29122-68-7",
+      "Indapamide": "26807-65-8"
+    },
+    "id": 261
+  },
+  {
+    "CATEGORY": "CARDIO VASCULARS",
+    "MOLECULE NAME": "Ramipril Caps",
+    "STRENGTH": "1.25 / 2.5 / 5 mg",
+    "Column5": "Capsule",
+    "CAS_ID": "87333-19-5",
+    "id": 262
+  },
+  {
+    "CATEGORY": "CARDIO VASCULARS",
+    "MOLECULE NAME": "Ismn + Aspirin Tabs",
+    "STRENGTH": "30 / 60 mg + 75 mg",
+    "Column5": "Tablets",
+    "CAS_ID": {
+      "Isosorbide mononitrate": "16051-77-7",
+      "Acetylsalicylic acid (aspirin)": "50-78-2"
+    },
+    "id": 263
+  },
+  {
+    "CATEGORY": "CARDIO VASCULARS",
+    "MOLECULE NAME": "Amlodipine Tabs",
+    "STRENGTH": "2.5 / 5 / 10 mg",
+    "Column5": "Tablets",
+    "CAS_ID": "88150-42-9",
+    "id": 264
+  },
+  {
+    "CATEGORY": "CARDIO VASCULARS",
+    "MOLECULE NAME": "Amlodipine + Atenolol Tabs",
+    "STRENGTH": "5 + 50mg",
+    "Column5": "Tablets",
+    "CAS_ID": {
+      "Amlodipine": "88150-42-9",
+      "Atenolol": "29122-68-7"
+    },
+    "id": 265
+  },
+  {
+    "CATEGORY": "CARDIO VASCULARS",
+    "MOLECULE NAME": "Atorvastatin Tabs",
+    "STRENGTH": "10mg / 20 mg",
+    "Column5": "Tablets",
+    "CAS_ID": "134523-00-5",
+    "id": 266
+  },
+  {
+    "CATEGORY": "CARDIO VASCULARS",
+    "MOLECULE NAME": "Pantoprazole Tabs",
+    "STRENGTH": "20 mg",
+    "Column5": "Tablets",
+    "CAS_ID": "102625-70-7",
+    "id": 267
+  },
+  {
+    "CATEGORY": "GASTRO INTESTINALS",
+    "MOLECULE NAME": "Pantoprazole Tabs",
+    "STRENGTH": "40 mg",
+    "Column5": "Tablets",
+    "CAS_ID": "102625-70-7",
+    "id": 268
+  },
+  {
+    "CATEGORY": "GASTRO INTESTINALS",
+    "MOLECULE NAME": "Pantoprazole Inj.",
+    "STRENGTH": "40 mg",
+    "Column5": "Injection",
+    "CAS_ID": "102625-70-7",
+    "id": 269
+  },
+  {
+    "CATEGORY": "GASTRO INTESTINALS",
+    "MOLECULE NAME": "Pantoprazole+Domperidone Tabs",
+    "STRENGTH": "40mg + 30mg",
+    "Column5": "Tablets",
+    "CAS_ID": {
+      "Pantoprazole": "102625-70-7",
+      "Domperidone": "57808-66-9"
+    },
+    "id": 270
+  },
+  {
+    "CATEGORY": "GASTRO INTESTINALS",
+    "MOLECULE NAME": "Ranitidine Inj.",
+    "STRENGTH": "25mg / ml, 2 ml",
+    "Column5": "Injection",
+    "CAS_ID": "66357-59-3",
+    "id": 271
+  },
+  {
+    "CATEGORY": "GASTRO INTESTINALS",
+    "MOLECULE NAME": "Ranitidine Tabs",
+    "STRENGTH": "150 mg",
+    "Column5": "Tablets",
+    "CAS_ID": "66357-59-3",
+    "id": 272
+  },
+  {
+    "CATEGORY": "GASTRO INTESTINALS",
+    "MOLECULE NAME": "Cisapride Tabs",
+    "STRENGTH": "10mg",
+    "Column5": "Tablets",
+    "CAS_ID": "81098-60-4",
+    "id": 273
+  },
+  {
+    "CATEGORY": "GASTRO INTESTINALS",
+    "MOLECULE NAME": "Cisapride + Dimethicone Tabs",
+    "STRENGTH": "10 + 125mg",
+    "Column5": "Tablets",
+    "CAS_ID": {
+      "Cisapride": "81098-60-4",
+      "Simethicone (dimethicone antifoam)": "8050-81-5"
+    },
+    "id": 274
+  },
+  {
+    "CATEGORY": "GASTRO INTESTINALS",
+    "MOLECULE NAME": "Omeprazole Bp",
+    "STRENGTH": "10 mg/ 20 mg",
+    "Column5": "Injection",
+    "CAS_ID": "73590-58-6",
+    "id": 275
+  },
+  {
+    "CATEGORY": "GASTRO INTESTINALS",
+    "MOLECULE NAME": "Lansoprazole Caps",
+    "STRENGTH": "30mg",
+    "Column5": "Capsule",
+    "CAS_ID": "103577-45-3",
+    "id": 276
+  },
+  {
+    "CATEGORY": "GASTRO INTESTINALS",
+    "MOLECULE NAME": "Mosapride Tabs",
+    "STRENGTH": "2.5 / 5mg",
+    "Column5": "Tablets",
+    "CAS_ID": "112885-42-4",
+    "id": 277
+  },
+  {
+    "CATEGORY": "GASTRO INTESTINALS",
+    "MOLECULE NAME": "Rabeprazole Tabs",
+    "STRENGTH": "20mg",
+    "Column5": "Tablets",
+    "CAS_ID": "117976-89-3",
+    "id": 278
+  },
+  {
+    "CATEGORY": "GASTRO INTESTINALS",
+    "MOLECULE NAME": "Omeprazole + Domperidone Tabs",
+    "STRENGTH": "10mg + 10mg",
+    "Column5": "Tablets",
+    "CAS_ID": {
+      "Omeprazole": "73590-58-6",
+      "Domperidone": "57808-66-9"
+    },
+    "id": 279
+  },
+  {
+    "CATEGORY": "GASTRO INTESTINALS",
+    "MOLECULE NAME": "Esomeprazole Tabs",
+    "STRENGTH": "20/40mg",
+    "Column5": "Tablets",
+    "CAS_ID": "119141-89-8",
+    "id": 280
+  },
+  {
+    "CATEGORY": "ANTI DIABETICS",
+    "MOLECULE NAME": "Gliclazide Tabs",
+    "STRENGTH": "40 / 80 mg",
+    "Column5": "Tablets",
+    "CAS_ID": "21187-98-4",
+    "id": 281
+  },
+  {
+    "CATEGORY": "ANTI DIABETICS",
+    "MOLECULE NAME": "Gliclazide + Metformin Tabs",
+    "STRENGTH": "80+ 500mg",
+    "Column5": "Tablets",
+    "CAS_ID": {
+      "Gliclazide": "21187-98-4",
+      "Metformin": "657-24-9"
+    },
+    "id": 282
+  },
+  {
+    "CATEGORY": "ANTI DIABETICS",
+    "MOLECULE NAME": "Glimepiride Tabs",
+    "STRENGTH": "1 mg / 2 mg",
+    "Column5": "Tablets",
+    "CAS_ID": "93479-97-1",
+    "id": 283
+  },
+  {
+    "CATEGORY": "ANTI DIABETICS",
+    "MOLECULE NAME": "Glimepiride + Metformin Tabs",
+    "STRENGTH": "1mg + 500mg 2mg + 500mg",
+    "Column5": "Tablets",
+    "CAS_ID": {
+      "Glimepiride": "93479-97-1",
+      "Metformin": "657-24-9"
+    },
+    "id": 284
+  },
+  {
+    "CATEGORY": "ANTI DIABETICS",
+    "MOLECULE NAME": "Metformin + Pioglitazone",
+    "STRENGTH": "500mg + 15mg 500mg + 30mg",
+    "Column5": "Tablets",
+    "CAS_ID": {
+      "Metformin": "657-24-9",
+      "Pioglitazone": "111025-46-8"
+    },
+    "id": 285
+  },
+  {
+    "CATEGORY": "ERECTILE DYSFUNCTION",
+    "MOLECULE NAME": "Sildenafil Citrate",
+    "STRENGTH": "50mg /100mg",
+    "Column5": "Tablets",
+    "DOSAGE FORM": "10X1X4",
+    "CAS_ID": "171599-83-0",
+    "id": 286
+  },
+  {
+    "CATEGORY": "ERECTILE DYSFUNCTION",
+    "MOLECULE NAME": "Tadalafil",
+    "STRENGTH": "20mg / 40mg",
+    "Column5": "Tablets",
+    "DOSAGE FORM": "10X1X2",
+    "CAS_ID": "171596-29-5",
+    "id": 287
+  },
+  {
+    "CATEGORY": "ERECTILE DYSFUNCTION",
+    "MOLECULE NAME": "Verdanafil",
+    "STRENGTH": "20mg",
+    "Column5": "Tablets",
+    "DOSAGE FORM": "10X10",
+    "CAS_ID": "224785-91-5",
+    "id": 288
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Flurbiprofen Sod. Oph. Sol. Usp",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "5104-49-4",
+    "id": 289
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Chlor,Beclo,Clot& Ligno.Ear Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "MIXTURE (chloramphenicol + beclomethasone + clotrimazole + lignocaine – geen enkelvoudige CAS)",
+    "id": 290
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Oflo,Beclo,Clotri& Ligno.Ear Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "MIXTURE (ofloxacin + beclomethasone + clotrimazole + lignocaine – geen enkelvoudige CAS)",
+    "id": 291
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Tobramycin Opth. Sol. USP",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "32986-56-4",
+    "id": 292
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Ofloxacin Opth. Sol USP",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "82419-36-1",
+    "id": 293
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Gatifloxacin Eye Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "112811-59-3",
+    "id": 294
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Ketorolac Tro. OPH Solution",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "74103-07-4",
+    "id": 295
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Polyvinyl Al. & Povidone Eye Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Polyvinyl alcohol": "9002-89-5",
+      "Povidone": "9003-39-8"
+    },
+    "id": 296
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Prednisolone Acetate Oph. Sol.",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "52-21-1",
+    "id": 297
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Tobramycin & Fluoro. Opth Susp.",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "MIXTURE (tobramycin + fluoroquinolone – geen enkelvoudige CAS)",
+    "id": 298
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Ofloxa & Pred. Acetate Eye Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Ofloxacin": "82419-36-1",
+      "Prednisolone acetate": "52-21-1"
+    },
+    "id": 299
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Ofloxacin Oph. Sol. USP",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "82419-36-1",
+    "id": 300
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Norfloxacin Eye/Ear Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "70458-96-7",
+    "id": 301
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Cipro. & Dexa. Eye/Ear Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Ciprofloxacin": "85721-33-1",
+      "Dexamethasone": "50-02-2"
+    },
+    "id": 302
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Betametha & Neomycin E/E drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Betamethasone": "378-44-9",
+      "Neomycin sulfate": "1405-10-3"
+    },
+    "id": 303
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Dexa, Boric & Neomy E/E drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "MIXTURE (dexamethasone + boric acid + neomycin – geen enkelvoudige CAS)",
+    "id": 304
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Gentamicin Sul. Eye/Ear Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "1405-41-0",
+    "id": 305
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Norflo. & Dexa Eye/Ear Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Norfloxacin": "70458-96-7",
+      "Dexamethasone": "50-02-2"
+    },
+    "id": 306
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Diclofenac Sod. Eye/Ear Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "15307-86-5",
+    "id": 307
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Ciprofloxacin Eye/Ear Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "85721-33-1",
+    "id": 308
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Dexa. & Chloram. Eye/Ear Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Dexamethasone": "50-02-2",
+      "Chloramphenicol": "56-75-7"
+    },
+    "id": 309
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Gentamicin & Dexa Eye/Ear Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Gentamicin": "1405-41-0",
+      "Dexamethasone": "50-02-2"
+    },
+    "id": 310
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Tobramycin & Dexa Eye/Ear Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Tobramycin": "32986-56-4",
+      "Dexamethasone": "50-02-2"
+    },
+    "id": 311
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Genta. & Dexa. Eye/Ear Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Gentamicin": "1405-41-0",
+      "Dexamethasone": "50-02-2"
+    },
+    "id": 312
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Naphazoline HCl Opth. Sol. USP",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "529-39-1",
+    "id": 313
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Phenylephrine Eye Drops BP",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "59-42-7",
+    "id": 314
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Norfloxacin & Dexa. Eye / Ear Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Norfloxacin": "70458-96-7",
+      "Dexamethasone": "50-02-2"
+    },
+    "id": 315
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Ofloxacin Oph. Sol. USP E/E Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "82419-36-1",
+    "id": 316
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Tobramycin Ophthalmic Sol. USP",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "32986-56-4",
+    "id": 317
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Diclofenac Sodiom Eye / Ear Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "15307-86-5",
+    "id": 318
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Gentamicin Sulphate Eye/Ear Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "1405-41-0",
+    "id": 319
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Cipro. & Dexa. Eye / Ear Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Ciprofloxacin": "85721-33-1",
+      "Dexamethasone": "50-02-2"
+    },
+    "id": 320
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Dexa. & Neomycin Eye / Ear Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Dexamethasone": "50-02-2",
+      "Neomycin sulfate": "1405-10-3"
+    },
+    "id": 321
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Lubricating Eye Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "MIXTURE (kunsttranenformule; geen uniek CAS)",
+    "id": 322
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Timolol Maleate Eye Drops IP",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "26921-17-5",
+    "id": 323
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Prednisolone Acetate Oph. Sol. USP",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "52-21-1",
+    "id": 324
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Ofloxacin Oph. Sol. USP",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "82419-36-1",
+    "id": 325
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Ciprofloxacin & Dexa. Eye/Ear Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Ciprofloxacin": "85721-33-1",
+      "Dexamethasone": "50-02-2"
+    },
+    "id": 326
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Prednisolone Acetate & Ofloxacin Eye Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Prednisolone acetate": "52-21-1",
+      "Ofloxacin": "82419-36-1"
+    },
+    "id": 327
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Dexa., Boric Acid & Neomycin E/E Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "MIXTURE (dexamethasone + boric acid + neomycin – geen enkelvoudige CAS)",
+    "id": 328
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Betamethasone & Neomycin E/E Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Betamethasone": "378-44-9",
+      "Neomycin sulfate": "1405-10-3"
+    },
+    "id": 329
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Dexa. & Chloram. Eye Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Dexamethasone": "50-02-2",
+      "Chloramphenicol": "56-75-7"
+    },
+    "id": 330
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Sulphacetamide Sod. Eye Drops IP",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "127-56-0",
+    "id": 331
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Naphazoline, CPM & Methylcellulose E/E Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "MIXTURE (naphazoline + chlorpheniramine + HPMC – geen enkelvoudige CAS)",
+    "id": 332
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Povidone Iodine Solution IP",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Povidone-iodine": "25655-41-8"
+    },
+    "id": 333
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "CMC,Glycerin & N-Acetyl. Caronsine E/E Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "MIXTURE (carboxymethylcellulose + glycerin + N-acetylcarnosine – geen enkelvoudige CAS)",
+    "id": 334
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Boric Acid, Sod. Chlo.,Napha, Zinc & CPM",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "MIXTURE (boric acid + sodium chloride + naphazoline + zinc salt + chlorpheniramine – geen enkelvoudige CAS)",
+    "id": 335
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Phen. HCl, Napha, Menthol, Camphor, HPMC",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "MIXTURE (phenylephrine + naphazoline + menthol + camphor + HPMC)",
+    "id": 336
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Sod. CMC Eye Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "9004-32-4",
+    "id": 337
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Fluorometholone Oph. Susp. USP",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "426-13-1",
+    "id": 338
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Napha., CPM, Zinc, Boric Acid & Sod. Chloride",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "MIXTURE (naphazoline + chlorpheniramine + zinc salt + boric acid + sodium chloride)",
+    "id": 339
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Flurbiprofen Sodium& Chloramphenicol",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Flurbiprofen sodium": "5104-49-4",
+      "Chloramphenicol": "56-75-7"
+    },
+    "id": 340
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Boric, Phen. HCl, Napha., Menthol & Camphor",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "MIXTURE (boric acid + phenylephrine + naphazoline + menthol + camphor)",
+    "id": 341
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Bimatoprost & Timolol Maleate Eye Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Bimatoprost": "155206-00-1",
+      "Timolol maleate": "26921-17-5"
+    },
+    "id": 342
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "HPMC,Borax,Boric,Sod.Chlo.,& Pot.Chloride",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "MIXTURE (HPMC + borax + boric acid + sodium chloride + potassium chloride)",
+    "id": 343
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "CPM,Boric Acid, Sod. Chloride & Tetrahy. HCl",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "MIXTURE (chlorpheniramine + boric acid + sodium chloride + tetrahydrozoline)",
+    "id": 344
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Flurbiprofen Sodium Ophthalmic Solution USP",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "5104-49-4",
+    "id": 345
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Ofloxacin USP, Ben. Chloride Sol. IP E/E Drop",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Ofloxacin": "82419-36-1",
+      "Benzalkonium chloride": "8001-54-5"
+    },
+    "id": 346
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Oflo. & Dexa. Sod. Phos. E/E Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Ofloxacin": "82419-36-1",
+      "Dexamethasone sodium phosphate": "2392-39-4"
+    },
+    "id": 347
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Cip. & Dexa. E/E Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Ciprofloxacin": "85721-33-1",
+      "Dexamethasone": "50-02-2"
+    },
+    "id": 348
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Oflo.,Bec.,Clot.,Ligo.,Methy.,Propy., Ear Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "MIXTURE (ofloxacin + beclomethasone + clotrimazole + lignocaine + methyl/propyl paraben etc.)",
+    "id": 349
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Naph.Nit.,Chlo.,Zinc Sul.,Boric Acid Eye Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "MIXTURE (naphazoline + chlorpheniramine + zinc sulfate + boric acid)",
+    "id": 350
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Gatifloxacin, Dexa.Phot.& BKC Eye Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Gatifloxacin": "112811-59-3",
+      "Dexamethasone phosphate": "2392-39-4",
+      "Benzalkonium chloride": "8001-54-5"
+    },
+    "id": 351
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Naph, HPMC,CPM, Zinc sulphate, Boric Acid",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "MIXTURE (naphazoline + HPMC + chlorpheniramine + zinc sulfate + boric acid)",
+    "id": 352
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "HPMC",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "9004-65-3",
+    "id": 353
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Sodium Carboxymethylcellulose IP & Oxy chloro",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Sodium carboxymethylcellulose": "9004-32-4",
+      "Stabilized oxychloro complex (Purite-type)": "MIXTURE (geen enkelvoudige CAS)"
+    },
+    "id": 354
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Hydroxypropylmethyl cellulose IP",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "9004-65-3",
+    "id": 355
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Tobramycin & Dexamethasone Eye/Ear Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Tobramycin": "32986-56-4",
+      "Dexamethasone": "50-02-2"
+    },
+    "id": 356
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Ofloxacin & Dexa.Sod. Eye/Ear Drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Ofloxacin": "82419-36-1",
+      "Dexamethasone sodium phosphate": "2392-39-4"
+    },
+    "id": 357
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Brimonide Tartrate, Timolol Maleate IP, BKC",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Brimonidine tartrate": "70359-46-5",
+      "Timolol maleate": "26921-17-5",
+      "Benzalkonium chloride": "8001-54-5"
+    },
+    "id": 358
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Ciprofloxacin HCl, HPMC,BKC",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Ciprofloxacin hydrochloride": "86393-32-0",
+      "HPMC": "9004-65-3",
+      "Benzalkonium chloride": "8001-54-5"
+    },
+    "id": 359
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Latanoprost, BKC",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Latanoprost": "130209-82-4",
+      "Benzalkonium chloride": "8001-54-5"
+    },
+    "id": 360
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Latanprost, timolol Maleate IP, BKC",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Latanoprost": "130209-82-4",
+      "Timolol maleate": "26921-17-5",
+      "Benzalkonium chloride": "8001-54-5"
+    },
+    "id": 361
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Tropicamide, PEH , BKC",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Tropicamide": "1508-75-4",
+      "Phenylephrine hydrochloride": "59-42-7",
+      "Benzalkonium chloride": "8001-54-5"
+    },
+    "id": 362
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Olopatidine Hydrochloride, BKC",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Olopatadine hydrochloride": "140462-76-6",
+      "Benzalkonium chloride": "8001-54-5"
+    },
+    "id": 363
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Brimonidine tartrate, SOC",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "70359-46-5",
+    "id": 364
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Ofloxacin Ophthalmic Solution USP",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "82419-36-1",
+    "id": 365
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Timolol Maleate Eye Drops IP",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "26921-17-5",
+    "id": 366
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Tropicamide Eye Drops IP",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "1508-75-4",
+    "id": 367
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Ofloxacin Ophthalmic Solution USP",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "82419-36-1",
+    "id": 368
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Timolol Maleate Eye Drops IP",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "26921-17-5",
+    "id": 369
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Sodium Chloride Eye Dops BP",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "7647-14-5",
+    "id": 370
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Tobramycin Ophthalmic Solution USP",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "32986-56-4",
+    "id": 371
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Moxifloxacin Eye drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "151096-09-2",
+    "id": 372
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "ofloxacin & Dexamethasone Sod. Phos. Eye/Ear drops",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Ofloxacin": "82419-36-1",
+      "Dexamethasone sodium phosphate": "2392-39-4"
+    },
+    "id": 373
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Naphazoline HCl , HPMC, borax BP, Boric Acid, Menthol",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Naphazoline hydrochloride": "529-39-1",
+      "Hypromellose (HPMC)": "9004-65-3",
+      "Borax (sodium tetraborate decahydrate)": "1303-96-4",
+      "Boric acid": "10043-35-3",
+      "Menthol": "89-78-1"
+    },
+    "id": 374
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "SodiumCarboxymethylcellulose IP, SOC",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Sodium carboxymethylcellulose": "9004-32-4"
+    },
+    "id": 375
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Sulphacetamide Sodium IP, CPM, HPMC",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Sulphacetamide sodium": "127-56-0",
+      "Chlorpheniramine maleate (CPM)": "113-92-8",
+      "Hypromellose (HPMC)": "9004-65-3"
+    },
+    "id": 376
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Betamethasone Sod. Phos. IP, Neomycin Sulphate Ip",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Betamethasone sodium phosphate": "151-73-5",
+      "Neomycin sulfate": "1405-10-3"
+    },
+    "id": 377
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Ofloxacin USP , Becmethasone Dipropionate Ip, Clotrimazole IP",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Ofloxacin": "82419-36-1",
+      "Beclomethasone dipropionate": "5534-09-8",
+      "Clotrimazole": "23593-75-1"
+    },
+    "id": 378
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Sulphacetamide Sodium IP, Chloramphenicol IP",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Sulphacetamide sodium": "127-56-0",
+      "Chloramphenicol": "56-75-7"
+    },
+    "id": 379
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Chloramphenicol, Polymyxin B Sulphate ,Phenylmercuric Nitrate IP",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Chloramphenicol": "56-75-7",
+      "Polymyxin B sulfate": "1405-20-5",
+      "Phenylmercuric nitrate": "55-68-5"
+    },
+    "id": 380
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Natamycin Ophthalmic Suspension USP",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "7681-93-8",
+    "id": 381
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Naphazoline Hydrochloride USP, HPMC,CPM",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Naphazoline hydrochloride": "529-39-1",
+      "Hypromellose (HPMC)": "9004-65-3",
+      "Chlorpheniramine maleate (CPM)": "113-92-8"
+    },
+    "id": 382
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "GATIFLOXACIN + PREDNISOLONE",
+    "STRENGTH": "5ml , 10 ml",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Gatifloxacin": "112811-59-3",
+      "Prednisolone": "50-24-8"
+    },
+    "id": 383
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "AZITHROMYCIN",
+    "STRENGTH": "5ml , 10 ml",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "83905-01-5",
+    "id": 384
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Ketrolac + Ofloxacin",
+    "STRENGTH": "5ml , 10 ml",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Ketorolac tromethamine": "74103-07-4",
+      "Ofloxacin": "82419-36-1"
+    },
+    "id": 385
+  },
+  {
+    "CATEGORY": "EYE / EAR DROPS",
+    "MOLECULE NAME": "Ketrolac Tromethamine 5mg +Moxifloxacin HCL 5mg Eye Drop",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Eye/Ear Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Ketorolac tromethamine": "74103-07-4",
+      "Moxifloxacin": "151096-09-2"
+    },
+    "id": 386
+  },
+  {
+    "CATEGORY": "NASAL DROPS",
+    "MOLECULE NAME": "Xylometazoline HCL Nasal Drops IP",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Nasal Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "1218-35-5",
+    "id": 387
+  },
+  {
+    "CATEGORY": "NASAL DROPS",
+    "MOLECULE NAME": "Oxymetazoline Hydrochloride Nasal Solution",
+    "STRENGTH": "5ml , 10 ml",
+    "Column5": "Nasal Drops",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "2315-02-8",
+    "id": 388
+  },
+  {
+    "CATEGORY": "SOFT GELATIN",
+    "MOLECULE NAME": "Camphone+ Chlorthymol+ Eucalyptol+ Menthol+ Terpineol",
+    "STRENGTH": "25mg+ 5mg+ 125mg+ 55mg+ 120mg",
+    "Column5": "Capsule",
+    "DOSAGE FORM": "10x10",
+    "CAS_ID": {
+      "Camphor": "76-22-2",
+      "Chlorothymol": "89-68-9",
+      "Eucalyptol": "470-82-6",
+      "Menthol": "89-78-1",
+      "Terpineol": "98-55-5"
+    },
+    "id": 389
+  },
+  {
+    "CATEGORY": "SOFT GELATIN",
+    "MOLECULE NAME": "Diphenydramine Hcl 25",
+    "Column5": "Capsule",
+    "DOSAGE FORM": "30x10",
+    "CAS_ID": "147-24-0",
+    "id": 390
+  },
+  {
+    "CATEGORY": "SOFT GELATIN",
+    "MOLECULE NAME": "Elemental Calcium 200 + Calcitrol 0.25",
+    "Column5": "Capsule",
+    "DOSAGE FORM": "10x10",
+    "CAS_ID": {
+      "Calcium (elemental)": "7440-70-2",
+      "Calcitriol": "32222-06-3"
+    },
+    "id": 391
+  },
+  {
+    "CATEGORY": "SOFT GELATIN",
+    "MOLECULE NAME": "Lycopene 6% 5000 + Vitamine E Acetate 100 + Selenium 100",
+    "Column5": "Capsule",
+    "DOSAGE FORM": "10x10",
+    "CAS_ID": {
+      "Lycopene": "502-65-8",
+      "Vitamin E acetate": "7695-91-2",
+      "Selenium (elemental)": "7782-49-2"
+    },
+    "id": 392
+  },
+  {
+    "CATEGORY": "SOFT GELATIN",
+    "MOLECULE NAME": "Multivitamin w/o Ginseng",
+    "Column5": "Capsule",
+    "DOSAGE FORM": "10x1x10",
+    "CAS_ID": "MIXTURE (multivitamin; meerdere actieve stoffen)",
+    "id": 393
+  },
+  {
+    "CATEGORY": "SOFT GELATIN",
+    "MOLECULE NAME": "Multivitamin with Ginseng",
+    "Column5": "Capsule",
+    "DOSAGE FORM": "10x1x10",
+    "CAS_ID": "MIXTURE (multivitamin + ginseng)",
+    "id": 394
+  },
+  {
+    "CATEGORY": "SOFT GELATIN",
+    "MOLECULE NAME": "Betacarotene 10 + Zinc Sulfate Monohydrate 27.5 + Selenium 70 + Manganese 2+Copper 1",
+    "Column5": "Capsule",
+    "DOSAGE FORM": "10x10",
+    "CAS_ID": "MIXTURE (multi-trace element/vitamine combinatie)",
+    "id": 395
+  },
+  {
+    "CATEGORY": "SOFT GELATIN",
+    "MOLECULE NAME": "Vitamin E 200",
+    "Column5": "Capsule",
+    "DOSAGE FORM": "10x10",
+    "CAS_ID": "7695-91-2",
+    "id": 396
+  },
+  {
+    "CATEGORY": "SOFT GELATIN",
+    "MOLECULE NAME": "Vitamin E 400",
+    "Column5": "Capsule",
+    "DOSAGE FORM": "10x10",
+    "CAS_ID": "7695-91-2",
+    "id": 397
+  },
+  {
+    "CATEGORY": "SOFT GELATIN",
+    "MOLECULE NAME": "Betacarotene BP (30% Dispersion) + Lycopene 6% + Lutein USP 40% + Zinc sulphate monohydrate USP",
+    "Column5": "Capsule",
+    "DOSAGE FORM": "5x10",
+    "CAS_ID": {
+      "Beta-carotene": "7235-40-7",
+      "Lycopene": "502-65-8",
+      "Lutein": "127-40-2",
+      "Zinc sulfate monohydrate": "7446-19-7"
+    },
+    "id": 398
+  },
+  {
+    "CATEGORY": "SOFT GELATIN",
+    "MOLECULE NAME": "LYCOPENE (2.5%) + Vitamin E Acetate IP + Vitamin C IP+ Vitamin A concentrate oily form as Palmitate IP + Zinc Sulphate Monohydrate IP + Selenium Dioxide IP",
+    "STRENGTH": "2000mcg+ 10iu+ 50mg+ 2500 IU + 27.45 mg+ 70mcg",
+    "Column5": "Capsule",
+    "DOSAGE FORM": "10x10",
+    "CAS_ID": "MIXTURE (meerdere vitaminen/sporenelementen; geen enkelvoudige CAS)",
+    "id": 399
+  },
+  {
+    "CATEGORY": "SOFT GELATIN",
+    "MOLECULE NAME": "Atorvastatin Calcium+ Omega 3 Fatty Acid (E.P.A =33 MG &D.H.A 22 MG+ Lycopene 10%+ L- Argenine",
+    "STRENGTH": "10mg+ 300mg+ 10mg+ 50mg",
+    "Column5": "Capsule",
+    "DOSAGE FORM": "10x10",
+    "CAS_ID": {
+      "Atorvastatin calcium": "134523-03-8",
+      "Lycopene": "502-65-8"
+    },
+    "id": 400
+  },
+  {
+    "CATEGORY": "SOFT GELATIN",
+    "MOLECULE NAME": "Nimesulide + Paracetamol",
+    "Column5": "Capsule",
+    "DOSAGE FORM": "10x10",
+    "CAS_ID": {
+      "Nimesulide": "51803-78-2",
+      "Paracetamol": "103-90-2"
+    },
+    "id": 401
+  },
+  {
+    "CATEGORY": "SOFT GELATIN",
+    "MOLECULE NAME": "L-Arginine Hydrochloride BP + L-Isoleucine + L-leucine + L-Lysine Hydrochloride USP + DL-Methionine + L-Threonine + L-Valine + L-Tryptophan + L-Phenylalanine + Reduced Glutathione+Cholecalciferol IP + Vitamin A + α-Tocopheryl Acetate + Vitamin B1 IP + Vitamin B2 IP + Vitamin B6 IP + Vitamin B12 IP + Nicotinamide IP + Calcium Pantothenate IP + Ascorbic Acid IP + Folic Acid IP + Sodium selenite + Chromium Picolinate + Dried Ferrous Sulphate + Copper Sulphate 5 H2O (eq. to elemental Cu. 0.1 mg) + Potasium Iodideeq. to elemental Iodine 0.1 mg Zinc Sulphate H2O (eq. to elemental Zn. 15 mg) + Manganese Sulphate H2O (eq. to elemental Mn. 2.03 mg) +)+ Magnesium Oxide (Light) (eq. to elemental Mg. 4.15 mg Omega - 3 Fatty Acid 250 mg Equivalent to :Eicosapentaenoic Acid 90 mg & Docosahexaeboic Acid 60 mg)",
+    "STRENGTH": "13.28 mg + 5.90 mg + 18.30 mg + 25.00 mg + 4.20 mg + 6.70 mg + 5.00 mg + 5.00 mg + 1.00 mg + 200 IU + 2500 IU + 7.50 mg + 5.00 mg + 3.00 mg + 1.50 mg + 2.00 mcg + 25.00 mg + 16.30 mg + 50.00 mg + 200 mcg + 10 mg + 200 mcg + 20.50 mg + 0.40 mg + 0.13 mg + 41.20 mg + 6.25 mg +",
+    "Column5": "Capsule",
+    "DOSAGE FORM": "10x10",
+    "CAS_ID": "MIXTURE (zeer complexe aminozuur/vitamine/mineralen + omega-3 formule)",
+    "id": 402
+  },
+  {
+    "CATEGORY": "SOFT GELATIN",
+    "MOLECULE NAME": "Vitamin E Acetate + Vitamin B 6 + Vitamin C + Vitamin B 12 + Folic Acid + Coenzyme Q 10 + Onega 3 Fatty Acid (eq. Eicosapentaenoic Acid & Docosahezaenoic Acid 60 mg)",
+    "STRENGTH": "200 mg + 3 mg + 150mg + 500mcg + 1 mg + 10 mg",
+    "Column5": "Capsule",
+    "DOSAGE FORM": "10X10",
+    "CAS_ID": "MIXTURE (vitamine E/B/C + Q10 + omega-3 combinatie)",
+    "id": 403
+  },
+  {
+    "CATEGORY": "SOFT GELATIN",
+    "MOLECULE NAME": "Ginseng Extract USP (Highly concentrated & standardized, Ginseng Extract corresponding to 217.5mg of root of Panax Ginseng) + Mix Carotene 10% Niacinamide IP + Calcium Pantothenate IP + Vitamin B6 IP + Mecobalamin + Calcium Ascorbate BP + Vitamin D3 IP + Refined Wheat-germ Oil BP + Folic Acid IP + Dibasic Calcium Phosphate IP Eq. to Elemental Calcium+ Elemental Phosphorous + Ferrous Fumarate IP + Zinc Sulfate Monohydrate USP + Magnesium Sulphate IP Eq. to Elemental Magnesium + Manganese Sulphate Monohydrate BP Eq. to Elemental Manganese + Copper Sulphate Pentahydrate BP Eq. to Elemental Copper Potassium Iodide IP Eq. to Elemental Iodine + Potassium Sulphate BP Eq. to Elemental Potassium",
+    "STRENGTH": "43.5mg + 10.33mg +25 mg + 5mg + 1 mg + 500mcg + 50mg + 200 IU +5mg + 0.15mg + 75mg + 58mg + 30mg + 10mg + 3mg + 0.5mg + 0.5mg + 0.1mg + 2mg",
+    "Column5": "Capsule",
+    "DOSAGE FORM": "10X10",
+    "CAS_ID": "MIXTURE (ginseng + multivitaminen + mineralen)",
+    "id": 404
+  },
+  {
+    "CATEGORY": "SOFT GELATIN",
+    "MOLECULE NAME": "Calcium Carbonate IP eq. to Elemental + Calcium Alfacalcidol BP",
+    "STRENGTH": "500 mg + 200 mg + 0.25 mcg",
+    "Column5": "Capsule",
+    "DOSAGE FORM": "10X10",
+    "CAS_ID": {
+      "Calcium carbonate": "471-34-1",
+      "Alfacalcidol": "41294-56-8"
+    },
+    "id": 405
+  },
+  {
+    "CATEGORY": "SOFT GELATIN",
+    "MOLECULE NAME": "Calcium Ascorbate BP+ Lycopene + Methylcobalamin + Wheat Germ Oil BP + Zinc Sulfate Monohydrate USP + Calcium Pantothenate IP + Lutein",
+    "STRENGTH": "50 mg + 2000 mcg + 500 mcg + 25 mg + 27.45 mg + 10 mcg + 3.2 mg",
+    "Column5": "Capsule",
+    "DOSAGE FORM": "10X10",
+    "CAS_ID": "MIXTURE (meerdere vitaminen/antioxidanten + zink)",
+    "id": 406
+  },
+  {
+    "CATEGORY": "I.V. FLUID",
+    "MOLECULE NAME": "Ciprofloxacin injection IP (2% w/v)",
+    "STRENGTH": "100ML",
+    "Column5": "I. V.",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "85721-33-1",
+    "id": 407
+  },
+  {
+    "CATEGORY": "I.V. FLUID",
+    "MOLECULE NAME": "Ciprofloxacin intravenous infusion",
+    "STRENGTH": "100ML",
+    "Column5": "I. V.",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "85721-33-1",
+    "id": 408
+  },
+  {
+    "CATEGORY": "I.V. FLUID",
+    "MOLECULE NAME": "Dextrose injection",
+    "STRENGTH": "100ML",
+    "Column5": "I. V.",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "50-99-7",
+    "id": 409
+  },
+  {
+    "CATEGORY": "I.V. FLUID",
+    "MOLECULE NAME": "Mannitol injection (20%)",
+    "STRENGTH": "100ML",
+    "Column5": "I. V.",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "69-65-8",
+    "id": 410
+  },
+  {
+    "CATEGORY": "I.V. FLUID",
+    "MOLECULE NAME": "Metronidazole injection (0.5%w/v)",
+    "STRENGTH": "100ML",
+    "Column5": "I. V.",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "443-48-1",
+    "id": 411
+  },
+  {
+    "CATEGORY": "I.V. FLUID",
+    "MOLECULE NAME": "Linezolid injection (0.2% w/v)",
+    "STRENGTH": "100ML",
+    "Column5": "I. V.",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "165800-03-3",
+    "id": 412
+  },
+  {
+    "CATEGORY": "I.V. FLUID",
+    "MOLECULE NAME": "Ofloxacin influsion (0.2% w/v)",
+    "STRENGTH": "100ML",
+    "Column5": "I. V.",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "82419-36-1",
+    "id": 413
+  },
+  {
+    "CATEGORY": "I.V. FLUID",
+    "MOLECULE NAME": "Levofloxacin intravenous infusion (0.5% w/v)",
+    "STRENGTH": "100ML",
+    "Column5": "I. V.",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "100986-85-4",
+    "id": 414
+  },
+  {
+    "CATEGORY": "I.V. FLUID",
+    "MOLECULE NAME": "Ornidazole infusion (0.5% w/v)",
+    "STRENGTH": "100ML",
+    "Column5": "I. V.",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "16773-42-5",
+    "id": 415
+  },
+  {
+    "CATEGORY": "I.V. FLUID",
+    "MOLECULE NAME": "Moxifloxacin intravenous infusion (0.4% w/v)",
+    "STRENGTH": "100ML",
+    "Column5": "I. V.",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "151096-09-2",
+    "id": 416
+  },
+  {
+    "CATEGORY": "I.V. FLUID",
+    "MOLECULE NAME": "Fluconazole infusion (0.2% ww/v)",
+    "STRENGTH": "100ML",
+    "Column5": "I. V.",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "86386-73-4",
+    "id": 417
+  },
+  {
+    "CATEGORY": "I.V. FLUID",
+    "MOLECULE NAME": "Gatifloxacin infusion IP",
+    "STRENGTH": "100ML",
+    "Column5": "I. V.",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "112811-59-3",
+    "id": 418
+  },
+  {
+    "CATEGORY": "I.V. FLUID",
+    "MOLECULE NAME": "Levofloxacin infusion (0.5% w/v)",
+    "STRENGTH": "100ML",
+    "Column5": "I. V.",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "100986-85-4",
+    "id": 419
+  },
+  {
+    "CATEGORY": "I.V. FLUID",
+    "MOLECULE NAME": "Paracetamol",
+    "STRENGTH": "100ML",
+    "Column5": "I. V.",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": "103-90-2",
+    "id": 420
+  },
+  {
+    "CATEGORY": "I.V. FLUID",
+    "MOLECULE NAME": "Paracetamol + diclofenac injection",
+    "STRENGTH": "100ML",
+    "Column5": "I. V.",
+    "DOSAGE FORM": "FFS Packing",
+    "CAS_ID": {
+      "Paracetamol": "103-90-2",
+      "Diclofenac sodium": "15307-79-6"
+    },
+    "id": 421
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Amikacin Sul. Inj. IP 100 mg/ml",
+    "STRENGTH": "2ml /10ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Vial",
+    "CAS_ID": "37517-28-5",
+    "id": 422
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Amikacin Sul. Inj. IP 250 mg/ml",
+    "STRENGTH": "2ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Vial",
+    "CAS_ID": "37517-28-5",
+    "id": 423
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Amikacin Sul. Inj. IP 500 mg/ml",
+    "STRENGTH": "2ml /10ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Vial",
+    "CAS_ID": "37517-28-5",
+    "id": 424
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Betamethasone Sod. Phos. Inj.IP",
+    "STRENGTH": "1ml / 2ml / 5ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule, Vial",
+    "CAS_ID": "151-73-5",
+    "id": 425
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Chloroquine Phosphate IP",
+    "STRENGTH": "30ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Vial",
+    "CAS_ID": "50-63-5",
+    "id": 426
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Dexa., Methyl., Propyl Paraben IP Inj",
+    "STRENGTH": "2ml/10ml / 20ml / 30ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Vial",
+    "CAS_ID": {
+      "Dexamethasone sodium phosphate": "2392-39-4",
+      "Methyl paraben": "99-76-3",
+      "Propyl paraben": "94-13-3"
+    },
+    "id": 427
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Dexamethasone Inj. IP",
+    "STRENGTH": "2ml /10ml / 20ml / 30ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Vial",
+    "CAS_ID": "50-02-2",
+    "id": 428
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Dexamethasone Sod. Phos. Inj. IP",
+    "STRENGTH": "2ml /10ml / 20ml / 30ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Vial",
+    "CAS_ID": "2392-39-4",
+    "id": 429
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Dic. Sodium IP, Benzyl Alcohol IP'85 Inj.",
+    "STRENGTH": "3ml / 30ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule, Vial",
+    "CAS_ID": {
+      "Diclofenac sodium": "15307-79-6",
+      "Benzyl alcohol": "100-51-6"
+    },
+    "id": 430
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Dic. Sodium IP,",
+    "STRENGTH": "3ml / 30ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule, Vial",
+    "CAS_ID": "15307-79-6",
+    "id": 431
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Diclofenac Sod. Inj. IP",
+    "STRENGTH": "3ml / 30ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule , Vial",
+    "CAS_ID": "15307-79-6",
+    "id": 432
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Diclofenac Sodium Injection IP",
+    "STRENGTH": "3ml / 30ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule , Vial",
+    "CAS_ID": "15307-79-6",
+    "id": 433
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Dicyclomine HCl Inj.USP",
+    "STRENGTH": "30ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Vial",
+    "CAS_ID": "67-92-5",
+    "id": 434
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Etamsylate Injection",
+    "STRENGTH": "2ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule",
+    "CAS_ID": "2624-44-4",
+    "id": 435
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Etofylline & Theophylline Injection",
+    "STRENGTH": "2ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule",
+    "CAS_ID": {
+      "Etofylline": "519-37-9",
+      "Theophylline": "58-55-9"
+    },
+    "id": 436
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Frusemide Inj. IP 10 mg/ml",
+    "STRENGTH": "2ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule",
+    "CAS_ID": "54-31-9",
+    "id": 437
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Frusemide Inj. IP 20 mg/ml",
+    "STRENGTH": "2ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule",
+    "CAS_ID": "54-31-9",
+    "id": 438
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Genta., Methyl., Propyl Paraben IP Inj.",
+    "STRENGTH": "2ml /10ml / 20ml /30ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Vial",
+    "CAS_ID": {
+      "Gentamicin": "1403-66-3",
+      "Methyl paraben": "99-76-3",
+      "Propyl paraben": "94-13-3"
+    },
+    "id": 439
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Gentamicin Injection BP",
+    "STRENGTH": "2ml /10ml / 20ml / 30ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Vial",
+    "CAS_ID": "1403-66-3",
+    "id": 440
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Gentamicin Sul. Inj. IP",
+    "STRENGTH": "2ml /10ml / 20ml /30ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Vial",
+    "CAS_ID": "1403-66-3",
+    "id": 441
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Ghentamicin Sul. Inj Ip",
+    "STRENGTH": "2ml /10ml / 20ml / 30ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Vial",
+    "CAS_ID": "1403-66-3",
+    "id": 442
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Menadione Sodium Bisulphite Injection",
+    "Column5": "Injection",
+    "CAS_ID": "130-37-0",
+    "id": 443
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Methyl Pred. Acetate Inj. IP",
+    "STRENGTH": "2ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Vial",
+    "CAS_ID": "53-36-1",
+    "id": 444
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Methylcobalamin Injection",
+    "STRENGTH": "1ml / 2ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule",
+    "CAS_ID": "13422-55-4",
+    "id": 445
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Methylergometrine Inj. IP",
+    "STRENGTH": "1ml / 7.5ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule , Vial",
+    "CAS_ID": "113-42-8",
+    "id": 446
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Metroclopramide Hydrochloride Injection Ip",
+    "STRENGTH": "2ml / 10ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule , Vial",
+    "CAS_ID": "54143-57-6",
+    "id": 447
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Metroclopramide HCl Inj.IP",
+    "STRENGTH": "2ml / 10ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule , Vial",
+    "CAS_ID": "54143-57-6",
+    "id": 448
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Ondansetron Inj. USP",
+    "STRENGTH": "2ml / 5ml /10ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule, Vial",
+    "CAS_ID": "103639-04-9",
+    "id": 449
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Ondansetron Injection USP",
+    "STRENGTH": "2ml / 5ml / 10ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule , Vial",
+    "CAS_ID": "103639-04-9",
+    "id": 450
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Ondasetoron Hcl 2mg/ml",
+    "STRENGTH": "2ml / 5ml / 10ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule , Vial",
+    "CAS_ID": "103639-04-9",
+    "id": 451
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Oxytocin Inj. BP 5 IU",
+    "STRENGTH": "1ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule",
+    "CAS_ID": "50-56-6",
+    "id": 452
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Oxytocin Inj. IP 5 IU",
+    "STRENGTH": "1ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule",
+    "CAS_ID": "50-56-6",
+    "id": 453
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Oxytocin Injection IP",
+    "STRENGTH": "1ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule",
+    "CAS_ID": "50-56-6",
+    "id": 454
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Paracetamol Injection",
+    "STRENGTH": "1ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule",
+    "CAS_ID": "103-90-2",
+    "id": 455
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Pentazocine Lactate Injection IP",
+    "STRENGTH": "2ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule",
+    "CAS_ID": "17146-95-1",
+    "id": 456
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Quinine Dihydrochloride Injection IP",
+    "STRENGTH": "1ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule",
+    "CAS_ID": "6119-47-7",
+    "id": 457
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Ranitidine HCl Inj. IP",
+    "STRENGTH": "2ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule",
+    "CAS_ID": "66357-59-3",
+    "id": 458
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Ranitidine Hydrochloride Inj. Ip",
+    "STRENGTH": "2ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule",
+    "CAS_ID": "66357-59-3",
+    "id": 459
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Ranitidine Injection BP",
+    "STRENGTH": "2ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule",
+    "CAS_ID": "66357-59-3",
+    "id": 460
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Sodium Chloride IP INJ.",
+    "STRENGTH": "2ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule",
+    "CAS_ID": "7647-14-5",
+    "id": 461
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Solium Bacarbonate IP",
+    "STRENGTH": "5ml / 10ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule",
+    "CAS_ID": "144-55-8",
+    "id": 462
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Sterile Artesunate Injection 60mg",
+    "STRENGTH": "2ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule",
+    "CAS_ID": "88495-63-0",
+    "id": 463
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Sterile Water For Injection IP",
+    "STRENGTH": "7.5ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Vial",
+    "CAS_ID": "7732-18-5",
+    "id": 464
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Tramadol Hydrochloride Injection",
+    "STRENGTH": "5ml / 10ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule",
+    "CAS_ID": "36282-47-0",
+    "id": 465
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Triamcinolone Acetonide Inj. IP",
+    "STRENGTH": "2ml / 1ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule",
+    "CAS_ID": "76-25-5",
+    "id": 466
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Velthemide Bromide",
+    "STRENGTH": "2ml / 7.5ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Vial",
+    "CAS_ID": "90-22-2",
+    "id": 467
+  },
+  {
+    "CATEGORY": "INJECTION",
+    "MOLECULE NAME": "Vitamin B Complex Injection",
+    "STRENGTH": "1ml",
+    "Column5": "Injection",
+    "DOSAGE FORM": "Ampoule",
+    "CAS_ID": "MIXTURE (multiple B-vitamins, geen enkel CAS-nummer)",
+    "id": 468
+  },
+  {
+    "CATEGORY": "SACHET",
+    "MOLECULE NAME": "Amoxycillin + Cloxacillin",
+    "STRENGTH": "250gm + 250gm",
+    "DOSAGE FORM": "Pouch",
+    "CAS_ID": {
+      "Amoxycillin": "26787-78-0",
+      "Cloxacillin": "7081-44-9"
+    },
+    "id": 469
+  },
+  {
+    "CATEGORY": "SACHET",
+    "MOLECULE NAME": "Amoxycillin + Cloxacillin",
+    "STRENGTH": "50gm + 50gm",
+    "DOSAGE FORM": "Pouch",
+    "CAS_ID": {
+      "Amoxycillin": "26787-78-0",
+      "Cloxacillin": "7081-44-9"
+    },
+    "id": 470
+  },
+  {
+    "CATEGORY": "SACHET",
+    "MOLECULE NAME": "Cholestyramine",
+    "STRENGTH": "5gm",
+    "DOSAGE FORM": "Pouch",
+    "CAS_ID": "11041-12-6",
+    "id": 471
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Artesunate + amodiaquin",
+    "STRENGTH": "50mg + 150mg",
+    "Column5": "Kit",
+    "CAS_ID": {
+      "Artesunate": "88495-63-0",
+      "Amodiaquine": "86-42-0"
+    },
+    "id": 472
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Artesunate + amodiaquin",
+    "STRENGTH": "50mg + 150mg",
+    "Column5": "Kit",
+    "CAS_ID": {
+      "Artesunate": "88495-63-0",
+      "Amodiaquine": "86-42-0"
+    },
+    "id": 473
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Artesunate + amodiaquin",
+    "STRENGTH": "50mg + 150mg",
+    "Column5": "Kit",
+    "CAS_ID": {
+      "Artesunate": "88495-63-0",
+      "Amodiaquine": "86-42-0"
+    },
+    "id": 474
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Artesunate + amodiaquine",
+    "STRENGTH": "50mg + 150mg",
+    "Column5": "Tablets",
+    "CAS_ID": {
+      "Artesunate": "88495-63-0",
+      "Amodiaquine": "86-42-0"
+    },
+    "id": 475
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Artesunate + amodiaquine",
+    "STRENGTH": "50mg + 150mg",
+    "Column5": "Tablets",
+    "CAS_ID": {
+      "Artesunate": "88495-63-0",
+      "Amodiaquine": "86-42-0"
+    },
+    "id": 476
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Artesunate + amodiaquine",
+    "STRENGTH": "50mg + 150mg",
+    "Column5": "Tablets",
+    "CAS_ID": {
+      "Artesunate": "88495-63-0",
+      "Amodiaquine": "86-42-0"
+    },
+    "id": 477
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Artesunate",
+    "STRENGTH": "50mg",
+    "Column5": "Capsules",
+    "CAS_ID": "88495-63-0",
+    "id": 478
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Artesunate",
+    "STRENGTH": "50mg",
+    "Column5": "Tablets",
+    "CAS_ID": "88495-63-0",
+    "id": 479
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Artesunate + sulphadoxine + pyrimethamine",
+    "STRENGTH": "50mg + 500mg + 25mg",
+    "Column5": "Tablets",
+    "CAS_ID": {
+      "Artesunate": "88495-63-0",
+      "Sulfadoxine": "2447-57-6",
+      "Pyrimethamine": "58-14-0"
+    },
+    "id": 480
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Artesunate",
+    "STRENGTH": "5mg",
+    "Column5": "Injection",
+    "CAS_ID": "88495-63-0",
+    "id": 481
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Artesunate",
+    "STRENGTH": "60 mg",
+    "Column5": "Injection",
+    "CAS_ID": "88495-63-0",
+    "id": 482
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Chloroquine",
+    "STRENGTH": "250mg",
+    "Column5": "Tablets",
+    "CAS_ID": "54-05-7",
+    "id": 483
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Chloroquine",
+    "STRENGTH": "500mg",
+    "Column5": "Tablets",
+    "CAS_ID": "54-05-7",
+    "id": 484
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Chloroquine phosphate + sulphadoxine + pyrimethamine",
+    "Column5": "Tablets",
+    "CAS_ID": {
+      "Chloroquine phosphate": "50-63-5",
+      "Sulfadoxine": "2447-57-6",
+      "Pyrimethamine": "58-14-0"
+    },
+    "id": 485
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Chloroquine phosphate + sulphadoxine+ pyrimethamine",
+    "Column5": "Tablets",
+    "CAS_ID": {
+      "Chloroquine phosphate": "50-63-5",
+      "Sulfadoxine": "2447-57-6",
+      "Pyrimethamine": "58-14-0"
+    },
+    "id": 486
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Mefloquine",
+    "STRENGTH": "250mg",
+    "Column5": "Tablets",
+    "CAS_ID": "49752-90-1",
+    "id": 487
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Mefloquine hcl + artesunate",
+    "STRENGTH": "250mg+ 200mg",
+    "Column5": "Tablets",
+    "CAS_ID": {
+      "Mefloquine hydrochloride": "51773-92-3",
+      "Artesunate": "88495-63-0"
+    },
+    "id": 488
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Primaquine phosphate",
+    "STRENGTH": "15mg",
+    "Column5": "Tablets",
+    "CAS_ID": "63-45-6",
+    "id": 489
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Primaquine phosphate",
+    "STRENGTH": "5mg",
+    "Column5": "Tablets",
+    "CAS_ID": "63-45-6",
+    "id": 490
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Primaquine phosphate",
+    "STRENGTH": "7.5mg",
+    "Column5": "Tablets",
+    "CAS_ID": "63-45-6",
+    "id": 491
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Proguanil hcl",
+    "STRENGTH": "100mg",
+    "Column5": "Tablets",
+    "CAS_ID": "637-32-1",
+    "id": 492
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Pyrimethamine",
+    "STRENGTH": "25mg",
+    "Column5": "Tablets",
+    "CAS_ID": "58-14-0",
+    "id": 493
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Quinine Di hcl",
+    "STRENGTH": "250mg",
+    "Column5": "Injection",
+    "CAS_ID": "60-93-5",
+    "id": 494
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Quinine di hcl",
+    "STRENGTH": "300mg",
+    "Column5": "Injection",
+    "CAS_ID": "60-93-5",
+    "id": 495
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Quinine di hcl",
+    "STRENGTH": "500mg",
+    "Column5": "Injection",
+    "CAS_ID": "60-93-5",
+    "id": 496
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Quinine sulphate",
+    "STRENGTH": "200mg",
+    "Column5": "Tablets",
+    "CAS_ID": "804-63-7",
+    "id": 497
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Quinine sulphate",
+    "STRENGTH": "300mg",
+    "Column5": "Tablets",
+    "CAS_ID": "804-63-7",
+    "id": 498
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Quinine sulphate",
+    "STRENGTH": "500mg",
+    "Column5": "Tablets",
+    "CAS_ID": "804-63-7",
+    "id": 499
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Sulphadoxine + pyrimethamine",
+    "STRENGTH": "500mg + 25mg",
+    "Column5": "Injection",
+    "CAS_ID": {
+      "Sulfadoxine": "2447-57-6",
+      "Pyrimethamine": "58-14-0"
+    },
+    "id": 500
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Sulphamethoxazole + pyrimethamine",
+    "STRENGTH": "250mg + 12.5mg",
+    "Column5": "Tablets",
+    "CAS_ID": {
+      "Sulfamethoxazole": "723-46-6",
+      "Pyrimethamine": "58-14-0"
+    },
+    "id": 501
+  },
+  {
+    "CATEGORY": "ANTI MALERIAL",
+    "MOLECULE NAME": "Sulphamethoxazole + pyrimethamine",
+    "STRENGTH": "500mg + 25mg",
+    "Column5": "Tablets",
+    "CAS_ID": {
+      "Sulfamethoxazole": "723-46-6",
+      "Pyrimethamine": "58-14-0"
+    },
+    "id": 502
+  }
+]

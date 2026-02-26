@@ -51,7 +51,7 @@ export default function Products() {
 
   return (
     <div className="pt-16 bg-[#FFF8F5] min-h-screen">
-      <section className="max-w-7xl mx-auto px-6 md:px-16 pb-16">
+     <section className="max-w-7xl mx-auto px-6 md:px-16 pb-40">
 
         <header className="text-center mt-4 mb-6">
           <h1 className="text-3xl md:text-4xl font-extrabold text-[#0d2d47]">
@@ -64,6 +64,7 @@ export default function Products() {
 
         {/* SEARCH */}
         <div className="relative max-w-4xl mx-auto mb-6">
+          
           <input
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
@@ -76,7 +77,7 @@ export default function Products() {
         </div>
 
         {/* FILTERS */}
-        <div className="flex flex-wrap justify-center gap-3 mb-6">
+    <div className="flex flex-wrap justify-center gap-3 mb-6 relative z-30">
           <select value={category} onChange={(e) => setCategory(e.target.value)}>
             <option value="">Category</option>
             {categoryOptions.map((c) => (
@@ -98,7 +99,15 @@ export default function Products() {
             ))}
           </select>
         </div>
-
+<div className="flex justify-end mb-4">
+ <a
+  href="/LarksoisPharmaproduct.json"
+  download="Ivexia_Product_List.json"
+  className="px-6 py-2 rounded-full bg-gradient-to-r from-[#0d2d47] to-[#19a6b5] text-white text-sm font-semibold hover:opacity-90 transition"
+>
+  Download Product List
+</a>
+</div>
         {/* TABLE */}
         <div className="overflow-x-auto bg-white shadow-sm">
           <table className="min-w-full text-sm">
