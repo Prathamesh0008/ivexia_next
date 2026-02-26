@@ -86,76 +86,65 @@ useEffect(() => {
   }, []);
 
   // Filtering
-  const filtered = useMemo(() => {
-    const q = query.trim().toLowerCase();
+const filtered = useMemo(() => {
+  const q = query.trim().toLowerCase();
 
-    let list = INGREDIENTS.filter((i) => {
-      // prefer plain text fields if exist, otherwise fallback
-     const formatKey = (key) => {
-  if (!key) return "";
-  const parts = key.split(".");
-  const last = parts[parts.length - 2] || parts[parts.length - 1];
-  return last.replace(/-/g, " ");
-};
+  let list = INGREDIENTS.filter((i) => {
+    const name = formatKey(i.nameKey).toLowerCase();
+    const desc = formatKey(i.descKey).toLowerCase();
+    const slug = (i.slug || "").toLowerCase();
+    const id = (i.id || "").toLowerCase();
 
-const name = formatKey(i.nameKey).toLowerCase();
-const desc = formatKey(i.descKey).toLowerCase();
+    const matchQuery =
+      !q ||
+      name.includes(q) ||
+      desc.includes(q) ||
+      slug.includes(q) ||
+      id.includes(q) ||
+      (i.cas && i.cas.toLowerCase().includes(q));
 
-      const matchQuery =
-        !q ||
-        name.includes(q) ||
-        desc.includes(q) ||
-        (i.cas && i.cas.toLowerCase().includes(q));
+    const catValue = i.categoryKey || i.category || "Uncategorized";
+    const dosageList = i.dosageKeys || i.dosage || [];
 
-      const catValue = i.categoryKey || i.category || "Uncategorized";
-      const dosageList = i.dosageKeys || i.dosage || [];
+    const matchCategory =
+      category === "All" || catValue === category;
 
-      const matchCategory = category === "All" || catValue === category;
+    const matchDosage =
+      dosage === "All" ||
+      (Array.isArray(dosageList)
+        ? dosageList.includes(dosage)
+        : String(dosageList) === dosage);
 
-      const matchDosage =
-        dosage === "All" ||
-        (Array.isArray(dosageList)
-          ? dosageList.includes(dosage)
-          : String(dosageList) === dosage);
+    return matchQuery && matchCategory && matchDosage;
+  });
 
-      return matchQuery && matchCategory && matchDosage;
-    });
+  // 🔥 FIXED SORTING
+  switch (sortBy) {
+    case "name-asc":
+      list.sort((a, b) =>
+        formatKey(a.nameKey).localeCompare(
+          formatKey(b.nameKey)
+        )
+      );
+      break;
 
-    // Sorting
-    switch (sortBy) {
-      case "name-asc":
-        list.sort((a, b) =>
-         formatKey(a.nameKey).localeCompare(
-            b.name || b.title || b.nameKey || ""
-          )
-        );
-        break;
+    case "name-desc":
+      list.sort((a, b) =>
+        formatKey(b.nameKey).localeCompare(
+          formatKey(a.nameKey)
+        )
+      );
+      break;
 
-      case "name-desc":
-        list.sort((a, b) =>
-          (b.name || b.title || b.nameKey || "").localeCompare(
-            a.name || a.title || a.nameKey || ""
-          )
-        );
-        break;
+    case "category":
+      list.sort((a, b) =>
+        (a.categoryKey || "").localeCompare(b.categoryKey || "")
+      );
+      break;
+  }
 
-      case "category":
-        list.sort((a, b) => {
-          const ca = a.categoryKey || a.category || "";
-          const cb = b.categoryKey || b.category || "";
-          return (
-            ca.localeCompare(cb) ||
-            (a.name || a.title || a.nameKey || "").localeCompare(
-              b.name || b.title || b.nameKey || ""
-            )
-          );
-        });
-        break;
-    }
-
-    return list;
-  }, [query, category, dosage, sortBy]);
-
+  return list;
+}, [query, category, dosage, sortBy]);
   const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
 
   const current = filtered.slice((page - 1) * pageSize, page * pageSize);
