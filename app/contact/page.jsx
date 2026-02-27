@@ -60,64 +60,66 @@ export default function ContactPage() {
     return errors
   }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
+const handleSubmit = async (e) => {
+  e.preventDefault()
 
-    const errors = validateForm()
-    if (Object.keys(errors).length > 0) {
-      setFormErrors(errors)
-      return
-    }
-
-    setFormErrors({})
-    setLoading(true)
-    setSuccess(false)
-    setError('')
-
-    try {
-      // 1️⃣ Send Email to Admin
-      await emailjs.send(
-        "service_gss4j1p",
-        "template_nh2iyu5",
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          phone: formData.phone,
-          subject: formData.subject,
-          message: formData.message,
-        },
-        "QGGp40v8O40-464My"
-      )
-
-      // 2️⃣ Send confirmation to User
-      await emailjs.send(
-        "service_gss4j1p",
-        "template_8e1weya",
-        {
-          email: formData.email,
-          from_name: formData.name,
-          subject: formData.subject,
-          message: formData.message,
-        },
-        "QGGp40v8O40-464My"
-      )
-
-      setSuccess(true)
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: ''
-      })
-
-    } catch (error) {
-      console.error("Email Error:", error)
-      setError("Failed to send message. Please try again.")
-    }
-
-    setLoading(false)
+  const errors = validateForm()
+  if (Object.keys(errors).length > 0) {
+    setFormErrors(errors)
+    return
   }
+
+  setLoading(true)
+  setSuccess(false)
+  setError("")
+
+  try {
+    // Send to Admin
+    await emailjs.send(
+      "service_gss4j1p",
+      "template_nh2iyu5",
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        subject: formData.subject,
+        message: formData.message,
+        time: new Date().toLocaleString(),
+      },
+      "QGGp40v8O40-464My"
+    )
+
+    // Send to User
+    await emailjs.send(
+      "service_gss4j1p",
+      "template_8e1weya",
+      {
+        to_email: formData.email,
+        from_name: formData.name,
+        subject: formData.subject,
+        message: formData.message,
+        time: new Date().toLocaleString(),
+      },
+      "QGGp40v8O40-464My"
+    )
+
+    setSuccess(true)
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: ""
+    })
+
+  } catch (err) {
+    console.error(err)
+    setError("Failed to send message. Please try again.")
+  }
+
+  setLoading(false)
+}
+
 
   const handleChange = (e) => {
     const { name, value } = e.target
