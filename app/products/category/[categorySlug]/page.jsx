@@ -1,9 +1,7 @@
-import Products from "@/pages/Products";
-
-export default function Page() {
-  return <Products />;
-}import Products from "@/pages/Products";
-
-export default function Page() {
-  return <Products />;
+export default function Page({ params }) {
+  return (
+    <div style={{ padding: "100px 20px" }}>
+      <h1>Category: {params.categorySlug}</h1>
+    </div>
+  );
 }

@@ -1,25 +1,24 @@
-//ivexia\app\ivexia-mag\page.jsx
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { Suspense, useState, useEffect, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { getAllArticles } from "../../data/articles";
 
-export default function IvexiaMagPage() {
+/* =========================
+   MAIN CONTENT COMPONENT
+========================= */
+function IvexiaMagContent() {
   const searchParams = useSearchParams();
   const categoryFilter = searchParams.get("category");
 
   const ARTICLES = getAllArticles();
-  
+
   const articlesPerPage = 3;
   const [currentPage, setCurrentPage] = useState(1);
   const [recentArticles, setRecentArticles] = useState([]);
 
-  /* =========================
-     FILTER ARTICLES
-  ========================= */
   const visibleArticles = useMemo(() => {
     if (!categoryFilter) return ARTICLES;
     return ARTICLES.filter((a) => a.tag === categoryFilter);
@@ -34,16 +33,10 @@ export default function IvexiaMagPage() {
     startIndex + articlesPerPage
   );
 
-  /* =========================
-     RESET PAGE ON CATEGORY CHANGE
-  ========================= */
   useEffect(() => {
     setCurrentPage(1);
   }, [categoryFilter]);
 
-  /* =========================
-     LOAD RECENT ARTICLES
-  ========================= */
   useEffect(() => {
     try {
       const raw = localStorage.getItem("ivexiaRecentArticles");
@@ -71,19 +64,13 @@ export default function IvexiaMagPage() {
   return (
     <div className="bg-[#f8fafc] min-h-screen py-20">
       <div className="max-w-7xl mx-auto px-6">
-        {/* HEADER */}
         <div className="text-center mb-20">
           <h1 className="text-5xl font-bold text-[#0d2d47]">
             Ivexia Magazine
           </h1>
-          <div className="w-24 h-1 bg-[#E2004F] mx-auto mt-6 rounded-full" />
-          <p className="text-gray-600 mt-6 text-lg max-w-2xl mx-auto">
-            Insights, research updates, and global healthcare innovation stories.
-          </p>
         </div>
 
         <div className="grid md:grid-cols-4 gap-12">
-          {/* SIDEBAR */}
           <div className="md:col-span-1">
             <div className="bg-white shadow-lg rounded-2xl p-6 border border-gray-100">
               <h3 className="font-bold text-xl text-[#0d2d47] mb-6">
@@ -100,16 +87,16 @@ export default function IvexiaMagPage() {
                 <Link
                   key={article.slug}
                   href={`/ivexia-mag/${article.slug}`}
-                  className="flex gap-4 items-center mb-6 group"
+                  className="flex gap-4 items-center mb-6"
                 >
                   <Image
                     src={article.image}
                     width={70}
                     height={70}
                     alt={article.title}
-                    className="rounded-lg object-cover group-hover:scale-105 transition duration-300"
+                    className="rounded-lg object-cover"
                   />
-                  <p className="text-sm font-medium text-[#0d2d47] group-hover:text-[#E2004F] transition">
+                  <p className="text-sm font-medium text-[#0d2d47]">
                     {article.title}
                   </p>
                 </Link>
@@ -117,23 +104,22 @@ export default function IvexiaMagPage() {
             </div>
           </div>
 
-          {/* ARTICLES LIST */}
           <div className="md:col-span-3">
             {paginatedArticles.map((article) => (
               <div
                 key={article.slug}
-                className="bg-white shadow-md rounded-2xl overflow-hidden mb-10 border border-gray-100 hover:shadow-2xl transition duration-300"
+                className="bg-white shadow-md rounded-2xl overflow-hidden mb-10"
               >
                 <Image
                   src={article.image}
                   width={1000}
                   height={500}
                   alt={article.title}
-                  className="object-cover w-full h-[300px] hover:scale-105 transition duration-500"
+                  className="object-cover w-full h-[300px]"
                 />
 
                 <div className="p-8">
-                  <span className="text-xs uppercase tracking-wider text-[#E2004F] font-semibold">
+                  <span className="text-xs uppercase text-[#E2004F] font-semibold">
                     {article.tag}
                   </span>
 
@@ -141,13 +127,13 @@ export default function IvexiaMagPage() {
                     {article.title}
                   </h2>
 
-                  <p className="text-gray-600 mt-4 leading-relaxed">
+                  <p className="text-gray-600 mt-4">
                     {article.excerpt}
                   </p>
 
                   <Link
                     href={`/ivexia-mag/${article.slug}`}
-                    className="inline-block mt-6 text-[#E2004F] font-semibold hover:underline"
+                    className="inline-block mt-6 text-[#E2004F] font-semibold"
                   >
                     Read More →
                   </Link>
@@ -155,22 +141,21 @@ export default function IvexiaMagPage() {
               </div>
             ))}
 
-            {/* PAGINATION */}
             <div className="flex justify-center items-center gap-6 mt-16">
               <button
                 onClick={() => handlePageChange(currentPage - 1)}
-                className="px-6 py-2 rounded-full border border-gray-300 hover:bg-[#0d2d47] hover:text-white transition"
+                className="px-6 py-2 rounded-full border border-gray-300"
               >
                 Previous
               </button>
 
-              <span className="text-[#0d2d47] font-semibold">
+              <span className="font-semibold">
                 Page {currentPage} of {totalPages}
               </span>
 
               <button
                 onClick={() => handlePageChange(currentPage + 1)}
-                className="px-6 py-2 rounded-full border border-gray-300 hover:bg-[#0d2d47] hover:text-white transition"
+                className="px-6 py-2 rounded-full border border-gray-300"
               >
                 Next
               </button>
@@ -179,5 +164,16 @@ export default function IvexiaMagPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+/* =========================
+   SUSPENSE WRAPPER
+========================= */
+export default function IvexiaMagPage() {
+  return (
+    <Suspense fallback={<div className="p-20 text-center">Loading...</div>}>
+      <IvexiaMagContent />
+    </Suspense>
   );
 }
