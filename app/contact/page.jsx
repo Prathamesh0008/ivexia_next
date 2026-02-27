@@ -77,7 +77,7 @@ export default function ContactPage() {
     try {
       // 1️⃣ Send Email to Admin
       await emailjs.send(
-        "service_d413ytq",
+        "service_gss4j1p",
         "template_nh2iyu5",
         {
           from_name: formData.name,
@@ -91,7 +91,7 @@ export default function ContactPage() {
 
       // 2️⃣ Send confirmation to User
       await emailjs.send(
-        "service_d413ytq",
+        "service_gss4j1p",
         "template_8e1weya",
         {
           email: formData.email,
