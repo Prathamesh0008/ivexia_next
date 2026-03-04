@@ -318,7 +318,7 @@ const handleSubmit = async (e) => {
             
             {/* Overlay with contact details */}
             <div className="absolute inset-0 bg-gradient-to-t from-[#0d2d47]/90 via-transparent to-transparent">
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+              {/* <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                 <h3 className="text-lg font-semibold mb-3">Visit Us</h3>
                 <div className="space-y-2 text-sm">
                   <div className="flex items-start">
@@ -330,7 +330,7 @@ const handleSubmit = async (e) => {
                     <span>Mon-Fri: 9:00 AM - 6:00 PM</span>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
