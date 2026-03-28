@@ -32,14 +32,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20 text-center md:text-left items-start">
 
           {/* Column 1 */}
-          <div className="flex flex-col items-center md:items-start space-y-6">
+          <div className="flex flex-col items-center md:items-start space-y-4">
             <Image
               
   src="/images/Websiteivexia1.png"
               alt="Ivexia Logo"
-              width={220}
-              height={220}
-              className="w-[12vh] md:w-[22vh] h-auto object-contain mx-auto md:mx-0"
+              width={400}
+              height={240}
+              className="w-[140px] md:w-[220px] lg:w-[260px] h-auto object-contain mx-auto md:mx-0 md:-ml-2 lg:-ml-3"
+             
             />
 
             <p className="text-gray-300 text-sm md:text-base leading-relaxed max-w-sm mx-auto md:mx-0">

@@ -141,12 +141,12 @@ export default function Navbar() {
         
         {/* LOGO */}
         <div className="flex items-center cursor-pointer" onClick={() => goTo("/")}>
-        <Image
+ <Image
   src="/images/Websiteivexia.png"
   alt="Ivexia Logo"
-  width={220}
-  height={80}
-  className="h-12 md:h-16 w-auto object-contain transition-transform duration-300 hover:scale-105"
+  width={400}
+  height={120}
+  className="h-16 md:h-20 w-auto object-contain transition-transform duration-300 hover:scale-105"
   priority
 />
         </div>

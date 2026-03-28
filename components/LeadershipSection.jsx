@@ -105,7 +105,7 @@ export default function LeadershipSection() {
           className="mt-6"
         >
           <h3 className="text-2xl font-semibold text-[#FF7A00]">
-            Mr. Avinaash Badal
+            Mr. Avinaash Satjin Badal
           </h3>
           <p className="text-sm text-gray-400">Founder & CEO</p>
         </motion.div>
