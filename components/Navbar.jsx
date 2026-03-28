@@ -136,17 +136,17 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 h-[72px] bg-white/95 backdrop-blur-md shadow-md z-50">
+    <nav className="fixed top-0 left-0 right-0 h-[70px] bg-white/95 backdrop-blur-md shadow-md z-50">
       <div className="flex justify-between items-center px-4 md:px-8 h-[72px]">
         
         {/* LOGO */}
         <div className="flex items-center cursor-pointer" onClick={() => goTo("/")}>
- <Image
+        <Image
   src="/images/Websiteivexia.png"
   alt="Ivexia Logo"
-  width={400}
-  height={120}
-  className="h-16 md:h-20 w-auto object-contain transition-transform duration-300 hover:scale-105"
+  width={320}
+  height={100}
+  className="h-12 md:h-16 w-auto object-contain transition-transform duration-300 hover:scale-105"
   priority
 />
         </div>
