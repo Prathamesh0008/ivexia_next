@@ -44,9 +44,9 @@ export default function IvexiaNumbers() {
 
   return (
     <section className="bg-[#FFF8F5] py-16 md:py-20">
-      <h1 className="text-center text-3xl md:text-4xl font-bold text-[#333] mb-10">
+      <h2 className="text-center text-3xl md:text-4xl font-bold text-[#333] mb-10">
         Ivexia in Numbers
-      </h1>
+      </h2>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 px-8 md:px-20">
         {stats.map((item, i) => (

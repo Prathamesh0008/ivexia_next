@@ -24,9 +24,9 @@ export default function AboutVideo() {
       {/* Content */}
       <div className="relative z-10 flex items-center h-full px-6 md:px-16 text-white">
         <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+          <h2 className="text-4xl md:text-6xl font-bold mb-4">
             About Ivexia Pharmaceuticals
-          </h1>
+          </h2>
 
           <p className="text-lg md:text-xl mb-6 text-gray-200">
             Global Vision. Scientific Excellence. Delivering innovation in healthcare.
