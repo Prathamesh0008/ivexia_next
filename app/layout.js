@@ -185,8 +185,8 @@ export default function RootLayout({ children }) {
 
         <Navbar />
 
-        <main className="pt-[72px] min-h-screen text-[#0d2d47]">
-          <Breadcrumbs />
+        <main className="pt-[88px] min-h-screen text-[#0d2d47]">
+          {/* <Breadcrumbs /> */}
           {children}
         </main>
 

@@ -11,6 +11,7 @@ export default function OTC() {
     { label: "Overview", link: "/offerings-overview" },
     { label: "API", link: "/products/ingredient" },
     { label: "OTC", link: "/otc" },
+    { label: "Private Label / OEM", link: "/private-label-manufacturing-oem" },
   ];
 
   const otcCategories = [

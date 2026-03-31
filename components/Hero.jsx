@@ -96,7 +96,7 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className="relative w-full h-[85vh] md:h-[80vh] overflow-hidden bg-[#0d2d47] pt-0"
+      className="relative w-full h-[85vh] md:h-[80vh] overflow-hidden bg-[#0d2d47] "
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onTouchStart={handleTouchStart}
@@ -168,7 +168,7 @@ export default function Hero() {
                     {/* CTA Button */}
                     <Link
                       href="/contact"
-                      className="group inline-flex items-center gap-3 bg-white text-[#0d2d47] px-8 py-4 rounded-lg font-semibold hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+                      className="group inline-flex items-center gap-3 bg-gradient-to-r from-[#FF7A00] to-[#E2004F] text-[#0d2d47] px-8 py-4 rounded-lg font-semibold hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
                     >
                       <span>{slide.cta}</span>
                       <svg 
@@ -206,11 +206,11 @@ export default function Hero() {
           <button
             key={i}
             onClick={() => goToSlide(i)}
-            className="group relative"
+            className="group relative cursor-pointer"
             aria-label={`Slide ${i + 1}`}
           >
             <span 
-              className={`block h-2 rounded-full transition-all duration-300 ${
+              className= {`block h-2 rounded-full cursor-pointer transition-all duration-300  ${
                 currentIndex === i 
                   ? "w-12 bg-white" 
                   : "w-4 bg-white/40 group-hover:bg-white/60 group-hover:w-6"
@@ -223,18 +223,18 @@ export default function Hero() {
       {/* Enhanced Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="hidden md:flex absolute left-8 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white rounded-full w-12 h-12 items-center justify-center backdrop-blur-sm border border-white/20 hover:border-white/40 transition-all duration-300 z-30 group"
+        className="hidden cursor-pointer  md:flex absolute left-8 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white rounded-full w-12 h-12 items-center justify-center backdrop-blur-sm border border-white/20 hover:border-white/40 transition-all duration-300 z-30 group"
         aria-label="Previous slide"
       >
-        <span className="text-3xl font-light group-hover:scale-125 transition-transform duration-300">‹</span>
+        <span className="text-3xl pb-2  ">‹</span>
       </button>
 
       <button
         onClick={nextSlide}
-        className="hidden md:flex absolute right-8 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white rounded-full w-12 h-12 items-center justify-center backdrop-blur-sm border border-white/20 hover:border-white/40 transition-all duration-300 z-30 group"
+        className="hidden md:flex cursor-pointer absolute right-8  top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white rounded-full w-12 h-12 items-center justify-center backdrop-blur-sm border border-white/20 hover:border-white/40 transition-all duration-300 z-30 group"
         aria-label="Next slide"
       >
-        <span className="text-3xl font-light group-hover:scale-125 transition-transform duration-300">›</span>
+        <span className="text-3xl pb-2  ">›</span>
       </button>
 
       {/* Slide Counter */}

@@ -2,7 +2,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { FaSearch, FaGlobe, FaBars, FaTimes } from "react-icons/fa";
 import Image from "next/image";
 
@@ -18,6 +18,8 @@ export default function Navbar() {
   const [magOpen, setMagOpen] = useState(false);
 
   const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
   const [language, setLanguage] = useState("English");
 
   const productsRef = useRef(null);
@@ -36,6 +38,43 @@ export default function Navbar() {
     { code: "ja", label: "Japanese", flag: "🇯🇵" },
     { code: "ar", label: "Arabic", flag: "🇸🇦" },
   ];
+
+  const isIngredientPath =
+    pathname === "/products/ingredient" ||
+    pathname.startsWith("/products/ingredient/");
+
+  const isFinishedProductsPath =
+    pathname === "/products" ||
+    pathname.startsWith("/products/category/") ||
+    (pathname.startsWith("/products/") && !isIngredientPath);
+
+  const isOfferingsActive =
+    pathname === "/offerings-overview" ||
+    pathname === "/otc" ||
+    pathname === "/private-label-manufacturing-oem" ||
+    isIngredientPath ||
+    isFinishedProductsPath;
+
+  const isMagazineActive =
+    pathname === "/ivexia-mag" || pathname.startsWith("/ivexia-mag/");
+
+  const magCategory = searchParams.get("category");
+
+  const activeTopLinkClass =
+    "bg-[#e8f6fb] text-[#FF7A00] font-semibold shadow-sm";
+  const topLinkClass =
+    "cursor-pointer px-3 py-1.5 rounded-full transition-all duration-300 ease-out hover:bg-[#f3f8fb] hover:text-[#0d2d47]";
+
+  const activeDropdownItemClass = "bg-[#e8f6fb] text-[#0d2d47] font-semibold";
+  const dropdownItemClass =
+    "px-4 py-2 text-sm cursor-pointer rounded-md transition-colors duration-200";
+
+  const mobileSubItemClass = (isActive) =>
+    `px-2 py-1 rounded-md transition-all duration-200 cursor-pointer ${
+      isActive
+        ? "bg-[#e8f6fb] text-[#0d2d47] font-semibold"
+        : "hover:text-[#0d2d47]"
+    }`;
 
   // Detect TopBar height (if you later add topbar)
   useEffect(() => {
@@ -136,31 +175,38 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 h-[70px] bg-white/95 backdrop-blur-md shadow-md z-50">
-      <div className="flex justify-between items-center px-4 md:px-8 h-[72px]">
+    <nav className="fixed top-0 left-0 right-0 h-[88px] bg-white/95 backdrop-blur-md shadow-md z-50">
+      <div className="flex justify-between items-center px-4 md:px-8 h-full">
         
         {/* LOGO */}
-        <div className="flex items-center cursor-pointer" onClick={() => goTo("/")}>
+        <div className="h-full flex items-center cursor-pointer" onClick={() => goTo("/")}>
         <Image
-  src="/images/Websiteivexia.png"
+  src="/images/navlogo.png"
   alt="Ivexia Logo"
   width={320}
   height={100}
-  className="h-12 md:h-16 w-auto object-contain transition-transform duration-300 hover:scale-105"
+  className="h-12 md:h-12 w-auto object-contain block"
   priority
 />
         </div>
 
         {/* DESKTOP MENU */}
-        <ul className="hidden lg:flex gap-8 font-bold text-gray-800 items-center">
-          <li onClick={() => goTo("/")} className="hover:text-[#0d2d47] cursor-pointer">
+        <ul className="hidden lg:flex h-full gap-8 text-lg md:text-lg text-gray-800 items-center">
+          <li
+            onClick={() => goTo("/")}
+            className={`${topLinkClass} ${
+              pathname === "/" ? activeTopLinkClass : ""
+            }`}
+          >
             Home
           </li>
 
           {/* OUR OFFERINGS DROPDOWN */}
           <li
             ref={productsRef}
-            className="relative cursor-pointer hover:text-[#0d2d47]"
+            className={`relative ${topLinkClass} ${
+              isOfferingsActive ? activeTopLinkClass : ""
+            }`}
             onClick={() => setProductsOpen((prev) => !prev)}
           >
             <span className="inline-flex items-center gap-1">Our Offerings ▾</span>
@@ -169,30 +215,62 @@ export default function Navbar() {
               <ul className="absolute top-full left-0 mt-2 bg-white shadow-md rounded-md w-64 font-normal z-40">
                 <li
                   onClick={() => goTo("/offerings-overview")}
-                  className="px-4 py-2 hover:bg-gray-100 text-sm cursor-pointer"
+                  className={`${dropdownItemClass} ${
+                    pathname === "/offerings-overview"
+                      ? activeDropdownItemClass
+                      : "hover:bg-gray-100 text-gray-700"
+                  }`}
                 >
                   Overview
                 </li>
 
                 <li
                   onClick={() => goTo("/products/ingredient")}
-                  className="px-4 py-2 hover:bg-gray-100 text-sm cursor-pointer"
+                  className={`${dropdownItemClass} ${
+                    isIngredientPath
+                      ? activeDropdownItemClass
+                      : "hover:bg-gray-100 text-gray-700"
+                  }`}
                 >
                   API / Ingredients
                 </li>
 
                 <li
                   onClick={() => goTo("/products")}
-                  className="px-4 py-2 hover:bg-gray-100 text-sm cursor-pointer"
+                  className={`${dropdownItemClass} ${
+                    isFinishedProductsPath
+                      ? activeDropdownItemClass
+                      : "hover:bg-gray-100 text-gray-700"
+                  }`}
                 >
                   Finished Products
                 </li>
 
                 <li
                   onClick={() => goTo("/otc")}
-                  className="px-4 py-2 hover:bg-gray-100 text-sm cursor-pointer"
+                  className={`${dropdownItemClass} ${
+                    pathname === "/otc"
+                      ? activeDropdownItemClass
+                      : "hover:bg-gray-100 text-gray-700"
+                  }`}
                 >
                   OTC
+                </li>
+                <li
+                  onClick={() => goTo("/private-label-manufacturing-oem")}
+                  className={`${dropdownItemClass} ${
+                    pathname === "/private-label-manufacturing-oem"
+                      ? activeDropdownItemClass
+                      : "hover:bg-gray-100 text-gray-700"
+                  }`}
+                >
+                  Private Label Manufacturing / OEM
+                </li>
+                <li
+                  onClick={() => goTo("/otc")}
+                  className={`${dropdownItemClass} hover:bg-gray-100 text-gray-700`}
+                >
+                  Test Kits
                 </li>
 
                 <button
@@ -209,18 +287,25 @@ export default function Navbar() {
             )}
           </li>
 
-          <li onClick={() => goTo("/about")} className="hover:text-[#0d2d47] cursor-pointer">
+          <li
+            onClick={() => goTo("/about")}
+            className={`${topLinkClass} ${
+              pathname === "/about" ? activeTopLinkClass : ""
+            }`}
+          >
             About
           </li>
 
          {/* MAGAZINE DROPDOWN */}
 <li
   ref={magRef}
-  className="relative cursor-pointer hover:text-[#0d2d47]"
+  className={`relative ${topLinkClass} ${
+    isMagazineActive ? activeTopLinkClass : ""
+  }`}
   onClick={() => setMagOpen((prev) => !prev)}
 >
   <span className="inline-flex items-center gap-1">
-    Ivexia Mag ▾
+    Ivexia Magazine ▾
   </span>
 
   {magOpen && (
@@ -228,14 +313,22 @@ export default function Navbar() {
       
       <li
         onClick={() => goTo("/ivexia-mag?category=news")}
-        className="px-4 py-2 hover:bg-gray-100 text-sm cursor-pointer"
+        className={`${dropdownItemClass} ${
+          pathname === "/ivexia-mag" && magCategory === "news"
+            ? activeDropdownItemClass
+            : "hover:bg-gray-100 text-gray-700"
+        }`}
       >
         News
       </li>
 
       <li
         onClick={() => goTo("/ivexia-mag?category=health")}
-        className="px-4 py-2 hover:bg-gray-100 text-sm cursor-pointer"
+        className={`${dropdownItemClass} ${
+          pathname === "/ivexia-mag" && magCategory === "health"
+            ? activeDropdownItemClass
+            : "hover:bg-gray-100 text-gray-700"
+        }`}
       >
         Health
       </li>
@@ -255,13 +348,18 @@ export default function Navbar() {
   )}
 </li>
 
-          <li onClick={() => goTo("/contact")} className="hover:text-[#0d2d47] cursor-pointer">
+          <li
+            onClick={() => goTo("/contact")}
+            className={`${topLinkClass} ${
+              pathname === "/contact" ? activeTopLinkClass : ""
+            }`}
+          >
             Contact
           </li>
         </ul>
 
         {/* RIGHT SIDE ICONS */}
-        <div className="flex items-center gap-4 relative">
+        <div className="h-full flex items-center gap-4 relative">
           {/* SEARCH ICON */}
           <FaSearch
             className="cursor-pointer search-icon text-gray-600 hover:text-[#0d2d47]"
@@ -403,56 +501,113 @@ export default function Navbar() {
       {/* MOBILE MENU */}
       {menuOpen && (
         <ul className="lg:hidden flex flex-col gap-4 bg-white shadow-md border-t border-gray-100 px-6 py-4 font-medium text-gray-800">
-          <li onClick={() => goTo("/")} className="hover:text-[#0d2d47] cursor-pointer">
+          <li
+            onClick={() => goTo("/")}
+            className={`${topLinkClass} ${
+              pathname === "/" ? activeTopLinkClass : ""
+            }`}
+          >
             Home
           </li>
 
           <li className="cursor-pointer">
             <details className="group">
               <summary className="flex justify-between items-center py-2 text-[#0d2d47] cursor-pointer">
-                <span>Our Offerings</span>
+                <span
+                  className={`px-3 py-1 rounded-full transition-all duration-300 ${
+                    isOfferingsActive ? activeTopLinkClass : ""
+                  }`}
+                >
+                  Our Offerings
+                </span>
                 <span className="transition-transform group-open:rotate-180">▾</span>
               </summary>
 
               <div className="ml-4 mt-1 flex flex-col gap-2 text-gray-700 text-sm">
-                <span onClick={() => goTo("/offerings-overview")} className="hover:text-[#0d2d47] cursor-pointer">
+                <span
+                  onClick={() => goTo("/offerings-overview")}
+                  className={mobileSubItemClass(pathname === "/offerings-overview")}
+                >
                   Overview
                 </span>
-                <span onClick={() => goTo("/products/ingredient")} className="hover:text-[#0d2d47] cursor-pointer">
+                <span
+                  onClick={() => goTo("/products/ingredient")}
+                  className={mobileSubItemClass(isIngredientPath)}
+                >
                   API / Ingredients
                 </span>
-                <span onClick={() => goTo("/products")} className="hover:text-[#0d2d47] cursor-pointer">
+                <span
+                  onClick={() => goTo("/products")}
+                  className={mobileSubItemClass(isFinishedProductsPath)}
+                >
                   Finished Products
                 </span>
-                <span onClick={() => goTo("/otc")} className="hover:text-[#0d2d47] cursor-pointer">
+                <span
+                  onClick={() => goTo("/otc")}
+                  className={mobileSubItemClass(pathname === "/otc")}
+                >
                   OTC
+                </span>
+                <span
+                  onClick={() => goTo("/private-label-manufacturing-oem")}
+                  className={mobileSubItemClass(
+                    pathname === "/private-label-manufacturing-oem"
+                  )}
+                >
+                  Private Label Manufacturing / OEM
                 </span>
               </div>
             </details>
           </li>
 
-          <li onClick={() => goTo("/about")} className="hover:text-[#0d2d47] cursor-pointer">
+          <li
+            onClick={() => goTo("/about")}
+            className={`${topLinkClass} ${
+              pathname === "/about" ? activeTopLinkClass : ""
+            }`}
+          >
             About
           </li>
 
           <li className="cursor-pointer">
             <details className="group">
               <summary className="flex justify-between items-center py-2 text-[#0d2d47]">
-                Ivexia Mag
+                <span
+                  className={`px-3 py-1 rounded-full transition-all duration-300 ${
+                    isMagazineActive ? activeTopLinkClass : ""
+                  }`}
+                >
+                  Ivexia Mag
+                </span>
               </summary>
 
               <div className="ml-4 mt-1 flex flex-col gap-2 text-gray-700 text-sm">
-                <span onClick={() => goTo("/ivexia-mag?category=news")} className="hover:text-[#0d2d47] cursor-pointer">
+                <span
+                  onClick={() => goTo("/ivexia-mag?category=news")}
+                  className={mobileSubItemClass(
+                    pathname === "/ivexia-mag" && magCategory === "news"
+                  )}
+                >
                   News
                 </span>
-                <span onClick={() => goTo("/ivexia-mag?category=health")} className="hover:text-[#0d2d47] cursor-pointer">
+                <span
+                  onClick={() => goTo("/ivexia-mag?category=health")}
+                  className={mobileSubItemClass(
+                    pathname === "/ivexia-mag" && magCategory === "health"
+                  )}
+                >
                   Health
                 </span>
               </div>
             </details>
           </li>
 
-          <li onClick={() => goTo("/contact")} className="hover:text-[#0d2d47] cursor-pointer">
+          <li
+            onClick={() => goTo("/contact")}
+            className={`${topLinkClass} ${
+              pathname === "/contact" ? activeTopLinkClass : ""
+            }`}
+          >
             Contact
           </li>
 
