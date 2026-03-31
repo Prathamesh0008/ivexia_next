@@ -51,6 +51,7 @@ export default function Navbar() {
   const isOfferingsActive =
     pathname === "/offerings-overview" ||
     pathname === "/otc" ||
+    pathname === "/test-kits" ||
     pathname === "/private-label-manufacturing-oem" ||
     isIngredientPath ||
     isFinishedProductsPath;
@@ -267,8 +268,12 @@ export default function Navbar() {
                   Private Label Manufacturing / OEM
                 </li>
                 <li
-                  onClick={() => goTo("/")}
-                  className={`${dropdownItemClass} hover:bg-gray-100 text-gray-700`}
+                  onClick={() => goTo("/test-kits")}
+                  className={`${dropdownItemClass} ${
+                    pathname === "/test-kits"
+                      ? activeDropdownItemClass
+                      : "hover:bg-gray-100 text-gray-700"
+                  }`}
                 >
                   Test Kits
                 </li>
@@ -547,6 +552,12 @@ export default function Navbar() {
                   className={mobileSubItemClass(pathname === "/otc")}
                 >
                   OTC
+                </span>
+                <span
+                  onClick={() => goTo("/test-kits")}
+                  className={mobileSubItemClass(pathname === "/test-kits")}
+                >
+                  Test Kits
                 </span>
                 <span
                   onClick={() => goTo("/private-label-manufacturing-oem")}
