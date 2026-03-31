@@ -267,7 +267,7 @@ export default function Navbar() {
                   Private Label Manufacturing / OEM
                 </li>
                 <li
-                  onClick={() => goTo("/otc")}
+                  onClick={() => goTo("/")}
                   className={`${dropdownItemClass} hover:bg-gray-100 text-gray-700`}
                 >
                   Test Kits
