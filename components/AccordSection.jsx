@@ -35,7 +35,7 @@ export default function AccordSection() {
         {/* RIGHT GLOBE IMAGE */}
         <div className="flex justify-center">
          <Image
-  src="/images/globe.png"
+  src="/images/Globe New 2.png"
   alt="Ivexia Globe"
   width={460}
   height={460}
