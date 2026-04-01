@@ -42,7 +42,6 @@
 
 import "./globals.css";
 import Script from "next/script";
-import { Suspense } from "react";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -102,22 +101,7 @@ export default function RootLayout({ children }) {
         />
 
         {/* 🔥 Google Tag Manager */}
-        <Script
-  id="gtm-script"
-  strategy="afterInteractive"
-  dangerouslySetInnerHTML={{
-    __html: `
-      (function(w,d,s,l,i){w[l]=w[l]||[];
-      w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-      var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-      j.async=true;
-      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-      f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-58W2SCQH');
-    `,
-  }}
-/>
+        <Script id="gtm-script" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];
             w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
@@ -128,30 +112,21 @@ export default function RootLayout({ children }) {
             f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-58W2SCQH');
           `}
-       
+        </Script>
 
         {/* 🔥 Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-1B07YW0LT0"
           strategy="afterInteractive"
         />
-       <Script
-  src="https://www.googletagmanager.com/gtag/js?id=G-1B07YW0LT0"
-  strategy="afterInteractive"
-/>
-
-<Script
-  id="ga-script"
-  strategy="afterInteractive"
-  dangerouslySetInnerHTML={{
-    __html: `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-1B07YW0LT0');
-    `,
-  }}
-/>
+        <Script id="ga-script" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-1B07YW0LT0');
+          `}
+        </Script>
 
         {/* 🔥 ORGANIZATION SCHEMA */}
         <Script
@@ -209,15 +184,9 @@ export default function RootLayout({ children }) {
           />
         </noscript>
 
-<<<<<<< HEAD
      <Suspense fallback={null}>
   <Navbar />
 </Suspense>
-=======
-        <Suspense fallback={null}>
-          <Navbar />
-        </Suspense>
->>>>>>> 79cfcdd1c6b11979f6d2fb74a382debbbd18dd7c
 
         <main className="pt-[88px] min-h-screen text-[#0d2d47]">
           {/* <Breadcrumbs /> */}

@@ -9,12 +9,14 @@ import AccordSection from "@/components/AccordSection";
 import LeadershipSection from "@/components/LeadershipSection";
 import ResearchManufacturingSection from "@/components/ResearchManufacturingSection";
 import LatestFromIvexia from "@/components/LatestFromIvexia";
+import CustomerStrip from "@/components/CustomerStrip";
 
 export default function Page() {
   return (
     <div >
       <Hero />
       <IvexiaNumbers />
+      <CustomerStrip/>
       <AboutVideo />
       <TherapyGroups />
       <AccordSection />

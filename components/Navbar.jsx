@@ -275,19 +275,15 @@ useEffect(() => {
                   Private Label Manufacturing / OEM
                 </li>
                 <li
-                  onClick={() => goTo("/test-kits")}
-<<<<<<< HEAD
-                  className={`${dropdownItemClass} hover:bg-gray-100 text-gray-700`}
-=======
-                  className={`${dropdownItemClass} ${
-                    pathname === "/test-kits"
-                      ? activeDropdownItemClass
-                      : "hover:bg-gray-100 text-gray-700"
-                  }`}
->>>>>>> 79cfcdd1c6b11979f6d2fb74a382debbbd18dd7c
-                >
-                  Test Kits
-                </li>
+  onClick={() => goTo("/test-kits")}
+  className={`${dropdownItemClass} ${
+    pathname === "/test-kits"
+      ? activeDropdownItemClass
+      : "hover:bg-gray-100 text-gray-700"
+  }`}
+>
+  Test Kits
+</li>
 
                 <button
                   onClick={(e) => {

@@ -102,3 +102,66 @@ body {
     flex: 1;
   }
 }
+
+@keyframes partner-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.partner-marquee-shell {
+  position: relative;
+  overflow: hidden;
+}
+
+.partner-marquee-shell::before,
+.partner-marquee-shell::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 56px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.partner-marquee-shell::before {
+  left: 0;
+  background: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0));
+}
+
+.partner-marquee-shell::after {
+  right: 0;
+  background: linear-gradient(to left, #ffffff, rgba(255, 255, 255, 0));
+}
+
+.partner-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: max-content;
+  animation: partner-marquee 24s linear infinite;
+}
+
+.partner-marquee-shell:hover .partner-marquee-track {
+  animation-play-state: paused;
+}
+
+.partner-marquee-card {
+  width: 180px;
+  min-width: 180px;
+}
+
+@media (min-width: 768px) {
+  .partner-marquee-track {
+    gap: 24px;
+  }
+
+  .partner-marquee-card {
+    width: 220px;
+    min-width: 220px;
+  }
+}

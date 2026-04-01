@@ -78,22 +78,27 @@ export default function Products() {
         </div>
 
         {/* FILTERS */}
-    <div className="flex flex-wrap justify-center gap-3 mb-6 relative z-30">
-          <select value={category} onChange={(e) => setCategory(e.target.value)}>
+    <div className="flex flex-wrap  justify-center gap-3 mb-6 relative z-30">
+          <select value={category}
+           onChange={(e) => setCategory(e.target.value)}
+           className="rounded-full border border-gray-300 px-5 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#19a6b5]">
             <option value="">Category</option>
             {categoryOptions.map((c) => (
               <option key={c}>{c}</option>
             ))}
           </select>
 
-          <select value={form} onChange={(e) => setForm(e.target.value)}>
+          <select value={form} 
+          onChange={(e) => setForm(e.target.value)}
+            className="rounded-full border border-gray-300 px-5 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#19a6b5]">
             <option value="">Form</option>
             {formOptions.map((f) => (
               <option key={f}>{f}</option>
             ))}
           </select>
 
-          <select value={dosage} onChange={(e) => setDosage(e.target.value)}>
+          <select value={dosage} 
+          onChange={(e) => setDosage(e.target.value)}>
             <option value="">Dosage</option>
             {dosageOptions.map((d) => (
               <option key={d}>{d}</option>
