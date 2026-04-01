@@ -2,7 +2,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { FaSearch, FaGlobe, FaBars, FaTimes } from "react-icons/fa";
 import Image from "next/image";
 
@@ -19,7 +19,14 @@ export default function Navbar() {
 
   const router = useRouter();
   const pathname = usePathname();
-  const searchParams = useSearchParams();
+  const [magCategory, setMagCategory] = useState(null);
+
+useEffect(() => {
+  if (typeof window !== "undefined") {
+    const params = new URLSearchParams(window.location.search);
+    setMagCategory(params.get("category"));
+  }
+}, []);
   const [language, setLanguage] = useState("English");
 
   const productsRef = useRef(null);
@@ -58,7 +65,7 @@ export default function Navbar() {
   const isMagazineActive =
     pathname === "/ivexia-mag" || pathname.startsWith("/ivexia-mag/");
 
-  const magCategory = searchParams.get("category");
+
 
   const activeTopLinkClass =
     "bg-[#e8f6fb] text-[#FF7A00] font-semibold shadow-sm";
@@ -267,7 +274,7 @@ export default function Navbar() {
                   Private Label Manufacturing / OEM
                 </li>
                 <li
-                  onClick={() => goTo("/otc")}
+                  onClick={() => goTo("/test-kits")}
                   className={`${dropdownItemClass} hover:bg-gray-100 text-gray-700`}
                 >
                   Test Kits
