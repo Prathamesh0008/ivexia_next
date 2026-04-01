@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-const logoVersion = "20260401-1242";
+const logoVersion = "20260401-1739";
 
 const brandPartners = [
   {
@@ -12,7 +12,7 @@ const brandPartners = [
   },
   {
     name: "Biopeptide",
-    logo: `/brandlogos/biopeptides.png?v=${logoVersion}`,
+    logo: `/brandlogos/B.png?v=${logoVersion}`,
     href: "https://www.bio-peptides.com/",
   },
   {
@@ -27,7 +27,7 @@ const brandPartners = [
   },
   {
     name: "Invictus Logistics",
-    logo: `/brandlogos/invictuss.png?v=${logoVersion}`,
+    logo: `/brandlogos/invictus.png?v=${logoVersion}`,
     href: "https://www.invictuslogi.com/",
   },
   {
@@ -37,7 +37,7 @@ const brandPartners = [
   },
   {
     name: "Larksois Pharma",
-    logo: `/brandlogos/larko.png?v=${logoVersion}`,
+    logo: `/brandlogos/larkoo.png?v=${logoVersion}`,
     href: "https://larksoispharma.com/",
   },
   {
@@ -67,23 +67,23 @@ export default function CustomerStrip() {
         </div>
 
         <div className="partner-marquee-shell mt-12">
-          <div className="partner-marquee-track">
+          <div className="partner-marquee-track p-10">
             {marqueePartners.map((partner, index) => (
               <a
                 key={`${partner.name}-${index}`}
-                // href={partner.href || undefined}
+                href={partner.href || undefined}
                 target={partner.href ? "_blank" : undefined}
                 rel={partner.href ? "noopener noreferrer" : undefined}
                 aria-label={
                   partner.href ? `Visit ${partner.name} website` : partner.name
                 }
-                className={`group partner-marquee-card rounded-[28px] border border-[#E2004F]/10 bg-[#fff8f4] p-2 shadow-sm ${
+                className={`group partner-marquee-card rounded-[28px] border border-[#E2004F]/10 bg-[#fff8f4]  px-2 py-2 md:px-3 md:py-3 shadow-sm ${
                   partner.href
                     ? "cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                     : "cursor-default"
                 }`}
               >
-                <div className="relative h-[102px] md:h-[138px] lg:h-[182px] w-full">
+                <div className="relative h-[78px] md:h-[100px] lg:h-[84px] w-full">
                   <Image
                     src={partner.logo}
                     alt={`${partner.name} logo`}
