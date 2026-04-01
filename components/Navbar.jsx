@@ -20,6 +20,7 @@ export default function Navbar() {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const magCategory = searchParams.get("category");
   const [language, setLanguage] = useState("English");
 
   const productsRef = useRef(null);
@@ -59,7 +60,7 @@ export default function Navbar() {
   const isMagazineActive =
     pathname === "/ivexia-mag" || pathname.startsWith("/ivexia-mag/");
 
-  const magCategory = searchParams.get("category");
+
 
   const activeTopLinkClass =
     "bg-[#e8f6fb] text-[#FF7A00] font-semibold shadow-sm";

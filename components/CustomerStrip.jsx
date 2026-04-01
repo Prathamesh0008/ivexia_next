@@ -35,7 +35,7 @@ const brandPartners = [
   },
   {
     name: "Nova Techsciences",
-    logo: "/brandlogo/nova.png",
+    logo: "/brandlogo/Nova.png",
     href: "https://www.novatechsciences.com/",
   },
 ];
@@ -70,13 +70,13 @@ export default function CustomerStrip() {
                 aria-label={
                   partner.href ? `Visit ${partner.name} website` : partner.name
                 }
-                className={`group partner-marquee-card rounded-2xl border border-[#E2004F]/10 bg-[#fff8f4] px-5 py-6 md:px-6 md:py-7 shadow-sm ${
+                className={`group partner-marquee-card rounded-2xl border border-[#E2004F]/10 bg-[#fff8f4] px-5 py-6 md:px-6 md:py-5 shadow-sm ${
                   partner.href
                     ? "cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                     : "cursor-default"
                 }`}
               >
-                <div className="relative h-16 md:h-20 w-full">
+                <div className="relative h-15 md:h-20 w-full">
                   <Image
                     src={partner.logo}
                     alt={`${partner.name} logo`}

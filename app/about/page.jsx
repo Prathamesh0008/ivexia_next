@@ -1,9 +1,11 @@
+//ivexia\app\about\page.jsx
 "use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { Suspense } from "react";
 import {
   FaRocket,
   FaIndustry,
