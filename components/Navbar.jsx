@@ -58,6 +58,7 @@ useEffect(() => {
   const isOfferingsActive =
     pathname === "/offerings-overview" ||
     pathname === "/otc" ||
+    pathname === "/test-kits" ||
     pathname === "/private-label-manufacturing-oem" ||
     isIngredientPath ||
     isFinishedProductsPath;
@@ -275,7 +276,15 @@ useEffect(() => {
                 </li>
                 <li
                   onClick={() => goTo("/test-kits")}
+<<<<<<< HEAD
                   className={`${dropdownItemClass} hover:bg-gray-100 text-gray-700`}
+=======
+                  className={`${dropdownItemClass} ${
+                    pathname === "/test-kits"
+                      ? activeDropdownItemClass
+                      : "hover:bg-gray-100 text-gray-700"
+                  }`}
+>>>>>>> 79cfcdd1c6b11979f6d2fb74a382debbbd18dd7c
                 >
                   Test Kits
                 </li>
@@ -554,6 +563,12 @@ useEffect(() => {
                   className={mobileSubItemClass(pathname === "/otc")}
                 >
                   OTC
+                </span>
+                <span
+                  onClick={() => goTo("/test-kits")}
+                  className={mobileSubItemClass(pathname === "/test-kits")}
+                >
+                  Test Kits
                 </span>
                 <span
                   onClick={() => goTo("/private-label-manufacturing-oem")}
