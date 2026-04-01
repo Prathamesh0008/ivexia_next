@@ -42,10 +42,7 @@
 
 import "./globals.css";
 import Script from "next/script";
-import { Suspense } from "react";
-
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import AppBootLayout from "@/components/AppBootLayout";
 
 /* ===================== SEO METADATA ===================== */
 
@@ -183,16 +180,7 @@ export default function RootLayout({ children }) {
           />
         </noscript>
 
-        <Suspense fallback={null}>
-          <Navbar />
-        </Suspense>
-
-        <main className="pt-[88px] min-h-screen text-[#0d2d47]">
-          {/* <Breadcrumbs /> */}
-          {children}
-        </main>
-
-        <Footer />
+        <AppBootLayout>{children}</AppBootLayout>
       </body>
     </html>
   );

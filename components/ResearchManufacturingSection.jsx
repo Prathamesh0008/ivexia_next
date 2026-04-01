@@ -34,15 +34,15 @@ export default function ResearchManufacturingSection() {
     <section className="py-20 px-6 md:px-16 bg-white relative overflow-hidden">
       {/* Tabs */}
       <div className="flex justify-center mb-10">
-        <div className="flex bg-gray-100 rounded-full shadow-inner overflow-hidden">
+        <div className="flex bg-gray-100  rounded-full shadow-inner overflow-hidden">
           {tabs.map((tab) => (
             <button
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
-              className={`flex items-center gap-2 px-5 md:px-8 py-3 text-sm md:text-base font-medium transition-all duration-300
+              className={`flex items-center cursor-pointer gap-2 px-5 md:px-8 py-3 text-sm md:text-base font-medium transition-all duration-300
                 ${
                   activeTab === tab.key
-                    ? "bg-gradient-to-r from-[#FF7A00] to-[#E2004F] text-white"
+                    ? "bg-gradient-to-r from-[#FF7A00] to-[#E2004F] text-white "
                     : "text-gray-600 hover:text-[#0d2d47]"
                 }`}
               type="button"

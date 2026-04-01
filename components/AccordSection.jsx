@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function AccordSection() {
   return (
-<section className="bg-[#0d2d47] pt-8 pb-0">
+<section className="bg-[#0d2d47] p-5 ">
   <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6 items-center">
 
         {/* LEFT TEXT */}

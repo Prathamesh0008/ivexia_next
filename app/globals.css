@@ -141,9 +141,9 @@ body {
 .partner-marquee-track {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
   width: max-content;
-  animation: partner-marquee 24s linear infinite;
+  animation: partner-marquee 30s linear infinite;
 }
 
 .partner-marquee-shell:hover .partner-marquee-track {
@@ -151,17 +151,24 @@ body {
 }
 
 .partner-marquee-card {
-  width: 180px;
-  min-width: 180px;
+  width: 250px;
+  min-width: 250px;
 }
 
 @media (min-width: 768px) {
   .partner-marquee-track {
-    gap: 24px;
+    gap: 28px;
   }
 
   .partner-marquee-card {
-    width: 220px;
-    min-width: 220px;
+    width: 340px;
+    min-width: 340px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .partner-marquee-card {
+    width: 400px;
+    min-width: 400px;
   }
 }

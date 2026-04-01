@@ -60,7 +60,7 @@ export default function LatestFromIvexia() {
 
                 <button
                   onClick={() => router.push(`/news/${post.slug}`)}
-                  className="text-[#E2004F] font-medium flex items-center gap-1 hover:gap-2 transition"
+                  className="text-[#E2004F] cursor-pointer font-medium flex items-center gap-1 hover:gap-2 transition"
                 >
                   Read More <ArrowRight size={14} />
                 </button>

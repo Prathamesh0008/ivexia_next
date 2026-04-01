@@ -81,15 +81,15 @@ export default function TestKitsPage() {
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-3 mb-6">
+        <div className="flex flex-wrap justify-center gap-3 mb-6 ">
           <select
             value={category}
             onChange={(e) => setCategory(e.target.value)}
-            className="rounded-full border border-gray-300 px-5 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#19a6b5]"
+            className="rounded-full cursor-pointer border border-gray-300 px-5 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#19a6b5]"
           >
             <option value="">Category</option>
             {categoryOptions.map((item) => (
-              <option key={item} value={item}>
+              <option className="cursor-pointer" key={item} value={item}>
                 {item}
               </option>
             ))}
@@ -98,7 +98,7 @@ export default function TestKitsPage() {
           <select
             value={method}
             onChange={(e) => setMethod(e.target.value)}
-            className="rounded-full border border-gray-300 px-5 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#19a6b5]"
+            className="rounded-full cursor-pointer border border-gray-300 px-5 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#19a6b5]"
           >
             <option value="">Method</option>
             {methodOptions.map((item) => (

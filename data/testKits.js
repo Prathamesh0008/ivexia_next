@@ -76,7 +76,7 @@ export const TEST_KITS = [
     cut_off: "25ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 6,
+    id: 7,
     slug: "ffn-device"
   },
     {
@@ -87,7 +87,7 @@ export const TEST_KITS = [
     cut_off: "",
     specimen: "Urine",
     certificate: "CE",
-    id: 7,
+    id: 8,
     slug: "ffn-strip"
   },
     {
@@ -98,7 +98,7 @@ export const TEST_KITS = [
     cut_off: "",
     specimen: "Urine",
     certificate: "CE",
-    id: 8,
+    id: 9,
     slug: "fsh-device"
   },
 
@@ -110,7 +110,7 @@ export const TEST_KITS = [
     cut_off: "",
     specimen: "Urine",
     certificate: "CE",
-    id: 9,
+    id: 10,
     slug: "fsh-strip"
   },
   {
@@ -121,7 +121,7 @@ export const TEST_KITS = [
     cut_off: "",
     specimen: "Urine",
     certificate: "CE",
-    id: 10,
+    id: 11,
     slug: "hpv-device"
   },
     {
@@ -132,7 +132,7 @@ export const TEST_KITS = [
     cut_off: "",
     specimen: "Urine",
     certificate: "CE",
-    id: 11,
+    id: 12,
     slug: "hpv-strip"
   },
   /* ================= IMMUNOFLUORESCENCE ================= */
@@ -144,7 +144,7 @@ export const TEST_KITS = [
     cut_off: "/",
     specimen: "Serum",
     certificate: "CE",
-    id: 12,
+    id: 13,
     slug: "pe-sflt1-plgf-test"
   },
     {
@@ -155,7 +155,7 @@ export const TEST_KITS = [
     cut_off: "/",
     specimen: "Serum",
     certificate: "/",
-    id: 13,
+    id: 14,
     slug: "st2-device"
   },
      {
@@ -166,7 +166,7 @@ export const TEST_KITS = [
     cut_off: "/",
     specimen: "Serum",
     certificate: "/",
-    id: 14,
+    id: 15,
     slug: "pappa-device"
   },
       {
@@ -177,7 +177,7 @@ export const TEST_KITS = [
     cut_off: "/",
     specimen: "Serum",
     certificate: "/",
-    id: 15,
+    id: 16,
     slug: "amh-device"
   },
  
@@ -191,7 +191,7 @@ export const TEST_KITS = [
     cut_off: "300ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 16,
+    id: 17,
     slug: "morphine-urine-test"
   },
   {
@@ -202,7 +202,7 @@ export const TEST_KITS = [
     cut_off: "1000ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 17,
+    id: 18,
     slug: "methamphetamine-urine-test"
   },
    {
@@ -213,7 +213,7 @@ export const TEST_KITS = [
     cut_off: "1000ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 18,
+    id: 19,
     slug: "ketamine-urine-test"
   },
    {
@@ -223,7 +223,7 @@ export const TEST_KITS = [
     cut_off: "500ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 19,
+    id: 20,
     slug: "ecstasy-urine-test"
   },
      {
@@ -233,7 +233,7 @@ export const TEST_KITS = [
     cut_off: "50ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 19,
+    id: 21,
     slug: "marijuana-urine-test"
   },
     {
@@ -243,7 +243,7 @@ export const TEST_KITS = [
     cut_off: "50ng/ml",
     specimen: "Urine",
     certificate: "/",
-    id: 20,
+    id: 22,
     slug: "6-mam-urine-test"
   },
     {
@@ -253,7 +253,7 @@ export const TEST_KITS = [
     cut_off: "1000ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 21,
+    id: 23,
     slug: "amphetamine-urine-test"
   },
   {
@@ -263,7 +263,7 @@ export const TEST_KITS = [
     cut_off: "300ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 22,
+    id: 24,
     slug: "barbiturates-urine-test"
   },
   {
@@ -273,7 +273,7 @@ export const TEST_KITS = [
     cut_off: "300ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 23,
+    id: 25,
     slug: "benzodiazepines-urine-test"
   },
   {
@@ -283,7 +283,7 @@ export const TEST_KITS = [
     cut_off: "25ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 24,
+    id: 26,
     slug: "pcp-urine-test"
   },
    {
@@ -293,7 +293,7 @@ export const TEST_KITS = [
     cut_off: "10ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 25,
+    id: 27,
     slug: "buprenorphine-urine-test"
   },
      {
@@ -303,7 +303,7 @@ export const TEST_KITS = [
     cut_off: "5000ng/ml",
     specimen: "Urine",
     certificate: "/",
-    id: 26,
+    id: 28,
     slug: "acetaminophen-urine-test"
   },
     {
@@ -313,7 +313,7 @@ export const TEST_KITS = [
     cut_off: "200ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 27,
+    id: 29,
     slug: "fentanyl-urine-test"
   },
     {
@@ -323,7 +323,7 @@ export const TEST_KITS = [
     cut_off: "50ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 28,
+    id: 30,
     slug: "synthetic-cannabis-urine-test"
   },
     {
@@ -333,7 +333,7 @@ export const TEST_KITS = [
     cut_off: "20ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 29,
+    id: 31,
     slug: "synthetic-cannabis-k3-urine-test"
   },
       {
@@ -343,7 +343,7 @@ export const TEST_KITS = [
     cut_off: "20ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 30,
+    id: 32,
     slug: "synthetic-cannabis-k4-urine-test"
   },
     {
@@ -353,7 +353,7 @@ export const TEST_KITS = [
     cut_off: "20ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 31,
+    id: 33,
     slug: "methaqualone-urine-test"
   },
   {
@@ -363,7 +363,7 @@ export const TEST_KITS = [
     cut_off: "300ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 32,
+    id: 34,
     slug: "cocaine-urine-test"
   },
     {
@@ -373,7 +373,7 @@ export const TEST_KITS = [
     cut_off: "200ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 33,
+    id: 35,
     slug: "cotinine-urine-test"
   },
      {
@@ -383,7 +383,7 @@ export const TEST_KITS = [
     cut_off: "50ng/ml",
     specimen: "Urine",
     certificate: "/",
-    id: 34,
+    id: 36,
     slug: "lsd-urine-test"
   },
      {
@@ -393,7 +393,7 @@ export const TEST_KITS = [
     cut_off: "300ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 35,
+    id: 37,
     slug: "methadone-urine-test"
   },
      {
@@ -403,7 +403,7 @@ export const TEST_KITS = [
     cut_off: "300ng/ml",
     specimen: "Urine",
     certificate: "/",
-    id: 36,
+    id: 38,
     slug: "methylphenidate-urine-test"
   },
       {
@@ -413,7 +413,7 @@ export const TEST_KITS = [
     cut_off: "100ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 37,
+    id: 39,
     slug: "oxycodone-urine-test"
   },
        {
@@ -423,7 +423,7 @@ export const TEST_KITS = [
     cut_off: "300ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 38,
+    id: 40,
     slug: "tramadol-urine-test"
   },
        {
@@ -433,7 +433,7 @@ export const TEST_KITS = [
     cut_off: "1000ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 39,
+    id: 41,
     slug: "tricyclic-antidepressants-urine-test"
   },
      {
@@ -443,7 +443,7 @@ export const TEST_KITS = [
     cut_off: "2000ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 40,
+    id: 42,
     slug: "opiates-urine-test"
   },
      {
@@ -453,7 +453,7 @@ export const TEST_KITS = [
     cut_off: "300ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 41,
+    id: 43,
     slug: "propoxyphene-urine-test"
   },
     {
@@ -463,7 +463,7 @@ export const TEST_KITS = [
     cut_off: "50ng/ml",
     specimen: "Urine",
     certificate: "/",
-    id: 42,
+    id: 44,
     slug: "zolpidem-urine-test"
   },
     {
@@ -473,7 +473,7 @@ export const TEST_KITS = [
     cut_off: "50ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 43,
+    id: 45,
     slug: "ethylglucuronide-urine-test"
   },
      {
@@ -483,7 +483,7 @@ export const TEST_KITS = [
     cut_off: "300ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 44,
+    id: 46,
     slug: "methadone-metabolite-urine-test"
   },
   {
@@ -493,7 +493,7 @@ export const TEST_KITS = [
     cut_off: "300ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 45,
+    id: 47,
     slug: "pregabalin-urine-test"
   },
    {
@@ -503,7 +503,7 @@ export const TEST_KITS = [
     cut_off: "1000ng/ml",
     specimen: "Urine",
     certificate: "/",
-    id: 46,
+    id: 48,
     slug: "carisoprodol-urine-test"
   },
     {
@@ -513,7 +513,7 @@ export const TEST_KITS = [
     cut_off: "/",
     specimen: "Urine",
     certificate: "CE",
-    id: 47,
+    id: 49,
     slug: "one-step-drugs-urine-cup"
   },
     {
@@ -523,7 +523,7 @@ export const TEST_KITS = [
     cut_off: "/",
     specimen: "Urine",
     certificate: "CE",
-    id: 48,
+    id: 50,
     slug: "one-step-drugs-urine-key-cup"
   },
   {
@@ -533,7 +533,7 @@ export const TEST_KITS = [
     cut_off: "/",
     specimen: "Urine",
     certificate: "CE",
-    id: 49,
+    id: 51,
     slug: "multi-drug-1-14-drugs-test-panel"
   },
   {
@@ -543,7 +543,7 @@ export const TEST_KITS = [
     cut_off: "20ng/ml",
     specimen: "Hair",
     certificate: "/",
-    id: 50,
+    id: 52,
     slug: "morphine-hair-test"
   },
    {
@@ -553,7 +553,7 @@ export const TEST_KITS = [
     cut_off: "20ng/ml",
     specimen: "Hair",
     certificate: "/",
-    id: 51,
+    id: 53,
     slug: "morphine-hair-test"
   },
      {
@@ -563,7 +563,7 @@ export const TEST_KITS = [
     cut_off: "20ng/ml",
     specimen: "Hair",
     certificate: "/",
-    id: 52,
+    id: 54,
     slug: "ketamine-hair-test"
   },
        {
@@ -573,7 +573,7 @@ export const TEST_KITS = [
     cut_off: "20ng/ml",
     specimen: "Saliva",
     certificate: "/",
-    id: 53,
+    id: 55,
     slug: "ketamine-saliva-test"
   },
        {
@@ -583,7 +583,7 @@ export const TEST_KITS = [
     cut_off: "20ng/ml",
     specimen: "Saliva",
     certificate: "/",
-    id: 54,
+    id: 56,
     slug: "cocaine-saliva-test"
   },
         {
@@ -593,7 +593,7 @@ export const TEST_KITS = [
     cut_off: "20ng/ml",
     specimen: "Saliva",
     certificate: "/",
-    id: 55,
+    id: 57,
     slug: "pcp-saliva-test"
   },
         {
@@ -603,7 +603,7 @@ export const TEST_KITS = [
     cut_off: "20ng/ml",
     specimen: "Saliva",
     certificate: "/",
-    id: 56,
+    id: 58,
     slug: "morphine-saliva-test"
   },
        {
@@ -613,7 +613,7 @@ export const TEST_KITS = [
     cut_off: "20ng/ml",
     specimen: "Saliva",
     certificate: "/",
-    id: 57,
+    id: 59,
     slug: "methamphetamine-saliva-test"
   },
   {
@@ -624,7 +624,7 @@ export const TEST_KITS = [
     cut_off: "50ng/ml",
     specimen: "Urine",
     certificate: "CE",
-    id: 58,
+    id: 60,
     slug: "marijuana-saliva-test"
   },
 
@@ -636,7 +636,7 @@ export const TEST_KITS = [
     description: "Chlamydia Rapid Test Device/Strip (Urine/Male Urethral Swab/Female Cervical Swab)",
     cut_off: "1e5 org/test",
     certificate: "/",
-    id: 59,
+    id: 61,
     slug: "chl-rapid-test"
   },
   {
@@ -646,7 +646,7 @@ export const TEST_KITS = [
     description: "Gonorrhea Rapid Test Device/Strip (Swab)",
     cut_off: "N/A",
     certificate: "CE",
-    id: 60,
+    id: 62,
     slug: "gonorrhea-rapid-test"
   },
    {
@@ -656,7 +656,7 @@ export const TEST_KITS = [
     description: "H. Pylori Ab Rapid Test Device (S/P)",
     cut_off: "N/A",
     certificate: "CE",
-    id: 61,
+    id: 63,
     slug: "h-pylori-rapid-test"
   },
      {
@@ -666,7 +666,7 @@ export const TEST_KITS = [
     description: "H. Pylori Ab Rapid Test Device (Oral Test) (Whole Blood/S/P)",
     cut_off: "N/A",
     certificate: "CE",
-    id: 62,
+    id: 64,
     slug: "h-pylori-rapid-test-wb"
   },
     {
@@ -676,7 +676,7 @@ export const TEST_KITS = [
     description: "H. Pylori Ag Rapid Test Device (Feces)",
     cut_off: "N/A",
     certificate: "CE",
-    id: 63,
+    id: 65,
     slug: "h-pylori-rapid-test-feces"
   },
      {
@@ -686,7 +686,7 @@ export const TEST_KITS = [
     description: "Malaria Pf Rapid Test Device/Strip (WB)",
     cut_off: "50 parasites/ul",
     certificate: "CE",
-    id: 64,
+    id: 66,
     slug: "malaria-rapid-test"
   },
     {
@@ -696,7 +696,7 @@ export const TEST_KITS = [
     description: "Malaria Pf/Pv Rapid Test Device (WB)",
     cut_off: "50 parasites/ul",
     certificate: "CE",
-    id: 65,
+    id: 67,
     slug: "malaria-pf-pv-rapid-test"
   },
     {
@@ -706,7 +706,7 @@ export const TEST_KITS = [
     description: "Rotavirus Rapid Test Device (Feces)",
     cut_off: "100TCID/ml",
     certificate: "CE",
-    id: 66,
+    id: 68,
     slug: "rotavirus-rapid-test"
   },
       {
@@ -716,7 +716,7 @@ export const TEST_KITS = [
     description: "Adenovirus Rapid Test Device (Feces)",
     cut_off: "100TCID/ml",
     certificate: "CE",
-    id: 67,
+    id: 69,
     slug: "adenovirus-rapid-test"
   },
       {
@@ -726,7 +726,7 @@ export const TEST_KITS = [
     description: "Rota/Adeno combo Rapid Test Device (Feces)",
     cut_off: "100TCID/ml",
     certificate: "CE",
-    id: 68,
+    id: 70,
     slug: "raca-rapid-test"
   },
    {
@@ -736,7 +736,7 @@ export const TEST_KITS = [
     description: "Strep A Rapid Test Device/Strip (Swab)",
     cut_off: "1e5 org/test",
     certificate: "CE",
-    id: 69,
+    id: 71,
     slug: "strep-a-rapid-test"
   },
   {
@@ -746,7 +746,7 @@ export const TEST_KITS = [
     description: "Syphilis Rapid Test Device/Strip (WB/S/P)",
     cut_off: "11e5 org/test",
     certificate: "CE",
-    id: 70,
+    id: 72,
     slug: "syphilis-rapid-test"
   },
   {
@@ -756,7 +756,7 @@ export const TEST_KITS = [
     description: "HBsAg Rapid Test Device/Strip (WB/S/P)",
     cut_off: "N/A",
     certificate: "/",
-    id: 71,
+    id: 73,
     slug: "hbsag-rapid-test"
   },
     {
@@ -766,7 +766,7 @@ export const TEST_KITS = [
     description: "HBsAb Rapid Test Device/Strip (WB/S/P)",
     cut_off: "N/A",
     certificate: "/",
-    id: 72,
+    id: 74,
     slug: "hbsab-rapid-test"
   },
      {
@@ -776,7 +776,7 @@ export const TEST_KITS = [
     description: "HBsAg/HCV/HIV/Syphilis Combo Test Cassette (S/P)",
     cut_off: "N/A",
     certificate: "/",
-    id: 73,
+    id: 75,
     slug: "hbsag-hcv-hiv-syphilis-combo-rapid-test"
   },
      {
@@ -786,7 +786,7 @@ export const TEST_KITS = [
     description: "HBsAg and HCV Combo Test Cassette (S/P)",
     cut_off: "N/A",
     certificate: "/",
-    id: 74,
+    id: 76,
     slug: "hbsag-hcv-combo-rapid-test"
   },
     {
@@ -796,7 +796,7 @@ export const TEST_KITS = [
     description: "Dengue IgG/IgM Test Device (WB/S/P)",
     cut_off: "N/A",
     certificate: "CE",
-    id: 75,
+    id: 77,
     slug: "dengue-igg-igm-test"
   },
    {
@@ -806,7 +806,7 @@ export const TEST_KITS = [
     description: "Dengue NS1 Test Device (WB/S/P)",
     cut_off: "N/A",
     certificate: "CE",
-    id: 76,
+    id: 78,
     slug: "dengue-ns1-test"
   },
      {
@@ -816,7 +816,7 @@ export const TEST_KITS = [
     description: "Dengue IgG/IgM/NS1 Combo Test Device (WB/S/P)",
     cut_off: "N/A",
     certificate: "CE",
-    id: 77,
+    id: 79,
     slug: "dengue-igg-igm-ns1-combo-test"
   },
       {
@@ -826,7 +826,7 @@ export const TEST_KITS = [
     description: "Chikungunya Ab IgM Rapid Test Cassette (WB/S/P)",
     cut_off: "N/A",
     certificate: "CE",
-    id: 78,
+    id: 80,
     slug: "chikungunya-igm-test"
   },
    {
@@ -836,7 +836,7 @@ export const TEST_KITS = [
     description: "Chikungunya IgG and IgM Cassette (WB/S/P)",
     cut_off: "N/A",
     certificate: "CE",
-    id: 79,
+    id: 81,
     slug: "chikungunya-igg-igm-test"
   },
     {
@@ -846,7 +846,7 @@ export const TEST_KITS = [
     description: "Cholera O1 Antigen Rapid Test Device (Feces)",
     cut_off: "N/A",
     certificate: "CE",
-    id: 80,
+    id: 82,
     slug: "cholerae-o1-antigen-test"
   },
     {
@@ -856,7 +856,7 @@ export const TEST_KITS = [
     description: "Vibrio Cholerae O139 Antigen Rapid Test Device (Feces)",
     cut_off: "N/A",
     certificate: "CE",
-    id: 81,
+    id: 83,
     slug: "cholerae-o139-antigen-test"
   },
    {
@@ -866,7 +866,7 @@ export const TEST_KITS = [
     description: "Typhoid IgG/IgM Rapid Test Device (WB/S/P)",
     cut_off: "N/A",
     certificate: "CE",
-    id: 82,
+    id: 84,
     slug: "typhoid-igg-igm-test"
   },
   {
@@ -876,7 +876,7 @@ export const TEST_KITS = [
     description: "Typhoid Ag Rapid Test Device (Feces)",
     cut_off: "N/A",
     certificate: "CE",
-    id: 83,
+    id: 85,
     slug: "typhoid-ag-test"
   },
   {
@@ -886,7 +886,7 @@ export const TEST_KITS = [
     description: "Typhoid/Para Typhoid Ag Rapid Test Device (Feces)",
     cut_off: "N/A",
     certificate: "CE",
-    id: 84,
+    id: 86,
     slug: "typhoid-para-typhoid-ag-test"
   },
    {
@@ -896,7 +896,7 @@ export const TEST_KITS = [
     description: "Tuberculosis IgG/IgM Rapid Test Device/Strip (WB/S/P)",
     cut_off: "N/A",
     certificate: "CE",
-    id: 85,
+    id: 87,
     slug: "tb-igg-igm-test"
   },
     {
@@ -906,7 +906,7 @@ export const TEST_KITS = [
     description: "Tuberculosis Antibody Rapid Test Device (S/P)",
     cut_off: "N/A",
     certificate: "CE",
-    id: 86,
+    id: 88,
     slug: "tb-antibody-test"
   },
    {
@@ -916,7 +916,7 @@ export const TEST_KITS = [
     description: "Human Immunodeficiency Virus (1/2) Rapid Test Device (WB/S/P)",
     cut_off: "N/A",
     certificate: "/",
-    id: 87,
+    id: 89,
     slug: "hiv-rapid-test"
   },
   {
@@ -926,7 +926,7 @@ export const TEST_KITS = [
     description: "Human Immunodeficiency Virus (1/2) Rapid Test Device (Oral Fluid)",
     cut_off: "N/A",
     certificate: "/",
-    id: 88,
+    id: 90,
     slug: "hiv-rapid-test"
   },
     {
@@ -936,7 +936,7 @@ export const TEST_KITS = [
     description: "Human Immunodeficiency Virus (1/2/O) Rapid Test Device (WB/S/P)",
     cut_off: "N/A",
     certificate: "/",
-    id: 88,
+    id: 91,
     slug: "hiv-1-2-o-rapid-test"
   },
    {
@@ -946,7 +946,7 @@ export const TEST_KITS = [
     description: "HIV Ab/Ag G4 Rapid Test Device (WB/S/P)",
     cut_off: "N/A",
     certificate: "CE",
-    id: 89,
+    id: 92,
     slug: "hiv-ab-ag-rapid-test"
   },
      {
@@ -956,7 +956,7 @@ export const TEST_KITS = [
     description: "HCV Rapid Test Device/Strip (WB/S/P)",
     cut_off: "N/A",
     certificate: "/",
-    id: 90,
+    id: 93,
     slug: "hcv-rapid-test"
   },
       {
@@ -966,7 +966,7 @@ export const TEST_KITS = [
     description: "HAV Rapid Test Device (WB/S/P)",
     cut_off: "N/A",
     certificate: "CE",
-    id: 91,
+    id: 94,
     slug: "hav-rapid-test"
   },
      {
@@ -976,7 +976,7 @@ export const TEST_KITS = [
     description: "HAV IgM Rapid Test Device (S/P)",
     cut_off: "N/A",
     certificate: "CE",
-    id: 92,
+    id: 95,
     slug: "hav-igm-rapid-test"
   },
      {
@@ -986,7 +986,7 @@ export const TEST_KITS = [
     description: "TOXO IgG/IgM Rapid Test (WB/S/P)",
     cut_off: "N/A",
     certificate: "/",
-    id: 93,
+    id: 96,
     slug: "toxoplasma-rapid-test"
   },
     {
@@ -996,7 +996,7 @@ export const TEST_KITS = [
     description: "Rubella IgG/IgM Rapid Test (WB/S/P)",
     cut_off: "N/A",
     certificate: "/",
-    id: 94,
+    id: 97,
     slug: "rubella-rapid-test"
   },
    {
@@ -1006,7 +1006,7 @@ export const TEST_KITS = [
     description: "CMV IgG/IgM Rapid Test (WB/S/P)",
     cut_off: "N/A",
     certificate: "/",
-    id: 95,
+    id: 98,
     slug: "cmv-rapid-test"
   },
    {
@@ -1016,7 +1016,7 @@ export const TEST_KITS = [
     description: "HSV IgG/IgM Rapid Test Device (WB/S/P)",
     cut_off: "N/A",
     certificate: "/",
-    id: 96,
+    id: 99,
     slug: " hsv-rapid-test"
   },
   {
@@ -1026,7 +1026,7 @@ export const TEST_KITS = [
     description: "Respiratory Syncytial Virus Antigen Rapid Test Device (Nasopharyngeal swabs/Nasal swab)",
     cut_off: "N/A",
     certificate: "CE",
-    id: 97,
+    id: 100,
     slug: " rsv-rapid-test"
   },
     {
@@ -1036,7 +1036,7 @@ export const TEST_KITS = [
     description: "Norovirus GI/GII Rapid Test Device (Feces)",
     cut_off: "N/A",
     certificate: "/",
-    id: 98,
+    id: 101,
     slug: " norovirus-rapid-test"
   },
      {
@@ -1046,7 +1046,7 @@ export const TEST_KITS = [
     description: "Leishmania IgG/IgM Rapid Test Device (WB/S/P)",
     cut_off: "N/A",
     certificate: "CE",
-    id: 99,
+    id: 102,
     slug: "leishmania-rapid-test"
   },
       {
@@ -1056,7 +1056,7 @@ export const TEST_KITS = [
     description: "Filariasis IgG/IgM Rapid Test Device (WB/S/P)",
     cut_off: "N/A",
     certificate: "CE",
-    id: 100,
+    id: 103,
     slug: "filariasis-rapid-test"
   },
       {
@@ -1066,7 +1066,7 @@ export const TEST_KITS = [
     description: "Zika Rapid Test Device (WB/S/P)",
     cut_off: "N/A",
     certificate: "/",
-    id: 101,
+    id: 104,
     slug: "zika-rapid-test"
   },
         {
@@ -1076,7 +1076,7 @@ export const TEST_KITS = [
     description: "Leptospira IgG/IgM Rapid Test Device (WB/S/P)",
     cut_off: "N/A",
     certificate: "CE",
-    id: 102,
+    id: 105,
     slug: "leptospira-rapid-test"
   },
          {
@@ -1086,7 +1086,7 @@ export const TEST_KITS = [
     description: "COVID-19 IgG/IgM Rapid Test Device (WB/S/P)",
     cut_off: "N/A",
     certificate: "CE",
-    id: 103,
+    id: 106,
     slug: "covid19-igg-igm-test"
   },
      {
@@ -1096,7 +1096,7 @@ export const TEST_KITS = [
     description: "COVID-19 Ag Rapid Test Device (Nasopharyngeal swabs/Nasal swab)",
     cut_off: "100TCID/ml",
     certificate: "CE",
-    id: 104,
+    id: 107,
     slug: "covid19-ag-test"
   },
      {
@@ -1106,7 +1106,7 @@ export const TEST_KITS = [
     description: "COVID-19 Ag Rapid Test Device Self Testing Device (Nasal swab)",
     cut_off: "100TCID/ml",
     certificate: "CE",
-    id: 105,
+    id: 108,
     slug: "covid19-ag-self-test"
   },
      {
@@ -1116,7 +1116,7 @@ export const TEST_KITS = [
     description: "Influenza A+B Ag Rapid Test Device (Nasopharyngeal swabs/Nasal swab)",
     cut_off: "100TCID/ml",
     certificate: "CE",
-    id: 106,
+    id: 109,
     slug: "influenza-a-b-ag-test"
   },
      {
@@ -1126,7 +1126,7 @@ export const TEST_KITS = [
     description: "Influenza A+B Ag Rapid Test Strip (Nasopharyngeal swabs/Nasal swab)",
     cut_off: "100TCID/ml",
     certificate: "CE",
-    id: 107,
+    id: 110,
     slug: "influenza-a-b-ag-strip-test"
   },
      {
@@ -1136,7 +1136,7 @@ export const TEST_KITS = [
     description: "Influenza A Ag Rapid Test Device (Nasopharyngeal swabs/Nasal swab)",
     cut_off: "100TCID/ml",
     certificate: "CE",
-    id: 108,
+    id: 111,
     slug: "influenza-a-ag-test"
   },
        {
@@ -1146,7 +1146,7 @@ export const TEST_KITS = [
     description: "Influenza B Ag Rapid Test Device (Nasopharyngeal swabs/Nasal swab)",
     cut_off: "100TCID/ml",
     certificate: "CE",
-    id: 109,
+    id: 112,
     slug: "influenza-b-ag-test"
   },
        {
@@ -1156,7 +1156,7 @@ export const TEST_KITS = [
     description: "Influenza A+B/SARS-CoV-2 Ag combo Rapid Test Device (Nasopharyngeal swabs/Nasal swab)",
     cut_off: "N/A",
     certificate: "CE",
-    id: 110,
+    id: 113,
     slug: "influenza-a-b-sars-cov-2-ag-combo-test"
   },
          {
@@ -1166,7 +1166,7 @@ export const TEST_KITS = [
     description: "Influenza A+B/SARS-CoV-2/RSV Ag combo Rapid Test Device (Nasopharyngeal swabs/Nasal swab)",
     cut_off: "N/A",
     certificate: "CE",
-    id: 111,
+    id: 114,
     slug: "influenza-a-b-sars-cov-2-rsv-ag-combo-test"
   },
   
@@ -1180,7 +1180,7 @@ export const TEST_KITS = [
     cut_off: "40ng/ml, 200ng/ml",
     specimen: "WB/S/P",
     certificate: "CE",
-    id: 112,
+    id: 115,
     slug: "fob-test"
   },
     {
@@ -1191,7 +1191,7 @@ export const TEST_KITS = [
     cut_off: "40ng/ml, 200ng/ml",
     specimen: "WB/S/P",
     certificate: "CE",
-    id: 113,
+    id: 116,
     slug: "fob-strip-test"
   },
     {
@@ -1202,7 +1202,7 @@ export const TEST_KITS = [
     cut_off: "20mg/L, 50mg/L",
     specimen: "WB/S/P",
     certificate: "CE",
-    id: 114,
+    id: 117,
     slug: "alb-test"
   },
       {
@@ -1213,7 +1213,7 @@ export const TEST_KITS = [
     cut_off: "20mg/L, 50mg/L",
     specimen: "WB/S/P",
     certificate: "CE",
-    id: 115,
+    id: 118,
     slug: "alb-strip-test"
   },
         {
@@ -1224,7 +1224,7 @@ export const TEST_KITS = [
     cut_off: "2ng/ml",
     specimen: "WB/S/P",
     certificate: "/",
-    id: 116,
+    id: 119,
     slug: "psa-test"
   },
      {
@@ -1235,7 +1235,7 @@ export const TEST_KITS = [
     cut_off: "2~4ng/ml",
     specimen: "WB/S/P",
     certificate: "/",
-    id: 117,
+    id: 120,
     slug: "psa-semi-quantitative-test"
   },
   {
@@ -1246,7 +1246,7 @@ export const TEST_KITS = [
     cut_off: "20ng/ml",
     specimen: "WB/S/P",
     certificate: "CE",
-    id: 118,
+    id: 121,
     slug: "ferritin-test"
   },
   {
@@ -1257,7 +1257,7 @@ export const TEST_KITS = [
     cut_off: "20ng/ml",
     specimen: "WB/S/P",
     certificate: "/",
-    id: 119,
+    id: 122,
     slug: "t-ferritin-test"
   },
   
@@ -1271,7 +1271,7 @@ export const TEST_KITS = [
     cut_off: "5ng/ml",
     specimen: null,
     certificate: null,
-    id: 120,
+    id: 123,
     slug: "ck-mb"
   },
   {
@@ -1282,7 +1282,7 @@ export const TEST_KITS = [
     cut_off: "50ng/ml",
     specimen: null,
     certificate: null,
-    id: 121,
+    id: 124,
     slug: "myo"
   },
   {
@@ -1293,7 +1293,7 @@ export const TEST_KITS = [
     cut_off: "0.5ng/ml, 0.3ng/ml",
     specimen: null,
     certificate: "CE",
-    id: 122,
+    id: 125,
     slug: "troponin-i"
   },
   {
@@ -1304,7 +1304,7 @@ export const TEST_KITS = [
     cut_off: "0.5ng/ml, 0.3ng/ml",
     specimen: null,
     certificate: null,
-    id: 123,
+    id: 126,
     slug: "troponin-i-sp"
   },
   {
@@ -1315,7 +1315,7 @@ export const TEST_KITS = [
     cut_off: "0.5ng/ml, 0.3ng/ml",
     specimen: null,
     certificate: null,
-    id: 124,
+    id: 127,
     slug: "troponin-t"
   },
   {
@@ -1326,7 +1326,7 @@ export const TEST_KITS = [
     cut_off: "10ng/ml",
     specimen: null,
     certificate: null,
-    id: 125,
+    id: 128,
     slug: "h-fabp"
   },
   {
@@ -1337,7 +1337,7 @@ export const TEST_KITS = [
     cut_off: "50ng/5ng/0.5ng/ml",
     specimen: null,
     certificate: null,
-    id: 126,
+    id: 129,
     slug: "myoglobin-ck-mb-troponin-i"
   },
   {
@@ -1348,7 +1348,7 @@ export const TEST_KITS = [
     cut_off: "500ng/mL",
     specimen: null,
     certificate: "CE",
-    id: 127,
+    id: 130,
     slug: "d-dimer-device"
   },
   {
@@ -1359,7 +1359,7 @@ export const TEST_KITS = [
     cut_off: "500ng/mL",
     specimen: null,
     certificate: null,
-    id: 128,
+    id: 131,
     slug: "d-dimer-strip"
   },
   {
@@ -1370,7 +1370,7 @@ export const TEST_KITS = [
     cut_off: "1~3~10mg/L, 10~30mg/L, 10~60mg/L",
     specimen: null,
     certificate: null,
-    id: 129,
+    id: 132,
     slug: "crp-ultra-device"
   },
   {
@@ -1381,7 +1381,7 @@ export const TEST_KITS = [
     cut_off: "10~30mg/L, 10~60mg/L",
     specimen: null,
     certificate: "CE",
-    id: 130,
+    id: 133,
     slug: "crp-device"
   },
   {
@@ -1392,7 +1392,7 @@ export const TEST_KITS = [
     cut_off: "10~40~80mg/L",
     specimen: null,
     certificate: "CE",
-    id: 131,
+    id: 134,
     slug: "crp-strip"
   },
   {
@@ -1403,7 +1403,7 @@ export const TEST_KITS = [
     cut_off: "0.5~2~10ng/ml",
     specimen: null,
     certificate: "CE",
-    id: 132,
+    id: 135,
     slug: "pct"
   },
   {
@@ -1414,7 +1414,7 @@ export const TEST_KITS = [
     cut_off: "10~30~60mg/L",
     specimen: null,
     certificate: "CE",
-    id: 133,
+    id: 136,
     slug: "saa"
   },
   [
@@ -1426,7 +1426,7 @@ export const TEST_KITS = [
     cut_off: null,
     specimen: "Bovis Whole Blood",
     certificate: null,
-    id: 134,
+    id: 137,
     slug: "brucella-bovis-test-device"
   },
   {
@@ -1437,7 +1437,7 @@ export const TEST_KITS = [
     cut_off: null,
     specimen: "Bovis Urine",
     certificate: null,
-    id: 135,
+    id: 138,
     slug: "hcg-bovis-test-device"
   },
   {
@@ -1448,7 +1448,7 @@ export const TEST_KITS = [
     cut_off: null,
     specimen: "Bovis Urine",
     certificate: null,
-    id: 136,
+    id: 139,
     slug: "lh-bovis-test-device"
   },
   {
@@ -1459,7 +1459,7 @@ export const TEST_KITS = [
     cut_off: null,
     specimen: "Swine Whole Blood",
     certificate: null,
-    id: 137,
+    id: 140,
     slug: "asf-test-device"
   },
   {
@@ -1470,7 +1470,7 @@ export const TEST_KITS = [
     cut_off: null,
     specimen: "Swine Whole Blood",
     certificate: null,
-    id: 138,
+    id: 141,
     slug: "smd-test-device"
   },
   {
@@ -1481,7 +1481,7 @@ export const TEST_KITS = [
     cut_off: null,
     specimen: "Swine Whole Blood",
     certificate: null,
-    id: 139,
+    id: 142,
     slug: "prv-swine-test-device"
   },
   {
@@ -1492,7 +1492,7 @@ export const TEST_KITS = [
     cut_off: null,
     specimen: "Secretion",
     certificate: null,
-    id: 140,
+    id: 143,
     slug: "avian-influenza-test-device"
   },
   {
@@ -1503,7 +1503,7 @@ export const TEST_KITS = [
     cut_off: null,
     specimen: "Canine ocular secretion and nasal secretion",
     certificate: null,
-    id: 141,
+    id: 144,
     slug: "cdv-ag-test-device"
   },
   {
@@ -1514,7 +1514,7 @@ export const TEST_KITS = [
     cut_off: null,
     specimen: "Canine feces",
     certificate: null,
-    id: 142,
+    id: 145,
     slug: "cpv-ag-test-device"
   },
   {
@@ -1525,7 +1525,7 @@ export const TEST_KITS = [
     cut_off: null,
     specimen: "Canine nasal secretion",
     certificate: null,
-    id: 143,
+    id: 146,
     slug: "civ-ag-test-device"
   },
   {
@@ -1536,7 +1536,7 @@ export const TEST_KITS = [
     cut_off: null,
     specimen: "Canine whole blood, serum or plasma",
     certificate: null,
-    id: 144,
+    id: 147,
     slug: "rabies-ag-test-device"
   },
   {
@@ -1547,7 +1547,7 @@ export const TEST_KITS = [
     cut_off: null,
     specimen: "Feline whole blood, serum or plasma",
     certificate: null,
-    id: 145,
+    id: 148,
     slug: "toxoplasma-ab-test-device"
   },
   {
@@ -1558,7 +1558,7 @@ export const TEST_KITS = [
     cut_off: null,
     specimen: "Feline feces or vomit",
     certificate: null,
-    id: 146,
+    id: 149,
     slug: "fpvag-test-device"
   },
   {
@@ -1569,7 +1569,7 @@ export const TEST_KITS = [
     cut_off: null,
     specimen: "Serum",
     certificate: null,
-    id: 147,
+    id: 150,
     slug: "lyme-ab-test-device"
   },
   {
@@ -1580,7 +1580,7 @@ export const TEST_KITS = [
     cut_off: null,
     specimen: "Feline feces or vomit",
     certificate: null,
-    id: 148,
+    id: 151,
     slug: "fcov-ag-test-device"
   },
   {
@@ -1591,7 +1591,7 @@ export const TEST_KITS = [
     cut_off: null,
     specimen: "Canine ocular secretion or nasal secretion",
     certificate: null,
-    id: 149,
+    id: 152,
     slug: "cdv-cav-ag-test-device"
   },
   {
@@ -1602,7 +1602,7 @@ export const TEST_KITS = [
     cut_off: null,
     specimen: "Canine feces",
     certificate: null,
-    id: 150,
+    id: 153,
     slug: "cpv-ccv-ag-test-device"
   },
   {
@@ -1613,7 +1613,7 @@ export const TEST_KITS = [
     cut_off: null,
     specimen: "Canine/feline feces",
     certificate: null,
-    id: 151,
+    id: 154,
     slug: "giardia-ag-test-device"
   },
   {
@@ -1624,7 +1624,7 @@ export const TEST_KITS = [
     cut_off: null,
     specimen: "Canine whole blood, serum or plasma",
     certificate: null,
-    id: 152,
+    id: 155,
     slug: "leishmania-ab-test-device"
   },
   {
@@ -1635,7 +1635,7 @@ export const TEST_KITS = [
     cut_off: null,
     specimen: "Canine whole blood, serum or plasma",
     certificate: null,
-    id: 153,
+    id: 156,
     slug: "e-canis-ab-test-device"
   },
   {
@@ -1646,7 +1646,7 @@ export const TEST_KITS = [
     cut_off: null,
     specimen: "Canine whole blood, serum or plasma",
     certificate: null,
-    id: 154,
+    id: 157,
     slug: "chw-ag-test-device"
   },
   {
@@ -1657,7 +1657,7 @@ export const TEST_KITS = [
     cut_off: null,
     specimen: "Feline whole blood, serum or plasma",
     certificate: null,
-    id: 155,
+    id: 158,
     slug: "fivab-felv-ag-test-device"
   },
   {
@@ -1668,7 +1668,7 @@ export const TEST_KITS = [
     cut_off: null,
     specimen: "Canine whole blood, serum or plasma",
     certificate: null,
-    id: 156,
+    id: 159,
     slug: "anaplasma-ab-test-device"
   },
   {
@@ -1679,7 +1679,7 @@ export const TEST_KITS = [
     cut_off: null,
     specimen: "Canine whole blood, serum or plasma",
     certificate: null,
-    id: 157,
+    id: 160,
     slug: "leptospira-ab-test-device"
   },
   {
@@ -1690,7 +1690,7 @@ export const TEST_KITS = [
     cut_off: null,
     specimen: "Feline whole blood,serum or plasma",
     certificate: null,
-    id: 158,
+    id: 161,
     slug: "fip-ab-test-device"
   },
   {
@@ -1701,7 +1701,7 @@ export const TEST_KITS = [
     cut_off: null,
     specimen: "Canine feces",
     certificate: null,
-    id: 159,
+    id: 162,
     slug: "rotavirus-ag-test-device"
   },
   {
@@ -1712,19 +1712,19 @@ export const TEST_KITS = [
     cut_off: null,
     specimen: "Canine whole blood, serum or plasma",
     certificate: null,
-    id: 160,
+    id: 163,
     slug: "canine-brucella-ab-test-device"
   },
-  {
-    category: "INFECTIOUS DISEASE",
-    method: "Rapid Test",
-    product: "HIV",
-    description: "Human Immunodeficiency Virus (1/2) Rapid Test Device (Oral Fluid)",
-    cut_off: "N/A",
-    certificate: "/",
-    id: 87,
-    slug: "hiv-rapid-test"
-  },
+  // {
+  //   category: "INFECTIOUS DISEASE",
+  //   method: "Rapid Test",
+  //   product: "HIV",
+  //   description: "Human Immunodeficiency Virus (1/2) Rapid Test Device (Oral Fluid)",
+  //   cut_off: "N/A",
+  //   certificate: "/",
+  //   id: 164,
+  //   slug: "hiv-rapid-test"
+  // },
 ]
 ]
  
