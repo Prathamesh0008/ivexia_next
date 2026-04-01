@@ -2,9 +2,11 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { FaSearch, FaGlobe, FaBars, FaTimes } from "react-icons/fa";
 import Image from "next/image";
+import { FINISHED_PRODUCTS } from "@/data/finishedProducts";
+import INGREDIENTS from "@/data/ingredients";
 
 export default function Navbar() {
   const [showSearch, setShowSearch] = useState(false);
@@ -19,14 +21,8 @@ export default function Navbar() {
 
   const router = useRouter();
   const pathname = usePathname();
-  const [magCategory, setMagCategory] = useState(null);
-
-useEffect(() => {
-  if (typeof window !== "undefined") {
-    const params = new URLSearchParams(window.location.search);
-    setMagCategory(params.get("category"));
-  }
-}, []);
+  const searchParams = useSearchParams();
+  const magCategory = searchParams.get("category");
   const [language, setLanguage] = useState("English");
 
   const productsRef = useRef(null);
@@ -275,15 +271,15 @@ useEffect(() => {
                   Private Label Manufacturing / OEM
                 </li>
                 <li
-  onClick={() => goTo("/test-kits")}
-  className={`${dropdownItemClass} ${
-    pathname === "/test-kits"
-      ? activeDropdownItemClass
-      : "hover:bg-gray-100 text-gray-700"
-  }`}
->
-  Test Kits
-</li>
+                  onClick={() => goTo("/test-kits")}
+                  className={`${dropdownItemClass} ${
+                    pathname === "/test-kits"
+                      ? activeDropdownItemClass
+                      : "hover:bg-gray-100 text-gray-700"
+                  }`}
+                >
+                  Test Kits
+                </li>
 
                 <button
                   onClick={(e) => {

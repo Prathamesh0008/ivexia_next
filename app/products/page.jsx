@@ -4,16 +4,24 @@
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { FaSearch } from "react-icons/fa";
-
+import { TEST_KITS } from "@/data/testKits";
 import PRODUCTS from "@/data/finishedProducts"; // use default English for now
 
 export default function Products() {
   const router = useRouter();
-
+const testKits = useMemo(
+  () =>
+    TEST_KITS.flat(Infinity).filter(
+      (item) => item && typeof item === "object" && !Array.isArray(item)
+    ),
+  []
+);
   const categoryOptions = useMemo(
-    () => ["", ...new Set(PRODUCTS.map((p) => p.category))].filter(Boolean),
-    []
-  );
+  () => [
+    ...new Set([...PRODUCTS.map((p) => p.category), "TEST KITS"]),
+  ],
+  []
+);
 
   const formOptions = useMemo(
     () => ["", ...new Set(PRODUCTS.map((p) => p.form))].filter(Boolean),
@@ -31,24 +39,37 @@ export default function Products() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const filtered = useMemo(() => {
-    const q = searchTerm.trim().toLowerCase();
+  const q = searchTerm.trim().toLowerCase();
 
-    return PRODUCTS.filter((p) => {
-      const matchCategory = !category || p.category === category;
-      const matchForm = !form || p.form === form;
-      const matchDosage = !dosage || p.dosage === dosage;
-
-      const matchSearch =
+  // 👉 TEST KITS LOGIC
+  if (category === "TEST KITS") {
+    return testKits.filter((item) => {
+      return (
         !q ||
-        p.name?.toLowerCase().includes(q) ||
-        p.category?.toLowerCase().includes(q) ||
-        p.form?.toLowerCase().includes(q) ||
-        p.dosage?.toLowerCase().includes(q) ||
-        String(p["CAS-ID"] || "").toLowerCase().includes(q);
-
-      return matchCategory && matchForm && matchDosage && matchSearch;
+        item.product?.toLowerCase().includes(q) ||
+        item.category?.toLowerCase().includes(q) ||
+        item.specimen?.toLowerCase().includes(q)
+      );
     });
-  }, [category, form, dosage, searchTerm]);
+  }
+
+  // 👉 NORMAL PRODUCTS
+  return PRODUCTS.filter((p) => {
+    const matchCategory = !category || p.category === category;
+    const matchForm = !form || p.form === form;
+    const matchDosage = !dosage || p.dosage === dosage;
+
+    const matchSearch =
+      !q ||
+      p.name?.toLowerCase().includes(q) ||
+      p.category?.toLowerCase().includes(q) ||
+      p.form?.toLowerCase().includes(q) ||
+      p.dosage?.toLowerCase().includes(q) ||
+      String(p["CAS-ID"] || "").toLowerCase().includes(q);
+
+    return matchCategory && matchForm && matchDosage && matchSearch;
+  });
+}, [category, form, dosage, searchTerm, testKits]);
 
   return (
     <div className="pt-16 bg-[#FFF8F5] min-h-screen">
@@ -106,44 +127,67 @@ export default function Products() {
           </select>
         </div>
 <div className="flex justify-end mb-4">
- <a
-  href="/LarksoisPharmaproduct.json"
-  download="Ivexia_Product_List.json"
-  className="px-6 py-2 rounded-full bg-gradient-to-r from-[#0d2d47] to-[#19a6b5] text-white text-sm font-semibold hover:opacity-90 transition"
->
-  Download Product List
-</a>
+
 </div>
         {/* TABLE */}
         <div className="overflow-x-auto bg-white shadow-sm">
           <table className="min-w-full text-sm">
-            <thead>
-              <tr className="bg-[#0d2d47] text-white">
-                <th className="px-4 py-3">Name</th>
-                <th className="px-4 py-3">Form</th>
-                <th className="px-4 py-3">Category</th>
-                <th className="px-4 py-3">Dosage</th>
-                <th className="px-4 py-3">CAS-ID</th>
-              </tr>
-            </thead>
+         <thead>
+  <tr className="bg-[#0d2d47] text-white">
+    {category === "TEST KITS" ? (
+      <>
+        <th className="px-4 py-3">Product</th>
+        <th className="px-4 py-3">Description</th>
+        <th className="px-4 py-3">Category</th>
+        <th className="px-4 py-3">Method</th>
+        <th className="px-4 py-3">Specimen</th>
+        <th className="px-4 py-3">Cut-Off</th>
+        <th className="px-4 py-3">Certificate</th>
+      </>
+    ) : (
+      <>
+        <th className="px-4 py-3">Name</th>
+        <th className="px-4 py-3">Form</th>
+        <th className="px-4 py-3">Category</th>
+        <th className="px-4 py-3">Dosage</th>
+        <th className="px-4 py-3">CAS-ID</th>
+      </>
+    )}
+  </tr>
+</thead>
 
             <tbody>
-              {filtered.map((p, i) => (
-                <tr
-                  key={p.id}
-                  onClick={() => router.push(`/products/${p.slug}`)}
-                  className={`cursor-pointer ${
-                    i % 2 === 0 ? "bg-white" : "bg-gray-50"
-                  }`}
-                >
-                  <td className="px-4 py-3">{p.name}</td>
-                  <td className="px-4 py-3">{p.form}</td>
-                  <td className="px-4 py-3">{p.category}</td>
-                  <td className="px-4 py-3">{p.dosage}</td>
-                  <td className="px-4 py-3">{p["CAS-ID"]}</td>
-                </tr>
-              ))}
-            </tbody>
+  {category === "TEST KITS"
+  ? filtered.map((item, index) => (
+      <tr
+        key={`${item.id}-${index}`}
+        className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}
+      >
+        <td className="px-4 py-3 font-semibold">{item.product}</td>
+        <td className="px-4 py-3">{item.description || "-"}</td>
+        <td className="px-4 py-3">{item.category || "-"}</td>
+        <td className="px-4 py-3">{item.method || "-"}</td>
+        <td className="px-4 py-3">{item.specimen || "-"}</td>
+        <td className="px-4 py-3">{item.cut_off || "-"}</td>
+        <td className="px-4 py-3">{item.certificate || "-"}</td>
+      </tr>
+    ))
+    : filtered.map((p, i) => (
+        <tr
+          key={p.id}
+          onClick={() => router.push(`/products/${p.slug}`)}
+          className={`cursor-pointer ${
+            i % 2 === 0 ? "bg-white" : "bg-gray-50"
+          }`}
+        >
+          <td className="px-4 py-3">{p.name}</td>
+          <td className="px-4 py-3">{p.form}</td>
+          <td className="px-4 py-3">{p.category}</td>
+          <td className="px-4 py-3">{p.dosage}</td>
+          <td className="px-4 py-3">{p["CAS-ID"]}</td>
+        </tr>
+      ))}
+</tbody>
           </table>
         </div>
 

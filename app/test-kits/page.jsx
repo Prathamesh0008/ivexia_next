@@ -1,64 +1,65 @@
 //ivexia\app\test-kits\page.jsx
 "use client";
 
-import { useMemo, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useMemo, useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
 
 import { TEST_KITS } from "@/data/testKits";
 
-export default function TestKits() {
-  const router = useRouter();
-
-  /* ================= FILTER OPTIONS ================= */
-  const categoryOptions = useMemo(
-    () => ["", ...new Set(TEST_KITS.map((p) => p.category))].filter(Boolean),
+export default function TestKitsPage() {
+  const testKits = useMemo(
+    () =>
+      TEST_KITS.flat(Infinity).filter(
+        (item) => item && typeof item === "object" && !Array.isArray(item)
+      ),
     []
+  );
+
+  const categoryOptions = useMemo(
+    () => [...new Set(testKits.map((item) => item.category).filter(Boolean))],
+    [testKits]
   );
 
   const methodOptions = useMemo(
-    () => ["", ...new Set(TEST_KITS.map((p) => p.method))].filter(Boolean),
-    []
+    () => [...new Set(testKits.map((item) => item.method).filter(Boolean))],
+    [testKits]
   );
 
   const specimenOptions = useMemo(
-    () => ["", ...new Set(TEST_KITS.map((p) => p.specimen))].filter(Boolean),
-    []
+    () => [...new Set(testKits.map((item) => item.specimen).filter(Boolean))],
+    [testKits]
   );
 
-  /* ================= STATES ================= */
-const [category, setCategory] = useState(categoryOptions[0] || "");
+  const [category, setCategory] = useState(categoryOptions[0] || "");
   const [method, setMethod] = useState("");
   const [specimen, setSpecimen] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
 
-  /* ================= FILTER LOGIC ================= */
- const filtered = useMemo(() => {
-  const q = searchTerm.trim().toLowerCase();;
+  const filtered = useMemo(() => {
+    const query = searchTerm.trim().toLowerCase();
 
-   return TEST_KITS
-    .filter((p) => {
-      const matchCategory = p.category === category;
-      const matchMethod = !method || p.method === method;
-      const matchSpecimen = !specimen || p.specimen === specimen;
+    return testKits
+      .filter((item) => {
+        const matchCategory = !category || item.category === category;
+        const matchMethod = !method || item.method === method;
+        const matchSpecimen = !specimen || item.specimen === specimen;
+        const matchSearch =
+          !query ||
+          item.product?.toLowerCase().includes(query) ||
+          item.description?.toLowerCase().includes(query) ||
+          item.category?.toLowerCase().includes(query) ||
+          item.specimen?.toLowerCase().includes(query);
 
-      const matchSearch =
-        !q ||
-        p.product?.toLowerCase().includes(q) ||
-        p.description?.toLowerCase().includes(q) ||
-        p.category?.toLowerCase().includes(q) ||
-        p.specimen?.toLowerCase().includes(q);
-
-      return matchCategory && matchMethod && matchSpecimen && matchSearch;
-    })
-    .sort((a, b) => a.product.localeCompare(b.product)); // ✅ THIS LINE
-}, [category, method, specimen, searchTerm]);
+        return (
+          matchCategory && matchMethod && matchSpecimen && matchSearch
+        );
+      })
+      .sort((a, b) => a.product.localeCompare(b.product));
+  }, [category, method, specimen, searchTerm, testKits]);
 
   return (
     <div className="pt-16 bg-[#FFF8F5] min-h-screen">
       <section className="max-w-7xl mx-auto px-6 md:px-16 pb-40">
-
-        {/* HEADER */}
         <header className="text-center mt-4 mb-6">
           <h1 className="text-3xl md:text-4xl font-extrabold text-[#0d2d47]">
             Test Kits
@@ -68,7 +69,6 @@ const [category, setCategory] = useState(categoryOptions[0] || "");
           </p>
         </header>
 
-        {/* SEARCH */}
         <div className="relative max-w-4xl mx-auto mb-6">
           <input
             value={searchTerm}
@@ -81,48 +81,48 @@ const [category, setCategory] = useState(categoryOptions[0] || "");
           </div>
         </div>
 
-        {/* FILTERS */}
         <div className="flex flex-wrap justify-center gap-3 mb-6">
+          <select
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+            className="rounded-full border border-gray-300 px-5 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#19a6b5]"
+          >
+            <option value="">Category</option>
+            {categoryOptions.map((item) => (
+              <option key={item} value={item}>
+                {item}
+              </option>
+            ))}
+          </select>
 
-  {/* CATEGORY */}
-  <select
-    value={category}
-    onChange={(e) => setCategory(e.target.value)}
-    className="rounded-full border border-gray-300 px-5 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#19a6b5]"
-  >
-    {categoryOptions.map((c) => (
-      <option key={c}>{c}</option>
-    ))}
-  </select>
+          <select
+            value={method}
+            onChange={(e) => setMethod(e.target.value)}
+            className="rounded-full border border-gray-300 px-5 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#19a6b5]"
+          >
+            <option value="">Method</option>
+            {methodOptions.map((item) => (
+              <option key={item} value={item}>
+                {item}
+              </option>
+            ))}
+          </select>
 
-  {/* METHOD */}
-  <select
-    value={method}
-    onChange={(e) => setMethod(e.target.value)}
-    className="rounded-full border border-gray-300 px-5 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#19a6b5]"
-  >
-    <option value="">Method</option>
-    {methodOptions.map((m) => (
-      <option key={m}>{m}</option>
-    ))}
-  </select>
+          <select
+            value={specimen}
+            onChange={(e) => setSpecimen(e.target.value)}
+            className="rounded-full border border-gray-300 px-5 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#19a6b5]"
+          >
+            <option value="">Specimen</option>
+            {specimenOptions.map((item) => (
+              <option key={item} value={item}>
+                {item}
+              </option>
+            ))}
+          </select>
+        </div>
 
-  {/* SPECIMEN */}
-  <select
-    value={specimen}
-    onChange={(e) => setSpecimen(e.target.value)}
-    className="rounded-full border border-gray-300 px-5 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#19a6b5]"
-  >
-    <option value="">Specimen</option>
-    {specimenOptions.map((s) => (
-      <option key={s}>{s}</option>
-    ))}
-  </select>
-
-</div>
-
-        {/* DOWNLOAD */}
-        <div className="flex justify-end mb-4">
+        {/* <div className="flex justify-end mb-4">
           <a
             href="/testkits.json"
             download="Ivexia_Test_Kits.json"
@@ -130,9 +130,8 @@ const [category, setCategory] = useState(categoryOptions[0] || "");
           >
             Download Test Kit List
           </a>
-        </div>
+        </div> */}
 
-        {/* TABLE */}
         <div className="overflow-x-auto bg-white shadow-sm rounded-lg">
           <table className="min-w-full text-sm">
             <thead>
@@ -148,27 +147,23 @@ const [category, setCategory] = useState(categoryOptions[0] || "");
             </thead>
 
             <tbody>
-              {filtered.map((p, i) => (
+              {filtered.map((item, index) => (
                 <tr
-                  key={p.id}
-                  onClick={() => router.push(`/test-kits/${p.slug}`)}
-                  className={`cursor-pointer ${
-                    i % 2 === 0 ? "bg-white" : "bg-gray-50"
-                  } hover:bg-[#f1f5f9] transition`}
+                  key={`${item.id}-${index}`}
+                  className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}
                 >
-                  <td className="px-4 py-3 font-semibold">{p.product}</td>
-                  <td className="px-4 py-3">{p.description || "-"}</td>
-                  <td className="px-4 py-3">{p.category}</td>
-                  <td className="px-4 py-3">{p.method}</td>
-                  <td className="px-4 py-3">{p.specimen}</td>
-                  <td className="px-4 py-3">{p.cut_off || "-"}</td>
-                  <td className="px-4 py-3">{p.certificate}</td>
+                  <td className="px-4 py-3 font-semibold">{item.product}</td>
+                  <td className="px-4 py-3">{item.description || "-"}</td>
+                  <td className="px-4 py-3">{item.category || "-"}</td>
+                  <td className="px-4 py-3">{item.method || "-"}</td>
+                  <td className="px-4 py-3">{item.specimen || "-"}</td>
+                  <td className="px-4 py-3">{item.cut_off || "-"}</td>
+                  <td className="px-4 py-3">{item.certificate || "-"}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-
       </section>
     </div>
   );

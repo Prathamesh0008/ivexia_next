@@ -663,7 +663,7 @@ export const TEST_KITS = [
     category: "INFECTIOUS DISEASE",
     method: "Rapid Test",
     product: "H. Pylori",
-    description: "H. Pylori Ab Rapid Test Device (WB/S/P)",
+    description: "H. Pylori Ab Rapid Test Device (Oral Test) (Whole Blood/S/P)",
     cut_off: "N/A",
     certificate: "CE",
     id: 62,
@@ -917,6 +917,16 @@ export const TEST_KITS = [
     cut_off: "N/A",
     certificate: "/",
     id: 87,
+    slug: "hiv-rapid-test"
+  },
+  {
+    category: "INFECTIOUS DISEASE",
+    method: "Rapid Test",
+    product: "HIV",
+    description: "Human Immunodeficiency Virus (1/2) Rapid Test Device (Oral Fluid)",
+    cut_off: "N/A",
+    certificate: "/",
+    id: 88,
     slug: "hiv-rapid-test"
   },
     {
@@ -1704,7 +1714,17 @@ export const TEST_KITS = [
     certificate: null,
     id: 160,
     slug: "canine-brucella-ab-test-device"
-  }
+  },
+  {
+    category: "INFECTIOUS DISEASE",
+    method: "Rapid Test",
+    product: "HIV",
+    description: "Human Immunodeficiency Virus (1/2) Rapid Test Device (Oral Fluid)",
+    cut_off: "N/A",
+    certificate: "/",
+    id: 87,
+    slug: "hiv-rapid-test"
+  },
 ]
 ]
  
