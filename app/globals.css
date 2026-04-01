@@ -151,8 +151,8 @@ body {
 }
 
 .partner-marquee-card {
-  width: 250px;
-  min-width: 250px;
+  width: 280px;
+  min-width: 280px;
 }
 
 @media (min-width: 768px) {
@@ -161,14 +161,14 @@ body {
   }
 
   .partner-marquee-card {
-    width: 340px;
-    min-width: 340px;
+    width: 380px;
+    min-width: 380px;
   }
 }
 
 @media (min-width: 1280px) {
   .partner-marquee-card {
-    width: 400px;
-    min-width: 400px;
+    width: 440px;
+    min-width: 440px;
   }
 }

@@ -77,18 +77,18 @@ export default function CustomerStrip() {
                 aria-label={
                   partner.href ? `Visit ${partner.name} website` : partner.name
                 }
-                className={`group partner-marquee-card rounded-[28px] border border-[#E2004F]/10 bg-[#fff8f4] px-2 shadow-sm ${
+                className={`group partner-marquee-card rounded-[28px] border border-[#E2004F]/10 bg-[#fff8f4] p-2 shadow-sm ${
                   partner.href
                     ? "cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                     : "cursor-default"
                 }`}
               >
-                <div className="relative h-24 md:h-25 lg:h-38 w-full">
+                <div className="relative h-[102px] md:h-[138px] lg:h-[182px] w-full">
                   <Image
                     src={partner.logo}
                     alt={`${partner.name} logo`}
                     fill
-                    sizes="(max-width: 767px) 240px, (max-width: 1279px) 320px, 380px"
+                    sizes="(max-width: 767px) 260px, (max-width: 1279px) 360px, 420px"
                     className="object-contain object-center transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>

@@ -43,6 +43,7 @@
 import "./globals.css";
 import Script from "next/script";
 import AppBootLayout from "@/components/AppBootLayout";
+import CustomerStrip from "@/components/CustomerStrip";
 
 /* ===================== SEO METADATA ===================== */
 
@@ -180,7 +181,11 @@ export default function RootLayout({ children }) {
           />
         </noscript>
 
-        <AppBootLayout>{children}</AppBootLayout>
+        <AppBootLayout>
+          {children}
+          <CustomerStrip/>  
+        </AppBootLayout>
+        
       </body>
     </html>
   );
