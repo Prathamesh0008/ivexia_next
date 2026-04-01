@@ -220,7 +220,7 @@ export default function PrivateLabelManufacturingPage() {
                 href="/contact"
                 className="px-6 py-3 rounded-full bg-white text-[#E2004F] font-semibold hover:bg-[#fff3ef] transition-colors"
               >
-                Start OEM Discussion
+                Contact US
               </Link>
               <Link
                 href="/offerings-overview"

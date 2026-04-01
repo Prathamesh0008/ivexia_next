@@ -8,7 +8,6 @@ import IngredientFilters from "@/components/IngredientFilters";
 import IngredientGrid from "@/components/IngredientGrid";
 import IngredientAccord from "@/components/IngredientAccord";
 import IngredientQualityStrip from "@/components/IngredientQualityStrip";
-import CustomerStrip from "@/components/CustomerStrip";
 import INGREDIENTS from "@/data/ingredients";
 
 
@@ -31,9 +30,15 @@ const gridRef = useRef(null);
 useEffect(() => {
     function updatePageSize() {
       const w = window.innerWidth;
-      if (w < 640) setPageSize(4);
-      else if (w < 1024) setPageSize(8);
-      else setPageSize(12);
+      const nextPageSize = w < 640 ? 4 : w < 1024 ? 8 : 12;
+
+      setPageSize((prevPageSize) => {
+        if (prevPageSize !== nextPageSize) {
+          setPage(1);
+        }
+
+        return nextPageSize;
+      });
     }
 
     updatePageSize();
@@ -58,12 +63,6 @@ useEffect(() => {
     });
   }, [page]);
 
-  /* ---------------------------
-     3️⃣ Reset Page When Size Changes
-  ---------------------------- */
-  useEffect(() => {
-    setPage(1);
-  }, [pageSize]);
   // Categories (raw keys)
   const categories = useMemo(() => {
     const unique = new Set();
@@ -210,7 +209,6 @@ const filtered = useMemo(() => {
       </section>
 
       <IngredientAccord />
-      <CustomerStrip />
     </div>
   );
 }

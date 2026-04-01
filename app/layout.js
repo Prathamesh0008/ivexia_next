@@ -45,8 +45,8 @@ import Script from "next/script";
 import { Suspense } from "react";
 
 import Navbar from "@/components/Navbar";
+import CustomerStrip from "@/components/CustomerStrip";
 import Footer from "@/components/Footer";
-import Breadcrumbs from "@/components/Breadcrumbs";
 
 /* ===================== SEO METADATA ===================== */
 
@@ -213,10 +213,10 @@ export default function RootLayout({ children }) {
         </Suspense>
 
         <main className="pt-[88px] min-h-screen text-[#0d2d47]">
-          {/* <Breadcrumbs /> */}
           {children}
         </main>
 
+        <CustomerStrip />
         <Footer />
       </body>
     </html>
