@@ -23,6 +23,15 @@ body {
   @apply font-sans;
 }
 
+@keyframes hero-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
 /* === EXISTING STYLES === */
 @keyframes spin-slow {
   0% {

@@ -6,25 +6,11 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Hero() {
-  const heroRef = useRef(null);
-  const [navbarHeight, setNavbarHeight] = useState(0);
+  const bannerDurationMs = 10000;
   const [isHovered, setIsHovered] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
-
-  useEffect(() => {
-    const nav = document.querySelector("nav");
-    if (nav) setNavbarHeight(nav.offsetHeight);
-
-    const resizeHandler = () => {
-      const navNow = document.querySelector("nav");
-      if (navNow) setNavbarHeight(navNow.offsetHeight);
-    };
-
-    window.addEventListener("resize", resizeHandler);
-    return () => window.removeEventListener("resize", resizeHandler);
-  }, []);
 
   // Enhanced banner data with more professional content
   const banners = [
@@ -76,9 +62,9 @@ export default function Hero() {
     if (isHovered) return;
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % banners.length);
-    }, 3000); // Slightly longer for better readability
+    }, bannerDurationMs);
     return () => clearInterval(interval);
-  }, [isHovered, banners.length]);
+  }, [isHovered, banners.length, bannerDurationMs]);
 
   const handleTouchStart = (e) => (touchStartX.current = e.touches[0].clientX);
   const handleTouchMove = (e) => (touchEndX.current = e.touches[0].clientX);
@@ -95,7 +81,6 @@ export default function Hero() {
 
   return (
     <section
-      ref={heroRef}
       className="relative w-full h-[85vh] md:h-[80vh] overflow-hidden bg-[#0d2d47] "
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -190,13 +175,16 @@ export default function Hero() {
 
       {/* Progress Bar */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 z-30">
-        <motion.div
+        <div
           key={currentIndex}
-          initial={{ width: "0%" }}
-          animate={{ width: "100%" }}
-          transition={{ duration: 3, ease: "linear" }}
-          className="h-full bg-white"
-          style={{ backgroundColor: banners[currentIndex]?.color.includes('FF7A00') ? '#FF7A00' : '#FFFFFF' }}
+          className="h-full origin-left animate-[hero-progress_linear_forwards]"
+          style={{
+            animationDuration: `${bannerDurationMs}ms`,
+            animationPlayState: isHovered ? "paused" : "running",
+            backgroundColor: banners[currentIndex]?.color.includes("FF7A00")
+              ? "#FF7A00"
+              : "#FFFFFF",
+          }}
         />
       </div>
 

@@ -45,6 +45,26 @@ const brandPartners = [
     logo: `/brandlogos/Nova.png?v=${logoVersion}`,
     href: "https://www.novatechsciences.com/",
   },
+  {
+    name: "Ajanta Pharma",
+    logo: `/brandlogos/Ajanta-Pharma.png?v=${logoVersion}`,
+    href: "https://www.novatechsciences.com/",
+  },
+  {
+    name: "Centurian",
+    logo: `/brandlogos/Centurian.png?v=${logoVersion}`,
+    href: "https://www.novatechsciences.com/",
+  },
+  {
+    name: "Healing Pharma",
+    logo: `/brandlogos/Healing-Pharma-Logo.webp?v=${logoVersion}`,
+    href: "https://www.novatechsciences.com/",
+  },
+  {
+    name: "Sun pharma",
+    logo: `/brandlogos/Logo_Sun_Pharmaceutical.png?v=${logoVersion}`,
+    href: "https://www.novatechsciences.com/",
+  },
 ];
 
 export default function CustomerStrip() {
@@ -71,7 +91,7 @@ export default function CustomerStrip() {
             {marqueePartners.map((partner, index) => (
               <a
                 key={`${partner.name}-${index}`}
-                href={partner.href || undefined}
+                // href={partner.href || undefined}
                 target={partner.href ? "_blank" : undefined}
                 rel={partner.href ? "noopener noreferrer" : undefined}
                 aria-label={
@@ -80,7 +100,7 @@ export default function CustomerStrip() {
                 className={`group partner-marquee-card rounded-[28px] border border-[#E2004F]/10 bg-[#fff8f4]  px-2 py-2 md:px-3 md:py-3 shadow-sm ${
                   partner.href
                     ? "cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
-                    : "cursor-default"
+                    : "cursor-pointer"
                 }`}
               >
                 <div className="relative h-[78px] md:h-[100px] lg:h-[84px] w-full">

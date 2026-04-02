@@ -214,7 +214,7 @@ export default function Navbar() {
             onClick={() => setProductsOpen((prev) => !prev)}
           >
             <span className="inline-flex items-center gap-2">
-              <span>Our Offerings</span>
+              <span>Our Products</span>
               <ChevronDown
                 size={16}
                 strokeWidth={2.2}

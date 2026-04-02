@@ -119,6 +119,26 @@ export default function ProductsPageClient({
     [products]
   );
 
+  function getDosageOptionLabel(value) {
+    if (!value) {
+      return "Dosage";
+    }
+
+    const normalized = String(value).replace(/\s+/g, " ").trim();
+
+    if (normalized.length <= 26) {
+      return normalized;
+    }
+
+    const firstPart = normalized.split(",")[0]?.trim();
+
+    if (firstPart && firstPart.length <= 22) {
+      return `${firstPart}...`;
+    }
+
+    return `${normalized.slice(0, 23)}...`;
+  }
+
   const filtered = useMemo(() => {
     const q = searchTerm.trim().toLowerCase();
 
@@ -149,6 +169,13 @@ export default function ProductsPageClient({
       return matchCategory && matchForm && matchDosage && matchSearch;
     });
   }, [category, form, dosage, searchTerm, flatTestKits, products]);
+
+  const tableClasses =
+    category === "TEST KITS"
+      ? "min-w-[980px] w-full text-sm"
+      : "w-full min-w-[720px] md:min-w-0 md:table-fixed text-sm";
+  const filterSelectClass =
+    "w-full sm:w-56 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#19a6b5]";
 
   if (loading) {
     return (
@@ -214,7 +241,7 @@ export default function ProductsPageClient({
           <select
             value={category}
             onChange={(e) => setCategory(e.target.value)}
-            className="rounded-full border border-gray-300 px-5 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#19a6b5]"
+            className={filterSelectClass}
           >
             <option value="">Category</option>
             {categoryOptions.map((c) => (
@@ -225,7 +252,7 @@ export default function ProductsPageClient({
           <select
             value={form}
             onChange={(e) => setForm(e.target.value)}
-            className="rounded-full border border-gray-300 px-5 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#19a6b5]"
+            className={filterSelectClass}
           >
             <option value="">Form</option>
             {formOptions.map((f) => (
@@ -233,35 +260,51 @@ export default function ProductsPageClient({
             ))}
           </select>
 
-          <select value={dosage} onChange={(e) => setDosage(e.target.value)}>
+          <select
+            value={dosage}
+            onChange={(e) => setDosage(e.target.value)}
+            className={filterSelectClass}
+            title={dosage || "Dosage"}
+          >
             <option value="">Dosage</option>
             {dosageOptions.map((d) => (
-              <option key={d}>{d}</option>
+              <option key={d} value={d}>
+                {getDosageOptionLabel(d)}
+              </option>
             ))}
           </select>
         </div>
 
-        <div className="overflow-x-auto bg-white shadow-sm">
-          <table className="min-w-full text-sm">
+        <div className="w-full max-w-full overflow-x-auto bg-white shadow-sm">
+          <table className={tableClasses}>
+            {category !== "TEST KITS" && (
+              <colgroup>
+                <col className="w-[32%]" />
+                <col className="w-[13%]" />
+                <col className="w-[18%]" />
+                <col className="w-[18%]" />
+                <col className="w-[19%]" />
+              </colgroup>
+            )}
             <thead>
               <tr className="bg-[#0d2d47] text-white">
                 {category === "TEST KITS" ? (
                   <>
-                    <th className="px-4 py-3">Product</th>
-                    <th className="px-4 py-3">Description</th>
-                    <th className="px-4 py-3">Category</th>
-                    <th className="px-4 py-3">Method</th>
-                    <th className="px-4 py-3">Specimen</th>
-                    <th className="px-4 py-3">Cut-Off</th>
-                    <th className="px-4 py-3">Certificate</th>
+                    <th className="px-4 py-3 min-w-[140px]">Product</th>
+                    <th className="px-4 py-3 min-w-[260px]">Description</th>
+                    <th className="px-4 py-3 min-w-[140px]">Category</th>
+                    <th className="px-4 py-3 min-w-[120px]">Method</th>
+                    <th className="px-4 py-3 min-w-[140px]">Specimen</th>
+                    <th className="px-4 py-3 min-w-[110px]">Cut-Off</th>
+                    <th className="px-4 py-3 min-w-[120px]">Certificate</th>
                   </>
                 ) : (
                   <>
-                    <th className="px-4 py-3">Name</th>
-                    <th className="px-4 py-3">Form</th>
-                    <th className="px-4 py-3">Category</th>
-                    <th className="px-4 py-3">Dosage</th>
-                    <th className="px-4 py-3">CAS-ID</th>
+                    <th className="px-4 py-3 text-left">Name</th>
+                    <th className="px-4 py-3 text-left whitespace-nowrap">Form</th>
+                    <th className="px-4 py-3 text-left whitespace-nowrap">Category</th>
+                    <th className="px-4 py-3 text-left whitespace-nowrap">Dosage</th>
+                    <th className="px-4 py-3 text-left whitespace-nowrap">CAS-ID</th>
                   </>
                 )}
               </tr>
@@ -279,8 +322,8 @@ export default function ProductsPageClient({
                       <td className="px-4 py-3">{item.category || "-"}</td>
                       <td className="px-4 py-3">{item.method || "-"}</td>
                       <td className="px-4 py-3">{item.specimen || "-"}</td>
-                      <td className="px-4 py-3">{item.cut_off || "-"}</td>
-                      <td className="px-4 py-3">{item.certificate || "-"}</td>
+                      <td className="px-4 py-3 whitespace-nowrap">{item.cut_off || "-"}</td>
+                      <td className="px-4 py-3 whitespace-nowrap">{item.certificate || "-"}</td>
                     </tr>
                   ))
                 : filtered.map((p, i) => (
@@ -291,11 +334,16 @@ export default function ProductsPageClient({
                         i % 2 === 0 ? "bg-white" : "bg-gray-50"
                       }`}
                     >
-                      <td className="px-4 py-3">{p.name}</td>
-                      <td className="px-4 py-3">{p.form}</td>
-                      <td className="px-4 py-3">{p.category}</td>
-                      <td className="px-4 py-3">{p.dosage}</td>
-                      <td className="px-4 py-3">{p.casId}</td>
+                      <td className="px-4 py-3 align-top break-words">{p.name}</td>
+                      <td className="px-4 py-3 align-top whitespace-nowrap">{p.form}</td>
+                      <td className="px-4 py-3 align-top whitespace-nowrap">{p.category}</td>
+                      <td
+                        className="px-4 py-3 align-top overflow-hidden text-ellipsis whitespace-nowrap"
+                        title={p.dosage || "-"}
+                      >
+                        {p.dosage || "-"}
+                      </td>
+                      <td className="px-4 py-3 align-top whitespace-nowrap">{p.casId || "-"}</td>
                     </tr>
                   ))}
             </tbody>
