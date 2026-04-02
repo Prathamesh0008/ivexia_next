@@ -1,10 +1,11 @@
+//ivexia\app\products\[slug]\page.jsx
 "use client";
 
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import EN from "@/data/finishedProducts";
+
 
 const fallbackImage = "/images/medicineproduct.jpg";
 const capsuleIcon = "/images/capsule.svg";
@@ -34,7 +35,18 @@ function AccordionItem({ title, content, isOpen, onToggle }) {
 
 export default function FinishedProductDetail() {
   const { slug } = useParams();
-  const product = EN.find((p) => p.slug === slug);
+  const [product, setProduct] = useState(null);
+const [loading, setLoading] = useState(true);
+useEffect(() => {
+  if (!slug) return;
+
+  fetch(`/api/products/${slug}`)
+    .then((res) => res.json())
+    .then((data) => {
+      setProduct(data);
+      setLoading(false);
+    });
+}, [slug]);
 
   const [activeTab, setActiveTab] = useState("introduction");
   const [openImportantLeft, setOpenImportantLeft] = useState(null);
@@ -45,7 +57,13 @@ export default function FinishedProductDetail() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [slug]);
-
+if (loading) {
+  return (
+    <div className="min-h-[60vh] flex items-center justify-center">
+      Loading...
+    </div>
+  );
+}
   if (!product) {
     return (
       <div className="min-h-[60vh] flex items-center justify-center text-center">

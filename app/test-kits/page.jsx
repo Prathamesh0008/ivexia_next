@@ -1,3 +1,4 @@
+//ivexia\app\test-kits\page.jsx
 "use client";
 
 import { useMemo, useState, useEffect } from "react";
@@ -13,19 +14,24 @@ export default function TestKitsPage() {
   const [searchTerm, setSearchTerm] = useState("");
 
   // ✅ FETCH FROM MONGO API
-  useEffect(() => {
-    fetch("/api/testkits")
-      .then((res) => res.json())
-      .then((data) => {
-        setTestKits(
-          data.filter(
-            (item) =>
-              item && typeof item === "object" && !Array.isArray(item)
-          )
-        );
-        setLoading(false);
-      });
-  }, []);
+useEffect(() => {
+  fetch("/api/testkits")
+    .then((res) => res.json())
+    .then((data) => {
+      const cleanData = data.filter(
+        (item) =>
+          item && typeof item === "object" && !Array.isArray(item)
+      );
+
+      setTestKits(cleanData);
+
+      // ✅ SET FIRST CATEGORY AUTOMATICALLY
+      const firstCategory = cleanData[0]?.category || "";
+      setCategory(firstCategory);
+
+      setLoading(false);
+    });
+}, []);
 
   // ✅ SAME LOGIC (UNCHANGED)
   const categoryOptions = useMemo(
