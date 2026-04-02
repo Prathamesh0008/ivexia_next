@@ -1,3 +1,4 @@
+//ivexia\scripts\sync-product-casid.js
 import dotenv from "dotenv";
 dotenv.config({ path: ".env.local" });
 

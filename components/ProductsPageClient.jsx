@@ -1,3 +1,4 @@
+//ivexia\components\ProductsPageClient.jsx
 "use client";
 
 import { useEffect, useMemo, useState } from "react";

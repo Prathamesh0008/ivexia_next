@@ -1,3 +1,4 @@
+//ivexia\components\IngredientPageClient.jsx
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -76,7 +77,41 @@ export default function IngredientPageClient({ initialIngredients = [] }) {
       controller.abort();
     };
   }, [initialIngredients]);
+useEffect(() => {
+  let cancelled = false;
 
+  async function loadIngredients() {
+    setLoading(true);
+    setError("");
+
+    try {
+      const res = await fetch("/api/ingredients");
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data?.error || "Failed to load ingredients");
+      }
+
+      if (!cancelled) {
+        setIngredients(Array.isArray(data) ? data : []);
+      }
+    } catch (err) {
+      if (cancelled) return;
+
+      console.error(err);
+      setError("Ingredients unavailable.");
+    } finally {
+      if (!cancelled) setLoading(false);
+    }
+  }
+
+  loadIngredients();
+
+  return () => {
+    cancelled = true;
+  };
+}, []);
   useEffect(() => {
     function updatePageSize() {
       const w = window.innerWidth;

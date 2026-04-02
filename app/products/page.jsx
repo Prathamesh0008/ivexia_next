@@ -1,3 +1,4 @@
+//ivexia\app\products\page.jsx
 import ProductsPageClient from "@/components/ProductsPageClient";
 import { getFallbackProducts, getFallbackTestKits } from "@/lib/catalogFallback";
 

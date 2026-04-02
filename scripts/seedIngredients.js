@@ -1,34 +1,18 @@
 // ivexia/scripts/seedIngredients.js
 
-<<<<<<< HEAD
-import INGREDIENTS from "../data/ingredients.js";
-=======
 import dotenv from "dotenv";
-import path from "path";
-import { fileURLToPath } from "url";
+dotenv.config({ path: ".env.local" }); // ✅ THIS IS REQUIRED
 
-// ✅ Setup path
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// ✅ Load ENV FIRST (VERY IMPORTANT)
-dotenv.config({ path: path.join(__dirname, "../.env.local") });
-
-// ✅ Debug
-console.log("ENV CHECK:", process.env.MONGODB_URI);
-
-// ⛔️ IMPORT AFTER dotenv
-const { default: dbConnect } = await import("../lib/dbConnect.js");
-const { default: Ingredient } = await import("../models/Ingredient.js");
-const { default: INGREDIENTS } = await import("../data/ingredients.js");
->>>>>>> fe983a66ae0ba2ac814a77199a119623ba73b55c
+import INGREDIENTS from "../data/ingredients.js";
 
 const { default: dbConnect } = await import("../lib/dbConnect.js");
 const { default: Ingredient } = await import("../models/Ingredient.js");
 
 console.log("🚀 Starting ingredient seed...");
+console.log("ENV:", process.env.MONGODB_URI); // debug
 
 await dbConnect();
+console.log("✅ DB connected");
 
 await Ingredient.deleteMany();
 await Ingredient.insertMany(INGREDIENTS);

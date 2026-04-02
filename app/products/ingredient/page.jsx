@@ -1,3 +1,4 @@
+//ivexia\app\products\ingredient\page.jsx
 import IngredientPageClient from "@/components/IngredientPageClient";
 import dbConnect from "@/lib/dbConnect";
 import Ingredient from "@/models/Ingredient";
