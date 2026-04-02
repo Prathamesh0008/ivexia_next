@@ -1,3 +1,4 @@
+//ivexia\models\Ingredient.js
 import mongoose from "mongoose";
 
 const IngredientSchema = new mongoose.Schema({
