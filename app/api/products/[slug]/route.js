@@ -1,3 +1,4 @@
+import { getFallbackProducts } from "@/lib/catalogFallback";
 import dbConnect from "@/lib/dbConnect";
 import Product from "@/models/Product";
 
@@ -14,12 +15,28 @@ export async function GET(req, { params }) {
     }).lean();
 
     if (!product) {
+      const fallbackProduct = getFallbackProducts().find(
+        (item) => item.slug === slug
+      );
+
+      if (fallbackProduct) {
+        return Response.json(fallbackProduct);
+      }
+
       return Response.json({ error: "Product not found" }, { status: 404 });
     }
 
     return Response.json(product);
   } catch (error) {
     console.error("Failed to load product:", error);
+    const { slug } = await params;
+    const fallbackProduct = getFallbackProducts().find(
+      (item) => item.slug === slug
+    );
+
+    if (fallbackProduct) {
+      return Response.json(fallbackProduct);
+    }
 
     return Response.json({ error: "Server error" }, { status: 500 });
   }
