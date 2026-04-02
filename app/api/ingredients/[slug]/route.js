@@ -2,12 +2,16 @@
 import dbConnect from "@/lib/dbConnect";
 import Ingredient from "@/models/Ingredient";
 
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
 export async function GET(req, { params }) {
   try {
     await dbConnect();
+    const { slug } = await params;
 
     const ingredient = await Ingredient.findOne({
-      slug: params.slug,
+      slug,
     }).lean();
 
     if (!ingredient) {
@@ -19,6 +23,8 @@ export async function GET(req, { params }) {
 
     return Response.json(ingredient);
   } catch (error) {
+    console.error("INGREDIENT DETAIL API ERROR:", error);
+
     return Response.json(
       { error: "Failed to fetch ingredient" },
       { status: 500 }
