@@ -36,17 +36,44 @@ function AccordionItem({ title, content, isOpen, onToggle }) {
 export default function FinishedProductDetail() {
   const { slug } = useParams();
   const [product, setProduct] = useState(null);
-const [loading, setLoading] = useState(true);
-useEffect(() => {
-  if (!slug) return;
+  const [loading, setLoading] = useState(true);
 
-  fetch(`/api/products/${slug}`)
-    .then((res) => res.json())
-    .then((data) => {
-      setProduct(data);
-      setLoading(false);
-    });
-}, [slug]);
+  useEffect(() => {
+    let cancelled = false;
+
+    async function loadProduct() {
+      if (!slug) {
+        return;
+      }
+
+      setLoading(true);
+
+      try {
+        const res = await fetch(`/api/products/${slug}`, { cache: "no-store" });
+        const data = await res.json();
+
+        if (!cancelled) {
+          setProduct(res.ok ? data : null);
+        }
+      } catch (error) {
+        console.error(error);
+
+        if (!cancelled) {
+          setProduct(null);
+        }
+      } finally {
+        if (!cancelled) {
+          setLoading(false);
+        }
+      }
+    }
+
+    loadProduct();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [slug]);
 
   const [activeTab, setActiveTab] = useState("introduction");
   const [openImportantLeft, setOpenImportantLeft] = useState(null);
@@ -57,13 +84,14 @@ useEffect(() => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [slug]);
-if (loading) {
-  return (
-    <div className="min-h-[60vh] flex items-center justify-center">
-      Loading...
-    </div>
-  );
-}
+
+  if (loading) {
+    return (
+      <div className="min-h-[60vh] flex items-center justify-center">
+        Loading...
+      </div>
+    );
+  }
   if (!product) {
     return (
       <div className="min-h-[60vh] flex items-center justify-center text-center">

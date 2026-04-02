@@ -76,12 +76,21 @@ export default function Navbar() {
     }`;
 
   useEffect(() => {
-    fetch("/api/products")
-      .then((res) => res.json())
+    fetch("/api/products", { cache: "no-store" })
+      .then(async (res) => {
+        const data = await res.json();
+
+        if (!res.ok) {
+          throw new Error(data?.error || "Failed to load products");
+        }
+
+        return data;
+      })
       .then((data) => {
         setProducts(Array.isArray(data) ? data : []);
       })
-      .catch(() => {
+      .catch((error) => {
+        console.error(error);
         setProducts([]);
       });
   }, []);
