@@ -2,6 +2,8 @@ import IngredientPageClient from "@/components/IngredientPageClient";
 import dbConnect from "@/lib/dbConnect";
 import Ingredient from "@/models/Ingredient";
 
+export const dynamic = "force-dynamic";
+
 async function getIngredients() {
   try {
     await dbConnect();

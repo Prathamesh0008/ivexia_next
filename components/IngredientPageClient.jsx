@@ -8,11 +8,11 @@ import IngredientFilters from "@/components/IngredientFilters";
 import IngredientGrid from "@/components/IngredientGrid";
 import IngredientAccord from "@/components/IngredientAccord";
 import IngredientQualityStrip from "@/components/IngredientQualityStrip";
+import { GridPageSkeleton } from "@/components/RouteSkeletons";
 
 export default function IngredientPageClient({ initialIngredients = [] }) {
   const [ingredients, setIngredients] = useState(initialIngredients);
   const [loading, setLoading] = useState(initialIngredients.length === 0);
-  const [isRefreshing, setIsRefreshing] = useState(false);
   const [error, setError] = useState("");
 
   const [query, setQuery] = useState("");
@@ -24,23 +24,29 @@ export default function IngredientPageClient({ initialIngredients = [] }) {
   const gridRef = useRef(null);
 
   useEffect(() => {
+    if (initialIngredients.length > 0) {
+      setLoading(false);
+      return;
+    }
+
     let cancelled = false;
+    const controller = new AbortController();
 
     async function loadIngredients() {
-      if (initialIngredients.length > 0) {
-        setIsRefreshing(true);
-      } else {
-        setLoading(true);
-      }
-
+      setLoading(true);
       setError("");
 
       try {
-        const res = await fetch("/api/ingredients");
+        const res = await fetch("/api/ingredients", {
+          cache: "no-store",
+          signal: controller.signal,
+        });
         const data = await res.json();
 
         if (!res.ok) {
-          throw new Error(data?.error || "Failed to fetch ingredients");
+          throw new Error(
+            [data?.error, data?.code, data?.hint].filter(Boolean).join(" | ")
+          );
         }
 
         if (!cancelled) {
@@ -51,12 +57,14 @@ export default function IngredientPageClient({ initialIngredients = [] }) {
           return;
         }
 
-        console.error(err);
+        if (err.name !== "AbortError") {
+          console.error(err);
+        }
+
         setError("Ingredients are temporarily unavailable. Please try again shortly.");
       } finally {
         if (!cancelled) {
           setLoading(false);
-          setIsRefreshing(false);
         }
       }
     }
@@ -65,6 +73,7 @@ export default function IngredientPageClient({ initialIngredients = [] }) {
 
     return () => {
       cancelled = true;
+      controller.abort();
     };
   }, [initialIngredients]);
 
@@ -158,7 +167,7 @@ export default function IngredientPageClient({ initialIngredients = [] }) {
   const current = filtered.slice((page - 1) * pageSize, page * pageSize);
 
   if (loading) {
-    return <div className="p-10 text-center">Loading...</div>;
+    return <GridPageSkeleton />;
   }
 
   return (
@@ -172,12 +181,6 @@ export default function IngredientPageClient({ initialIngredients = [] }) {
           <h2 className="text-center text-2xl md:text-3xl font-bold text-[#0d2d47] mb-6">
             Active Pharmaceutical Ingredients (API)
           </h2>
-
-          {isRefreshing && (
-            <p className="mb-4 text-center text-sm font-medium text-[#19a6b5]">
-              Updating ingredient catalog...
-            </p>
-          )}
 
           {error && (
             <p className="mb-4 text-center text-sm font-medium text-red-600">
