@@ -1,9 +1,9 @@
-//ivexia\components\Navbar.jsx
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { FaSearch, FaGlobe, FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaGlobe, FaSearch, FaTimes } from "react-icons/fa";
+import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 
 import INGREDIENTS from "@/data/ingredients";
@@ -11,19 +11,17 @@ import INGREDIENTS from "@/data/ingredients";
 export default function Navbar() {
   const [showSearch, setShowSearch] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isTopBarVisible, setIsTopBarVisible] = useState(true);
-  const [topBarHeight, setTopBarHeight] = useState(0);
   const [showLanguages, setShowLanguages] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [productsOpen, setProductsOpen] = useState(false);
   const [magOpen, setMagOpen] = useState(false);
-const [products, setProducts] = useState([]);
+  const [language, setLanguage] = useState("English");
+  const [products, setProducts] = useState([]);
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const magCategory = searchParams.get("category");
-  const [language, setLanguage] = useState("English");
 
   const productsRef = useRef(null);
   const magRef = useRef(null);
@@ -31,15 +29,15 @@ const [products, setProducts] = useState([]);
   const searchRef = useRef(null);
 
   const languages = [
-    { code: "en", label: "English", flag: "🇬🇧" },
-    { code: "nl", label: "Dutch", flag: "🇳🇱" },
-    { code: "es", label: "Spanish", flag: "🇪🇸" },
-    { code: "de", label: "German", flag: "🇩🇪" },
-    { code: "pt", label: "Portuguese", flag: "🇵🇹" },
-    { code: "fr", label: "French", flag: "🇫🇷" },
-    { code: "zh", label: "Chinese", flag: "🇨🇳" },
-    { code: "ja", label: "Japanese", flag: "🇯🇵" },
-    { code: "ar", label: "Arabic", flag: "🇸🇦" },
+    { code: "en", label: "English" },
+    { code: "nl", label: "Dutch" },
+    { code: "es", label: "Spanish" },
+    { code: "de", label: "German" },
+    { code: "pt", label: "Portuguese" },
+    { code: "fr", label: "French" },
+    { code: "zh", label: "Chinese" },
+    { code: "ja", label: "Japanese" },
+    { code: "ar", label: "Arabic" },
   ];
 
   const isIngredientPath =
@@ -62,13 +60,10 @@ const [products, setProducts] = useState([]);
   const isMagazineActive =
     pathname === "/ivexia-mag" || pathname.startsWith("/ivexia-mag/");
 
-
-
   const activeTopLinkClass =
     "bg-[#e8f6fb] text-[#FF7A00] font-semibold shadow-sm";
   const topLinkClass =
     "cursor-pointer px-3 py-1.5 rounded-full transition-all duration-300 ease-out hover:bg-[#f3f8fb] hover:text-[#0d2d47]";
-
   const activeDropdownItemClass = "bg-[#e8f6fb] text-[#0d2d47] font-semibold";
   const dropdownItemClass =
     "px-4 py-2 text-sm cursor-pointer rounded-md transition-colors duration-200";
@@ -80,33 +75,17 @@ const [products, setProducts] = useState([]);
         : "hover:text-[#0d2d47]"
     }`;
 
-  // Detect TopBar height (if you later add topbar)
   useEffect(() => {
-    const topBar = document.getElementById("topbar");
-    if (topBar) {
-      const updateHeight = () => setTopBarHeight(topBar.offsetHeight);
-      updateHeight();
-      window.addEventListener("resize", updateHeight);
-      return () => window.removeEventListener("resize", updateHeight);
-    }
+    fetch("/api/products")
+      .then((res) => res.json())
+      .then((data) => {
+        setProducts(Array.isArray(data) ? data : []);
+      })
+      .catch(() => {
+        setProducts([]);
+      });
   }, []);
 
-  // Header animation on scroll
-  useEffect(() => {
-    let lastScrollY = window.scrollY;
-    const handleScroll = () => {
-      if (window.scrollY > 100 && window.scrollY > lastScrollY) {
-        setIsTopBarVisible(false);
-      } else if (window.scrollY < lastScrollY) {
-        setIsTopBarVisible(true);
-      }
-      lastScrollY = window.scrollY;
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Close dropdown/search when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (productsRef.current && !productsRef.current.contains(event.target)) {
@@ -118,13 +97,14 @@ const [products, setProducts] = useState([]);
       if (langRef.current && !langRef.current.contains(event.target)) {
         setShowLanguages(false);
       }
-
       if (
         searchRef.current &&
         !searchRef.current.contains(event.target) &&
         !event.target.closest(".search-icon")
       ) {
-        if (!searchTerm) setShowSearch(false);
+        if (!searchTerm) {
+          setShowSearch(false);
+        }
       }
     };
 
@@ -135,25 +115,24 @@ const [products, setProducts] = useState([]);
   const goTo = (path) => {
     router.push(path);
     setMenuOpen(false);
+    setProductsOpen(false);
+    setMagOpen(false);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // Language dropdown (UI only for now)
   const selectLanguage = (_langCode, label) => {
-    // no translation right now
     setLanguage(label);
     setShowLanguages(false);
   };
 
-  // SEARCH — redirect to product/ingredient
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-    const q = searchTerm.trim().toLowerCase();
-    if (!q) return;
+    const query = searchTerm.trim().toLowerCase();
+    if (!query) return;
 
-   const product = products.find((p) =>
-  p.name?.toLowerCase().includes(q)
-);
+    const product = products.find((item) =>
+      item.name?.toLowerCase().includes(query)
+    );
 
     if (product) {
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -164,12 +143,14 @@ const [products, setProducts] = useState([]);
     }
 
     const ingredient = INGREDIENTS.find(
-      (i) => i.id.toLowerCase().includes(q) || i.slug.toLowerCase().includes(q)
+      (item) =>
+        item.id.toLowerCase().includes(query) ||
+        item.slug.toLowerCase().includes(query)
     );
 
     if (ingredient) {
       window.scrollTo({ top: 0, behavior: "smooth" });
-      router.push(`/ingredients/${ingredient.slug}`); // only works if you create this route
+      router.push(`/ingredients/${ingredient.slug}`);
       setSearchTerm("");
       setShowSearch(false);
       return;
@@ -181,20 +162,20 @@ const [products, setProducts] = useState([]);
   return (
     <nav className="fixed top-0 left-0 right-0 h-[88px] bg-white/95 backdrop-blur-md shadow-md z-50">
       <div className="flex justify-between items-center px-4 md:px-8 h-full">
-        
-        {/* LOGO */}
-        <div className="h-full flex items-center cursor-pointer" onClick={() => goTo("/")}>
-        <Image
-  src="/images/navlogo.png"
-  alt="Ivexia Logo"
-  width={320}
-  height={100}
-  className="h-12 md:h-12 w-auto object-contain block"
-  priority
-/>
+        <div
+          className="h-full flex items-center cursor-pointer"
+          onClick={() => goTo("/")}
+        >
+          <Image
+            src="/images/navlogo.png"
+            alt="Ivexia Logo"
+            width={320}
+            height={100}
+            className="h-12 md:h-12 w-auto object-contain block"
+            priority
+          />
         </div>
 
-        {/* DESKTOP MENU */}
         <ul className="hidden lg:flex h-full gap-8 text-lg md:text-lg text-gray-800 items-center">
           <li
             onClick={() => goTo("/")}
@@ -205,7 +186,6 @@ const [products, setProducts] = useState([]);
             Home
           </li>
 
-          {/* OUR OFFERINGS DROPDOWN */}
           <li
             ref={productsRef}
             className={`relative ${topLinkClass} ${
@@ -213,7 +193,16 @@ const [products, setProducts] = useState([]);
             }`}
             onClick={() => setProductsOpen((prev) => !prev)}
           >
-            <span className="inline-flex items-center gap-1">Our Offerings ▾</span>
+            <span className="inline-flex items-center gap-2">
+              <span>Our Offerings</span>
+              <ChevronDown
+                size={16}
+                strokeWidth={2.2}
+                className={`transition-transform duration-200 ${
+                  productsOpen ? "rotate-180" : ""
+                }`}
+              />
+            </span>
 
             {productsOpen && (
               <ul className="absolute top-full left-0 mt-2 bg-white shadow-md rounded-md w-64 font-normal z-40">
@@ -227,7 +216,6 @@ const [products, setProducts] = useState([]);
                 >
                   Overview
                 </li>
-
                 <li
                   onClick={() => goTo("/products/ingredient")}
                   className={`${dropdownItemClass} ${
@@ -238,7 +226,6 @@ const [products, setProducts] = useState([]);
                 >
                   API / Ingredients
                 </li>
-
                 <li
                   onClick={() => goTo("/products")}
                   className={`${dropdownItemClass} ${
@@ -249,7 +236,6 @@ const [products, setProducts] = useState([]);
                 >
                   Finished Products
                 </li>
-
                 <li
                   onClick={() => goTo("/otc")}
                   className={`${dropdownItemClass} ${
@@ -280,7 +266,6 @@ const [products, setProducts] = useState([]);
                 >
                   Test Kits
                 </li>
-
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
@@ -304,57 +289,59 @@ const [products, setProducts] = useState([]);
             About
           </li>
 
-         {/* MAGAZINE DROPDOWN */}
-<li
-  ref={magRef}
-  className={`relative ${topLinkClass} ${
-    isMagazineActive ? activeTopLinkClass : ""
-  }`}
-  onClick={() => setMagOpen((prev) => !prev)}
->
-  <span className="inline-flex items-center gap-1">
-    Ivexia Magazine ▾
-  </span>
+          <li
+            ref={magRef}
+            className={`relative ${topLinkClass} ${
+              isMagazineActive ? activeTopLinkClass : ""
+            }`}
+            onClick={() => setMagOpen((prev) => !prev)}
+          >
+            <span className="inline-flex items-center gap-2">
+              <span>Ivexia Magazine</span>
+              <ChevronDown
+                size={16}
+                strokeWidth={2.2}
+                className={`transition-transform duration-200 ${
+                  magOpen ? "rotate-180" : ""
+                }`}
+              />
+            </span>
 
-  {magOpen && (
-    <ul className="absolute top-full left-0 mt-2 bg-white shadow-md rounded-md w-64 font-normal z-40">
-      
-      <li
-        onClick={() => goTo("/ivexia-mag?category=news")}
-        className={`${dropdownItemClass} ${
-          pathname === "/ivexia-mag" && magCategory === "news"
-            ? activeDropdownItemClass
-            : "hover:bg-gray-100 text-gray-700"
-        }`}
-      >
-        News
-      </li>
-
-      <li
-        onClick={() => goTo("/ivexia-mag?category=health")}
-        className={`${dropdownItemClass} ${
-          pathname === "/ivexia-mag" && magCategory === "health"
-            ? activeDropdownItemClass
-            : "hover:bg-gray-100 text-gray-700"
-        }`}
-      >
-        Health
-      </li>
-
-      <button
-        onClick={(e) => {
-          e.stopPropagation();
-          setMagOpen(false);
-        }}
-        className="absolute top-2 right-2 text-gray-500 hover:text-black"
-        type="button"
-      >
-        <FaTimes />
-      </button>
-
-    </ul>
-  )}
-</li>
+            {magOpen && (
+              <ul className="absolute top-full left-0 mt-2 bg-white shadow-md rounded-md w-64 font-normal z-40">
+                <li
+                  onClick={() => goTo("/ivexia-mag?category=news")}
+                  className={`${dropdownItemClass} ${
+                    pathname === "/ivexia-mag" && magCategory === "news"
+                      ? activeDropdownItemClass
+                      : "hover:bg-gray-100 text-gray-700"
+                  }`}
+                >
+                  News
+                </li>
+                <li
+                  onClick={() => goTo("/ivexia-mag?category=health")}
+                  className={`${dropdownItemClass} ${
+                    pathname === "/ivexia-mag" && magCategory === "health"
+                      ? activeDropdownItemClass
+                      : "hover:bg-gray-100 text-gray-700"
+                  }`}
+                >
+                  Health
+                </li>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setMagOpen(false);
+                  }}
+                  className="absolute top-2 right-2 text-gray-500 hover:text-black"
+                  type="button"
+                >
+                  <FaTimes />
+                </button>
+              </ul>
+            )}
+          </li>
 
           <li
             onClick={() => goTo("/contact")}
@@ -366,33 +353,32 @@ const [products, setProducts] = useState([]);
           </li>
         </ul>
 
-        {/* RIGHT SIDE ICONS */}
         <div className="h-full flex items-center gap-4 relative">
-          {/* SEARCH ICON */}
           <FaSearch
             className="cursor-pointer search-icon text-gray-600 hover:text-[#0d2d47]"
-            onClick={() => setShowSearch((s) => !s)}
+            onClick={() => setShowSearch((prev) => !prev)}
           />
 
-          {/* LANGUAGE BUTTON */}
           <div ref={langRef} className="relative">
             <div
               className="flex items-center gap-1 cursor-pointer text-gray-600 hover:text-[#0d2d47]"
-              onClick={() => setShowLanguages(!showLanguages)}
+              onClick={() => setShowLanguages((prev) => !prev)}
             >
               <FaGlobe />
               <span className="text-sm">{language}</span>
             </div>
 
             {showLanguages && (
-              <ul className="absolute right-0 mt-2 w-44 bg-white border border-gray-200 rounded-md shadow-md text-sm font-medium z-50">
+              <ul className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-md text-sm font-medium z-50">
                 {languages.map((lng) => (
                   <li
                     key={lng.code}
                     onClick={() => selectLanguage(lng.code, lng.label)}
                     className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"
                   >
-                    <span>{lng.flag}</span>
+                    <span className="inline-flex min-w-8 justify-center rounded bg-[#f3f8fb] px-2 py-0.5 text-[11px] font-semibold uppercase text-[#0d2d47]">
+                      {lng.code}
+                    </span>
                     <span>{lng.label}</span>
                   </li>
                 ))}
@@ -400,7 +386,6 @@ const [products, setProducts] = useState([]);
             )}
           </div>
 
-          {/* MOBILE MENU TOGGLE */}
           <div className="lg:hidden">
             {menuOpen ? (
               <FaTimes
@@ -417,7 +402,6 @@ const [products, setProducts] = useState([]);
         </div>
       </div>
 
-      {/* SEARCH BAR */}
       {showSearch && (
         <div
           ref={searchRef}
@@ -437,28 +421,29 @@ const [products, setProducts] = useState([]);
                     return;
                   }
 
-                  const q = value.toLowerCase();
+                  const query = value.toLowerCase();
 
-                 const productMatches = products.filter((p) =>
-  p.name?.toLowerCase().includes(q)
-)
+                  const productMatches = products
+                    .filter((item) =>
+                      item.name?.toLowerCase().includes(query)
+                    )
                     .slice(0, 5)
-                    .map((p) => ({
+                    .map((item) => ({
                       type: "product",
-                      name: p.name,
-                      slug: p.slug,
+                      name: item.name,
+                      slug: item.slug,
                     }));
 
                   const ingredientMatches = INGREDIENTS.filter(
-                    (i) =>
-                      i.slug.toLowerCase().includes(q) ||
-                      i.id.toLowerCase().includes(q)
+                    (item) =>
+                      item.slug.toLowerCase().includes(query) ||
+                      item.id.toLowerCase().includes(query)
                   )
                     .slice(0, 5)
-                    .map((i) => ({
+                    .map((item) => ({
                       type: "ingredient",
-                      name: i.slug,
-                      slug: i.slug,
+                      name: item.slug,
+                      slug: item.slug,
                     }));
 
                   setSuggestions([...productMatches, ...ingredientMatches]);
@@ -485,7 +470,7 @@ const [products, setProducts] = useState([]);
             <div className="absolute left-4 right-4 bg-white shadow-lg border border-gray-200 mt-2 rounded-md z-50 max-h-60 overflow-y-auto">
               {suggestions.map((item, index) => (
                 <div
-                  key={index}
+                  key={`${item.slug}-${index}`}
                   onClick={() => {
                     if (item.type === "product") {
                       router.push(`/products/${item.slug}`);
@@ -506,7 +491,6 @@ const [products, setProducts] = useState([]);
         </div>
       )}
 
-      {/* MOBILE MENU */}
       {menuOpen && (
         <ul className="lg:hidden flex flex-col gap-4 bg-white shadow-md border-t border-gray-100 px-6 py-4 font-medium text-gray-800">
           <li
@@ -528,7 +512,11 @@ const [products, setProducts] = useState([]);
                 >
                   Our Offerings
                 </span>
-                <span className="transition-transform group-open:rotate-180">▾</span>
+                <ChevronDown
+                  size={16}
+                  strokeWidth={2.2}
+                  className="transition-transform group-open:rotate-180"
+                />
               </summary>
 
               <div className="ml-4 mt-1 flex flex-col gap-2 text-gray-700 text-sm">
@@ -627,7 +615,10 @@ const [products, setProducts] = useState([]);
 
           <li className="cursor-pointer">
             <details>
-              <summary className="py-2 text-[#0d2d47]">🌍 {language}</summary>
+              <summary className="py-2 text-[#0d2d47] flex items-center gap-2">
+                <FaGlobe />
+                <span>{language}</span>
+              </summary>
               <div className="ml-4 mt-2 flex flex-col gap-2 text-gray-700 text-sm">
                 {languages.map((lng) => (
                   <span
@@ -635,7 +626,10 @@ const [products, setProducts] = useState([]);
                     onClick={() => selectLanguage(lng.code, lng.label)}
                     className="flex items-center gap-2 hover:text-[#0d2d47] cursor-pointer"
                   >
-                    {lng.flag} {lng.label}
+                    <span className="inline-flex min-w-8 justify-center rounded bg-[#f3f8fb] px-2 py-0.5 text-[11px] font-semibold uppercase text-[#0d2d47]">
+                      {lng.code}
+                    </span>
+                    <span>{lng.label}</span>
                   </span>
                 ))}
               </div>

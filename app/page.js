@@ -16,7 +16,7 @@ export default function Page() {
     <div >
       <Hero />
       <IvexiaNumbers />
-      <CustomerStrip/>
+      {/* <CustomerStrip/> */}
       <AboutVideo />
       <TherapyGroups />
       <AccordSection />
