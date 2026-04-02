@@ -1,18 +1,41 @@
+//ivexia\app\portfolio\[slug]\page.jsx
 "use client";
 
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import INGREDIENTS from "@/data/ingredients";
+
 
 const fallbackImg = "/images/capsuleimage.jpg";
+
 
 export default function IngredientDetail() {
   const { slug } = useParams();
   const [showQuoteModal, setShowQuoteModal] = useState(false);
+const [allIngredients, setAllIngredients] = useState([]);
+const [product, setProduct] = useState(null);
+const [loading, setLoading] = useState(true);
+useEffect(() => {
+  if (!slug) return;
 
-  const product = INGREDIENTS.find((p) => p.slug === slug);
-
+  fetch(`/api/ingredients/${slug}`)
+    .then((res) => res.json())
+    .then((data) => {
+      setProduct(data);
+      setLoading(false);
+    })
+    .catch(() => {
+      setProduct(null);
+      setLoading(false);
+    });
+}, [slug]);
+useEffect(() => {
+  fetch("/api/ingredients")
+    .then((res) => res.json())
+    .then((data) => {
+      setAllIngredients(data);
+    });
+}, []);
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [slug]);
@@ -20,7 +43,9 @@ export default function IngredientDetail() {
   // =========================
   // IF NOT FOUND
   // =========================
-  if (!product) {
+if (loading) {
+  return <div className="p-10 text-center">Loading...</div>;
+}
     return (
       <>
         {/* Breadcrumbs */}
@@ -63,10 +88,10 @@ export default function IngredientDetail() {
 
   const imgSrc = product.image || fallbackImg;
 
-  const suggested = INGREDIENTS.filter(
-    (p) => p.slug !== product.slug
-  ).slice(0, 4);
-
+ const suggested = allIngredients
+  .filter((p) => p.slug !== product.slug)
+  .slice(0, 4);
+if (!product) {
   return (
     <>
       {/* =========================
