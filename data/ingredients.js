@@ -1,3 +1,4 @@
+//ivexia\data\ingredients.js
 const COMMON_IMAGE = "/images/capsuleimage.jpg";
 
 const INGREDIENTS = [

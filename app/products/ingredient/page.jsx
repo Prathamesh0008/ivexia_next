@@ -1,3 +1,4 @@
+//ivexia\app\products\ingredient\page.jsx
 "use client";
 
 import { useMemo, useState, useEffect, useRef } from "react";
@@ -8,17 +9,29 @@ import IngredientFilters from "@/components/IngredientFilters";
 import IngredientGrid from "@/components/IngredientGrid";
 import IngredientAccord from "@/components/IngredientAccord";
 import IngredientQualityStrip from "@/components/IngredientQualityStrip";
-import INGREDIENTS from "@/data/ingredients";
+
 
 
 export default function IngredientPage() {
+  const [ingredients, setIngredients] = useState([]);
+const [loading, setLoading] = useState(true);
+useEffect(() => {
+ fetch("/api/ingredients")
+  .then(async (res) => {
+    if (!res.ok) throw new Error("API failed");
+    return res.json();
+  })
+  .then((data) => {
+    setIngredients(data);
+    setLoading(false);
+  })
+  .catch((err) => {
+    console.error(err);
+    setLoading(false);
+  });
+}, []);
   const [query, setQuery] = useState("");
-  const formatKey = (key) => {
-  if (!key) return "";
-  const parts = key.split(".");
-  const last = parts[parts.length - 2] || parts[parts.length - 1];
-  return last.replace(/-/g, " ");
-};
+
   const [category, setCategory] = useState("All");
   const [dosage, setDosage] = useState("All");
   const [sortBy, setSortBy] = useState("name-asc");
@@ -64,90 +77,74 @@ useEffect(() => {
   }, [page]);
 
   // Categories (raw keys)
-  const categories = useMemo(() => {
-    const unique = new Set();
-    INGREDIENTS.forEach((i) => {
-      if (i.categoryKey) unique.add(i.categoryKey);
-      else if (i.category) unique.add(i.category);
-    });
-    return ["All", ...Array.from(unique)];
-  }, []);
+const categories = useMemo(() => {
+  const unique = new Set();
+
+  ingredients.forEach((i) => {
+    if (i.category) unique.add(i.category);
+  });
+
+  return ["All", ...Array.from(unique)];
+}, [ingredients]); 
 
   // Dosage forms (raw keys)
-  const dosages = useMemo(() => {
-    const unique = new Set();
-    INGREDIENTS.forEach((i) => {
-      if (Array.isArray(i.dosageKeys)) i.dosageKeys.forEach((d) => unique.add(d));
-      else if (Array.isArray(i.dosage)) i.dosage.forEach((d) => unique.add(d));
-      else if (i.dosage) unique.add(i.dosage);
-    });
-    return ["All", ...Array.from(unique)];
-  }, []);
+ const dosages = ["All"];
 
   // Filtering
 const filtered = useMemo(() => {
   const q = query.trim().toLowerCase();
 
-  let list = INGREDIENTS.filter((i) => {
-    const name = formatKey(i.nameKey).toLowerCase();
-    const desc = formatKey(i.descKey).toLowerCase();
+  let list = ingredients.filter((i) => {
+    const name = (i.name || "").toLowerCase();
     const slug = (i.slug || "").toLowerCase();
     const id = (i.id || "").toLowerCase();
 
     const matchQuery =
       !q ||
       name.includes(q) ||
-      desc.includes(q) ||
       slug.includes(q) ||
       id.includes(q) ||
       (i.cas && i.cas.toLowerCase().includes(q));
 
-    const catValue = i.categoryKey || i.category || "Uncategorized";
-    const dosageList = i.dosageKeys || i.dosage || [];
-
     const matchCategory =
-      category === "All" || catValue === category;
+  category === "All" || i.category === category;
 
-    const matchDosage =
-      dosage === "All" ||
-      (Array.isArray(dosageList)
-        ? dosageList.includes(dosage)
-        : String(dosageList) === dosage);
+const matchDosage =
+  dosage === "All" || i.dosage === dosage;
 
-    return matchQuery && matchCategory && matchDosage;
+return matchQuery && matchCategory && matchDosage;
   });
 
-  // 🔥 FIXED SORTING
+  // SORTING
   switch (sortBy) {
     case "name-asc":
       list.sort((a, b) =>
-        formatKey(a.nameKey).localeCompare(
-          formatKey(b.nameKey)
-        )
+        (a.name || "").localeCompare(b.name || "")
       );
       break;
 
     case "name-desc":
       list.sort((a, b) =>
-        formatKey(b.nameKey).localeCompare(
-          formatKey(a.nameKey)
-        )
+        (b.name || "").localeCompare(a.name || "")
       );
       break;
 
     case "category":
       list.sort((a, b) =>
-        (a.categoryKey || "").localeCompare(b.categoryKey || "")
+        (a.category || "").localeCompare(b.category || "")
       );
       break;
   }
 
   return list;
-}, [query, category, dosage, sortBy]);
+}, [ingredients, query, category,dosage, sortBy]);
+
   const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
 
   const current = filtered.slice((page - 1) * pageSize, page * pageSize);
-
+if (loading) {
+  return <div className="p-10 text-center">Loading...</div>;
+}
   return (
     <div>
       <IngredientHero />
@@ -156,7 +153,7 @@ const filtered = useMemo(() => {
 
       {/* Filters */}
       <section className="bg-[#FFF8F5] py-10">
-        <div className="max-w-7xl mx-auto px-6 md:px-16">
+       <div ref={gridRef} className="max-w-7xl mx-auto px-6 md:px-16">
           <h2 className="text-center text-2xl md:text-3xl font-bold text-[#0d2d47] mb-6">
             Active Pharmaceutical Ingredients (API)
           </h2>
