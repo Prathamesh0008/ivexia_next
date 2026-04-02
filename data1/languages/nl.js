@@ -13,4 +13,37 @@ export default {
     mag_health: "Gezondheid",
     contact: "Contact",
   },
+  hero: [
+    {
+      title: "Innovatie in Gezondheidszorg Wereldwijd",
+      subtitle: "Wereldwijde Farmaceutische Excellentie",
+      text: "Wij leveren hoogwaardige farmaceutische oplossingen met wereldwijde dekking en betrouwbare normen.",
+      cta: "Ontdek Onze Impact",
+      stats: [
+        { value: "50+", label: "Landen" },
+        { value: "200+", label: "Producten" }
+      ]
+    },
+    {
+      title: "Gedreven door Onderzoek. Gericht op Patiënten.",
+      subtitle: "Geavanceerde R&D",
+      text: "Onze moderne R&D en kwaliteitsprocessen garanderen veilige en effectieve producten.",
+      cta: "Ontdek Ons Onderzoek",
+      stats: [
+        { value: "100+", label: "Onderzoekers" },
+        { value: "15+", label: "Patenten" }
+      ]
+    },
+    {
+      title: "Productie op Wereldniveau",
+      subtitle: "WHO-GMP Gecertificeerd",
+      text: "Moderne faciliteiten zorgen voor consistente kwaliteit wereldwijd.",
+      cta: "Bekijk Onze Faciliteiten",
+      stats: [
+        { value: "3", label: "Continenten" },
+        { value: "100%", label: "Naleving" }
+      ]
+    }
+  ]
 };
+
