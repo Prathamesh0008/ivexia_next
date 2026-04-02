@@ -44,5 +44,22 @@ hero: [
       { value: "100%", label: "Cumplimiento" }
     ]
   }
-]
+],
+ivexia_numbers: {
+  title: "Ivexia en Números",
+  employees: "Empleados Globales",
+  products: "Productos Terminados",
+  countries: "Países Atendidos",
+  facilities: "Instalaciones de Fabricación",
+  rnd: "Centros de I+D"
+},
+about: {
+  video: {
+    title: "Sobre Ivexia Pharmaceuticals",
+    subtitle: "Visión Global. Excelencia Científica.",
+    paragraph: "Ofreciendo innovación en la atención médica.",
+    cta: "Explorar Más",
+    fallback: "Tu navegador no soporta video."
+  }
+}
 }

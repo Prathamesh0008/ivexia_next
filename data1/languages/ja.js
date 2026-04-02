@@ -44,5 +44,22 @@ hero: [
       { value: "100%", label: "コンプライアンス" }
     ]
   }
-]
+],
+ivexia_numbers: {
+  title: "Ivexiaの実績",
+  employees: "世界の従業員数",
+  products: "完成品",
+  countries: "展開国数",
+  facilities: "製造施設",
+  rnd: "研究開発センター"
+},
+about: {
+  video: {
+    title: "Ivexia製薬について",
+    subtitle: "グローバルビジョン・科学的卓越性",
+    paragraph: "医療の革新を世界へ届けます。",
+    cta: "詳しく見る",
+    fallback: "お使いのブラウザは動画に対応していません。"
+  }
+}
 }

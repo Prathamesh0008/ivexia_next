@@ -1,6 +1,4 @@
-// // app/api/ingredients/route.js
-
-
+// app/api/ingredients/route.js
 import dbConnect from "@/lib/dbConnect";
 import Ingredient from "@/models/Ingredient";
 
@@ -42,3 +40,5 @@ export async function GET() {
 //     );
 //   }
 // }
+
+

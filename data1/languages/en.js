@@ -1,17 +1,17 @@
 //ivexia\data1\languages\en.js
 export default {
   nav: {
-    home: "Home",
-    offerings: "Our Offerings",
-    overview: "Overview",
-    api: "Active Pharmaceutical Ingredients",
-    products: "Pharmaceutical Products",
-    otc: "Over-the-Counter",
-    about: "About Us",
-    mag: "Ivexia Magazine",
-    mag_news: "News",
-    mag_health: "Health Magazine",
-    contact: "Contact",
+    "home": "Home",
+    "offerings": "Our Offerings",
+    "overview": "Overview",
+    "api": "Active Pharmaceutical Ingredients",
+    "products": "Pharmaceutical Products",
+    "otc": "Over-the-Counter",
+     "about": "About Us",
+    "mag": "Ivexia Magazine",
+    "mag_news": "News",
+    "mag_health": "Health Magazine",
+    "contact": "Contact",
   },
   hero: [
     {
@@ -44,5 +44,22 @@ export default {
         { value: "100%", label: "Compliance" }
       ]
     }
-  ]
+  ],
+  ivexia_numbers: {
+  title: "Ivexia in Numbers",
+  employees: "Global Employees",
+  products: "Finished Products",
+  countries: "Countries Served",
+  facilities: "Manufacturing Facilities",
+  rnd: "R&D Centers"
+},
+about: {
+  video: {
+    title: "About Ivexia Pharmaceuticals",
+    subtitle: "Global Vision. Scientific Excellence.",
+    paragraph: "Delivering innovation in healthcare.",
+    cta: "Explore More",
+    fallback: "Your browser does not support the video tag."
+  }
+}
 };

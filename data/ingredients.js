@@ -1,6 +1,9 @@
+
+//ivexia\data\ingredients.js
 const COMMON_IMAGE = "/images/capsuleimage.jpg";
 
 const INGREDIENTS = [
+    
   // =========================
   // CARDIOLOGY
   // =========================
@@ -11,6 +14,7 @@ const INGREDIENTS = [
     slug: "amiodarone-hcl",
     cas: "",
     image: COMMON_IMAGE,
+    
   },
   {
     id: "atorvastatin",

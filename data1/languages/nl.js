@@ -1,17 +1,17 @@
 //ivexia\data1\languages\nl.js
 export default {
   nav: {
-    home: "Startpagina",
-    offerings: "Onze Diensten",
-    overview: "Overzicht",
-    api: "Actieve Farmaceutische Ingrediënten",
-    products: "Farmaceutische Producten",
-    otc: "Zelfzorg Geneesmiddelen",
-    about: "Over Ons",
-    mag: "Ivexia Magazine",
-    mag_news: "Nieuws",
-    mag_health: "Gezondheid",
-    contact: "Contact",
+    "home": "Startpagina",
+    "offerings": "Onze Diensten",
+    "overview": "Overzicht",
+    "api": "Actieve Farmaceutische Ingrediënten",
+    "products": "Farmaceutische Producten",
+    "otc": "Zelfzorg Geneesmiddelen",
+    "about": "Over Ons",
+    "mag": "Ivexia Magazine",
+    "mag_news": "Nieuws",
+    "mag_health": "Gezondheid",
+    "contact": "Contact",
   },
   hero: [
     {
@@ -44,6 +44,23 @@ export default {
         { value: "100%", label: "Naleving" }
       ]
     }
-  ]
+  ],
+  ivexia_numbers: {
+  title: "Ivexia in Cijfers",
+  employees: "Werknemers Wereldwijd",
+  products: "Eindproducten",
+  countries: "Landen Bediend",
+  facilities: "Productiefaciliteiten",
+  rnd: "R&D Centra"
+},
+about: {
+  video: {
+    title: "Over Ivexia Pharmaceuticals",
+    subtitle: "Wereldwijde Visie. Wetenschappelijke Excellentie.",
+    paragraph: "Innovatie in de gezondheidszorg wereldwijd.",
+    cta: "Ontdek Meer",
+    fallback: "Uw browser ondersteunt de video tag niet."
+  }
+}
 };
 

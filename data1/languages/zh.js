@@ -44,5 +44,22 @@ hero: [
       { value: "100%", label: "合规" }
     ]
   }
-]
+],
+ivexia_numbers: {
+  title: "Ivexia 数据",
+  employees: "全球员工",
+  products: "成品药品",
+  countries: "服务国家",
+  facilities: "生产设施",
+  rnd: "研发中心"
+},
+about: {
+  video: {
+    title: "关于 Ivexia 制药",
+    subtitle: "全球视野 · 科学卓越",
+    paragraph: "推动医疗创新，造福全球。",
+    cta: "了解更多",
+    fallback: "您的浏览器不支持视频。"
+  }
+}
 }

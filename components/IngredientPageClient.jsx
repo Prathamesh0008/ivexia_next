@@ -12,8 +12,8 @@ import IngredientQualityStrip from "@/components/IngredientQualityStrip";
 import { GridPageSkeleton } from "@/components/RouteSkeletons";
 
 export default function IngredientPageClient({ initialIngredients = [] }) {
-  const [ingredients, setIngredients] = useState(initialIngredients);
-  const [loading, setLoading] = useState(initialIngredients.length === 0);
+  const ingredients = initialIngredients;
+  const [loading] = useState(false);
   const [error, setError] = useState("");
 
   const [query, setQuery] = useState("");
@@ -24,94 +24,7 @@ export default function IngredientPageClient({ initialIngredients = [] }) {
   const [pageSize, setPageSize] = useState(12);
   const gridRef = useRef(null);
 
-  useEffect(() => {
-    if (initialIngredients.length > 0) {
-      setLoading(false);
-      return;
-    }
 
-    let cancelled = false;
-    const controller = new AbortController();
-
-    async function loadIngredients() {
-      setLoading(true);
-      setError("");
-
-      try {
-        const res = await fetch("/api/ingredients", {
-          cache: "no-store",
-          signal: controller.signal,
-        });
-        const data = await res.json();
-
-        if (!res.ok) {
-          throw new Error(
-            [data?.error, data?.code, data?.hint].filter(Boolean).join(" | ")
-          );
-        }
-
-        if (!cancelled) {
-          setIngredients(Array.isArray(data) ? data : []);
-        }
-      } catch (err) {
-        if (cancelled) {
-          return;
-        }
-
-        if (err.name !== "AbortError") {
-          console.error(err);
-        }
-
-        setError("Ingredients are temporarily unavailable. Please try again shortly.");
-      } finally {
-        if (!cancelled) {
-          setLoading(false);
-        }
-      }
-    }
-
-    loadIngredients();
-
-    return () => {
-      cancelled = true;
-      controller.abort();
-    };
-  }, [initialIngredients]);
-useEffect(() => {
-  let cancelled = false;
-
-  async function loadIngredients() {
-    setLoading(true);
-    setError("");
-
-    try {
-      const res = await fetch("/api/ingredients");
-
-      const data = await res.json();
-
-      if (!res.ok) {
-        throw new Error(data?.error || "Failed to load ingredients");
-      }
-
-      if (!cancelled) {
-        setIngredients(Array.isArray(data) ? data : []);
-      }
-    } catch (err) {
-      if (cancelled) return;
-
-      console.error(err);
-      setError("Ingredients unavailable.");
-    } finally {
-      if (!cancelled) setLoading(false);
-    }
-  }
-
-  loadIngredients();
-
-  return () => {
-    cancelled = true;
-  };
-}, []);
   useEffect(() => {
     function updatePageSize() {
       const w = window.innerWidth;

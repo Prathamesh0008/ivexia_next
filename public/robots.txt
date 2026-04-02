@@ -1,0 +1,121 @@
+User-agent: *
+Allow: /
+
+# Allow important directories
+Allow: /blog/
+Allow: /products/
+Allow: /categories/
+Allow: /research/
+Allow: /api/
+Allow: /assets/
+Allow: /images/
+
+# Crawl delay (optional, safe for servers)
+Crawl-delay: 2
+
+
+# SEARCH ENGINE BOTS
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+
+# AI & LLM CRAWLERS (VERY IMPORTANT)
+
+
+# OpenAI (ChatGPT, GPTBot)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Google AI (Gemini / Bard / Vertex AI)
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic (Claude AI)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Amazon AI
+User-agent: Amazonbot
+Allow: /
+
+# Meta AI (Facebook / Llama)
+User-agent: FacebookBot
+Allow: /
+
+# Apple AI
+User-agent: Applebot
+Allow: /
+
+# ByteDance / TikTok AI
+User-agent: Bytespider
+Allow: /
+
+# Common AI / Data crawlers
+User-agent: CCBot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+
+# BLOCK ONLY SENSITIVE AREAS (SECURITY)
+
+Disallow: /admin/
+Disallow: /private/
+Disallow: /dashboard/
+Disallow: /login/
+Disallow: /checkout/
+Disallow: /cart/
+Disallow: /user/
+Disallow: /account/
+
+# Prevent crawling of internal scripts
+Disallow: /_next/
+Disallow: /node_modules/
+
+
+# ALLOW IMPORTANT FILE TYPES
+
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.json$
+Allow: /*.xml$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.svg$
+
+
+# SITEMAP
+
+Sitemap: https://www.ivexiapharma.com/sitemap.xml
