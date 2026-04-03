@@ -7,30 +7,29 @@ import {
   useEffect,
   useCallback,
 } from "react";
+import enTranslations from "@/data1/languages/en";
 
 const LanguageContext = createContext(null);
 
 export function LanguageProvider({ children }) {
   const [language, setLanguage] = useState("en");
-  const [translations, setTranslations] = useState({});
-  const [loading, setLoading] = useState(true);
+  const [translations, setTranslations] = useState(enTranslations);
+  const [loading, setLoading] = useState(false);
 
   const loadLanguage = useCallback(async (langCode) => {
     setLoading(true);
 
     try {
-      const module = await import(`@/data1/languages/${langCode}.js`);
+      const langModule = await import(`@/data1/languages/${langCode}.js`);
 
-      setTranslations(module.default);
+      setTranslations(langModule.default);
       setLanguage(langCode);
 
       localStorage.setItem("ivexia-lang", langCode);
       document.documentElement.lang = langCode;
     } catch (error) {
       console.error("Language load failed", error);
-
-      const enModule = await import(`@/data1/languages/en.js`);
-      setTranslations(enModule.default);
+      setTranslations(enTranslations);
       setLanguage("en");
     } finally {
       setLoading(false);

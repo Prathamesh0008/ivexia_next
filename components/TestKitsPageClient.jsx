@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
 import { FaSearch } from "react-icons/fa";
 
 export default function TestKitsPageClient({ initialTestKits = [] }) {
+  const router = useRouter();
   const [testKits, setTestKits] = useState(initialTestKits);
   const [loading, setLoading] = useState(initialTestKits.length === 0);
   const [isRefreshing, setIsRefreshing] = useState(false);
@@ -226,9 +228,10 @@ export default function TestKitsPageClient({ initialTestKits = [] }) {
               {filtered.map((item, index) => (
                 <tr
                   key={`${item._id}-${index}`}
-                  className={`${
+                  onClick={() => router.push(`/test-kits/${item.slug}`)}
+                  className={`cursor-pointer ${
                     index % 2 === 0 ? "bg-white" : "bg-gray-50"
-                  } cursor-pointer hover:bg-gray-100`}
+                  }`}
                 >
                   <td className="px-4 py-3 font-semibold">{item.product}</td>
                   <td className="px-4 py-3">{item.description || "-"}</td>

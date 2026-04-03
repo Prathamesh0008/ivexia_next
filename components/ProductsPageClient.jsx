@@ -10,7 +10,6 @@ export default function ProductsPageClient({
   initialTestKits = [],
 }) {
   const router = useRouter();
-
   const [products, setProducts] = useState(initialProducts);
   const [testKits, setTestKits] = useState(initialTestKits);
   const [loading, setLoading] = useState(
@@ -316,7 +315,10 @@ export default function ProductsPageClient({
                 ? filtered.map((item, index) => (
                     <tr
                       key={`${item._id}-${index}`}
-                      className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}
+                      onClick={() => router.push(`/test-kits/${item.slug}`)}
+                      className={`cursor-pointer ${
+                        index % 2 === 0 ? "bg-white" : "bg-gray-50"
+                      }`}
                     >
                       <td className="px-4 py-3 font-semibold">{item.product}</td>
                       <td className="px-4 py-3">{item.description || "-"}</td>
