@@ -40,17 +40,17 @@ export default function Navbar() {
   const langRef = useRef(null);
   const searchRef = useRef(null);
 
-  const languages = [
-    { code: "en", label: "English" },
-    { code: "nl", label: "Dutch" },
-    { code: "es", label: "Spanish" },
-    { code: "de", label: "German" },
-    { code: "pt", label: "Portuguese" },
-    { code: "fr", label: "French" },
-    { code: "zh", label: "Chinese" },
-    { code: "ja", label: "Japanese" },
-    { code: "ar", label: "Arabic" },
-  ];
+const languages = [
+  { code: "en", label: "English", flag: "gb" },
+  { code: "nl", label: "Dutch", flag: "nl" },
+  { code: "es", label: "Spanish", flag: "es" },
+  { code: "de", label: "German", flag: "de" },
+  { code: "pt", label: "Portuguese", flag: "pt" },
+  { code: "fr", label: "French", flag: "fr" },
+  { code: "zh", label: "Chinese", flag: "cn" },
+  { code: "ja", label: "Japanese", flag: "jp" },
+  { code: "ar", label: "Arabic", flag: "sa" },
+];
 
   const isIngredientPath =
     pathname === "/products/ingredient" ||
@@ -195,6 +195,15 @@ export default function Navbar() {
             className="h-12 md:h-12 w-auto object-contain block"
             priority
           />
+          {/* <Image
+  src="/images/navlogo.png"
+  alt="Ivexia Logo"
+  width={320}
+  height={100}
+  className="h-12 md:h-12 w-auto object-contain block"
+  priority
+  onContextMenu={(e) => e.preventDefault()}
+/> */}
         </div>
 
         <ul className="hidden lg:flex h-full gap-8 text-lg md:text-lg text-gray-800 items-center">
@@ -385,8 +394,15 @@ export default function Navbar() {
               className="flex items-center gap-1 cursor-pointer text-gray-600 hover:text-[#0d2d47]"
               onClick={() => setShowLanguages((prev) => !prev)}
             >
-              <FaGlobe />
-              <span className="text-sm">{language}</span>
+         
+<span className="text-sm flex items-center gap-1">
+ <img
+  src={`https://flagcdn.com/w20/${languages.find((l) => l.code === language)?.flag}.png`}
+  alt="flag"
+  className="w-5 h-4 rounded-sm"
+/>
+  {languages.find((l) => l.code === language)?.label}
+</span>
             </div>
 
             {showLanguages && (
@@ -397,10 +413,12 @@ export default function Navbar() {
                     onClick={() => selectLanguage(lng.code, lng.label)}
                     className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"
                   >
-                    <span className="inline-flex min-w-8 justify-center rounded bg-[#f3f8fb] px-2 py-0.5 text-[11px] font-semibold uppercase text-[#0d2d47]">
-                      {lng.code}
-                    </span>
-                    <span>{lng.label}</span>
+                  <img
+  src={`https://flagcdn.com/w20/${lng.flag}.png`}
+  alt={lng.label}
+  className="w-5 h-4 rounded-sm"
+/>
+<span>{lng.label}</span>
                   </li>
                 ))}
               </ul>
@@ -638,7 +656,7 @@ export default function Navbar() {
           <li className="cursor-pointer">
             <details>
               <summary className="py-2 text-[#0d2d47] flex items-center gap-2">
-                <FaGlobe />
+               
                 <span>
   {languages.find((l) => l.code === language)?.label || "English"}
 </span>
@@ -650,10 +668,12 @@ export default function Navbar() {
                     onClick={() => selectLanguage(lng.code, lng.label)}
                     className="flex items-center gap-2 hover:text-[#0d2d47] cursor-pointer"
                   >
-                    <span className="inline-flex min-w-8 justify-center rounded bg-[#f3f8fb] px-2 py-0.5 text-[11px] font-semibold uppercase text-[#0d2d47]">
-                      {lng.code}
-                    </span>
-                    <span>{lng.label}</span>
+         <img
+  src={`https://flagcdn.com/w20/${lng.flag}.png`}
+  alt={lng.label}
+  className="w-5 h-4 rounded-sm"
+/>
+<span>{lng.label}</span>
                   </span>
                 ))}
               </div>
@@ -664,29 +684,6 @@ export default function Navbar() {
     </nav>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -1,3 +1,4 @@
+//ivexia\data\news.js
 const newsPosts = [
   {
     id: 1,
