@@ -124,7 +124,7 @@ export default function IngredientPageClient({ initialIngredients = [] }) {
       <IngredientStats />
       <IngredientQualityStrip />
 
-      <section className="bg-[#FFF8F5] py-10">
+      <section id="ingredient-catalog" className="bg-[#FFF8F5] py-10">
         <div ref={gridRef} className="max-w-7xl mx-auto px-6 md:px-16">
           <h2 className="text-center text-2xl md:text-3xl font-bold text-[#0d2d47] mb-6">
             Active Pharmaceutical Ingredients (API)

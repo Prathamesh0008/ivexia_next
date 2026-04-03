@@ -2,7 +2,7 @@
 export default {
   nav: {
     "home": "Home",
-    "offerings": "Our Offerings",
+    "offerings": "Our Products",
     "overview": "Overview",
     "api": "Active Pharmaceutical Ingredients",
     "products": "Pharmaceutical Products",

@@ -532,7 +532,7 @@ export default function Navbar() {
                     isOfferingsActive ? activeTopLinkClass : ""
                   }`}
                 >
-                  Our Offerings
+                  Our Products
                 </span>
                 <ChevronDown
                   size={16}
