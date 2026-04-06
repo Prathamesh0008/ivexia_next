@@ -1,16 +1,18 @@
+//ivexia\components\TestKitsPageClient.jsx
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { FaSearch } from "react-icons/fa";
-
+import { useLanguage } from "@/contexts/LanguageContext";
 export default function TestKitsPageClient({ initialTestKits = [] }) {
   const router = useRouter();
   const [testKits, setTestKits] = useState(initialTestKits);
   const [loading, setLoading] = useState(initialTestKits.length === 0);
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [error, setError] = useState("");
-
+const { translations } = useLanguage();
+const t = translations?.testKitsPage;
   const [category, setCategory] = useState(initialTestKits[0]?.category || "");
   const [method, setMethod] = useState("");
   const [specimen, setSpecimen] = useState("");
@@ -56,7 +58,7 @@ export default function TestKitsPageClient({ initialTestKits = [] }) {
         }
 
         console.error(err);
-        setError("Test kits are temporarily unavailable. Please try again shortly.");
+      setError(t?.error || "Test kits are temporarily unavailable...");
       } finally {
         if (!cancelled) {
           setLoading(false);
@@ -142,16 +144,16 @@ export default function TestKitsPageClient({ initialTestKits = [] }) {
       <section className="max-w-7xl mx-auto px-6 md:px-16 pb-40">
         <header className="text-center mt-4 mb-6">
           <h1 className="text-3xl md:text-4xl font-extrabold text-[#0d2d47]">
-            Test Kits
+            {t?.heading || "Test Kits"}
           </h1>
           <p className="text-gray-700 mt-2">
-            Explore our diagnostic rapid test kits portfolio.
+           {t?.subheading || "Explore our diagnostic rapid test kits portfolio."}
           </p>
-          {isRefreshing && (
-            <p className="mt-3 text-sm font-medium text-[#19a6b5]">
-              Updating catalog...
-            </p>
-          )}
+        {isRefreshing && (
+  <p className="mt-3 text-sm font-medium text-[#19a6b5]">
+    {t?.updating || "Updating catalog..."}
+  </p>
+)}
           {error && (
             <p className="mt-3 text-sm font-medium text-red-600">{error}</p>
           )}
@@ -161,7 +163,7 @@ export default function TestKitsPageClient({ initialTestKits = [] }) {
           <input
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="Search test kits..."
+           placeholder={t?.search || "Search test kits..."}
             className="w-full rounded-full border px-6 py-3 pr-16 text-sm"
           />
           <div className="absolute right-4 top-1/2 -translate-y-1/2">
@@ -175,7 +177,7 @@ export default function TestKitsPageClient({ initialTestKits = [] }) {
             onChange={(e) => setCategory(e.target.value)}
             className="rounded-full cursor-pointer border border-gray-300 px-5 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#19a6b5]"
           >
-            <option value="">Category</option>
+            <option value=""> {t?.category || "Category"}</option>
             {categoryOptions.map((item) => (
               <option className="cursor-pointer" key={item} value={item}>
                 {item}
@@ -188,7 +190,7 @@ export default function TestKitsPageClient({ initialTestKits = [] }) {
             onChange={(e) => setMethod(e.target.value)}
             className="rounded-full cursor-pointer border border-gray-300 px-5 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#19a6b5]"
           >
-            <option value="">Method</option>
+            <option value="">{t?.method || "Method"}</option>
             {methodOptions.map((item) => (
               <option key={item} value={item}>
                 {item}
@@ -201,7 +203,7 @@ export default function TestKitsPageClient({ initialTestKits = [] }) {
             onChange={(e) => setSpecimen(e.target.value)}
             className="rounded-full border border-gray-300 px-5 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#19a6b5]"
           >
-            <option value="">Specimen</option>
+            <option value="">{t?.specimen || "Specimen"}</option>
             {specimenOptions.map((item) => (
               <option key={item} value={item}>
                 {item}
@@ -214,13 +216,13 @@ export default function TestKitsPageClient({ initialTestKits = [] }) {
           <table className="min-w-full text-sm">
             <thead>
               <tr className="bg-[#0d2d47] text-white">
-                <th className="px-4 py-3">Product</th>
-                <th className="px-4 py-3">Description</th>
-                <th className="px-4 py-3">Category</th>
-                <th className="px-4 py-3">Method</th>
-                <th className="px-4 py-3">Specimen</th>
-                <th className="px-4 py-3">Cut-Off</th>
-                <th className="px-4 py-3">Certificate</th>
+             <th>{t?.table?.product || "Product"}</th>
+               <th>{t?.table?.description || "Description"}</th>
+                <th>{t?.table?.category || "Category"}</th>
+                <th>{t?.table?.method || "Method"}</th>
+               <th>{t?.table?.specimen || "Specimen"}</th>
+           <th>{t?.table?.cutoff || "Cut-Off"}</th>
+                <th>{t?.table?.certificate || "Certificate"}</th>
               </tr>
             </thead>
 

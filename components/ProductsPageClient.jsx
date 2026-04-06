@@ -4,7 +4,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { FaSearch } from "react-icons/fa";
-
+import { useLanguage } from "@/contexts/LanguageContext";
 export default function ProductsPageClient({
   initialProducts = [],
   initialTestKits = [],
@@ -17,7 +17,8 @@ export default function ProductsPageClient({
   );
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [error, setError] = useState("");
-
+const { translations } = useLanguage();
+const t = translations?.productsPage;
   const [category, setCategory] = useState("");
   const [form, setForm] = useState("");
   const [dosage, setDosage] = useState("");
@@ -66,8 +67,9 @@ export default function ProductsPageClient({
       if (productsResult.status === "fulfilled") {
         setProducts(productsResult.value);
       } else {
-        console.error(productsResult.reason);
-        setError("Products are temporarily unavailable. Please try again shortly.");
+     setError(
+  t?.error || "Products are temporarily unavailable. Please try again shortly."
+);
       }
 
       if (testKitsResult.status === "fulfilled") {
@@ -86,7 +88,9 @@ export default function ProductsPageClient({
       }
 
       console.error(err);
-      setError("Products are temporarily unavailable. Please try again shortly.");
+     setError(
+  t?.error || "Products are temporarily unavailable. Please try again shortly."
+);
       setLoading(false);
       setIsRefreshing(false);
     });
@@ -104,10 +108,15 @@ export default function ProductsPageClient({
     [testKits]
   );
 
-  const categoryOptions = useMemo(
-    () => [...new Set([...products.map((p) => p.category), "TEST KITS"])],
-    [products]
-  );
+const categoryOptions = useMemo(
+  () => [
+    ...new Set([
+      ...products.map((p) => p.category),
+      t?.testKitsLabel || "TEST KITS",
+    ]),
+  ],
+  [products, t]
+);
 
   const formOptions = useMemo(
     () => ["", ...new Set(products.map((p) => p.form))].filter(Boolean),
@@ -142,7 +151,7 @@ export default function ProductsPageClient({
   const filtered = useMemo(() => {
     const q = searchTerm.trim().toLowerCase();
 
-    if (category === "TEST KITS") {
+   if (category === (t?.testKitsLabel || "TEST KITS")){
       return flatTestKits.filter((item) => {
         return (
           !q ||
@@ -210,14 +219,15 @@ export default function ProductsPageClient({
       <section className="max-w-7xl mx-auto px-6 md:px-16 pb-40">
         <header className="text-center mt-4 mb-6">
           <h1 className="text-3xl md:text-4xl font-extrabold text-[#0d2d47]">
-            Finished Products
-          </h1>
-          <p className="text-gray-700 mt-2">
-            Explore our pharmaceutical product range.
-          </p>
+  {t?.heading || "Our Products"}
+</h1>
+
+<p className="text-gray-700 mt-2">
+  {t?.subheading || "Explore our pharmaceutical product range."}
+</p>
           {isRefreshing && (
             <p className="mt-3 text-sm font-medium text-[#19a6b5]">
-              Updating catalog...
+              {t?.updating || "Updating catalog..."}
             </p>
           )}
           {error && (
@@ -229,7 +239,7 @@ export default function ProductsPageClient({
           <input
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="Search product..."
+           placeholder={t?.search || "Search product..."}
             className="w-full rounded-full border px-6 py-3 pr-16 text-sm"
           />
           <div className="absolute right-4 top-1/2 -translate-y-1/2">
@@ -243,7 +253,7 @@ export default function ProductsPageClient({
             onChange={(e) => setCategory(e.target.value)}
             className={filterSelectClass}
           >
-            <option value="">Category</option>
+            <option value=""> {t?.category || "Category"}</option>
             {categoryOptions.map((c) => (
               <option key={c}>{c}</option>
             ))}
@@ -254,7 +264,7 @@ export default function ProductsPageClient({
             onChange={(e) => setForm(e.target.value)}
             className={filterSelectClass}
           >
-            <option value="">Form</option>
+            <option value="">{t?.form || "Form"}</option>
             {formOptions.map((f) => (
               <option key={f}>{f}</option>
             ))}
@@ -266,7 +276,7 @@ export default function ProductsPageClient({
             className={filterSelectClass}
             title={dosage || "Dosage"}
           >
-            <option value="">Dosage</option>
+            <option value="">{t?.dosage || "Dosage"}</option>
             {dosageOptions.map((d) => (
               <option key={d} value={d}>
                 {getDosageOptionLabel(d)}
@@ -290,21 +300,21 @@ export default function ProductsPageClient({
               <tr className="bg-[#0d2d47] text-white">
                 {category === "TEST KITS" ? (
                   <>
-                    <th className="px-4 py-3 min-w-[140px]">Product</th>
-                    <th className="px-4 py-3 min-w-[260px]">Description</th>
-                    <th className="px-4 py-3 min-w-[140px]">Category</th>
-                    <th className="px-4 py-3 min-w-[120px]">Method</th>
-                    <th className="px-4 py-3 min-w-[140px]">Specimen</th>
-                    <th className="px-4 py-3 min-w-[110px]">Cut-Off</th>
-                    <th className="px-4 py-3 min-w-[120px]">Certificate</th>
+                    <th>{t?.testKits?.product || "Product"}</th>
+<th>{t?.testKits?.description || "Description"}</th>
+<th>{t?.testKits?.category || "Category"}</th>
+<th>{t?.testKits?.method || "Method"}</th>
+<th>{t?.testKits?.specimen || "Specimen"}</th>
+<th>{t?.testKits?.cutoff || "Cut-Off"}</th>
+<th>{t?.testKits?.certificate || "Certificate"}</th>
                   </>
                 ) : (
                   <>
-                    <th className="px-4 py-3 text-left">Name</th>
-                    <th className="px-4 py-3 text-left whitespace-nowrap">Form</th>
-                    <th className="px-4 py-3 text-left whitespace-nowrap">Category</th>
-                    <th className="px-4 py-3 text-left whitespace-nowrap">Dosage</th>
-                    <th className="px-4 py-3 text-left whitespace-nowrap">CAS-ID</th>
+                    <th>{t?.table?.name || "Name"}</th>
+<th>{t?.table?.form || "Form"}</th>
+<th>{t?.table?.category || "Category"}</th>
+<th>{t?.table?.dosage || "Dosage"}</th>
+<th>{t?.table?.cas || "CAS-ID"}</th>
                   </>
                 )}
               </tr>

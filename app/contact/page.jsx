@@ -1,3 +1,4 @@
+//ivexia\app\contact\page.jsx
 'use client'
 
 import { useState } from 'react'
@@ -14,7 +15,7 @@ import {
   FaClock
 } from 'react-icons/fa'
 import { Loader2, CheckCircle, AlertCircle } from 'lucide-react'
-
+import { useLanguage } from "@/contexts/LanguageContext";
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -23,7 +24,7 @@ export default function ContactPage() {
     subject: '',
     message: ''
   })
-  
+  const { translations } = useLanguage();
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState('')
@@ -33,7 +34,7 @@ export default function ContactPage() {
     const errors = {}
     
     if (!formData.name.trim()) {
-      errors.name = 'Name is required'
+errors.name = 'Name is required'
     }
     
     if (!formData.email.trim()) {
@@ -114,7 +115,7 @@ const handleSubmit = async (e) => {
 
   } catch (err) {
     console.error(err)
-    setError("Failed to send message. Please try again.")
+setError(translations?.contactPage?.error || "Failed to send message")
   }
 
   setLoading(false)
@@ -144,11 +145,10 @@ const handleSubmit = async (e) => {
         {/* HEADER */}
         <div className="mb-12">
           <h1 className="text-3xl md:text-4xl font-bold text-[#0d2d47]">
-            Contact Ivexia Pharmaceuticals
+        {translations?.contactPage?.title || "Contact Ivexia Pharmaceuticals"}
           </h1>
           <p className="mt-2 text-gray-700 max-w-2xl">
-            Reach out to us for pharmaceutical inquiries, partnerships, and support. 
-            Our team is here to assist you with your healthcare needs.
+            {translations?.contactPage?.subtitle || "Reach out to us for pharmaceutical inquiries..."}
           </p>
         </div>
 
@@ -158,17 +158,17 @@ const handleSubmit = async (e) => {
           {/* FORM */}
           <div className="bg-white shadow-sm border border-gray-100 p-8 flex flex-col">
             <h2 className="text-xl font-semibold text-[#0d2d47] mb-1">
-              Send Us a Message
+             {translations?.contactPage?.formTitle || "Send Us a Message"}
             </h2>
             <p className="text-sm text-gray-500 mb-6">
-              We'll get back to you within 24 hours
+           {translations?.contactPage?.formSubtitle || "We'll get back to you within 24 hours"}
             </p>
 
             {/* Status Messages */}
             {success && (
               <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-xl flex items-start">
                 <CheckCircle className="h-5 w-5 mr-3 text-green-600 flex-shrink-0 mt-0.5" />
-                <p className="text-green-800">Message sent successfully! We'll contact you soon.</p>
+                <p className="text-green-800">{translations?.contactPage?.success || "Message sent successfully!"}</p>
               </div>
             )}
             
@@ -183,7 +183,7 @@ const handleSubmit = async (e) => {
 
               <div>
                 <label className="block text-sm font-medium mb-1 text-gray-700">
-                  Email Address <span className="text-red-500">*</span>
+                  {translations?.contactPage?.email || "Email Address"} <span className="text-red-500">*</span>
                   {formErrors.email && <span className="text-red-500 text-xs ml-2">({formErrors.email})</span>}
                 </label>
                 <input
@@ -196,14 +196,16 @@ const handleSubmit = async (e) => {
                   className={`w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#19a6b5] focus:border-transparent transition-all disabled:opacity-50 ${
                     formErrors.email ? 'border-red-300 bg-red-50' : 'border-gray-200'
                   }`}
-                  placeholder="you@example.com"
+                placeholder={
+  translations?.contactPage?.emailPlaceholder || "you@example.com"
+}
                 />
               </div>
 
               <div className="grid gap-4 md:grid-cols-2">
                 <div>
                   <label className="block text-sm font-medium mb-1 text-gray-700">
-                    Full Name <span className="text-red-500">*</span>
+                    {translations?.contactPage?.fullName || "Full Name"} <span className="text-red-500">*</span>
                     {formErrors.name && <span className="text-red-500 text-xs ml-2">({formErrors.name})</span>}
                   </label>
                   <input
@@ -216,12 +218,14 @@ const handleSubmit = async (e) => {
                     className={`w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#19a6b5] focus:border-transparent transition-all disabled:opacity-50 ${
                       formErrors.name ? 'border-red-300 bg-red-50' : 'border-gray-200'
                     }`}
-                    placeholder="John Doe"
+                    placeholder={
+  translations?.contactPage?.fullNamePlaceholder || "John Doe"
+}
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-1 text-gray-700">
-                    Phone Number
+                    {translations?.contactPage?.phone || "Phone Number"}
                     {formErrors.phone && <span className="text-red-500 text-xs ml-2">({formErrors.phone})</span>}
                   </label>
                   <input
@@ -233,14 +237,16 @@ const handleSubmit = async (e) => {
                     className={`w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#19a6b5] focus:border-transparent transition-all disabled:opacity-50 ${
                       formErrors.phone ? 'border-red-300 bg-red-50' : 'border-gray-200'
                     }`}
-                    placeholder="10 digit number"
+                   placeholder={
+  translations?.contactPage?.phonePlaceholder || "10 digit number"
+}
                   />
                 </div>
               </div>
 
               <div>
                 <label className="block text-sm font-medium mb-1 text-gray-700">
-                  Subject <span className="text-red-500">*</span>
+                  {translations?.contactPage?.subject || "Subject"} <span className="text-red-500">*</span>
                   {formErrors.subject && <span className="text-red-500 text-xs ml-2">({formErrors.subject})</span>}
                 </label>
                 <input
@@ -253,13 +259,15 @@ const handleSubmit = async (e) => {
                   className={`w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#19a6b5] focus:border-transparent transition-all disabled:opacity-50 ${
                     formErrors.subject ? 'border-red-300 bg-red-50' : 'border-gray-200'
                   }`}
-                  placeholder="What is this regarding?"
+                 placeholder={
+  translations?.contactPage?.subjectPlaceholder || "What is this regarding?"
+}
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium mb-1 text-gray-700">
-                  Message <span className="text-red-500">*</span>
+                 {translations?.contactPage?.message || "Message"} <span className="text-red-500">*</span>
                   {formErrors.message && <span className="text-red-500 text-xs ml-2">({formErrors.message})</span>}
                 </label>
                 <textarea
@@ -272,22 +280,24 @@ const handleSubmit = async (e) => {
                   className={`w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#19a6b5] focus:border-transparent transition-all disabled:opacity-50 resize-none ${
                     formErrors.message ? 'border-red-300 bg-red-50' : 'border-gray-200'
                   }`}
-                  placeholder="Please provide details about your inquiry..."
+                  placeholder={
+  translations?.contactPage?.messagePlaceholder || "Please provide details..."
+}
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={loading}
-                className="px-8 py-3 rounded-full bg-gradient-to-r from-[#0d2d47] to-[#19a6b5] text-white font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center w-full sm:w-auto"
+                className="px-8 py-3 cursor-pointer rounded-full bg-gradient-to-r from-[#0d2d47] to-[#19a6b5] text-white font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center w-full sm:w-auto"
               >
                 {loading ? (
                   <>
                     <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                    Sending...
+                   translations?.contactPage?.sending || "Sending..."
                   </>
                 ) : (
-                  "Submit"
+                 translations?.contactPage?.submit || "Submit"
                 )}
               </button>
             </form>
@@ -336,7 +346,7 @@ const handleSubmit = async (e) => {
         </div>
 
         {/* Social Media Links */}
-        <div className="mt-12 flex justify-center space-x-6">
+        {/* <div className="mt-12 flex justify-center space-x-6">
           <a 
             href="#" 
             className="w-12 h-12 rounded-full bg-[#0d2d47] text-white flex items-center justify-center hover:bg-[#19a6b5] transition-colors duration-300 transform hover:scale-110"
@@ -365,12 +375,12 @@ const handleSubmit = async (e) => {
           >
             <FaLinkedinIn size={20} />
           </a>
-        </div>
+        </div> */}
 
         {/* Additional Info */}
         <div className="mt-8 text-center text-sm text-gray-500">
-          <p>For urgent pharmaceutical inquiries, please call our emergency support line.</p>
-          <p className="mt-1">We're committed to responding within 24 hours on business days.</p>
+          <p>{translations?.contactPage?.footer1 || "For urgent pharmaceutical inquiries..."}</p>
+          <p className="mt-1">{translations?.contactPage?.footer2 || "We're committed to responding..."}</p>
         </div>
       </section>
     </div>

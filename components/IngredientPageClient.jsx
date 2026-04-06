@@ -10,12 +10,12 @@ import IngredientGrid from "@/components/IngredientGrid";
 import IngredientAccord from "@/components/IngredientAccord";
 import IngredientQualityStrip from "@/components/IngredientQualityStrip";
 import { GridPageSkeleton } from "@/components/RouteSkeletons";
-
+import { useLanguage } from "@/contexts/LanguageContext";
 export default function IngredientPageClient({ initialIngredients = [] }) {
   const ingredients = initialIngredients;
   const [loading] = useState(false);
   const [error, setError] = useState("");
-
+const { translations } = useLanguage();
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("All");
   const [dosage, setDosage] = useState("All");
@@ -127,7 +127,7 @@ export default function IngredientPageClient({ initialIngredients = [] }) {
       <section id="ingredient-catalog" className="bg-[#FFF8F5] py-10">
         <div ref={gridRef} className="max-w-7xl mx-auto px-6 md:px-16">
           <h2 className="text-center text-2xl md:text-3xl font-bold text-[#0d2d47] mb-6">
-            Active Pharmaceutical Ingredients (API)
+    {translations?.ingredient?.heading || "Active Pharmaceutical Ingredients (API)"}
           </h2>
 
           {error && (

@@ -1,3 +1,4 @@
+//ivexia\app\test-kits\[slug]\page.jsx
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -60,20 +61,28 @@ export default async function TestKitDetailPage({ params }) {
   }
 
   return (
-    <div className="min-h-screen bg-[#FFF8F5] pt-20">
-      <section className="border-b bg-white">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-2 px-6 py-4 text-sm text-gray-600 md:px-16">
-          <Link href="/" className="hover:text-[#0d2d47]">
-            Home
-          </Link>
-          <span>/</span>
-          <Link href="/test-kits" className="hover:text-[#0d2d47]">
-            Test Kits
-          </Link>
-          <span>/</span>
-          <span className="font-medium text-[#0d2d47]">{testKit.product}</span>
-        </div>
-      </section>
+    <div className="min-h-screen bg-[#FFF8F5] pt-[110px]">
+     <section className="fixed top-[88px] left-0 right-0 z-40 bg-white border-b border-gray-100 shadow-sm">
+  <div className="mx-auto max-w-7xl px-6 md:px-16 py-3">
+    <nav className="flex items-center text-sm text-gray-500 gap-2">
+      <Link href="/" className="hover:text-[#0d2d47] transition">
+        Home
+      </Link>
+
+      <span className="text-gray-300">/</span>
+
+      <Link href="/test-kits" className="hover:text-[#0d2d47] transition">
+        Test Kits
+      </Link>
+
+      <span className="text-gray-300">/</span>
+
+      <span className="font-semibold text-[#0d2d47] truncate max-w-[250px]">
+        {testKit.product}
+      </span>
+    </nav>
+  </div>
+</section>
 
       <section className="mx-auto max-w-7xl px-6 py-14 md:px-16 md:py-20">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">

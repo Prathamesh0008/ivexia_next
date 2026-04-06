@@ -1,5 +1,8 @@
+//ivexia\app\private-label-manufacturing-oem\page.jsx
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useLanguage } from "@/contexts/LanguageContext";
 import {
   FaBoxes,
   FaCheckCircle,
@@ -8,14 +11,14 @@ import {
   FaLayerGroup,
 } from "react-icons/fa";
 
-export const metadata = {
-  title: "Private Label Manufacturing / OEM",
-  description:
-    "Partner with Ivexia Pharma for private label and OEM pharmaceutical manufacturing with GMP quality, flexible batch sizes, and end-to-end support.",
-  alternates: {
-    canonical: "/private-label-manufacturing-oem",
-  },
-};
+// export const metadata = {
+//   title: "Private Label Manufacturing / OEM",
+//   description:
+//     "Partner with Ivexia Pharma for private label and OEM pharmaceutical manufacturing with GMP quality, flexible batch sizes, and end-to-end support.",
+//   alternates: {
+//     canonical: "/private-label-manufacturing-oem",
+//   },
+// };
 
 const capabilities = [
   {
@@ -191,7 +194,13 @@ export default function PrivateLabelManufacturingPage() {
   const brandGradient = "bg-gradient-to-r from-[#FF7A00] to-[#E2004F]";
   const brandTextGradient =
     "bg-gradient-to-r from-[#FF7A00] to-[#E2004F] bg-clip-text text-transparent";
-
+const { translations } = useLanguage();
+const t = translations?.oemPage;
+const highlights = t?.highlights || [
+  "WHO-GMP aligned production standards",
+  "Flexible batch planning for market launches",
+  "End-to-end OEM support from concept to delivery",
+];
   return (
     <div className="bg-[#f6f8fb] min-h-screen">
       <section className="relative h-[42vh] md:h-[66vh] overflow-hidden">
@@ -206,27 +215,26 @@ export default function PrivateLabelManufacturingPage() {
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-7xl mx-auto px-6 md:px-16 text-white">
             <p className="text-sm md:text-base tracking-[0.2em] uppercase text-[#ffd4bf] font-semibold">
-              Ivexia Offerings
+              {t?.hero?.badge || "Ivexia Offerings"}
             </p>
             <h1 className="text-3xl text-[#FF7A00] md:text-5xl font-bold mt-3 max-w-3xl leading-tight">
-              Private Label Manufacturing / OEM
+              {t?.hero?.title || "Private Label Manufacturing / OEM"}
             </h1>
             <p className="mt-4 text-sm md:text-lg text-white max-w-2xl">
-              Build and scale your pharmaceutical brand with structured OEM
-              execution, quality governance, and dependable supply continuity.
+              {t?.hero?.desc || "Build and scale your pharmaceutical brand..."}
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link
                 href="/contact"
                 className="px-6 py-3 rounded-full bg-white text-[#E2004F] font-semibold hover:bg-[#fff3ef] transition-colors"
               >
-                Contact US
+               {t?.hero?.contact || "Contact Us"}
               </Link>
               <Link
                 href="/offerings-overview"
                 className="px-6 py-3 rounded-full border border-white/70 text-white font-semibold hover:bg-white/10 transition-colors"
               >
-                Explore All Offerings
+               {t?.hero?.explore || "Explore All Offerings"}
               </Link>
             </div>
           </div>
@@ -235,11 +243,7 @@ export default function PrivateLabelManufacturingPage() {
 
       <section className="max-w-7xl mx-auto px-6 md:px-16 py-14 md:py-20">
         <div className="grid md:grid-cols-3 gap-5">
-          {[
-            "WHO-GMP aligned production standards",
-            "Flexible batch planning for market launches",
-            "End-to-end OEM support from concept to delivery",
-          ].map((item) => (
+        {highlights.map((item) => (
             <div
               key={item}
               className="rounded-xl border border-[#E2004F]/15 bg-[#fff8f4] p-5 text-[#0d2d47] font-medium"
@@ -252,18 +256,18 @@ export default function PrivateLabelManufacturingPage() {
 
       <section className="max-w-7xl mx-auto px-6 md:px-16 pb-8 md:pb-14">
         <div className="grid md:grid-cols-3 gap-5">
-          {engagementModels.map((model) => (
+         {engagementModels.map((model, index) => (
             <article
-              key={model.title}
+              key={t?.engagement?.[index]?.title || model.title}
               className="rounded-2xl border border-[#E2004F]/15 bg-white p-6 shadow-sm"
             >
               <h2 className={`text-xl font-semibold ${brandTextGradient}`}>
-                {model.title}
+              {t?.engagement?.[index]?.title || model.title}
               </h2>
               <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-                {model.description}
+               {t?.engagement?.[index]?.desc || model.description}
               </p>
-              <p className="mt-4 text-sm font-medium text-[#0d2d47]">{model.fit}</p>
+              <p className="mt-4 text-sm font-medium text-[#0d2d47]">{t?.engagement?.[index]?.fit || model.fit}</p>
             </article>
           ))}
         </div>
@@ -272,19 +276,18 @@ export default function PrivateLabelManufacturingPage() {
       <section className="bg-[#fff7f2] py-14 md:py-20">
         <div className="max-w-7xl mx-auto px-6 md:px-16">
           <h2 className="text-2xl md:text-4xl font-bold text-[#0d2d47] text-center">
-            OEM Capability Stack
+            {t?.capabilityHeading || "OEM Capability Stack"}
           </h2>
           <p className="text-gray-600 text-center mt-3 max-w-3xl mx-auto">
-            A full private-label workflow designed for distributors, importers,
-            and healthcare brands operating in varied market conditions.
+           {t?.capabilityDesc || "A full private-label workflow designed for distributors, importers, and healthcare brands operating in varied market conditions."}
           </p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
-            {capabilities.map((item) => {
+            {capabilities.map((item, index) => {
               const Icon = item.icon;
               return (
                 <article
-                  key={item.title}
+                  key={t?.capabilities?.[index]?.title || item.title}
                   className="bg-white rounded-2xl border border-[#E2004F]/15 shadow-sm p-6"
                 >
                   <div
@@ -293,10 +296,10 @@ export default function PrivateLabelManufacturingPage() {
                     <Icon />
                   </div>
                   <h3 className="mt-4 text-lg font-semibold text-[#0d2d47]">
-                    {item.title}
+                    {t?.capabilities?.[index]?.title || item.title}
                   </h3>
                   <p className="text-sm text-gray-600 mt-2 leading-relaxed">
-                    {item.description}
+                    {t?.capabilities?.[index]?.desc || item.description}
                   </p>
                 </article>
               );
@@ -308,7 +311,7 @@ export default function PrivateLabelManufacturingPage() {
       <section className="max-w-7xl mx-auto px-6 md:px-16 py-14 md:py-20 grid lg:grid-cols-2 gap-12 items-start">
         <div>
           <h2 className="text-2xl md:text-4xl font-bold text-[#0d2d47]">
-            Dosage Forms We Manufacture
+            {t?.dosageHeading || "Dosage Forms We Manufacture"}
           </h2>
           <p className="text-gray-600 mt-3">
             Our setup supports multiple dosage platforms with consistency in
@@ -328,7 +331,7 @@ export default function PrivateLabelManufacturingPage() {
 
         <div className="bg-white rounded-2xl border border-[#E2004F]/15 p-7 shadow-sm">
           <h3 className={`text-xl font-semibold ${brandTextGradient}`}>
-            Documentation and Technical Deliverables
+            {t?.docsHeading || "Documentation and Technical Deliverables"}
           </h3>
           <p className="text-sm text-gray-600 mt-2">
             As required by product and market scope, projects can include the
@@ -350,12 +353,14 @@ export default function PrivateLabelManufacturingPage() {
       <section className={`py-14 md:py-20 text-white ${brandGradient}`}>
         <div className="max-w-7xl mx-auto px-6 md:px-16">
           <h2 className="text-2xl md:text-4xl font-bold text-center">
-            Project Execution Flow
+           {t?.processHeading || "Project Execution Flow"}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
             {processSteps.map((step, index) => (
               <div key={step} className="rounded-2xl bg-white/15 p-6 backdrop-blur-sm">
-                <p className="text-white text-sm font-semibold">Step {index + 1}</p>
+               <p className="text-white text-sm font-semibold">
+  {t?.step || "Step"} {index + 1}
+</p>
                 <p className="mt-2 text-sm leading-relaxed">{step}</p>
               </div>
             ))}
@@ -365,7 +370,7 @@ export default function PrivateLabelManufacturingPage() {
 
       <section className="max-w-7xl mx-auto px-6 md:px-16 py-14 md:py-20">
         <h2 className="text-2xl md:text-4xl font-bold text-[#0d2d47] text-center">
-          Quality Governance Framework
+       {t?.qualityHeading || "Quality Governance Framework"}
         </h2>
         <p className="text-gray-600 text-center mt-3 max-w-3xl mx-auto">
           Quality is embedded at each stage from raw material qualification to
@@ -382,7 +387,7 @@ export default function PrivateLabelManufacturingPage() {
               </h3>
               <p className="text-sm text-gray-600 mt-3">{item.control}</p>
               <p className="text-sm text-[#0d2d47] mt-3 font-medium">
-                Output: {item.output}
+                {t?.output || "Output"}: {item.output}
               </p>
             </article>
           ))}
@@ -393,11 +398,10 @@ export default function PrivateLabelManufacturingPage() {
         <div className="max-w-7xl mx-auto px-6 md:px-16 grid lg:grid-cols-2 gap-10 items-start">
           <div>
             <h2 className="text-2xl md:text-4xl font-bold text-[#0d2d47]">
-              Therapeutic and Market Coverage
+            {t?.therapyHeading || "Therapeutic and Market Coverage"}
             </h2>
             <p className="text-gray-600 mt-3">
-              We support private-label programs across essential therapeutic
-              categories for regulated and semi-regulated markets.
+             {t?.supportHeading || "What We Support End-to-End"}
             </p>
             <div className="grid grid-cols-2 gap-3 mt-7">
               {therapeuticAreas.map((area) => (
@@ -412,9 +416,9 @@ export default function PrivateLabelManufacturingPage() {
           </div>
 
           <div className="bg-white rounded-2xl border border-[#E2004F]/15 shadow-sm p-7">
-            <h3 className={`text-xl font-semibold ${brandTextGradient}`}>
-              What We Support End-to-End
-            </h3>
+           <h3 className={`text-xl font-semibold ${brandTextGradient}`}>
+  {t?.supportHeading || "What We Support End-to-End"}
+</h3>
             <div className="space-y-5 mt-5">
               {supportScope.map((item) => (
                 <div key={item.title}>
@@ -430,7 +434,7 @@ export default function PrivateLabelManufacturingPage() {
       <section className="max-w-7xl mx-auto px-6 md:px-16 py-14 md:py-20 grid lg:grid-cols-2 gap-10 items-start">
         <div className="space-y-4">
           <h2 className="text-2xl md:text-4xl font-bold text-[#0d2d47]">
-            Built on Quality and Compliance
+           {t?.qualityBuiltHeading || "Built on Quality and Compliance"}
           </h2>
           <p className="text-gray-600">
             Every batch follows validated processes, quality checkpoints, and
@@ -464,7 +468,7 @@ export default function PrivateLabelManufacturingPage() {
       <section className="max-w-7xl mx-auto px-6 md:px-16 py-4 md:py-10">
         <div className="rounded-2xl border border-[#E2004F]/15 bg-white p-7 md:p-8">
           <h2 className={`text-2xl md:text-3xl font-bold ${brandTextGradient}`}>
-            Information Needed to Start Scoping
+         {t?.onboardingHeading || "Information Needed to Start Scoping"}
           </h2>
           <p className="text-sm text-gray-600 mt-2">
             Sharing the below inputs helps us propose a practical and faster OEM
@@ -485,7 +489,7 @@ export default function PrivateLabelManufacturingPage() {
 
       <section className="max-w-5xl mx-auto px-6 md:px-16 py-6 md:py-10">
         <h2 className="text-2xl md:text-4xl font-bold text-[#0d2d47] text-center">
-          Frequently Asked Questions
+         {t?.faqHeading || "Frequently Asked Questions"}
         </h2>
         <div className="mt-8 space-y-3">
           {faqs.map((item) => (
@@ -510,7 +514,7 @@ export default function PrivateLabelManufacturingPage() {
       <section className={`py-14 md:py-20 text-white ${brandGradient}`}>
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h2 className="text-2xl md:text-4xl font-bold">
-            Launch Your Private Label Portfolio With Ivexia
+           {t?.ctaHeading || "Launch Your Private Label Portfolio With Ivexia"}
           </h2>
           <p className="mt-3 text-gray-100">
             Share your market plan and product requirement set. Our team can
@@ -521,13 +525,13 @@ export default function PrivateLabelManufacturingPage() {
               href="/contact"
               className="px-6 py-3 rounded-full bg-white text-[#E2004F] font-semibold hover:bg-[#fff3ef] transition-colors"
             >
-              Contact Us
+             {t?.ctaContact || "Contact Us"}
             </Link>
             <Link
               href="/offerings-overview"
               className="px-6 py-3 rounded-full border border-white/70 text-white font-semibold hover:bg-white/10 transition-colors"
             >
-              Explore All Offerings
+              {t?.ctaExplore || "Explore All Offerings"}
             </Link>
           </div>
         </div>
@@ -535,3 +539,5 @@ export default function PrivateLabelManufacturingPage() {
     </div>
   );
 }
+
+

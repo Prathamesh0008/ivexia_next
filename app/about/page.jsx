@@ -1,3 +1,6 @@
+
+
+
 //ivexia\app\about\page.jsx
 "use client";
 
@@ -6,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { Suspense } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import {
   FaRocket,
   FaIndustry,
@@ -89,14 +93,13 @@ function AutoScrollLabs() {
 /* =========================
    STATS COUNTER
 ========================= */
-function StatsCounter() {
+function StatsCounter({ t }) {
   const stats = [
-    { number: "15+", label: "Years of Excellence" },
-    { number: "50+", label: "Global Markets" },
-    { number: "200+", label: "Products" },
-    { number: "1000+", label: "Employees" },
+    { number: "15+", label: t?.stats?.years },
+    { number: "50+", label: t?.stats?.markets },
+    { number: "200+", label: t?.stats?.products },
+    { number: "1000+", label: t?.stats?.employees },
   ];
-
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 max-w-5xl mx-auto px-4">
       {stats.map((stat, i) => (
@@ -123,6 +126,8 @@ function StatsCounter() {
    MAIN ABOUT PAGE
 ========================= */
 export default function AboutPage() {
+  const { translations } = useLanguage();
+const t = translations?.aboutPage;
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
     whileInView: { opacity: 1, y: 0 },
@@ -148,10 +153,10 @@ export default function AboutPage() {
         >
           <div className="bg-white/10 backdrop-blur-md px-4 sm:px-6 md:px-10 py-8 sm:py-10 md:py-12 rounded-2xl sm:rounded-3xl text-center border border-white/20 max-w-[90%] sm:max-w-2xl md:max-w-4xl mx-auto">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 leading-tight">
-              About Ivexia Pharmaceuticals
+             {t?.hero?.title}
             </h1>
             <p className="text-gray-200 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto">
-              Innovating healthcare with global pharmaceutical excellence and unwavering commitment to quality.
+              {t?.hero?.subtitle}
             </p>
           </div>
         </motion.div>
@@ -159,7 +164,7 @@ export default function AboutPage() {
 
       {/* Stats Counter - New Section */}
       <section className="py-12 sm:py-16 bg-white border-b border-gray-100">
-        <StatsCounter />
+       <StatsCounter t={t} />
       </section>
 
       {/* 2️⃣ BRAND STORY - Enhanced */}
@@ -179,24 +184,19 @@ export default function AboutPage() {
         </div>
         <div className="order-1 md:order-2">
           <span className="text-[#E2004F] font-semibold tracking-wider text-xs sm:text-sm uppercase mb-2 sm:mb-4 block">
-            Our Story
+           {t?.story?.badge}
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-4 sm:mb-6 leading-tight">
-            Committed to Pharmaceutical Excellence Since 2018
+            {t?.story?.title}
           </h2>
           <p className="text-gray-600 mb-4 sm:mb-6 text-base sm:text-lg leading-relaxed">
-            Founded with a commitment to innovation, Ivexia Pharmaceuticals delivers world-class 
-            pharmaceutical manufacturing aligned with global standards. Our journey began with a simple 
-            vision: to make quality healthcare accessible worldwide.
+            {t?.story?.p1}
           </p>
           <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">
-            We combine regulatory expertise, advanced research, and manufacturing precision to serve 
-            international markets. Every product we manufacture undergoes rigorous quality control to 
-            meet the highest safety standards.
+            {t?.story?.p2}
           </p>
           <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-            Today, Ivexia operates across multiple regions with strategic expansion into Europe and MENA, 
-            serving millions of patients globally.
+            {t?.story?.p3}
           </p>
         </div>
       </motion.section>
@@ -206,10 +206,10 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">
-              Our Purpose
+              {t?.purpose?.title}
             </h2>
             <p className="text-gray-300 text-sm sm:text-base max-w-2xl mx-auto px-4">
-              Driven by innovation, guided by integrity
+              {t?.purpose?.subtitle}
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
@@ -225,11 +225,10 @@ export default function AboutPage() {
                 </svg>
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold text-[#FF7A00] mb-3 sm:mb-4">
-                Our Vision
+               {t?.purpose?.visionTitle}
               </h2>
               <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
-                To become a globally trusted pharmaceutical partner delivering innovation and safety, 
-                improving patient outcomes through excellence in everything we do.
+                {t?.purpose?.visionDesc}
               </p>
             </motion.div>
             <motion.div 
@@ -244,11 +243,10 @@ export default function AboutPage() {
                 </svg>
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold text-[#19a6b5] mb-3 sm:mb-4">
-                Our Mission
+               {t?.purpose?.missionTitle}
               </h2>
               <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
-                To manufacture high-quality medicines through research excellence and compliance, 
-                making healthcare accessible and affordable for communities worldwide.
+               {t?.purpose?.missionDesc}
               </p>
             </motion.div>
           </div>
@@ -260,36 +258,36 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeInUp} className="text-center mb-10 sm:mb-16">
             <span className="text-[#E2004F] font-semibold tracking-wider text-xs sm:text-sm uppercase mb-2 sm:mb-4 block">
-              Global Footprint
+              {t?.global?.badge}
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-3 sm:mb-4">
-              Worldwide Operations
+              {t?.global?.title}
             </h2>
             <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto px-4">
-              Strategically located to serve global markets efficiently
+              {t?.global?.subtitle}
             </p>
           </motion.div>
           
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-            {[
-              { loc: "India", desc: "Strategic pharmaceutical presence with state-of-the-art manufacturing facilities and R&D centers." },
-              { loc: "North Macedonia", desc: "European hub for manufacturing and distribution, serving EU markets with excellence." },
-              { loc: "Qatar", desc: "MENA regional headquarters, expanding healthcare access across the Middle East." }
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="group bg-white p-6 sm:p-8 shadow-lg hover:shadow-2xl rounded-xl sm:rounded-2xl transition-all duration-300 border border-gray-100"
-              >
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#0d2d47]/10 rounded-lg mb-4 sm:mb-6 flex items-center justify-center group-hover:bg-[#0d2d47] transition-colors duration-300">
-                  <span className="text-lg sm:text-xl font-bold text-[#0d2d47] group-hover:text-white">{i + 1}</span>
-                </div>
-                <h3 className="text-xl sm:text-2xl font-semibold text-[#0d2d47] mb-2 sm:mb-3">{item.loc}</h3>
-                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{item.desc}</p>
-              </motion.div>
-            ))}
+            {t?.globalLocations?.map((item, i) => (
+  <motion.div
+    key={i}
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5, delay: i * 0.1 }}
+    className="group bg-white p-6 sm:p-8 shadow-lg hover:shadow-2xl rounded-xl sm:rounded-2xl transition-all duration-300 border border-gray-100"
+  >
+    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#0d2d47]/10 rounded-lg mb-4 sm:mb-6 flex items-center justify-center group-hover:bg-[#0d2d47] transition-colors duration-300">
+      <span className="text-lg sm:text-xl font-bold text-[#0d2d47] group-hover:text-white">{i + 1}</span>
+    </div>
+    <h3 className="text-xl sm:text-2xl font-semibold text-[#0d2d47] mb-2 sm:mb-3">
+      {item.loc}
+    </h3>
+    <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+      {item.desc}
+    </p>
+  </motion.div>
+))}
           </div>
         </div>
       </section>
@@ -299,13 +297,13 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeInUp} className="text-center mb-10 sm:mb-16">
             <span className="text-[#E2004F] font-semibold tracking-wider text-xs sm:text-sm uppercase mb-2 sm:mb-4 block">
-              What We Do
+              {t?.expertise?.badge}
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-3 sm:mb-4">
-              Areas of Expertise
+              {t?.expertise?.title}
             </h2>
             <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto px-4">
-              Specialized pharmaceutical solutions for complex healthcare needs
+             {t?.expertise?.subtitle}
             </p>
           </motion.div>
 
@@ -348,13 +346,13 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeInUp} className="text-center mb-10 sm:mb-16">
             <span className="text-[#E2004F] font-semibold tracking-wider text-xs sm:text-sm uppercase mb-2 sm:mb-4 block">
-              Our Leaders
+            {t?.leadership?.badge}
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-3 sm:mb-4">
-              Executive Leadership
+              {t?.leadership?.title}
             </h2>
             <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto px-4">
-              Experienced professionals driving pharmaceutical innovation
+            {t?.leadership?.subtitle}
             </p>
           </motion.div>
 
@@ -418,13 +416,13 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto">
           <motion.div {...fadeInUp} className="text-center mb-10 sm:mb-16">
             <span className="text-[#E2004F] font-semibold tracking-wider text-xs sm:text-sm uppercase mb-2 sm:mb-4 block">
-              Our Journey
+             {t?.timeline?.badge}
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-3 sm:mb-4">
-              Milestones of Growth
+              {t?.timeline?.title}
             </h2>
             <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto px-4">
-              Key achievements in our path to pharmaceutical excellence
+             {t?.timeline?.subtitle}
             </p>
           </motion.div>
 
@@ -534,13 +532,13 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeInUp} className="text-center mb-10 sm:mb-16">
             <span className="text-[#E2004F] font-semibold tracking-wider text-xs sm:text-sm uppercase mb-2 sm:mb-4 block">
-              Quality Assurance
+             {t?.certifications?.badge}
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-3 sm:mb-4">
-              Global Certifications
+              {t?.certifications?.title}
             </h2>
             <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto px-4">
-              Meeting international quality standards across all operations
+             {t?.certifications?.subtitle}
             </p>
           </motion.div>
 
@@ -574,10 +572,10 @@ export default function AboutPage() {
           className="max-w-4xl mx-auto"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-            “Driven by Innovation.<br />Powered by Quality.”
+           {t?.statement?.title}
           </h2>
           <p className="text-gray-300 text-base sm:text-lg md:text-xl max-w-2xl mx-auto px-4">
-            Ivexia stands at the forefront of pharmaceutical advancement, committed to improving global health outcomes.
+           {t?.statement?.subtitle}
           </p>
         </motion.div>
       </section>
@@ -596,10 +594,10 @@ export default function AboutPage() {
           className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
-            State-of-the-Art Facilities
+            {t?.facilities?.title}
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed">
-            Designed to meet and exceed global regulatory compliance standards, our facilities represent the pinnacle of pharmaceutical manufacturing excellence.
+           {t?.facilities?.subtitle}
           </p>
         </motion.div>
       </section>
@@ -609,13 +607,13 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeInUp} className="text-center mb-10 sm:mb-16">
             <span className="text-[#E2004F] font-semibold tracking-wider text-xs sm:text-sm uppercase mb-2 sm:mb-4 block">
-              Innovation Hub
+              {t?.rnd?.badge}
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-3 sm:mb-4">
-              Research & Development
+             {t?.rnd?.title}
             </h2>
             <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto px-4">
-              Pushing boundaries in pharmaceutical research
+             {t?.rnd?.subtitle}
             </p>
           </motion.div>
           <AutoScrollLabs />
@@ -632,28 +630,24 @@ export default function AboutPage() {
             className="order-2 md:order-1"
           >
             <span className="text-[#E2004F] font-semibold tracking-wider text-xs sm:text-sm uppercase mb-2 sm:mb-4 block">
-              Environment
+              {t?.sustainability?.badge}
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-4 sm:mb-6 leading-tight">
-              Commitment to Sustainability
+             {t?.sustainability?.title}
             </h2>
             <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
-              We prioritize eco-friendly manufacturing processes and responsible sourcing. Our facilities are designed to minimize environmental impact while maximizing efficiency.
+              {t?.sustainability?.desc}
             </p>
             <div className="space-y-3 sm:space-y-4">
-              <div className="flex items-center gap-2 sm:gap-3">
-                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#19a6b5] rounded-full"></div>
-                <p className="text-gray-600 text-xs sm:text-sm md:text-base">Zero-waste manufacturing initiatives</p>
-              </div>
-              <div className="flex items-center gap-2 sm:gap-3">
-                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#19a6b5] rounded-full"></div>
-                <p className="text-gray-600 text-xs sm:text-sm md:text-base">Solar-powered facilities</p>
-              </div>
-              <div className="flex items-center gap-2 sm:gap-3">
-                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#19a6b5] rounded-full"></div>
-                <p className="text-gray-600 text-xs sm:text-sm md:text-base">Sustainable packaging solutions</p>
-              </div>
-            </div>
+  {t?.sustainability?.points?.map((item, i) => (
+    <div key={i} className="flex items-center gap-2 sm:gap-3">
+      <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#19a6b5] rounded-full"></div>
+      <p className="text-gray-600 text-xs sm:text-sm md:text-base">
+        {item}
+      </p>
+    </div>
+  ))}
+</div>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 30 }}
@@ -678,13 +672,13 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeInUp} className="mb-10 sm:mb-16">
             <span className="text-[#E2004F] font-semibold tracking-wider text-xs sm:text-sm uppercase mb-2 sm:mb-4 block">
-              Worldwide Reach
+            {t?.presence?.badge}
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-3 sm:mb-4">
-              Global Presence
+              {t?.presence?.title}
             </h2>
             <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto px-4">
-              Serving patients in over 50 countries across 6 continents
+              {t?.presence?.subtitle}
             </p>
           </motion.div>
           
@@ -710,13 +704,13 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeInUp} className="text-center mb-10 sm:mb-16">
             <span className="text-[#E2004F] font-semibold tracking-wider text-xs sm:text-sm uppercase mb-2 sm:mb-4 block">
-              Recognition
+              {t?.awards?.badge}
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-3 sm:mb-4">
-              Awards & Recognition
+              {t?.awards?.title}
             </h2>
             <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto px-4">
-              Celebrating excellence in pharmaceutical innovation
+              {t?.awards?.subtitle}
             </p>
           </motion.div>
 
@@ -756,16 +750,16 @@ export default function AboutPage() {
           className="max-w-3xl mx-auto"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-            Partner With Us
+            {t?.cta?.title}
           </h2>
           <p className="text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 leading-relaxed px-4">
-            Join us in delivering quality healthcare solutions worldwide. Together, we can make a difference in global health.
+            {t?.cta?.subtitle}
           </p>
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 bg-white text-[#0d2d47] px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1 text-sm sm:text-base"
           >
-            Contact Us
+           {t?.cta?.button}
             <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

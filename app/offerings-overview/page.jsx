@@ -1,66 +1,87 @@
+//ivexia\app\offerings-overview\page.jsx
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight, FaCheckCircle } from "react-icons/fa";
-
+import { useLanguage } from "@/contexts/LanguageContext";
 export default function OfferingsOverviewPage() {
   const brandGradient = "bg-gradient-to-r from-[#FF7A00] to-[#E2004F]";
   const brandTextGradient =
     "bg-gradient-to-r from-[#FF7A00] to-[#E2004F] bg-clip-text text-transparent";
+const { translations } = useLanguage();
+ const offerings = [
+  {
+    id: "01",
+    title: translations?.offeringsOverview?.offerings?.api?.title || "Active Pharmaceutical Ingredients (API)",
+    subtitle: translations?.offeringsOverview?.offerings?.api?.subtitle || "Raw-Material Portfolio",
+    desc: translations?.offeringsOverview?.offerings?.api?.desc || "API solutions...",
+    image: "/images/overview-api.jpg",
+    link: "/products/ingredient",
+    cta: translations?.offeringsOverview?.offerings?.api?.cta || "Explore API",
+    useCases: [
+      translations?.offeringsOverview?.offerings?.api?.use1 || "Distributors",
+      translations?.offeringsOverview?.offerings?.api?.use2 || "Formulation manufacturers",
+      translations?.offeringsOverview?.offerings?.api?.use3 || "B2B sourcing teams",
+    ],
+  },
 
-  const offerings = [
-    {
-      id: "01",
-      title: "Active Pharmaceutical Ingredients (API)",
-      subtitle: "Raw-Material Portfolio",
-      desc: "API solutions developed for quality consistency, regulatory compatibility, and long-term supply planning.",
-      image: "/images/overview-api.jpg",
-      link: "/products/ingredient",
-      cta: "Explore API",
-      useCases: ["Distributors", "Formulation manufacturers", "B2B sourcing teams"],
-    },
-    {
-      id: "02",
-      title: "Finished Pharmaceutical Products",
-      subtitle: "Ready-to-Market Formulations",
-      desc: "Finished dosage portfolio across therapeutic categories with market-ready documentation and commercialization support.",
-      image: "/images/overview-products.jpg",
-      link: "/products",
-      cta: "View Products",
-      useCases: ["Importers", "Hospital procurement", "National tenders"],
-    },
-    {
-      id: "03",
-      title: "OTC & Consumer Healthcare",
-      subtitle: "Retail Healthcare Segment",
-      desc: "Accessible OTC products structured for daily healthcare demand and broad market distribution channels.",
-      image: "/images/overview-otc.jpg",
-      link: "/otc",
-      cta: "Explore OTC",
-      useCases: ["Retail chains", "Pharmacy networks", "Health stores"],
-    },
-    {
-      id: "04",
-      title: "Private Label Manufacturing / OEM",
-      subtitle: "Brand-Building Partnerships",
-      desc: "End-to-end private label support including product planning, manufacturing, documentation, and launch execution.",
-      image: "/images/Manufacturing.jpg",
-      link: "/private-label-manufacturing-oem",
-      cta: "Explore OEM",
-      useCases: ["Brand owners", "Market entrants", "Regional healthcare businesses"],
-    },
-  ];
+  {
+    id: "02",
+    title: translations?.offeringsOverview?.offerings?.finished?.title || "Finished Pharmaceutical Products",
+    subtitle: translations?.offeringsOverview?.offerings?.finished?.subtitle || "Ready-to-Market Formulations",
+    desc: translations?.offeringsOverview?.offerings?.finished?.desc || "Finished dosage portfolio...",
+    image: "/images/overview-products.jpg",
+    link: "/products",
+    cta: translations?.offeringsOverview?.offerings?.finished?.cta || "View Products",
+    useCases: [
+      translations?.offeringsOverview?.offerings?.finished?.use1 || "Importers",
+      translations?.offeringsOverview?.offerings?.finished?.use2 || "Hospital procurement",
+      translations?.offeringsOverview?.offerings?.finished?.use3 || "National tenders",
+    ],
+  },
+
+  {
+    id: "03",
+    title: translations?.offeringsOverview?.offerings?.otc?.title || "OTC & Consumer Healthcare",
+    subtitle: translations?.offeringsOverview?.offerings?.otc?.subtitle || "Retail Healthcare Segment",
+    desc: translations?.offeringsOverview?.offerings?.otc?.desc || "Accessible OTC products...",
+    image: "/images/overview-otc.jpg",
+    link: "/otc",
+    cta: translations?.offeringsOverview?.offerings?.otc?.cta || "Explore OTC",
+    useCases: [
+      translations?.offeringsOverview?.offerings?.otc?.use1 || "Retail chains",
+      translations?.offeringsOverview?.offerings?.otc?.use2 || "Pharmacy networks",
+      translations?.offeringsOverview?.offerings?.otc?.use3 || "Health stores",
+    ],
+  },
+
+  {
+    id: "04",
+    title: translations?.offeringsOverview?.offerings?.oem?.title || "Private Label Manufacturing / OEM",
+    subtitle: translations?.offeringsOverview?.offerings?.oem?.subtitle || "Brand-Building Partnerships",
+    desc: translations?.offeringsOverview?.offerings?.oem?.desc || "End-to-end private label support...",
+    image: "/images/Manufacturing.jpg",
+    link: "/private-label-manufacturing-oem",
+    cta: translations?.offeringsOverview?.offerings?.oem?.cta || "Explore OEM",
+    useCases: [
+      translations?.offeringsOverview?.offerings?.oem?.use1 || "Brand owners",
+      translations?.offeringsOverview?.offerings?.oem?.use2 || "Market entrants",
+      translations?.offeringsOverview?.offerings?.oem?.use3 || "Regional healthcare businesses",
+    ],
+  },
+];
 
   const partnerTracks = [
     {
-      title: "For Distributors & Importers",
+    title: translations?.offeringsOverview?.partnerTracks?.distributors || "For Distributors & Importers",
       points: [
-        "Portfolio alignment by market demand",
-        "Support for repeat supply cycles",
-        "Documentation readiness for trade",
-      ],
+  translations?.offeringsOverview?.partnerPoints?.p1 || "...",
+  translations?.offeringsOverview?.partnerPoints?.p2 || "...",
+  translations?.offeringsOverview?.partnerPoints?.p3 || "...",
+]
     },
     {
-      title: "For Private Label Brands",
+      title: translations?.offeringsOverview?.partnerTracks?.privateLabel || "For Private Label Brands",
       points: [
         "OEM pathway from concept to launch",
         "Packaging and compliance coordination",
@@ -68,7 +89,7 @@ export default function OfferingsOverviewPage() {
       ],
     },
     {
-      title: "For Strategic Partners",
+      title: translations?.offeringsOverview?.partnerTracks?.strategic || "For Strategic Partners",
       points: [
         "Multi-category healthcare alignment",
         "Long-term category development support",
@@ -79,20 +100,20 @@ export default function OfferingsOverviewPage() {
 
   const executionModel = [
     {
-      step: "Portfolio Scoping",
-      detail: "Define category fit, target market, and supply priorities.",
+      step: translations?.offeringsOverview?.steps?.step1 || "Portfolio Scoping",
+     detail: translations?.offeringsOverview?.steps?.detail1 || "Define category fit...",
     },
     {
-      step: "Technical & Regulatory Setup",
-      detail: "Prepare product files, quality documentation, and compliance pathway.",
+      step: translations?.offeringsOverview?.steps?.step2 || "Technical & Regulatory Setup",
+      detail: translations?.offeringsOverview?.steps?.detail2 || "Prepare product files, quality documentation, and compliance pathway.",
     },
     {
-      step: "Manufacturing & Release",
-      detail: "Execute validated production with in-process quality controls.",
+      step: translations?.offeringsOverview?.steps?.step3 || "Manufacturing & Release",
+      detail: translations?.offeringsOverview?.steps?.detail3 || "Execute validated production with in-process quality controls.",
     },
     {
-      step: "Supply & Market Continuity",
-      detail: "Enable dispatch planning and repeat-order consistency.",
+      step: translations?.offeringsOverview?.steps?.step4 || "Supply & Market Continuity",
+      detail: translations?.offeringsOverview?.steps?.detail4 || "Enable dispatch planning and repeat-order consistency.",
     },
   ];
 
@@ -102,15 +123,13 @@ export default function OfferingsOverviewPage() {
         <div className="max-w-7xl mx-auto px-6 md:px-16 py-12 md:py-20 grid lg:grid-cols-[1fr_460px] gap-10 items-center">
           <div>
             <p className={`text-xs md:text-sm uppercase tracking-[0.22em] font-semibold ${brandTextGradient}`}>
-              Ivexia Offerings Overview
+              {translations?.offeringsOverview?.badge || "Ivexia Offerings Overview"}
             </p>
             <h1 className="mt-4 text-4xl md:text-6xl font-bold leading-tight">
-              Practical Healthcare Offerings for Real Market Execution
+             {translations?.offeringsOverview?.title || "Practical Healthcare Offerings..."}
             </h1>
             <p className="mt-5 text-base md:text-lg text-gray-600 max-w-3xl leading-relaxed">
-              This portfolio is structured for distributors, importers, and
-              healthcare brands that need consistency in supply, quality systems,
-              and long-term business reliability.
+              {translations?.offeringsOverview?.subtitle || "This portfolio is structured..."}
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -118,14 +137,14 @@ export default function OfferingsOverviewPage() {
                 href="/products"
                 className={`inline-flex items-center gap-2 rounded-full text-white px-6 py-3 font-semibold shadow-md hover:opacity-95 transition-opacity ${brandGradient}`}
               >
-                Browse Portfolio
+                {translations?.offeringsOverview?.browse || "Browse Portfolio"}
                 <FaArrowRight className="text-xs" />
               </Link>
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 rounded-full border border-[#E2004F]/30 text-[#E2004F] px-6 py-3 font-semibold hover:bg-[#fff4f1] transition-colors"
               >
-                Contact Team
+                {translations?.offeringsOverview?.contact || "Contact Team"}
               </Link>
             </div>
           </div>
@@ -133,7 +152,7 @@ export default function OfferingsOverviewPage() {
           <div className="relative h-[300px] md:h-[420px] rounded-3xl overflow-hidden shadow-xl">
             <Image
               src="/images/overview-hero.jpg"
-              alt="Ivexia offerings"
+              alt={translations?.offeringsOverview?.imageAlt || "Ivexia offerings"}
               fill
               priority
               className="object-cover"
@@ -141,10 +160,10 @@ export default function OfferingsOverviewPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#E2004F]/65 via-[#FF7A00]/20 to-transparent" />
             <div className="absolute bottom-0 p-6 text-white">
               <p className="text-xs uppercase tracking-[0.2em] text-[#ffd6c1]">
-                Enterprise Focus
+                {translations?.offeringsOverview?.enterprise || "Enterprise Focus"}
               </p>
               <p className="mt-2 font-semibold text-lg">
-                Designed for operational clarity, not just presentation.
+               {translations?.offeringsOverview?.enterpriseText || "Designed for operational clarity"}
               </p>
             </div>
           </div>
@@ -195,7 +214,7 @@ export default function OfferingsOverviewPage() {
                       {item.subtitle}
                     </span>
                     <span className="text-sm text-gray-400">/</span>
-                    <span className="text-sm text-gray-500">Track {item.id}</span>
+                    <span className="text-sm text-gray-500">{translations?.offeringsOverview?.track || "Track"} {item.id}</span>
                   </div>
 
                   <h3 className="mt-2 text-2xl md:text-3xl font-bold leading-tight">
@@ -237,14 +256,13 @@ export default function OfferingsOverviewPage() {
           <div className="grid lg:grid-cols-[1fr_1.1fr] gap-10 items-start">
             <div>
               <p className={`text-xs uppercase tracking-[0.2em] font-semibold ${brandTextGradient}`}>
-                Operating Framework
+                {translations?.offeringsOverview?.execution?.badge || "Operating Framework"}
               </p>
               <h2 className="mt-3 text-3xl md:text-4xl font-bold leading-tight">
-                How We Structure Execution
+              {translations?.offeringsOverview?.execution?.title || "How We Structure Execution"}
               </h2>
               <p className="mt-4 text-gray-600 leading-relaxed max-w-2xl">
-                We follow a structured model to reduce ambiguity and improve
-                predictability across product planning, compliance, and supply.
+                {translations?.offeringsOverview?.execution?.subtitle || "We follow a structured model..."}
               </p>
             </div>
 
@@ -255,7 +273,7 @@ export default function OfferingsOverviewPage() {
                   className="rounded-2xl border border-[#E2004F]/15 bg-[#fff8f4] p-5"
                 >
                   <p className="text-xs uppercase tracking-[0.2em] text-[#E2004F] font-semibold">
-                    Step {idx + 1}
+                    {translations?.offeringsOverview?.step || "Step"} {idx + 1}
                   </p>
                   <h3 className="mt-1 font-semibold text-lg">{item.step}</h3>
                   <p className="text-sm text-gray-600 mt-1.5">{item.detail}</p>
@@ -270,25 +288,23 @@ export default function OfferingsOverviewPage() {
         <div className="max-w-5xl mx-auto px-6">
           <div className={`rounded-3xl border border-[#E2004F]/20 text-white p-10 md:p-12 ${brandGradient}`}>
             <h2 className="text-3xl md:text-4xl font-bold text-center">
-              Build the Right Offering Mix for Your Market
+           {translations?.offeringsOverview?.ctaTitle || "Build the Right Offering Mix"}
             </h2>
             <p className="mt-4 text-gray-200 text-center max-w-3xl mx-auto">
-              If you share your market type, target categories, and expected
-              volume, we can propose the most practical combination across API,
-              finished products, OTC, and OEM.
+              {translations?.offeringsOverview?.ctaDesc || "If you share your market..."}
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Link
                 href="/contact"
                 className="rounded-full bg-white text-[#E2004F] px-6 py-3 font-semibold hover:bg-[#fff3ef] transition-colors"
               >
-                Start Discussion
+                {translations?.offeringsOverview?.start || "Start Discussion"}
               </Link>
               <Link
                 href="/about"
                 className="rounded-full border border-white/60 px-6 py-3 font-semibold hover:bg-white/10 transition-colors"
               >
-                Learn About Ivexia
+                {translations?.offeringsOverview?.learn || "Learn About Ivexia"}
               </Link>
             </div>
           </div>

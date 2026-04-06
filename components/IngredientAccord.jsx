@@ -1,28 +1,33 @@
+//ivexia\components\IngredientAccord.jsx
 "use client";
 
 import { useState } from "react";
-
+import { useLanguage } from "@/contexts/LanguageContext";
 export default function IngredientAccord() {
   const [openIndex, setOpenIndex] = useState(null);
 
-  const faqList = [
-    {
-      q: "Do you provide COA and supporting documents?",
-      a: "Yes, we provide COA and key documents based on product requirements and availability.",
-    },
-    {
-      q: "Can you support custom packaging or labeling?",
-      a: "Yes, custom packaging and labeling can be supported depending on MOQ and regulatory needs.",
-    },
-    {
-      q: "Do you ship internationally?",
-      a: "Yes, we support export documentation and international shipping options through our logistics partners.",
-    },
-    {
-      q: "How do I request pricing and availability?",
-      a: "You can contact our team via the contact page and mention the ingredient name and quantity.",
-    },
-  ];
+ 
+
+const { translations } = useLanguage();
+
+const faqList = [
+  {
+    q: translations?.ingredientFAQ?.q1 || "Do you provide COA and supporting documents?",
+    a: translations?.ingredientFAQ?.a1 || "Yes, we provide COA and key documents based on product requirements and availability.",
+  },
+  {
+    q: translations?.ingredientFAQ?.q2 || "Can you support custom packaging or labeling?",
+    a: translations?.ingredientFAQ?.a2 || "Yes, custom packaging and labeling can be supported depending on MOQ and regulatory needs.",
+  },
+  {
+    q: translations?.ingredientFAQ?.q3 || "Do you ship internationally?",
+    a: translations?.ingredientFAQ?.a3 || "Yes, we support export documentation and international shipping options.",
+  },
+  {
+    q: translations?.ingredientFAQ?.q4 || "How do I request pricing and availability?",
+    a: translations?.ingredientFAQ?.a4 || "You can contact our team via the contact page.",
+  },
+];
 
   const toggle = (idx) =>
     setOpenIndex((current) => (current === idx ? null : idx));
@@ -30,7 +35,7 @@ export default function IngredientAccord() {
   return (
     <section className="bg-white py-16 md:py-20 px-6 md:px-16">
       <h2 className="text-3xl md:text-4xl font-bold text-[#222] mb-8 text-center">
-        Frequently Asked Questions
+       {translations?.ingredientFAQ?.heading || "Frequently Asked Questions"}
       </h2>
 
       <div className="max-w-3xl mx-auto space-y-4">

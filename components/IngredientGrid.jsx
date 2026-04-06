@@ -1,7 +1,8 @@
+//ivexia\components\IngredientGrid.jsx
 "use client";
 
 import { useRouter } from "next/navigation";
-
+import { useLanguage } from "@/contexts/LanguageContext";
 export default function IngredientGrid({
   items = [],
   page = 1,
@@ -9,7 +10,7 @@ export default function IngredientGrid({
   onPageChange = () => {},
 }) {
   const router = useRouter();
-
+const { translations } = useLanguage();
   return (
     <div className="w-full">
       <div className="hidden overflow-x-auto rounded-lg border border-gray-300 bg-white shadow-sm md:block">
@@ -17,9 +18,9 @@ export default function IngredientGrid({
           <thead className="sticky top-0 z-10 bg-[#0d2d47] text-white">
             <tr>
               <th className="border-r border-gray-500 px-4 py-3 text-left font-semibold">
-                Name
+                {translations?.ingredientGrid?.name}
               </th>
-              <th className="px-4 py-3 text-left font-semibold">Category</th>
+              <th className="px-4 py-3 text-left font-semibold">{translations?.ingredientGrid?.noResults || "No results found"}</th>
             </tr>
           </thead>
 
@@ -27,7 +28,7 @@ export default function IngredientGrid({
             {items.length === 0 ? (
               <tr>
                 <td colSpan={2} className="border-t py-10 text-center text-gray-600">
-                  No results found
+                  {translations?.ingredientGrid?.category}
                 </td>
               </tr>
             ) : (
@@ -54,7 +55,7 @@ export default function IngredientGrid({
 
       <div className="space-y-4 md:hidden">
         {items.length === 0 ? (
-          <p className="py-10 text-center text-gray-600">No results found</p>
+          <p className="py-10 text-center text-gray-600">{translations?.ingredientGrid?.noResults || "No results found"}</p>
         ) : (
           items.map((item, index) => (
             <button
@@ -68,7 +69,7 @@ export default function IngredientGrid({
               </p>
 
               <div className="mt-2 text-sm text-gray-700">
-                <span className="font-medium">Category:</span>{" "}
+                <span className="font-medium">{translations?.ingredientGrid?.category}:</span>{" "}
                 {item.category || item.categoryKey || "-"}
               </div>
             </button>
@@ -86,11 +87,11 @@ export default function IngredientGrid({
               page <= 1 ? "cursor-not-allowed opacity-40" : "hover:bg-white"
             }`}
           >
-            Prev
+          {translations?.ingredientGrid?.prev || "Prev"}
           </button>
 
           <div className="text-sm text-gray-700">
-            Page <span className="font-semibold">{page}</span> of{" "}
+            {translations?.ingredientGrid?.page || "Page"} <span className="font-semibold">{page}</span> of{" "}
             <span className="font-semibold">{totalPages}</span>
           </div>
 
@@ -102,7 +103,7 @@ export default function IngredientGrid({
               page >= totalPages ? "cursor-not-allowed opacity-40" : "hover:bg-white"
             }`}
           >
-            Next
+           {translations?.ingredientGrid?.next || "Next"}
           </button>
         </div>
       )}

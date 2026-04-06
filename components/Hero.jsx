@@ -81,19 +81,34 @@ export default function Hero() {
   const reduceMotion = useReducedMotion();
   const { translations } = useLanguage();
 
-  const banners = baseBanners.map((item, index) => ({
+ const banners = baseBanners.map((item, index) => {
+  const t = translations?.hero?.[index] || {};
+
+  return {
     ...item,
-    ...(Array.isArray(translations?.hero) &&
-    translations.hero[index] &&
-    typeof translations.hero[index] === "object"
-      ? translations.hero[index]
-      : {}),
-    stats:
-      Array.isArray(translations?.hero?.[index]?.stats) &&
-      translations.hero[index].stats.length > 0
-        ? translations.hero[index].stats
-        : item.stats,
-  }));
+
+    // override fields safely
+    eyebrow: t.eyebrow || item.eyebrow,
+    title: t.title || item.title,
+    text: t.text || item.text,
+    cta: t.cta || item.cta,
+    secondaryCta: t.secondaryCta || item.secondaryCta,
+    spotlight: t.spotlight || item.spotlight,
+
+    // FIXED stats merge
+  //  stats:
+  // t?.stats?.length === item.stats.length
+  //   ? item.stats.map((baseStat, i) => ({
+  //       value: baseStat.value,              // keep original value
+  //       label: t.stats[i]?.label || baseStat.label, // translate label
+  //     }))
+  //   : item.stats,
+  stats: item.stats.map((baseStat, i) => ({
+  value: baseStat.value,
+  label: translations?.hero?.[index]?.stats?.[i]?.label || baseStat.label,
+})),
+  };
+});
 
   useEffect(() => {
     if (isHovered) {
@@ -215,7 +230,7 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.18 }}
                 className="max-w-3xl"
               >
-                <motion.div
+                {/* <motion.div
                   initial={{ opacity: 0, x: reduceMotion ? 0 : -18 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.28 }}
@@ -223,7 +238,7 @@ export default function Hero() {
                 >
                   <span className="h-2 w-2 rounded-full" style={{ backgroundColor: activeSlide.accent }} />
                   {activeSlide.subtitle || activeSlide.eyebrow}
-                </motion.div>
+                </motion.div> */}
 
                 <motion.h1
                   initial={{ opacity: 0, y: reduceMotion ? 0 : 22 }}
@@ -340,7 +355,7 @@ export default function Hero() {
                   transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                 />
 
-                <div className="relative overflow-hidden rounded-[28px] border border-white/12 bg-white/10 p-6 text-white shadow-[0_28px_80px_rgba(0,0,0,0.28)] backdrop-blur-xl">
+                {/* <div className="relative overflow-hidden rounded-[28px] border border-white/12 bg-white/10 p-6 text-white shadow-[0_28px_80px_rgba(0,0,0,0.28)] backdrop-blur-xl">
                   <div className="flex items-center justify-between text-[11px] uppercase tracking-[0.24em] text-white/65">
                     <span>Ivexia Focus</span>
                     <span>{String(currentIndex + 1).padStart(2, "0")}</span>
@@ -375,7 +390,7 @@ export default function Hero() {
                       </motion.div>
                     ))}
                   </div>
-                </div>
+                </div> */}
               </motion.div>
             </div>
           </div>
@@ -413,10 +428,10 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="absolute right-6 top-6 z-30 hidden rounded-full border border-white/12 bg-black/16 px-4 py-2 text-sm font-medium text-white/92 backdrop-blur-sm md:block">
+      {/* <div className="absolute right-6 top-6 z-30 hidden rounded-full border border-white/12 bg-black/16 px-4 py-2 text-sm font-medium text-white/92 backdrop-blur-sm md:block">
         {String(currentIndex + 1).padStart(2, "0")} /{" "}
         {String(banners.length).padStart(2, "0")}
-      </div>
+      </div> */}
 
       <button
         onClick={prevSlide}
@@ -440,14 +455,14 @@ export default function Hero() {
         transition={{ delay: 1.2, duration: 0.6 }}
         className="absolute bottom-8 right-8 z-30 hidden md:block"
       >
-        <div className="flex flex-col items-center gap-2 text-[11px] tracking-[0.24em] text-white/65">
+        {/* <div className="flex flex-col items-center gap-2 text-[11px] tracking-[0.24em] text-white/65">
           <span>SCROLL</span>
           <motion.div
             className="w-px bg-gradient-to-b from-white/70 to-transparent"
             animate={reduceMotion ? undefined : { height: [34, 52, 34] }}
             transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
           />
-        </div>
+        </div> */}
       </motion.div>
     </section>
   );

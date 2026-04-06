@@ -9,7 +9,7 @@ import { FaBars, FaGlobe, FaSearch, FaTimes } from "react-icons/fa";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
-
+import Link from "next/link";
 
 export default function Navbar() {
   const [ingredients, setIngredients] = useState([]);
@@ -183,28 +183,17 @@ const languages = [
   return (
     <nav className="fixed top-0 left-0 right-0 h-[88px] bg-white/95 backdrop-blur-md shadow-md z-50">
       <div className="flex justify-between items-center px-4 md:px-8 h-full">
-        <div
-          className="h-full flex items-center cursor-pointer"
-          onClick={() => goTo("/")}
-        >
-          <Image
-            src="/images/navlogo.png"
-            alt="Ivexia Logo"
-            width={320}
-            height={100}
-            className="h-12 md:h-12 w-auto object-contain block"
-            priority
-          />
-          {/* <Image
-  src="/images/navlogo.png"
-  alt="Ivexia Logo"
-  width={320}
-  height={100}
-  className="h-12 md:h-12 w-auto object-contain block"
-  priority
-  onContextMenu={(e) => e.preventDefault()}
-/> */}
-        </div>
+        <Link href="/">
+  <Image
+    src="/images/Ivexia.svg"
+    alt="Ivexia Logo"
+    width={220}
+    height={70}
+    priority
+    unoptimized
+    className="object-contain"
+  />
+</Link>
 
         <ul className="hidden lg:flex h-full gap-8 text-lg md:text-lg text-gray-800 items-center">
           <li

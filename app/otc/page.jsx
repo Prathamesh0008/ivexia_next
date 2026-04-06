@@ -1,25 +1,27 @@
+//ivexia\app\otc\page.jsx
 "use client";
 
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-
+import { useLanguage } from "@/contexts/LanguageContext";
 export default function OTC() {
   const router = useRouter();
+const { translations } = useLanguage();
+const t = translations?.otcPage;
+const sidebarItems = [
+  { label: t?.sidebar?.products || "Products", link: "/products" },
+  { label: t?.sidebar?.overview || "Overview", link: "/offerings-overview" },
+  { label: t?.sidebar?.api || "API", link: "/products/ingredient" },
+  { label: t?.sidebar?.otc || "OTC", link: "/otc" },
+  { label: t?.sidebar?.privateLabel || "Private Label / OEM", link: "/private-label-manufacturing-oem" },
+];
 
-  const sidebarItems = [
-    { label: "Products", link: "/products" },
-    { label: "Overview", link: "/offerings-overview" },
-    { label: "API", link: "/products/ingredient" },
-    { label: "OTC", link: "/otc" },
-    { label: "Private Label / OEM", link: "/private-label-manufacturing-oem" },
-  ];
-
-  const otcCategories = [
-    { title: "Pain Relief", desc: "Fast acting OTC pain management solutions." },
-    { title: "Allergy Care", desc: "Reliable relief from seasonal and chronic allergies." },
-    { title: "Digestive Health", desc: "Effective digestive support formulations." },
-    { title: "Cold & Flu", desc: "Complete symptom relief products." },
-  ];
+const otcCategories = t?.categories || [
+  { title: "Pain Relief", desc: "Fast acting OTC pain management solutions." },
+  { title: "Allergy Care", desc: "Reliable relief from seasonal and chronic allergies." },
+  { title: "Digestive Health", desc: "Effective digestive support formulations." },
+  { title: "Cold & Flu", desc: "Complete symptom relief products." },
+];
 
   return (
     <div className="bg-white min-h-screen">
@@ -30,9 +32,9 @@ export default function OTC() {
 
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center text-center text-white px-4">
           <div>
-            <h1 className="text-3xl md:text-5xl font-bold">Over The Counter (OTC)</h1>
+            <h1 className="text-3xl md:text-5xl font-bold">{t?.hero?.title || "Over The Counter (OTC)"}</h1>
             <p className="mt-4 text-base md:text-lg opacity-90 max-w-3xl mx-auto">
-              Safe, effective and accessible healthcare solutions.
+             {t?.hero?.desc || "Safe, effective and accessible healthcare solutions."}
             </p>
           </div>
         </div>
@@ -43,32 +45,32 @@ export default function OTC() {
 
         <div>
           <p className="text-gray-700 mb-6">
-            Our OTC portfolio focuses on safety, quality, and accessibility.
+           {t?.intro1 || "Our OTC portfolio focuses on safety, quality, and accessibility."}
           </p>
           <p className="text-gray-700 mb-10">
-            We develop consumer healthcare products trusted globally.
+           {t?.intro2 || "We develop consumer healthcare products trusted globally."}
           </p>
 
           {/* Feature Boxes */}
           <div className="grid md:grid-cols-3 gap-8 mb-14">
             <div className="bg-white border rounded-lg p-8 shadow-sm">
-              <h3 className="text-xl font-semibold text-[#0d2d47] mb-3">Scientific Formulation</h3>
-              <p className="text-gray-600 text-sm">Evidence-based OTC development.</p>
+              <h3 className="text-xl font-semibold text-[#0d2d47] mb-3">{t?.features?.f1?.title || "Scientific Formulation"}</h3>
+              <p className="text-gray-600 text-sm">{t?.features?.f1?.desc || "Evidence-based OTC development."}</p>
             </div>
 
             <div className="bg-white border rounded-lg p-8 shadow-sm">
-              <h3 className="text-xl font-semibold text-[#0d2d47] mb-3">Quality Standards</h3>
-              <p className="text-gray-600 text-sm">Manufactured under strict compliance.</p>
+              <h3 className="text-xl font-semibold text-[#0d2d47] mb-3">{t?.features?.f2?.title || "Quality Standards"}</h3>
+              <p className="text-gray-600 text-sm">{t?.features?.f2?.desc || "Manufactured under strict compliance."}</p>
             </div>
 
             <div className="bg-white border rounded-lg p-8 shadow-sm">
-              <h3 className="text-xl font-semibold text-[#0d2d47] mb-3">Wellness Focus</h3>
-              <p className="text-gray-600 text-sm">Designed for everyday healthcare needs.</p>
+              <h3 className="text-xl font-semibold text-[#0d2d47] mb-3">{t?.features?.f3?.title || "Wellness Focus"}</h3>
+              <p className="text-gray-600 text-sm">{t?.features?.f3?.desc || "Designed for everyday healthcare needs."}</p>
             </div>
           </div>
 
           <h2 className="text-3xl md:text-4xl font-semibold mb-10 text-center">
-            OTC Categories
+           {t?.categoriesHeading || "OTC Categories"}
           </h2>
 
           <div className="grid gap-10 sm:grid-cols-2">
@@ -92,7 +94,7 @@ export default function OTC() {
           <div className="sticky top-24">
 
             <h3 className="text-xl font-semibold text-[#0d2d47] mb-3">
-              Explore
+         {t?.sidebar?.heading || "Explore"}
             </h3>
 
             <div className="flex flex-col gap-3">

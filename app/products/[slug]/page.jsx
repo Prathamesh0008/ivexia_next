@@ -1,3 +1,4 @@
+//ivexia\app\products\[slug]\page.jsx
 import { notFound } from "next/navigation";
 
 import ProductDetailClient from "@/components/ProductDetailClient";
