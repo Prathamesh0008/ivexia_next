@@ -264,6 +264,7 @@ footer: {
 
   address: "Global Pharmaceutical Headquarters"
 },
+// ivexia\data1\languages\en.js
 contactPage: {
   title: "Contact Ivexia Pharmaceuticals",
   subtitle: "Reach out to us for pharmaceutical inquiries, partnerships, and support. Our team is here to assist you with your healthcare needs.",
@@ -284,7 +285,15 @@ contactPage: {
   success: "Message sent successfully! We'll contact you soon.",
   error: "Failed to send message. Please try again.",
   footer1: "For urgent pharmaceutical inquiries, please call our emergency support line.",
-  footer2: "We're committed to responding within 24 hours on business days."
+  footer2: "We're committed to responding within 24 hours on business days.",
+  // Error messages for validation
+  nameError: "Name is required",
+  emailError: "Email is required",
+  emailInvalidError: "Please enter a valid email address",
+  phoneError: "Phone number must be exactly 10 digits",
+  subjectError: "Subject is required",
+  messageError: "Message is required",
+  messageLengthError: "Message should be at least 10 characters"
 },
 offeringsOverview: {
   badge: "Ivexia Offerings Overview",
@@ -600,6 +609,7 @@ otcPage: {
     privateLabel: "Private Label / OEM"
   }
 },
+
 oemPage: {
   hero: {
     badge: "Ivexia Offerings",
@@ -616,74 +626,192 @@ oemPage: {
   ],
 
   capabilityHeading: "OEM Capability Stack",
-  capabilityDesc:
-    "A full private-label workflow designed for distributors, importers, and healthcare brands operating in varied market conditions.",
+  capabilityDesc: "A full private-label workflow designed for distributors, importers, and healthcare brands operating in varied market conditions.",
 
-  dosageHeading: "Dosage Forms We Manufacture",
-  docsHeading: "Documentation and Technical Deliverables",
-  processHeading: "Project Execution Flow",
-  qualityHeading: "Quality Governance Framework",
-  therapyHeading: "Therapeutic and Market Coverage",
-  supportHeading: "What We Support End-to-End",
-  qualityBuiltHeading: "Built on Quality and Compliance",
-  onboardingHeading: "Information Needed to Start Scoping",
-  faqHeading: "Frequently Asked Questions",
+  capabilities: [
+    {
+      title: "Formulation Development",
+      description: "Support from concept selection to market-ready formula across defined dosage platforms."
+    },
+    {
+      title: "Custom Branding",
+      description: "Private-label pack setup, artwork coordination, and format alignment for your target market."
+    },
+    {
+      title: "Regulatory Documentation",
+      description: "Technical dossiers, CoAs, and quality file support aligned with buyer requirements."
+    },
+    {
+      title: "Scalable Manufacturing",
+      description: "Pilot, launch, and scale-up support with controlled manufacturing and traceability."
+    }
+  ],
 
-  qualityDesc:
-    "Quality is embedded at each stage from raw material qualification to release and dispatch control.",
-
-  step: "Step",
-  output: "Output",
-
-  ctaHeading: "Launch Your Private Label Portfolio With Ivexia",
-  ctaContact: "Contact Us",
-  ctaExplore: "Explore All Offerings",
-
-  // ✅ Engagement Models
   engagement: [
     {
       title: "Market Entry Model",
-      desc:
-        "For partners entering a new territory who need focused SKU selection and launch-ready support.",
+      description: "For partners entering a new territory who need focused SKU selection and launch-ready support.",
       fit: "Best for first-market launches and category pilots."
     },
     {
       title: "Portfolio Expansion Model",
-      desc:
-        "For established brands adding new product lines under existing distribution networks.",
+      description: "For established brands adding new product lines under existing distribution networks.",
       fit: "Best for expanding category depth and shelf coverage."
     },
     {
       title: "Continuity Supply Model",
-      desc:
-        "For long-term buyers prioritizing stable planning, repeat scheduling, and quality consistency.",
+      description: "For long-term buyers prioritizing stable planning, repeat scheduling, and quality consistency.",
       fit: "Best for high-repeat procurement and scale programs."
     }
   ],
 
-  // ✅ Capabilities
-  capabilities: [
+  dosageHeading: "Dosage Forms We Manufacture",
+  dosageDesc: "Our setup supports multiple dosage platforms with consistency in process control and batch documentation.",
+  
+  dosageForms: [
+    "Tablets",
+    "Capsules",
+    "Syrups",
+    "Suspensions",
+    "Topicals",
+    "Sachets"
+  ],
+
+  docsHeading: "Documentation and Technical Deliverables",
+  docsDesc: "As required by product and market scope, projects can include the following documentation package elements.",
+  
+  documentationPack: [
+    "Product specification sheets",
+    "Certificate of Analysis format",
+    "Stability and storage guidance",
+    "Batch and release documentation",
+    "Pack and label compliance checklist",
+    "Shipping and handling documentation"
+  ],
+
+  processHeading: "Project Execution Flow",
+  
+  processSteps: [
+    "Requirement discovery and product-market alignment",
+    "Formula/pack finalization and documentation planning",
+    "Commercial manufacturing with in-process quality controls",
+    "Final release, dispatch coordination, and continuity planning"
+  ],
+
+  step: "Step",
+  output: "Output",
+
+  qualityHeading: "Quality Governance Framework",
+  qualityDesc: "Quality is embedded at each stage from raw material qualification to release and dispatch control.",
+  
+  qualityFramework: [
     {
-      title: "Formulation Development",
-      desc:
-        "Support from concept selection to market-ready formula across defined dosage platforms."
+      stage: "Raw Material Qualification",
+      control: "Supplier verification, identity checks, and incoming material acceptance criteria.",
+      output: "Approved material status before production start."
     },
     {
-      title: "Custom Branding",
-      desc:
-        "Private-label pack setup, artwork coordination, and format alignment for your target market."
+      stage: "In-Process Quality Monitoring",
+      control: "Critical process checkpoints at blending, compression/filling, and packing stages.",
+      output: "Controlled process consistency across the batch lifecycle."
     },
     {
-      title: "Regulatory Documentation",
-      desc:
-        "Technical dossiers, CoAs, and quality file support aligned with buyer requirements."
+      stage: "Finished Product Testing",
+      control: "Defined release testing based on product profile and applicable quality requirements.",
+      output: "Batch disposition report and quality release readiness."
     },
     {
-      title: "Scalable Manufacturing",
-      desc:
-        "Pilot, launch, and scale-up support with controlled manufacturing and traceability."
+      stage: "Release and Dispatch Control",
+      control: "Final documentation verification and dispatch condition checks before shipment.",
+      output: "Market-ready release package with traceable records."
     }
-  ]
+  ],
+
+  therapyHeading: "Therapeutic and Market Coverage",
+  therapyDesc: "Our manufacturing capabilities span multiple therapeutic areas to serve diverse market needs.",
+  
+  therapeuticAreas: [
+    "General Medicine",
+    "Pain Management",
+    "Nutraceuticals",
+    "Gastro Care",
+    "Respiratory Care",
+    "Dermatology",
+    "Women's Health",
+    "Pediatric Support"
+  ],
+
+  supportHeading: "What We Support End-to-End",
+  
+  supportScope: [
+    {
+      title: "Brand and Pack Development",
+      details: "Carton, label, insert, and shipper alignment based on brand requirements and country norms."
+    },
+    {
+      title: "Regulatory and Quality File Support",
+      details: "CoA, specifications, and supporting quality documents for registration workflows."
+    },
+    {
+      title: "Supply and Delivery Planning",
+      details: "Forecast-aware batch scheduling and shipment planning for repeat business cycles."
+    }
+  ],
+
+  qualityBuiltHeading: "Built on Quality and Compliance",
+  qualityBuiltDesc: "Every batch follows validated processes, quality checkpoints, and release controls to protect your brand integrity.",
+  
+  qualityPoints: [
+    "Raw material qualification and vendor control",
+    "In-process and finished-goods quality testing",
+    "Batch records, traceability, and release documentation",
+    "Export-ready logistics and documentation support"
+  ],
+
+  onboardingHeading: "Information Needed to Start Scoping",
+  onboardingDesc: "Sharing the below inputs helps us propose a practical and faster OEM project pathway.",
+  
+  onboardingChecklist: [
+    "Target market and product category",
+    "Preferred dosage form and strength",
+    "Packaging format and branding direction",
+    "Projected demand and launch window",
+    "Compliance expectations and documentation scope"
+  ],
+
+  faqHeading: "Frequently Asked Questions",
+  
+  faqs: [
+    {
+      question: "Can you support low-volume market entry batches?",
+      answer: "Yes. We can begin with pilot/launch volumes and then scale after demand validation."
+    },
+    {
+      question: "Do you provide private label packaging options?",
+      answer: "Yes. We support branded packaging formats with artwork coordination and compliance checks."
+    },
+    {
+      question: "Can documentation be aligned for different country requirements?",
+      answer: "Yes, documentation support can be structured based on market-specific submission expectations."
+    },
+    {
+      question: "What information is needed to start an OEM discussion?",
+      answer: "At minimum: category, dosage form, target country, expected volume, and preferred launch timeline."
+    },
+    {
+      question: "Do you support repeat supply planning after launch?",
+      answer: "Yes. We can set continuity planning based on forecast cycles and replenishment requirements."
+    },
+    {
+      question: "Can Ivexia support both single-SKU and multi-SKU programs?",
+      answer: "Yes. Engagement can start from a focused SKU and expand to a broader portfolio as needed."
+    }
+  ],
+
+  ctaHeading: "Launch Your Private Label Portfolio With Ivexia",
+  ctaDesc: "Share your market plan and product requirement set. Our team can structure a practical OEM roadmap with defined execution stages.",
+  ctaContact: "Contact Us",
+  ctaExplore: "Explore All Offerings"
 },
 testKitsPage: {
   heading: "Test Kits",
@@ -707,6 +835,7 @@ testKitsPage: {
     certificate: "Certificate"
   }
 },
+
 aboutPage: {
   hero: {
     title: "About Ivexia Pharmaceuticals",
@@ -738,21 +867,99 @@ aboutPage: {
     title: "Worldwide Operations",
     subtitle: "Strategically located to serve global markets efficiently"
   },
+  globalLocations: [
+    {
+      loc: "India",
+      desc: "Strategic pharmaceutical presence with state-of-the-art manufacturing facilities and R&D centers."
+    },
+    {
+      loc: "North Macedonia",
+      desc: "European hub for manufacturing and distribution, serving EU markets with excellence."
+    },
+    {
+      loc: "Qatar",
+      desc: "MENA regional headquarters, expanding healthcare access across the Middle East."
+    }
+  ],
   expertise: {
     badge: "What We Do",
     title: "Areas of Expertise",
     subtitle: "Specialized pharmaceutical solutions for complex healthcare needs"
   },
+  expertiseList: [
+    {
+      title: "Research & Development",
+      img: "/images/R&D.jpg",
+      desc: "Cutting-edge research facilities focused on innovative drug delivery systems."
+    },
+    {
+      title: "Manufacturing",
+      img: "/images/Manufacturing.jpg",
+      desc: "WHO-GMP certified facilities with advanced manufacturing capabilities."
+    },
+    {
+      title: "Oncology",
+      img: "/images/Oncology.jpg",
+      desc: "Specialized oncology portfolio with targeted therapies."
+    }
+  ],
   leadership: {
     badge: "Our Leaders",
     title: "Executive Leadership",
     subtitle: "Experienced professionals driving pharmaceutical innovation"
   },
+  leadershipList: [
+    {
+      name: "Dr. Michael Carter",
+      title: "Chief Executive Officer",
+      img: "/images/leader1.jpg",
+      desc: "30+ years in pharmaceutical leadership"
+    },
+    {
+      name: "James Wilson",
+      title: "Director of Operations",
+      img: "/images/leader2.jpg",
+      desc: "Expert in global supply chain"
+    },
+    {
+      name: "Sophia Bennett",
+      title: "Head of Operations",
+      img: "/images/leader3.jpg",
+      desc: "Specialist in manufacturing excellence"
+    }
+  ],
   timeline: {
     badge: "Our Journey",
     title: "Milestones of Growth",
     subtitle: "Key achievements in our path to pharmaceutical excellence"
   },
+  timelineList: [
+    {
+      year: "2018",
+      event: "Company founded with vision for global pharmaceutical excellence",
+      icon: "rocket"
+    },
+    {
+      year: "2020",
+      event: "First WHO-GMP certified manufacturing facility established",
+      icon: "industry"
+    },
+    {
+      year: "2023",
+      event: "Expanded operations to European markets",
+      icon: "globe"
+    },
+    {
+      year: "2025",
+      event: "Launched oncology division with 10+ products",
+      icon: "microscope"
+    },
+    {
+      year: "2030",
+      event: "Vision to become top 50 global pharma company",
+      icon: "bullseye"
+    }
+  ],
   certifications: {
     badge: "Quality Assurance",
     title: "Global Certifications",
@@ -770,6 +977,10 @@ aboutPage: {
     badge: "Innovation Hub",
     title: "Research & Development",
     subtitle: "Pushing boundaries in pharmaceutical research"
+  },
+  labs: {
+    title: "Advanced R&D Facility",
+    desc: "Equipped with cutting-edge research infrastructure and global GMP standards."
   },
   sustainability: {
     badge: "Environment",
@@ -791,64 +1002,376 @@ aboutPage: {
     title: "Awards & Recognition",
     subtitle: "Celebrating excellence in pharmaceutical innovation"
   },
+  awardsList: [
+    {
+      award: "Pharmaceutical Excellence Award 2023",
+      org: "Global Health Council",
+      year: "2023"
+    },
+    {
+      award: "Innovation in Manufacturing",
+      org: "Pharma Leaders Forum",
+      year: "2022"
+    },
+    {
+      award: "Best Emerging Pharma Company",
+      org: "Healthcare Asia",
+      year: "2024"
+    }
+  ],
   cta: {
     title: "Partner With Us",
     subtitle: "Join us in delivering quality healthcare solutions worldwide.",
     button: "Contact Us"
-  },
-  globalLocations: [
-  {
-    loc: "India",
-    desc: "Strategic pharmaceutical presence with state-of-the-art manufacturing facilities and R&D centers."
-  },
-  {
-    loc: "North Macedonia",
-    desc: "European hub for manufacturing and distribution, serving EU markets with excellence."
-  },
-  {
-    loc: "Qatar",
-    desc: "MENA regional headquarters, expanding healthcare access across the Middle East."
   }
-],
+},
+testKitDetailPage: {
+  home: "Home",
+  testKits: "Test Kits",
+  loading: "Loading...",
+  badge: "Diagnostic Test Kit",
+  defaultDescription: "Detailed product information will be shared on request.",
+  categoryPending: "Category Pending",
+  requestInfo: "Request Information",
+  backButton: "Back To Test Kits",
+  productDetails: "Product Details",
+  method: "Method",
+  specimen: "Specimen",
+  cutOff: "Cut-Off",
+  certificate: "Certificate"
+},
+// ivexia\data1\languages\en.js
 
-expertiseList: [
-  {
-    title: "Research & Development",
-    desc: "Cutting-edge research facilities focused on innovative drug delivery systems."
-  },
-  {
-    title: "Manufacturing",
-    desc: "WHO-GMP certified facilities with advanced manufacturing capabilities."
-  },
-  {
-    title: "Oncology",
-    desc: "Specialized oncology portfolio with targeted therapies."
-  }
-],
-leadershipList: [
-  {
-    name: "Dr. Michael Carter",
-    title: "Chief Executive Officer",
-    img: "/images/leader1.jpg",
-    desc: "30+ years in pharmaceutical leadership"
-  },
-  {
-    name: "James Wilson",
-    title: "Director of Operations",
-    img: "/images/leader2.jpg",
-    desc: "Expert in global supply chain"
-  },
-  {
-    name: "Sophia Bennett",
-    title: "Head of Operations",
-    img: "/images/leader3.jpg",
-    desc: "Specialist in manufacturing excellence"
-  }
-],
-labs: {
-  title: "Advanced R&D Facility",
-  desc: "Equipped with cutting-edge research infrastructure and global GMP standards."
-}
-}
+// ivexia\data1\languages\en.js - COMPLETE magazine section
 
+magazine: {
+  title: "Ivexia Magazine",
+  loading: "Loading...",
+  recentArticles: "Recent Articles",
+  noRecentArticles: "No recent articles yet.",
+  readMore: "Read More →",
+  previous: "Previous",
+  next: "Next",
+  page: "Page",
+  of: "of",
+  
+  categories: {
+    health: "Health",
+    news: "News"
+  },
+  
+  articles: {
+    "gene-therapy-emerging-science": {
+      title: "How Gene Therapy Is Transforming Modern Treatment",
+      excerpt: "Gene therapy is moving from concept to clinic, offering targeted ways to correct genetic issues instead of only managing symptoms.",
+      readTime: "7–9 min read",
+      heroCaption: "Gene therapy looks at disease from the level of DNA, aiming to correct or adjust the instructions that cells follow.",
+      sections: [
+        {
+          heading: "What is gene therapy?",
+          paragraphs: [
+            "Inside almost every cell of the body, DNA carries the instructions for how that cell should function. When part of this instruction manual is damaged, missing or altered, disease can appear.",
+            "Gene therapy focuses on these faulty sections and aims to repair, replace or adjust the genetic material."
+          ]
+        },
+        {
+          subheading: "Main approaches",
+          paragraphs: [
+            "In simple terms, gene therapy can:",
+            "• Add a working copy of a missing or broken gene",
+            "• Reduce or silence a harmful gene",
+            "• Edit the DNA sequence using modern gene-editing tools"
+          ]
+        },
+        {
+          subheading: "1. Gene augmentation",
+          paragraphs: [
+            "Some diseases occur because a key gene is missing or not working properly. Adding a healthy copy can help restore cell function."
+          ]
+        },
+        {
+          subheading: "2. Gene inhibition",
+          paragraphs: [
+            "In other diseases, the issue is a gene that is too active or producing something harmful. Gene inhibition strategies aim to reduce or block this activity."
+          ]
+        },
+        {
+          subheading: "3. Gene editing",
+          paragraphs: [
+            "Tools like CRISPR act like molecular scissors, allowing scientists to cut DNA at precise locations and correct mutations or insert new material."
+          ]
+        },
+        {
+          heading: "How digital tools support gene therapy",
+          paragraphs: [
+            "Gene therapy research generates huge amounts of data. AI helps analyse this information and support decisions about which patients may benefit most."
+          ]
+        },
+        {
+          heading: "Where gene therapy is used today",
+          paragraphs: [
+            "Approved gene therapies currently focus on rare inherited diseases. Research is expanding into oncology, cardiovascular medicine and neurology."
+          ]
+        },
+        {
+          heading: "Potential benefits",
+          paragraphs: [
+            "• Addresses the root cause of disease",
+            "• Can offer long-lasting or one-time treatments",
+            "• Provides precise targeting of cells or tissues",
+            "• Creates new options where standard therapies are limited"
+          ]
+        },
+        {
+          heading: "Points to watch",
+          paragraphs: [
+            "• Unintended changes elsewhere in the genome",
+            "• Possible immune reactions",
+            "• Complex, high-cost manufacturing",
+            "• Need for long-term safety monitoring"
+          ]
+        },
+        {
+          heading: "Ethics and the future",
+          paragraphs: [
+            "Because gene therapy modifies core biological instructions, it raises important questions about access, fairness and long-term safety.",
+            "As delivery methods improve, gene therapy is expected to become part of mainstream medical care."
+          ]
+        }
+      ]
+    },
+
+    "power-of-ai-medical-industry": {
+      title: "The Power of AI in the Medical Industry: 4 Things to Know",
+      excerpt: "Artificial intelligence is reshaping diagnostics, workflows and decision-making across hospitals and pharma companies.",
+      readTime: "6–8 min read",
+      heroCaption: "Artificial intelligence helps turn complex medical and pharmaceutical data into faster, more informed decisions.",
+      sections: [
+        {
+          heading: "The impact of AI in medicine",
+          paragraphs: [
+            "Artificial intelligence is becoming one of the most important tools in modern healthcare. It can analyse thousands of data points at once and highlight patterns that humans may miss.",
+            "In hospitals and the pharmaceutical industry, AI supports decision-making, improves diagnostics and streamlines workflows."
+          ]
+        },
+        {
+          heading: "AI in the pharmaceutical industry",
+          paragraphs: [
+            "Pharma relies heavily on data — chemical libraries, biological experiments, clinical trials and safety signals. AI connects these information streams and accelerates research.",
+            "• Virtual screening for drug discovery",
+            "• Simulation of formulations and processes",
+            "• Predictive modelling for safety assessment"
+          ]
+        },
+        {
+          heading: "AI in pharma marketing",
+          paragraphs: [
+            "AI makes marketing more data-driven by tailoring communication to real information needs.",
+            "• More precise audience segmentation",
+            "• Personalised content",
+            "• Better understanding of what drives behaviour"
+          ]
+        },
+        {
+          heading: "AI in healthcare systems and hospitals",
+          paragraphs: [
+            "AI analyses lab results, imaging, vital signs and history to identify urgent risks or guide treatment adjustments.",
+            "• Imaging support for radiologists",
+            "• Risk prediction tools",
+            "• Virtual assistants for patient support"
+          ]
+        },
+        {
+          heading: "The future of AI in medicine",
+          paragraphs: [
+            "AI will play a major role in precision medicine by helping tailor treatments to each individual's genetics and risk profile."
+          ]
+        },
+        {
+          heading: "Why AI matters",
+          paragraphs: [
+            "For patients: earlier detection, personalised treatment and better outcomes.",
+            "For pharma and providers: smarter use of existing data and better efficiency."
+          ]
+        }
+      ]
+    },
+
+    "personalized-medicine-basics": {
+      title: "Personalized Medicine: Treatments Tailored to Each Patient",
+      excerpt: "By using genetics, biomarkers and clinical data, personalized medicine aims to choose the right treatment for the right person at the right time.",
+      readTime: "6–8 min read",
+      heroCaption: "Personalized medicine combines genetics, clinical data and lifestyle information to tailor treatment to each patient.",
+      sections: [
+        {
+          heading: "What is personalized medicine?",
+          paragraphs: [
+            "Personalized medicine moves healthcare away from a one-size-fits-all model and tailors treatments to each individual.",
+            "Advances in genomic sequencing show why two patients with the same condition may respond differently to the same therapy."
+          ]
+        },
+        {
+          heading: "Genetic engineering and precision medicine",
+          paragraphs: [
+            "Modern DNA sequencing helps identify genetic variations linked to disease, response to drugs or risk of side effects."
+          ]
+        },
+        {
+          heading: "Benefits of personalized medicine",
+          paragraphs: [
+            "• More precise treatments with higher chances of response",
+            "• Proactive, preventive healthcare",
+            "• Better allocation of medical resources",
+            "• Innovation in diagnostics and targeted therapies"
+          ]
+        },
+        {
+          heading: "Challenges and responsibilities",
+          paragraphs: [
+            "• Data privacy and protection of genetic information",
+            "• Ensuring equitable access",
+            "• Clear regulatory frameworks",
+            "• Interoperability between healthcare systems"
+          ]
+        },
+        {
+          heading: "Looking ahead",
+          paragraphs: [
+            "As sequencing becomes more accessible, personalized medicine will become a central part of modern healthcare."
+          ]
+        }
+      ]
+    },
+
+    "what-is-obesity-how-to-overcome-it": {
+      title: "What Is Obesity — and How Do You Really Overcome It?",
+      excerpt: "Obesity is influenced by biology, environment and lifestyle. Long-term management needs structure, not just short diets.",
+      readTime: "6–8 min read",
+      heroCaption: "Obesity is influenced by biology, environment and lifestyle. Long-term management requires structure, not just short diets.",
+      sections: [
+        {
+          heading: "Why obesity happens",
+          paragraphs: [
+            "Diet and exercise matter, but they are only part of the story. Biological factors, sleep, stress, medications and social environment all contribute significantly."
+          ]
+        },
+        {
+          heading: "Health risks associated with obesity",
+          paragraphs: [
+            "• Higher risk of type 2 diabetes and insulin resistance",
+            "• Increased likelihood of high blood pressure and heart disease",
+            "• Sleep apnea, joint pain and certain cancers",
+            "• Impact on mental health, including self-esteem and depression"
+          ]
+        },
+        {
+          heading: "Approaching weight management realistically",
+          paragraphs: [
+            "Sustainable weight management is not about extreme diets or quick fixes. It requires a balanced, long-term plan.",
+            "• Enjoyable, balanced nutrition rather than strict rules",
+            "• Regular physical activity that is manageable and sustainable",
+            "• Managing sleep, stress and emotional eating triggers",
+            "• Medication or surgery where appropriate, under clinical guidance"
+          ]
+        },
+        {
+          heading: "Long-term support matters",
+          paragraphs: [
+            "Because obesity is a chronic condition, long-term support helps maintain progress.",
+            "The goal is not perfection — but steady, consistent improvements over time."
+          ]
+        }
+      ]
+    },
+
+    "international-womens-day-healthcare": {
+      title: "In Honor of International Women's Day",
+      excerpt: "Women scientists, clinicians and leaders drive critical advances in healthcare. Recognizing their work is part of building a better system.",
+      readTime: "5–7 min read",
+      heroCaption: "International Women's Day is a moment to celebrate women's achievements and to focus on closing gaps in women's health.",
+      sections: [
+        {
+          heading: "Women's health challenges",
+          paragraphs: [
+            "Across many countries, women face a combination of obstacles:",
+            "• Limited access to reproductive and maternal healthcare",
+            "• Under-diagnosis or delayed diagnosis of chronic diseases such as heart disease",
+            "• Cultural pressures and discrimination that make accessing care more difficult"
+          ]
+        },
+        {
+          heading: "Diseases that disproportionately affect women",
+          paragraphs: [
+            "Certain conditions strongly influence women's health outcomes.",
+            "• Breast cancer and cervical cancer, where screening can significantly improve survival",
+            "• Maternal complications during pregnancy and childbirth",
+            "• Chronic conditions that may present differently in women, leading to misdiagnosis"
+          ]
+        },
+        {
+          heading: "Promoting women's health: key levers",
+          paragraphs: [
+            "• Improving access to essential services: maternity care, contraception, screening",
+            "• Investing in education, economic empowerment and access to reliable information",
+            "• Encouraging research that includes women in sufficient numbers",
+            "• Strengthening public health policies that protect reproductive rights and ensure access to care"
+          ]
+        },
+        {
+          heading: "A commitment beyond one day",
+          paragraphs: [
+            "International Women's Day is a reminder, not a single event. Reducing gaps in women's health requires consistent and long-term commitment.",
+            "For Ivexia, prioritizing women's health means designing medicines, communication and programs with women's unique needs in mind."
+          ]
+        }
+      ]
+    },
+
+    "diabetes-kidney-disease-6": {
+      title: "Does Diabetes Increase the Risk of Kidney Disease?",
+      excerpt: "Chronically high blood sugar can damage the tiny blood vessels in the kidneys. Understanding this link early matters.",
+      readTime: "5–7 min read",
+      heroCaption: "Diabetes is one of the most important risk factors for chronic kidney disease, especially when blood sugar and blood pressure remain high over time.",
+      sections: [
+        {
+          heading: "How diabetes affects the kidneys",
+          paragraphs: [
+            "High blood sugar damages the kidney's filtering units, called glomeruli. Over time, they become leaky and allow proteins like albumin to pass into the urine.",
+            "High blood pressure and inflammation add additional strain and worsen the damage."
+          ]
+        },
+        {
+          heading: "Warning signs",
+          paragraphs: [
+            "• Swelling in the legs, ankles or around the eyes",
+            "• Foamy or bubbly urine (a sign of protein loss)",
+            "• Increasing difficulty controlling blood pressure",
+            "• Fatigue, poor appetite or difficulty focusing"
+          ]
+        },
+        {
+          heading: "The role of screening",
+          paragraphs: [
+            "Urine tests for albumin and blood tests for creatinine and eGFR can detect kidney damage long before severe symptoms appear."
+          ]
+        },
+        {
+          heading: "Protecting the kidneys",
+          paragraphs: [
+            "• Keeping blood sugar within target range",
+            "• Strict blood pressure control, often with ACE inhibitors or ARBs",
+            "• Healthy lifestyle habits: nutrition, exercise, good sleep and not smoking"
+          ]
+        },
+        {
+          heading: "A message of prevention and partnership",
+          paragraphs: [
+            "Diabetes does increase the risk of kidney disease — but the risk is not fixed.",
+            "With early detection, proper management and strong collaboration with healthcare teams, kidney function can be protected for much longer."
+          ]
+        }
+      ]
+    }
+  }
+}
 };

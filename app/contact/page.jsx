@@ -16,6 +16,7 @@ import {
 } from 'react-icons/fa'
 import { Loader2, CheckCircle, AlertCircle } from 'lucide-react'
 import { useLanguage } from "@/contexts/LanguageContext";
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -34,93 +35,102 @@ export default function ContactPage() {
     const errors = {}
     
     if (!formData.name.trim()) {
-errors.name = 'Name is required'
+      errors.name = translations?.contactPage?.nameError || 'Name is required'
     }
     
     if (!formData.email.trim()) {
-      errors.email = 'Email is required'
+      errors.email = translations?.contactPage?.emailError || 'Email is required'
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      errors.email = 'Please enter a valid email address'
+      errors.email = translations?.contactPage?.emailInvalidError || 'Please enter a valid email address'
     }
 
     // Phone validation: exactly 10 digits (optional)
     if (formData.phone && !/^\d{10}$/.test(formData.phone.trim())) {
-      errors.phone = 'Phone number must be exactly 10 digits'
+      errors.phone = translations?.contactPage?.phoneError || 'Phone number must be exactly 10 digits'
     }
     
     if (!formData.subject.trim()) {
-      errors.subject = 'Subject is required'
+      errors.subject = translations?.contactPage?.subjectError || 'Subject is required'
     }
     
     if (!formData.message.trim()) {
-      errors.message = 'Message is required'
+      errors.message = translations?.contactPage?.messageError || 'Message is required'
     } else if (formData.message.trim().length < 10) {
-      errors.message = 'Message should be at least 10 characters'
+      errors.message = translations?.contactPage?.messageLengthError || 'Message should be at least 10 characters'
     }
     
     return errors
   }
 
-const handleSubmit = async (e) => {
-  e.preventDefault()
+  const handleSubmit = async (e) => {
+    e.preventDefault()
 
-  const errors = validateForm()
-  if (Object.keys(errors).length > 0) {
-    setFormErrors(errors)
-    return
+    const errors = validateForm()
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors)
+      return
+    }
+
+    setLoading(true)
+    setSuccess(false)
+    setError("")
+
+    try {
+      // Send to Admin
+      await emailjs.send(
+        "service_gss4j1p",
+        "template_nh2iyu5",
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          subject: formData.subject,
+          message: formData.message,
+          time: new Date().toLocaleString(),
+        },
+        "QGGp40v8O40-464My"
+      )
+
+      // Send to User
+      await emailjs.send(
+        "service_gss4j1p",
+        "template_8e1weya",
+        {
+          to_email: formData.email,
+          from_name: formData.name,
+          subject: formData.subject,
+          message: formData.message,
+          time: new Date().toLocaleString(),
+        },
+        "QGGp40v8O40-464My"
+      )
+
+      setSuccess(true)
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: ""
+      })
+      
+      // Auto hide success message after 5 seconds
+      setTimeout(() => {
+        setSuccess(false)
+      }, 5000)
+
+    } catch (err) {
+      console.error(err)
+      setError(translations?.contactPage?.error || "Failed to send message")
+      
+      // Auto hide error message after 5 seconds
+      setTimeout(() => {
+        setError('')
+      }, 5000)
+    }
+
+    setLoading(false)
   }
-
-  setLoading(true)
-  setSuccess(false)
-  setError("")
-
-  try {
-    // Send to Admin
-    await emailjs.send(
-      "service_gss4j1p",
-      "template_nh2iyu5",
-      {
-        from_name: formData.name,
-        from_email: formData.email,
-        phone: formData.phone,
-        subject: formData.subject,
-        message: formData.message,
-        time: new Date().toLocaleString(),
-      },
-      "QGGp40v8O40-464My"
-    )
-
-    // Send to User
-    await emailjs.send(
-      "service_gss4j1p",
-      "template_8e1weya",
-      {
-        to_email: formData.email,
-        from_name: formData.name,
-        subject: formData.subject,
-        message: formData.message,
-        time: new Date().toLocaleString(),
-      },
-      "QGGp40v8O40-464My"
-    )
-
-    setSuccess(true)
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      subject: "",
-      message: ""
-    })
-
-  } catch (err) {
-    console.error(err)
-setError(translations?.contactPage?.error || "Failed to send message")
-  }
-
-  setLoading(false)
-}
-
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -145,7 +155,7 @@ setError(translations?.contactPage?.error || "Failed to send message")
         {/* HEADER */}
         <div className="mb-12">
           <h1 className="text-3xl md:text-4xl font-bold text-[#0d2d47]">
-        {translations?.contactPage?.title || "Contact Ivexia Pharmaceuticals"}
+            {translations?.contactPage?.title || "Contact Ivexia Pharmaceuticals"}
           </h1>
           <p className="mt-2 text-gray-700 max-w-2xl">
             {translations?.contactPage?.subtitle || "Reach out to us for pharmaceutical inquiries..."}
@@ -158,28 +168,31 @@ setError(translations?.contactPage?.error || "Failed to send message")
           {/* FORM */}
           <div className="bg-white shadow-sm border border-gray-100 p-8 flex flex-col">
             <h2 className="text-xl font-semibold text-[#0d2d47] mb-1">
-             {translations?.contactPage?.formTitle || "Send Us a Message"}
+              {translations?.contactPage?.formTitle || "Send Us a Message"}
             </h2>
             <p className="text-sm text-gray-500 mb-6">
-           {translations?.contactPage?.formSubtitle || "We'll get back to you within 24 hours"}
+              {translations?.contactPage?.formSubtitle || "We'll get back to you within 24 hours"}
             </p>
 
-            {/* Status Messages */}
-            {success && (
-              <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-xl flex items-start">
-                <CheckCircle className="h-5 w-5 mr-3 text-green-600 flex-shrink-0 mt-0.5" />
-                <p className="text-green-800">{translations?.contactPage?.success || "Message sent successfully!"}</p>
-              </div>
-            )}
-            
-            {error && (
-              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl flex items-start">
-                <AlertCircle className="h-5 w-5 mr-3 text-red-600 flex-shrink-0 mt-0.5" />
-                <p className="text-red-800">{error}</p>
-              </div>
-            )}
-
             <form onSubmit={handleSubmit} className="space-y-5 flex-1">
+              <div>
+                <label className="block text-sm font-medium mb-1 text-gray-700">
+                  {translations?.contactPage?.fullName || "Full Name"} <span className="text-red-500">*</span>
+                  {formErrors.name && <span className="text-red-500 text-xs ml-2">({formErrors.name})</span>}
+                </label>
+                <input
+                  name="name"
+                  type="text"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  disabled={loading}
+                  className={`w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#19a6b5] focus:border-transparent transition-all disabled:opacity-50 ${
+                    formErrors.name ? 'border-red-300 bg-red-50' : 'border-gray-200'
+                  }`}
+                  placeholder={translations?.contactPage?.fullNamePlaceholder || "John Doe"}
+                />
+              </div>
 
               <div>
                 <label className="block text-sm font-medium mb-1 text-gray-700">
@@ -196,33 +209,11 @@ setError(translations?.contactPage?.error || "Failed to send message")
                   className={`w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#19a6b5] focus:border-transparent transition-all disabled:opacity-50 ${
                     formErrors.email ? 'border-red-300 bg-red-50' : 'border-gray-200'
                   }`}
-                placeholder={
-  translations?.contactPage?.emailPlaceholder || "you@example.com"
-}
+                  placeholder={translations?.contactPage?.emailPlaceholder || "you@example.com"}
                 />
               </div>
 
               <div className="grid gap-4 md:grid-cols-2">
-                <div>
-                  <label className="block text-sm font-medium mb-1 text-gray-700">
-                    {translations?.contactPage?.fullName || "Full Name"} <span className="text-red-500">*</span>
-                    {formErrors.name && <span className="text-red-500 text-xs ml-2">({formErrors.name})</span>}
-                  </label>
-                  <input
-                    name="name"
-                    type="text"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    disabled={loading}
-                    className={`w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#19a6b5] focus:border-transparent transition-all disabled:opacity-50 ${
-                      formErrors.name ? 'border-red-300 bg-red-50' : 'border-gray-200'
-                    }`}
-                    placeholder={
-  translations?.contactPage?.fullNamePlaceholder || "John Doe"
-}
-                  />
-                </div>
                 <div>
                   <label className="block text-sm font-medium mb-1 text-gray-700">
                     {translations?.contactPage?.phone || "Phone Number"}
@@ -237,37 +228,32 @@ setError(translations?.contactPage?.error || "Failed to send message")
                     className={`w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#19a6b5] focus:border-transparent transition-all disabled:opacity-50 ${
                       formErrors.phone ? 'border-red-300 bg-red-50' : 'border-gray-200'
                     }`}
-                   placeholder={
-  translations?.contactPage?.phonePlaceholder || "10 digit number"
-}
+                    placeholder={translations?.contactPage?.phonePlaceholder || "10 digit number"}
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium mb-1 text-gray-700">
+                    {translations?.contactPage?.subject || "Subject"} <span className="text-red-500">*</span>
+                    {formErrors.subject && <span className="text-red-500 text-xs ml-2">({formErrors.subject})</span>}
+                  </label>
+                  <input
+                    name="subject"
+                    type="text"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    required
+                    disabled={loading}
+                    className={`w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#19a6b5] focus:border-transparent transition-all disabled:opacity-50 ${
+                      formErrors.subject ? 'border-red-300 bg-red-50' : 'border-gray-200'
+                    }`}
+                    placeholder={translations?.contactPage?.subjectPlaceholder || "What is this regarding?"}
                   />
                 </div>
               </div>
 
               <div>
                 <label className="block text-sm font-medium mb-1 text-gray-700">
-                  {translations?.contactPage?.subject || "Subject"} <span className="text-red-500">*</span>
-                  {formErrors.subject && <span className="text-red-500 text-xs ml-2">({formErrors.subject})</span>}
-                </label>
-                <input
-                  name="subject"
-                  type="text"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  disabled={loading}
-                  className={`w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#19a6b5] focus:border-transparent transition-all disabled:opacity-50 ${
-                    formErrors.subject ? 'border-red-300 bg-red-50' : 'border-gray-200'
-                  }`}
-                 placeholder={
-  translations?.contactPage?.subjectPlaceholder || "What is this regarding?"
-}
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium mb-1 text-gray-700">
-                 {translations?.contactPage?.message || "Message"} <span className="text-red-500">*</span>
+                  {translations?.contactPage?.message || "Message"} <span className="text-red-500">*</span>
                   {formErrors.message && <span className="text-red-500 text-xs ml-2">({formErrors.message})</span>}
                 </label>
                 <textarea
@@ -280,9 +266,7 @@ setError(translations?.contactPage?.error || "Failed to send message")
                   className={`w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#19a6b5] focus:border-transparent transition-all disabled:opacity-50 resize-none ${
                     formErrors.message ? 'border-red-300 bg-red-50' : 'border-gray-200'
                   }`}
-                  placeholder={
-  translations?.contactPage?.messagePlaceholder || "Please provide details..."
-}
+                  placeholder={translations?.contactPage?.messagePlaceholder || "Please provide details..."}
                 />
               </div>
 
@@ -294,12 +278,27 @@ setError(translations?.contactPage?.error || "Failed to send message")
                 {loading ? (
                   <>
                     <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                   translations?.contactPage?.sending || "Sending..."
+                    {translations?.contactPage?.sending || "Sending..."}
                   </>
                 ) : (
-                 translations?.contactPage?.submit || "Submit"
+                  translations?.contactPage?.submit || "Submit"
                 )}
               </button>
+
+              {/* Status Messages - Moved below submit button */}
+              {success && (
+                <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-xl flex items-start">
+                  <CheckCircle className="h-5 w-5 mr-3 text-green-600 flex-shrink-0 mt-0.5" />
+                  <p className="text-green-800">{translations?.contactPage?.success || "Message sent successfully!"}</p>
+                </div>
+              )}
+              
+              {error && (
+                <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-xl flex items-start">
+                  <AlertCircle className="h-5 w-5 mr-3 text-red-600 flex-shrink-0 mt-0.5" />
+                  <p className="text-red-800">{error}</p>
+                </div>
+              )}
             </form>
 
             {/* Contact Info - Moved inside form div for better layout */}
@@ -309,10 +308,6 @@ setError(translations?.contactPage?.error || "Failed to send message")
                   <FaEnvelope className="mr-2 text-[#19a6b5]" />
                   <span className="text-sm">info@ivexiapharma.com</span>
                 </div>
-                {/* <div className="flex items-center text-gray-600">
-                  <FaPhone className="mr-2 text-[#19a6b5]" />
-                  <span className="text-sm">+1 234 567 890</span>
-                </div> */}
               </div>
             </div>
           </div>
@@ -344,38 +339,6 @@ setError(translations?.contactPage?.error || "Failed to send message")
             </div>
           </div>
         </div>
-
-        {/* Social Media Links */}
-        {/* <div className="mt-12 flex justify-center space-x-6">
-          <a 
-            href="#" 
-            className="w-12 h-12 rounded-full bg-[#0d2d47] text-white flex items-center justify-center hover:bg-[#19a6b5] transition-colors duration-300 transform hover:scale-110"
-            aria-label="Instagram"
-          >
-            <FaInstagram size={20} />
-          </a>
-          <a 
-            href="#" 
-            className="w-12 h-12 rounded-full bg-[#0d2d47] text-white flex items-center justify-center hover:bg-[#19a6b5] transition-colors duration-300 transform hover:scale-110"
-            aria-label="WhatsApp"
-          >
-            <FaWhatsapp size={20} />
-          </a>
-          <a 
-            href="#" 
-            className="w-12 h-12 rounded-full bg-[#0d2d47] text-white flex items-center justify-center hover:bg-[#19a6b5] transition-colors duration-300 transform hover:scale-110"
-            aria-label="Telegram"
-          >
-            <FaTelegramPlane size={20} />
-          </a>
-          <a 
-            href="#" 
-            className="w-12 h-12 rounded-full bg-[#0d2d47] text-white flex items-center justify-center hover:bg-[#19a6b5] transition-colors duration-300 transform hover:scale-110"
-            aria-label="LinkedIn"
-          >
-            <FaLinkedinIn size={20} />
-          </a>
-        </div> */}
 
         {/* Additional Info */}
         <div className="mt-8 text-center text-sm text-gray-500">

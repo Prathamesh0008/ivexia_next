@@ -50,7 +50,7 @@ const faqList = [
               <button
                 type="button"
                 onClick={() => toggle(idx)}
-                className="w-full flex items-center justify-between px-5 py-4 text-left"
+                className="w-full flex items-center justify-between px-5 py-4 text-left cursor-pointer"
               >
                 <span className="font-semibold text-[#0d2d47]">{item.q}</span>
                 <span className="ml-4 text-[#0d2d47] text-xl leading-none">

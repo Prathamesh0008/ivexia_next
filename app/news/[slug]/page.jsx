@@ -1,3 +1,4 @@
+//ivexia\app\news\[slug]\page.jsx
 "use client";
 
 import { useParams } from "next/navigation";

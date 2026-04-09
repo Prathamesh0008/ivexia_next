@@ -346,7 +346,7 @@ const languages = [
                       : "hover:bg-gray-100 text-gray-700"
                   }`}
                 >
-                  Health
+               {translations?.nav?.mag_health}
                 </li>
                 <button
                   onClick={(e) => {

@@ -20,11 +20,9 @@ export async function generateStaticParams() {
 export default async function ArticlePage({ params }) {
   const { slug } = await params;
 
-  const { article, details } = getArticleBySlug(slug);
+ 
 
-  if (!article || !details) {
-    notFound();
-  }
+ 
 
-  return <ArticleClient article={article} details={details} />;
+return <ArticleClient slug={slug} />;
 }

@@ -241,13 +241,13 @@ footer: {
 },
 contactPage: {
   title: "Kontakt Ivexia Pharmaceuticals",
-  subtitle: "Kontaktieren Sie uns für pharmazeutische Anfragen und Partnerschaften.",
+  subtitle: "Kontaktieren Sie uns für pharmazeutische Anfragen.",
   formTitle: "Nachricht senden",
-  formSubtitle: "Antwort innerhalb von 24 Stunden",
+  formSubtitle: "Antwort innerhalb 24 Stunden",
   fullName: "Vollständiger Name",
-  fullNamePlaceholder: "John Doe",
+  fullNamePlaceholder: "Max Mustermann",
   email: "E-Mail-Adresse",
-  emailPlaceholder: "you@example.com",
+  emailPlaceholder: "du@beispiel.com",
   phone: "Telefonnummer",
   phonePlaceholder: "10-stellige Nummer",
   subject: "Betreff",
@@ -256,12 +256,17 @@ contactPage: {
   messagePlaceholder: "Details eingeben...",
   submit: "Senden",
   sending: "Wird gesendet...",
-  success: "Nachricht erfolgreich gesendet!",
-  error: "Fehler beim Senden.",
-  contactInfo: "Kontakt",
-  followUs: "Soziale Netzwerke",
-  footer1: "Für dringende Anfragen bitte anrufen.",
-  footer2: "Antwort innerhalb von 24 Stunden."
+  success: "Nachricht gesendet",
+  error: "Fehler beim Senden",
+  footer1: "Bei dringenden Fragen anrufen.",
+  footer2: "Antwort innerhalb 24 Stunden.",
+  nameError: "Name erforderlich",
+  emailError: "E-Mail erforderlich",
+  emailInvalidError: "Ungültige E-Mail",
+  phoneError: "10 Ziffern erforderlich",
+  subjectError: "Betreff erforderlich",
+  messageError: "Nachricht erforderlich",
+  messageLengthError: "Mindestens 10 Zeichen"
 },
 offeringsOverview: {
   badge: "Ivexia Angebotsübersicht",
@@ -541,79 +546,106 @@ otcPage: {
 },
 oemPage: {
   hero: {
-    badge: "Ofertas Ivexia",
-    title: "Fabricación de Marca Privada / OEM",
-    desc: "Construye y escala tu marca farmacéutica con ejecución OEM estructurada, control de calidad y suministro confiable.",
-    contact: "Contáctanos",
-    explore: "Explorar todas las ofertas"
+    badge: "Ivexia Angebote",
+    title: "Private Label Herstellung / OEM",
+    desc: "Bauen und skalieren Sie Ihre pharmazeutische Marke.",
+    contact: "Kontakt",
+    explore: "Alle Angebote"
   },
 
   highlights: [
-    "Producción alineada con WHO-GMP",
-    "Planificación flexible para lanzamientos",
-    "Soporte OEM completo de principio a fin"
+    "WHO-GMP Standard",
+    "Flexible Planung",
+    "OEM Support"
   ],
 
-  capabilityHeading: "Capacidades OEM",
-  capabilityDesc:
-    "Flujo completo diseñado para distribuidores, importadores y marcas de salud en diversos mercados.",
-
-  dosageHeading: "Formas de dosificación que fabricamos",
-  docsHeading: "Documentación y entregables técnicos",
-  processHeading: "Flujo de ejecución del proyecto",
-  qualityHeading: "Sistema de calidad",
-  therapyHeading: "Cobertura terapéutica",
-  supportHeading: "Soporte completo",
-  qualityBuiltHeading: "Basado en calidad y cumplimiento",
-  onboardingHeading: "Información necesaria",
-  faqHeading: "Preguntas frecuentes",
-
-  qualityDesc:
-    "La calidad está integrada en cada etapa.",
-
-  step: "Paso",
-  output: "Resultado",
-
-  ctaHeading: "Lanza tu portafolio con Ivexia",
-  ctaContact: "Contáctanos",
-  ctaExplore: "Explorar todo",
-
-  engagement: [
-    {
-      title: "Modelo de entrada al mercado",
-      desc: "Para socios que entran en nuevos mercados.",
-      fit: "Ideal para lanzamientos."
-    },
-    {
-      title: "Modelo de expansión",
-      desc: "Para marcas establecidas.",
-      fit: "Ideal para crecimiento."
-    },
-    {
-      title: "Modelo de continuidad",
-      desc: "Para compras a largo plazo.",
-      fit: "Ideal para escala."
-    }
-  ],
+  capabilityHeading: "OEM Fähigkeiten",
+  capabilityDesc: "Kompletter Workflow.",
 
   capabilities: [
-    {
-      title: "Desarrollo de formulación",
-      desc: "Desde concepto hasta producto."
-    },
-    {
-      title: "Branding personalizado",
-      desc: "Diseño de marca privada."
-    },
-    {
-      title: "Documentación regulatoria",
-      desc: "Dossiers técnicos y CoA."
-    },
-    {
-      title: "Manufactura escalable",
-      desc: "Desde piloto hasta producción."
-    }
-  ]
+    { title: "Formulierung", description: "Von Konzept bis Markt." },
+    { title: "Branding", description: "Individuell." },
+    { title: "Dokumentation", description: "Technisch." },
+    { title: "Produktion", description: "Skalierbar." }
+  ],
+
+  engagement: [
+    { title: "Markteintritt", description: "Neue Märkte.", fit: "Launch" },
+    { title: "Expansion", description: "Bestehende Marken.", fit: "Wachstum" },
+    { title: "Lieferung", description: "Langfristig.", fit: "Stabilität" }
+  ],
+
+  dosageHeading: "Darreichungsformen",
+  dosageDesc: "Mehrere Formen.",
+
+  dosageForms: ["Tabletten","Kapseln","Sirup","Suspension","Topisch","Sachets"],
+
+  docsHeading: "Dokumente",
+  docsDesc: "Technisch.",
+
+  documentationPack: [
+    "Spezifikationen",
+    "CoA",
+    "Stabilität",
+    "Batch Dokumente",
+    "Label",
+    "Versand"
+  ],
+
+  processHeading: "Prozess",
+  processSteps: ["Analyse","Planung","Produktion","Lieferung"],
+
+  step: "Schritt",
+  output: "Ergebnis",
+
+  qualityHeading: "Qualität",
+  qualityDesc: "Kontrolle.",
+
+  qualityFramework: [
+    { stage: "Rohstoffe", control: "Prüfung", output: "Freigabe" },
+    { stage: "Prozess", control: "Kontrolle", output: "Stabilität" },
+    { stage: "Produkt", control: "Test", output: "Freigabe" },
+    { stage: "Versand", control: "Check", output: "Bereit" }
+  ],
+
+  therapyHeading: "Therapie",
+  therapyDesc: "Bereiche.",
+
+  therapeuticAreas: ["Allgemein","Schmerz","Nutraceuticals","Gastro","Atem","Dermatologie","Frauen","Kinder"],
+
+  supportHeading: "Support",
+
+  supportScope: [
+    { title: "Brand", details: "Design" },
+    { title: "Regulatorisch", details: "Dokumente" },
+    { title: "Lieferung", details: "Planung" }
+  ],
+
+  qualityBuiltHeading: "Qualität",
+  qualityBuiltDesc: "Kontrolle.",
+
+  qualityPoints: ["Material","Tests","Tracking","Export"],
+
+  onboardingHeading: "Start",
+  onboardingDesc: "Infos.",
+
+  onboardingChecklist: ["Markt","Form","Pack","Nachfrage","Compliance"],
+
+  faqHeading: "FAQ",
+
+  faqs: [
+    { question: "Kleine Mengen?", answer: "Ja." },
+    { question: "Private Label?", answer: "Ja." },
+    { question: "Dokumente?", answer: "Ja." },
+    { question: "Start Infos?", answer: "Basisdaten." },
+    { question: "Wiederholung?", answer: "Ja." },
+    { question: "Multi SKU?", answer: "Ja." }
+  ],
+
+  ctaHeading: "Starten Sie",
+  ctaDesc: "Kontaktieren Sie uns.",
+  ctaContact: "Kontakt",
+  ctaExplore: "Mehr"
 },
 testKitsPage: {
   heading: "Testkits",
@@ -640,91 +672,537 @@ testKitsPage: {
 aboutPage: {
   hero: {
     title: "Über Ivexia Pharmaceuticals",
-    subtitle: "Innovation im Gesundheitswesen mit globaler pharmazeutischer Exzellenz und höchstem Qualitätsanspruch."
+    subtitle: "Innovation im Gesundheitswesen mit globaler pharmazeutischer Exzellenz und unerschütterlichem Qualitätsbewusstsein."
   },
   stats: {
-    years: "Jahre der Exzellenz",
+    years: "Jahre Exzellenz",
     markets: "Globale Märkte",
     products: "Produkte",
     employees: "Mitarbeiter"
   },
   story: {
     badge: "Unsere Geschichte",
-    title: "Engagiert für pharmazeutische Exzellenz seit 2018",
-    p1: "Ivexia Pharmaceuticals wurde mit einem Fokus auf Innovation gegründet und liefert pharmazeutische Produktion auf Weltklasse-Niveau gemäß globalen Standards.",
-    p2: "Wir kombinieren regulatorisches Know-how, fortschrittliche Forschung und präzise Herstellung für internationale Märkte.",
-    p3: "Heute ist Ivexia in mehreren Regionen tätig mit strategischer Expansion nach Europa und MENA."
+    title: "Seit 2018 der pharmazeutischen Exzellenz verpflichtet",
+    p1: "Gegründet mit dem Engagement für Innovation, bietet Ivexia Pharmaceuticals erstklassige pharmazeutische Produktion nach globalen Standards.",
+    p2: "Wir verbinden regulatorische Expertise, fortschrittliche Forschung und Fertigungspräzision, um internationale Märkte zu bedienen.",
+    p3: "Heute ist Ivexia in mehreren Regionen mit strategischer Expansion nach Europa und in die MENA-Region tätig."
   },
   purpose: {
     title: "Unser Zweck",
-    subtitle: "Angetrieben durch Innovation, geleitet von Integrität",
+    subtitle: "Getrieben von Innovation, geleitet von Integrität",
     visionTitle: "Unsere Vision",
-    visionDesc: "Ein weltweit vertrauenswürdiger pharmazeutischer Partner zu werden.",
+    visionDesc: "Ein weltweit vertrauenswürdiger Pharmapartner werden, der Innovation und Sicherheit liefert.",
     missionTitle: "Unsere Mission",
-    missionDesc: "Hochwertige Medikamente durch Forschung und Compliance herzustellen."
+    missionDesc: "Hochwertige Arzneimittel durch Forschungsexzellenz und Compliance herstellen."
   },
   global: {
-    badge: "Globale Präsenz",
-    title: "Weltweite Aktivitäten",
-    subtitle: "Strategisch positioniert für globale Märkte"
+    badge: "Globaler Fußabdruck",
+    title: "Weltweite Operationen",
+    subtitle: "Strategisch positioniert für effiziente Bedienung globaler Märkte"
   },
+  globalLocations: [
+    {
+      loc: "Indien",
+      desc: "Strategische pharmazeutische Präsenz mit hochmodernen Produktionsanlagen und F&E-Zentren."
+    },
+    {
+      loc: "Nordmazedonien",
+      desc: "Europäisches Drehkreuz für Produktion und Vertrieb, das EU-Märkte mit Exzellenz bedient."
+    },
+    {
+      loc: "Katar",
+      desc: "MENA-Regionalhauptsitz, der den Zugang zur Gesundheitsversorgung im gesamten Nahen Osten erweitert."
+    }
+  ],
   expertise: {
     badge: "Was Wir Tun",
-    title: "Kompetenzbereiche",
-    subtitle: "Spezialisierte pharmazeutische Lösungen"
+    title: "Expertisebereiche",
+    subtitle: "Spezialisierte pharmazeutische Lösungen für komplexe Gesundheitsbedürfnisse"
   },
+  expertiseList: [
+    {
+      title: "Forschung & Entwicklung",
+      img: "/images/R&D.jpg",
+      desc: "Modernste Forschungseinrichtungen mit Fokus auf innovative Arzneimittelverabreichungssysteme."
+    },
+    {
+      title: "Produktion",
+      img: "/images/Manufacturing.jpg",
+      desc: "WHO-GMP-zertifizierte Anlagen mit fortschrittlichen Fertigungskapazitäten."
+    },
+    {
+      title: "Onkologie",
+      img: "/images/Oncology.jpg",
+      desc: "Spezialisiertes Onkologie-Portfolio mit zielgerichteten Therapien."
+    }
+  ],
   leadership: {
     badge: "Unsere Führung",
-    title: "Executive Leadership",
-    subtitle: "Erfahrene Fachleute treiben Innovation voran"
+    title: "Führungsebene",
+    subtitle: "Erfahrene Fachleute, die pharmazeutische Innovation vorantreiben"
   },
+  leadershipList: [
+    {
+      name: "Dr. Michael Carter",
+      title: "Vorstandsvorsitzender",
+      img: "/images/leader1.jpg",
+      desc: "30+ Jahre in pharmazeutischer Führung"
+    },
+    {
+      name: "James Wilson",
+      title: "Betriebsdirektor",
+      img: "/images/leader2.jpg",
+      desc: "Experte für globale Lieferketten"
+    },
+    {
+      name: "Sophia Bennett",
+      title: "Leiterin Betrieb",
+      img: "/images/leader3.jpg",
+      desc: "Spezialistin für Fertigungsexzellenz"
+    }
+  ],
   timeline: {
     badge: "Unsere Reise",
-    title: "Wachstumsmeilensteine",
-    subtitle: "Wichtige Erfolge auf unserem Weg"
+    title: "Meilensteine des Wachstums",
+    subtitle: "Wichtige Erfolge auf unserem Weg zur pharmazeutischen Exzellenz"
   },
+  timelineList: [
+    {
+      year: "2018",
+      event: "Unternehmen gegründet mit Vision für globale pharmazeutische Exzellenz",
+      icon: "rocket"
+    },
+    {
+      year: "2020",
+      event: "Erste WHO-GMP-zertifizierte Produktionsanlage errichtet",
+      icon: "industry"
+    },
+    {
+      year: "2023",
+      event: "Expansion auf europäische Märkte",
+      icon: "globe"
+    },
+    {
+      year: "2025",
+      event: "Onkologie-Sparte mit 10+ Produkten gestartet",
+      icon: "microscope"
+    },
+    {
+      year: "2030",
+      event: "Vision, unter die 50 größten Pharmaunternehmen weltweit zu gehören",
+      icon: "bullseye"
+    }
+  ],
   certifications: {
     badge: "Qualitätssicherung",
     title: "Globale Zertifizierungen",
-    subtitle: "Erfüllung internationaler Standards"
+    subtitle: "Erfüllung internationaler Qualitätsstandards"
   },
   statement: {
-    title: "Angetrieben durch Innovation. Gestärkt durch Qualität.",
-    subtitle: "Ivexia steht an der Spitze der pharmazeutischen Entwicklung."
+    title: "Getrieben von Innovation. Angetrieben von Qualität.",
+    subtitle: "Ivexia steht an der Spitze des pharmazeutischen Fortschritts."
   },
   facilities: {
     title: "Modernste Einrichtungen",
-    subtitle: "Nach globalen Standards entwickelt."
+    subtitle: "Entwickelt, um globale regulatorische Standards zu erfüllen."
   },
   rnd: {
     badge: "Innovationszentrum",
     title: "Forschung & Entwicklung",
-    subtitle: "Grenzen der Forschung erweitern"
+    subtitle: "Grenzen in der pharmazeutischen Forschung verschieben"
+  },
+  labs: {
+    title: "Fortschrittliche F&E-Einrichtung",
+    desc: "Ausgestattet mit modernster Forschungsinfrastruktur und globalen GMP-Standards."
   },
   sustainability: {
     badge: "Umwelt",
-    title: "Nachhaltigkeitsverpflichtung",
-    desc: "Wir priorisieren umweltfreundliche Produktion.",
+    title: "Verpflichtung zur Nachhaltigkeit",
+    desc: "Wir priorisieren umweltfreundliche Produktion und verantwortungsvolle Beschaffung.",
     points: [
-      "Abfallfreie Produktion",
-      "Solarbetriebene Anlagen",
-      "Nachhaltige Verpackung"
+      "Null-Abfall-Produktionsinitiativen",
+      "Solarbetriebene Einrichtungen",
+      "Nachhaltige Verpackungslösungen"
     ]
   },
   presence: {
-    badge: "Globale Reichweite",
+    badge: "Weltweite Reichweite",
     title: "Globale Präsenz",
-    subtitle: "In über 50 Ländern tätig"
+    subtitle: "Patienten in über 50 Ländern versorgen"
   },
   awards: {
     badge: "Anerkennung",
-    title: "Auszeichnungen",
-    subtitle: "Feiern von Innovation"
+    title: "Auszeichnungen & Anerkennung",
+    subtitle: "Exzellenz in der pharmazeutischen Innovation feiern"
   },
+  awardsList: [
+    {
+      award: "Pharmaceutical Excellence Award 2023",
+      org: "Global Health Council",
+      year: "2023"
+    },
+    {
+      award: "Innovation in der Fertigung",
+      org: "Pharma Leaders Forum",
+      year: "2022"
+    },
+    {
+      award: "Bestes aufstrebendes Pharmaunternehmen",
+      org: "Healthcare Asia",
+      year: "2024"
+    }
+  ],
   cta: {
-    title: "Werden Sie Partner",
-    subtitle: "Gemeinsam globale Gesundheitslösungen liefern.",
+    title: "Partner mit Uns",
+    subtitle: "Schließen Sie sich uns an, um qualitativ hochwertige Gesundheitslösungen weltweit zu liefern.",
     button: "Kontaktieren Sie Uns"
+  }
+},
+testKitDetailPage: {
+  home: "Startseite",
+  testKits: "Testkits",
+  loading: "Laden...",
+  badge: "Diagnostischer Testkit",
+  defaultDescription: "Detaillierte Produktinformationen werden auf Anfrage zur Verfügung gestellt.",
+  categoryPending: "Kategorie ausstehend",
+  requestInfo: "Informationen Anfordern",
+  backButton: "Zurück zu Testkits",
+  productDetails: "Produktdetails",
+  method: "Methode",
+  specimen: "Probe",
+  cutOff: "Grenzwert",
+  certificate: "Zertifikat"
+},
+// ivexia\data1\languages\de.js - Magazine section
+
+magazine: {
+  title: "Ivexia Magazin",
+  loading: "Laden...",
+  recentArticles: "Neueste Artikel",
+  noRecentArticles: "Noch keine aktuellen Artikel.",
+  readMore: "Weiterlesen →",
+  previous: "Zurück",
+  next: "Weiter",
+  page: "Seite",
+  of: "von",
+  
+  categories: {
+    health: "Gesundheit",
+    news: "Nachrichten"
+  },
+  
+  articles: {
+    "gene-therapy-emerging-science": {
+      title: "Wie Gentherapie die moderne Behandlung verändert",
+      excerpt: "Die Gentherapie bewegt sich vom Konzept in die Klinik und bietet gezielte Möglichkeiten, genetische Probleme zu korrigieren, anstatt nur Symptome zu behandeln.",
+      readTime: "7–9 min Lesezeit",
+      heroCaption: "Die Gentherapie betrachtet Krankheiten auf DNA-Ebene und zielt darauf ab, die Anweisungen der Zellen zu korrigieren oder anzupassen.",
+      sections: [
+        {
+          heading: "Was ist Gentherapie?",
+          paragraphs: [
+            "In fast jeder Zelle des Körpers trägt die DNA die Anweisungen für die Funktion dieser Zelle. Wenn Teile dieser Anleitung beschädigt sind, fehlen oder verändert wurden, kann eine Krankheit auftreten.",
+            "Die Gentherapie konzentriert sich auf diese fehlerhaften Abschnitte und zielt darauf ab, das genetische Material zu reparieren, zu ersetzen oder anzupassen."
+          ]
+        },
+        {
+          subheading: "Hauptansätze",
+          paragraphs: [
+            "Einfach ausgedrückt kann die Gentherapie:",
+            "• Eine funktionierende Kopie eines fehlenden oder defekten Gens hinzufügen",
+            "• Ein schädliches Gen reduzieren oder ausschalten",
+            "• Die DNA-Sequenz mit modernen Gentech-Tools bearbeiten"
+          ]
+        },
+        {
+          subheading: "1. Gen-Augmentation",
+          paragraphs: [
+            "Einige Krankheiten treten auf, weil ein Schlüsselgen fehlt oder nicht richtig funktioniert. Das Hinzufügen einer gesunden Kopie kann helfen, die Zellfunktion wiederherzustellen."
+          ]
+        },
+        {
+          subheading: "2. Gen-Hemmung",
+          paragraphs: [
+            "Bei anderen Krankheiten ist das Problem ein Gen, das zu aktiv ist oder etwas Schädliches produziert. Genhemmungsstrategien zielen darauf ab, diese Aktivität zu reduzieren oder zu blockieren."
+          ]
+        },
+        {
+          subheading: "3. Gen-Editing",
+          paragraphs: [
+            "Werkzeuge wie CRISPR wirken wie molekulare Scheren und ermöglichen es Wissenschaftlern, DNA an präzisen Stellen zu schneiden und Mutationen zu korrigieren oder neues Material einzufügen."
+          ]
+        },
+        {
+          heading: "Wie digitale Werkzeuge die Gentherapie unterstützen",
+          paragraphs: [
+            "Die Gentherapieforschung generiert riesige Datenmengen. KI hilft, diese Informationen zu analysieren und Entscheidungen darüber zu unterstützen, welche Patienten am meisten profitieren könnten."
+          ]
+        },
+        {
+          heading: "Wo die Gentherapie heute eingesetzt wird",
+          paragraphs: [
+            "Zugelassene Gentherapien konzentrieren sich derzeit auf seltene Erbkrankheiten. Die Forschung expandiert in die Onkologie, Kardiologie und Neurologie."
+          ]
+        },
+        {
+          heading: "Potenzielle Vorteile",
+          paragraphs: [
+            "• Bekämpft die Ursache der Krankheit",
+            "• Kann lang anhaltende oder einmalige Behandlungen bieten",
+            "• Ermöglicht eine präzise Zielsteuerung von Zellen oder Geweben",
+            "• Schafft neue Optionen, wo Standardtherapien begrenzt sind"
+          ]
+        },
+        {
+          heading: "Zu beachtende Punkte",
+          paragraphs: [
+            "• Unbeabsichtigte Veränderungen an anderer Stelle im Genom",
+            "• Mögliche Immunreaktionen",
+            "• Komplexe, kostspielige Herstellung",
+            "• Notwendigkeit einer langfristigen Sicherheitsüberwachung"
+          ]
+        },
+        {
+          heading: "Ethik und Zukunft",
+          paragraphs: [
+            "Da die Gentherapie die biologischen Kernanweisungen verändert, wirft sie wichtige Fragen zu Zugang, Fairness und langfristiger Sicherheit auf.",
+            "Mit der Verbesserung der Verabreichungsmethoden wird die Gentherapie voraussichtlich Teil der medizinischen Regelversorgung werden."
+          ]
+        }
+      ]
+    },
+
+    "power-of-ai-medical-industry": {
+      title: "Die Kraft der KI in der Medizinbranche: 4 Dinge, die Sie wissen sollten",
+      excerpt: "Künstliche Intelligenz verändert Diagnostik, Arbeitsabläufe und Entscheidungsfindung in Krankenhäusern und Pharmaunternehmen.",
+      readTime: "6–8 min Lesezeit",
+      heroCaption: "Künstliche Intelligenz hilft, komplexe medizinische und pharmazeutische Daten in schnellere, fundiertere Entscheidungen umzuwandeln.",
+      sections: [
+        {
+          heading: "Die Auswirkungen von KI in der Medizin",
+          paragraphs: [
+            "Künstliche Intelligenz wird zu einem der wichtigsten Werkzeuge im modernen Gesundheitswesen. Sie kann Tausende von Datenpunkten gleichzeitig analysieren und Muster hervorheben, die Menschen möglicherweise übersehen.",
+            "In Krankenhäusern und der Pharmaindustrie unterstützt KI die Entscheidungsfindung, verbessert die Diagnostik und optimiert Arbeitsabläufe."
+          ]
+        },
+        {
+          heading: "KI in der Pharmaindustrie",
+          paragraphs: [
+            "Die Pharmaindustrie ist stark auf Daten angewiesen – chemische Bibliotheken, biologische Experimente, klinische Studien und Sicherheitssignale. KI verbindet diese Informationsströme und beschleunigt die Forschung.",
+            "• Virtuelles Screening für die Wirkstofffindung",
+            "• Simulation von Formulierungen und Prozessen",
+            "• Prädiktive Modellierung für die Sicherheitsbewertung"
+          ]
+        },
+        {
+          heading: "KI im Pharma-Marketing",
+          paragraphs: [
+            "KI macht Marketing datengesteuerter, indem sie die Kommunikation an den tatsächlichen Informationsbedarf anpasst.",
+            "• Präzisere Zielgruppensegmentierung",
+            "• Personalisierte Inhalte",
+            "• Besseres Verständnis der Verhaltenstreiber"
+          ]
+        },
+        {
+          heading: "KI in Gesundheitssystemen und Krankenhäusern",
+          paragraphs: [
+            "KI analysiert Laborergebnisse, Bildgebung, Vitalparameter und Krankengeschichte, um dringende Risiken zu identifizieren oder Behandlungsanpassungen zu steuern.",
+            "• Bildgebungsunterstützung für Radiologen",
+            "• Risikovorhersage-Tools",
+            "• Virtuelle Assistenten für die Patientenunterstützung"
+          ]
+        },
+        {
+          heading: "Die Zukunft von KI in der Medizin",
+          paragraphs: [
+            "KI wird eine wichtige Rolle in der Präzisionsmedizin spielen, indem sie Behandlungen auf die Genetik und das Risikoprofil jedes Einzelnen zuschneidet."
+          ]
+        },
+        {
+          heading: "Warum KI wichtig ist",
+          paragraphs: [
+            "Für Patienten: Frühere Erkennung, personalisierte Behandlung und bessere Ergebnisse.",
+            "Für Pharma und Anbieter: Intelligentere Nutzung vorhandener Daten und bessere Effizienz."
+          ]
+        }
+      ]
+    },
+
+    "personalized-medicine-basics": {
+      title: "Personalisierte Medizin: Auf jeden Patienten zugeschnittene Behandlungen",
+      excerpt: "Durch die Nutzung von Genetik, Biomarkern und klinischen Daten zielt die personalisierte Medizin darauf ab, die richtige Behandlung für die richtige Person zum richtigen Zeitpunkt zu wählen.",
+      readTime: "6–8 min Lesezeit",
+      heroCaption: "Personalisierte Medizin kombiniert Genetik, klinische Daten und Lebensstilinformationen, um die Behandlung auf jeden Patienten abzustimmen.",
+      sections: [
+        {
+          heading: "Was ist personalisierte Medizin?",
+          paragraphs: [
+            "Personalisierte Medizin bewegt das Gesundheitswesen weg vom Einheitsmodell und passt Behandlungen an den Einzelnen an.",
+            "Fortschritte in der genomischen Sequenzierung zeigen, warum zwei Patienten mit derselben Erkrankung unterschiedlich auf dieselbe Therapie ansprechen können."
+          ]
+        },
+        {
+          heading: "Gentechnik und Präzisionsmedizin",
+          paragraphs: [
+            "Moderne DNA-Sequenzierung hilft, genetische Variationen zu identifizieren, die mit Krankheiten, der Reaktion auf Medikamente oder dem Risiko von Nebenwirkungen verbunden sind."
+          ]
+        },
+        {
+          heading: "Vorteile der personalisierten Medizin",
+          paragraphs: [
+            "• Präzisere Behandlungen mit höheren Ansprechraten",
+            "• Proaktive, präventive Gesundheitsversorgung",
+            "• Bessere Allokation medizinischer Ressourcen",
+            "• Innovation in der Diagnostik und gezielten Therapien"
+          ]
+        },
+        {
+          heading: "Herausforderungen und Verantwortlichkeiten",
+          paragraphs: [
+            "• Datenschutz und Schutz genetischer Informationen",
+            "• Gewährleistung eines gleichberechtigten Zugangs",
+            "• Klare regulatorische Rahmenbedingungen",
+            "• Interoperabilität zwischen Gesundheitssystemen"
+          ]
+        },
+        {
+          heading: "Zukunftsausblick",
+          paragraphs: [
+            "Da die Sequenzierung zugänglicher wird, wird die personalisierte Medizin zu einem zentralen Bestandteil der modernen Gesundheitsversorgung werden."
+          ]
+        }
+      ]
+    },
+
+    "what-is-obesity-how-to-overcome-it": {
+      title: "Was ist Adipositas – und wie überwindet man sie wirklich?",
+      excerpt: "Adipositas wird durch Biologie, Umwelt und Lebensstil beeinflusst. Langfristiges Management braucht Struktur, nicht nur kurze Diäten.",
+      readTime: "6–8 min Lesezeit",
+      heroCaption: "Adipositas wird durch Biologie, Umwelt und Lebensstil beeinflusst. Langfristiges Management erfordert Struktur, nicht nur kurze Diäten.",
+      sections: [
+        {
+          heading: "Warum Adipositas entsteht",
+          paragraphs: [
+            "Ernährung und Bewegung sind wichtig, aber nur ein Teil der Geschichte. Biologische Faktoren, Schlaf, Stress, Medikamente und soziales Umfeld tragen alle erheblich bei."
+          ]
+        },
+        {
+          heading: "Gesundheitsrisiken im Zusammenhang mit Adipositas",
+          paragraphs: [
+            "• Höheres Risiko für Typ-2-Diabetes und Insulinresistenz",
+            "• Erhöhte Wahrscheinlichkeit für Bluthochdruck und Herzerkrankungen",
+            "• Schlafapnoe, Gelenkschmerzen und bestimmte Krebsarten",
+            "• Auswirkungen auf die psychische Gesundheit, einschließlich Selbstwertgefühl und Depressionen"
+          ]
+        },
+        {
+          heading: "Realistische Gewichtskontrolle",
+          paragraphs: [
+            "Nachhaltige Gewichtskontrolle bedeutet keine extremen Diäten oder schnellen Lösungen. Sie erfordert einen ausgewogenen, langfristigen Plan.",
+            "• Angenehme, ausgewogene Ernährung statt strenger Regeln",
+            "• Regelmäßige körperliche Aktivität, die machbar und nachhaltig ist",
+            "• Umgang mit Schlaf, Stress und emotionalen Auslösern für Essanfälle",
+            "• Medikamente oder Operationen, wo angemessen, unter klinischer Anleitung"
+          ]
+        },
+        {
+          heading: "Langfristige Unterstützung ist wichtig",
+          paragraphs: [
+            "Da Adipositas eine chronische Erkrankung ist, hilft langfristige Unterstützung, Fortschritte zu erhalten.",
+            "Das Ziel ist nicht Perfektion, sondern stetige, konsequente Verbesserungen im Laufe der Zeit."
+          ]
+        }
+      ]
+    },
+
+    "international-womens-day-healthcare": {
+      title: "Zu Ehren des Internationalen Frauentags",
+      excerpt: "Wissenschaftlerinnen, Klinikerinnen und Führungskräfte treiben entscheidende Fortschritte im Gesundheitswesen voran. Ihre Arbeit anzuerkennen ist Teil des Aufbaus eines besseren Systems.",
+      readTime: "5–7 min Lesezeit",
+      heroCaption: "Der Internationale Frauentag ist ein Moment, um die Leistungen von Frauen zu feiern und sich darauf zu konzentrieren, Lücken in der Frauengesundheit zu schließen.",
+      sections: [
+        {
+          heading: "Herausforderungen für die Frauengesundheit",
+          paragraphs: [
+            "In vielen Ländern stehen Frauen vor einer Reihe von Hindernissen:",
+            "• Eingeschränkter Zugang zur reproduktiven und mütterlichen Gesundheitsversorgung",
+            "• Unterdiagnose oder verzögerte Diagnose chronischer Krankheiten wie Herzerkrankungen",
+            "• Kultureller Druck und Diskriminierung, die den Zugang zur Versorgung erschweren"
+          ]
+        },
+        {
+          heading: "Krankheiten, die Frauen überproportional betreffen",
+          paragraphs: [
+            "Bestimmte Erkrankungen beeinflussen die Gesundheitsergebnisse von Frauen stark.",
+            "• Brustkrebs und Gebärmutterhalskrebs, bei denen Screening das Überleben erheblich verbessern kann",
+            "• Mütterliche Komplikationen während Schwangerschaft und Geburt",
+            "• Chronische Erkrankungen, die bei Frauen anders auftreten können, was zu Fehldiagnosen führt"
+          ]
+        },
+        {
+          heading: "Förderung der Frauengesundheit: Schlüsselhebel",
+          paragraphs: [
+            "• Verbesserung des Zugangs zu wesentlichen Dienstleistungen: Mutterschaftsvorsorge, Verhütung, Screening",
+            "• Investitionen in Bildung, wirtschaftliche Stärkung und Zugang zu verlässlichen Informationen",
+            "• Förderung von Forschung, die Frauen in ausreichender Zahl einbezieht",
+            "• Stärkung der Gesundheitspolitik, die reproduktive Rechte schützt und den Zugang zur Versorgung gewährleistet"
+          ]
+        },
+        {
+          heading: "Ein Engagement über einen Tag hinaus",
+          paragraphs: [
+            "Der Internationale Frauentag ist eine Erinnerung, kein einmaliges Ereignis. Die Verringerung der Lücken in der Frauengesundheit erfordert ein konsequentes und langfristiges Engagement.",
+            "Für Ivexia bedeutet die Priorisierung der Frauengesundheit, Medikamente, Kommunikation und Programme mit den besonderen Bedürfnissen von Frauen zu gestalten."
+          ]
+        }
+      ]
+    },
+
+    "diabetes-kidney-disease-6": {
+      title: "Erhöht Diabetes das Risiko einer Nierenerkrankung?",
+      excerpt: "Chronisch hoher Blutzucker kann die kleinen Blutgefäße in den Nieren schädigen. Diesen Zusammenhang früh zu verstehen, ist wichtig.",
+      readTime: "5–7 min Lesezeit",
+      heroCaption: "Diabetes ist einer der wichtigsten Risikofaktoren für chronische Nierenerkrankungen, besonders wenn Blutzucker und Blutdruck über längere Zeit hoch bleiben.",
+      sections: [
+        {
+          heading: "Wie Diabetes die Nieren beeinflusst",
+          paragraphs: [
+            "Hoher Blutzucker schädigt die Filtereinheiten der Niere, die Glomeruli. Mit der Zeit werden sie undicht und lassen Proteine wie Albumin in den Urin gelangen.",
+            "Bluthochdruck und Entzündungen belasten zusätzlich und verschlimmern den Schaden."
+          ]
+        },
+        {
+          heading: "Warnsignale",
+          paragraphs: [
+            "• Schwellungen in Beinen, Knöcheln oder um die Augen",
+            "• Schaumiger oder sprudelnder Urin (ein Zeichen für Proteinverlust)",
+            "• Zunehmende Schwierigkeiten, den Blutdruck zu kontrollieren",
+            "• Müdigkeit, Appetitlosigkeit oder Konzentrationsschwierigkeiten"
+          ]
+        },
+        {
+          heading: "Die Rolle des Screenings",
+          paragraphs: [
+            "Urintests auf Albumin und Bluttests auf Kreatinin und eGFR können Nierenschäden lange vor dem Auftreten schwerer Symptome erkennen."
+          ]
+        },
+        {
+          heading: "Schutz der Nieren",
+          paragraphs: [
+            "• Blutzucker im Zielbereich halten",
+            "• Strenge Blutdruckkontrolle, oft mit ACE-Hemmern oder ARBs",
+            "• Gesunde Lebensgewohnheiten: Ernährung, Bewegung, guter Schlaf und Nichtrauchen"
+          ]
+        },
+        {
+          heading: "Eine Botschaft der Prävention und Partnerschaft",
+          paragraphs: [
+            "Diabetes erhöht zwar das Risiko für Nierenerkrankungen, aber das Risiko ist nicht festgeschrieben.",
+            "Mit frühzeitiger Erkennung, richtiger Behandlung und enger Zusammenarbeit mit Gesundheitsteams kann die Nierenfunktion viel länger geschützt werden."
+          ]
+        }
+      ]
+    }
   }
 }
 }

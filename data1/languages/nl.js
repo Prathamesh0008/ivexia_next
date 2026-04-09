@@ -243,25 +243,30 @@ contactPage: {
   title: "Contact Ivexia Pharmaceuticals",
   subtitle: "Neem contact met ons op voor farmaceutische vragen, partnerschappen en ondersteuning.",
   formTitle: "Stuur ons een bericht",
-  formSubtitle: "Wij nemen binnen 24 uur contact met u op",
+  formSubtitle: "We reageren binnen 24 uur",
   fullName: "Volledige naam",
-  fullNamePlaceholder: "John Doe",
+  fullNamePlaceholder: "Jan Jansen",
   email: "E-mailadres",
-  emailPlaceholder: "you@example.com",
+  emailPlaceholder: "u@example.com",
   phone: "Telefoonnummer",
   phonePlaceholder: "10-cijferig nummer",
   subject: "Onderwerp",
   subjectPlaceholder: "Waar gaat dit over?",
   message: "Bericht",
-  messagePlaceholder: "Geef details over uw aanvraag...",
+  messagePlaceholder: "Geef details over uw vraag...",
   submit: "Verzenden",
   sending: "Bezig met verzenden...",
-  success: "Bericht succesvol verzonden! We nemen snel contact op.",
+  success: "Bericht succesvol verzonden!",
   error: "Verzenden mislukt. Probeer opnieuw.",
-  contactInfo: "Neem contact met ons op",
-  followUs: "Sociale netwerken",
-  footer1: "Voor dringende vragen kunt u onze noodlijn bellen.",
-  footer2: "Wij reageren binnen 24 uur op werkdagen."
+  footer1: "Bel bij dringende vragen onze hulplijn.",
+  footer2: "Wij reageren binnen 24 uur.",
+  nameError: "Naam is verplicht",
+  emailError: "E-mail is verplicht",
+  emailInvalidError: "Voer een geldig e-mailadres in",
+  phoneError: "Telefoonnummer moet 10 cijfers zijn",
+  subjectError: "Onderwerp is verplicht",
+  messageError: "Bericht is verplicht",
+  messageLengthError: "Minimaal 10 tekens vereist"
 },
 offeringsOverview: {
   badge: "Ivexia Aanbod Overzicht",
@@ -566,76 +571,203 @@ oemPage: {
     badge: "Ivexia Aanbod",
     title: "Private Label Productie / OEM",
     desc: "Bouw en schaal uw farmaceutisch merk met gestructureerde OEM-uitvoering, kwaliteitsbeheer en betrouwbare leveringscontinuïteit.",
-    contact: "Contacteer ons",
-    explore: "Bekijk alle aanbiedingen"
+    contact: "Neem Contact Op",
+    explore: "Bekijk Alle Diensten"
   },
 
   highlights: [
-    "WHO-GMP conforme productienormen",
+    "WHO-GMP conforme productiestandaarden",
     "Flexibele batchplanning voor marktintroducties",
     "End-to-end OEM ondersteuning van concept tot levering"
   ],
 
   capabilityHeading: "OEM Capaciteiten",
-  capabilityDesc:
-    "Een volledige private-label workflow ontworpen voor distributeurs, importeurs en gezondheidsmerken die actief zijn in diverse marktomstandigheden.",
+  capabilityDesc: "Een volledige private-label workflow voor distributeurs, importeurs en zorgmerken.",
 
-  dosageHeading: "Dosering vormen die wij produceren",
-  docsHeading: "Documentatie en technische leveringen",
-  processHeading: "Project uitvoering",
-  qualityHeading: "Kwaliteitsbeheer",
-  therapyHeading: "Therapeutische dekking",
-  supportHeading: "Wat wij end-to-end ondersteunen",
-  qualityBuiltHeading: "Gebouwd op kwaliteit en naleving",
-  onboardingHeading: "Benodigde informatie om te starten",
-  faqHeading: "Veelgestelde vragen",
-
-  qualityDesc:
-    "Kwaliteit is geïntegreerd in elke fase van grondstofkwalificatie tot vrijgave en verzending.",
-
-  step: "Stap",
-  output: "Resultaat",
-
-  ctaHeading: "Start uw Private Label portfolio met Ivexia",
-  ctaContact: "Contact",
-  ctaExplore: "Bekijk alles",
+  capabilities: [
+    {
+      title: "Formulatieontwikkeling",
+      description: "Ondersteuning van concept tot marktrijp product."
+    },
+    {
+      title: "Aangepaste Branding",
+      description: "Private label verpakking en ontwerp afgestemd op uw markt."
+    },
+    {
+      title: "Regelgevende Documentatie",
+      description: "Technische dossiers en kwaliteitsdocumentatie."
+    },
+    {
+      title: "Schaalbare Productie",
+      description: "Pilot, lancering en opschaling met controle."
+    }
+  ],
 
   engagement: [
     {
       title: "Marktintroductiemodel",
-      desc: "Voor partners die een nieuwe markt betreden en ondersteuning nodig hebben.",
-      fit: "Ideaal voor eerste lanceringen."
+      description: "Voor nieuwe markten met gerichte productselectie.",
+      fit: "Beste voor eerste lanceringen."
     },
     {
-      title: "Portfolio uitbreiding",
-      desc: "Voor merken die nieuwe producten toevoegen.",
-      fit: "Ideaal voor groei."
+      title: "Portfolio-uitbreiding",
+      description: "Voor bestaande merken die uitbreiden.",
+      fit: "Beste voor groei."
     },
     {
       title: "Continuïteitsmodel",
-      desc: "Voor lange termijn inkoop en planning.",
-      fit: "Ideaal voor schaal."
+      description: "Voor langdurige samenwerking.",
+      fit: "Beste voor bulk aankopen."
     }
   ],
 
-  capabilities: [
+  dosageHeading: "Dosering Vormen",
+  dosageDesc: "Ondersteuning voor meerdere doseringsvormen.",
+
+  dosageForms: [
+    "Tabletten",
+    "Capsules",
+    "Siroop",
+    "Suspensies",
+    "Topicals",
+    "Sachets"
+  ],
+
+  docsHeading: "Documentatie",
+  docsDesc: "Technische documentatie volgens markteisen.",
+
+  documentationPack: [
+    "Productspecificaties",
+    "Analysecertificaat",
+    "Stabiliteitsgegevens",
+    "Batchdocumentatie",
+    "Label compliance",
+    "Transportdocumenten"
+  ],
+
+  processHeading: "Projectproces",
+
+  processSteps: [
+    "Analyse en afstemming",
+    "Finalisatie",
+    "Productie",
+    "Levering en planning"
+  ],
+
+  step: "Stap",
+  output: "Resultaat",
+
+  qualityHeading: "Kwaliteitsbeheer",
+  qualityDesc: "Kwaliteit in elke fase.",
+
+  qualityFramework: [
     {
-      title: "Formulering ontwikkeling",
-      desc: "Van concept tot marktklare formule."
+      stage: "Grondstoffen",
+      control: "Leverancierscontrole",
+      output: "Goedgekeurde materialen"
     },
     {
-      title: "Custom branding",
-      desc: "Private label verpakking en design."
+      stage: "Procescontrole",
+      control: "Controlepunten",
+      output: "Consistente productie"
     },
     {
-      title: "Regelgevende documentatie",
-      desc: "Technische dossiers en CoA ondersteuning."
+      stage: "Producttesten",
+      control: "Kwaliteitstesten",
+      output: "Vrijgave"
     },
     {
-      title: "Schaalbare productie",
-      desc: "Van pilot tot grootschalige productie."
+      stage: "Verzending",
+      control: "Controle",
+      output: "Gereed voor markt"
     }
-  ]
+  ],
+
+  therapyHeading: "Therapeutische Dekking",
+  therapyDesc: "Ondersteuning van meerdere categorieën.",
+
+  therapeuticAreas: [
+    "Algemene Geneeskunde",
+    "Pijnbeheer",
+    "Nutraceuticals",
+    "Maagzorg",
+    "Ademhaling",
+    "Dermatologie",
+    "Vrouwengezondheid",
+    "Pediatrie"
+  ],
+
+  supportHeading: "Ondersteuning",
+
+  supportScope: [
+    {
+      title: "Branding",
+      details: "Verpakking en design."
+    },
+    {
+      title: "Regelgeving",
+      details: "Documentatie."
+    },
+    {
+      title: "Levering",
+      details: "Planning en distributie."
+    }
+  ],
+
+  qualityBuiltHeading: "Kwaliteit en Compliance",
+  qualityBuiltDesc: "Elke batch volgt strikte controles.",
+
+  qualityPoints: [
+    "Grondstoffencontrole",
+    "Kwaliteitstesten",
+    "Traceerbaarheid",
+    "Export ondersteuning"
+  ],
+
+  onboardingHeading: "Startinformatie",
+  onboardingDesc: "Benodigde gegevens voor start.",
+
+  onboardingChecklist: [
+    "Doelmarkt",
+    "Dosering",
+    "Verpakking",
+    "Vraag",
+    "Compliance"
+  ],
+
+  faqHeading: "Veelgestelde Vragen",
+
+  faqs: [
+    {
+      question: "Ondersteunen jullie kleine batches?",
+      answer: "Ja, start met kleine volumes en schaal op."
+    },
+    {
+      question: "Bieden jullie private label?",
+      answer: "Ja, inclusief design."
+    },
+    {
+      question: "Documentatie per land?",
+      answer: "Ja, aangepast per markt."
+    },
+    {
+      question: "Wat is nodig om te starten?",
+      answer: "Categorie, vorm, markt en volume."
+    },
+    {
+      question: "Ondersteuning na lancering?",
+      answer: "Ja, continu supply planning."
+    },
+    {
+      question: "Single en multi SKU?",
+      answer: "Ja, beide mogelijk."
+    }
+  ],
+
+  ctaHeading: "Start Uw Private Label",
+  ctaDesc: "Deel uw plan en wij helpen u.",
+  ctaContact: "Contact",
+  ctaExplore: "Bekijk Alle Diensten"
 },
 testKitsPage: {
   heading: "Testkits",
@@ -662,20 +794,20 @@ testKitsPage: {
 aboutPage: {
   hero: {
     title: "Over Ivexia Pharmaceuticals",
-    subtitle: "Innovatie in de gezondheidszorg met wereldwijde farmaceutische excellentie en een sterke focus op kwaliteit."
+    subtitle: "Innovatie in de gezondheidszorg met wereldwijde farmaceutische excellentie en onwankelbare toewijding aan kwaliteit."
   },
   stats: {
-    years: "Jaren van Excellentie",
+    years: "Jaar Excellentie",
     markets: "Wereldwijde Markten",
     products: "Producten",
-    employees: "Werknemers"
+    employees: "Medewerkers"
   },
   story: {
     badge: "Ons Verhaal",
-    title: "Toegewijd aan farmaceutische excellentie sinds 2018",
-    p1: "Opgericht met een focus op innovatie levert Ivexia Pharmaceuticals farmaceutische productie van wereldklasse volgens internationale normen.",
-    p2: "Wij combineren regelgevende expertise, geavanceerd onderzoek en productieprecisie om wereldwijde markten te bedienen.",
-    p3: "Vandaag is Ivexia actief in meerdere regio’s met strategische uitbreiding naar Europa en MENA."
+    title: "Toegewijd aan Farmaceutische Excellentie Sinds 2018",
+    p1: "Opgericht met een toewijding aan innovatie, levert Ivexia Pharmaceuticals wereldklasse farmaceutische productie afgestemd op wereldwijde normen.",
+    p2: "We combineren regelgevende expertise, geavanceerd onderzoek en productieprecisie om internationale markten te bedienen.",
+    p3: "Vandaag de dag opereert Ivexia in meerdere regio's met strategische uitbreiding naar Europa en MENA."
   },
   purpose: {
     title: "Ons Doel",
@@ -683,70 +815,515 @@ aboutPage: {
     visionTitle: "Onze Visie",
     visionDesc: "Een wereldwijd vertrouwde farmaceutische partner worden die innovatie en veiligheid levert.",
     missionTitle: "Onze Missie",
-    missionDesc: "Hoogwaardige geneesmiddelen produceren door uitmuntend onderzoek en naleving."
+    missionDesc: "Hoogwaardige geneesmiddelen produceren door onderzoeksexcellentie en naleving."
   },
   global: {
-    badge: "Wereldwijde Aanwezigheid",
+    badge: "Wereldwijde Voetafdruk",
     title: "Wereldwijde Operaties",
-    subtitle: "Strategisch gepositioneerd om wereldmarkten efficiënt te bedienen"
+    subtitle: "Strategisch gelegen om wereldwijde markten efficiënt te bedienen"
   },
+  globalLocations: [
+    {
+      loc: "India",
+      desc: "Strategische farmaceutische aanwezigheid met geavanceerde productiefaciliteiten en R&D-centra."
+    },
+    {
+      loc: "Noord-Macedonië",
+      desc: "Europese hub voor productie en distributie, die EU-markten met excellentie bedient."
+    },
+    {
+      loc: "Qatar",
+      desc: "MENA regionaal hoofdkantoor, uitbreiding van gezondheidszorgtoegang in het Midden-Oosten."
+    }
+  ],
   expertise: {
-    badge: "Wat Wij Doen",
+    badge: "Wat We Doen",
     title: "Expertisegebieden",
-    subtitle: "Gespecialiseerde farmaceutische oplossingen voor complexe zorgbehoeften"
+    subtitle: "Gespecialiseerde farmaceutische oplossingen voor complexe gezondheidszorgbehoeften"
   },
+  expertiseList: [
+    {
+      title: "Onderzoek & Ontwikkeling",
+      img: "/images/R&D.jpg",
+      desc: "Geavanceerde onderzoeksfaciliteiten gericht op innovatieve geneesmiddeltoedieningssystemen."
+    },
+    {
+      title: "Productie",
+      img: "/images/Manufacturing.jpg",
+      desc: "WHO-GMP gecertificeerde faciliteiten met geavanceerde productiemogelijkheden."
+    },
+    {
+      title: "Oncologie",
+      img: "/images/Oncology.jpg",
+      desc: "Gespecialiseerd oncologieportfolio met gerichte therapieën."
+    }
+  ],
   leadership: {
     badge: "Onze Leiders",
-    title: "Executive Leiderschap",
-    subtitle: "Ervaren professionals die innovatie stimuleren"
+    title: "Uitvoerend Leiderschap",
+    subtitle: "Ervaren professionals die farmaceutische innovatie stimuleren"
   },
+  leadershipList: [
+    {
+      name: "Dr. Michael Carter",
+      title: "Chief Executive Officer",
+      img: "/images/leader1.jpg",
+      desc: "30+ jaar in farmaceutisch leiderschap"
+    },
+    {
+      name: "James Wilson",
+      title: "Directeur Operations",
+      img: "/images/leader2.jpg",
+      desc: "Expert in wereldwijde supply chain"
+    },
+    {
+      name: "Sophia Bennett",
+      title: "Hoofd Operations",
+      img: "/images/leader3.jpg",
+      desc: "Specialist in productie-excellentie"
+    }
+  ],
   timeline: {
     badge: "Onze Reis",
-    title: "Mijlpalen van Groei",
-    subtitle: "Belangrijke prestaties in onze ontwikkeling"
+    title: "Groei Mijlpalen",
+    subtitle: "Belangrijke prestaties op ons pad naar farmaceutische excellentie"
   },
+  timelineList: [
+    {
+      year: "2018",
+      event: "Bedrijf opgericht met visie op wereldwijde farmaceutische excellentie",
+      icon: "rocket"
+    },
+    {
+      year: "2020",
+      event: "Eerste WHO-GMP gecertificeerde productiefaciliteit gevestigd",
+      icon: "industry"
+    },
+    {
+      year: "2023",
+      event: "Uitbreiding naar Europese markten",
+      icon: "globe"
+    },
+    {
+      year: "2025",
+      event: "Oncologie divisie gelanceerd met 10+ producten",
+      icon: "microscope"
+    },
+    {
+      year: "2030",
+      event: "Visie om top 50 wereldwijd farmaceutisch bedrijf te worden",
+      icon: "bullseye"
+    }
+  ],
   certifications: {
     badge: "Kwaliteitsborging",
     title: "Wereldwijde Certificeringen",
     subtitle: "Voldoen aan internationale kwaliteitsnormen"
   },
   statement: {
-    title: "Gedreven door innovatie. Gedreven door kwaliteit.",
+    title: "Gedreven door Innovatie. Aangedreven door Kwaliteit.",
     subtitle: "Ivexia staat voorop in farmaceutische vooruitgang."
   },
   facilities: {
-    title: "Geavanceerde Faciliteiten",
-    subtitle: "Ontworpen volgens wereldwijde regelgeving."
+    title: "State-of-the-Art Faciliteiten",
+    subtitle: "Ontworpen om te voldoen aan wereldwijde regelgevende normen."
   },
   rnd: {
-    badge: "Innovatiecentrum",
+    badge: "Innovatiehub",
     title: "Onderzoek & Ontwikkeling",
     subtitle: "Grenzen verleggen in farmaceutisch onderzoek"
   },
+  labs: {
+    title: "Geavanceerde R&D Faciliteit",
+    desc: "Uitgerust met geavanceerde onderzoeksinfrastructuur en wereldwijde GMP-normen."
+  },
   sustainability: {
     badge: "Milieu",
-    title: "Duurzaamheidsverplichting",
-    desc: "Wij geven prioriteit aan milieuvriendelijke productie en verantwoord inkopen.",
+    title: "Toewijding aan Duurzaamheid",
+    desc: "We geven prioriteit aan milieuvriendelijke productie en verantwoorde inkoop.",
     points: [
-      "Zero-waste productie",
-      "Zonne-energie faciliteiten",
+      "Zero-waste productie-initiatieven",
+      "Zonne-energie aangedreven faciliteiten",
       "Duurzame verpakkingsoplossingen"
     ]
   },
   presence: {
-    badge: "Wereldwijde Bereik",
+    badge: "Wereldwijd Bereik",
     title: "Wereldwijde Aanwezigheid",
     subtitle: "Patiënten bedienen in meer dan 50 landen"
   },
   awards: {
     badge: "Erkenning",
     title: "Prijzen & Erkenning",
-    subtitle: "Viering van farmaceutische innovatie"
+    subtitle: "Excellentie in farmaceutische innovatie vieren"
   },
+  awardsList: [
+    {
+      award: "Farmaceutische Excellentie Award 2023",
+      org: "Global Health Council",
+      year: "2023"
+    },
+    {
+      award: "Innovatie in Productie",
+      org: "Pharma Leaders Forum",
+      year: "2022"
+    },
+    {
+      award: "Beste Opkomende Farmaceutische Bedrijf",
+      org: "Healthcare Asia",
+      year: "2024"
+    }
+  ],
   cta: {
-    title: "Werk Met Ons Samen",
-    subtitle: "Sluit u aan bij het leveren van wereldwijde gezondheidsoplossingen.",
+    title: "Partner met Ons",
+    subtitle: "Doe met ons mee in het leveren van kwalitatieve gezondheidszorgoplossingen wereldwijd.",
     button: "Neem Contact Op"
+  }
+},
+testKitDetailPage: {
+  home: "Home",
+  testKits: "Testkits",
+  loading: "Laden...",
+  badge: "Diagnostische Testkit",
+  defaultDescription: "Gedetailleerde productinformatie wordt op verzoek gedeeld.",
+  categoryPending: "Categorie in behandeling",
+  requestInfo: "Informatie Aanvragen",
+  backButton: "Terug naar Testkits",
+  productDetails: "Productdetails",
+  method: "Methode",
+  specimen: "Monster",
+  cutOff: "Afkapwaarde",
+  certificate: "Certificaat"
+},
+// ivexia\data1\languages\nl.js - COMPLETE magazine section
+
+magazine: {
+  title: "Ivexia Magazine",
+  loading: "Laden...",
+  recentArticles: "Recente Artikelen",
+  noRecentArticles: "Nog geen recente artikelen.",
+  readMore: "Lees Meer →",
+  previous: "Vorige",
+  next: "Volgende",
+  page: "Pagina",
+  of: "van",
+  
+  categories: {
+    health: "Gezondheid",
+    news: "Nieuws"
+  },
+  
+  articles: {
+    "gene-therapy-emerging-science": {
+      title: "Hoe gentherapie moderne behandelingen transformeert",
+      excerpt: "Gentherapie evolueert van concept naar klinische toepassing en biedt gerichte oplossingen om genetische problemen te corrigeren.",
+      readTime: "7–9 min lezen",
+      heroCaption: "Gentherapie bekijkt ziekte op DNA-niveau en probeert de instructies van cellen te corrigeren.",
+      sections: [
+        {
+          heading: "Wat is gentherapie?",
+          paragraphs: [
+            "In bijna elke cel van het lichaam bevat DNA instructies voor hoe die cel moet functioneren.",
+            "Gentherapie richt zich op defecte delen en probeert het genetisch materiaal te herstellen, vervangen of aanpassen."
+          ]
+        },
+        {
+          subheading: "Belangrijkste benaderingen",
+          paragraphs: [
+            "In eenvoudige termen kan gentherapie:",
+            "• Een werkende kopie van een ontbrekend of defect gen toevoegen",
+            "• Een schadelijk gen verminderen of uitschakelen",
+            "• De DNA-sequentie aanpassen met moderne genbewerkingstechnologie"
+          ]
+        },
+        {
+          subheading: "1. Genversterking",
+          paragraphs: [
+            "Sommige ziekten ontstaan doordat een belangrijk gen ontbreekt of niet goed werkt. Het toevoegen van een gezonde kopie kan helpen de celfunctie te herstellen."
+          ]
+        },
+        {
+          subheading: "2. Genremming",
+          paragraphs: [
+            "Bij andere ziekten is het probleem een gen dat te actief is of iets schadelijks produceert. Genremmingsstrategieën zijn erop gericht deze activiteit te verminderen of te blokkeren."
+          ]
+        },
+        {
+          subheading: "3. Genbewerking",
+          paragraphs: [
+            "Hulpmiddelen zoals CRISPR werken als moleculaire scharen, waarmee wetenschappers DNA op precieze locaties kunnen knippen en mutaties kunnen corrigeren of nieuw materiaal kunnen invoegen."
+          ]
+        },
+        {
+          heading: "Hoe digitale hulpmiddelen gentherapie ondersteunen",
+          paragraphs: [
+            "Gentherapie-onderzoek genereert enorme hoeveelheden gegevens. AI helpt deze informatie te analyseren en ondersteunt beslissingen over welke patiënten het meeste baat kunnen hebben."
+          ]
+        },
+        {
+          heading: "Waar gentherapie vandaag wordt gebruikt",
+          paragraphs: [
+            "Goedgekeurde gentherapieën richten zich momenteel op zeldzame erfelijke aandoeningen. Onderzoek breidt zich uit naar oncologie, cardiovasculaire geneeskunde en neurologie."
+          ]
+        },
+        {
+          heading: "Potentiële voordelen",
+          paragraphs: [
+            "• Pakt de oorzaak van de ziekte aan",
+            "• Kan langdurige of eenmalige behandelingen bieden",
+            "• Zorgt voor precieze targeting van cellen of weefsels",
+            "• Creëert nieuwe opties waar standaardtherapieën beperkt zijn"
+          ]
+        },
+        {
+          heading: "Aandachtspunten",
+          paragraphs: [
+            "• Onbedoelde veranderingen elders in het genoom",
+            "• Mogelijke immuunreacties",
+            "• Complexe, kostbare productie",
+            "• Behoefte aan langdurige veiligheidsmonitoring"
+          ]
+        },
+        {
+          heading: "Ethiek en de toekomst",
+          paragraphs: [
+            "Omdat gentherapie de kernbiologische instructies wijzigt, roept het belangrijke vragen op over toegang, eerlijkheid en veiligheid op de lange termijn.",
+            "Naarmate bezorgmethoden verbeteren, zal gentherapie naar verwachting deel uitmaken van de reguliere medische zorg."
+          ]
+        }
+      ]
+    },
+
+    "power-of-ai-medical-industry": {
+      title: "De kracht van AI in de medische industrie: 4 dingen om te weten",
+      excerpt: "Kunstmatige intelligentie verandert diagnostiek, workflows en besluitvorming in ziekenhuizen en farmaceutische bedrijven.",
+      readTime: "6–8 min lezen",
+      heroCaption: "AI helpt complexe medische data om te zetten in snellere en betere beslissingen.",
+      sections: [
+        {
+          heading: "De impact van AI in de geneeskunde",
+          paragraphs: [
+            "Kunstmatige intelligentie wordt een van de belangrijkste hulpmiddelen in de moderne gezondheidszorg.",
+            "In ziekenhuizen en de farmaceutische industrie ondersteunt AI besluitvorming, verbetert het diagnostiek en stroomlijnt processen."
+          ]
+        },
+        {
+          heading: "AI in de farmaceutische industrie",
+          paragraphs: [
+            "De farmaceutische sector vertrouwt sterk op gegevens — chemische bibliotheken, biologische experimenten, klinische onderzoeken en veiligheidssignalen. AI verbindt deze informatiestromen en versnelt onderzoek.",
+            "• Virtuele screening voor medicijnontdekking",
+            "• Simulatie van formuleringen en processen",
+            "• Voorspellende modellering voor veiligheidsbeoordeling"
+          ]
+        },
+        {
+          heading: "AI in farmaceutische marketing",
+          paragraphs: [
+            "AI maakt marketing meer datagestuurd door communicatie af te stemmen op werkelijke informatiebehoeften.",
+            "• Nauwkeurigere doelgroepsegmentatie",
+            "• Gepersonaliseerde inhoud",
+            "• Beter begrip van wat gedrag drijft"
+          ]
+        },
+        {
+          heading: "AI in gezondheidszorgsystemen en ziekenhuizen",
+          paragraphs: [
+            "AI analyseert laboratoriumresultaten, beeldvorming, vitale functies en medische geschiedenis om urgente risico's te identificeren of behandelingsaanpassingen te begeleiden.",
+            "• Beeldvormingsondersteuning voor radiologen",
+            "• Risicovoorspellingstools",
+            "• Virtuele assistenten voor patiëntondersteuning"
+          ]
+        },
+        {
+          heading: "De toekomst van AI in de geneeskunde",
+          paragraphs: [
+            "AI zal een belangrijke rol spelen in precisiegeneeskunde door behandelingen af te stemmen op de genetica en het risicoprofiel van elk individu."
+          ]
+        },
+        {
+          heading: "Waarom AI ertoe doet",
+          paragraphs: [
+            "Voor patiënten: vroegere detectie, gepersonaliseerde behandeling en betere uitkomsten.",
+            "Voor farmaceuten en zorgverleners: slimmer gebruik van bestaande gegevens en betere efficiëntie."
+          ]
+        }
+      ]
+    },
+
+    "personalized-medicine-basics": {
+      title: "Gepersonaliseerde geneeskunde: behandelingen op maat",
+      excerpt: "Door genetica en klinische data te gebruiken, kiest gepersonaliseerde geneeskunde de juiste behandeling voor de juiste persoon.",
+      readTime: "6–8 min lezen",
+      heroCaption: "Gepersonaliseerde geneeskunde combineert genetica en data voor maatwerkbehandeling.",
+      sections: [
+        {
+          heading: "Wat is gepersonaliseerde geneeskunde?",
+          paragraphs: [
+            "Gepersonaliseerde geneeskunde gebruikt patiëntinformatie zoals genetica, biomarkers en levensstijl om behandeling te sturen."
+          ]
+        },
+        {
+          heading: "Genetische manipulatie en precisiegeneeskunde",
+          paragraphs: [
+            "Moderne DNA-sequencing helpt bij het identificeren van genetische variaties die verband houden met ziekte, respons op medicijnen of risico op bijwerkingen."
+          ]
+        },
+        {
+          heading: "Voordelen van gepersonaliseerde geneeskunde",
+          paragraphs: [
+            "• Nauwkeurigere behandelingen met grotere kans op respons",
+            "• Proactieve, preventieve gezondheidszorg",
+            "• Betere toewijzing van medische middelen",
+            "• Innovatie in diagnostiek en gerichte therapieën"
+          ]
+        },
+        {
+          heading: "Uitdagingen en verantwoordelijkheden",
+          paragraphs: [
+            "• Gegevensprivacy en bescherming van genetische informatie",
+            "• Waarborgen van eerlijke toegang",
+            "• Duidelijke regelgevingskaders",
+            "• Interoperabiliteit tussen gezondheidszorgsystemen"
+          ]
+        },
+        {
+          heading: "Vooruitkijken",
+          paragraphs: [
+            "Naarmate sequencing toegankelijker wordt, zal gepersonaliseerde geneeskunde een centraal onderdeel worden van de moderne gezondheidszorg."
+          ]
+        }
+      ]
+    },
+
+    "what-is-obesity-how-to-overcome-it": {
+      title: "Wat is obesitas — en hoe overwin je het echt?",
+      excerpt: "Obesitas wordt beïnvloed door biologie en levensstijl. Langdurige aanpak vereist structuur.",
+      readTime: "6–8 min lezen",
+      heroCaption: "Obesitas wordt beïnvloed door meerdere factoren en vereist een gestructureerde aanpak.",
+      sections: [
+        {
+          heading: "Waarom obesitas ontstaat",
+          paragraphs: [
+            "Dieet en beweging zijn belangrijk, maar slechts een deel van het verhaal. Biologie, slaap, stress en omgeving spelen ook een rol."
+          ]
+        },
+        {
+          heading: "Gezondheidsrisico's geassocieerd met obesitas",
+          paragraphs: [
+            "• Hoger risico op diabetes type 2 en insulineresistentie",
+            "• Verhoogde kans op hoge bloeddruk en hartziekten",
+            "• Slaapapneu, gewrichtspijn en bepaalde vormen van kanker",
+            "• Impact op geestelijke gezondheid, waaronder zelfbeeld en depressie"
+          ]
+        },
+        {
+          heading: "Realistisch omgaan met gewichtsbeheersing",
+          paragraphs: [
+            "Duurzaam gewichtsbeheer gaat niet over extreme diëten of snelle oplossingen. Het vereist een evenwichtig, langetermijnplan.",
+            "• Aangename, evenwichtige voeding in plaats van strikte regels",
+            "• Regelmatige fysieke activiteit die beheersbaar en duurzaam is",
+            "• Omgaan met slaap, stress en emotionele eettriggers",
+            "• Medicatie of chirurgie waar passend, onder klinische begeleiding"
+          ]
+        },
+        {
+          heading: "Langdurige ondersteuning is belangrijk",
+          paragraphs: [
+            "Omdat obesitas een chronische aandoening is, helpt langdurige ondersteuning om vooruitgang te behouden.",
+            "Het doel is niet perfectie — maar gestage, consistente verbeteringen in de loop van de tijd."
+          ]
+        }
+      ]
+    },
+
+    "international-womens-day-healthcare": {
+      title: "Ter ere van Internationale Vrouwendag",
+      excerpt: "Vrouwen spelen een cruciale rol in de gezondheidszorg en innovatie.",
+      readTime: "5–7 min lezen",
+      heroCaption: "Internationale Vrouwendag viert prestaties en richt zich op gezondheidskloof.",
+      sections: [
+        {
+          heading: "Uitdagingen in de gezondheidszorg voor vrouwen",
+          paragraphs: [
+            "In veel landen ervaren vrouwen uitdagingen zoals:",
+            "• Beperkte toegang tot zorg",
+            "• Late diagnose van ziekten",
+            "• Culturele en sociale barrières"
+          ]
+        },
+        {
+          heading: "Ziekten die onevenredig veel vrouwen treffen",
+          paragraphs: [
+            "Bepaalde aandoeningen beïnvloeden de gezondheidsresultaten van vrouwen sterk.",
+            "• Borstkanker en baarmoederhalskanker, waarbij screening de overleving aanzienlijk kan verbeteren",
+            "• Moedercomplicaties tijdens zwangerschap en bevalling",
+            "• Chronische aandoeningen die bij vrouwen anders kunnen voorkomen, wat leidt tot verkeerde diagnoses"
+          ]
+        },
+        {
+          heading: "Bevordering van de gezondheid van vrouwen: belangrijke hefbomen",
+          paragraphs: [
+            "• Verbeteren van toegang tot essentiële diensten: moederzorg, anticonceptie, screening",
+            "• Investeren in onderwijs, economische empowerment en toegang tot betrouwbare informatie",
+            "• Onderzoek aanmoedigen dat vrouwen in voldoende aantallen omvat",
+            "• Versterken van volksgezondheidsbeleid dat reproductieve rechten beschermt en toegang tot zorg waarborgt"
+          ]
+        },
+        {
+          heading: "Een toewijding die verder gaat dan één dag",
+          paragraphs: [
+            "Internationale Vrouwendag is een herinnering, geen eenmalig evenement. Het verminderen van hiaten in de gezondheid van vrouwen vereist consistente en langdurige toewijding.",
+            "Voor Ivexia betekent prioriteit geven aan de gezondheid van vrouwen het ontwerpen van geneesmiddelen, communicatie en programma's met de unieke behoeften van vrouwen in gedachten."
+          ]
+        }
+      ]
+    },
+
+    "diabetes-kidney-disease-6": {
+      title: "Verhoogt diabetes het risico op nierziekte?",
+      excerpt: "Hoge bloedsuiker kan de nieren beschadigen.",
+      readTime: "5–7 min lezen",
+      heroCaption: "Diabetes is een belangrijke risicofactor voor nierziekte.",
+      sections: [
+        {
+          heading: "Hoe diabetes de nieren beïnvloedt",
+          paragraphs: [
+            "Hoge bloedsuiker beschadigt de nierfilters.",
+            "Hoge bloeddruk verergert dit proces."
+          ]
+        },
+        {
+          heading: "Waarschuwingssignalen",
+          paragraphs: [
+            "• Zwelling in benen, enkels of rond de ogen",
+            "• Schuimige of bubbelende urine (een teken van eiwitverlies)",
+            "• Toenemende moeite met het onder controle houden van de bloeddruk",
+            "• Vermoeidheid, slechte eetlust of moeite met concentreren"
+          ]
+        },
+        {
+          heading: "De rol van screening",
+          paragraphs: [
+            "Urinetests voor albumine en bloedtesten voor creatinine en eGFR kunnen nierschade detecteren lang voordat ernstige symptomen optreden."
+          ]
+        },
+        {
+          heading: "De nieren beschermen",
+          paragraphs: [
+            "• Bloedsuiker binnen de doelwaarden houden",
+            "• Strikte bloeddrukcontrole, vaak met ACE-remmers of ARB's",
+            "• Gezonde leefstijlgewoonten: voeding, lichaamsbeweging, goede slaap en niet roken"
+          ]
+        },
+        {
+          heading: "Een boodschap van preventie en samenwerking",
+          paragraphs: [
+            "Diabetes verhoogt inderdaad het risico op nierziekte — maar het risico is niet vaststaand.",
+            "Met vroege detectie, goed beheer en sterke samenwerking met zorgteams kan de nierfunctie veel langer worden beschermd."
+          ]
+        }
+      ]
+    }
   }
 }
 };

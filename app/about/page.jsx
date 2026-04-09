@@ -1,6 +1,3 @@
-
-
-
 //ivexia\app\about\page.jsx
 "use client";
 
@@ -21,7 +18,7 @@ import {
 /* =========================
    AUTO SCROLL LABS
 ========================= */
-function AutoScrollLabs() {
+function AutoScrollLabs({ t }) {
   const scrollRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -78,10 +75,10 @@ function AutoScrollLabs() {
           </div>
           <div className="p-4 sm:p-6">
             <h3 className="font-semibold text-[#0d2d47] text-base sm:text-lg">
-              Advanced R&D Facility {i + 1}
+              {t?.labs?.title} {i + 1}
             </h3>
             <p className="text-gray-600 text-xs sm:text-sm mt-2 leading-relaxed">
-              Equipped with cutting-edge research infrastructure and global GMP standards.
+              {t?.labs?.desc}
             </p>
           </div>
         </motion.div>
@@ -127,17 +124,48 @@ function StatsCounter({ t }) {
 ========================= */
 export default function AboutPage() {
   const { translations } = useLanguage();
-const t = translations?.aboutPage;
+  const t = translations?.aboutPage;
+  
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
     whileInView: { opacity: 1, y: 0 },
     transition: { duration: 0.6 },
   };
 
+  // Get the expertise list from translations
+  const expertiseList = t?.expertiseList || [
+    { title: "Research & Development", img: "/images/R&D.jpg", desc: "Cutting-edge research facilities focused on innovative drug delivery systems." },
+    { title: "Manufacturing", img: "/images/Manufacturing.jpg", desc: "WHO-GMP certified facilities with advanced manufacturing capabilities." },
+    { title: "Oncology", img: "/images/Oncology.jpg", desc: "Specialized oncology portfolio with targeted therapies." }
+  ];
+
+  // Get leadership list from translations
+  const leadershipList = t?.leadershipList || [
+    { name: "Dr. Michael Carter", title: "Chief Executive Officer", img: "/images/leader1.jpg", desc: "30+ years in pharmaceutical leadership" },
+    { name: "James Wilson", title: "Director of Operations", img: "/images/leader2.jpg", desc: "Expert in global supply chain" },
+    { name: "Sophia Bennett", title: "Head of Operations", img: "/images/leader3.jpg", desc: "Specialist in manufacturing excellence" }
+  ];
+
+  // Get timeline list from translations
+  const timelineList = t?.timelineList || [
+    { year: "2018", event: "Company founded with vision for global pharmaceutical excellence", icon: <FaRocket /> },
+    { year: "2020", event: "First WHO-GMP certified manufacturing facility established", icon: <FaIndustry /> },
+    { year: "2023", event: "Expanded operations to European markets", icon: <FaGlobeEurope /> },
+    { year: "2025", event: "Launched oncology division with 10+ products", icon: <FaMicroscope /> },
+    { year: "2030", event: "Vision to become top 50 global pharma company", icon: <FaBullseye /> }
+  ];
+
+  // Get awards list from translations
+  const awardsList = t?.awardsList || [
+    { award: "Pharmaceutical Excellence Award 2023", org: "Global Health Council", year: "2023" },
+    { award: "Innovation in Manufacturing", org: "Pharma Leaders Forum", year: "2022" },
+    { award: "Best Emerging Pharma Company", org: "Healthcare Asia", year: "2024" }
+  ];
+
   return (
     <div className="bg-white overflow-hidden">
 
-      {/* 1️⃣ HERO - Responsive Version */}
+      {/* 1️⃣ HERO */}
       <section
         className="relative w-full min-h-[500px] sm:h-screen sm:max-h-[800px] bg-cover bg-center overflow-hidden"
         style={{
@@ -153,7 +181,7 @@ const t = translations?.aboutPage;
         >
           <div className="bg-white/10 backdrop-blur-md px-4 sm:px-6 md:px-10 py-8 sm:py-10 md:py-12 rounded-2xl sm:rounded-3xl text-center border border-white/20 max-w-[90%] sm:max-w-2xl md:max-w-4xl mx-auto">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 leading-tight">
-             {t?.hero?.title}
+              {t?.hero?.title}
             </h1>
             <p className="text-gray-200 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto">
               {t?.hero?.subtitle}
@@ -162,12 +190,12 @@ const t = translations?.aboutPage;
         </motion.div>
       </section>
 
-      {/* Stats Counter - New Section */}
+      {/* Stats Counter */}
       <section className="py-12 sm:py-16 bg-white border-b border-gray-100">
-       <StatsCounter t={t} />
+        <StatsCounter t={t} />
       </section>
 
-      {/* 2️⃣ BRAND STORY - Enhanced */}
+      {/* 2️⃣ BRAND STORY */}
       <motion.section 
         {...fadeInUp}
         className="py-16 sm:py-20 md:py-32 px-4 sm:px-6 md:px-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center"
@@ -184,7 +212,7 @@ const t = translations?.aboutPage;
         </div>
         <div className="order-1 md:order-2">
           <span className="text-[#E2004F] font-semibold tracking-wider text-xs sm:text-sm uppercase mb-2 sm:mb-4 block">
-           {t?.story?.badge}
+            {t?.story?.badge}
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-4 sm:mb-6 leading-tight">
             {t?.story?.title}
@@ -201,7 +229,7 @@ const t = translations?.aboutPage;
         </div>
       </motion.section>
 
-      {/* 3️⃣ VISION + MISSION - Enhanced */}
+      {/* 3️⃣ VISION + MISSION */}
       <section className="py-16 sm:py-20 md:py-32 bg-[#0d2d47] text-white px-4 sm:px-6 md:px-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10 sm:mb-16">
@@ -225,7 +253,7 @@ const t = translations?.aboutPage;
                 </svg>
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold text-[#FF7A00] mb-3 sm:mb-4">
-               {t?.purpose?.visionTitle}
+                {t?.purpose?.visionTitle}
               </h2>
               <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
                 {t?.purpose?.visionDesc}
@@ -243,17 +271,17 @@ const t = translations?.aboutPage;
                 </svg>
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold text-[#19a6b5] mb-3 sm:mb-4">
-               {t?.purpose?.missionTitle}
+                {t?.purpose?.missionTitle}
               </h2>
               <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
-               {t?.purpose?.missionDesc}
+                {t?.purpose?.missionDesc}
               </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* 4️⃣ GLOBAL OPERATIONS - Enhanced */}
+      {/* 4️⃣ GLOBAL OPERATIONS */}
       <section className="py-16 sm:py-20 md:py-32 bg-gray-50 px-4 sm:px-6 md:px-10">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeInUp} className="text-center mb-10 sm:mb-16">
@@ -270,29 +298,29 @@ const t = translations?.aboutPage;
           
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {t?.globalLocations?.map((item, i) => (
-  <motion.div
-    key={i}
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5, delay: i * 0.1 }}
-    className="group bg-white p-6 sm:p-8 shadow-lg hover:shadow-2xl rounded-xl sm:rounded-2xl transition-all duration-300 border border-gray-100"
-  >
-    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#0d2d47]/10 rounded-lg mb-4 sm:mb-6 flex items-center justify-center group-hover:bg-[#0d2d47] transition-colors duration-300">
-      <span className="text-lg sm:text-xl font-bold text-[#0d2d47] group-hover:text-white">{i + 1}</span>
-    </div>
-    <h3 className="text-xl sm:text-2xl font-semibold text-[#0d2d47] mb-2 sm:mb-3">
-      {item.loc}
-    </h3>
-    <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-      {item.desc}
-    </p>
-  </motion.div>
-))}
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="group bg-white p-6 sm:p-8 shadow-lg hover:shadow-2xl rounded-xl sm:rounded-2xl transition-all duration-300 border border-gray-100"
+              >
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#0d2d47]/10 rounded-lg mb-4 sm:mb-6 flex items-center justify-center group-hover:bg-[#0d2d47] transition-colors duration-300">
+                  <span className="text-lg sm:text-xl font-bold text-[#0d2d47] group-hover:text-white">{i + 1}</span>
+                </div>
+                <h3 className="text-xl sm:text-2xl font-semibold text-[#0d2d47] mb-2 sm:mb-3">
+                  {item.loc}
+                </h3>
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 5️⃣ EXPERTISE - Enhanced */}
+      {/* 5️⃣ EXPERTISE - USING TRANSLATED DATA */}
       <section className="py-16 sm:py-20 md:py-32 px-4 sm:px-6 md:px-10 bg-white">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeInUp} className="text-center mb-10 sm:mb-16">
@@ -303,16 +331,12 @@ const t = translations?.aboutPage;
               {t?.expertise?.title}
             </h2>
             <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto px-4">
-             {t?.expertise?.subtitle}
+              {t?.expertise?.subtitle}
             </p>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-            {[
-              { title: "Research & Development", img: "/images/R&D.jpg", desc: "Cutting-edge research facilities focused on innovative drug delivery systems." },
-              { title: "Manufacturing", img: "/images/Manufacturing.jpg", desc: "WHO-GMP certified facilities with advanced manufacturing capabilities." },
-              { title: "Oncology", img: "/images/Oncology.jpg", desc: "Specialized oncology portfolio with targeted therapies." }
-            ].map((item, i) => (
+            {expertiseList.map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 30 }}
@@ -341,42 +365,23 @@ const t = translations?.aboutPage;
         </div>
       </section>
 
-      {/* 6️⃣ LEADERSHIP - Enhanced */}
+      {/* 6️⃣ LEADERSHIP - USING TRANSLATED DATA */}
       <section className="py-16 sm:py-20 md:py-32 bg-gray-50 px-4 sm:px-6 md:px-16">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeInUp} className="text-center mb-10 sm:mb-16">
             <span className="text-[#E2004F] font-semibold tracking-wider text-xs sm:text-sm uppercase mb-2 sm:mb-4 block">
-            {t?.leadership?.badge}
+              {t?.leadership?.badge}
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-3 sm:mb-4">
               {t?.leadership?.title}
             </h2>
             <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto px-4">
-            {t?.leadership?.subtitle}
+              {t?.leadership?.subtitle}
             </p>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 justify-items-center">
-            {[
-              {
-                name: "Dr. Michael Carter",
-                title: "Chief Executive Officer",
-                img: "/images/leader1.jpg",
-                desc: "30+ years in pharmaceutical leadership"
-              },
-              {
-                name: "James Wilson",
-                title: "Director of Operations",
-                img: "/images/leader2.jpg",
-                desc: "Expert in global supply chain"
-              },
-              {
-                name: "Sophia Bennett",
-                title: "Head of Operations",
-                img: "/images/leader3.jpg",
-                desc: "Specialist in manufacturing excellence"
-              },
-            ].map((member, i) => (
+            {leadershipList.map((member, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
@@ -411,18 +416,18 @@ const t = translations?.aboutPage;
         </div>
       </section>
 
-      {/* 7️⃣ TIMELINE - Enhanced */}
+      {/* 7️⃣ TIMELINE - USING TRANSLATED DATA */}
       <section className="py-16 sm:py-20 md:py-32 px-4 sm:px-6 md:px-10 bg-white">
         <div className="max-w-6xl mx-auto">
           <motion.div {...fadeInUp} className="text-center mb-10 sm:mb-16">
             <span className="text-[#E2004F] font-semibold tracking-wider text-xs sm:text-sm uppercase mb-2 sm:mb-4 block">
-             {t?.timeline?.badge}
+              {t?.timeline?.badge}
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-3 sm:mb-4">
               {t?.timeline?.title}
             </h2>
             <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto px-4">
-             {t?.timeline?.subtitle}
+              {t?.timeline?.subtitle}
             </p>
           </motion.div>
 
@@ -432,33 +437,7 @@ const t = translations?.aboutPage;
             
             {/* Mobile timeline (stacked) */}
             <div className="md:hidden space-y-6">
-              {[
-                {
-                  year: "2018",
-                  event: "Company founded with vision for global pharmaceutical excellence",
-                  icon: <FaRocket />,
-                },
-                {
-                  year: "2020",
-                  event: "First WHO-GMP certified manufacturing facility established",
-                  icon: <FaIndustry />,
-                },
-                {
-                  year: "2023",
-                  event: "Expanded operations to European markets",
-                  icon: <FaGlobeEurope />,
-                },
-                {
-                  year: "2025",
-                  event: "Launched oncology division with 10+ products",
-                  icon: <FaMicroscope />,
-                },
-                {
-                  year: "2030",
-                  event: "Vision to become top 50 global pharma company",
-                  icon: <FaBullseye />,
-                },
-              ].map((item, i) => (
+              {timelineList.map((item, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, y: 20 }}
@@ -475,33 +454,7 @@ const t = translations?.aboutPage;
 
             {/* Desktop timeline */}
             <div className="hidden md:block">
-              {[
-                {
-                  year: "2018",
-                  event: "Company founded with vision for global pharmaceutical excellence",
-                  icon: <FaRocket />,
-                },
-                {
-                  year: "2020",
-                  event: "First WHO-GMP certified manufacturing facility established",
-                  icon: <FaIndustry />,
-                },
-                {
-                  year: "2023",
-                  event: "Expanded operations to European markets",
-                  icon: <FaGlobeEurope />,
-                },
-                {
-                  year: "2025",
-                  event: "Launched oncology division with 10+ products",
-                  icon: <FaMicroscope />,
-                },
-                {
-                  year: "2030",
-                  event: "Vision to become top 50 global pharma company",
-                  icon: <FaBullseye />,
-                },
-              ].map((item, i) => (
+              {timelineList.map((item, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, x: i % 2 === 0 ? -50 : 50 }}
@@ -527,18 +480,18 @@ const t = translations?.aboutPage;
         </div>
       </section>
 
-      {/* 8️⃣ CERTIFICATIONS - Enhanced */}
+      {/* 8️⃣ CERTIFICATIONS */}
       <section className="py-16 sm:py-20 md:py-32 bg-gray-50 px-4 sm:px-6 md:px-10">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeInUp} className="text-center mb-10 sm:mb-16">
             <span className="text-[#E2004F] font-semibold tracking-wider text-xs sm:text-sm uppercase mb-2 sm:mb-4 block">
-             {t?.certifications?.badge}
+              {t?.certifications?.badge}
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-3 sm:mb-4">
               {t?.certifications?.title}
             </h2>
             <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto px-4">
-             {t?.certifications?.subtitle}
+              {t?.certifications?.subtitle}
             </p>
           </motion.div>
 
@@ -563,7 +516,7 @@ const t = translations?.aboutPage;
         </div>
       </section>
 
-      {/* 9️⃣ BIG STATEMENT - Enhanced */}
+      {/* 9️⃣ BIG STATEMENT */}
       <section className="py-16 sm:py-20 md:py-32 bg-[#0d2d47] text-center text-white px-4 sm:px-6 md:px-10">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -572,15 +525,15 @@ const t = translations?.aboutPage;
           className="max-w-4xl mx-auto"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-           {t?.statement?.title}
+            {t?.statement?.title}
           </h2>
           <p className="text-gray-300 text-base sm:text-lg md:text-xl max-w-2xl mx-auto px-4">
-           {t?.statement?.subtitle}
+            {t?.statement?.subtitle}
           </p>
         </motion.div>
       </section>
 
-      {/* 🔟 FACILITIES PARALLAX - Enhanced */}
+      {/* 🔟 FACILITIES PARALLAX */}
       <section className="relative py-24 sm:py-32 md:py-48 bg-fixed bg-center bg-cover text-center text-white"
         style={{
           backgroundImage: "url('https://images.unsplash.com/photo-1581093502863-50b395c221e5?auto=format&fit=crop&q=80')",
@@ -597,12 +550,12 @@ const t = translations?.aboutPage;
             {t?.facilities?.title}
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed">
-           {t?.facilities?.subtitle}
+            {t?.facilities?.subtitle}
           </p>
         </motion.div>
       </section>
 
-      {/* 11️⃣ R&D LABS - Enhanced */}
+      {/* 11️⃣ R&D LABS */}
       <section className="py-16 sm:py-20 md:py-32 px-4 sm:px-6 md:px-10 bg-white">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeInUp} className="text-center mb-10 sm:mb-16">
@@ -610,17 +563,17 @@ const t = translations?.aboutPage;
               {t?.rnd?.badge}
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-3 sm:mb-4">
-             {t?.rnd?.title}
+              {t?.rnd?.title}
             </h2>
             <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto px-4">
-             {t?.rnd?.subtitle}
+              {t?.rnd?.subtitle}
             </p>
           </motion.div>
-          <AutoScrollLabs />
+          <AutoScrollLabs t={t} />
         </div>
       </section>
 
-      {/* 12️⃣ SUSTAINABILITY - Enhanced */}
+      {/* 12️⃣ SUSTAINABILITY */}
       <section className="py-16 sm:py-20 md:py-32 bg-gradient-to-br from-[#f0f9f7] to-white px-4 sm:px-6 md:px-10">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
           <motion.div
@@ -633,21 +586,21 @@ const t = translations?.aboutPage;
               {t?.sustainability?.badge}
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-4 sm:mb-6 leading-tight">
-             {t?.sustainability?.title}
+              {t?.sustainability?.title}
             </h2>
             <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
               {t?.sustainability?.desc}
             </p>
             <div className="space-y-3 sm:space-y-4">
-  {t?.sustainability?.points?.map((item, i) => (
-    <div key={i} className="flex items-center gap-2 sm:gap-3">
-      <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#19a6b5] rounded-full"></div>
-      <p className="text-gray-600 text-xs sm:text-sm md:text-base">
-        {item}
-      </p>
-    </div>
-  ))}
-</div>
+              {t?.sustainability?.points?.map((item, i) => (
+                <div key={i} className="flex items-center gap-2 sm:gap-3">
+                  <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#19a6b5] rounded-full"></div>
+                  <p className="text-gray-600 text-xs sm:text-sm md:text-base">
+                    {item}
+                  </p>
+                </div>
+              ))}
+            </div>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 30 }}
@@ -667,12 +620,12 @@ const t = translations?.aboutPage;
         </div>
       </section>
 
-      {/* 13️⃣ GLOBAL PRESENCE - Enhanced */}
+      {/* 13️⃣ GLOBAL PRESENCE */}
       <section className="py-16 sm:py-20 md:py-32 text-center px-4 sm:px-6 md:px-10 bg-white">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeInUp} className="mb-10 sm:mb-16">
             <span className="text-[#E2004F] font-semibold tracking-wider text-xs sm:text-sm uppercase mb-2 sm:mb-4 block">
-            {t?.presence?.badge}
+              {t?.presence?.badge}
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-3 sm:mb-4">
               {t?.presence?.title}
@@ -699,7 +652,7 @@ const t = translations?.aboutPage;
         </div>
       </section>
 
-      {/* 14️⃣ AWARDS - Enhanced */}
+      {/* 14️⃣ AWARDS - USING TRANSLATED DATA */}
       <section className="py-16 sm:py-20 md:py-32 bg-gray-50 px-4 sm:px-6 md:px-10">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeInUp} className="text-center mb-10 sm:mb-16">
@@ -715,11 +668,7 @@ const t = translations?.aboutPage;
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-            {[
-              { award: "Pharmaceutical Excellence Award 2023", org: "Global Health Council", year: "2023" },
-              { award: "Innovation in Manufacturing", org: "Pharma Leaders Forum", year: "2022" },
-              { award: "Best Emerging Pharma Company", org: "Healthcare Asia", year: "2024" }
-            ].map((item, i) => (
+            {awardsList.map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 30 }}
@@ -741,7 +690,7 @@ const t = translations?.aboutPage;
         </div>
       </section>
 
-      {/* 15️⃣ CTA - Enhanced */}
+      {/* 15️⃣ CTA */}
       <section className="py-16 sm:py-20 md:py-32 bg-gradient-to-r from-[#0d2d47] to-[#1a3a5a] text-center text-white px-4 sm:px-6 md:px-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -759,7 +708,7 @@ const t = translations?.aboutPage;
             href="/contact"
             className="inline-flex items-center gap-2 bg-white text-[#0d2d47] px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1 text-sm sm:text-base"
           >
-           {t?.cta?.button}
+            {t?.cta?.button}
             <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

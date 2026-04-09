@@ -221,28 +221,33 @@ footer: {
   address: "グローバル製薬本社"
 },
 contactPage: {
-  title: "Ivexia Pharmaceuticalsへお問い合わせ",
-  subtitle: "医薬品に関するお問い合わせや提携についてご連絡ください。",
+  title: "Ivexiaへのお問い合わせ",
+  subtitle: "お問い合わせください。",
   formTitle: "メッセージ送信",
-  formSubtitle: "24時間以内に返信します",
+  formSubtitle: "24時間以内に返信",
   fullName: "氏名",
-  fullNamePlaceholder: "John Doe",
-  email: "メールアドレス",
-  emailPlaceholder: "you@example.com",
+  fullNamePlaceholder: "山田太郎",
+  email: "メール",
+  emailPlaceholder: "example@mail.com",
   phone: "電話番号",
-  phonePlaceholder: "10桁の番号",
+  phonePlaceholder: "10桁",
   subject: "件名",
   subjectPlaceholder: "内容は？",
   message: "メッセージ",
-  messagePlaceholder: "詳細を入力...",
+  messagePlaceholder: "詳細を入力",
   submit: "送信",
   sending: "送信中...",
-  success: "送信成功！",
-  error: "送信失敗。",
-  contactInfo: "お問い合わせ",
-  followUs: "SNS",
-  footer1: "緊急の場合はお電話ください。",
-  footer2: "24時間以内に対応。"
+  success: "送信成功",
+  error: "送信失敗",
+  footer1: "緊急時は電話。",
+  footer2: "24時間以内返信。",
+  nameError: "名前必須",
+  emailError: "メール必須",
+  emailInvalidError: "無効なメール",
+  phoneError: "10桁必要",
+  subjectError: "件名必須",
+  messageError: "メッセージ必須",
+  messageLengthError: "10文字以上"
 },
 offeringsOverview: {
   badge: "Ivexia 提供内容概要",
@@ -507,49 +512,72 @@ otcPage: {
 },
 oemPage: {
   hero: {
-    badge: "Ivexia",
-    title: "OEM 製造",
-    desc: "ブランド構築と拡大。",
+    badge: "Ivexia 提供",
+    title: "OEM / プライベートラベル",
+    desc: "医薬ブランド構築。",
     contact: "お問い合わせ",
-    explore: "すべて見る"
+    explore: "詳細"
   },
-
-  highlights: ["GMP", "柔軟", "サポート"],
-
+  highlights: ["WHO-GMP","柔軟","OEM"],
   capabilityHeading: "能力",
   capabilityDesc: "完全フロー",
-
+  capabilities: [
+    { title: "開発", description: "製品化" },
+    { title: "ブランド", description: "設計" },
+    { title: "書類", description: "技術" },
+    { title: "生産", description: "拡張" }
+  ],
+  engagement: [
+    { title: "市場", description: "新規", fit: "開始" },
+    { title: "拡張", description: "既存", fit: "成長" },
+    { title: "供給", description: "長期", fit: "安定" }
+  ],
   dosageHeading: "剤形",
-  docsHeading: "文書",
+  dosageDesc: "多様",
+  dosageForms: ["錠剤","カプセル","シロップ","懸濁","外用","サシェ"],
+  docsHeading: "資料",
+  docsDesc: "技術",
+  documentationPack: ["仕様","CoA","安定性","バッチ","ラベル","輸送"],
   processHeading: "プロセス",
-  qualityHeading: "品質",
-  therapyHeading: "治療",
-  supportHeading: "サポート",
-  qualityBuiltHeading: "品質とコンプライアンス",
-  onboardingHeading: "必要情報",
-  faqHeading: "FAQ",
-
-  qualityDesc: "品質保証",
-
+  processSteps: ["分析","計画","生産","納品"],
   step: "ステップ",
   output: "結果",
-
-  ctaHeading: "開始",
-  ctaContact: "連絡",
-  ctaExplore: "探索",
-
-  engagement: [
-    { title: "開始", desc: "市場", fit: "ローンチ" },
-    { title: "拡大", desc: "製品", fit: "成長" },
-    { title: "継続", desc: "安定", fit: "スケール" }
+  qualityHeading: "品質",
+  qualityDesc: "管理",
+  qualityFramework: [
+    { stage: "原料", control: "確認", output: "承認" },
+    { stage: "工程", control: "管理", output: "安定" },
+    { stage: "製品", control: "試験", output: "出荷" },
+    { stage: "配送", control: "確認", output: "完了" }
   ],
-
-  capabilities: [
-    { title: "開発", desc: "サポート" },
-    { title: "ブランド", desc: "OEM" },
-    { title: "規制", desc: "文書" },
-    { title: "製造", desc: "拡張" }
-  ]
+  therapyHeading: "分野",
+  therapyDesc: "多様",
+  therapeuticAreas: ["一般","痛み","栄養","胃","呼吸","皮膚","女性","小児"],
+  supportHeading: "サポート",
+  supportScope: [
+    { title: "ブランド", details: "設計" },
+    { title: "規制", details: "書類" },
+    { title: "物流", details: "計画" }
+  ],
+  qualityBuiltHeading: "品質",
+  qualityBuiltDesc: "管理",
+  qualityPoints: ["原料","試験","追跡","輸出"],
+  onboardingHeading: "開始",
+  onboardingDesc: "情報",
+  onboardingChecklist: ["市場","剤形","包装","需要","規制"],
+  faqHeading: "FAQ",
+  faqs: [
+    { question: "小ロット?", answer: "はい" },
+    { question: "OEM?", answer: "はい" },
+    { question: "資料?", answer: "はい" },
+    { question: "要件?", answer: "基本" },
+    { question: "継続?", answer: "はい" },
+    { question: "複数SKU?", answer: "はい" }
+  ],
+  ctaHeading: "開始",
+  ctaDesc: "ご連絡ください",
+  ctaContact: "連絡",
+  ctaExplore: "詳細"
 },
 testKitsPage: {
   heading: "检测套件",
@@ -575,88 +603,538 @@ testKitsPage: {
 },
 aboutPage: {
   hero: {
-    title: "Ivexiaについて",
-    subtitle: "世界レベルの製薬革新。"
+    title: "Ivexia Pharmaceuticalsについて",
+    subtitle: "グローバルな製薬卓越性と揺るぎない品質への取り組みでヘルスケアに革新を。"
   },
   stats: {
-    years: "実績年数",
+    years: "年の卓越性",
     markets: "グローバル市場",
     products: "製品",
     employees: "従業員"
   },
   story: {
-    badge: "ストーリー",
-    title: "2018年以来",
-    p1: "世界クラスの製造。",
-    p2: "高度な研究。",
-    p3: "グローバル展開。"
+    badge: "私たちのストーリー",
+    title: "2018年以来的製薬卓越性への取り組み",
+    p1: "革新へのコミットメントを持って設立されたIvexia Pharmaceuticalsは、グローバル基準に準拠したワールドクラスの製薬製造を提供しています。",
+    p2: "私たちは規制専門知識、高度な研究、製造精度を組み合わせて国際市場にサービスを提供しています。",
+    p3: "現在、IvexiaはヨーロッパとMENA地域への戦略的拡大を伴い、複数の地域で事業を展開しています。"
   },
   purpose: {
-    title: "目的",
-    subtitle: "革新と誠実",
-    visionTitle: "ビジョン",
-    visionDesc: "信頼される企業。",
-    missionTitle: "ミッション",
-    missionDesc: "高品質製品。"
+    title: "私たちの目的",
+    subtitle: "革新に駆られ、誠実さに導かれて",
+    visionTitle: "私たちのビジョン",
+    visionDesc: "革新と安全性を提供する、世界的に信頼される製薬パートナーになること。",
+    missionTitle: "私たちの使命",
+    missionDesc: "研究の卓越性とコンプライアンスを通じて高品質な医薬品を製造すること。"
   },
   global: {
-    badge: "グローバル",
-    title: "世界展開",
-    subtitle: "戦略的配置"
+    badge: "グローバルフットプリント",
+    title: "世界規模での事業展開",
+    subtitle: "グローバル市場に効率的にサービスを提供する戦略的立地"
   },
+  globalLocations: [
+    {
+      loc: "インド",
+      desc: "最先端の製造施設と研究開発センターを備えた戦略的な製薬プレゼンス。"
+    },
+    {
+      loc: "北マケドニア",
+      desc: "製造と流通のヨーロッパハブ、卓越性をもってEU市場にサービスを提供。"
+    },
+    {
+      loc: "カタール",
+      desc: "MENA地域本部、中東全体でのヘルスケアアクセスを拡大。"
+    }
+  ],
   expertise: {
-    badge: "事業",
+    badge: "私たちの事業",
     title: "専門分野",
-    subtitle: "医薬ソリューション"
+    subtitle: "複雑なヘルスケアニーズに対する専門的な製薬ソリューション"
   },
+  expertiseList: [
+    {
+      title: "研究開発",
+      img: "/images/R&D.jpg",
+      desc: "革新的な薬物送達システムに焦点を当てた最先端の研究施設。"
+    },
+    {
+      title: "製造",
+      img: "/images/Manufacturing.jpg",
+      desc: "高度な製造能力を備えたWHO-GMP認証施設。"
+    },
+    {
+      title: "腫瘍学",
+      img: "/images/Oncology.jpg",
+      desc: "標的治療を備えた専門的な腫瘍学ポートフォリオ。"
+    }
+  ],
   leadership: {
-    badge: "リーダー",
-    title: "経営陣",
-    subtitle: "経験豊富"
+    badge: "私たちのリーダー",
+    title: "経営リーダーシップ",
+    subtitle: "製薬イノベーションを推進する経験豊富な専門家"
   },
+  leadershipList: [
+    {
+      name: "Michael Carter博士",
+      title: "最高経営責任者",
+      img: "/images/leader1.jpg",
+      desc: "30年以上の製薬リーダーシップ経験"
+    },
+    {
+      name: "James Wilson",
+      title: "運営責任者",
+      img: "/images/leader2.jpg",
+      desc: "グローバルサプライチェーンの専門家"
+    },
+    {
+      name: "Sophia Bennett",
+      title: "運営責任者",
+      img: "/images/leader3.jpg",
+      desc: "製造卓越性のスペシャリスト"
+    }
+  ],
   timeline: {
-    badge: "歩み",
-    title: "成長",
-    subtitle: "重要成果"
+    badge: "私たちの歩み",
+    title: "成長のマイルストーン",
+    subtitle: "製薬卓越性への道のりにおける重要な成果"
   },
+  timelineList: [
+    {
+      year: "2018",
+      event: "グローバルな製薬卓越性のビジョンを持って会社設立",
+      icon: "rocket"
+    },
+    {
+      year: "2020",
+      event: "最初のWHO-GMP認証製造施設を設立",
+      icon: "industry"
+    },
+    {
+      year: "2023",
+      event: "ヨーロッパ市場に事業拡大",
+      icon: "globe"
+    },
+    {
+      year: "2025",
+      event: "10以上の製品で腫瘍学部門を立ち上げ",
+      icon: "microscope"
+    },
+    {
+      year: "2030",
+      event: "世界トップ50製薬会社になるというビジョン",
+      icon: "bullseye"
+    }
+  ],
   certifications: {
-    badge: "品質",
-    title: "認証",
-    subtitle: "国際基準"
+    badge: "品質保証",
+    title: "グローバル認証",
+    subtitle: "国際品質基準の達成"
   },
   statement: {
-    title: "革新と品質",
-    subtitle: "最前線"
+    title: "革新に駆られ、品質によって動かされる。",
+    subtitle: "Ivexiaは製薬の進歩の最前線に立っています。"
   },
   facilities: {
-    title: "施設",
-    subtitle: "グローバル基準"
+    title: "最先端の施設",
+    subtitle: "グローバルな規制基準を満たすように設計されています。"
   },
   rnd: {
-    badge: "研究",
-    title: "開発",
-    subtitle: "革新"
+    badge: "イノベーションハブ",
+    title: "研究開発",
+    subtitle: "製薬研究の限界を押し広げる"
+  },
+  labs: {
+    title: "高度な研究開発施設",
+    desc: "最先端の研究インフラとグローバルGMP基準を備えています。"
   },
   sustainability: {
     badge: "環境",
-    title: "持続可能性",
-    desc: "環境配慮。",
-    points: ["ゼロ廃棄","太陽光","持続可能"]
+    title: "持続可能性への取り組み",
+    desc: "私たちは環境に優しい製造と責任ある調達を優先します。",
+    points: [
+      "廃棄物ゼロ製造イニシアチブ",
+      "太陽光発電施設",
+      "持続可能な包装ソリューション"
+    ]
   },
   presence: {
-    badge: "展開",
-    title: "グローバル",
-    subtitle: "50カ国以上"
+    badge: "世界的な広がり",
+    title: "グローバルプレゼンス",
+    subtitle: "50以上の国々の患者にサービスを提供"
   },
   awards: {
-    badge: "賞",
-    title: "評価",
-    subtitle: "卓越"
+    badge: "表彰",
+    title: "受賞歴と認知",
+    subtitle: "製薬イノベーションにおける卓越性を称える"
   },
+  awardsList: [
+    {
+      award: "2023年製薬卓越性賞",
+      org: "世界保健協議会",
+      year: "2023"
+    },
+    {
+      award: "製造における革新",
+      org: "製薬リーダーズフォーラム",
+      year: "2022"
+    },
+    {
+      award: "最優秀新興製薬会社",
+      org: "ヘルスケア・アジア",
+      year: "2024"
+    }
+  ],
   cta: {
-    title: "提携",
-    subtitle: "ご参加ください",
+    title: "私たちとパートナーシップを",
+    subtitle: "世界中で質の高いヘルスケアソリューションを提供することにご参加ください。",
     button: "お問い合わせ"
+  }
+},
+testKitDetailPage: {
+  home: "ホーム",
+  testKits: "テストキット",
+  loading: "読み込み中...",
+  badge: "診断用テストキット",
+  defaultDescription: "詳細な製品情報はリクエストに応じて共有されます。",
+  categoryPending: "カテゴリー未定",
+  requestInfo: "情報をリクエスト",
+  backButton: "テストキットに戻る",
+  productDetails: "製品詳細",
+  method: "方法",
+  specimen: "検体",
+  cutOff: "カットオフ値",
+  certificate: "証明書"
+},
+// ivexia\data1\languages\ja.js - Magazine section
+
+magazine: {
+  title: "イベキシアマガジン",
+  loading: "読み込み中...",
+  recentArticles: "最近の記事",
+  noRecentArticles: "まだ最近の記事はありません。",
+  readMore: "続きを読む →",
+  previous: "前へ",
+  next: "次へ",
+  page: "ページ",
+  of: "/",
+  
+  categories: {
+    health: "健康",
+    news: "ニュース"
+  },
+  
+  articles: {
+    "gene-therapy-emerging-science": {
+      title: "遺伝子治療が現代の治療をどのように変革しているか",
+      excerpt: "遺伝子治療は概念から臨床へと移行し、症状を管理するだけでなく遺伝子問題を修正する標的型の方法を提供しています。",
+      readTime: "7～9分",
+      heroCaption: "遺伝子治療はDNAレベルで疾患を捉え、細胞が従う指示を修正または調整することを目指しています。",
+      sections: [
+        {
+          heading: "遺伝子治療とは何か？",
+          paragraphs: [
+            "体内のほぼすべての細胞内で、DNAはその細胞がどのように機能すべきかの指示を運んでいます。この取扱説明書の一部が損傷、欠失、または変更されると、疾患が現れる可能性があります。",
+            "遺伝子治療はこれらの欠陥部分に焦点を当て、遺伝物質を修復、置換、または調整することを目指しています。"
+          ]
+        },
+        {
+          subheading: "主なアプローチ",
+          paragraphs: [
+            "簡単に言えば、遺伝子治療は以下のことができます：",
+            "• 欠落または破損した遺伝子の機能コピーを追加する",
+            "• 有害な遺伝子を減少またはサイレンシングする",
+            "• 最新の遺伝子編集ツールを使用してDNA配列を編集する"
+          ]
+        },
+        {
+          subheading: "1. 遺伝子増強",
+          paragraphs: [
+            "一部の疾患は、重要な遺伝子が欠落しているか適切に機能していないために発生します。健康なコピーを追加することで細胞機能の回復に役立ちます。"
+          ]
+        },
+        {
+          subheading: "2. 遺伝子抑制",
+          paragraphs: [
+            "他の疾患では、問題は遺伝子が活性化しすぎているか、有害なものを生成していることです。遺伝子抑制戦略はこの活性を減少またはブロックすることを目的としています。"
+          ]
+        },
+        {
+          subheading: "3. 遺伝子編集",
+          paragraphs: [
+            "CRISPRのようなツールは分子はさみのように機能し、科学者が正確な位置でDNAを切断し、変異を修正したり新しい物質を挿入したりすることを可能にします。"
+          ]
+        },
+        {
+          heading: "デジタルツールはどのように遺伝子治療をサポートするか",
+          paragraphs: [
+            "遺伝子治療研究は膨大な量のデータを生成します。AIはこの情報を分析し、どの患者が最も恩恵を受ける可能性があるかの決定をサポートします。"
+          ]
+        },
+        {
+          heading: "遺伝子治療が今日使用されている分野",
+          paragraphs: [
+            "現在承認されている遺伝子治療は希少遺伝性疾患に焦点を当てています。研究は腫瘍学、心血管医学、神経学に拡大しています。"
+          ]
+        },
+        {
+          heading: "潜在的な利点",
+          paragraphs: [
+            "• 疾患の根本原因に対処する",
+            "• 長期間または一度きりの治療を提供できる",
+            "• 細胞や組織の精密なターゲティングを提供する",
+            "• 標準治療が限られている場合に新しい選択肢を生み出す"
+          ]
+        },
+        {
+          heading: "注意すべき点",
+          paragraphs: [
+            "• ゲノムの他の場所での意図しない変化",
+            "• 可能性のある免疫反応",
+            "• 複雑で高コストな製造",
+            "• 長期的な安全性監視の必要性"
+          ]
+        },
+        {
+          heading: "倫理と未来",
+          paragraphs: [
+            "遺伝子治療は核となる生物学的指示を変更するため、アクセス、公平性、長期的な安全性に関する重要な問題を提起します。",
+            "送達方法が改善されるにつれて、遺伝子治療は主流の医療の一部になると期待されています。"
+          ]
+        }
+      ]
+    },
+
+    "power-of-ai-medical-industry": {
+      title: "医療業界におけるAIの力：知っておくべき4つのこと",
+      excerpt: "人工知能は、病院や製薬会社における診断、ワークフロー、意思決定を再形成しています。",
+      readTime: "6～8分",
+      heroCaption: "人工知能は、複雑な医療および製薬データをより迅速で情報に基づいた決定に変換するのに役立ちます。",
+      sections: [
+        {
+          heading: "医学におけるAIの影響",
+          paragraphs: [
+            "人工知能は現代の医療において最も重要なツールの一つになりつつあります。数千のデータポイントを同時に分析し、人間が見逃す可能性のあるパターンを強調することができます。",
+            "病院や製薬業界では、AIは意思決定をサポートし、診断を改善し、ワークフローを効率化します。"
+          ]
+        },
+        {
+          heading: "製薬業界におけるAI",
+          paragraphs: [
+            "製薬業界はデータに大きく依存しています — 化学ライブラリー、生物学的実験、臨床試験、安全性シグナル。AIはこれらの情報ストリームを接続し、研究を加速します。",
+            "• 創薬のための仮想スクリーニング",
+            "• 製剤とプロセスのシミュレーション",
+            "• 安全性評価のための予測モデリング"
+          ]
+        },
+        {
+          heading: "製薬マーケティングにおけるAI",
+          paragraphs: [
+            "AIは、実際の情報ニーズに合わせてコミュニケーションを調整することで、マーケティングをよりデータ駆動型にします。",
+            "• より正確なオーディエンスセグメンテーション",
+            "• パーソナライズされたコンテンツ",
+            "• 行動の動機のより良い理解"
+          ]
+        },
+        {
+          heading: "医療システムと病院におけるAI",
+          paragraphs: [
+            "AIは検査結果、画像、バイタルサイン、病歴を分析して緊急リスクを特定したり、治療調整をガイドしたりします。",
+            "• 放射線科医のための画像サポート",
+            "• リスク予測ツール",
+            "• 患者サポートのための仮想アシスタント"
+          ]
+        },
+        {
+          heading: "医学におけるAIの未来",
+          paragraphs: [
+            "AIは、各個人の遺伝学とリスクプロファイルに合わせて治療を調整することで、精密医療において主要な役割を果たします。"
+          ]
+        },
+        {
+          heading: "なぜAIが重要なのか",
+          paragraphs: [
+            "患者にとって：早期発見、個別化治療、より良い結果。",
+            "製薬会社と医療提供者にとって：既存データのよりスマートな使用とより良い効率性。"
+          ]
+        }
+      ]
+    },
+
+    "personalized-medicine-basics": {
+      title: "個別化医療：各患者に合わせた治療",
+      excerpt: "遺伝学、バイオマーカー、臨床データを使用することにより、個別化医療は適切な人に適切な治療を適切なタイミングで選択することを目指しています。",
+      readTime: "6～8分",
+      heroCaption: "個別化医療は、遺伝学、臨床データ、ライフスタイル情報を組み合わせて、各患者に合わせた治療を行います。",
+      sections: [
+        {
+          heading: "個別化医療とは何か？",
+          paragraphs: [
+            "個別化医療は、医療をワンサイズフィットオールモデルから遠ざけ、個人に合わせた治療を提供します。",
+            "ゲノムシーケンシングの進歩は、同じ状態の2人の患者が同じ治療に異なる反応を示す理由を示しています。"
+          ]
+        },
+        {
+          heading: "遺伝子工学と精密医療",
+          paragraphs: [
+            "最新のDNAシーケンシングは、疾患、薬物への反応、副作用のリスクに関連する遺伝子変異を特定するのに役立ちます。"
+          ]
+        },
+        {
+          heading: "個別化医療の利点",
+          paragraphs: [
+            "• より高い反応の可能性を持つより精密な治療",
+            "• 積極的で予防的な医療",
+            "• 医療資源のより良い配分",
+            "• 診断と標的療法の革新"
+          ]
+        },
+        {
+          heading: "課題と責任",
+          paragraphs: [
+            "• データプライバシーと遺伝情報の保護",
+            "• 公平なアクセスの確保",
+            "• 明確な規制枠組み",
+            "• 医療システム間の相互運用性"
+          ]
+        },
+        {
+          heading: "将来展望",
+          paragraphs: [
+            "シーケンシングがより利用しやすくなるにつれて、個別化医療は現代の医療の中心的な部分になるでしょう。"
+          ]
+        }
+      ]
+    },
+
+    "what-is-obesity-how-to-overcome-it": {
+      title: "肥満とは何か — そして本当にどのように克服するか？",
+      excerpt: "肥満は生物学、環境、ライフスタイルに影響されます。長期的な管理には、短期的なダイエットだけでなく構造が必要です。",
+      readTime: "6～8分",
+      heroCaption: "肥満は生物学、環境、ライフスタイルに影響されます。長期的な管理には、短期的なダイエットだけでなく構造が必要です。",
+      sections: [
+        {
+          heading: "肥満が起こる理由",
+          paragraphs: [
+            "食事と運動は重要ですが、話の一部に過ぎません。生物学的要因、睡眠、ストレス、薬剤、社会的環境がすべて大きく寄与しています。"
+          ]
+        },
+        {
+          heading: "肥満に関連する健康リスク",
+          paragraphs: [
+            "• 2型糖尿病とインスリン抵抗性のリスクが高い",
+            "• 高血圧と心臓病の可能性が増加",
+            "• 睡眠時無呼吸症、関節痛、特定のがん",
+            "• 自尊心やうつ病を含む精神的健康への影響"
+          ]
+        },
+        {
+          heading: "現実的な体重管理へのアプローチ",
+          paragraphs: [
+            "持続可能な体重管理は、極端なダイエットや簡単な解決策ではありません。バランスの取れた長期的な計画が必要です。",
+            "• 厳格なルールではなく、楽しくバランスの取れた栄養",
+            "• 管理可能で持続可能な定期的な身体活動",
+            "• 睡眠、ストレス、感情的な食事のトリガーの管理",
+            "• 臨床指導の下での適切な薬物治療または手術"
+          ]
+        },
+        {
+          heading: "長期的なサポートが重要",
+          paragraphs: [
+            "肥満は慢性疾患であるため、長期的なサポートは進歩を維持するのに役立ちます。",
+            "目標は完璧ではなく、時間の経過とともに着実で一貫した改善です。"
+          ]
+        }
+      ]
+    },
+
+    "international-womens-day-healthcare": {
+      title: "国際女性デーに敬意を表して",
+      excerpt: "女性科学者、臨床医、リーダーは医療における重要な進歩を推進しています。彼女たちの仕事を認識することは、より良いシステムを構築するための一部です。",
+      readTime: "5～7分",
+      heroCaption: "国際女性デーは、女性の業績を祝い、女性の健康におけるギャップを埋めることに焦点を当てる瞬間です。",
+      sections: [
+        {
+          heading: "女性の健康課題",
+          paragraphs: [
+            "多くの国で、女性は複数の障害に直面しています：",
+            "• リプロダクティブヘルスと母性医療へのアクセスが限られている",
+            "• 心臓病などの慢性疾患の診断不足または診断の遅れ",
+            "• ケアへのアクセスをより困難にする文化的圧力と差別"
+          ]
+        },
+        {
+          heading: "女性に不均衡に影響を与える疾患",
+          paragraphs: [
+            "特定の状態は女性の健康結果に強く影響します。",
+            "• 乳がんと子宮頸がん、スクリーニングによって生存率を大幅に改善できる",
+            "• 妊娠と出産時の母体合併症",
+            "• 女性では異なる症状を示す可能性があり、誤診につながる慢性疾患"
+          ]
+        },
+        {
+          heading: "女性の健康を促進する：重要なレバー",
+          paragraphs: [
+            "• 必須サービスへのアクセス改善：母性ケア、避妊、スクリーニング",
+            "• 教育、経済的エンパワーメント、信頼できる情報へのアクセスへの投資",
+            "• 十分な数の女性を含む研究の奨励",
+            "• リプロダクティブライツを保護しケアへのアクセスを確保する公衆衛生政策の強化"
+          ]
+        },
+        {
+          heading: "一日を超えた取り組み",
+          paragraphs: [
+            "国際女性デーはリマインダーであり、単一のイベントではありません。女性の健康のギャップを減らすには、一貫した長期的なコミットメントが必要です。",
+            "Ivexiaにとって、女性の健康を優先することは、女性の独自のニーズを念頭に置いて医薬品、コミュニケーション、プログラムを設計することを意味します。"
+          ]
+        }
+      ]
+    },
+
+    "diabetes-kidney-disease-6": {
+      title: "糖尿病は腎臓病のリスクを高めるか？",
+      excerpt: "慢性的に高い血糖値は腎臓の細かい血管を損傷する可能性があります。この関連性を早期に理解することが重要です。",
+      readTime: "5～7分",
+      heroCaption: "糖尿病は慢性腎臓病の最も重要な危険因子の一つであり、特に血糖値と血圧が長期間高いままの場合です。",
+      sections: [
+        {
+          heading: "糖尿病が腎臓に与える影響",
+          paragraphs: [
+            "高血糖は腎臓の濾過単位である糸球体を損傷します。時間の経過とともに漏れやすくなり、アルブミンなどのタンパク質が尿中に通過するのを許します。",
+            "高血圧と炎症はさらなる負担を追加し、損傷を悪化させます。"
+          ]
+        },
+        {
+          heading: "警告サイン",
+          paragraphs: [
+            "• 脚、足首、または目の周りの腫れ",
+            "• 泡立つ尿（タンパク質損失のサイン）",
+            "• 血圧コントロールの困難の増加",
+            "• 疲労、食欲不振、または集中困難"
+          ]
+        },
+        {
+          heading: "スクリーニングの役割",
+          paragraphs: [
+            "アルブミンの尿検査とクレアチニンおよびeGFRの血液検査は、重症症状が現れるずっと前に腎臓障害を検出できます。"
+          ]
+        },
+        {
+          heading: "腎臓を守る",
+          paragraphs: [
+            "• 血糖値を目標範囲内に保つ",
+            "• 多くの場合ACE阻害薬またはARBによる厳格な血圧コントロール",
+            "• 健康的なライフスタイル習慣：栄養、運動、良好な睡眠、禁煙"
+          ]
+        },
+        {
+          heading: "予防とパートナーシップのメッセージ",
+          paragraphs: [
+            "糖尿病は確かに腎臓病のリスクを高めます — しかしリスクは固定されていません。",
+            "早期発見、適切な管理、医療チームとの強力な協力により、腎機能ははるかに長く保護できます。"
+          ]
+        }
+      ]
+    }
   }
 }
 }

@@ -11,196 +11,193 @@ import {
   FaLayerGroup,
 } from "react-icons/fa";
 
-// export const metadata = {
-//   title: "Private Label Manufacturing / OEM",
-//   description:
-//     "Partner with Ivexia Pharma for private label and OEM pharmaceutical manufacturing with GMP quality, flexible batch sizes, and end-to-end support.",
-//   alternates: {
-//     canonical: "/private-label-manufacturing-oem",
-//   },
-// };
-
 const capabilities = [
   {
-    title: "Formulation Development",
-    description:
-      "Support from concept selection to market-ready formula across defined dosage platforms.",
+    key: "formulation",
     icon: FaFlask,
   },
   {
-    title: "Custom Branding",
-    description:
-      "Private-label pack setup, artwork coordination, and format alignment for your target market.",
+    key: "customBranding", 
     icon: FaLayerGroup,
   },
   {
-    title: "Regulatory Documentation",
-    description:
-      "Technical dossiers, CoAs, and quality file support aligned with buyer requirements.",
+    key: "regulatory",
     icon: FaClipboardCheck,
   },
   {
-    title: "Scalable Manufacturing",
-    description:
-      "Pilot, launch, and scale-up support with controlled manufacturing and traceability.",
+    key: "scalable",
     icon: FaBoxes,
   },
 ];
 
-const engagementModels = [
-  {
-    title: "Market Entry Model",
-    description:
-      "For partners entering a new territory who need focused SKU selection and launch-ready support.",
-    fit: "Best for first-market launches and category pilots.",
-  },
-  {
-    title: "Portfolio Expansion Model",
-    description:
-      "For established brands adding new product lines under existing distribution networks.",
-    fit: "Best for expanding category depth and shelf coverage.",
-  },
-  {
-    title: "Continuity Supply Model",
-    description:
-      "For long-term buyers prioritizing stable planning, repeat scheduling, and quality consistency.",
-    fit: "Best for high-repeat procurement and scale programs.",
-  },
-];
-
-const dosageForms = [
-  "Tablets",
-  "Capsules",
-  "Syrups",
-  "Suspensions",
-  "Topicals",
-  "Sachets",
-];
-
-const processSteps = [
-  "Requirement discovery and product-market alignment",
-  "Formula/pack finalization and documentation planning",
-  "Commercial manufacturing with in-process quality controls",
-  "Final release, dispatch coordination, and continuity planning",
-];
-
-const therapeuticAreas = [
-  "General Medicine",
-  "Pain Management",
-  "Nutraceuticals",
-  "Gastro Care",
-  "Respiratory Care",
-  "Dermatology",
-  "Women's Health",
-  "Pediatric Support",
-];
-
-const documentationPack = [
-  "Product specification sheets",
-  "Certificate of Analysis format",
-  "Stability and storage guidance",
-  "Batch and release documentation",
-  "Pack and label compliance checklist",
-  "Shipping and handling documentation",
-];
-
-const qualityFramework = [
-  {
-    stage: "Raw Material Qualification",
-    control:
-      "Supplier verification, identity checks, and incoming material acceptance criteria.",
-    output: "Approved material status before production start.",
-  },
-  {
-    stage: "In-Process Quality Monitoring",
-    control:
-      "Critical process checkpoints at blending, compression/filling, and packing stages.",
-    output: "Controlled process consistency across the batch lifecycle.",
-  },
-  {
-    stage: "Finished Product Testing",
-    control:
-      "Defined release testing based on product profile and applicable quality requirements.",
-    output: "Batch disposition report and quality release readiness.",
-  },
-  {
-    stage: "Release and Dispatch Control",
-    control:
-      "Final documentation verification and dispatch condition checks before shipment.",
-    output: "Market-ready release package with traceable records.",
-  },
-];
-
-const supportScope = [
-  {
-    title: "Brand and Pack Development",
-    details:
-      "Carton, label, insert, and shipper alignment based on brand requirements and country norms.",
-  },
-  {
-    title: "Regulatory and Quality File Support",
-    details:
-      "CoA, specifications, and supporting quality documents for registration workflows.",
-  },
-  {
-    title: "Supply and Delivery Planning",
-    details:
-      "Forecast-aware batch scheduling and shipment planning for repeat business cycles.",
-  },
-];
-
-const onboardingChecklist = [
-  "Target market and product category",
-  "Preferred dosage form and strength",
-  "Packaging format and branding direction",
-  "Projected demand and launch window",
-  "Compliance expectations and documentation scope",
-];
-
-const faqs = [
-  {
-    question: "Can you support low-volume market entry batches?",
-    answer:
-      "Yes. We can begin with pilot/launch volumes and then scale after demand validation.",
-  },
-  {
-    question: "Do you provide private label packaging options?",
-    answer:
-      "Yes. We support branded packaging formats with artwork coordination and compliance checks.",
-  },
-  {
-    question: "Can documentation be aligned for different country requirements?",
-    answer:
-      "Yes, documentation support can be structured based on market-specific submission expectations.",
-  },
-  {
-    question: "What information is needed to start an OEM discussion?",
-    answer:
-      "At minimum: category, dosage form, target country, expected volume, and preferred launch timeline.",
-  },
-  {
-    question: "Do you support repeat supply planning after launch?",
-    answer:
-      "Yes. We can set continuity planning based on forecast cycles and replenishment requirements.",
-  },
-  {
-    question: "Can Ivexia support both single-SKU and multi-SKU programs?",
-    answer:
-      "Yes. Engagement can start from a focused SKU and expand to a broader portfolio as needed.",
-  },
+const qualityPointsList = [
+  "Raw material qualification and vendor control",
+  "In-process and finished-goods quality testing", 
+  "Batch records, traceability, and release documentation",
+  "Export-ready logistics and documentation support"
 ];
 
 export default function PrivateLabelManufacturingPage() {
   const brandGradient = "bg-gradient-to-r from-[#FF7A00] to-[#E2004F]";
   const brandTextGradient =
     "bg-gradient-to-r from-[#FF7A00] to-[#E2004F] bg-clip-text text-transparent";
-const { translations } = useLanguage();
-const t = translations?.oemPage;
-const highlights = t?.highlights || [
-  "WHO-GMP aligned production standards",
-  "Flexible batch planning for market launches",
-  "End-to-end OEM support from concept to delivery",
-];
+  const { translations } = useLanguage();
+  const t = translations?.oemPage;
+  
+  const highlights = t?.highlights || [
+    "WHO-GMP aligned production standards",
+    "Flexible batch planning for market launches",
+    "End-to-end OEM support from concept to delivery",
+  ];
+  
+  const dosageForms = t?.dosageForms || [
+    "Tablets",
+    "Capsules", 
+    "Syrups",
+    "Suspensions",
+    "Topicals",
+    "Sachets"
+  ];
+  
+  const documentationPack = t?.documentationPack || [
+    "Product specification sheets",
+    "Certificate of Analysis format",
+    "Stability and storage guidance",
+    "Batch and release documentation",
+    "Pack and label compliance checklist",
+    "Shipping and handling documentation"
+  ];
+  
+  const processSteps = t?.processSteps || [
+    "Requirement discovery and product-market alignment",
+    "Formula/pack finalization and documentation planning",
+    "Commercial manufacturing with in-process quality controls",
+    "Final release, dispatch coordination, and continuity planning",
+  ];
+  
+  const qualityFramework = t?.qualityFramework || [
+    {
+      stage: "Raw Material Qualification",
+      control: "Supplier verification, identity checks, and incoming material acceptance criteria.",
+      output: "Approved material status before production start.",
+    },
+    {
+      stage: "In-Process Quality Monitoring",
+      control: "Critical process checkpoints at blending, compression/filling, and packing stages.",
+      output: "Controlled process consistency across the batch lifecycle.",
+    },
+    {
+      stage: "Finished Product Testing",
+      control: "Defined release testing based on product profile and applicable quality requirements.",
+      output: "Batch disposition report and quality release readiness.",
+    },
+    {
+      stage: "Release and Dispatch Control",
+      control: "Final documentation verification and dispatch condition checks before shipment.",
+      output: "Market-ready release package with traceable records.",
+    },
+  ];
+  
+  const therapeuticAreas = t?.therapeuticAreas || [
+    "General Medicine",
+    "Pain Management",
+    "Nutraceuticals",
+    "Gastro Care",
+    "Respiratory Care",
+    "Dermatology",
+    "Women's Health",
+    "Pediatric Support",
+  ];
+  
+  const supportScope = t?.supportScope || [
+    {
+      title: "Brand and Pack Development",
+      details: "Carton, label, insert, and shipper alignment based on brand requirements and country norms.",
+    },
+    {
+      title: "Regulatory and Quality File Support",
+      details: "CoA, specifications, and supporting quality documents for registration workflows.",
+    },
+    {
+      title: "Supply and Delivery Planning",
+      details: "Forecast-aware batch scheduling and shipment planning for repeat business cycles.",
+    },
+  ];
+  
+  const onboardingChecklist = t?.onboardingChecklist || [
+    "Target market and product category",
+    "Preferred dosage form and strength",
+    "Packaging format and branding direction",
+    "Projected demand and launch window",
+    "Compliance expectations and documentation scope",
+  ];
+  
+  const faqs = t?.faqs || [
+    {
+      question: "Can you support low-volume market entry batches?",
+      answer: "Yes. We can begin with pilot/launch volumes and then scale after demand validation.",
+    },
+    {
+      question: "Do you provide private label packaging options?",
+      answer: "Yes. We support branded packaging formats with artwork coordination and compliance checks.",
+    },
+    {
+      question: "Can documentation be aligned for different country requirements?",
+      answer: "Yes, documentation support can be structured based on market-specific submission expectations.",
+    },
+    {
+      question: "What information is needed to start an OEM discussion?",
+      answer: "At minimum: category, dosage form, target country, expected volume, and preferred launch timeline.",
+    },
+    {
+      question: "Do you support repeat supply planning after launch?",
+      answer: "Yes. We can set continuity planning based on forecast cycles and replenishment requirements.",
+    },
+    {
+      question: "Can Ivexia support both single-SKU and multi-SKU programs?",
+      answer: "Yes. Engagement can start from a focused SKU and expand to a broader portfolio as needed.",
+    },
+  ];
+  
+  const engagementModels = t?.engagement || [
+    {
+      title: "Market Entry Model",
+      description: "For partners entering a new territory who need focused SKU selection and launch-ready support.",
+      fit: "Best for first-market launches and category pilots.",
+    },
+    {
+      title: "Portfolio Expansion Model",
+      description: "For established brands adding new product lines under existing distribution networks.",
+      fit: "Best for expanding category depth and shelf coverage.",
+    },
+    {
+      title: "Continuity Supply Model",
+      description: "For long-term buyers prioritizing stable planning, repeat scheduling, and quality consistency.",
+      fit: "Best for high-repeat procurement and scale programs.",
+    },
+  ];
+  
+  const capabilitiesList = t?.capabilities || [
+    {
+      title: "Formulation Development",
+      description: "Support from concept selection to market-ready formula across defined dosage platforms.",
+    },
+    {
+      title: "Custom Branding",
+      description: "Private-label pack setup, artwork coordination, and format alignment for your target market.",
+    },
+    {
+      title: "Regulatory Documentation",
+      description: "Technical dossiers, CoAs, and quality file support aligned with buyer requirements.",
+    },
+    {
+      title: "Scalable Manufacturing",
+      description: "Pilot, launch, and scale-up support with controlled manufacturing and traceability.",
+    },
+  ];
+  
+  const qualityPoints = t?.qualityPoints || qualityPointsList;
+
   return (
     <div className="bg-[#f6f8fb] min-h-screen">
       <section className="relative h-[42vh] md:h-[66vh] overflow-hidden">
@@ -243,9 +240,9 @@ const highlights = t?.highlights || [
 
       <section className="max-w-7xl mx-auto px-6 md:px-16 py-14 md:py-20">
         <div className="grid md:grid-cols-3 gap-5">
-        {highlights.map((item) => (
+        {highlights.map((item, idx) => (
             <div
-              key={item}
+              key={idx}
               className="rounded-xl border border-[#E2004F]/15 bg-[#fff8f4] p-5 text-[#0d2d47] font-medium"
             >
               {item}
@@ -258,16 +255,16 @@ const highlights = t?.highlights || [
         <div className="grid md:grid-cols-3 gap-5">
          {engagementModels.map((model, index) => (
             <article
-              key={t?.engagement?.[index]?.title || model.title}
+              key={index}
               className="rounded-2xl border border-[#E2004F]/15 bg-white p-6 shadow-sm"
             >
               <h2 className={`text-xl font-semibold ${brandTextGradient}`}>
-              {t?.engagement?.[index]?.title || model.title}
+              {model.title}
               </h2>
               <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-               {t?.engagement?.[index]?.desc || model.description}
+               {model.description}
               </p>
-              <p className="mt-4 text-sm font-medium text-[#0d2d47]">{t?.engagement?.[index]?.fit || model.fit}</p>
+              <p className="mt-4 text-sm font-medium text-[#0d2d47]">{model.fit}</p>
             </article>
           ))}
         </div>
@@ -285,9 +282,10 @@ const highlights = t?.highlights || [
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
             {capabilities.map((item, index) => {
               const Icon = item.icon;
+              const capabilityData = capabilitiesList[index] || {};
               return (
                 <article
-                  key={t?.capabilities?.[index]?.title || item.title}
+                  key={item.key}
                   className="bg-white rounded-2xl border border-[#E2004F]/15 shadow-sm p-6"
                 >
                   <div
@@ -296,10 +294,10 @@ const highlights = t?.highlights || [
                     <Icon />
                   </div>
                   <h3 className="mt-4 text-lg font-semibold text-[#0d2d47]">
-                    {t?.capabilities?.[index]?.title || item.title}
+                    {capabilityData.title}
                   </h3>
                   <p className="text-sm text-gray-600 mt-2 leading-relaxed">
-                    {t?.capabilities?.[index]?.desc || item.description}
+                    {capabilityData.description}
                   </p>
                 </article>
               );
@@ -314,13 +312,12 @@ const highlights = t?.highlights || [
             {t?.dosageHeading || "Dosage Forms We Manufacture"}
           </h2>
           <p className="text-gray-600 mt-3">
-            Our setup supports multiple dosage platforms with consistency in
-            process control and batch documentation.
+            {t?.dosageDesc || "Our setup supports multiple dosage platforms with consistency in process control and batch documentation."}
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-7">
-            {dosageForms.map((form) => (
+            {dosageForms.map((form, idx) => (
               <div
-                key={form}
+                key={idx}
                 className="rounded-lg border border-[#E2004F]/15 px-4 py-3 text-sm font-medium text-[#0d2d47] bg-white"
               >
                 {form}
@@ -334,13 +331,12 @@ const highlights = t?.highlights || [
             {t?.docsHeading || "Documentation and Technical Deliverables"}
           </h3>
           <p className="text-sm text-gray-600 mt-2">
-            As required by product and market scope, projects can include the
-            following documentation package elements.
+            {t?.docsDesc || "As required by product and market scope, projects can include the following documentation package elements."}
           </p>
           <div className="mt-5 grid sm:grid-cols-2 gap-3">
-            {documentationPack.map((item) => (
+            {documentationPack.map((item, idx) => (
               <div
-                key={item}
+                key={idx}
                 className="rounded-lg border border-[#E2004F]/15 bg-[#fff8f4] px-4 py-3 text-sm text-[#0d2d47]"
               >
                 {item}
@@ -357,10 +353,10 @@ const highlights = t?.highlights || [
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
             {processSteps.map((step, index) => (
-              <div key={step} className="rounded-2xl bg-white/15 p-6 backdrop-blur-sm">
+              <div key={index} className="rounded-2xl bg-white/15 p-6 backdrop-blur-sm">
                <p className="text-white text-sm font-semibold">
-  {t?.step || "Step"} {index + 1}
-</p>
+                  {t?.step || "Step"} {index + 1}
+                </p>
                 <p className="mt-2 text-sm leading-relaxed">{step}</p>
               </div>
             ))}
@@ -370,16 +366,15 @@ const highlights = t?.highlights || [
 
       <section className="max-w-7xl mx-auto px-6 md:px-16 py-14 md:py-20">
         <h2 className="text-2xl md:text-4xl font-bold text-[#0d2d47] text-center">
-       {t?.qualityHeading || "Quality Governance Framework"}
+          {t?.qualityHeading || "Quality Governance Framework"}
         </h2>
         <p className="text-gray-600 text-center mt-3 max-w-3xl mx-auto">
-          Quality is embedded at each stage from raw material qualification to
-          release and dispatch control.
+          {t?.qualityDesc || "Quality is embedded at each stage from raw material qualification to release and dispatch control."}
         </p>
         <div className="grid md:grid-cols-2 gap-5 mt-10">
-          {qualityFramework.map((item) => (
+          {qualityFramework.map((item, idx) => (
             <article
-              key={item.stage}
+              key={idx}
               className="rounded-2xl border border-[#E2004F]/15 bg-white p-6 shadow-sm"
             >
               <h3 className={`text-lg font-semibold ${brandTextGradient}`}>
@@ -398,15 +393,15 @@ const highlights = t?.highlights || [
         <div className="max-w-7xl mx-auto px-6 md:px-16 grid lg:grid-cols-2 gap-10 items-start">
           <div>
             <h2 className="text-2xl md:text-4xl font-bold text-[#0d2d47]">
-            {t?.therapyHeading || "Therapeutic and Market Coverage"}
+              {t?.therapyHeading || "Therapeutic and Market Coverage"}
             </h2>
             <p className="text-gray-600 mt-3">
-             {t?.supportHeading || "What We Support End-to-End"}
+              {t?.therapyDesc || "Our manufacturing capabilities span multiple therapeutic areas to serve diverse market needs."}
             </p>
             <div className="grid grid-cols-2 gap-3 mt-7">
-              {therapeuticAreas.map((area) => (
+              {therapeuticAreas.map((area, idx) => (
                 <div
-                  key={area}
+                  key={idx}
                   className="rounded-lg border border-[#E2004F]/15 bg-white px-4 py-3 text-sm text-[#0d2d47] font-medium"
                 >
                   {area}
@@ -416,12 +411,12 @@ const highlights = t?.highlights || [
           </div>
 
           <div className="bg-white rounded-2xl border border-[#E2004F]/15 shadow-sm p-7">
-           <h3 className={`text-xl font-semibold ${brandTextGradient}`}>
-  {t?.supportHeading || "What We Support End-to-End"}
-</h3>
+            <h3 className={`text-xl font-semibold ${brandTextGradient}`}>
+              {t?.supportHeading || "What We Support End-to-End"}
+            </h3>
             <div className="space-y-5 mt-5">
-              {supportScope.map((item) => (
-                <div key={item.title}>
+              {supportScope.map((item, idx) => (
+                <div key={idx}>
                   <p className="font-semibold text-[#0d2d47]">{item.title}</p>
                   <p className="text-sm text-gray-600 mt-1">{item.details}</p>
                 </div>
@@ -434,20 +429,14 @@ const highlights = t?.highlights || [
       <section className="max-w-7xl mx-auto px-6 md:px-16 py-14 md:py-20 grid lg:grid-cols-2 gap-10 items-start">
         <div className="space-y-4">
           <h2 className="text-2xl md:text-4xl font-bold text-[#0d2d47]">
-           {t?.qualityBuiltHeading || "Built on Quality and Compliance"}
+            {t?.qualityBuiltHeading || "Built on Quality and Compliance"}
           </h2>
           <p className="text-gray-600">
-            Every batch follows validated processes, quality checkpoints, and
-            release controls to protect your brand integrity.
+            {t?.qualityBuiltDesc || "Every batch follows validated processes, quality checkpoints, and release controls to protect your brand integrity."}
           </p>
           <ul className="space-y-3">
-            {[
-              "Raw material qualification and vendor control",
-              "In-process and finished-goods quality testing",
-              "Batch records, traceability, and release documentation",
-              "Export-ready logistics and documentation support",
-            ].map((point) => (
-              <li key={point} className="flex items-start gap-3 text-gray-700">
+            {qualityPoints.map((point, idx) => (
+              <li key={idx} className="flex items-start gap-3 text-gray-700">
                 <FaCheckCircle className="text-[#E2004F] mt-1 flex-shrink-0" />
                 <span>{point}</span>
               </li>
@@ -468,16 +457,15 @@ const highlights = t?.highlights || [
       <section className="max-w-7xl mx-auto px-6 md:px-16 py-4 md:py-10">
         <div className="rounded-2xl border border-[#E2004F]/15 bg-white p-7 md:p-8">
           <h2 className={`text-2xl md:text-3xl font-bold ${brandTextGradient}`}>
-         {t?.onboardingHeading || "Information Needed to Start Scoping"}
+            {t?.onboardingHeading || "Information Needed to Start Scoping"}
           </h2>
           <p className="text-sm text-gray-600 mt-2">
-            Sharing the below inputs helps us propose a practical and faster OEM
-            project pathway.
+            {t?.onboardingDesc || "Sharing the below inputs helps us propose a practical and faster OEM project pathway."}
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-6">
-            {onboardingChecklist.map((item) => (
+            {onboardingChecklist.map((item, idx) => (
               <div
-                key={item}
+                key={idx}
                 className="rounded-lg border border-[#E2004F]/15 bg-[#fff8f4] px-4 py-3 text-sm text-[#0d2d47]"
               >
                 {item}
@@ -489,12 +477,12 @@ const highlights = t?.highlights || [
 
       <section className="max-w-5xl mx-auto px-6 md:px-16 py-6 md:py-10">
         <h2 className="text-2xl md:text-4xl font-bold text-[#0d2d47] text-center">
-         {t?.faqHeading || "Frequently Asked Questions"}
+          {t?.faqHeading || "Frequently Asked Questions"}
         </h2>
         <div className="mt-8 space-y-3">
-          {faqs.map((item) => (
+          {faqs.map((item, idx) => (
             <details
-              key={item.question}
+              key={idx}
               className="group rounded-xl border border-[#E2004F]/15 bg-white px-5 py-4"
             >
               <summary className="cursor-pointer list-none font-semibold text-[#0d2d47] flex items-center justify-between gap-4">
@@ -514,18 +502,17 @@ const highlights = t?.highlights || [
       <section className={`py-14 md:py-20 text-white ${brandGradient}`}>
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h2 className="text-2xl md:text-4xl font-bold">
-           {t?.ctaHeading || "Launch Your Private Label Portfolio With Ivexia"}
+            {t?.ctaHeading || "Launch Your Private Label Portfolio With Ivexia"}
           </h2>
           <p className="mt-3 text-gray-100">
-            Share your market plan and product requirement set. Our team can
-            structure a practical OEM roadmap with defined execution stages.
+            {t?.ctaDesc || "Share your market plan and product requirement set. Our team can structure a practical OEM roadmap with defined execution stages."}
           </p>
           <div className="mt-8 flex flex-wrap gap-3 justify-center">
             <Link
               href="/contact"
               className="px-6 py-3 rounded-full bg-white text-[#E2004F] font-semibold hover:bg-[#fff3ef] transition-colors"
             >
-             {t?.ctaContact || "Contact Us"}
+              {t?.ctaContact || "Contact Us"}
             </Link>
             <Link
               href="/offerings-overview"
@@ -539,5 +526,3 @@ const highlights = t?.highlights || [
     </div>
   );
 }
-
-

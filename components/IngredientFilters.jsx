@@ -127,7 +127,7 @@ export default function IngredientFilters({
           <select
             value={category}
             onChange={(e) => setCategory(e.target.value)}
-            className="rounded-lg border px-3 py-2"
+            className="rounded-lg border px-3 py-2 cursor-pointer"
           >
             {categories.map((c) => (
               <option key={c} value={c}>
@@ -140,7 +140,7 @@ export default function IngredientFilters({
           <select
             value={dosage}
             onChange={(e) => setDosage(e.target.value)}
-            className="rounded-lg border px-3 py-2"
+            className="rounded-lg border px-3 py-2 cursor-pointer"
           >
             {dosages.map((d) => (
               <option key={d} value={d}>
@@ -153,7 +153,7 @@ export default function IngredientFilters({
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
-            className="rounded-lg border px-3 py-2"
+            className="rounded-lg border px-3 py-2 cursor-pointer"
           >
             <option value="name-asc">
               {t?.sortOptions?.nameAsc || "Name (A → Z)"}
@@ -178,7 +178,7 @@ export default function IngredientFilters({
 
         <button
           onClick={onReset}
-          className="underline"
+          className="underline cursor-pointer"
           type="button"
         >
           {t?.resetFilters || "Reset filters"}

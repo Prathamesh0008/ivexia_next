@@ -226,27 +226,32 @@ footer: {
 },
 contactPage: {
   title: "Contactar Ivexia Pharmaceuticals",
-  subtitle: "Contáctanos para consultas farmacéuticas, asociaciones y soporte.",
+  subtitle: "Contáctenos para consultas farmacéuticas y soporte.",
   formTitle: "Envíanos un mensaje",
-  formSubtitle: "Te responderemos en 24 horas",
+  formSubtitle: "Responderemos en 24 horas",
   fullName: "Nombre completo",
-  fullNamePlaceholder: "John Doe",
+  fullNamePlaceholder: "Juan Pérez",
   email: "Correo electrónico",
-  emailPlaceholder: "you@example.com",
+  emailPlaceholder: "tu@ejemplo.com",
   phone: "Número de teléfono",
   phonePlaceholder: "Número de 10 dígitos",
   subject: "Asunto",
   subjectPlaceholder: "¿De qué se trata?",
   message: "Mensaje",
-  messagePlaceholder: "Proporciona detalles...",
+  messagePlaceholder: "Proporcione detalles...",
   submit: "Enviar",
   sending: "Enviando...",
-  success: "¡Mensaje enviado correctamente!",
-  error: "Error al enviar.",
-  contactInfo: "Contáctanos",
-  followUs: "Redes sociales",
-  footer1: "Para consultas urgentes, llámanos.",
-  footer2: "Respondemos en 24 horas."
+  success: "Mensaje enviado con éxito",
+  error: "Error al enviar",
+  footer1: "Para consultas urgentes, llame.",
+  footer2: "Respuesta en 24 horas.",
+  nameError: "Nombre requerido",
+  emailError: "Correo requerido",
+  emailInvalidError: "Correo inválido",
+  phoneError: "Debe tener 10 dígitos",
+  subjectError: "Asunto requerido",
+  messageError: "Mensaje requerido",
+  messageLengthError: "Mínimo 10 caracteres"
 },
 offeringsOverview: {
   badge: "Resumen de Ofertas Ivexia",
@@ -527,54 +532,137 @@ otcPage: {
 },
 oemPage: {
   hero: {
-    badge: "Ofertas Ivexia",
-    title: "OEM",
-    desc: "Construa e escale sua marca farmacêutica.",
-    contact: "Contacto",
-    explore: "Explorar"
+    badge: "Servicios Ivexia",
+    title: "Fabricación Private Label / OEM",
+    desc: "Construya y escale su marca farmacéutica con ejecución OEM estructurada, control de calidad y continuidad de suministro confiable.",
+    contact: "Contáctanos",
+    explore: "Explorar Todos los Servicios"
   },
 
   highlights: [
-    "Padrões WHO-GMP",
-    "Planeamento flexível",
-    "Suporte completo"
+    "Producción alineada con WHO-GMP",
+    "Planificación flexible de lotes",
+    "Soporte OEM integral"
   ],
 
-  capabilityHeading: "Capacidades",
-  capabilityDesc:
-    "Fluxo completo para parceiros.",
-
-  dosageHeading: "Formas",
-  docsHeading: "Documentação",
-  processHeading: "Processo",
-  qualityHeading: "Qualidade",
-  therapyHeading: "Terapia",
-  supportHeading: "Suporte",
-  qualityBuiltHeading: "Qualidade",
-  onboardingHeading: "Informação",
-  faqHeading: "FAQ",
-
-  qualityDesc: "Qualidade garantida.",
-
-  step: "Etapa",
-  output: "Resultado",
-
-  ctaHeading: "Lance seu portfólio",
-  ctaContact: "Contacto",
-  ctaExplore: "Explorar",
-
-  engagement: [
-    { title: "Entrada", desc: "Novo mercado.", fit: "Lançamento." },
-    { title: "Expansão", desc: "Produtos.", fit: "Crescimento." },
-    { title: "Continuidade", desc: "Estável.", fit: "Escala." }
-  ],
+  capabilityHeading: "Capacidades OEM",
+  capabilityDesc: "Flujo completo para distribuidores e importadores.",
 
   capabilities: [
-    { title: "Formulação", desc: "Desenvolvimento." },
-    { title: "Branding", desc: "Marca." },
-    { title: "Regulação", desc: "Docs." },
-    { title: "Produção", desc: "Escalável." }
-  ]
+    { title: "Desarrollo de Formulación", description: "Desde concepto hasta producto listo." },
+    { title: "Branding Personalizado", description: "Empaque y diseño adaptado." },
+    { title: "Documentación Regulatoria", description: "Dossiers y CoA." },
+    { title: "Producción Escalable", description: "Piloto a escala completa." }
+  ],
+
+  engagement: [
+    {
+      title: "Entrada al Mercado",
+      description: "Para nuevos mercados.",
+      fit: "Ideal para lanzamientos."
+    },
+    {
+      title: "Expansión",
+      description: "Para marcas existentes.",
+      fit: "Ideal para crecimiento."
+    },
+    {
+      title: "Suministro Continuo",
+      description: "Para relaciones a largo plazo.",
+      fit: "Ideal para compras recurrentes."
+    }
+  ],
+
+  dosageHeading: "Formas Farmacéuticas",
+  dosageDesc: "Soporte en múltiples formatos.",
+
+  dosageForms: ["Tabletas","Cápsulas","Jarabes","Suspensiones","Tópicos","Sobres"],
+
+  docsHeading: "Documentación",
+  docsDesc: "Paquete técnico completo.",
+
+  documentationPack: [
+    "Especificaciones",
+    "Certificado de Análisis",
+    "Estabilidad",
+    "Documentos de lote",
+    "Checklist de etiqueta",
+    "Documentos de envío"
+  ],
+
+  processHeading: "Proceso",
+
+  processSteps: [
+    "Análisis",
+    "Finalización",
+    "Producción",
+    "Entrega"
+  ],
+
+  step: "Paso",
+  output: "Resultado",
+
+  qualityHeading: "Calidad",
+  qualityDesc: "Control en cada etapa.",
+
+  qualityFramework: [
+    { stage: "Materia Prima", control: "Verificación", output: "Aprobado" },
+    { stage: "Proceso", control: "Control", output: "Consistencia" },
+    { stage: "Producto Final", control: "Pruebas", output: "Liberación" },
+    { stage: "Envío", control: "Verificación", output: "Listo" }
+  ],
+
+  therapyHeading: "Cobertura",
+  therapyDesc: "Múltiples áreas.",
+
+  therapeuticAreas: [
+    "Medicina General","Dolor","Nutracéuticos","Gastro","Respiratorio","Dermatología","Salud Femenina","Pediatría"
+  ],
+
+  supportHeading: "Soporte",
+
+  supportScope: [
+    { title: "Branding", details: "Empaque y diseño." },
+    { title: "Regulatorio", details: "Documentación." },
+    { title: "Logística", details: "Planificación." }
+  ],
+
+  qualityBuiltHeading: "Calidad",
+  qualityBuiltDesc: "Control total.",
+
+  qualityPoints: [
+    "Materia prima",
+    "Pruebas",
+    "Trazabilidad",
+    "Exportación"
+  ],
+
+  onboardingHeading: "Inicio",
+  onboardingDesc: "Datos requeridos.",
+
+  onboardingChecklist: [
+    "Mercado",
+    "Dosificación",
+    "Empaque",
+    "Demanda",
+    "Regulación"
+  ],
+
+  faqHeading: "FAQ",
+
+  faqs: [
+    { question: "¿Batches pequeños?", answer: "Sí, comenzamos pequeño." },
+    { question: "¿Private label?", answer: "Sí." },
+    { question: "¿Documentación?", answer: "Sí, por país." },
+    { question: "¿Requisitos?", answer: "Categoría y volumen." },
+    { question: "¿Repetición?", answer: "Sí." },
+    { question: "¿Multi SKU?", answer: "Sí." }
+  ],
+
+  ctaHeading: "Lanza tu marca",
+  ctaDesc: "Comparte tu plan.",
+  ctaContact: "Contacto",
+  ctaExplore: "Explorar"
 },
 testKitsPage: {
   heading: "Kits de Prueba",
@@ -601,7 +689,7 @@ testKitsPage: {
 aboutPage: {
   hero: {
     title: "Sobre Ivexia Pharmaceuticals",
-    subtitle: "Innovando la salud con excelencia farmacéutica global y un compromiso inquebrantable con la calidad."
+    subtitle: "Innovando en atención médica con excelencia farmacéutica global y compromiso inquebrantable con la calidad."
   },
   stats: {
     years: "Años de Excelencia",
@@ -611,81 +699,527 @@ aboutPage: {
   },
   story: {
     badge: "Nuestra Historia",
-    title: "Comprometidos con la excelencia farmacéutica desde 2018",
-    p1: "Fundada con un compromiso hacia la innovación, Ivexia Pharmaceuticals ofrece fabricación farmacéutica de clase mundial alineada con estándares globales.",
-    p2: "Combinamos experiencia regulatoria, investigación avanzada y precisión en la fabricación para servir a mercados internacionales.",
+    title: "Comprometidos con la Excelencia Farmacéutica Desde 2018",
+    p1: "Fundada con un compromiso con la innovación, Ivexia Pharmaceuticals ofrece fabricación farmacéutica de clase mundial alineada con los estándares globales.",
+    p2: "Combinamos experiencia regulatoria, investigación avanzada y precisión en fabricación para servir a los mercados internacionales.",
     p3: "Hoy, Ivexia opera en múltiples regiones con expansión estratégica en Europa y MENA."
   },
   purpose: {
     title: "Nuestro Propósito",
     subtitle: "Impulsados por la innovación, guiados por la integridad",
     visionTitle: "Nuestra Visión",
-    visionDesc: "Convertirnos en un socio farmacéutico global de confianza que ofrezca innovación y seguridad.",
+    visionDesc: "Convertirnos en un socio farmacéutico globalmente confiable que ofrece innovación y seguridad.",
     missionTitle: "Nuestra Misión",
-    missionDesc: "Fabricar medicamentos de alta calidad mediante excelencia en investigación y cumplimiento."
+    missionDesc: "Fabricar medicamentos de alta calidad a través de la excelencia en investigación y cumplimiento."
   },
   global: {
-    badge: "Presencia Global",
+    badge: "Huella Global",
     title: "Operaciones Mundiales",
-    subtitle: "Ubicación estratégica para servir eficientemente a los mercados globales"
+    subtitle: "Ubicados estratégicamente para servir a los mercados globales de manera eficiente"
   },
+  globalLocations: [
+    {
+      loc: "India",
+      desc: "Presencia farmacéutica estratégica con instalaciones de fabricación de última generación y centros de I+D."
+    },
+    {
+      loc: "Macedonia del Norte",
+      desc: "Centro europeo de fabricación y distribución, sirviendo a los mercados de la UE con excelencia."
+    },
+    {
+      loc: "Qatar",
+      desc: "Sede regional de MENA, expandiendo el acceso a la atención médica en todo el Medio Oriente."
+    }
+  ],
   expertise: {
-    badge: "Qué Hacemos",
+    badge: "Lo Que Hacemos",
     title: "Áreas de Experiencia",
-    subtitle: "Soluciones farmacéuticas especializadas para necesidades complejas"
+    subtitle: "Soluciones farmacéuticas especializadas para necesidades sanitarias complejas"
   },
+  expertiseList: [
+    {
+      title: "Investigación y Desarrollo",
+      img: "/images/R&D.jpg",
+      desc: "Instalaciones de investigación de vanguardia centradas en sistemas innovadores de administración de fármacos."
+    },
+    {
+      title: "Fabricación",
+      img: "/images/Manufacturing.jpg",
+      desc: "Instalaciones certificadas por WHO-GMP con capacidades de fabricación avanzadas."
+    },
+    {
+      title: "Oncología",
+      img: "/images/Oncology.jpg",
+      desc: "Portafolio de oncología especializado con terapias dirigidas."
+    }
+  ],
   leadership: {
     badge: "Nuestros Líderes",
     title: "Liderazgo Ejecutivo",
-    subtitle: "Profesionales experimentados impulsando la innovación"
+    subtitle: "Profesionales experimentados que impulsan la innovación farmacéutica"
   },
+  leadershipList: [
+    {
+      name: "Dr. Michael Carter",
+      title: "Director Ejecutivo",
+      img: "/images/leader1.jpg",
+      desc: "30+ años en liderazgo farmacéutico"
+    },
+    {
+      name: "James Wilson",
+      title: "Director de Operaciones",
+      img: "/images/leader2.jpg",
+      desc: "Experto en cadena de suministro global"
+    },
+    {
+      name: "Sophia Bennett",
+      title: "Jefa de Operaciones",
+      img: "/images/leader3.jpg",
+      desc: "Especialista en excelencia en fabricación"
+    }
+  ],
   timeline: {
-    badge: "Nuestro Camino",
+    badge: "Nuestro Viaje",
     title: "Hitos de Crecimiento",
-    subtitle: "Logros clave en nuestro camino hacia la excelencia"
+    subtitle: "Logros clave en nuestro camino hacia la excelencia farmacéutica"
   },
+  timelineList: [
+    {
+      year: "2018",
+      event: "Empresa fundada con visión de excelencia farmacéutica global",
+      icon: "rocket"
+    },
+    {
+      year: "2020",
+      event: "Primera instalación de fabricación certificada por WHO-GMP establecida",
+      icon: "industry"
+    },
+    {
+      year: "2023",
+      event: "Operaciones expandidas a los mercados europeos",
+      icon: "globe"
+    },
+    {
+      year: "2025",
+      event: "División de oncología lanzada con más de 10 productos",
+      icon: "microscope"
+    },
+    {
+      year: "2030",
+      event: "Visión de convertirnos en una empresa farmacéutica entre las 50 principales del mundo",
+      icon: "bullseye"
+    }
+  ],
   certifications: {
-    badge: "Garantía de Calidad",
+    badge: "Aseguramiento de Calidad",
     title: "Certificaciones Globales",
-    subtitle: "Cumpliendo estándares internacionales"
+    subtitle: "Cumpliendo con los estándares internacionales de calidad"
   },
   statement: {
-    title: "Impulsados por la innovación. Impulsados por la calidad.",
-    subtitle: "Ivexia lidera el avance farmacéutico."
+    title: "Impulsados por la Innovación. Potenciados por la Calidad.",
+    subtitle: "Ivexia está a la vanguardia del avance farmacéutico."
   },
   facilities: {
     title: "Instalaciones de Última Generación",
-    subtitle: "Diseñadas para cumplir estándares globales."
+    subtitle: "Diseñadas para cumplir con los estándares regulatorios globales."
   },
   rnd: {
     badge: "Centro de Innovación",
     title: "Investigación y Desarrollo",
-    subtitle: "Superando límites en investigación farmacéutica"
+    subtitle: "Superando límites en la investigación farmacéutica"
+  },
+  labs: {
+    title: "Instalación Avanzada de I+D",
+    desc: "Equipada con infraestructura de investigación de vanguardia y estándares GMP globales."
   },
   sustainability: {
     badge: "Medio Ambiente",
     title: "Compromiso con la Sostenibilidad",
     desc: "Priorizamos la fabricación ecológica y el abastecimiento responsable.",
     points: [
-      "Iniciativas de producción sin residuos",
-      "Instalaciones con energía solar",
+      "Iniciativas de fabricación sin residuos",
+      "Instalaciones alimentadas por energía solar",
       "Soluciones de embalaje sostenibles"
     ]
   },
   presence: {
-    badge: "Alcance Global",
-    title: "Presencia Mundial",
-    subtitle: "Atendiendo a pacientes en más de 50 países"
+    badge: "Alcance Mundial",
+    title: "Presencia Global",
+    subtitle: "Sirviendo a pacientes en más de 50 países"
   },
   awards: {
     badge: "Reconocimiento",
     title: "Premios y Reconocimientos",
-    subtitle: "Celebrando la innovación farmacéutica"
+    subtitle: "Celebrando la excelencia en la innovación farmacéutica"
   },
+  awardsList: [
+    {
+      award: "Premio a la Excelencia Farmacéutica 2023",
+      org: "Consejo Global de Salud",
+      year: "2023"
+    },
+    {
+      award: "Innovación en Fabricación",
+      org: "Foro de Líderes Farmacéuticos",
+      year: "2022"
+    },
+    {
+      award: "Mejor Empresa Farmacéutica Emergente",
+      org: "Healthcare Asia",
+      year: "2024"
+    }
+  ],
   cta: {
-    title: "Asóciate con Nosotros",
-    subtitle: "Únete para ofrecer soluciones de salud de calidad en todo el mundo.",
-    button: "Contáctanos"
+    title: "Asóciese Con Nosotros",
+    subtitle: "Únase a nosotros para ofrecer soluciones de atención médica de calidad en todo el mundo.",
+    button: "Contáctenos"
+  }
+},
+testKitDetailPage: {
+  home: "Inicio",
+  testKits: "Kits de Prueba",
+  loading: "Cargando...",
+  badge: "Kit de Prueba Diagnóstica",
+  defaultDescription: "La información detallada del producto se compartirá bajo solicitud.",
+  categoryPending: "Categoría Pendiente",
+  requestInfo: "Solicitar Información",
+  backButton: "Volver a Kits de Prueba",
+  productDetails: "Detalles del Producto",
+  method: "Método",
+  specimen: "Muestra",
+  cutOff: "Punto de Corte",
+  certificate: "Certificado"
+},
+// ivexia\data1\languages\es.js - Magazine section
+
+magazine: {
+  title: "Revista Ivexia",
+  loading: "Cargando...",
+  recentArticles: "Artículos Recientes",
+  noRecentArticles: "No hay artículos recientes aún.",
+  readMore: "Leer Más →",
+  previous: "Anterior",
+  next: "Siguiente",
+  page: "Página",
+  of: "de",
+  
+  categories: {
+    health: "Salud",
+    news: "Noticias"
+  },
+  
+  articles: {
+    "gene-therapy-emerging-science": {
+      title: "Cómo la Terapia Génica Está Transformando el Tratamiento Moderno",
+      excerpt: "La terapia génica está pasando del concepto a la clínica, ofreciendo formas específicas de corregir problemas genéticos en lugar de solo controlar los síntomas.",
+      readTime: "7–9 min de lectura",
+      heroCaption: "La terapia génica aborda la enfermedad desde el nivel del ADN, con el objetivo de corregir o ajustar las instrucciones que siguen las células.",
+      sections: [
+        {
+          heading: "¿Qué es la terapia génica?",
+          paragraphs: [
+            "Dentro de casi todas las células del cuerpo, el ADN contiene las instrucciones de cómo debe funcionar esa célula. Cuando parte de este manual de instrucciones está dañado, falta o se altera, puede aparecer la enfermedad.",
+            "La terapia génica se centra en estas secciones defectuosas y tiene como objetivo reparar, reemplazar o ajustar el material genético."
+          ]
+        },
+        {
+          subheading: "Principales enfoques",
+          paragraphs: [
+            "En términos simples, la terapia génica puede:",
+            "• Agregar una copia funcional de un gen faltante o defectuoso",
+            "• Reducir o silenciar un gen dañino",
+            "• Editar la secuencia de ADN utilizando herramientas modernas de edición genética"
+          ]
+        },
+        {
+          subheading: "1. Aumento génico",
+          paragraphs: [
+            "Algunas enfermedades ocurren porque falta un gen clave o no funciona correctamente. Agregar una copia sana puede ayudar a restaurar la función celular."
+          ]
+        },
+        {
+          subheading: "2. Inhibición génica",
+          paragraphs: [
+            "En otras enfermedades, el problema es un gen demasiado activo o que produce algo dañino. Las estrategias de inhibición génica buscan reducir o bloquear esta actividad."
+          ]
+        },
+        {
+          subheading: "3. Edición génica",
+          paragraphs: [
+            "Herramientas como CRISPR actúan como tijeras moleculares, permitiendo a los científicos cortar el ADN en ubicaciones precisas y corregir mutaciones o insertar nuevo material."
+          ]
+        },
+        {
+          heading: "Cómo las herramientas digitales apoyan la terapia génica",
+          paragraphs: [
+            "La investigación en terapia génica genera enormes cantidades de datos. La IA ayuda a analizar esta información y respaldar decisiones sobre qué pacientes pueden beneficiarse más."
+          ]
+        },
+        {
+          heading: "Dónde se usa la terapia génica hoy",
+          paragraphs: [
+            "Las terapias génicas aprobadas actualmente se centran en enfermedades hereditarias raras. La investigación se está expandiendo a oncología, medicina cardiovascular y neurología."
+          ]
+        },
+        {
+          heading: "Beneficios potenciales",
+          paragraphs: [
+            "• Aborda la causa raíz de la enfermedad",
+            "• Puede ofrecer tratamientos duraderos o únicos",
+            "• Proporciona una orientación precisa de células o tejidos",
+            "• Crea nuevas opciones donde las terapias estándar son limitadas"
+          ]
+        },
+        {
+          heading: "Puntos a tener en cuenta",
+          paragraphs: [
+            "• Cambios no deseados en otras partes del genoma",
+            "• Posibles reacciones inmunes",
+            "• Fabricación compleja y costosa",
+            "• Necesidad de monitoreo de seguridad a largo plazo"
+          ]
+        },
+        {
+          heading: "Ética y futuro",
+          paragraphs: [
+            "Debido a que la terapia génica modifica las instrucciones biológicas centrales, plantea preguntas importantes sobre acceso, equidad y seguridad a largo plazo.",
+            "A medida que mejoren los métodos de administración, se espera que la terapia génica se convierta en parte de la atención médica convencional."
+          ]
+        }
+      ]
+    },
+
+    "power-of-ai-medical-industry": {
+      title: "El Poder de la IA en la Industria Médica: 4 Cosas que Debes Saber",
+      excerpt: "La inteligencia artificial está transformando el diagnóstico, los flujos de trabajo y la toma de decisiones en hospitales y empresas farmacéuticas.",
+      readTime: "6–8 min de lectura",
+      heroCaption: "La inteligencia artificial ayuda a convertir datos médicos y farmacéuticos complejos en decisiones más rápidas e informadas.",
+      sections: [
+        {
+          heading: "El impacto de la IA en la medicina",
+          paragraphs: [
+            "La inteligencia artificial se está convirtiendo en una de las herramientas más importantes en la atención médica moderna. Puede analizar miles de puntos de datos a la vez y resaltar patrones que los humanos pueden pasar por alto.",
+            "En hospitales y la industria farmacéutica, la IA apoya la toma de decisiones, mejora el diagnóstico y agiliza los flujos de trabajo."
+          ]
+        },
+        {
+          heading: "IA en la industria farmacéutica",
+          paragraphs: [
+            "La farmacéutica depende en gran medida de los datos: bibliotecas químicas, experimentos biológicos, ensayos clínicos y señales de seguridad. La IA conecta estos flujos de información y acelera la investigación.",
+            "• Cribado virtual para el descubrimiento de fármacos",
+            "• Simulación de formulaciones y procesos",
+            "• Modelado predictivo para la evaluación de seguridad"
+          ]
+        },
+        {
+          heading: "IA en marketing farmacéutico",
+          paragraphs: [
+            "La IA hace que el marketing esté más basado en datos al adaptar la comunicación a las necesidades reales de información.",
+            "• Segmentación de audiencia más precisa",
+            "• Contenido personalizado",
+            "• Mejor comprensión de lo que impulsa el comportamiento"
+          ]
+        },
+        {
+          heading: "IA en sistemas de salud y hospitales",
+          paragraphs: [
+            "La IA analiza resultados de laboratorio, imágenes, signos vitales e historial para identificar riesgos urgentes o guiar ajustes de tratamiento.",
+            "• Apoyo de imágenes para radiólogos",
+            "• Herramientas de predicción de riesgos",
+            "• Asistentes virtuales para el apoyo al paciente"
+          ]
+        },
+        {
+          heading: "El futuro de la IA en medicina",
+          paragraphs: [
+            "La IA desempeñará un papel importante en la medicina de precisión al ayudar a adaptar los tratamientos a la genética y el perfil de riesgo de cada individuo."
+          ]
+        },
+        {
+          heading: "Por qué es importante la IA",
+          paragraphs: [
+            "Para los pacientes: detección más temprana, tratamiento personalizado y mejores resultados.",
+            "Para la industria farmacéutica y los proveedores: uso más inteligente de los datos existentes y mayor eficiencia."
+          ]
+        }
+      ]
+    },
+
+    "personalized-medicine-basics": {
+      title: "Medicina Personalizada: Tratamientos Adaptados a Cada Paciente",
+      excerpt: "Mediante el uso de genética, biomarcadores y datos clínicos, la medicina personalizada tiene como objetivo elegir el tratamiento adecuado para la persona adecuada en el momento adecuado.",
+      readTime: "6–8 min de lectura",
+      heroCaption: "La medicina personalizada combina genética, datos clínicos e información sobre el estilo de vida para adaptar el tratamiento a cada paciente.",
+      sections: [
+        {
+          heading: "¿Qué es la medicina personalizada?",
+          paragraphs: [
+            "La medicina personalizada aleja la atención médica del modelo único y adapta los tratamientos a cada individuo.",
+            "Los avances en la secuenciación genómica muestran por qué dos pacientes con la misma condición pueden responder de manera diferente a la misma terapia."
+          ]
+        },
+        {
+          heading: "Ingeniería genética y medicina de precisión",
+          paragraphs: [
+            "La secuenciación moderna del ADN ayuda a identificar variaciones genéticas vinculadas a enfermedades, respuesta a medicamentos o riesgo de efectos secundarios."
+          ]
+        },
+        {
+          heading: "Beneficios de la medicina personalizada",
+          paragraphs: [
+            "• Tratamientos más precisos con mayores posibilidades de respuesta",
+            "• Atención médica proactiva y preventiva",
+            "• Mejor asignación de recursos médicos",
+            "• Innovación en diagnóstico y terapias dirigidas"
+          ]
+        },
+        {
+          heading: "Desafíos y responsabilidades",
+          paragraphs: [
+            "• Privacidad de datos y protección de información genética",
+            "• Garantizar el acceso equitativo",
+            "• Marcos regulatorios claros",
+            "• Interoperabilidad entre sistemas de salud"
+          ]
+        },
+        {
+          heading: "Mirando hacia el futuro",
+          paragraphs: [
+            "A medida que la secuenciación sea más accesible, la medicina personalizada se convertirá en una parte central de la atención médica moderna."
+          ]
+        }
+      ]
+    },
+
+    "what-is-obesity-how-to-overcome-it": {
+      title: "¿Qué es la Obesidad y Cómo Superarla Realmente?",
+      excerpt: "La obesidad está influenciada por la biología, el entorno y el estilo de vida. El manejo a largo plazo necesita estructura, no solo dietas cortas.",
+      readTime: "6–8 min de lectura",
+      heroCaption: "La obesidad está influenciada por la biología, el entorno y el estilo de vida. El manejo a largo plazo requiere estructura, no solo dietas cortas.",
+      sections: [
+        {
+          heading: "Por qué ocurre la obesidad",
+          paragraphs: [
+            "La dieta y el ejercicio son importantes, pero son solo parte de la historia. Los factores biológicos, el sueño, el estrés, los medicamentos y el entorno social contribuyen significativamente."
+          ]
+        },
+        {
+          heading: "Riesgos para la salud asociados con la obesidad",
+          paragraphs: [
+            "• Mayor riesgo de diabetes tipo 2 y resistencia a la insulina",
+            "• Mayor probabilidad de presión arterial alta y enfermedades cardíacas",
+            "• Apnea del sueño, dolor articular y ciertos cánceres",
+            "• Impacto en la salud mental, incluida la autoestima y la depresión"
+          ]
+        },
+        {
+          heading: "Abordar el control de peso de manera realista",
+          paragraphs: [
+            "El control de peso sostenible no se trata de dietas extremas o soluciones rápidas. Requiere un plan equilibrado a largo plazo.",
+            "• Nutrición equilibrada y agradable en lugar de reglas estrictas",
+            "• Actividad física regular que sea manejable y sostenible",
+            "• Manejo del sueño, el estrés y los desencadenantes de la alimentación emocional",
+            "• Medicación o cirugía cuando corresponda, bajo supervisión clínica"
+          ]
+        },
+        {
+          heading: "El apoyo a largo plazo es importante",
+          paragraphs: [
+            "Debido a que la obesidad es una condición crónica, el apoyo a largo plazo ayuda a mantener el progreso.",
+            "El objetivo no es la perfección, sino mejoras constantes y consistentes con el tiempo."
+          ]
+        }
+      ]
+    },
+
+    "international-womens-day-healthcare": {
+      title: "En Honor al Día Internacional de la Mujer",
+      excerpt: "Las mujeres científicas, médicas y líderes impulsan avances cruciales en la atención médica. Reconocer su trabajo es parte de construir un mejor sistema.",
+      readTime: "5–7 min de lectura",
+      heroCaption: "El Día Internacional de la Mujer es un momento para celebrar los logros de las mujeres y para enfocarse en cerrar las brechas en la salud de la mujer.",
+      sections: [
+        {
+          heading: "Desafíos de salud de la mujer",
+          paragraphs: [
+            "En muchos países, las mujeres enfrentan una combinación de obstáculos:",
+            "• Acceso limitado a la atención médica reproductiva y materna",
+            "• Subdiagnóstico o diagnóstico tardío de enfermedades crónicas como enfermedades cardíacas",
+            "• Presiones culturales y discriminación que dificultan el acceso a la atención"
+          ]
+        },
+        {
+          heading: "Enfermedades que afectan desproporcionadamente a las mujeres",
+          paragraphs: [
+            "Ciertas condiciones influyen fuertemente en los resultados de salud de las mujeres.",
+            "• Cáncer de mama y cáncer de cuello uterino, donde el cribado puede mejorar significativamente la supervivencia",
+            "• Complicaciones maternas durante el embarazo y el parto",
+            "• Condiciones crónicas que pueden presentarse de manera diferente en las mujeres, lo que lleva a un diagnóstico erróneo"
+          ]
+        },
+        {
+          heading: "Promoción de la salud de la mujer: palancas clave",
+          paragraphs: [
+            "• Mejorar el acceso a servicios esenciales: atención de maternidad, anticoncepción, cribado",
+            "• Invertir en educación, empoderamiento económico y acceso a información confiable",
+            "• Fomentar la investigación que incluya a mujeres en número suficiente",
+            "• Fortalecer las políticas de salud pública que protegen los derechos reproductivos y garantizan el acceso a la atención"
+          ]
+        },
+        {
+          heading: "Un compromiso más allá de un día",
+          paragraphs: [
+            "El Día Internacional de la Mujer es un recordatorio, no un evento único. Reducir las brechas en la salud de la mujer requiere un compromiso constante y a largo plazo.",
+            "Para Ivexia, priorizar la salud de la mujer significa diseñar medicamentos, comunicación y programas teniendo en cuenta las necesidades únicas de las mujeres."
+          ]
+        }
+      ]
+    },
+
+    "diabetes-kidney-disease-6": {
+      title: "¿Aumenta la Diabetes el Riesgo de Enfermedad Renal?",
+      excerpt: "El azúcar en sangre crónicamente alto puede dañar los pequeños vasos sanguíneos de los riñones. Comprender este vínculo a tiempo es importante.",
+      readTime: "5–7 min de lectura",
+      heroCaption: "La diabetes es uno de los factores de riesgo más importantes para la enfermedad renal crónica, especialmente cuando el azúcar en sangre y la presión arterial se mantienen altos con el tiempo.",
+      sections: [
+        {
+          heading: "Cómo afecta la diabetes a los riñones",
+          paragraphs: [
+            "El azúcar alto en sangre daña las unidades de filtrado del riñón, llamadas glomérulos. Con el tiempo, se vuelven permeables y permiten que proteínas como la albúmina pasen a la orina.",
+            "La presión arterial alta y la inflamación agregan tensión adicional y empeoran el daño."
+          ]
+        },
+        {
+          heading: "Señales de advertencia",
+          paragraphs: [
+            "• Hinchazón en piernas, tobillos o alrededor de los ojos",
+            "• Orina espumosa o burbujeante (un signo de pérdida de proteínas)",
+            "• Dificultad creciente para controlar la presión arterial",
+            "• Fatiga, falta de apetito o dificultad para concentrarse"
+          ]
+        },
+        {
+          heading: "El papel del cribado",
+          paragraphs: [
+            "Los análisis de orina para albúmina y los análisis de sangre para creatinina y eGFR pueden detectar daño renal mucho antes de que aparezcan síntomas graves."
+          ]
+        },
+        {
+          heading: "Protección de los riñones",
+          paragraphs: [
+            "• Mantener el azúcar en sangre dentro del rango objetivo",
+            "• Control estricto de la presión arterial, a menudo con inhibidores de la ECA o ARA II",
+            "• Hábitos de vida saludables: nutrición, ejercicio, buen sueño y no fumar"
+          ]
+        },
+        {
+          heading: "Un mensaje de prevención y colaboración",
+          paragraphs: [
+            "La diabetes aumenta el riesgo de enfermedad renal, pero el riesgo no es fijo.",
+            "Con detección temprana, manejo adecuado y una fuerte colaboración con los equipos de atención médica, la función renal se puede proteger por mucho más tiempo."
+          ]
+        }
+      ]
+    }
   }
 }
 }

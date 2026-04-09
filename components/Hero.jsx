@@ -344,11 +344,11 @@ export default function Hero() {
                 transition={{ duration: 0.85, delay: 0.45 }}
                 className="relative hidden lg:block"
               >
-                <motion.div
+                {/* <motion.div
                   className="absolute -right-8 top-8 h-24 w-24 rounded-full border border-white/12"
                   animate={reduceMotion ? undefined : { y: [0, -10, 0], rotate: [0, 12, 0] }}
                   transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-                />
+                /> */}
                 <motion.div
                   className="absolute -left-6 bottom-10 h-14 w-14 rounded-full bg-[#19a6b5]/24 blur-md"
                   animate={reduceMotion ? undefined : { scale: [1, 1.15, 1] }}
