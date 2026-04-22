@@ -133,13 +133,17 @@ const languages = [
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [searchTerm]);
 
-  const goTo = (path) => {
+ const goTo = (path) => {
+  setMenuOpen(false);
+  setProductsOpen(false);
+  setMagOpen(false);
+  setShowLanguages(false); // ADD THIS (important)
+
+  setTimeout(() => {
     router.push(path);
-    setMenuOpen(false);
-    setProductsOpen(false);
-    setMagOpen(false);
     window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  }, 50);
+};
 
  const selectLanguage = (langCode, label) => {
   loadLanguage(langCode);
@@ -224,9 +228,20 @@ const languages = [
             </span>
 
             {productsOpen && (
-              <ul className="absolute top-full left-0 mt-2 bg-white shadow-md rounded-md w-64 font-normal z-40">
+             <ul
+  className={`absolute top-full left-0 mt-2 bg-white shadow-md rounded-md w-64 font-normal z-40
+  transition-all duration-300 ease-out origin-top
+  ${
+    productsOpen
+      ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
+      : "opacity-0 -translate-y-2 scale-95 pointer-events-none"
+  }`}
+>
                 <li
-                  onClick={() => goTo("/offerings-overview")}
+                  onClick={(e) => {
+  e.stopPropagation();
+  goTo("/offerings-overview");
+}}
                   className={`${dropdownItemClass} ${
                     pathname === "/offerings-overview"
                       ? activeDropdownItemClass
@@ -236,7 +251,9 @@ const languages = [
                   {translations?.nav?.overview}
                 </li>
                 <li
-                  onClick={() => goTo("/products/ingredient")}
+                  onClick={(e) => {
+  e.stopPropagation();
+  goTo("/products/ingredient")}}
                   className={`${dropdownItemClass} ${
                     isIngredientPath
                       ? activeDropdownItemClass
@@ -246,7 +263,10 @@ const languages = [
                  {translations?.nav?.api}
                 </li>
                 <li
-                  onClick={() => goTo("/products")}
+              onClick={(e) => {
+  e.stopPropagation();
+  goTo("/products");
+}}
                   className={`${dropdownItemClass} ${
                     isFinishedProductsPath
                       ? activeDropdownItemClass
@@ -256,7 +276,9 @@ const languages = [
                  {translations?.nav?.products}
                 </li>
                 <li
-                  onClick={() => goTo("/otc")}
+                  onClick={(e) => {
+  e.stopPropagation();
+  goTo("/otc")}}
                   className={`${dropdownItemClass} ${
                     pathname === "/otc"
                       ? activeDropdownItemClass
@@ -266,7 +288,9 @@ const languages = [
                  {translations?.nav?.otc}
                 </li>
                 <li
-                  onClick={() => goTo("/private-label-manufacturing-oem")}
+                 onClick={(e) => {
+  e.stopPropagation();
+  goTo("/private-label-manufacturing-oem")}}
                   className={`${dropdownItemClass} ${
                     pathname === "/private-label-manufacturing-oem"
                       ? activeDropdownItemClass
@@ -276,7 +300,9 @@ const languages = [
                   Private Label Manufacturing / OEM
                 </li>
                 <li
-                  onClick={() => goTo("/test-kits")}
+                 onClick={(e) => {
+  e.stopPropagation();
+  goTo("/test-kits")}}
                   className={`${dropdownItemClass} ${
                     pathname === "/test-kits"
                       ? activeDropdownItemClass
@@ -290,7 +316,7 @@ const languages = [
                     e.stopPropagation();
                     setProductsOpen(false);
                   }}
-                  className="absolute top-2 right-2 text-gray-500 hover:text-black"
+                  className="absolute top-2 right-2 text-gray-500 hover:text-black cursor-pointer"
                   type="button"
                 >
                   <FaTimes />
@@ -327,9 +353,19 @@ const languages = [
             </span>
 
             {magOpen && (
-              <ul className="absolute top-full left-0 mt-2 bg-white shadow-md rounded-md w-64 font-normal z-40">
+              <ul
+  className={`absolute top-full  left-0 mt-2 bg-white shadow-md rounded-md w-64 font-normal z-40
+  transition-all duration-300 ease-out origin-top
+  ${
+    magOpen
+      ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
+      : "opacity-0 -translate-y-2 scale-95 pointer-events-none"
+  }`}
+>
                 <li
-                  onClick={() => goTo("/ivexia-mag?category=news")}
+                  onClick={(e) => {
+    e.stopPropagation();
+    goTo("/ivexia-mag?category=news")}}
                   className={`${dropdownItemClass} ${
                     pathname === "/ivexia-mag" && magCategory === "news"
                       ? activeDropdownItemClass
@@ -339,7 +375,9 @@ const languages = [
                   {translations?.nav?.mag_news}
                 </li>
                 <li
-                  onClick={() => goTo("/ivexia-mag?category=health")}
+                onClick={(e) => {
+    e.stopPropagation();
+    goTo("/ivexia-mag?category=health")}}
                   className={`${dropdownItemClass} ${
                     pathname === "/ivexia-mag" && magCategory === "health"
                       ? activeDropdownItemClass
@@ -353,7 +391,7 @@ const languages = [
                     e.stopPropagation();
                     setMagOpen(false);
                   }}
-                  className="absolute top-2 right-2 text-gray-500 hover:text-black"
+                  className="absolute top-2 right-2 text-gray-500 hover:text-black cursor-pointer"
                   type="button"
                 >
                   <FaTimes />
@@ -550,19 +588,27 @@ const languages = [
 
               <div className="ml-4 mt-1 flex flex-col gap-2 text-gray-700 text-sm">
                 <span
-                  onClick={() => goTo("/offerings-overview")}
+                 onClick={(e) => {
+    e.stopPropagation();   // ✅ ADD THIS
+    goTo("/offerings-overview");
+  }}
                   className={mobileSubItemClass(pathname === "/offerings-overview")}
                 >
                   Overview
                 </span>
                 <span
-                  onClick={() => goTo("/products/ingredient")}
+                  onClick={(e) => {
+  e.stopPropagation();
+  goTo("/products/ingredient")}}
                   className={mobileSubItemClass(isIngredientPath)}
                 >
                   API / Ingredients
                 </span>
                 <span
-                  onClick={() => goTo("/products")}
+                  onClick={(e) => {
+  e.stopPropagation();
+  goTo("/products");
+}}
                   className={mobileSubItemClass(isFinishedProductsPath)}
                 >
                   Finished Products
@@ -580,7 +626,9 @@ const languages = [
                   Test Kits
                 </span>
                 <span
-                  onClick={() => goTo("/private-label-manufacturing-oem")}
+                  onClick={(e) => {
+  e.stopPropagation();
+  goTo("/private-label-manufacturing-oem")}}
                   className={mobileSubItemClass(
                     pathname === "/private-label-manufacturing-oem"
                   )}
@@ -614,7 +662,10 @@ const languages = [
 
               <div className="ml-4 mt-1 flex flex-col gap-2 text-gray-700 text-sm">
                 <span
-                  onClick={() => goTo("/ivexia-mag?category=news")}
+                 onClick={(e) => {
+  e.stopPropagation();
+  goTo("/ivexia-mag?category=news");
+}}
                   className={mobileSubItemClass(
                     pathname === "/ivexia-mag" && magCategory === "news"
                   )}
@@ -622,7 +673,9 @@ const languages = [
                   News
                 </span>
                 <span
-                  onClick={() => goTo("/ivexia-mag?category=health")}
+                  onClick={(e) => {
+  e.stopPropagation();
+  goTo("/ivexia-mag?category=health")}}
                   className={mobileSubItemClass(
                     pathname === "/ivexia-mag" && magCategory === "health"
                   )}
