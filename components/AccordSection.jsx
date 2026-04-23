@@ -413,7 +413,10 @@ import { geoCentroid } from "d3-geo";
 
 
 
-const Globe = dynamic(() => import("react-globe.gl"), { ssr: false });
+const Globe = dynamic(
+  () => import("react-globe.gl").then((mod) => mod.default),
+  { ssr: false }
+);
 const OCEAN_TEXTURE =
   "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8'><rect width='8' height='8' fill='%23f8f8f8'/></svg>";
 const FIXED_ALTITUDE = 1.35;
