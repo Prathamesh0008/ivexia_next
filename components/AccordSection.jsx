@@ -404,7 +404,8 @@
 
 //ivexia\components\AccordSection.jsx
 "use client";
-import countriesTopo from "world-atlas/countries-110m.json";
+
+ 
 import dynamic from "next/dynamic";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import * as THREE from "three";
@@ -524,7 +525,7 @@ export default function GlobalPresence3D() {
   const [isGlobeReady, setIsGlobeReady] = useState(false);
   const containerRef = useRef(null);
   const globeRef = useRef(null);
-
+const countriesTopo = require("world-atlas/countries-110m.json");
   const activeRegion = useMemo(
     () => regions.find((item) => item.id === activeId) ?? regions[0],
     [activeId]
