@@ -31,10 +31,10 @@ export default function Footer() {
       <div className="w-full h-1 bg-gradient-to-r from-[#FF7A00] via-[#E2004F] to-[#19a6b5]" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-16 py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20 text-center md:text-left items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16 text-left items-start">
 
           {/* Column 1 */}
-          <div className="flex flex-col items-center md:items-start space-y-4">
+          <div className="flex flex-col items-start space-y-4">
             <Image
               src="/images/Websiteivexia1.png"
               alt="Ivexia Logo"
