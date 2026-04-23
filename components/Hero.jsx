@@ -154,7 +154,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative h-[88vh] w-full overflow-hidden bg-[linear-gradient(135deg,#FF7A00_0%,#E2004F_58%,#FF9B3D_100%)] md:h-[84vh]"
+      className="relative min-h-[110vh] md:min-h-[95vh] w-full overflow-hidden bg-[linear-gradient(135deg,#FF7A00_0%,#E2004F_58%,#FF9B3D_100%)] "
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onTouchStart={handleTouchStart}
@@ -221,9 +221,8 @@ export default function Hero() {
           />
           <div className="absolute inset-0 bg-[linear-gradient(104deg,rgba(5,18,31,0.74)_18%,rgba(5,18,31,0.42)_54%,rgba(5,18,31,0.16)_100%)]" />
           <div className="absolute inset-0 bg-black/18" />
-
-          <div className="relative z-20 flex h-full items-center">
-            <div className="mx-auto grid w-full max-w-7xl items-center gap-10 px-6 sm:px-10 md:px-16 lg:grid-cols-[minmax(0,1.15fr)_360px]">
+<div className="relative z-20 flex min-h-[120vh] md:h-full items-start md:items-center pt-8 pb-20 md:py-0">
+            <div className="mx-auto grid w-full max-w-7xl items-start md:items-center gap-10 px-6 sm:px-10 md:px-16 lg:grid-cols-[minmax(0,1.15fr)_360px]">
               <motion.div
                 initial={{ opacity: 0, y: reduceMotion ? 0 : 34 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -234,7 +233,7 @@ export default function Hero() {
                   initial={{ opacity: 0, x: reduceMotion ? 0 : -18 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.28 }}
-                  className="mb-5 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs uppercase tracking-[0.28em] text-white/90 backdrop-blur-sm md:text-sm"
+                  className="mb-5 inline-flex items-start md:items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs uppercase tracking-[0.28em] text-white/90 backdrop-blur-sm md:text-sm"
                 >
                   <span className="h-2 w-2 rounded-full" style={{ backgroundColor: activeSlide.accent }} />
                   {activeSlide.subtitle || activeSlide.eyebrow}
@@ -244,7 +243,7 @@ export default function Hero() {
                   initial={{ opacity: 0, y: reduceMotion ? 0 : 22 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.75, delay: 0.34 }}
-                  className="max-w-4xl text-4xl font-bold leading-[1.02] text-white sm:text-5xl md:text-6xl"
+                  className="max-w-4xl  font-bold leading-[1.02] text-white text-3xl sm:text-4xl md:text-6xl"
                 >
                   {activeSlide.title}
                 </motion.h1>
@@ -267,7 +266,7 @@ export default function Hero() {
                   {floatingNotes.map((item, index) => (
                     <motion.span
                       key={item.label}
-                      className={`inline-flex items-center rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] backdrop-blur-sm md:text-[11px] ${item.tone}`}
+                      className={`inline-flex items-start md:items-center rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] backdrop-blur-sm md:text-[11px] ${item.tone}`}
                       animate={reduceMotion ? undefined : { y: [0, -4, 0] }}
                       transition={{
                         duration: 4.5,
@@ -285,11 +284,11 @@ export default function Hero() {
                   initial={{ opacity: 0, y: reduceMotion ? 0 : 22 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.75, delay: 0.64 }}
-                  className="mt-10 flex flex-wrap items-center gap-4"
+                  className="mt-10 flex flex-wrap items-start md:items-center gap-4"
                 >
                   <Link
                     href="/contact"
-                    className="group inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-[#FF7A00] to-[#E2004F] px-8 py-4 font-semibold text-[#0d2d47] shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(0,0,0,0.28)]"
+                    className="group inline-flex items-start md:items-center gap-3 rounded-xl bg-gradient-to-r from-[#FF7A00] to-[#E2004F] px-5 py-3 sm:px-8 sm:py-4 font-semibold text-[#0d2d47] shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(0,0,0,0.28)]"
                   >
                     <span>{activeSlide.cta}</span>
                     <svg
@@ -309,7 +308,7 @@ export default function Hero() {
 
                   <Link
                     href={secondaryHref}
-                    className="inline-flex items-center gap-3 rounded-xl border border-white/18 bg-white/10 px-7 py-4 font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/16"
+                    className="inline-flex items-start md:items-center gap-3 rounded-xl border border-white/18 bg-white/10 px-7 py-4 font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/16"
                   >
                     <span>{activeSlide.secondaryCta}</span>
                   </Link>
@@ -319,7 +318,7 @@ export default function Hero() {
                   initial={{ opacity: 0, y: reduceMotion ? 0 : 22 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.75, delay: 0.78 }}
-                  className="mt-12 grid max-w-2xl grid-cols-1 gap-3 sm:grid-cols-3"
+                  className="mt-12 grid max-w-2xl gap-3 grid-cols-2 sm:grid-cols-3"
                 >
                   {(activeSlide.stats || []).map((stat, index) => (
                     <motion.div
@@ -356,7 +355,7 @@ export default function Hero() {
                 />
 
                 {/* <div className="relative overflow-hidden rounded-[28px] border border-white/12 bg-white/10 p-6 text-white shadow-[0_28px_80px_rgba(0,0,0,0.28)] backdrop-blur-xl">
-                  <div className="flex items-center justify-between text-[11px] uppercase tracking-[0.24em] text-white/65">
+                  <div className="flex items-start md:items-center justify-between text-[11px] uppercase tracking-[0.24em] text-white/65">
                     <span>Ivexia Focus</span>
                     <span>{String(currentIndex + 1).padStart(2, "0")}</span>
                   </div>
@@ -373,7 +372,7 @@ export default function Hero() {
                         animate={reduceMotion ? undefined : { x: [0, index % 2 === 0 ? 6 : -6, 0] }}
                         transition={{ duration: 6 + index, repeat: Infinity, ease: "easeInOut" }}
                       >
-                        <div className="flex items-center justify-between gap-4">
+                        <div className="flex items-start md:items-center justify-between gap-4">
                           <div>
                             <div className="text-sm uppercase tracking-[0.18em] text-white/55">
                               {stat.label}
@@ -435,7 +434,7 @@ export default function Hero() {
 
       <button
         onClick={prevSlide}
-        className="group absolute left-6 top-1/2 z-30 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/18 md:flex"
+        className="group absolute left-6 top-1/2 z-30 hidden h-12 w-12 -translate-y-1/2 items-start md:items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/18 md:flex"
         aria-label="Previous slide"
       >
         <span className="text-3xl leading-none">‹</span>
@@ -443,7 +442,7 @@ export default function Hero() {
 
       <button
         onClick={nextSlide}
-        className="group absolute right-6 top-1/2 z-30 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/18 md:flex"
+        className="group absolute right-6 top-1/2 z-30 hidden h-12 w-12 -translate-y-1/2 items-start md:items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/18 md:flex"
         aria-label="Next slide"
       >
         <span className="text-3xl leading-none">›</span>
@@ -455,7 +454,7 @@ export default function Hero() {
         transition={{ delay: 1.2, duration: 0.6 }}
         className="absolute bottom-8 right-8 z-30 hidden md:block"
       >
-        {/* <div className="flex flex-col items-center gap-2 text-[11px] tracking-[0.24em] text-white/65">
+        {/* <div className="flex flex-col items-start md:items-center gap-2 text-[11px] tracking-[0.24em] text-white/65">
           <span>SCROLL</span>
           <motion.div
             className="w-px bg-gradient-to-b from-white/70 to-transparent"
