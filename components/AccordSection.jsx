@@ -1,388 +1,404 @@
-// "use client";
-
-// import { Canvas, useFrame } from "@react-three/fiber";
-// import { OrbitControls, Html } from "@react-three/drei";
-// import { useRef, useState, useEffect, useMemo } from "react";
-// import * as THREE from "three";
-// import Link from "next/link";
-// import { useLanguage } from "@/contexts/LanguageContext";
-
-// /* =========================
-//    GLOBE COMPONENT WITH PROCEDURAL CONTINENTS
-// ========================= */
-// function Globe({ targetRotation }) {
-//   const globeRef = useRef();
-
-//   // Procedural Earth-like texture
-//   const texture = useMemo(() => {
-//     const canvas = document.createElement("canvas");
-//     canvas.width = 2048;
-//     canvas.height = 1024;
-//     const ctx = canvas.getContext("2d");
-
-//     // Ocean
-//     const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-//     gradient.addColorStop(0, "#0d2d47");
-//     gradient.addColorStop(1, "#081520");
-//     ctx.fillStyle = gradient;
-//     ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-//     // Continents color
-//     ctx.fillStyle = "#2e7d32";
-
-//     // === SIMPLE CONTINENTS ===
-
-//     // North America
-//     ctx.beginPath();
-//     ctx.moveTo(200, 200);
-//     ctx.bezierCurveTo(350, 100, 450, 200, 420, 300);
-//     ctx.lineTo(300, 320);
-//     ctx.lineTo(200, 260);
-//     ctx.fill();
-
-//     // South America
-//     ctx.beginPath();
-//     ctx.moveTo(350, 350);
-//     ctx.lineTo(380, 500);
-//     ctx.lineTo(320, 600);
-//     ctx.lineTo(300, 450);
-//     ctx.fill();
-
-//     // Europe
-//     ctx.beginPath();
-//     ctx.moveTo(900, 200);
-//     ctx.lineTo(950, 180);
-//     ctx.lineTo(1000, 200);
-//     ctx.lineTo(950, 240);
-//     ctx.fill();
-
-//     // Africa
-//     ctx.beginPath();
-//     ctx.moveTo(900, 260);
-//     ctx.lineTo(1000, 260);
-//     ctx.lineTo(1050, 400);
-//     ctx.lineTo(950, 450);
-//     ctx.lineTo(880, 350);
-//     ctx.fill();
-
-//     // Asia
-//     ctx.beginPath();
-//     ctx.moveTo(1050, 180);
-//     ctx.lineTo(1400, 200);
-//     ctx.lineTo(1450, 350);
-//     ctx.lineTo(1200, 380);
-//     ctx.lineTo(1050, 300);
-//     ctx.fill();
-
-//     // Australia
-//     ctx.beginPath();
-//     ctx.moveTo(1400, 600);
-//     ctx.lineTo(1500, 620);
-//     ctx.lineTo(1450, 680);
-//     ctx.lineTo(1380, 650);
-//     ctx.fill();
-
-//     // Borders (light)
-//     ctx.strokeStyle = "rgba(255,255,255,0.2)";
-//     ctx.lineWidth = 1;
-//     ctx.stroke();
-
-//     const tex = new THREE.CanvasTexture(canvas);
-//     tex.wrapS = THREE.RepeatWrapping;
-//     tex.wrapT = THREE.ClampToEdgeWrapping;
-//     return tex;
-//   }, []);
-
-//   useFrame(() => {
-//     if (globeRef.current) {
-//       globeRef.current.rotation.y +=
-//         (targetRotation.current - globeRef.current.rotation.y) * 0.08;
-//     }
-//   });
-
-//   return (
-//     <mesh ref={globeRef}>
-//       <sphereGeometry args={[2.2, 128, 128]} />
-//       <meshStandardMaterial
-//         map={texture}
-//         roughness={0.6}
-//         metalness={0.1}
-//       />
-//     </mesh>
-//   );
-// }
-
-// /* =========================
-//    MAIN SECTION
-// ========================= */
-// export default function AccordSection() {
-//   const { translations } = useLanguage();
-//   const t = translations?.about?.video;
-  
-//   const targetRotation = useRef(0);
-//   const [selectedContinent, setSelectedContinent] = useState("Asia");
-//   const [hoveredContinent, setHoveredContinent] = useState(null);
-//   const [isAnimating, setIsAnimating] = useState(false);
-
-//   // Continent configuration with accurate rotation angles
-//   const continents = [
-//     { 
-//       name: "Asia", 
-//       rotation: 0,
-//       description: "Serving 17 markets across East Asian, ASEAN and South Asian regions. Expanding footprint with focus on improving healthcare access.",
-//       color: "#FF7A00",
-//       stats: "50+ Products | 200+ Partners"
-//     },
-//     { 
-//       name: "Europe", 
-//       rotation: -1.2,
-//       description: "Strong demand in Eastern European markets drives growth. Providing a new paradigm for affordable healthcare across the continent.",
-//       color: "#E2004F",
-//       stats: "30+ Products | 80+ Partners"
-//     },
-//     { 
-//       name: "Africa", 
-//       rotation: -1.8,
-//       description: "Fastest growing pharmaceutical company on the continent. Strong network across West, North, East and South African markets.",
-//       color: "#FF7A00",
-//       stats: "40+ Products | 150+ Partners"
-//     },
-//     { 
-//       name: "North America", 
-//       rotation: 2.2,
-//       description: "Large and small markets with specific needs. Unique capability for adaptation and innovation in healthcare delivery.",
-//       color: "#E2004F",
-//       stats: "60+ Products | 120+ Partners"
-//     },
-//     { 
-//       name: "South America", 
-//       rotation: 1.4,
-//       description: "Growing focus on enhanced healthcare services. Timely delivery of pharmaceutical products fostering promising future.",
-//       color: "#FF7A00",
-//       stats: "25+ Products | 60+ Partners"
-//     },
-//     { 
-//       name: "Australia", 
-//       rotation: 3.0,
-//       description: "Expanding presence in Oceania with quality healthcare solutions and innovative medical products.",
-//       color: "#E2004F",
-//       stats: "15+ Products | 40+ Partners"
-//     },
-//   ];
-
-//   const handleContinentClick = (continent) => {
-//     if (isAnimating) return;
-    
-//     setIsAnimating(true);
-//     setSelectedContinent(continent.name);
-//     targetRotation.current = continent.rotation;
-    
-//     setTimeout(() => {
-//       setIsAnimating(false);
-//     }, 800);
-//   };
-
-//   const selectedContinentData = continents.find(c => c.name === selectedContinent);
-
-//   return (
-//     <section className="bg-gradient-to-b from-[#0d2d47] to-[#0a1a2e] py-12 md:py-20 overflow-hidden">
-//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-//         {/* Section Header */}
-//         <div className="text-center mb-10 md:mb-16">
-//           <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-4">
-//             {t?.title || "Global Presence Across Continents"}
-//           </h2>
-//           <h3 className="text-xl md:text-2xl font-semibold mb-4 bg-gradient-to-r from-[#FF7A00] to-[#E2004F] bg-clip-text text-transparent">
-//             {t?.subtitle || "Explore Our Worldwide Healthcare Network"}
-//           </h3>
-//           <div className="w-24 h-1 bg-gradient-to-r from-[#FF7A00] to-[#E2004F] mx-auto rounded-full"></div>
-//         </div>
-
-//         {/* Main Content Grid */}
-//         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
-          
-//           {/* LEFT SIDE - Continent Info & Controls */}
-//           <div className="order-2 lg:order-1">
-//             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/10">
-//               <h3 className="text-2xl font-bold text-white mb-4">Select a Continent</h3>
-              
-//               {/* Continent Buttons Grid */}
-//               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
-//                 {continents.map((continent, i) => (
-//                   <button
-//                     key={i}
-//                     onClick={() => handleContinentClick(continent)}
-//                     onMouseEnter={() => setHoveredContinent(continent)}
-//                     onMouseLeave={() => setHoveredContinent(null)}
-//                     className={`
-//                       px-4 py-3 rounded-lg cursor-pointer font-medium transition-all duration-300 text-sm md:text-base relative overflow-hidden group
-//                       ${selectedContinent === continent.name
-//                         ? 'bg-gradient-to-r from-[#FF7A00] to-[#E2004F] text-white shadow-lg transform scale-105'
-//                         : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
-//                       }
-//                     `}
-//                   >
-//                     <span className="relative z-10">{continent.name}</span>
-//                     {selectedContinent === continent.name && (
-//                       <span className="absolute inset-0 bg-white/20 animate-pulse" />
-//                     )}
-//                   </button>
-//                 ))}
-//               </div>
-              
-//               {/* Selected Continent Details */}
-//               {selectedContinentData && (
-//                 <div className="border-t cursor-pointer border-white/10 pt-6 animate-in slide-in-from-bottom-4 duration-500">
-//                   <div className="flex items-center gap-3 mb-4">
-//                     <div className={`
-//                       w-4 h-4 rounded-full bg-gradient-to-r from-[#FF7A00] to-[#E2004F]
-//                       ${isAnimating ? 'animate-ping' : ''}
-//                     `} />
-//                     <h4 className="text-xl font-semibold text-white">
-//                       {selectedContinentData.name}
-//                     </h4>
-//                   </div>
-                  
-//                   <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-4">
-//                     {selectedContinentData.description}
-//                   </p>
-                  
-//                   <div className="mb-6 p-4 bg-white/5 rounded-lg">
-//                     <p className="text-[#FF7A00] text-sm font-semibold mb-1">Key Statistics</p>
-//                     <p className="text-white text-sm">{selectedContinentData.stats}</p>
-//                   </div>
-                  
-//                   <div className="flex flex-wrap gap-3">
-//                     <Link
-//                       href={`/contact?region=${selectedContinentData.name.toLowerCase()}`}
-//                       className="inline-flex cursor-pointer items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#FF7A00] to-[#E2004F] text-white rounded-lg font-medium hover:opacity-90 transition-all hover:scale-105 text-sm shadow-lg"
-//                     >
-//                       Partner in {selectedContinentData.name}
-//                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-//                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-//                       </svg>
-//                     </Link>
-//                   </div>
-//                 </div>
-//               )}
-//             </div>
-//           </div>
-
-//           {/* RIGHT SIDE - 3D GLOBE WITH CONTINENTS */}
-//           <div className="order-1 lg:order-2 h-[400px] md:h-[550px] relative">
-//             <Canvas camera={{ position: [0, 0, 7], fov: 45 }}>
-//               {/* Enhanced Lighting */}
-//               <ambientLight intensity={0.5} />
-//               <directionalLight position={[5, 5, 5]} intensity={1.2} />
-//               <directionalLight position={[-3, 2, 4]} intensity={0.6} color="#FF7A00" />
-//               <pointLight position={[0, 2, 0]} intensity={0.3} />
-              
-//               {/* Main Globe */}
-//               <Globe 
-//                 targetRotation={targetRotation}
-//                 selectedContinent={selectedContinent}
-//                 hoveredContinent={hoveredContinent}
-//               />
-              
-//               {/* Controls */}
-//               <OrbitControls 
-//                 enableZoom={true}
-//                 enablePan={false}
-//                 autoRotate={false}
-//                 rotateSpeed={0.8}
-//                 zoomSpeed={0.5}
-//                 minDistance={4}
-//                 maxDistance={9}
-//                 enableDamping={true}
-//                 dampingFactor={0.05}
-//               />
-//             </Canvas>
-            
-//             {/* Instruction Overlay */}
-           
-//           </div>
-          
-//         </div>
-        
-//         {/* Bottom CTA */}
-//         <div className="text-center mt-12 md:mt-16">
-//           <Link
-//             href="/about"
-//             className="inline-block cursor-pointer bg-gradient-to-r from-[#FF7A00] to-[#E2004F] text-white px-8 py-3 rounded-md font-medium hover:opacity-90 transition-all duration-300 hover:scale-105 transform shadow-lg"
-//           >
-//             {t?.cta || "Explore Ivexia's Global Impact"}
-//           </Link>
-//         </div>
-        
-//       </div>
-//     </section>
-//   );
-// }
-
-
-
-
-
-
+//ivexia\components\AccordSection.jsx
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
-import { useLanguage } from "@/contexts/LanguageContext";
+import dynamic from "next/dynamic";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import * as THREE from "three";
+import { feature } from "topojson-client";
+import { geoCentroid } from "d3-geo";
+import countriesTopo from "world-atlas/countries-110m.json";
 
-export default function AccordSection() {
-  const { translations } = useLanguage();
-  const t = translations?.about?.video;
+
+const Globe = dynamic(() => import("react-globe.gl"), { ssr: false });
+const OCEAN_TEXTURE =
+  "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8'><rect width='8' height='8' fill='%23f8f8f8'/></svg>";
+const FIXED_ALTITUDE = 1.35;
+
+const regions = [
+  {
+    id: "asia",
+    label: "Asia",
+    paragraphs: [
+      "Positive regulatory trends are helping many Asian countries integrate into global markets and accelerating demand for advanced healthcare solutions.",
+      "Across East Asia, ASEAN and South Asian markets, we continue expanding access with affordable products tailored to low and middle income demographics.",
+    ],
+    lat: 20,
+    lon: 95,
+    altitude: 1.8,
+  },
+  {
+    id: "africa",
+    label: "Africa",
+    paragraphs: [
+      "A focused regional strategy and dedicated development execution continue to strengthen market adaptation across the African region.",
+      "With a strong distribution network across West, North, East and Southern Africa, growth remains consistent in both large and emerging markets.",
+    ],
+    lat: 5,
+    lon: 20,
+    altitude: 1.9,
+  },
+  {
+    id: "north-america",
+    label: "North America",
+    paragraphs: [
+      "High innovation maturity and robust healthcare infrastructure make North America a critical market for premium and specialty offerings.",
+      "Our model emphasizes regulatory responsiveness and strong channel partnerships to support consistent scale across the US, Canada and nearby markets.",
+    ],
+    lat: 38,
+    lon: -100,
+    altitude: 1.85,
+  },
+  {
+    id: "latin-america",
+    label: "Latin America",
+    paragraphs: [
+      "Latin America presents a high-potential mix of established and fast-rising markets where localized strategy drives long-term growth.",
+      "From Mexico to the Southern Cone, country-by-country adaptation helps us deliver quality, cost-effective healthcare solutions with speed.",
+    ],
+    lat: -15,
+    lon: -62,
+    altitude: 1.9,
+  },
+  {
+    id: "middle-east",
+    label: "Middle East",
+    paragraphs: [
+      "The Middle East remains strategically important due to improving regulatory ecosystems and strong investments in healthcare modernization.",
+      "By aligning with regional procurement models and distribution ecosystems, we are expanding reliable access to essential therapies.",
+    ],
+    lat: 28,
+    lon: 45,
+    altitude: 2,
+  },
+  {
+    id: "europe",
+    label: "Europe",
+    paragraphs: [
+      "Europe continues to offer stable, high-compliance markets with strong demand for quality-driven, evidence-backed healthcare products.",
+      "Our focus is on long-term partnerships, supply reliability and differentiated portfolio positioning across both mature and growth corridors.",
+    ],
+    lat: 50,
+    lon: 12,
+    altitude: 1.95,
+  },
+];
+
+function isInRange(lat, lon, bounds) {
+  return lat >= bounds.minLat && lat <= bounds.maxLat && lon >= bounds.minLon && lon <= bounds.maxLon;
+}
+
+function getRegionByCoord(lat, lon) {
+  if (isInRange(lat, lon, { minLat: 12, maxLat: 42, minLon: 30, maxLon: 65 })) {
+    return "middle-east";
+  }
+
+  if (isInRange(lat, lon, { minLat: 34, maxLat: 72, minLon: -25, maxLon: 45 })) {
+    return "europe";
+  }
+
+  if (isInRange(lat, lon, { minLat: -35, maxLat: 37, minLon: -20, maxLon: 55 })) {
+    return "africa";
+  }
+
+  if (isInRange(lat, lon, { minLat: 7, maxLat: 84, minLon: -170, maxLon: -30 })) {
+    return "north-america";
+  }
+
+  if (isInRange(lat, lon, { minLat: -56, maxLat: 33, minLon: -120, maxLon: -30 })) {
+    return "latin-america";
+  }
+
+  return "asia";
+}
+
+export default function GlobalPresence3D() {
+  const [activeId, setActiveId] = useState("asia");
+  const [canvasSize, setCanvasSize] = useState({ width: 520, height: 520 });
+  const [isGlobeReady, setIsGlobeReady] = useState(false);
+  const containerRef = useRef(null);
+  const globeRef = useRef(null);
+
+  const activeRegion = useMemo(
+    () => regions.find((item) => item.id === activeId) ?? regions[0],
+    [activeId]
+  );
+
+  const polygonsData = useMemo(() => {
+    const geo = feature(countriesTopo, countriesTopo.objects.countries).features;
+
+    return geo.map((country) => {
+      const [lon, lat] = geoCentroid(country);
+      return {
+        ...country,
+        properties: {
+          ...country.properties,
+          regionKey: getRegionByCoord(lat, lon),
+        },
+      };
+    });
+  }, []);
+
+  const oceanOutlinePaths = useMemo(() => {
+    const paths = [];
+
+    for (let lat = -80; lat <= 80; lat += 10) {
+      const points = [];
+      for (let lon = -180; lon <= 180; lon += 4) points.push([lat, lon, 0.0032]);
+      paths.push({ points });
+    }
+
+    for (let lon = -180; lon <= 180; lon += 10) {
+      const points = [];
+      for (let lat = -90; lat <= 90; lat += 4) points.push([lat, lon, 0.0032]);
+      paths.push({ points });
+    }
+
+    return paths;
+  }, []);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const resizeObserver = new ResizeObserver(([entry]) => {
+      const width = Math.max(280, Math.floor(entry.contentRect.width));
+      setCanvasSize((prev) =>
+        prev.width === width && prev.height === width ? prev : { width, height: width }
+      );
+    });
+
+    resizeObserver.observe(containerRef.current);
+    return () => resizeObserver.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!globeRef.current || !isGlobeReady) return;
+    globeRef.current.pointOfView(
+      {
+        lat: activeRegion.lat,
+        lng: activeRegion.lon,
+        altitude: FIXED_ALTITUDE,
+      },
+      1100
+    );
+  }, [activeRegion, isGlobeReady]);
+
+  const applyGlobeStyling = useCallback(() => {
+    if (!globeRef.current) return;
+
+    const controls = globeRef.current.controls();
+    controls.enablePan = false;
+    controls.enableZoom = false;
+
+    const material = globeRef.current.globeMaterial();
+    material.color = new THREE.Color("#c3c4c7");
+    material.emissive = new THREE.Color("#babcc1");
+    material.emissiveIntensity = 0.12;
+    material.shininess = 0.8;
+    material.specular = new THREE.Color("#d3d6dc");
+    globeRef.current.pointOfView(
+      {
+        lat: activeRegion.lat,
+        lng: activeRegion.lon,
+        altitude: FIXED_ALTITUDE,
+      },
+      0
+    );
+  }, [activeRegion.lat, activeRegion.lon]);
+
+  const handleGlobeReady = useCallback(() => {
+    setIsGlobeReady(true);
+    applyGlobeStyling();
+  }, [applyGlobeStyling]);
 
   return (
-    <section className="bg-[#0d2d47] p-5">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6 items-center">
+    <>
+    <main className="ivexia-presence min-h-[70vh]">
+      <section className="presence-wrap" aria-label="Global presence by region">
+        <h1>Global Presence</h1>
 
-        {/* LEFT TEXT */}
-        <div className="text-center md:text-left">
-          
-          {/* TITLE */}
-          <h2 className="text-2xl md:text-3xl font-bold text-white leading-snug mb-3">
-            {t?.title || "Shaping the Future of Global Healthcare"}
-          </h2>
+        <div className="presence-grid">
+          <nav className="region-nav" aria-label="Region selector">
+            {regions.map((region) => {
+              const selected = activeId === region.id;
+              return (
+                <button
+                  key={region.id}
+                  type="button"
+                  className={`region-btn ${selected ? "is-active" : ""}`}
+                  onClick={() => setActiveId(region.id)}
+                  aria-pressed={selected}
+                >
+                  {region.label}
+                </button>
+              );
+            })}
+          </nav>
 
-          {/* SUBTITLE (GRADIENT LINE) */}
-          <h3 className="text-lg md:text-xl font-semibold mb-3 bg-gradient-to-r from-[#FF7A00] to-[#E2004F] bg-clip-text text-transparent">
-            {t?.subtitle || "Driven by Science. Powered by Innovation."}
-          </h3>
+          <article className="region-copy" aria-live="polite">
+            {activeRegion.paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </article>
 
-          {/* PARAGRAPH */}
-          <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-4 max-w-md mx-auto md:mx-0">
-            {t?.paragraph ||
-              "At Ivexia Pharmaceuticals, we are committed to advancing healthcare through innovation and global excellence."}
-          </p>
-
-          {/* CTA */}
-          <Link
-            href="/about"
-            className="inline-block bg-gradient-to-r from-[#FF7A00] to-[#E2004F] text-white px-5 py-2.5 rounded-md font-medium hover:opacity-90 transition"
-          >
-            {t?.cta || "Explore Ivexia"}
-          </Link>
+          <div className="globe-shell" aria-hidden="true">
+            <div className="globe-canvas" ref={containerRef}>
+              <Globe
+                ref={globeRef}
+                onGlobeReady={handleGlobeReady}
+                width={canvasSize.width}
+                height={canvasSize.height}
+                backgroundColor="rgba(255,255,255,0)"
+                globeImageUrl={OCEAN_TEXTURE}
+                bumpImageUrl={undefined}
+                showAtmosphere
+                atmosphereColor="#dde1e6"
+                atmosphereAltitude={0.07}
+                showGraticules={false}
+                polygonsData={polygonsData}
+                polygonCapColor={(d) => (d.properties.regionKey === activeId ? "#2f6d34" : "#b5bac1")}
+                polygonSideColor={(d) => (d.properties.regionKey === activeId ? "#2f6d34" : "#b5bac1")}
+                polygonStrokeColor={(d) =>
+                  d.properties.regionKey === activeId ? "#edf2f6" : "#e7ebef"
+                }
+                polygonAltitude={(d) => (d.properties.regionKey === activeId ? 0.022 : 0.01)}
+                polygonsTransitionDuration={450}
+                pathsData={oceanOutlinePaths}
+                pathPoints="points"
+                pathPointLat={(p) => p[0]}
+                pathPointLng={(p) => p[1]}
+                pathPointAlt={(p) => p[2]}
+                pathColor={() => "rgba(179,186,196,0.95)"}
+                pathStroke={0.34}
+                pathResolution={1}
+              />
+            </div>
+          </div>
         </div>
+      </section>
+    </main>
+   <style jsx>{`
+  .ivexia-presence {
+    --ink: #0d2d47;
+    --panel: #fff8f5;
+    --line: rgba(13, 45, 71, 0.15);
+    padding: 16px;
+  }
 
-        {/* RIGHT IMAGE */}
-        <div className="flex justify-center">
-          <Image
-            src="/images/Globe New 2.png"
-            alt="Ivexia Globe"
-            width={460}
-            height={460}
-            className="w-[280px] sm:w-[350px] md:w-[460px] lg:w-[420px]"
-            priority
-          />
-        </div>
+  .ivexia-presence .presence-wrap {
+    max-width: 980px;
+    margin: 0 auto;
+  }
 
-      </div>
-    </section>
+  .ivexia-presence .presence-wrap h1 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 700;
+    color: #0d2d47;
+    margin-bottom: 12px;
+  }
+
+  .ivexia-presence .presence-grid {
+    display: grid;
+    grid-template-columns: 190px 1fr 300px;
+    gap: 30px;
+   padding: 4px 18px;
+    background: var(--panel);
+    border-radius: 8px;
+  }
+
+  .ivexia-presence .region-nav {
+    border-right: 1px solid var(--line);
+  }
+
+  .ivexia-presence .region-btn {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+    background: transparent;
+    color: var(--ink);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .ivexia-presence .region-btn:hover {
+    background: rgba(255, 122, 0, 0.1);
+  }
+
+  .ivexia-presence .region-btn.is-active {
+    border: 2px solid #ff7a00;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 122, 0, 0.15),
+      rgba(226, 0, 79, 0.1)
+    );
+  }
+
+  .ivexia-presence .region-copy {
+  max-width: 520px;
+}
+
+.ivexia-presence .region-copy p {
+  color:  rgba(255, 122, 0, 0.15),;
+
+  font-size: 1.15rem;   /* ✅ balanced size (not big, not small) */
+  line-height: 1.55;    /* ✅ clean readable spacing */
+  font-weight: 400;     /* ✅ normal weight like reference */
+
+  margin-bottom: 14px;  /* ✅ proper spacing */
+}
+
+  .ivexia-presence .globe-shell {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -120px; 
+  }
+
+  .ivexia-presence .globe-canvas {
+    width: 350px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden; 
+    background: radial-gradient(circle, #f3f7fb, #e6eef7);
+    box-shadow: 0 20px 30px rgba(13, 45, 71, 0.15);
+  }
+
+  /* ✅ Tablet */
+  @media (max-width: 1000px) {
+    .ivexia-presence .presence-grid {
+      grid-template-columns: 170px 1fr;
+    }
+
+    .ivexia-presence .globe-shell {
+      margin-right: 0;
+    }
+  }
+
+  /* ✅ Mobile */
+  @media (max-width: 920px) {
+    .ivexia-presence .presence-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .ivexia-presence .globe-shell {
+      justify-content: center;
+      margin: 0;
+    }
+
+    .ivexia-presence .globe-canvas {
+      width: 280px;
+    }
+      .ivexia-presence .globe-canvas canvas {
+  transform: scale(1.4);   /* try 1.3 → 1.6 based on look */
+  transform-origin: center;
+}
+  }
+`}</style>
+    </>
   );
 }
+
+
+
 
 
 
