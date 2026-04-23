@@ -1,3 +1,4 @@
+//ivexia\app\portfolio\[slug]\page.jsx
 "use client";
 
 import Link from "next/link";
@@ -5,7 +6,68 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const fallbackImg = "/images/capsuleimage.jpg";
+// Under Maintenance Component
+function UnderMaintenancePage() {
+  return (
+    <section className="relative bg-[#FFF8F5] py-16 overflow-hidden min-h-screen flex items-center">
+      
+      {/* LIGHT GLOW */}
+      <div className="absolute top-[-80px] left-1/2 -translate-x-1/2 w-[450px] h-[450px] bg-[#19a6b5]/10 blur-3xl rounded-full" />
 
+      <div className="relative max-w-5xl mx-auto px-4 text-center flex flex-col items-center">
+
+        {/* IMAGE */}
+        <div className="flex justify-center mb-6 w-full">
+          <img
+            src="/images/undermaintenance7.png"
+            alt="Under Maintenance"
+            className="mx-auto block w-full max-w-[320px] md:max-w-[380px] object-contain drop-shadow-md"
+          />
+        </div>
+
+        {/* TAG */}
+        <p className="text-[#19a6b5] uppercase tracking-[0.25em] text-xs mb-3 font-semibold">
+          API Update
+        </p>
+
+        {/* TITLE */}
+        <h1 className="text-2xl md:text-3xl font-bold text-[#0d2d47] mb-3">
+          Ingredient Details Coming Soon
+        </h1>
+
+        {/* TEXT */}
+        <p className="text-gray-600 max-w-md mx-auto mb-6 text-sm md:text-base leading-relaxed">
+          We are currently updating this API page with complete technical
+          specifications, manufacturing insights, and regulatory data .
+          Please check back shortly or contact us for immediate details.
+        </p>
+
+        {/* LINE */}
+        <div className="w-16 h-[2px] bg-gradient-to-r from-[#FF7A00] to-[#E2004F] rounded-full mb-6" />
+
+        {/* BUTTONS */}
+        <div className="flex flex-wrap gap-3 justify-center">
+          
+          <Link
+            href="/products/ingredient"
+            className="px-6 py-3 bg-gradient-to-r from-[#FF7A00] to-[#E2004F] text-white rounded-full text-sm font-semibold shadow-md hover:shadow-lg transition"
+          >
+            Back to APIs
+          </Link>
+
+          <Link
+            href="/contact"
+            className="px-6 py-3 border border-[#0d2d47] text-[#0d2d47] rounded-full text-sm font-semibold hover:bg-[#0d2d47] hover:text-white transition"
+          >
+            Contact Us
+          </Link>
+
+        </div>
+
+      </div>
+    </section>
+  );
+}
 export default function IngredientDetail() {
   const { slug } = useParams();
   const [showQuoteModal, setShowQuoteModal] = useState(false);
@@ -13,6 +75,8 @@ export default function IngredientDetail() {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  const UNDER_MAINTENANCE = true; // toggle here
+  if (UNDER_MAINTENANCE) return <UnderMaintenancePage />;
   useEffect(() => {
     if (!slug) {
       return;
