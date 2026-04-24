@@ -267,7 +267,8 @@ export default function GlobalPresence3D() {
                 showGraticules={false}
                 polygonsData={polygonsData}
                 polygonCapColor={(d) =>
-                  d.properties.regionKey === activeId ? "#FF7A00" : "#b5bac1"
+                  d.properties.regionKey === activeId ? "#ff9913" : "#b5bac1"
+                  
                 }
                 polygonSideColor={(d) =>
                   d.properties.regionKey === activeId ? "#FF7A00" : "#b5bac1"
@@ -296,6 +297,7 @@ export default function GlobalPresence3D() {
         --ink: #0d2d47;
         --panel: #fff8f5;
         --line: rgba(13, 45, 71, 0.15);
+        
         padding: 4px 16px;
       }
 
