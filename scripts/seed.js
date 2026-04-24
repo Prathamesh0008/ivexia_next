@@ -11,42 +11,14 @@ const { default: TestKit } = await import("../models/TestKit.js");
 const { default: Product } = await import("../models/Product.js");
 
 function normalizeSeedProduct(product) {
-  let casRaw =
-    product.casId ||
-    product["CAS-ID"] ||
-    product["CAS_ID"] ||
-    "";
-
-  let casArray = [];
-
-  // ✅ If CAS is OBJECT (your current format)
-  if (typeof casRaw === "object" && !Array.isArray(casRaw)) {
-    casArray = Object.entries(casRaw).map(
-      ([name, cas]) => `${name}: ${cas}`
-    );
-  }
-
-  // ✅ If CAS is ARRAY
-  else if (Array.isArray(casRaw)) {
-    casArray = casRaw;
-  }
-
-  // ✅ If CAS is STRING
-  else if (typeof casRaw === "string") {
-    casArray = casRaw
-      .split(",")
-      .map((c) => c.trim())
-      .filter(Boolean);
-  }
-
   return {
     category: product.category || "",
     name: product.name || "",
     dosage: product.dosage || "",
-    form: product.form || product["Column5"] || "",
+    form: product.form || "",
     packSize: product.packSize || product["PACK SIZE"] || "",
     type: product.type || product["TYPE OF FORMLN"] || "",
-    casId: casArray, // ✅ FIXED HERE
+    casId: (product.casId || product["CAS-ID"] || "").trim(),
     slug: product.slug || "",
   };
 }
