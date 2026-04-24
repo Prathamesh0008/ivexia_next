@@ -1,4 +1,3 @@
-
 //ivexia\components\AccordSection.jsx
 "use client";
 import countriesTopo from "world-atlas/countries-110m.json";
@@ -7,8 +6,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import * as THREE from "three";
 import { feature } from "topojson-client";
 import { geoCentroid } from "d3-geo";
-
-
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Globe = dynamic(() => import("react-globe.gl"), { ssr: false });
 const OCEAN_TEXTURE =
@@ -113,15 +111,27 @@ function getRegionByCoord(lat, lon) {
 }
 
 export default function GlobalPresence3D() {
+  const { translations } = useLanguage();
   const [activeId, setActiveId] = useState("asia");
   const [canvasSize, setCanvasSize] = useState({ width: 520, height: 520 });
   const [isGlobeReady, setIsGlobeReady] = useState(false);
   const containerRef = useRef(null);
   const globeRef = useRef(null);
 
+  const translatedRegions = useMemo(() => {
+    return regions.map(region => ({
+      ...region,
+      label: translations?.accordSection?.regions?.[region.id]?.label || region.label,
+      paragraphs: [
+        translations?.accordSection?.regions?.[region.id]?.paragraphs?.[0] || region.paragraphs[0],
+        translations?.accordSection?.regions?.[region.id]?.paragraphs?.[1] || region.paragraphs[1]
+      ]
+    }));
+  }, [translations]);
+
   const activeRegion = useMemo(
-    () => regions.find((item) => item.id === activeId) ?? regions[0],
-    [activeId]
+    () => translatedRegions.find((item) => item.id === activeId) ?? translatedRegions[0],
+    [activeId, translatedRegions]
   );
 
   const polygonsData = useMemo(() => {
@@ -215,11 +225,11 @@ export default function GlobalPresence3D() {
     <>
     <main className="ivexia-presence min-h-[70vh]">
       <section className="presence-wrap" aria-label="Global presence by region">
-        <h1>Global Presence</h1>
+        <h1>{translations?.accordSection?.title || "Global Presence"}</h1>
 
         <div className="presence-grid">
           <nav className="region-nav" aria-label="Region selector">
-            {regions.map((region) => {
+            {translatedRegions.map((region) => {
               const selected = activeId === region.id;
               return (
                 <button
@@ -236,8 +246,8 @@ export default function GlobalPresence3D() {
           </nav>
 
           <article className="region-copy" aria-live="polite">
-            {activeRegion.paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
+            {activeRegion.paragraphs.map((paragraph, idx) => (
+              <p key={idx}>{paragraph}</p>
             ))}
           </article>
 
@@ -256,10 +266,14 @@ export default function GlobalPresence3D() {
                 atmosphereAltitude={0.07}
                 showGraticules={false}
                 polygonsData={polygonsData}
-                polygonCapColor={(d) => (d.properties.regionKey === activeId ? "#2f6d34" : "#b5bac1")}
-                polygonSideColor={(d) => (d.properties.regionKey === activeId ? "#2f6d34" : "#b5bac1")}
+                polygonCapColor={(d) =>
+                  d.properties.regionKey === activeId ? "#FF7A00" : "#b5bac1"
+                }
+                polygonSideColor={(d) =>
+                  d.properties.regionKey === activeId ? "#FF7A00" : "#b5bac1"
+                }
                 polygonStrokeColor={(d) =>
-                  d.properties.regionKey === activeId ? "#edf2f6" : "#e7ebef"
+                  d.properties.regionKey === activeId ? "#EC5135" : "#e7ebef"
                 }
                 polygonAltitude={(d) => (d.properties.regionKey === activeId ? 0.022 : 0.01)}
                 polygonsTransitionDuration={450}
@@ -277,128 +291,129 @@ export default function GlobalPresence3D() {
         </div>
       </section>
     </main>
-   <style jsx>{`
-  .ivexia-presence {
-    --ink: #0d2d47;
-    --panel: #fff8f5;
-    --line: rgba(13, 45, 71, 0.15);
-    padding: 16px;
-  }
+    <style jsx>{`
+      .ivexia-presence {
+        --ink: #0d2d47;
+        --panel: #fff8f5;
+        --line: rgba(13, 45, 71, 0.15);
+        padding: 4px 16px;
+      }
 
-  .ivexia-presence .presence-wrap {
-    max-width: 980px;
-    margin: 0 auto;
-  }
+      .ivexia-presence .presence-wrap {
+        max-width: 980px;
+        margin: 0 auto;
+        margin-bottom: 0;
+      }
 
-  .ivexia-presence .presence-wrap h1 {
-    font-size: clamp(1.8rem, 3vw, 2.5rem);
-    font-weight: 700;
-    color: #0d2d47;
-    margin-bottom: 12px;
-  }
+      .ivexia-presence .presence-wrap h1 {
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
+        font-weight: 700;
+        color: #0d2d47;
+        margin-bottom: 32px;
+      }
 
-  .ivexia-presence .presence-grid {
-    display: grid;
-    grid-template-columns: 190px 1fr 300px;
-    gap: 30px;
-   padding: 4px 18px;
-    background: var(--panel);
-    border-radius: 8px;
-  }
+      .ivexia-presence .presence-grid {
+        display: grid;
+        grid-template-columns: 190px 1fr 300px;
+        gap: 30px;
+        padding: 0 18px;
+        background: var(--panel);
+        border-radius: 8px;
+        align-items: center;
+      }
 
-  .ivexia-presence .region-nav {
-    border-right: 1px solid var(--line);
-  }
+      .ivexia-presence .region-nav {
+        border-right: 1px solid var(--line);
+        padding: 20px 0;
+      }
 
-  .ivexia-presence .region-btn {
-    width: 100%;
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid var(--line);
-    background: transparent;
-    color: var(--ink);
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
+      .ivexia-presence .region-btn {
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid var(--line);
+        background: transparent;
+        color: var(--ink);
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
 
-  .ivexia-presence .region-btn:hover {
-    background: rgba(255, 122, 0, 0.1);
-  }
+      .ivexia-presence .region-btn:first-child {
+        border-top: 1px solid var(--line);
+      }
 
-  .ivexia-presence .region-btn.is-active {
-    border: 2px solid #ff7a00;
-    background: linear-gradient(
-      90deg,
-      rgba(255, 122, 0, 0.15),
-      rgba(226, 0, 79, 0.1)
-    );
-  }
+      .ivexia-presence .region-btn:hover {
+        background: rgba(255, 122, 0, 0.1);
+      }
 
-  .ivexia-presence .region-copy {
-  max-width: 520px;
-}
+      .ivexia-presence .region-btn.is-active {
+        border: 2px solid #ff7a00;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 122, 0, 0.15),
+          rgba(226, 0, 79, 0.1)
+        );
+      }
 
-.ivexia-presence .region-copy p {
-  color:  rgba(255, 122, 0, 0.15),;
+      .ivexia-presence .region-copy {
+        max-width: 520px;
+      }
 
-  font-size: 1.15rem;   /* ✅ balanced size (not big, not small) */
-  line-height: 1.55;    /* ✅ clean readable spacing */
-  font-weight: 400;     /* ✅ normal weight like reference */
+      .ivexia-presence .region-copy p {
+        color: var(--ink);
+        font-size: 1.15rem;
+        line-height: 1.55;
+        font-weight: 400;
+        margin-bottom: 14px;
+      }
 
-  margin-bottom: 14px;  /* ✅ proper spacing */
-}
+      .ivexia-presence .globe-shell {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: -120px;
+      }
 
-  .ivexia-presence .globe-shell {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: -120px; 
-  }
+      .ivexia-presence .globe-canvas {
+        width: 350px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        overflow: hidden;
+        background: radial-gradient(circle, #f3f7fb, #e6eef7);
+        box-shadow: 0 20px 30px rgba(13, 45, 71, 0.15);
+      }
 
-  .ivexia-presence .globe-canvas {
-    width: 350px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    overflow: hidden; 
-    background: radial-gradient(circle, #f3f7fb, #e6eef7);
-    box-shadow: 0 20px 30px rgba(13, 45, 71, 0.15);
-  }
+      /* Tablet */
+      @media (max-width: 1000px) {
+        .ivexia-presence .presence-grid {
+          grid-template-columns: 170px 1fr;
+        }
 
-  /* ✅ Tablet */
-  @media (max-width: 1000px) {
-    .ivexia-presence .presence-grid {
-      grid-template-columns: 170px 1fr;
-    }
+        .ivexia-presence .globe-shell {
+          margin-right: 0;
+        }
+      }
 
-    .ivexia-presence .globe-shell {
-      margin-right: 0;
-    }
-  }
+      /* Mobile */
+      @media (max-width: 920px) {
+        .ivexia-presence .presence-grid {
+          grid-template-columns: 1fr;
+        }
 
-  /* ✅ Mobile */
-  @media (max-width: 920px) {
-    .ivexia-presence .presence-grid {
-      grid-template-columns: 1fr;
-    }
+        .ivexia-presence .globe-shell {
+          justify-content: center;
+          margin: 0;
+        }
 
-    .ivexia-presence .globe-shell {
-      justify-content: center;
-      margin: 0;
-    }
+        .ivexia-presence .globe-canvas {
+          width: 280px;
+        }
 
-    .ivexia-presence .globe-canvas {
-      width: 280px;
-    }
-      .ivexia-presence .globe-canvas canvas {
-  transform: scale(1.4);   /* try 1.3 → 1.6 based on look */
-  transform-origin: center;
-}
-  }
-`}</style>
+        .ivexia-presence .globe-canvas canvas {
+          transform: scale(1.4);
+          transform-origin: center;
+        }
+      }
+    `}</style>
     </>
   );
 }
-
-
-
-
-

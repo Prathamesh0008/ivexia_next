@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
-// import { en as productLang } from "@/data2/languages/en";
+import { en as productLang } from "@/data2/languages/en";
 import { Building2, Package, Truck, Clock, Shield, CheckCircle, Award, Store, Pharmacy, Pill } from "lucide-react";
 const fallbackImage = "/images/medicineproduct.jpg";
 const capsuleIcon = "/images/capsule.svg";
@@ -115,11 +115,11 @@ export default function ProductDetailClient({ initialProduct }) {
   const [openPrecaution, setOpenPrecaution] = useState(null);
   const [openFaq, setOpenFaq] = useState(null);
 
-  // const productData =
-  //   productLang.products[product?.slug?.toLowerCase()] ||
-  //   productLang.products["cefpodoxime-proxetil-50mg"] ||
-  //   {};
-  const productData = {};
+  const productData =
+    productLang.products[product?.slug?.toLowerCase()] ||
+    productLang.products["cefpodoxime-proxetil-50mg"] ||
+    {};
+  // const productData = {};
 
   const { translations } = useLanguage();
   const t = translations?.productDetail;

@@ -8,7 +8,10 @@ const ProductSchema = new mongoose.Schema({
   form: String,
   packSize: String,
   type: String,
-  casId: String,
+  casId: {
+  type: [String],
+  default: []
+},
   slug: String,
 });
 

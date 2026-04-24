@@ -348,15 +348,17 @@ const categoryOptions = useMemo(
                       }`}
                     >
                       <td className="px-4 py-3 align-top break-words">{p.name}</td>
-                      <td className="px-4 py-3 align-top whitespace-nowrap">{p.form}</td>
-                      <td className="px-4 py-3 align-top whitespace-nowrap">{p.category}</td>
+                     <td className="px-4 py-3 align-top break-words">{p.form}</td>
+                    <td className="px-4 py-3 align-top break-words">{p.category}</td>
                       <td
                         className="px-4 py-3 align-top overflow-hidden text-ellipsis whitespace-nowrap"
                         title={p.dosage || "-"}
                       >
                         {p.dosage || "-"}
                       </td>
-                      <td className="px-4 py-3 align-top whitespace-nowrap">{p.casId || "-"}</td>
+                      <td className="px-4 py-3 align-top break-words">{Array.isArray(p.casId) && p.casId.length > 0
+  ? p.casId.join(", ")
+  : "-"}</td>
                     </tr>
                   ))}
             </tbody>

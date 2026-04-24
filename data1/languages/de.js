@@ -62,6 +62,53 @@ ivexia_numbers: {
   facilities: "Produktionsstätten",
   rnd: "F&E Zentren"
 },
+accordSection: {
+  title: "Globale Präsenz",
+  regions: {
+    asia: {
+      label: "Asien",
+      paragraphs: [
+        "Positive regulatorische Trends helfen vielen asiatischen Ländern, sich in globale Märkte zu integrieren und beschleunigen die Nachfrage nach fortschrittlichen Gesundheitslösungen.",
+        "In Ostasien, ASEAN und südasiatischen Märkten erweitern wir weiterhin den Zugang mit erschwinglichen Produkten, die auf einkommensschwache und mittlere Bevölkerungsschichten zugeschnitten sind."
+      ]
+    },
+    africa: {
+      label: "Afrika",
+      paragraphs: [
+        "Eine fokussierte Regionalstrategie und engagierte Entwicklungsumsetzung stärken weiterhin die Marktanpassung in der afrikanischen Region.",
+        "Mit einem starken Vertriebsnetz in West-, Nord-, Ost- und Südafrika bleibt das Wachstum sowohl in großen als auch in aufstrebenden Märkten konstant."
+      ]
+    },
+    "north-america": {
+      label: "Nordamerika",
+      paragraphs: [
+        "Hohe Innovationsreife und robuste Gesundheitsinfrastruktur machen Nordamerika zu einem kritischen Markt für Premium- und Spezialangebote.",
+        "Unser Modell betont regulatorische Reaktionsfähigkeit und starke Kanalpartnerschaften, um eine konsistente Skalierung in den USA, Kanada und nahegelegenen Märkten zu unterstützen."
+      ]
+    },
+    "latin-america": {
+      label: "Lateinamerika",
+      paragraphs: [
+        "Lateinamerika bietet eine vielversprechende Mischung aus etablierten und schnell wachsenden Märkten, in denen lokalisierte Strategie langfristiges Wachstum fördert.",
+        "Von Mexiko bis zum südlichen Kegel hilft uns die länderspezifische Anpassung, qualitativ hochwertige, kostengünstige Gesundheitslösungen schnell zu liefern."
+      ]
+    },
+    "middle-east": {
+      label: "Naher Osten",
+      paragraphs: [
+        "Der Nahe Osten bleibt strategisch wichtig aufgrund sich verbessernder regulatorischer Ökosysteme und starker Investitionen in die Modernisierung des Gesundheitswesens.",
+        "Durch die Ausrichtung an regionalen Beschaffungsmodellen und Vertriebsökosystemen erweitern wir den zuverlässigen Zugang zu essentiellen Therapien."
+      ]
+    },
+    europe: {
+      label: "Europa",
+      paragraphs: [
+        "Europa bietet weiterhin stabile, compliance-orientierte Märkte mit starker Nachfrage nach qualitätsorientierten, evidenzbasierten Gesundheitsprodukten.",
+        "Unser Fokus liegt auf langfristigen Partnerschaften, Lieferzuverlässigkeit und differenzierter Portfoliopositionierung in sowohl reifen als auch wachsenden Korridoren."
+      ]
+    }
+  }
+},
 about: {
   video: {
     title: "Über Ivexia Pharmaceuticals",
@@ -239,6 +286,7 @@ footer: {
 
   address: "Globaler pharmazeutischer Hauptsitz"
 },
+//ivexia\data1\languages\de.js
 contactPage: {
   title: "Kontakt Ivexia Pharmaceuticals",
   subtitle: "Kontaktieren Sie uns für pharmazeutische Anfragen.",

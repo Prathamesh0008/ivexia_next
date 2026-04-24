@@ -53561,6 +53561,5737 @@ export const en = {
     ],
   },
 },
+"atenolol-tablets": {
+  seo: {
+    title:
+      "Atenolol Tablets 25mg / 50mg / 100mg (CAS 29122-68-7) | Ivexia Pharma Cardiovascular Care",
+    description:
+      "Explore Atenolol Tablets by Ivexia Pharma, a trusted beta-blocker for hypertension, angina, and cardiovascular support. Learn indications, dosage, precautions, storage, side effects, and globally aligned manufacturing standards.",
+  },
+
+  meta: {
+    productName: "Atenolol Tablets",
+    strength: "25mg / 50mg / 100mg",
+    form: "Tablets",
+    category: "Cardio-Vascular / Beta-Blocker",
+    cas: "29122-68-7",
+  },
+
+  hero: {
+    title:
+      "Atenolol Tablets – Blood Pressure & Cardiovascular Control",
+    description: [
+      "Clinically established cardioselective beta-blocker.",
+      "Effective for hypertension and angina management.",
+      "Reduces heart rate and cardiac workload.",
+      "Supports long-term cardiovascular therapy.",
+      "Manufactured under global pharmaceutical standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Atenolol Tablets are widely used in cardiovascular medicine for the management of hypertension, angina, and certain heart-related conditions where heart rate reduction is beneficial.",
+      "Atenolol belongs to the beta-blocker class and acts primarily on the heart to reduce heart rate and cardiac workload.",
+      "Atenolol Tablets are highly relevant in patients requiring stable blood pressure control and long-term cardiovascular protection.",
+      "They are supported by long-standing therapeutic use and are suitable for structured maintenance therapy.",
+      "Available strengths of 25mg, 50mg, and 100mg allow individualized treatment based on patient needs.",
+    ],
+
+    importantInformation: [
+      "Product Name: Atenolol Tablets",
+      "Dosage Strengths: 25mg, 50mg, 100mg",
+      "Form: Tablets",
+      "Category: Cardio-Vascular / Beta-Blocker",
+      "CAS Number: 29122-68-7",
+      "Brand: Ivexia Pharma",
+    ],
+
+    indications: [
+      "Hypertension (high blood pressure)",
+      "Angina pectoris (chest pain)",
+      "Post-myocardial infarction care",
+      "Selected rhythm-related cardiovascular conditions",
+    ],
+
+    maintenance: [
+      "Used as long-term cardiovascular therapy",
+      "Once or twice daily dosing",
+      "Requires consistent adherence",
+      "Regular monitoring recommended",
+    ],
+
+    dosage: {
+      general: [
+        "25mg – low-dose initiation",
+        "50mg – common maintenance dose",
+        "100mg – higher dose when clinically required",
+      ],
+      administration: [
+        "Take at the same time each day",
+        "Swallow with water",
+        "Can be taken with or after food",
+        "Do not stop suddenly",
+      ],
+    },
+
+    storage: [
+      "Store below 25°C",
+      "Protect from moisture and light",
+      "Keep in original packaging",
+      "Keep out of reach of children",
+    ],
+
+    shelfLife: [
+      "24–36 months under recommended conditions",
+      "Check expiry on packaging before use",
+    ],
+
+    manufacturing: [
+      "Manufactured in GMP-certified facilities",
+      "High-quality Atenolol API (CAS 29122-68-7)",
+      "Controlled formulation and compression",
+      "Uniform dosage and consistency",
+      "Dissolution and stability testing",
+      "Compliance with global pharmaceutical standards",
+    ],
+
+    precautions: [
+      "Use cautiously in low heart rate or low blood pressure",
+      "Use cautiously in asthma or bronchospastic conditions",
+      "Monitor diabetic patients carefully",
+      "Use cautiously in kidney impairment",
+      "Avoid sudden discontinuation",
+      "Use carefully in elderly patients",
+    ],
+
+    sideEffects: [
+      "Dizziness",
+      "Fatigue",
+      "Cold hands or feet",
+      "Headache",
+      "Slow heart rate",
+      "Gastrointestinal discomfort",
+      "Sleep disturbance",
+      "Rare: low blood pressure or breathing issues",
+    ],
+
+    whyChoose: [
+      "Established cardiovascular therapy",
+      "Flexible dosing strengths",
+      "Reliable long-term performance",
+      "Widely accepted by clinicians",
+      "Globally aligned manufacturing standards",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "What is the main use of atenolol?",
+      answer:
+        "The main use of Atenolol Tablets is to treat high blood pressure and angina. It also helps reduce heart workload and may be used after a heart attack.",
+    },
+    {
+      question: "What are the worst side effects of atenolol?",
+      answer:
+        "Serious side effects may include severe dizziness, fainting, slow heart rate, or breathing difficulty, although most effects are mild like fatigue or headache.",
+    },
+    {
+      question: "When is the best time to take atenolol?",
+      answer:
+        "Atenolol Tablets are usually taken once or twice daily at the same time each day. The first dose may be taken at bedtime if dizziness occurs.",
+    },
+    {
+      question: "What to avoid when taking atenolol?",
+      answer:
+        "Avoid stopping suddenly, be cautious with alcohol, and consult a doctor before combining with other heart or blood pressure medicines.",
+    },
+    {
+      question: "Who cannot take atenolol?",
+      answer:
+        "Patients with certain heart rhythm problems, very low blood pressure, or specific breathing conditions should avoid Atenolol unless prescribed.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is the main use of atenolol?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Atenolol Tablets are mainly used to treat high blood pressure and angina.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What are the worst side effects of atenolol?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Serious effects include dizziness, fainting, or slow heart rate.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "When is the best time to take atenolol?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Usually taken once or twice daily at the same time each day.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What to avoid when taking atenolol?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Avoid stopping suddenly and consult before combining medicines.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Who cannot take atenolol?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Patients with certain heart or breathing conditions.",
+        },
+      },
+    ],
+  },
+},
+"amlodipine-besilate-and-atenolol-tablets": {
+  seo: {
+    title:
+      "Amlodipine Besilate & Atenolol Tablets | Advanced Dual Blood Pressure Control | Ivexia Pharma",
+    description:
+      "Explore Amlodipine Besilate and Atenolol Tablets by Ivexia Pharma—an advanced cardiovascular combination for hypertension and angina management. Learn dosage, safety, manufacturing quality, and global compliance standards.",
+  },
+
+  meta: {
+    productName: "Amlodipine Besilate and Atenolol Tablets",
+    strength: "5mg + 50mg / 25mg variants",
+    form: "Tablets",
+    category: "Cardiovascular",
+    cas: "Combination",
+  },
+
+  hero: {
+    title:
+      "Amlodipine Besilate and Atenolol Tablets – Dual Blood Pressure Control",
+    description: [
+      "Scientifically balanced cardiovascular therapy.",
+      "Combines calcium channel blocker and beta-blocker.",
+      "Improves blood pressure and cardiac output.",
+      "Reduces cardiovascular risk and complications.",
+      "Manufactured under global pharmaceutical standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Amlodipine Besilate and Atenolol Tablets are a widely prescribed cardio-protective combination therapy used for managing hypertension, angina pectoris, and associated cardiovascular conditions.",
+      "This combination stands out due to its dual mechanism of action, addressing both vascular resistance and heart rate control simultaneously.",
+      "Amlodipine works by relaxing blood vessels, improving blood flow, while Atenolol reduces heart rate and cardiac workload.",
+      "Together, they create a synergistic effect that enhances blood pressure stability and reduces cardiovascular risks.",
+      "Ivexia Pharma ensures that every batch meets strict WHO-GMP and international regulatory standards.",
+    ],
+
+    importantInformation: [
+      "Product Name: Amlodipine Besilate and Atenolol Tablets",
+      "Category: Cardiovascular",
+      "Dosage Strength: 5mg + 50mg / 25mg variants",
+      "Form: Oral Tablets",
+      "CAS Number: Combination",
+      "Manufacturer: Ivexia Pharma",
+    ],
+
+    indications: [
+      "Hypertension (high blood pressure)",
+      "Chronic stable angina",
+      "Prevention of cardiovascular events",
+      "Tachycardia associated with hypertension",
+      "Secondary prevention of cardiac complications",
+    ],
+
+    maintenance: [
+      "Long-term therapy often required",
+      "Regular monitoring of blood pressure and heart rate",
+      "Dose adjustments based on response",
+      "Continuous use improves cardiovascular stability",
+    ],
+
+    dosage: {
+      general: [
+        "Typically prescribed once daily",
+        "Common strength: 5mg Amlodipine + 50mg Atenolol",
+        "Dose varies depending on patient condition",
+      ],
+      administration: [
+        "Take at the same time daily",
+        "Can be taken with or without food",
+        "Swallow whole with water",
+        "Do not abruptly discontinue",
+      ],
+    },
+
+    storage: [
+      "Store below 25°C",
+      "Protect from moisture and direct sunlight",
+      "Keep in original packaging",
+      "Keep out of reach of children",
+    ],
+
+    shelfLife: [
+      "24 to 36 months under recommended storage conditions",
+    ],
+
+    manufacturing: [
+      "Manufactured in WHO-GMP certified facilities",
+      "High-purity active pharmaceutical ingredients",
+      "Advanced tablet compression technology",
+      "Strict in-process quality control",
+      "Stability and dissolution testing",
+      "Compliance with global regulatory standards",
+    ],
+
+    precautions: [
+      "Monitor blood pressure regularly",
+      "Use cautiously in patients with asthma",
+      "Avoid sudden discontinuation",
+      "Use with caution in liver or kidney impairment",
+      "Not recommended during pregnancy without advice",
+      "Avoid alcohol consumption",
+      "Monitor heart rate in elderly patients",
+    ],
+
+    sideEffects: [
+      "Dizziness",
+      "Fatigue",
+      "Headache",
+      "Bradycardia (slow heart rate)",
+      "Swelling (edema)",
+      "Cold extremities",
+      "Nausea",
+      "Shortness of breath (rare)",
+      "Hypotension",
+    ],
+
+    whyChoose: [
+      "International quality standards",
+      "Advanced cardiovascular formulations",
+      "Reliable global supply chain",
+      "WHO-GMP certified manufacturing",
+      "Focus on safety and innovation",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "What is amlodipine besilate and atenolol tablets used for?",
+      answer:
+        "Amlodipine Besilate and Atenolol Tablets are used to treat high blood pressure and angina by improving blood flow, reducing heart workload, and lowering cardiovascular risk.",
+    },
+    {
+      question: "What are the side effects of atenolol and amlodipine together?",
+      answer:
+        "Common side effects include dizziness, fatigue, slow heart rate, swelling, and headache. These are usually mild but should be monitored.",
+    },
+    {
+      question: "Which one is better, amlodipine or atenolol?",
+      answer:
+        "Both have different mechanisms. When combined, they provide more effective blood pressure control than single therapy.",
+    },
+    {
+      question: "What is the biggest side effect of amlodipine?",
+      answer:
+        "The most common side effect is swelling of the ankles or feet (edema), usually mild but noticeable in some patients.",
+    },
+    {
+      question: "Can amlodipine damage my kidneys?",
+      answer:
+        "Amlodipine is generally safe for kidneys and may help protect kidney function in hypertensive patients with proper monitoring.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is amlodipine besilate and atenolol tablets used for?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Used to manage hypertension and angina by improving blood flow and reducing cardiac workload.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What are the side effects of atenolol and amlodipine together?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Includes dizziness, fatigue, swelling, and slow heart rate.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Which one is better, amlodipine or atenolol?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Both combined provide better cardiovascular control.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is the biggest side effect of amlodipine?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Swelling of ankles or feet.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can amlodipine damage my kidneys?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Generally safe for kidney function.",
+        },
+      },
+    ],
+  },
+},
+"enalapril-maleate-tablets": {
+  seo: {
+    title:
+      "Enalapril Maleate Tablets | Advanced ACE Inhibitor for Hypertension & Heart Care | Ivexia Pharma",
+    description:
+      "Discover Enalapril Maleate Tablets by Ivexia Pharma—an internationally trusted ACE inhibitor for blood pressure control and heart failure management. Learn dosage, safety, indications, storage, and global manufacturing standards.",
+  },
+
+  meta: {
+    productName: "Enalapril Maleate Tablets",
+    strength: "2.5mg, 5mg, 10mg, 20mg",
+    form: "Tablets",
+    category: "Cardiovascular (ACE Inhibitor)",
+    cas: "76095-16-4",
+  },
+
+  hero: {
+    title:
+      "Enalapril Maleate Tablets – Blood Pressure & Heart Protection",
+    description: [
+      "Globally recognized ACE inhibitor therapy.",
+      "Effective control of hypertension and heart failure.",
+      "Improves blood flow and reduces cardiac strain.",
+      "Supports long-term cardiovascular protection.",
+      "Manufactured under global pharmaceutical standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Enalapril Maleate Tablets are widely used for managing hypertension, heart failure, and kidney protection in high-risk patients.",
+      "They act on the renin-angiotensin-aldosterone system (RAAS), a key regulator of blood pressure.",
+      "Enalapril inhibits ACE, preventing the formation of angiotensin II and allowing blood vessels to relax.",
+      "This mechanism reduces blood pressure and improves cardiovascular health.",
+      "Ivexia Pharma ensures high-quality manufacturing across all strengths.",
+    ],
+
+    importantInformation: [
+      "Product Name: Enalapril Maleate Tablets",
+      "Category: Cardiovascular (ACE Inhibitor)",
+      "Dosage Strengths: 2.5mg, 5mg, 10mg, 20mg",
+      "Form: Oral Tablets",
+      "CAS Number: 76095-16-4",
+      "Manufacturer: Ivexia Pharma",
+    ],
+
+    indications: [
+      "Hypertension (high blood pressure)",
+      "Congestive heart failure",
+      "Asymptomatic left ventricular dysfunction",
+      "Prevention of cardiovascular complications",
+      "Diabetic nephropathy and kidney protection",
+    ],
+
+    maintenance: [
+      "Long-term therapy often required",
+      "Regular monitoring of blood pressure and kidney function",
+      "Dose titration based on patient response",
+      "Continuous use reduces cardiovascular risks",
+    ],
+
+    dosage: {
+      general: [
+        "Initial dose: 2.5mg to 5mg once daily",
+        "Maintenance dose: 10mg to 20mg daily",
+        "Dose adjusted based on clinical condition",
+      ],
+      administration: [
+        "Take at the same time daily",
+        "Can be taken with or without food",
+        "Swallow whole with water",
+        "Do not skip doses",
+      ],
+    },
+
+    storage: [
+      "Store below 25°C",
+      "Protect from moisture and sunlight",
+      "Keep in original packaging",
+      "Keep out of reach of children",
+    ],
+
+    shelfLife: [
+      "24 to 36 months under recommended storage conditions",
+    ],
+
+    manufacturing: [
+      "Manufactured in WHO-GMP certified facilities",
+      "High-quality API sourcing",
+      "Advanced tablet formulation technology",
+      "Strict quality checks",
+      "Stability and dissolution testing",
+      "Compliance with global standards",
+    ],
+
+    precautions: [
+      "Monitor blood pressure regularly",
+      "Use cautiously in kidney disease",
+      "Avoid during pregnancy",
+      "Monitor potassium levels",
+      "Use under medical supervision in elderly",
+      "Avoid alcohol consumption",
+      "Do not discontinue abruptly",
+    ],
+
+    sideEffects: [
+      "Dry cough",
+      "Dizziness",
+      "Hypotension",
+      "Fatigue",
+      "Headache",
+      "Increased potassium levels",
+      "Kidney function changes",
+      "Rare: angioedema",
+    ],
+
+    whyChoose: [
+      "International quality standards",
+      "WHO-GMP certified manufacturing",
+      "Reliable cardiovascular formulations",
+      "Strong global presence",
+      "Commitment to safety and innovation",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "What are enalapril maleate tablets used for?",
+      answer:
+        "Enalapril Maleate Tablets are used to treat high blood pressure, heart failure, and kidney-related conditions by improving blood flow and reducing strain on the heart.",
+    },
+    {
+      question: "What are the side effects of taking enalapril?",
+      answer:
+        "Common side effects include dry cough, dizziness, fatigue, and low blood pressure, while rare reactions may require medical attention.",
+    },
+    {
+      question: "When is the best time to take enalapril maleate?",
+      answer:
+        "It is usually taken once daily at the same time each day, often in the morning, depending on medical advice.",
+    },
+    {
+      question: "Is enalapril maleate safe?",
+      answer:
+        "Yes, it is safe when prescribed and monitored by a healthcare professional with regular check-ups.",
+    },
+    {
+      question: "Can enalapril damage the kidneys?",
+      answer:
+        "Enalapril generally protects kidney function but requires monitoring in some patients.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What are enalapril maleate tablets used for?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Used for hypertension, heart failure, and kidney protection.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What are the side effects of taking enalapril?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Includes dry cough, dizziness, and fatigue.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "When is the best time to take enalapril maleate?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Usually taken once daily at the same time.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is enalapril maleate safe?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes, when used under medical supervision.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can enalapril damage the kidneys?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Generally protective but requires monitoring.",
+        },
+      },
+    ],
+  },
+},
+"diazepam-tablets": {
+  seo: {
+    title:
+      "Diazepam Tablets 5mg (CAS 439-14-5) | Anxiolytic & Sedative Therapy | Ivexia Pharma",
+    description:
+      "Explore Diazepam Tablets 5mg by Ivexia Pharma—an internationally trusted anxiolytic for anxiety, muscle spasms, and seizure control. Learn dosage, safety, indications, storage, and global manufacturing quality.",
+  },
+
+  meta: {
+    productName: "Diazepam Tablets",
+    strength: "5mg",
+    form: "Tablets",
+    category: "Anxiolytic / Sedative",
+    cas: "439-14-5",
+  },
+
+  hero: {
+    title:
+      "Diazepam Tablets – Anxiety Relief & Nervous System Stabilization",
+    description: [
+      "Clinically proven benzodiazepine therapy.",
+      "Effective for anxiety, muscle spasms, and seizures.",
+      "Fast-acting calming effect.",
+      "Supports neurological and psychiatric care.",
+      "Manufactured under global pharmaceutical standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Diazepam Tablets 5mg are widely used for managing anxiety, agitation, muscle spasms, and seizure disorders.",
+      "They belong to the benzodiazepine class and provide rapid calming effects on the central nervous system.",
+      "Diazepam enhances GABA activity, reducing excessive brain stimulation.",
+      "This results in sedation, relaxation, and improved neurological stability.",
+      "Ivexia Pharma ensures consistent quality and safety through advanced manufacturing.",
+    ],
+
+    importantInformation: [
+      "Product Name: Diazepam Tablets",
+      "Strength: 5mg",
+      "Category: Anxiolytic / Sedative",
+      "Form: Oral Tablets",
+      "CAS Number: 439-14-5",
+      "Manufacturer: Ivexia Pharma",
+    ],
+
+    indications: [
+      "Anxiety disorders",
+      "Acute stress reactions",
+      "Muscle spasms",
+      "Seizure disorders (adjunct therapy)",
+      "Alcohol withdrawal symptoms",
+      "Insomnia related to anxiety",
+    ],
+
+    maintenance: [
+      "Typically used for short-term treatment",
+      "Long-term use only under strict supervision",
+      "Gradual dose reduction required",
+      "Regular monitoring recommended",
+    ],
+
+    dosage: {
+      general: [
+        "Typical dose: 2mg to 10mg depending on condition",
+        "Standard strength: 5mg tablet",
+        "Frequency: 1–3 times daily",
+      ],
+      administration: [
+        "Take with or without food",
+        "Swallow whole with water",
+        "Follow prescribed schedule strictly",
+        "Avoid abrupt discontinuation",
+      ],
+    },
+
+    storage: [
+      "Store below 25°C",
+      "Protect from light and moisture",
+      "Keep in original packaging",
+      "Keep away from children",
+    ],
+
+    shelfLife: [
+      "24 to 36 months under recommended conditions",
+    ],
+
+    manufacturing: [
+      "Manufactured in WHO-GMP certified facilities",
+      "High-purity API (CAS 439-14-5)",
+      "Precision tablet formulation",
+      "Strict quality control testing",
+      "Stability and bioavailability studies",
+      "Compliance with international standards",
+    ],
+
+    precautions: [
+      "Use only under medical supervision",
+      "Avoid alcohol consumption",
+      "Risk of dependency with prolonged use",
+      "Use cautiously in elderly patients",
+      "Avoid during pregnancy unless prescribed",
+      "Do not operate heavy machinery",
+      "Gradual withdrawal required",
+    ],
+
+    sideEffects: [
+      "Drowsiness",
+      "Fatigue",
+      "Dizziness",
+      "Muscle weakness",
+      "Confusion",
+      "Memory impairment",
+      "Dependence (long-term use)",
+      "Respiratory depression (rare)",
+    ],
+
+    whyChoose: [
+      "International quality manufacturing",
+      "WHO-GMP certified facilities",
+      "Reliable anxiolytic formulations",
+      "Global export standards",
+      "Commitment to safety and innovation",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "What are diazepam tablets used for?",
+      answer:
+        "Diazepam Tablets are used to treat anxiety, muscle spasms, seizures, and alcohol withdrawal symptoms by calming the nervous system and promoting relaxation.",
+    },
+    {
+      question: "Is diazepam a strong sleeping pill?",
+      answer:
+        "Diazepam has sedative properties that may aid sleep, but it is primarily prescribed for anxiety and muscle relaxation.",
+    },
+    {
+      question: "What is the most common side effect of diazepam?",
+      answer:
+        "The most common side effect is drowsiness, along with fatigue or dizziness in some patients.",
+    },
+    {
+      question: "Why is diazepam given at night?",
+      answer:
+        "It is often taken at night due to its calming and sedative effects, helping patients relax and sleep better.",
+    },
+    {
+      question: "Is 2mg of diazepam very strong?",
+      answer:
+        "A 2mg dose is considered a low starting dose and is typically used for mild symptoms or sensitive patients.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What are diazepam tablets used for?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Used for anxiety, muscle spasms, seizures, and alcohol withdrawal.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is diazepam a strong sleeping pill?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "It has sedative effects but is mainly an anxiolytic.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is the most common side effect of diazepam?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Drowsiness is the most common side effect.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Why is diazepam given at night?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Due to its sedative and calming effects.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is 2mg of diazepam very strong?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "No, it is a low starting dose.",
+        },
+      },
+    ],
+  },
+},
+"methocarbamol-injection": {
+  seo: {
+    title:
+      "Methocarbamol Injection 100mg/ml (CAS 532-03-6) | Skeletal Muscle Relaxant | Ivexia Pharma",
+    description:
+      "Methocarbamol Injection 100mg/ml by Ivexia Pharma is a fast-acting skeletal muscle relaxant for acute musculoskeletal conditions. Discover dosage, indications, safety, and international manufacturing standards.",
+  },
+
+  meta: {
+    productName: "Methocarbamol Injection",
+    strength: "100mg/ml",
+    form: "Injectable Solution",
+    category: "Skeletal Muscle Relaxant",
+    cas: "532-03-6",
+  },
+
+  hero: {
+    title:
+      "Methocarbamol Injection – Rapid Muscle Relaxation Therapy",
+    description: [
+      "Fast-acting skeletal muscle relaxant.",
+      "Effective for acute musculoskeletal pain.",
+      "Reduces muscle spasms via CNS action.",
+      "High bioavailability with rapid onset.",
+      "Manufactured under global pharmaceutical standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Methocarbamol Injection 100mg/ml is widely used in clinical settings for the management of acute musculoskeletal conditions.",
+      "It acts centrally by depressing excessive nerve signals that cause muscle spasms.",
+      "Unlike analgesics, it targets the root cause of pain—muscle tightness.",
+      "This results in effective muscle relaxation and improved mobility.",
+      "Ivexia Pharma ensures high-quality sterile manufacturing and consistent product performance.",
+    ],
+
+    importantInformation: [
+      "Product Name: Methocarbamol Injection",
+      "Strength: 100mg/ml",
+      "Category: Skeletal Muscle Relaxant",
+      "Form: Injectable solution",
+      "CAS Number: 532-03-6",
+      "Manufacturer: Ivexia Pharma",
+    ],
+
+    indications: [
+      "Acute musculoskeletal pain",
+      "Muscle spasms",
+      "Orthopedic injuries",
+      "Post-traumatic muscle stiffness",
+      "Adjunct therapy in pain management",
+      "Neuromuscular conditions",
+    ],
+
+    maintenance: [
+      "Used for short-term treatment",
+      "Transition to oral therapy when stable",
+      "Combined with physiotherapy",
+      "Monitoring recommended",
+    ],
+
+    dosage: {
+      general: [
+        "Adults: 1g to 3g daily (divided doses)",
+        "Dose varies based on severity",
+        "Adjust according to clinical response",
+      ],
+      administration: [
+        "Administer via IV or IM route",
+        "IV injection should be given slowly",
+        "Maintain sterile technique",
+        "Monitor patient during administration",
+      ],
+    },
+
+    storage: [
+      "Store below 25°C",
+      "Protect from light",
+      "Do not freeze",
+      "Keep in original packaging",
+    ],
+
+    shelfLife: [
+      "24 to 36 months under recommended storage conditions",
+    ],
+
+    manufacturing: [
+      "Manufactured in WHO-GMP certified sterile facilities",
+      "High-purity API (CAS 532-03-6)",
+      "Advanced sterile injectable production",
+      "Aseptic filling technology",
+      "Multi-stage quality control testing",
+      "Compliance with global standards",
+    ],
+
+    precautions: [
+      "Use under medical supervision",
+      "Avoid alcohol consumption",
+      "Monitor for CNS depression",
+      "Use cautiously in elderly patients",
+      "Avoid rapid IV administration",
+      "Monitor kidney and liver function",
+      "Not recommended during pregnancy unless prescribed",
+    ],
+
+    sideEffects: [
+      "Drowsiness",
+      "Dizziness",
+      "Lightheadedness",
+      "Nausea",
+      "Blurred vision",
+      "Injection site irritation",
+      "Hypotension (rare)",
+      "Allergic reactions (rare)",
+    ],
+
+    whyChoose: [
+      "WHO-GMP certified sterile manufacturing",
+      "International quality compliance",
+      "Reliable muscle relaxant formulations",
+      "Strong export capabilities",
+      "Commitment to safety and innovation",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "Is methocarbamol a pain killer?",
+      answer:
+        "Methocarbamol Injection is not a direct painkiller. It reduces muscle spasms, which indirectly relieves pain associated with musculoskeletal conditions.",
+    },
+    {
+      question: "How to give IV methocarbamol?",
+      answer:
+        "Methocarbamol Injection should be administered slowly via IV by healthcare professionals using sterile techniques while monitoring patient response.",
+    },
+    {
+      question: "Can methocarbamol be given IM?",
+      answer:
+        "Yes, Methocarbamol Injection can be administered intramuscularly when needed, under medical supervision.",
+    },
+    {
+      question: "Is 500 mg of methocarbamol very strong?",
+      answer:
+        "A 500 mg dose is considered standard and not excessively strong; dosing depends on patient condition.",
+    },
+    {
+      question: "Can I take 2 methocarbamol 500 at once?",
+      answer:
+        "Dosage should follow medical advice; taking two tablets may be prescribed but should not be self-adjusted.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Is methocarbamol a pain killer?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "It is a muscle relaxant that indirectly relieves pain.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How to give IV methocarbamol?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Administer slowly via IV under supervision.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can methocarbamol be given IM?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes, under medical supervision.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is 500 mg of methocarbamol very strong?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "It is a standard dose.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can I take 2 methocarbamol 500 at once?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Follow medical advice for dosing.",
+        },
+      },
+    ],
+  },
+},
+"methocarbamol-tablets": {
+  seo: {
+    title:
+      "Methocarbamol Tablets 500mg (CAS 532-03-6) | Muscle Relaxant for Pain & Spasms | Ivexia Pharma",
+    description:
+      "Methocarbamol Tablets 500mg by Ivexia Pharma are an effective skeletal muscle relaxant for acute musculoskeletal pain and spasms. Learn dosage, safety, indications, storage, and international manufacturing standards.",
+  },
+
+  meta: {
+    productName: "Methocarbamol Tablets",
+    strength: "500mg",
+    form: "Tablets",
+    category: "Skeletal Muscle Relaxant",
+    cas: "532-03-6",
+  },
+
+  hero: {
+    title:
+      "Methocarbamol Tablets – Muscle Relaxation & Pain Relief",
+    description: [
+      "Centrally acting muscle relaxant.",
+      "Effective for muscle spasms and stiffness.",
+      "Improves mobility and reduces discomfort.",
+      "Targets root cause of muscle pain.",
+      "Manufactured under global pharmaceutical standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Methocarbamol Tablets 500mg are widely used in modern medicine as a skeletal muscle relaxant.",
+      "They provide effective relief from acute musculoskeletal conditions and muscle spasms.",
+      "Methocarbamol works centrally to reduce muscle tension rather than acting directly as a painkiller.",
+      "This helps restore mobility and reduce discomfort caused by muscle tightness.",
+      "Ivexia Pharma ensures consistent quality and global compliance.",
+    ],
+
+    importantInformation: [
+      "Product Name: Methocarbamol Tablets",
+      "Strength: 500mg",
+      "Category: Skeletal Muscle Relaxant",
+      "Form: Oral Tablets",
+      "CAS Number: 532-03-6",
+      "Manufacturer: Ivexia Pharma",
+    ],
+
+    indications: [
+      "Acute musculoskeletal pain",
+      "Muscle spasms",
+      "Back pain and neck stiffness",
+      "Sports injuries",
+      "Post-traumatic muscle tightness",
+      "Orthopedic rehabilitation",
+    ],
+
+    maintenance: [
+      "Used for short-term therapy",
+      "Combined with physiotherapy",
+      "Gradual improvement expected",
+      "Dose reduction as symptoms improve",
+    ],
+
+    dosage: {
+      general: [
+        "Initial dose: 1500mg to 2000mg daily",
+        "Maintenance dose: 1000mg to 1500mg daily",
+        "Administered in divided doses",
+      ],
+      administration: [
+        "Take with or without food",
+        "Swallow whole with water",
+        "Follow prescribed schedule",
+        "Do not exceed recommended dose",
+      ],
+    },
+
+    storage: [
+      "Store below 25°C",
+      "Protect from moisture and light",
+      "Keep in original packaging",
+      "Keep out of reach of children",
+    ],
+
+    shelfLife: [
+      "24 to 36 months under recommended storage conditions",
+    ],
+
+    manufacturing: [
+      "Manufactured in WHO-GMP certified facilities",
+      "High-purity API (CAS 532-03-6)",
+      "Advanced tablet compression technology",
+      "Strict quality control processes",
+      "Stability and dissolution testing",
+      "Compliance with global standards",
+    ],
+
+    precautions: [
+      "Use under medical supervision",
+      "Avoid alcohol consumption",
+      "May cause drowsiness",
+      "Use cautiously in elderly patients",
+      "Monitor kidney and liver function",
+      "Not recommended during pregnancy without advice",
+    ],
+
+    sideEffects: [
+      "Drowsiness",
+      "Dizziness",
+      "Lightheadedness",
+      "Nausea",
+      "Blurred vision",
+      "Headache",
+      "Allergic reactions (rare)",
+      "Low blood pressure (rare)",
+    ],
+
+    whyChoose: [
+      "WHO-GMP certified manufacturing",
+      "International quality standards",
+      "Reliable muscle relaxant formulation",
+      "Strong global presence",
+      "Commitment to safety and innovation",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "What is methocarbamol 500 tablet used for?",
+      answer:
+        "Methocarbamol Tablets 500mg are used to relieve muscle spasms, stiffness, and pain caused by musculoskeletal conditions by relaxing muscles and improving mobility.",
+    },
+    {
+      question: "How many times a day can you take 500 mg of methocarbamol?",
+      answer:
+        "Methocarbamol Tablets are typically taken multiple times daily in divided doses, depending on the condition and doctor’s prescription.",
+    },
+    {
+      question: "What are the most common side effects of methocarbamol?",
+      answer:
+        "Common side effects include drowsiness, dizziness, and lightheadedness, which are usually mild and temporary.",
+    },
+    {
+      question: "Who should not use methocarbamol?",
+      answer:
+        "Individuals with allergies to methocarbamol or severe kidney conditions should avoid it unless prescribed by a healthcare professional.",
+    },
+    {
+      question: "Can methocarbamol damage kidneys?",
+      answer:
+        "Methocarbamol is generally safe but should be used cautiously in patients with kidney conditions under medical supervision.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is methocarbamol 500 tablet used for?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Used for muscle spasms and musculoskeletal pain relief.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How many times a day can you take 500 mg of methocarbamol?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Taken in divided doses as prescribed.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What are the most common side effects of methocarbamol?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Includes drowsiness and dizziness.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Who should not use methocarbamol?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Patients with allergies or severe kidney issues.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can methocarbamol damage kidneys?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Generally safe but requires caution.",
+        },
+      },
+    ],
+  },
+},
+"methocarbamol-paracetamol-tablets": {
+  seo: {
+    title:
+      "Methocarbamol & Paracetamol Tablets (350mg + 250mg) | Muscle Relaxant + Pain Relief | Ivexia Pharma",
+    description:
+      "Methocarbamol & Paracetamol Tablets by Ivexia Pharma combine muscle relaxation with effective pain relief. Discover dosage, indications, safety profile, storage, and international-quality manufacturing standards.",
+  },
+
+  meta: {
+    productName: "Methocarbamol & Paracetamol Tablets",
+    strength: "350mg + 250mg",
+    form: "Tablets",
+    category: "Skeletal Muscle Relaxant + Analgesic",
+    cas: "Combination (Methocarbamol: 532-03-6)",
+  },
+
+  hero: {
+    title:
+      "Methocarbamol & Paracetamol Tablets – Dual Action Pain & Muscle Relief",
+    description: [
+      "Advanced dual-action formulation.",
+      "Relieves muscle spasms and pain simultaneously.",
+      "Improves mobility and recovery.",
+      "Combines muscle relaxant with analgesic.",
+      "Manufactured under global pharmaceutical standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Methocarbamol & Paracetamol Tablets are widely used in modern medicine for musculoskeletal pain and muscle spasms.",
+      "This combination works through a dual mechanism targeting both muscle stiffness and pain.",
+      "Methocarbamol relaxes muscles by reducing nerve impulses responsible for spasms.",
+      "Paracetamol provides effective pain relief and reduces fever.",
+      "Ivexia Pharma ensures precision manufacturing with global quality compliance.",
+    ],
+
+    importantInformation: [
+      "Product Name: Methocarbamol & Paracetamol Tablets",
+      "Strength: 350mg + 250mg",
+      "Category: Skeletal Muscle Relaxant + Analgesic",
+      "Form: Oral Tablets",
+      "CAS Number: Combination (Methocarbamol: 532-03-6)",
+      "Manufacturer: Ivexia Pharma",
+    ],
+
+    indications: [
+      "Acute musculoskeletal pain",
+      "Muscle spasms and stiffness",
+      "Back pain and neck pain",
+      "Sports injuries",
+      "Post-traumatic muscle discomfort",
+      "Orthopedic rehabilitation support",
+    ],
+
+    maintenance: [
+      "Typically used for short-term therapy",
+      "Can be combined with physiotherapy",
+      "Gradual reduction as symptoms improve",
+      "Monitoring for chronic conditions",
+    ],
+
+    dosage: {
+      general: [
+        "Typically 1–2 tablets, 2–3 times daily",
+        "Dose depends on severity",
+        "Follow physician guidance",
+      ],
+      administration: [
+        "Take with or without food",
+        "Swallow whole with water",
+        "Maintain consistent intervals",
+        "Do not exceed recommended dose",
+      ],
+    },
+
+    storage: [
+      "Store below 25°C",
+      "Protect from moisture and light",
+      "Keep in original packaging",
+      "Keep out of reach of children",
+    ],
+
+    shelfLife: [
+      "24 to 36 months under recommended storage conditions",
+    ],
+
+    manufacturing: [
+      "Manufactured in WHO-GMP certified facilities",
+      "High-quality API sourcing (CAS 532-03-6)",
+      "Advanced tablet compression technology",
+      "Uniform dosage distribution",
+      "Multi-stage quality control testing",
+      "Compliance with international standards",
+    ],
+
+    precautions: [
+      "Use under medical supervision",
+      "Avoid alcohol consumption",
+      "Monitor liver function",
+      "Use cautiously in kidney impairment",
+      "Avoid overdose",
+      "Not recommended during pregnancy without advice",
+      "Avoid prolonged use without consultation",
+    ],
+
+    sideEffects: [
+      "Drowsiness",
+      "Dizziness",
+      "Nausea",
+      "Headache",
+      "Lightheadedness",
+      "Blurred vision",
+      "Liver enzyme elevation (rare)",
+      "Allergic reactions (rare)",
+    ],
+
+    whyChoose: [
+      "WHO-GMP certified manufacturing",
+      "International quality standards",
+      "Reliable combination formulation",
+      "Strong global presence",
+      "Commitment to safety and innovation",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "Can methocarbamol and paracetamol be taken together?",
+      answer:
+        "Yes, Methocarbamol & Paracetamol Tablets are formulated to provide both muscle relaxation and pain relief, making them effective for musculoskeletal conditions.",
+    },
+    {
+      question: "What are the bad side effects of methocarbamol?",
+      answer:
+        "Common side effects include drowsiness, dizziness, and lightheadedness, with rare cases of allergic reactions or CNS depression.",
+    },
+    {
+      question: "Is methocarbamol good for pain relief?",
+      answer:
+        "Methocarbamol helps relieve pain associated with muscle spasms by relaxing muscles and reducing tension.",
+    },
+    {
+      question: "Is methocarbamol a high risk drug?",
+      answer:
+        "Methocarbamol is generally safe when used correctly, but misuse or high doses may increase the risk of side effects.",
+    },
+    {
+      question: "Is methocarbamol harmful to the liver?",
+      answer:
+        "Methocarbamol itself has low liver risk, but excessive Paracetamol intake may affect liver function.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Can methocarbamol and paracetamol be taken together?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes, this combination provides both muscle relaxation and pain relief.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What are the bad side effects of methocarbamol?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Includes drowsiness, dizziness, and rare allergic reactions.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is methocarbamol good for pain relief?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "It helps relieve pain caused by muscle spasms.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is methocarbamol a high risk drug?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Generally safe when used correctly.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is methocarbamol harmful to the liver?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Low risk alone, but caution with paracetamol.",
+        },
+      },
+    ],
+  },
+},
+"methocarbamol-diclofenac-potassium-and-paracetamol-tablets": {
+  seo: {
+    title:
+      "Methocarbamol + Diclofenac Potassium + Paracetamol Tablets (500mg/50mg/325mg) | Triple Pain Relief | Ivexia Pharma",
+    description:
+      "Discover Methocarbamol, Diclofenac Potassium and Paracetamol Tablets by Ivexia Pharma—an advanced triple-action formula for muscle spasms, inflammation, and pain relief. Learn dosage, safety, indications, and global standards.",
+  },
+
+  meta: {
+    productName: "Methocarbamol, Diclofenac Potassium and Paracetamol Tablets",
+    strength: "500mg + 50mg + 325mg",
+    form: "Tablets",
+    category: "Skeletal Muscle Relaxant + NSAID + Analgesic",
+    cas: "Combination (Methocarbamol: 532-03-6)",
+  },
+
+  hero: {
+    title:
+      "Methocarbamol + Diclofenac Potassium + Paracetamol Tablets – Triple Action Pain Relief",
+    description: [
+      "Advanced triple-action formulation.",
+      "Relieves pain, inflammation, and muscle spasms.",
+      "Combines muscle relaxant, NSAID, and analgesic.",
+      "Provides fast and sustained relief.",
+      "Manufactured under global pharmaceutical standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Methocarbamol, Diclofenac Potassium and Paracetamol Tablets are a highly effective combination therapy for musculoskeletal pain and inflammation.",
+      "This formulation combines three mechanisms of action for comprehensive symptom control.",
+      "Methocarbamol reduces muscle spasms via central nervous system action.",
+      "Diclofenac Potassium reduces inflammation by inhibiting prostaglandins.",
+      "Paracetamol provides reliable pain relief and fever reduction.",
+    ],
+
+    importantInformation: [
+      "Product Name: Methocarbamol, Diclofenac Potassium and Paracetamol Tablets",
+      "Strength: 500mg + 50mg + 325mg",
+      "Category: Skeletal Muscle Relaxant + NSAID + Analgesic",
+      "Form: Oral Tablets",
+      "CAS Number: Combination (Methocarbamol: 532-03-6)",
+      "Manufacturer: Ivexia Pharma",
+    ],
+
+    indications: [
+      "Acute musculoskeletal pain",
+      "Muscle spasms and stiffness",
+      "Back pain and cervical pain",
+      "Sports injuries and trauma",
+      "Post-surgical pain",
+      "Orthopedic conditions",
+    ],
+
+    maintenance: [
+      "Short-term use recommended",
+      "Gradual reduction after symptom relief",
+      "Combined with physiotherapy",
+      "Monitoring required for prolonged use",
+    ],
+
+    dosage: {
+      general: [
+        "Typically 1 tablet, 2–3 times daily",
+        "Dose depends on severity",
+        "Follow physician guidance",
+      ],
+      administration: [
+        "Take after meals",
+        "Swallow whole with water",
+        "Maintain consistent intervals",
+        "Do not exceed recommended dose",
+      ],
+    },
+
+    storage: [
+      "Store below 25°C",
+      "Protect from moisture and light",
+      "Keep in original packaging",
+      "Keep out of reach of children",
+    ],
+
+    shelfLife: [
+      "24 to 36 months under recommended storage conditions",
+    ],
+
+    manufacturing: [
+      "Manufactured in WHO-GMP certified facilities",
+      "High-quality API sourcing",
+      "Advanced tablet compression technology",
+      "Uniform drug distribution",
+      "Multi-stage quality checks",
+      "Compliance with global regulatory standards",
+    ],
+
+    precautions: [
+      "Use under medical supervision",
+      "Avoid alcohol consumption",
+      "Monitor liver function",
+      "Monitor kidney function",
+      "Take after food to avoid gastric irritation",
+      "Avoid prolonged use without advice",
+      "Use cautiously in elderly patients",
+    ],
+
+    sideEffects: [
+      "Drowsiness",
+      "Dizziness",
+      "Nausea",
+      "Gastric irritation",
+      "Headache",
+      "Liver enzyme changes (rare)",
+      "Kidney function changes (rare)",
+      "Allergic reactions (rare)",
+    ],
+
+    whyChoose: [
+      "WHO-GMP certified manufacturing",
+      "International quality standards",
+      "Reliable combination therapies",
+      "Strong global presence",
+      "Commitment to innovation and safety",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "What is methocarbamol paracetamol and diclofenac potassium tablets used for?",
+      answer:
+        "This combination is used to treat musculoskeletal pain, inflammation, and muscle spasms by providing muscle relaxation, anti-inflammatory action, and pain relief.",
+    },
+    {
+      question: "Is methocarbamol a sleeping pill?",
+      answer:
+        "Methocarbamol is not a sleeping pill but a muscle relaxant. However, it may cause drowsiness as a side effect.",
+    },
+    {
+      question: "Is methocarbamol a strong painkiller?",
+      answer:
+        "Methocarbamol is not a direct painkiller. It reduces muscle spasms, which indirectly relieves pain when used alone or in combination.",
+    },
+    {
+      question: "Is methocarbamol safe for kidneys?",
+      answer:
+        "Methocarbamol is generally safe, but caution is needed when combined with NSAIDs like diclofenac due to potential kidney effects.",
+    },
+    {
+      question: "What are the bad side effects of methocarbamol?",
+      answer:
+        "Common side effects include drowsiness, dizziness, and nausea, while rare reactions include allergic responses or low blood pressure.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is methocarbamol paracetamol and diclofenac potassium tablets used for?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Used for musculoskeletal pain, inflammation, and muscle spasms.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is methocarbamol a sleeping pill?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "No, but it may cause drowsiness.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is methocarbamol a strong painkiller?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "No, it works by relaxing muscles.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is methocarbamol safe for kidneys?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Generally safe but requires caution with NSAIDs.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What are the bad side effects of methocarbamol?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Includes drowsiness, dizziness, and nausea.",
+        },
+      },
+    ],
+  },
+},
+"methocarbamol-ibuprofen-tablets": {
+  seo: {
+    title:
+      "Methocarbamol & Ibuprofen Tablets (750mg + 200mg / 400mg) | Muscle Relaxant + Anti-Inflammatory | Ivexia Pharma",
+    description:
+      "Methocarbamol & Ibuprofen Tablets by Ivexia Pharma deliver dual-action relief for muscle spasms, inflammation, and pain. Discover dosage, indications, safety profile, and global manufacturing standards.",
+  },
+
+  meta: {
+    productName: "Methocarbamol & Ibuprofen Tablets",
+    strength: "750mg + 200mg / 750mg + 400mg",
+    form: "Tablets",
+    category: "Skeletal Muscle Relaxant + NSAID",
+    cas: "Combination (Methocarbamol: 532-03-6)",
+  },
+
+  hero: {
+    title:
+      "Methocarbamol & Ibuprofen Tablets – Dual Action Muscle & Pain Relief",
+    description: [
+      "Advanced dual-action formulation.",
+      "Relieves muscle spasms and inflammation.",
+      "Combines muscle relaxant with NSAID.",
+      "Improves mobility and recovery.",
+      "Manufactured under global pharmaceutical standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Methocarbamol & Ibuprofen Tablets represent a modern approach to managing musculoskeletal pain and inflammation.",
+      "This formulation combines muscle relaxation with anti-inflammatory action in a single tablet.",
+      "Methocarbamol reduces muscle spasms via central nervous system action.",
+      "Ibuprofen reduces inflammation by inhibiting prostaglandin synthesis.",
+      "Together, they provide fast relief, reduced stiffness, and improved recovery.",
+    ],
+
+    importantInformation: [
+      "Product Name: Methocarbamol & Ibuprofen Tablets",
+      "Strength: 750mg + 200mg / 750mg + 400mg",
+      "Category: Skeletal Muscle Relaxant + NSAID",
+      "Form: Oral Tablets",
+      "CAS Number: Combination (Methocarbamol: 532-03-6)",
+      "Manufacturer: Ivexia Pharma",
+    ],
+
+    indications: [
+      "Acute musculoskeletal pain",
+      "Muscle spasms and stiffness",
+      "Back pain and neck pain",
+      "Sports injuries",
+      "Inflammatory musculoskeletal conditions",
+      "Post-traumatic muscle discomfort",
+    ],
+
+    maintenance: [
+      "Recommended for short-term use",
+      "Can be combined with physiotherapy",
+      "Gradual dose reduction after improvement",
+      "Monitoring required for prolonged therapy",
+    ],
+
+    dosage: {
+      general: [
+        "Typically 1 tablet, 2–3 times daily",
+        "Dose depends on severity",
+        "Follow physician guidance",
+      ],
+      administration: [
+        "Take after meals",
+        "Swallow whole with water",
+        "Maintain consistent intervals",
+        "Do not exceed recommended dose",
+      ],
+    },
+
+    storage: [
+      "Store below 25°C",
+      "Protect from moisture and light",
+      "Keep in original packaging",
+      "Keep out of reach of children",
+    ],
+
+    shelfLife: [
+      "24 to 36 months under recommended storage conditions",
+    ],
+
+    manufacturing: [
+      "Manufactured in WHO-GMP certified facilities",
+      "High-quality API sourcing",
+      "Advanced tablet compression technology",
+      "Uniform drug distribution",
+      "Multi-stage quality control testing",
+      "Compliance with international standards",
+    ],
+
+    precautions: [
+      "Use under medical supervision",
+      "Avoid alcohol consumption",
+      "Monitor kidney function",
+      "Take after food to reduce gastric irritation",
+      "Avoid prolonged use without consultation",
+      "Use cautiously in elderly patients",
+      "Monitor blood pressure in long-term use",
+    ],
+
+    sideEffects: [
+      "Drowsiness",
+      "Dizziness",
+      "Nausea",
+      "Gastric irritation",
+      "Headache",
+      "Heartburn",
+      "Kidney function changes (rare)",
+      "Allergic reactions (rare)",
+    ],
+
+    whyChoose: [
+      "WHO-GMP certified manufacturing",
+      "International quality standards",
+      "Reliable combination therapies",
+      "Strong global presence",
+      "Commitment to innovation and safety",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "What do methocarbamol and ibuprofen do?",
+      answer:
+        "Methocarbamol & Ibuprofen Tablets work by relaxing muscles and reducing inflammation, helping relieve pain, stiffness, and swelling in musculoskeletal conditions.",
+    },
+    {
+      question: "Is methocarbamol a strong painkiller?",
+      answer:
+        "Methocarbamol is not a direct painkiller; it relaxes muscles and enhances pain relief when combined with NSAIDs like ibuprofen.",
+    },
+    {
+      question: "What brand name is methocarbamol ibuprofen combination?",
+      answer:
+        "Methocarbamol & Ibuprofen Tablets are available under different brand names depending on the manufacturer, including Ivexia Pharma.",
+    },
+    {
+      question: "What is the most common side effect of methocarbamol?",
+      answer:
+        "The most common side effect is drowsiness, along with dizziness or lightheadedness in some patients.",
+    },
+    {
+      question: "Who should not use methocarbamol?",
+      answer:
+        "Patients with allergies, severe kidney or liver conditions, or those advised against CNS depressants should consult a doctor before use.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What do methocarbamol and ibuprofen do?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "They relax muscles and reduce inflammation to relieve pain.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is methocarbamol a strong painkiller?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "No, it works by relaxing muscles.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What brand name is methocarbamol ibuprofen combination?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Available under various brand names.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is the most common side effect of methocarbamol?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Drowsiness is the most common side effect.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Who should not use methocarbamol?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Patients with allergies or certain conditions.",
+        },
+      },
+    ],
+  },
+},
+"methocarbamol-and-nimesulide-tablets": {
+  seo: {
+    title:
+      "Methocarbamol & Nimesulide Tablets (1000mg + 100mg) | Muscle Relaxant + Anti-Inflammatory | Ivexia Pharma",
+    description:
+      "Explore Methocarbamol and Nimesulide Tablets by Ivexia Pharma—an advanced combination for muscle spasms, inflammation, and pain relief. Learn dosage, indications, precautions, and global-quality manufacturing standards.",
+  },
+
+  meta: {
+    productName: "Methocarbamol and Nimesulide Tablets",
+    strength: "1000mg + 100mg",
+    form: "Tablets",
+    category: "Skeletal Muscle Relaxant + NSAID",
+    cas: "Combination (Methocarbamol: 532-03-6)",
+  },
+
+  hero: {
+    title:
+      "Methocarbamol & Nimesulide Tablets – Dual Action Pain & Inflammation Relief",
+    description: [
+      "Advanced dual-action formulation.",
+      "Relieves muscle spasms and inflammation.",
+      "Combines muscle relaxant with NSAID.",
+      "Provides rapid and sustained relief.",
+      "Manufactured under global pharmaceutical standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Methocarbamol and Nimesulide Tablets represent an advanced approach to managing musculoskeletal disorders and inflammatory pain.",
+      "This formulation combines muscle relaxation with anti-inflammatory action.",
+      "Methocarbamol reduces muscle spasms via central nervous system action.",
+      "Nimesulide reduces inflammation by inhibiting prostaglandin synthesis.",
+      "Together, they ensure faster relief, improved mobility, and enhanced patient comfort.",
+    ],
+
+    importantInformation: [
+      "Product Name: Methocarbamol and Nimesulide Tablets",
+      "Strength: 1000mg + 100mg",
+      "Category: Skeletal Muscle Relaxant + NSAID",
+      "Form: Oral Tablets",
+      "CAS Number: Combination (Methocarbamol: 532-03-6)",
+      "Manufacturer: Ivexia Pharma",
+    ],
+
+    indications: [
+      "Acute musculoskeletal pain",
+      "Muscle spasms and stiffness",
+      "Back pain and cervical pain",
+      "Sports injuries and trauma",
+      "Inflammatory musculoskeletal conditions",
+      "Post-traumatic recovery",
+    ],
+
+    maintenance: [
+      "Recommended for short-term therapy",
+      "Combined with physiotherapy and rest",
+      "Gradual dose reduction after improvement",
+      "Monitoring required for prolonged use",
+    ],
+
+    dosage: {
+      general: [
+        "Typically 1 tablet, 2 times daily",
+        "Dose varies based on severity",
+        "Follow physician guidance",
+      ],
+      administration: [
+        "Take after meals",
+        "Swallow whole with water",
+        "Maintain consistent intervals",
+        "Do not exceed prescribed dosage",
+      ],
+    },
+
+    storage: [
+      "Store below 25°C",
+      "Protect from moisture and light",
+      "Keep in original packaging",
+      "Keep out of reach of children",
+    ],
+
+    shelfLife: [
+      "24 to 36 months under recommended storage conditions",
+    ],
+
+    manufacturing: [
+      "Manufactured in WHO-GMP certified facilities",
+      "High-quality API sourcing",
+      "Advanced tablet compression technology",
+      "Uniform dosage distribution",
+      "Multi-stage quality control testing",
+      "Compliance with global regulatory standards",
+    ],
+
+    precautions: [
+      "Use under medical supervision",
+      "Avoid alcohol consumption",
+      "Monitor liver function",
+      "Avoid prolonged use",
+      "Use cautiously in elderly patients",
+      "Take after food to reduce gastric irritation",
+      "Avoid overdose",
+    ],
+
+    sideEffects: [
+      "Drowsiness",
+      "Dizziness",
+      "Nausea",
+      "Gastric irritation",
+      "Headache",
+      "Liver enzyme elevation (rare)",
+      "Allergic reactions (rare)",
+      "Fatigue",
+    ],
+
+    whyChoose: [
+      "WHO-GMP certified manufacturing",
+      "International quality standards",
+      "Reliable combination therapies",
+      "Strong global presence",
+      "Commitment to innovation and safety",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "Is methocarbamol a strong painkiller?",
+      answer:
+        "Methocarbamol is not a direct painkiller. It works by relaxing muscles and indirectly reducing pain caused by muscle spasms.",
+    },
+    {
+      question: "Is nimesulide a strong painkiller?",
+      answer:
+        "Nimesulide is a potent anti-inflammatory drug used for short-term relief of pain and inflammation in musculoskeletal conditions.",
+    },
+    {
+      question: "Is methocarbamol a sleeping pill?",
+      answer:
+        "Methocarbamol is not a sleeping pill, but it may cause drowsiness due to its central nervous system effects.",
+    },
+    {
+      question: "Does methocarbamol make you sleepy?",
+      answer:
+        "Yes, Methocarbamol may cause mild sedation or drowsiness in some patients.",
+    },
+    {
+      question: "When is the best time to take methocarbamol?",
+      answer:
+        "Methocarbamol is typically taken after meals at regular intervals as prescribed to ensure optimal therapeutic effectiveness.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Is methocarbamol a strong painkiller?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "It is a muscle relaxant that indirectly relieves pain.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is nimesulide a strong painkiller?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes, it is a potent anti-inflammatory drug.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is methocarbamol a sleeping pill?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "No, but it may cause drowsiness.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Does methocarbamol make you sleepy?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes, mild sedation may occur.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "When is the best time to take methocarbamol?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "After meals at regular intervals.",
+        },
+      },
+    ],
+  },
+},
+"tizanidine-hydrochloride-tablets": {
+  seo: {
+    title:
+      "Tizanidine Hydrochloride Tablets 2mg/4mg (CAS 51322-75-9) | Muscle Relaxant Therapy | Ivexia Pharma",
+    description:
+      "Discover Tizanidine Hydrochloride Tablets by Ivexia Pharma—an advanced skeletal muscle relaxant for spasticity and muscle spasms. Learn dosage, indications, precautions, and global-quality manufacturing standards.",
+  },
+
+  meta: {
+    productName: "Tizanidine Hydrochloride Tablets",
+    strength: "2mg / 4mg",
+    form: "Tablets",
+    category: "Skeletal Muscle Relaxant",
+    cas: "51322-75-9",
+  },
+
+  hero: {
+    title:
+      "Tizanidine Hydrochloride Tablets – Muscle Spasticity Control",
+    description: [
+      "Advanced centrally acting muscle relaxant.",
+      "Effective for neurological spasticity conditions.",
+      "Reduces muscle stiffness and spasms.",
+      "Improves mobility and patient comfort.",
+      "Manufactured under global pharmaceutical standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Tizanidine Hydrochloride Tablets are widely used as an effective skeletal muscle relaxant for managing muscle spasticity and neuromuscular disorders.",
+      "They work by acting on the central nervous system to reduce abnormal muscle tone.",
+      "Tizanidine functions as an alpha-2 adrenergic agonist, inhibiting motor neuron activity.",
+      "This results in controlled muscle relaxation while preserving functional strength.",
+      "Ivexia Pharma ensures precision manufacturing and global quality compliance.",
+    ],
+
+    importantInformation: [
+      "Product Name: Tizanidine Hydrochloride Tablets",
+      "Strength: 2mg / 4mg",
+      "Category: Skeletal Muscle Relaxant",
+      "Form: Oral Tablets",
+      "CAS Number: 51322-75-9",
+      "Manufacturer: Ivexia Pharma",
+    ],
+
+    indications: [
+      "Muscle spasticity due to neurological disorders",
+      "Multiple sclerosis-related spasticity",
+      "Spinal cord injuries",
+      "Muscle stiffness and spasms",
+      "Chronic musculoskeletal conditions",
+      "Post-injury muscle tightness",
+    ],
+
+    maintenance: [
+      "Gradual dose titration required",
+      "Long-term therapy under supervision",
+      "Regular liver function monitoring",
+      "Dose adjustment based on response",
+    ],
+
+    dosage: {
+      general: [
+        "Initial dose: 2mg",
+        "Gradual increase as needed",
+        "Maximum dose as prescribed",
+      ],
+      administration: [
+        "Take with or without food (consistency recommended)",
+        "Swallow whole with water",
+        "Maintain regular dosing schedule",
+        "Avoid abrupt discontinuation",
+      ],
+    },
+
+    storage: [
+      "Store below 25°C",
+      "Protect from moisture and light",
+      "Keep in original packaging",
+      "Keep out of reach of children",
+    ],
+
+    shelfLife: [
+      "24 to 36 months under recommended storage conditions",
+    ],
+
+    manufacturing: [
+      "Manufactured in WHO-GMP certified facilities",
+      "High-purity API (CAS 51322-75-9)",
+      "Advanced tablet formulation technology",
+      "Uniform dosage consistency",
+      "Multi-stage quality control testing",
+      "Compliance with international standards",
+    ],
+
+    precautions: [
+      "Use under medical supervision",
+      "Monitor liver function regularly",
+      "Avoid alcohol consumption",
+      "May cause drowsiness",
+      "Use cautiously in elderly patients",
+      "Avoid abrupt discontinuation",
+      "Monitor blood pressure",
+    ],
+
+    sideEffects: [
+      "Drowsiness",
+      "Dizziness",
+      "Dry mouth",
+      "Fatigue",
+      "Hypotension",
+      "Weakness",
+      "Liver enzyme elevation (rare)",
+      "Hallucinations (rare)",
+    ],
+
+    whyChoose: [
+      "WHO-GMP certified manufacturing",
+      "International quality standards",
+      "Reliable muscle relaxant therapy",
+      "Strong global presence",
+      "Commitment to safety and innovation",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "What is the use of tizanidine hydrochloride tablet?",
+      answer:
+        "Tizanidine Hydrochloride Tablets are used to treat muscle spasticity caused by neurological conditions by relaxing muscles and improving mobility.",
+    },
+    {
+      question: "Is tizanidine considered a strong muscle relaxer?",
+      answer:
+        "Yes, Tizanidine is considered a potent muscle relaxant due to its targeted central nervous system action.",
+    },
+    {
+      question: "What is the most common side effect of tizanidine?",
+      answer:
+        "The most common side effect is drowsiness, along with dizziness and fatigue in some patients.",
+    },
+    {
+      question: "Is tizanidine used for sleep?",
+      answer:
+        "Tizanidine is not primarily a sleep medication but may cause sedation that can help with sleep in some cases.",
+    },
+    {
+      question: "Is it okay to take tizanidine every night?",
+      answer:
+        "It may be taken regularly if prescribed, but long-term use requires medical supervision.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is the use of tizanidine hydrochloride tablet?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Used to treat muscle spasticity and improve mobility.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is tizanidine considered a strong muscle relaxer?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes, it is a potent centrally acting muscle relaxant.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is the most common side effect of tizanidine?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Drowsiness is the most common side effect.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is tizanidine used for sleep?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Not primarily, but it may cause sedation.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is it okay to take tizanidine every night?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes, if prescribed and monitored by a doctor.",
+        },
+      },
+    ],
+  },
+},
+"prednisolone-tablets": {
+  seo: {
+    title:
+      "Prednisolone Tablets 5mg (CAS 50-24-8) | Corticosteroid Anti-Inflammatory Therapy | Ivexia Pharma",
+    description:
+      "Prednisolone Tablets 5mg by Ivexia Pharma are a globally trusted corticosteroid for inflammation, autoimmune disorders, and allergic conditions. Explore dosage, safety, indications, and international manufacturing standards.",
+  },
+
+  meta: {
+    productName: "Prednisolone Tablets",
+    strength: "5mg",
+    form: "Tablets",
+    category: "Corticosteroid (Steroid)",
+    cas: "50-24-8",
+  },
+
+  hero: {
+    title:
+      "Prednisolone Tablets – Anti-Inflammatory & Immune Control Therapy",
+    description: [
+      "Potent corticosteroid formulation.",
+      "Effective for inflammation and autoimmune disorders.",
+      "Reduces immune response and swelling.",
+      "Widely used across multiple therapeutic areas.",
+      "Manufactured under global pharmaceutical standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Prednisolone Tablets 5mg are widely prescribed corticosteroids used to manage inflammation, allergies, and autoimmune diseases.",
+      "They act by suppressing immune responses and reducing inflammatory pathways.",
+      "Prednisolone provides rapid relief in conditions such as asthma, arthritis, and severe allergic reactions.",
+      "Its versatility makes it essential in modern medical practice.",
+      "Ivexia Pharma ensures precision manufacturing and global compliance.",
+    ],
+
+    importantInformation: [
+      "Product Name: Prednisolone Tablets",
+      "Strength: 5mg",
+      "Category: Corticosteroid (Steroid)",
+      "Form: Oral Tablets",
+      "CAS Number: 50-24-8",
+      "Manufacturer: Ivexia Pharma",
+    ],
+
+    indications: [
+      "Inflammatory conditions (arthritis, asthma)",
+      "Allergic disorders (severe allergies, skin reactions)",
+      "Autoimmune diseases (lupus, rheumatoid arthritis)",
+      "Respiratory disorders",
+      "Skin diseases (eczema, psoriasis)",
+      "Eye inflammation",
+      "Hormonal disorders",
+    ],
+
+    maintenance: [
+      "Dose tapering required for long-term use",
+      "Regular monitoring of health parameters",
+      "Adjustments based on response",
+      "Long-term therapy under supervision",
+    ],
+
+    dosage: {
+      general: [
+        "Dose depends on severity of condition",
+        "Typical starting dose: 5mg or higher as prescribed",
+        "Maintenance dose adjusted based on response",
+      ],
+      administration: [
+        "Take with food to reduce irritation",
+        "Swallow whole with water",
+        "Follow prescribed schedule strictly",
+        "Do not stop abruptly",
+      ],
+    },
+
+    storage: [
+      "Store below 25°C",
+      "Protect from moisture and light",
+      "Keep in original packaging",
+      "Keep out of reach of children",
+    ],
+
+    shelfLife: [
+      "24 to 36 months under recommended storage conditions",
+    ],
+
+    manufacturing: [
+      "Manufactured in WHO-GMP certified facilities",
+      "High-purity API (CAS 50-24-8)",
+      "Advanced tablet formulation technology",
+      "Uniform dosage consistency",
+      "Multi-stage quality control testing",
+      "Compliance with international standards",
+    ],
+
+    precautions: [
+      "Use under medical supervision",
+      "Avoid abrupt discontinuation",
+      "Monitor blood sugar levels",
+      "Monitor blood pressure",
+      "Use cautiously in infections",
+      "Avoid prolonged use without consultation",
+      "Monitor bone health",
+    ],
+
+    sideEffects: [
+      "Weight gain",
+      "Increased appetite",
+      "Mood changes",
+      "Insomnia",
+      "Elevated blood sugar",
+      "Increased risk of infections",
+      "Bone thinning (long-term use)",
+      "Fluid retention",
+    ],
+
+    whyChoose: [
+      "WHO-GMP certified manufacturing",
+      "International quality standards",
+      "Reliable corticosteroid formulations",
+      "Strong global presence",
+      "Commitment to safety and innovation",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "What is a prednisolone tablet used for?",
+      answer:
+        "Prednisolone Tablets are used to treat inflammation, allergies, and autoimmune diseases by suppressing immune responses and reducing swelling.",
+    },
+    {
+      question: "What disease is prednisone used to treat?",
+      answer:
+        "Prednisone, similar to Prednisolone, is used for conditions like arthritis, asthma, lupus, and severe allergies.",
+    },
+    {
+      question: "What are the side effects of prednisolone?",
+      answer:
+        "Common side effects include weight gain, mood changes, increased appetite, and insomnia, especially with prolonged use.",
+    },
+    {
+      question: "Is prednisolone a strong steroid?",
+      answer:
+        "Yes, Prednisolone is a potent corticosteroid with strong anti-inflammatory and immunosuppressive effects.",
+    },
+    {
+      question: "Is it safe to use prednisolone?",
+      answer:
+        "Prednisolone is safe when used as prescribed, but long-term use requires monitoring to avoid complications.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is a prednisolone tablet used for?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Used for inflammation, allergies, and autoimmune diseases.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What disease is prednisone used to treat?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Used for arthritis, asthma, lupus, and allergies.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What are the side effects of prednisolone?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Includes weight gain, mood changes, and infection risk.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is prednisolone a strong steroid?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes, it is a potent corticosteroid.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is it safe to use prednisolone?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Safe when prescribed and monitored.",
+        },
+      },
+    ],
+  },
+},
+"ondansetran-hydrochloride-dihydrate-tablets": {
+  seo: {
+    title:
+      "Ondansetron Hydrochloride Dihydrate Tablets 4mg/8mg (CAS 103639-04-9) | Anti-Emetic Therapy | Ivexia Pharma",
+    description:
+      "Ondansetron Hydrochloride Dihydrate Tablets by Ivexia Pharma provide effective prevention of nausea and vomiting caused by chemotherapy, surgery, and infections. Discover dosage, safety, indications, and global-quality standards.",
+  },
+
+  meta: {
+    productName: "Ondansetron Hydrochloride Dihydrate Tablets",
+    strength: "4mg / 8mg",
+    form: "Tablets",
+    category: "Anti-Emetic",
+    cas: "103639-04-9",
+  },
+
+  hero: {
+    title:
+      "Ondansetron Hydrochloride Dihydrate Tablets – Nausea & Vomiting Control",
+    description: [
+      "Clinically advanced anti-emetic therapy.",
+      "Prevents nausea and vomiting effectively.",
+      "Targets serotonin (5-HT3) receptors.",
+      "Rapid onset with reliable action.",
+      "Manufactured under global pharmaceutical standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Ondansetron Hydrochloride Dihydrate Tablets are widely recognized as one of the most effective anti-emetic medications.",
+      "They work by blocking serotonin (5-HT3) receptors in the brain and gastrointestinal tract.",
+      "This prevents the activation of the vomiting reflex.",
+      "They are commonly used in chemotherapy, radiotherapy, and post-operative care.",
+      "Ivexia Pharma ensures precision manufacturing and global compliance.",
+    ],
+
+    importantInformation: [
+      "Product Name: Ondansetron Hydrochloride Dihydrate Tablets",
+      "Strength: 4mg / 8mg",
+      "Category: Anti-Emetic",
+      "Form: Oral Tablets",
+      "CAS Number: 103639-04-9",
+      "Manufacturer: Ivexia Pharma",
+    ],
+
+    indications: [
+      "Chemotherapy-induced nausea and vomiting (CINV)",
+      "Radiotherapy-induced nausea",
+      "Post-operative nausea and vomiting (PONV)",
+      "Gastrointestinal disturbances",
+      "Drug-induced nausea",
+    ],
+
+    maintenance: [
+      "Administered before or after triggering events",
+      "Short-term therapy in most cases",
+      "Dose adjustment based on response",
+      "Monitoring required in chronic conditions",
+    ],
+
+    dosage: {
+      general: [
+        "Adults: 4mg to 8mg depending on condition",
+        "Dose as prescribed by physician",
+      ],
+      administration: [
+        "Take with or without food",
+        "Swallow whole with water",
+        "Follow prescribed schedule strictly",
+        "Do not exceed recommended dose",
+      ],
+    },
+
+    storage: [
+      "Store below 25°C",
+      "Protect from moisture and light",
+      "Keep in original packaging",
+      "Keep out of reach of children",
+    ],
+
+    shelfLife: [
+      "24 to 36 months under recommended storage conditions",
+    ],
+
+    manufacturing: [
+      "Manufactured in WHO-GMP certified facilities",
+      "High-purity API (CAS 103639-04-9)",
+      "Advanced tablet formulation technology",
+      "Uniform dosage consistency",
+      "Multi-stage quality control testing",
+      "Compliance with international standards",
+    ],
+
+    precautions: [
+      "Use under medical supervision",
+      "Monitor patients with cardiac conditions",
+      "Avoid overdose",
+      "Use cautiously in liver impairment",
+      "Monitor for drug interactions",
+      "Avoid alcohol consumption",
+    ],
+
+    sideEffects: [
+      "Headache",
+      "Constipation",
+      "Dizziness",
+      "Fatigue",
+      "QT interval prolongation (rare)",
+      "Allergic reactions (rare)",
+    ],
+
+    whyChoose: [
+      "WHO-GMP certified manufacturing",
+      "International quality standards",
+      "Reliable anti-emetic formulations",
+      "Strong global presence",
+      "Commitment to safety and innovation",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "What is Ondansetron HCl dihydrate used for?",
+      answer:
+        "Ondansetron Hydrochloride Dihydrate Tablets are used to prevent and treat nausea and vomiting caused by chemotherapy, surgery, or gastrointestinal conditions.",
+    },
+    {
+      question: "What is the use of ondansetron hydrochloride tablet?",
+      answer:
+        "Ondansetron tablets are used to control nausea and vomiting in patients undergoing chemotherapy, radiotherapy, or surgery.",
+    },
+    {
+      question: "Is ondansetron a pain relief?",
+      answer:
+        "No, Ondansetron is not a pain reliever. It is an anti-emetic medication used to prevent nausea and vomiting.",
+    },
+    {
+      question: "What is hydrochloride dihydrate used for?",
+      answer:
+        "Hydrochloride dihydrate refers to a chemical form that improves drug stability and absorption.",
+    },
+    {
+      question: "Is ondansetron a sleeping pill?",
+      answer:
+        "No, Ondansetron is not a sleeping pill. It is used to prevent nausea and vomiting.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is Ondansetron HCl dihydrate used for?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Used to prevent nausea and vomiting.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is the use of ondansetron hydrochloride tablet?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Used to control nausea and vomiting.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is ondansetron a pain relief?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "No, it is an anti-emetic.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is hydrochloride dihydrate used for?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Improves drug stability and absorption.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is ondansetron a sleeping pill?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "No, it is not a sleep medication.",
+        },
+      },
+    ],
+  },
+},
+"ondansetran-hydrochloride-dihydrate-injection": {
+  seo: {
+    title:
+      "Ondansetron Hydrochloride Dihydrate Injection (4mg/2ml, 8mg/4ml) | Anti-Emetic IV Therapy | Ivexia Pharma",
+    description:
+      "Ondansetron Hydrochloride Dihydrate Injection by Ivexia Pharma offers rapid relief from nausea and vomiting in clinical settings. Explore dosage, indications, safety, and global sterile manufacturing standards.",
+  },
+
+  meta: {
+    productName: "Ondansetron Hydrochloride Dihydrate Injection",
+    strength: "4mg/2ml, 8mg/4ml",
+    form: "Injectable Solution",
+    category: "Anti-Emetic",
+    cas: "103639-04-9",
+  },
+
+  hero: {
+    title:
+      "Ondansetron Hydrochloride Dihydrate Injection – Rapid Anti-Emetic Therapy",
+    description: [
+      "Hospital-grade anti-emetic formulation.",
+      "Rapid relief from nausea and vomiting.",
+      "Targets serotonin (5-HT3) receptors.",
+      "High bioavailability with fast onset.",
+      "Manufactured under global sterile standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Ondansetron Hydrochloride Dihydrate Injection is a widely used anti-emetic for rapid management of nausea and vomiting in hospital settings.",
+      "It provides immediate therapeutic action, making it suitable for emergency and critical care.",
+      "The formulation works by blocking serotonin (5-HT3) receptors in the brain and gastrointestinal tract.",
+      "This prevents activation of the vomiting reflex and ensures effective symptom control.",
+      "Ivexia Pharma ensures sterile manufacturing and global quality compliance.",
+    ],
+
+    importantInformation: [
+      "Product Name: Ondansetron Hydrochloride Dihydrate Injection",
+      "Strength: 4mg/2ml, 8mg/4ml",
+      "Category: Anti-Emetic",
+      "Form: Injectable solution",
+      "CAS Number: 103639-04-9",
+      "Manufacturer: Ivexia Pharma",
+    ],
+
+    indications: [
+      "Chemotherapy-induced nausea and vomiting (CINV)",
+      "Radiotherapy-induced nausea",
+      "Post-operative nausea and vomiting (PONV)",
+      "Acute gastrointestinal disturbances",
+      "Drug-induced nausea",
+    ],
+
+    maintenance: [
+      "Short-term therapy in most cases",
+      "Transition to oral therapy when stable",
+      "Dose adjustment based on response",
+      "Continuous monitoring in critical conditions",
+    ],
+
+    dosage: {
+      general: [
+        "Adults: 4mg to 8mg IV/IM",
+        "Pediatric dosing based on body weight",
+        "Frequency as prescribed",
+      ],
+      administration: [
+        "Administer slowly via IV injection",
+        "Can be given IM if required",
+        "Monitor patient during administration",
+        "Follow sterile protocols",
+      ],
+    },
+
+    storage: [
+      "Store below 25°C",
+      "Protect from light",
+      "Do not freeze",
+      "Keep in original packaging",
+    ],
+
+    shelfLife: [
+      "24 to 36 months under recommended storage conditions",
+    ],
+
+    manufacturing: [
+      "Manufactured in WHO-GMP certified sterile facilities",
+      "High-purity API (CAS 103639-04-9)",
+      "Aseptic processing and filling",
+      "Advanced filtration systems",
+      "Strict sterility testing",
+      "Compliance with international standards",
+    ],
+
+    precautions: [
+      "Use under medical supervision",
+      "Monitor cardiac function (QT interval)",
+      "Use cautiously in liver impairment",
+      "Avoid rapid IV administration",
+      "Monitor for drug interactions",
+      "Avoid alcohol",
+    ],
+
+    sideEffects: [
+      "Headache",
+      "Constipation",
+      "Dizziness",
+      "Fatigue",
+      "Injection site reactions",
+      "QT prolongation (rare)",
+      "Allergic reactions (rare)",
+    ],
+
+    whyChoose: [
+      "WHO-GMP certified sterile manufacturing",
+      "International quality standards",
+      "Reliable injectable formulations",
+      "Strong global presence",
+      "Commitment to safety and innovation",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "What is ondansetron hydrochloride injection used for?",
+      answer:
+        "Ondansetron Hydrochloride Dihydrate Injection is used to prevent and treat nausea and vomiting caused by chemotherapy, surgery, or medical conditions.",
+    },
+    {
+      question: "What is the use of ondansetron hydrochloride dihydrate?",
+      answer:
+        "It is an anti-emetic used to control nausea and vomiting, especially in clinical and hospital settings.",
+    },
+    {
+      question: "Why give ondansetron slowly IV?",
+      answer:
+        "Slow IV administration helps reduce the risk of side effects and ensures safe and effective drug delivery.",
+    },
+    {
+      question: "Is ondansetron injection safe for everyone?",
+      answer:
+        "It is generally safe but requires medical supervision, especially in patients with cardiac or liver conditions.",
+    },
+    {
+      question: "Does ondansetron have bad side effects?",
+      answer:
+        "Side effects are usually mild, but rare serious reactions like heart rhythm changes may occur.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is ondansetron hydrochloride injection used for?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Used to prevent and treat nausea and vomiting.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is the use of ondansetron hydrochloride dihydrate?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "It is an anti-emetic for nausea control.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Why give ondansetron slowly IV?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "To reduce side effects and ensure safe delivery.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is ondansetron injection safe for everyone?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Generally safe with medical supervision.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Does ondansetron have bad side effects?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Mostly mild, rare serious effects possible.",
+        },
+      },
+    ],
+  },
+},
+"meropenem-inj": {
+  seo: {
+    title:
+      "Meropenem Injection 500mg/1g (CAS 119478-56-7) | Broad-Spectrum Carbapenem Antibiotic | Ivexia Pharma",
+    description:
+      "Meropenem Injection by Ivexia Pharma is a powerful carbapenem antibiotic for severe and resistant infections. Learn indications, dosage, safety, and international sterile manufacturing standards.",
+  },
+
+  meta: {
+    productName: "Meropenem Injection",
+    strength: "500mg / 1g",
+    form: "Injectable Powder for Reconstitution",
+    category: "Broad-Spectrum Antibiotic (Carbapenem)",
+    cas: "119478-56-7",
+  },
+
+  hero: {
+    title:
+      "Meropenem Injection – Advanced Broad-Spectrum Antibiotic Therapy",
+    description: [
+      "High-potency carbapenem antibiotic.",
+      "Effective against resistant bacterial infections.",
+      "Rapid bactericidal action.",
+      "Critical care and hospital use.",
+      "Manufactured under global sterile standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Meropenem Injection is a highly advanced antibiotic used for managing severe bacterial infections resistant to conventional therapies.",
+      "It belongs to the carbapenem class and works by inhibiting bacterial cell wall synthesis.",
+      "This leads to rapid bacterial cell death and effective infection control.",
+      "It is widely used in intensive care and hospital environments.",
+      "Ivexia Pharma ensures sterile manufacturing and global compliance.",
+    ],
+
+    importantInformation: [
+      "Product Name: Meropenem Injection",
+      "Strength: 500mg / 1g",
+      "Category: Broad-Spectrum Antibiotic (Carbapenem)",
+      "Form: Injectable Powder for Reconstitution",
+      "CAS Number: 119478-56-7",
+      "Manufacturer: Ivexia Pharma",
+    ],
+
+    indications: [
+      "Severe bacterial infections",
+      "Hospital-acquired infections",
+      "Pneumonia (including ventilator-associated)",
+      "Intra-abdominal infections",
+      "Complicated urinary tract infections",
+      "Skin and soft tissue infections",
+      "Meningitis",
+      "Sepsis",
+    ],
+
+    maintenance: [
+      "Administered under hospital supervision",
+      "Duration depends on infection severity",
+      "Transition to oral therapy when stable",
+      "Monitoring for resistance and response",
+    ],
+
+    dosage: {
+      general: [
+        "Adults: 500mg to 1g every 8 hours",
+        "Higher doses for severe infections",
+        "Pediatric dose based on body weight",
+      ],
+      administration: [
+        "Reconstitute before use",
+        "Administer via IV infusion or injection",
+        "Infusion over 15–30 minutes or extended up to 3 hours",
+        "Maintain sterile technique",
+      ],
+    },
+
+    storage: [
+      "Store below 25°C",
+      "Protect from light",
+      "Use reconstituted solution immediately or as directed",
+      "Keep in original packaging",
+    ],
+
+    shelfLife: [
+      "24 months (unopened)",
+      "Reconstituted solution: use as per guidelines",
+    ],
+
+    manufacturing: [
+      "Manufactured in WHO-GMP certified sterile facilities",
+      "High-purity API (CAS 119478-56-7)",
+      "Aseptic powder filling technology",
+      "Advanced sterilization processes",
+      "Rigorous quality control testing",
+      "Compliance with global standards",
+    ],
+
+    precautions: [
+      "Use under strict medical supervision",
+      "Monitor kidney function",
+      "Adjust dose in renal impairment",
+      "Avoid unnecessary prolonged use",
+      "Monitor for allergic reactions",
+      "Use cautiously in seizure disorders",
+    ],
+
+    sideEffects: [
+      "Nausea",
+      "Diarrhea",
+      "Headache",
+      "Rash",
+      "Injection site reactions",
+      "Seizures (rare)",
+      "Allergic reactions (rare)",
+      "Elevated liver enzymes",
+    ],
+
+    whyChoose: [
+      "WHO-GMP certified sterile manufacturing",
+      "International quality compliance",
+      "Advanced antibiotic formulations",
+      "Strong global distribution",
+      "Commitment to innovation and safety",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "What is meropenem injection used for?",
+      answer:
+        "Meropenem Injection is used to treat severe bacterial infections such as pneumonia, sepsis, intra-abdominal infections, and meningitis in hospital settings.",
+    },
+    {
+      question: "Is meropenem a very strong antibiotic?",
+      answer:
+        "Yes, Meropenem is a powerful broad-spectrum carbapenem antibiotic often used as a last-line treatment for resistant infections.",
+    },
+    {
+      question: "What is the cost of meropenem 1gm?",
+      answer:
+        "The cost varies depending on manufacturer, region, and healthcare provider due to its advanced formulation.",
+    },
+    {
+      question: "Which type of infection can be treated with meropenem?",
+      answer:
+        "It treats severe infections including pneumonia, urinary tract infections, abdominal infections, meningitis, and sepsis.",
+    },
+    {
+      question: "Why is meropenem given for 3 hours?",
+      answer:
+        "Extended infusion helps maintain optimal drug levels in the body, improving effectiveness against resistant bacteria.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is meropenem injection used for?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Used for severe infections like pneumonia, sepsis, and meningitis.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is meropenem a very strong antibiotic?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes, it is a powerful broad-spectrum antibiotic.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is the cost of meropenem 1gm?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Varies depending on region and manufacturer.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Which type of infection can be treated with meropenem?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Treats pneumonia, UTIs, abdominal infections, and sepsis.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Why is meropenem given for 3 hours?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "To improve effectiveness by maintaining optimal levels.",
+        },
+      },
+    ],
+  },
+},
+"vancomycin-usp-inj": {
+  seo: {
+    title:
+      "Vancomycin USP Injection 500mg (CAS 1404-90-6) | Glycopeptide Antibiotic | Ivexia Pharma",
+    description:
+      "Vancomycin USP Injection 500mg by Ivexia Pharma is a potent glycopeptide antibiotic for serious gram-positive infections. Explore dosage, indications, precautions, and global sterile manufacturing standards.",
+  },
+
+  meta: {
+    productName: "Vancomycin USP Injection",
+    strength: "500mg",
+    form: "Injectable Powder for Reconstitution",
+    category: "Glycopeptide Antibiotic",
+    cas: "1404-90-6",
+  },
+
+  hero: {
+    title:
+      "Vancomycin USP Injection – Advanced Gram-Positive Antibiotic Therapy",
+    description: [
+      "Powerful glycopeptide antibiotic.",
+      "Effective against resistant bacteria like MRSA.",
+      "Rapid bactericidal action.",
+      "Critical care and hospital use.",
+      "Manufactured under global sterile standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Vancomycin USP Injection is a highly effective antibiotic used to treat serious infections caused by gram-positive bacteria.",
+      "It is especially valuable in treating resistant infections such as MRSA.",
+      "Vancomycin works by inhibiting bacterial cell wall synthesis, leading to bacterial cell death.",
+      "It is widely used in hospitals and intensive care units.",
+      "Ivexia Pharma ensures sterile manufacturing and global compliance.",
+    ],
+
+    importantInformation: [
+      "Product Name: Vancomycin USP Injection",
+      "Strength: 500mg",
+      "Category: Glycopeptide Antibiotic",
+      "Form: Injectable Powder for Reconstitution",
+      "CAS Number: 1404-90-6",
+      "Manufacturer: Ivexia Pharma",
+    ],
+
+    indications: [
+      "MRSA infections",
+      "Severe gram-positive bacterial infections",
+      "Endocarditis",
+      "Bone and joint infections",
+      "Skin and soft tissue infections",
+      "Pneumonia",
+      "Sepsis",
+    ],
+
+    maintenance: [
+      "Administered under hospital supervision",
+      "Dose adjusted based on response",
+      "Monitoring of blood levels required",
+      "Transition to alternative therapy when appropriate",
+    ],
+
+    dosage: {
+      general: [
+        "Adults: Typically 500mg every 6 hours or as prescribed",
+        "Higher doses for severe infections",
+        "Pediatric dose based on body weight",
+      ],
+      administration: [
+        "Reconstitute before use",
+        "Administer via IV infusion only",
+        "Infuse slowly over at least 60 minutes",
+        "Monitor patient during administration",
+      ],
+    },
+
+    storage: [
+      "Store below 25°C",
+      "Protect from light",
+      "Use reconstituted solution as directed",
+      "Keep in original packaging",
+    ],
+
+    shelfLife: [
+      "24 months (unopened)",
+      "Reconstituted solution: use within recommended time",
+    ],
+
+    manufacturing: [
+      "Manufactured in WHO-GMP certified sterile facilities",
+      "High-purity API (CAS 1404-90-6)",
+      "Aseptic powder filling technology",
+      "Advanced sterilization processes",
+      "Multi-stage quality control testing",
+      "Compliance with global standards",
+    ],
+
+    precautions: [
+      "Use under strict medical supervision",
+      "Monitor kidney function",
+      "Monitor blood levels (therapeutic drug monitoring)",
+      "Infuse slowly to avoid reactions",
+      "Use cautiously in hearing impairment",
+      "Avoid unnecessary prolonged use",
+    ],
+
+    sideEffects: [
+      "Red man syndrome (flushing reaction)",
+      "Nephrotoxicity",
+      "Ototoxicity",
+      "Hypotension",
+      "Injection site irritation",
+      "Rash",
+      "Fever",
+    ],
+
+    whyChoose: [
+      "WHO-GMP certified sterile manufacturing",
+      "International quality compliance",
+      "Advanced antibiotic formulations",
+      "Strong global presence",
+      "Commitment to innovation and safety",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "How long does a vancomycin injection take?",
+      answer:
+        "Vancomycin Injection is typically infused over at least 60 minutes to reduce the risk of infusion-related reactions and ensure safe administration.",
+    },
+    {
+      question: "What are vancomycin IV precautions?",
+      answer:
+        "Vancomycin should be infused slowly with monitoring of kidney function and blood levels to avoid adverse reactions.",
+    },
+    {
+      question: "What is a major side effect of vancomycin?",
+      answer:
+        "A major side effect is nephrotoxicity, which affects kidney function and requires monitoring.",
+    },
+    {
+      question: "What is the purpose of a vancomycin injection?",
+      answer:
+        "Vancomycin Injection is used to treat serious infections caused by resistant gram-positive bacteria such as MRSA.",
+    },
+    {
+      question: "Can vancomycin cause low blood pressure?",
+      answer:
+        "Yes, Vancomycin can cause hypotension, especially if infused rapidly.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "How long does a vancomycin injection take?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Infused over at least 60 minutes to reduce reactions.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What are vancomycin IV precautions?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Monitor kidney function and infuse slowly.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is a major side effect of vancomycin?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Nephrotoxicity affecting kidney function.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is the purpose of a vancomycin injection?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Treats serious resistant bacterial infections.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can vancomycin cause low blood pressure?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes, especially if infused rapidly.",
+        },
+      },
+    ],
+  },
+},
+"amikacin-sulphate-bp-inj": {
+  seo: {
+    title:
+      "Amikacin Sulphate BP Injection 100mg/250mg/500mg (CAS 37517-28-5) | Aminoglycoside Antibiotic | Ivexia Pharma",
+    description:
+      "Amikacin Sulphate BP Injection by Ivexia Pharma is a potent aminoglycoside antibiotic for severe gram-negative infections. Learn dosage, indications, precautions, and international sterile manufacturing standards.",
+  },
+
+  meta: {
+    productName: "Amikacin Sulphate BP Injection",
+    strength: "100mg / 250mg / 500mg",
+    form: "Injectable Solution",
+    category: "Aminoglycoside Antibiotic",
+    cas: "37517-28-5",
+  },
+
+  hero: {
+    title:
+      "Amikacin Sulphate BP Injection – Advanced Gram-Negative Infection Control",
+    description: [
+      "Powerful aminoglycoside antibiotic.",
+      "Effective against resistant gram-negative bacteria.",
+      "Rapid bactericidal action.",
+      "Critical care and hospital use.",
+      "Manufactured under global sterile standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Amikacin Sulphate BP Injection is a highly effective antibiotic used to manage serious bacterial infections, especially those caused by gram-negative organisms.",
+      "It belongs to the aminoglycoside class and works by inhibiting bacterial protein synthesis.",
+      "This leads to rapid bacterial cell death and effective infection control.",
+      "It is widely used in hospital and critical care settings.",
+      "Ivexia Pharma ensures sterile manufacturing and global compliance.",
+    ],
+
+    importantInformation: [
+      "Product Name: Amikacin Sulphate BP Injection",
+      "Strength: 100mg / 250mg / 500mg",
+      "Category: Aminoglycoside Antibiotic",
+      "Form: Injectable solution",
+      "CAS Number: 37517-28-5",
+      "Manufacturer: Ivexia Pharma",
+    ],
+
+    indications: [
+      "Severe gram-negative bacterial infections",
+      "Respiratory tract infections",
+      "Urinary tract infections",
+      "Intra-abdominal infections",
+      "Septicemia",
+      "Skin and soft tissue infections",
+      "Bone and joint infections",
+    ],
+
+    maintenance: [
+      "Administered under medical supervision",
+      "Duration depends on infection severity",
+      "Dose adjustment based on kidney function",
+      "Monitoring required for prolonged therapy",
+    ],
+
+    dosage: {
+      general: [
+        "Adults: Typically 15 mg/kg/day in divided doses",
+        "Pediatric dose based on body weight",
+        "Adjustments required in renal impairment",
+      ],
+      administration: [
+        "Administer via IV or IM injection",
+        "IV infusion should be given slowly",
+        "Monitor patient during administration",
+        "Maintain sterile technique",
+      ],
+    },
+
+    storage: [
+      "Store below 25°C",
+      "Protect from light",
+      "Do not freeze",
+      "Keep in original packaging",
+    ],
+
+    shelfLife: [
+      "24 months under recommended storage conditions",
+    ],
+
+    manufacturing: [
+      "Manufactured in WHO-GMP certified sterile facilities",
+      "High-purity API (CAS 37517-28-5)",
+      "Advanced sterile injectable production",
+      "Aseptic filling technology",
+      "Multi-stage quality control testing",
+      "Compliance with global standards",
+    ],
+
+    precautions: [
+      "Use under strict medical supervision",
+      "Monitor kidney function",
+      "Monitor hearing function (ototoxicity risk)",
+      "Adjust dose in renal impairment",
+      "Avoid prolonged use",
+      "Monitor drug levels in blood",
+    ],
+
+    sideEffects: [
+      "Nephrotoxicity (kidney damage)",
+      "Ototoxicity (hearing loss)",
+      "Dizziness",
+      "Nausea",
+      "Injection site reactions",
+      "Allergic reactions (rare)",
+      "Neuromuscular blockade (rare)",
+    ],
+
+    whyChoose: [
+      "WHO-GMP certified sterile manufacturing",
+      "International quality compliance",
+      "Reliable antibiotic formulations",
+      "Strong global presence",
+      "Commitment to innovation and safety",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "What is amikacin sulphate injection used for?",
+      answer:
+        "Amikacin Sulphate BP Injection is used to treat severe bacterial infections, especially gram-negative infections affecting the respiratory, urinary, and bloodstream systems.",
+    },
+    {
+      question: "What is amikacin as sulfate 250 mg 1ml 2 ml injection?",
+      answer:
+        "It refers to a specific concentration formulation designed for accurate dosing based on patient condition and clinical requirements.",
+    },
+    {
+      question: "Is amikacin a pain killer?",
+      answer:
+        "No, Amikacin is not a painkiller. It is an antibiotic used to treat bacterial infections.",
+    },
+    {
+      question: "Can I give amikacin injection directly?",
+      answer:
+        "Amikacin Injection should only be administered by healthcare professionals via IV or IM routes under proper supervision.",
+    },
+    {
+      question: "Why is amikacin given slowly?",
+      answer:
+        "It is given slowly to reduce toxicity risks and ensure safe and effective drug delivery.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is amikacin sulphate injection used for?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Used to treat severe gram-negative bacterial infections.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is amikacin as sulfate 250 mg 1ml 2 ml injection?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "A concentration for accurate clinical dosing.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is amikacin a pain killer?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "No, it is an antibiotic.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can I give amikacin injection directly?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Only by healthcare professionals.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Why is amikacin given slowly?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "To reduce side effects and ensure safe delivery.",
+        },
+      },
+    ],
+  },
+},
+"gentamycin-drops": {
+  seo: {
+    title:
+      "Gentamycin Drops 0.3% (5ml) – Broad-Spectrum Antibiotic Solution | Ivexia Pharma",
+    description:
+      "Discover Gentamycin Drops 0.3% by Ivexia Pharma—an effective broad-spectrum antibiotic for eye and ear infections. Learn dosage, uses, precautions, side effects, and storage guidelines in this detailed guide.",
+  },
+
+  meta: {
+    productName: "Gentamycin Drops",
+    strength: "0.3%, 5ml",
+    form: "Drops",
+    category: "Other Antibiotics",
+    cas: "1405-41-0",
+  },
+
+  hero: {
+    title:
+      "Gentamycin Drops 0.3% – Trusted Antibiotic Care",
+    description: [
+      "Broad-spectrum antibiotic formulation.",
+      "Effective for bacterial eye and ear infections.",
+      "Fast-acting relief from infection symptoms.",
+      "Sterile solution for external use.",
+      "Manufactured under global pharmaceutical standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Gentamycin Drops 0.3% by Ivexia Pharma are designed to combat bacterial infections in the eyes and ears.",
+      "This formulation contains Gentamicin Sulfate and provides targeted antibacterial action.",
+      "It is used for infections such as conjunctivitis, keratitis, otitis externa, and related bacterial conditions.",
+      "Gentamycin works by inhibiting bacterial protein synthesis.",
+      "The product is sterile and intended for external use only.",
+    ],
+
+    importantInformation: [
+      "Product Name: Gentamycin Drops",
+      "Dosage Strength: 0.3%",
+      "Pack Size: 5ml",
+      "Active Ingredient: Gentamicin Sulfate",
+      "Category: Other Antibiotics",
+      "CAS Number: 1405-41-0",
+      "Brand: Ivexia Pharma",
+    ],
+
+    indications: [
+      "Bacterial eye infections",
+      "Conjunctivitis",
+      "Blepharitis",
+      "Corneal infections",
+      "Keratitis",
+      "Ear infections",
+      "Otitis externa",
+      "Post-surgical infection prevention",
+    ],
+
+    maintenance: [
+      "Close the bottle tightly after use",
+      "Avoid touching the dropper tip",
+      "Follow prescribed dosage strictly",
+      "Complete the full course",
+    ],
+
+    dosage: {
+      general: [
+        "Eye infections: 1–2 drops every 4–6 hours",
+        "Severe cases: as advised by physician",
+        "Ear infections: 2–3 drops, 3–4 times daily",
+      ],
+      administration: [
+        "Wash hands before and after use",
+        "Tilt head back or sideways as required",
+        "Instill prescribed number of drops",
+        "Avoid contaminating the dropper tip",
+      ],
+    },
+
+    storage: [
+      "Store below 25°C",
+      "Keep away from sunlight and moisture",
+      "Do not freeze",
+      "Keep out of reach of children",
+      "Discard after opening as recommended",
+    ],
+
+    shelfLife: [
+      "24 months from manufacturing under recommended conditions",
+      "Use within 4 weeks after opening",
+    ],
+
+    manufacturing: [
+      "Manufactured in WHO-GMP certified facilities",
+      "Strict quality control protocols",
+      "Advanced sterile production technology",
+      "Compliance with global regulatory guidelines",
+      "Batch testing for purity, potency, and safety",
+    ],
+
+    precautions: [
+      "Use only under medical supervision",
+      "Avoid prolonged use without consultation",
+      "Do not use if allergic to aminoglycosides",
+      "Remove contact lenses before application",
+      "Avoid sharing the product with others",
+      "Inform doctor about existing medical conditions",
+    ],
+
+    sideEffects: [
+      "Mild irritation or burning sensation",
+      "Temporary blurred vision",
+      "Redness or itching",
+      "Rare allergic reactions",
+      "Prolonged use may lead to fungal infections",
+    ],
+
+    whyChoose: [
+      "Proven antibacterial effectiveness",
+      "High-quality sterile formulation",
+      "International manufacturing standards",
+      "Broad-spectrum coverage",
+      "Trusted brand reliability",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "What are gentamicin drops used for?",
+      answer:
+        "Gentamicin drops are used to treat bacterial infections in the eyes and ears by eliminating harmful bacteria and reducing symptoms like redness, swelling, and discomfort.",
+    },
+    {
+      question: "Is gentamicin ear drops safe for babies?",
+      answer:
+        "Gentamicin ear drops may be used for babies only under strict medical supervision with correct dosage and monitoring.",
+    },
+    {
+      question: "What is the main use of gentamicin?",
+      answer:
+        "Gentamicin is mainly used to treat bacterial infections by stopping bacterial growth and preventing infection spread.",
+    },
+    {
+      question: "How long to use gentamicin eye drops for?",
+      answer:
+        "Gentamicin eye drops are usually used for 5 to 7 days depending on infection severity and medical advice.",
+    },
+    {
+      question: "Is gentamicin good for the eyes?",
+      answer:
+        "Yes, gentamicin is effective for bacterial eye infections and helps reduce redness, swelling, and discharge when used correctly.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What are gentamicin drops used for?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Gentamicin drops are used to treat bacterial infections in the eyes and ears.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is gentamicin ear drops safe for babies?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Only under medical supervision with correct dosage.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is the main use of gentamicin?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Used to treat bacterial infections by inhibiting bacterial growth.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How long to use gentamicin eye drops for?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Usually 5–7 days depending on medical advice.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is gentamicin good for the eyes?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes, for bacterial eye infections when used as directed.",
+        },
+      },
+    ],
+  },
+},
+"erythromycin-stearate-tabs": {
+  seo: {
+    title:
+      "Erythromycin Stearate Tablets 250mg – Broad-Spectrum Macrolide Antibiotic | Ivexia Pharma",
+    description:
+      "Explore Erythromycin Stearate Tablets 250mg by Ivexia Pharma, a globally trusted macrolide antibiotic for respiratory, skin, and bacterial infections. Learn dosage, uses, precautions, CAS details, and international quality standards.",
+  },
+
+  meta: {
+    productName: "Erythromycin Stearate Tablets",
+    strength: "250mg",
+    form: "Tablets",
+    category: "Other Antibiotics (Macrolide)",
+    cas: "114-07-8",
+  },
+
+  hero: {
+    title:
+      "Erythromycin Stearate Tablets – Broad-Spectrum Antibiotic Therapy",
+    description: [
+      "Clinically proven macrolide antibiotic.",
+      "Effective for respiratory and skin infections.",
+      "Alternative for penicillin-allergic patients.",
+      "High tissue penetration and antibacterial action.",
+      "Manufactured under global pharmaceutical standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Erythromycin Stearate Tablets 250mg belong to the macrolide class of antibiotics used for treating bacterial infections.",
+      "They work by inhibiting bacterial protein synthesis, preventing the growth of infection-causing organisms.",
+      "This formulation is widely used in respiratory, dermatological, and soft tissue infections.",
+      "It is especially useful in patients allergic to penicillin.",
+      "Ivexia Pharma ensures consistent quality and global compliance.",
+    ],
+
+    importantInformation: [
+      "Product Name: Erythromycin Stearate Tablets",
+      "Strength: 250mg",
+      "Category: Other Antibiotics (Macrolide)",
+      "Form: Oral Tablets",
+      "CAS Number: 114-07-8",
+      "Manufacturer: Ivexia Pharma",
+    ],
+
+    indications: [
+      "Respiratory tract infections",
+      "Bronchitis and pneumonia",
+      "Skin and soft tissue infections",
+      "Ear, nose, and throat infections",
+      "Sexually transmitted infections",
+      "Gastrointestinal infections",
+      "Acne and dermatological conditions",
+    ],
+
+    maintenance: [
+      "Complete the full course",
+      "Maintain consistent dosing intervals",
+      "Avoid skipping doses",
+      "Follow physician guidance",
+    ],
+
+    dosage: {
+      general: [
+        "Adults: 250mg to 500mg every 6 hours",
+        "Children: Based on body weight",
+        "Dose adjusted as per infection severity",
+      ],
+      administration: [
+        "Take on an empty stomach",
+        "Swallow with water",
+        "Maintain regular intervals",
+        "Do not crush or chew unless advised",
+      ],
+    },
+
+    storage: [
+      "Store below 25°C",
+      "Protect from moisture and sunlight",
+      "Keep in original packaging",
+      "Keep out of reach of children",
+    ],
+
+    shelfLife: [
+      "24 to 36 months under recommended conditions",
+    ],
+
+    manufacturing: [
+      "Manufactured in WHO-GMP certified facilities",
+      "High-purity API sourcing",
+      "Advanced tablet compression technology",
+      "Strict quality control processes",
+      "Compliance with global standards",
+    ],
+
+    precautions: [
+      "Avoid in macrolide allergy",
+      "Use cautiously in liver disorders",
+      "Monitor cardiac conditions",
+      "Avoid prolonged unnecessary use",
+      "Inform doctor about other medications",
+    ],
+
+    sideEffects: [
+      "Nausea",
+      "Vomiting",
+      "Abdominal discomfort",
+      "Diarrhea",
+      "Loss of appetite",
+      "Skin rash",
+      "Rare: liver dysfunction",
+      "Very rare: cardiac arrhythmias",
+    ],
+
+    whyChoose: [
+      "Proven clinical effectiveness",
+      "Broad-spectrum antibacterial coverage",
+      "Safe for penicillin-allergic patients",
+      "International manufacturing standards",
+      "Trusted Ivexia Pharma quality",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "What is erythromycin stearate tablets used for?",
+      answer:
+        "Erythromycin Stearate Tablets are used to treat bacterial infections including respiratory, skin, and sexually transmitted infections by stopping bacterial growth.",
+    },
+    {
+      question: "When is the best time to take erythromycin stearate tablets?",
+      answer:
+        "They are best taken on an empty stomach, either one hour before or two hours after meals for better absorption.",
+    },
+    {
+      question: "What two diseases are treated with erythromycin?",
+      answer:
+        "Erythromycin is commonly used to treat respiratory infections like pneumonia and skin infections such as acne.",
+    },
+    {
+      question: "Is erythromycin stearate tablet used for colds?",
+      answer:
+        "No, it is not used for colds because colds are caused by viruses and erythromycin is only effective against bacteria.",
+    },
+    {
+      question: "Is erythromycin stearate used for cough?",
+      answer:
+        "It may be used for cough only if it is caused by a bacterial infection, not viral causes.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is erythromycin stearate tablets used for?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Used to treat bacterial infections such as respiratory and skin infections.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "When is the best time to take erythromycin stearate tablets?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Best taken on an empty stomach for optimal absorption.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What two diseases are treated with erythromycin?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Respiratory infections and skin infections.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is erythromycin stearate tablet used for colds?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "No, it is not effective for viral infections.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is erythromycin stearate used for cough?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Only if the cough is caused by bacterial infection.",
+        },
+      },
+    ],
+  },
+},
+"erythromycin-estolate-dry-syrup": {
+  seo: {
+    title:
+      "Erythromycin Estolate Dry Syrup 125mg/5ml & 250mg/5ml – Pediatric Macrolide Antibiotic | Ivexia Pharma",
+    description:
+      "Erythromycin Estolate Dry Syrup by Ivexia Pharma is a trusted pediatric macrolide antibiotic for respiratory, ENT, and skin infections. Discover dosage, indications, safety, CAS details, and global manufacturing standards.",
+  },
+
+  meta: {
+    productName: "Erythromycin Estolate Dry Syrup",
+    strength: "125mg/5ml, 250mg/5ml",
+    form: "Dry Syrup (Reconstituted Oral Suspension)",
+    category: "Other Antibiotics (Macrolide)",
+    cas: "114-07-8",
+  },
+
+  hero: {
+    title:
+      "Erythromycin Estolate Dry Syrup – Pediatric Antibiotic Therapy",
+    description: [
+      "Clinically trusted pediatric macrolide antibiotic.",
+      "Enhanced palatability for better compliance.",
+      "Effective for respiratory and ENT infections.",
+      "Flexible dosing for infants and children.",
+      "Manufactured under global pharmaceutical standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Erythromycin Estolate Dry Syrup is a macrolide antibiotic specifically formulated for pediatric use.",
+      "It provides broad-spectrum antibacterial activity against Gram-positive and certain Gram-negative organisms.",
+      "The estolate salt improves stability and absorption in liquid dosage forms.",
+      "This formulation ensures easy administration and accurate dosing for children.",
+      "Ivexia Pharma ensures global-quality manufacturing and compliance.",
+    ],
+
+    importantInformation: [
+      "Product Name: Erythromycin Estolate Dry Syrup",
+      "Strength: 125mg/5ml, 250mg/5ml",
+      "Category: Other Antibiotics (Macrolide)",
+      "Form: Dry Syrup (Oral Suspension)",
+      "CAS Number: 114-07-8",
+      "Manufacturer: Ivexia Pharma",
+    ],
+
+    indications: [
+      "Respiratory tract infections",
+      "Bronchitis and pneumonia",
+      "Ear, nose, and throat infections",
+      "Tonsillitis and pharyngitis",
+      "Skin and soft tissue infections",
+      "Whooping cough (pertussis)",
+      "Gastrointestinal infections",
+    ],
+
+    maintenance: [
+      "Complete full antibiotic course",
+      "Maintain consistent dosing schedule",
+      "Avoid skipping doses",
+      "Follow pediatric dosage adjustments",
+    ],
+
+    dosage: {
+      general: [
+        "Children: 30–50 mg/kg/day in divided doses",
+        "Infants: Dose adjusted based on body weight",
+        "Follow physician guidance strictly",
+      ],
+      administration: [
+        "Reconstitute with boiled and cooled water",
+        "Shake well before each use",
+        "Use measuring device for accurate dosing",
+        "Administer preferably before meals",
+      ],
+    },
+
+    storage: [
+      "Store dry powder below 25°C",
+      "Protect from moisture and sunlight",
+      "After reconstitution, store in a cool place",
+      "Keep out of reach of children",
+    ],
+
+    shelfLife: [
+      "Unopened: 24–36 months",
+      "After reconstitution: 7–14 days as per label",
+    ],
+
+    manufacturing: [
+      "Manufactured in WHO-GMP certified facilities",
+      "High-purity erythromycin estolate API",
+      "Controlled granulation technology",
+      "Flavor-enhanced formulation",
+      "Multi-stage quality control testing",
+      "Compliance with global standards",
+    ],
+
+    precautions: [
+      "Avoid in macrolide hypersensitivity",
+      "Use cautiously in liver impairment",
+      "Monitor prolonged therapy",
+      "Avoid drug interactions",
+      "Use under pediatric supervision",
+    ],
+
+    sideEffects: [
+      "Nausea",
+      "Vomiting",
+      "Abdominal pain",
+      "Diarrhea",
+      "Skin rash",
+      "Allergic reactions",
+      "Rare: liver enzyme elevation",
+      "Very rare: cardiac rhythm disturbances",
+    ],
+
+    whyChoose: [
+      "Proven pediatric safety",
+      "Broad-spectrum antibacterial activity",
+      "Easy administration for children",
+      "International quality standards",
+      "Trusted Ivexia Pharma manufacturing",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "Is erythromycin syrup safe for children?",
+      answer:
+        "Erythromycin Estolate Dry Syrup is generally safe for children when prescribed by a healthcare professional with proper dosing.",
+    },
+    {
+      question: "What is erythromycin estolate drops used for?",
+      answer:
+        "It is used to treat bacterial infections such as respiratory infections, ear infections, and skin conditions.",
+    },
+    {
+      question: "What is erythromycin used for in children?",
+      answer:
+        "It is used to treat infections like pneumonia, throat infections, and whooping cough in pediatric patients.",
+    },
+    {
+      question: "What is the use of erythromycin syrup?",
+      answer:
+        "Erythromycin syrup is used for treating bacterial infections affecting respiratory, skin, and soft tissue areas.",
+    },
+    {
+      question: "What is erythromycin estolate used for?",
+      answer:
+        "Erythromycin estolate is used for treating a wide range of bacterial infections including respiratory and ENT infections.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Is erythromycin syrup safe for children?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes, when prescribed and used under medical supervision.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is erythromycin estolate drops used for?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Used to treat bacterial infections such as respiratory and ear infections.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is erythromycin used for in children?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Used for pneumonia, throat infections, and whooping cough.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is the use of erythromycin syrup?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Used to treat bacterial infections affecting respiratory and skin systems.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is erythromycin estolate used for?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Used for a wide range of bacterial infections.",
+        },
+      },
+    ],
+  },
+},
+"erythromycin-estolate-dry-syrup": {
+  seo: {
+    title:
+      "Erythromycin Estolate Dry Syrup 125mg/5ml & 250mg/5ml – Pediatric Macrolide Antibiotic | Ivexia Pharma",
+    description:
+      "Erythromycin Estolate Dry Syrup by Ivexia Pharma is a trusted pediatric macrolide antibiotic for respiratory, ENT, and skin infections. Discover dosage, indications, safety, CAS details, and global manufacturing standards.",
+  },
+
+  meta: {
+    productName: "Erythromycin Estolate Dry Syrup",
+    strength: "125mg/5ml, 250mg/5ml",
+    form: "Dry Syrup (Reconstituted Oral Suspension)",
+    category: "Other Antibiotics (Macrolide)",
+    cas: "114-07-8",
+  },
+
+  hero: {
+    title:
+      "Erythromycin Estolate Dry Syrup – Pediatric Antibiotic Therapy",
+    description: [
+      "Clinically trusted pediatric macrolide antibiotic.",
+      "Enhanced palatability for better compliance.",
+      "Effective for respiratory and ENT infections.",
+      "Flexible dosing for infants and children.",
+      "Manufactured under global pharmaceutical standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Erythromycin Estolate Dry Syrup is a macrolide antibiotic specifically formulated for pediatric use.",
+      "It provides broad-spectrum antibacterial activity against Gram-positive and certain Gram-negative organisms.",
+      "The estolate salt improves stability and absorption in liquid dosage forms.",
+      "This formulation ensures easy administration and accurate dosing for children.",
+      "Ivexia Pharma ensures global-quality manufacturing and compliance.",
+    ],
+
+    importantInformation: [
+      "Product Name: Erythromycin Estolate Dry Syrup",
+      "Strength: 125mg/5ml, 250mg/5ml",
+      "Category: Other Antibiotics (Macrolide)",
+      "Form: Dry Syrup (Oral Suspension)",
+      "CAS Number: 114-07-8",
+      "Manufacturer: Ivexia Pharma",
+    ],
+
+    indications: [
+      "Respiratory tract infections",
+      "Bronchitis and pneumonia",
+      "Ear, nose, and throat infections",
+      "Tonsillitis and pharyngitis",
+      "Skin and soft tissue infections",
+      "Whooping cough (pertussis)",
+      "Gastrointestinal infections",
+    ],
+
+    maintenance: [
+      "Complete full antibiotic course",
+      "Maintain consistent dosing schedule",
+      "Avoid skipping doses",
+      "Follow pediatric dosage adjustments",
+    ],
+
+    dosage: {
+      general: [
+        "Children: 30–50 mg/kg/day in divided doses",
+        "Infants: Dose adjusted based on body weight",
+        "Follow physician guidance strictly",
+      ],
+      administration: [
+        "Reconstitute with boiled and cooled water",
+        "Shake well before each use",
+        "Use measuring device for accurate dosing",
+        "Administer preferably before meals",
+      ],
+    },
+
+    storage: [
+      "Store dry powder below 25°C",
+      "Protect from moisture and sunlight",
+      "After reconstitution, store in a cool place",
+      "Keep out of reach of children",
+    ],
+
+    shelfLife: [
+      "Unopened: 24–36 months",
+      "After reconstitution: 7–14 days as per label",
+    ],
+
+    manufacturing: [
+      "Manufactured in WHO-GMP certified facilities",
+      "High-purity erythromycin estolate API",
+      "Controlled granulation technology",
+      "Flavor-enhanced formulation",
+      "Multi-stage quality control testing",
+      "Compliance with global standards",
+    ],
+
+    precautions: [
+      "Avoid in macrolide hypersensitivity",
+      "Use cautiously in liver impairment",
+      "Monitor prolonged therapy",
+      "Avoid drug interactions",
+      "Use under pediatric supervision",
+    ],
+
+    sideEffects: [
+      "Nausea",
+      "Vomiting",
+      "Abdominal pain",
+      "Diarrhea",
+      "Skin rash",
+      "Allergic reactions",
+      "Rare: liver enzyme elevation",
+      "Very rare: cardiac rhythm disturbances",
+    ],
+
+    whyChoose: [
+      "Proven pediatric safety",
+      "Broad-spectrum antibacterial activity",
+      "Easy administration for children",
+      "International quality standards",
+      "Trusted Ivexia Pharma manufacturing",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "Is erythromycin syrup safe for children?",
+      answer:
+        "Erythromycin Estolate Dry Syrup is generally safe for children when prescribed by a healthcare professional with proper dosing.",
+    },
+    {
+      question: "What is erythromycin estolate drops used for?",
+      answer:
+        "It is used to treat bacterial infections such as respiratory infections, ear infections, and skin conditions.",
+    },
+    {
+      question: "What is erythromycin used for in children?",
+      answer:
+        "It is used to treat infections like pneumonia, throat infections, and whooping cough in pediatric patients.",
+    },
+    {
+      question: "What is the use of erythromycin syrup?",
+      answer:
+        "Erythromycin syrup is used for treating bacterial infections affecting respiratory, skin, and soft tissue areas.",
+    },
+    {
+      question: "What is erythromycin estolate used for?",
+      answer:
+        "Erythromycin estolate is used for treating a wide range of bacterial infections including respiratory and ENT infections.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Is erythromycin syrup safe for children?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes, when prescribed and used under medical supervision.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is erythromycin estolate drops used for?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Used to treat bacterial infections such as respiratory and ear infections.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is erythromycin used for in children?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Used for pneumonia, throat infections, and whooping cough.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is the use of erythromycin syrup?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Used to treat bacterial infections affecting respiratory and skin systems.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is erythromycin estolate used for?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Used for a wide range of bacterial infections.",
+        },
+      },
+    ],
+  },
+},
+"dexamethasone-chloramphenicol": {
+  seo: {
+    title:
+      "Dexamethasone + Chloramphenicol Combination – Anti-Inflammatory & Antibiotic Therapy | Ivexia Pharma",
+    description:
+      "Discover Dexamethasone + Chloramphenicol by Ivexia Pharma, a dual-action antibacterial and anti-inflammatory formulation designed for infection control and inflammation management. Explore dosage, uses, safety, CAS details, and global manufacturing standards.",
+  },
+
+  meta: {
+    productName: "Dexamethasone + Chloramphenicol",
+    strength: "125mg/5mg, 250mg/5ml",
+    form: "Variable (Tablet / Syrup / Drops)",
+    category: "Other Antibiotics + Corticosteroid",
+    cas: "Dexamethasone: 50-02-2, Chloramphenicol: 56-75-7",
+  },
+
+  hero: {
+    title:
+      "Dexamethasone + Chloramphenicol – Dual Action Infection & Inflammation Control",
+    description: [
+      "Advanced antibacterial + anti-inflammatory combination.",
+      "Targets infection and reduces inflammation simultaneously.",
+      "Effective for ENT, skin, and ophthalmic conditions.",
+      "Improves recovery and patient comfort.",
+      "Manufactured under global pharmaceutical standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Dexamethasone + Chloramphenicol is a combination therapy designed for treating infections accompanied by inflammation.",
+      "Chloramphenicol acts as a broad-spectrum antibiotic by inhibiting bacterial protein synthesis.",
+      "Dexamethasone is a potent corticosteroid that reduces inflammation and immune response.",
+      "This dual mechanism ensures faster recovery and improved symptom control.",
+      "Ivexia Pharma ensures high-quality manufacturing and global compliance.",
+    ],
+
+    importantInformation: [
+      "Product Name: Dexamethasone + Chloramphenicol",
+      "Strength: 125mg/5mg, 250mg/5ml",
+      "Category: Other Antibiotics + Corticosteroid",
+      "Form: Tablet / Syrup / Drops",
+      "CAS Number: Dexamethasone (50-02-2), Chloramphenicol (56-75-7)",
+      "Manufacturer: Ivexia Pharma",
+    ],
+
+    indications: [
+      "Eye and ear infections",
+      "Respiratory infections with inflammation",
+      "Skin and soft tissue infections",
+      "Post-surgical inflammation with infection risk",
+      "ENT infections (sinusitis, otitis)",
+    ],
+
+    maintenance: [
+      "Complete full course to prevent relapse",
+      "Avoid abrupt discontinuation (steroid component)",
+      "Maintain consistent dosing schedule",
+      "Monitor during prolonged use",
+    ],
+
+    dosage: {
+      general: [
+        "Adults: As prescribed",
+        "Children: Dose adjusted based on weight",
+        "Depends on severity and formulation",
+      ],
+      administration: [
+        "Take as directed by physician",
+        "Maintain regular intervals",
+        "Do not exceed prescribed dose",
+        "Follow full treatment duration",
+      ],
+    },
+
+    storage: [
+      "Store below 25°C",
+      "Protect from moisture and sunlight",
+      "Keep in original packaging",
+      "Keep out of reach of children",
+    ],
+
+    shelfLife: [
+      "24 to 36 months under recommended conditions",
+    ],
+
+    manufacturing: [
+      "Manufactured in WHO-GMP certified facilities",
+      "High-quality API sourcing",
+      "Advanced formulation technology",
+      "Multi-stage quality testing",
+      "Compliance with global standards",
+    ],
+
+    precautions: [
+      "Avoid in viral or fungal infections",
+      "Use cautiously in children and elderly",
+      "Monitor long-term steroid use",
+      "Avoid abrupt discontinuation",
+      "Inform doctor about medical history",
+    ],
+
+    sideEffects: [
+      "Nausea",
+      "Vomiting",
+      "Skin irritation",
+      "Allergic reactions",
+      "Fluid retention",
+      "Increased appetite",
+      "Rare: blood disorders",
+      "Very rare: adrenal suppression",
+    ],
+
+    whyChoose: [
+      "Dual-action therapy (antibiotic + steroid)",
+      "Faster symptom relief",
+      "Broad clinical applications",
+      "International quality standards",
+      "Trusted Ivexia Pharma manufacturing",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "What is dexamethasone and chloramphenicol used for?",
+      answer:
+        "Dexamethasone + Chloramphenicol is used to treat infections with inflammation, such as eye, ear, and respiratory infections, by combining antibacterial and anti-inflammatory actions.",
+    },
+    {
+      question: "Is dexamethasone an antibiotic?",
+      answer:
+        "No, dexamethasone is a corticosteroid that reduces inflammation. It is combined with antibiotics like chloramphenicol for dual-action therapy.",
+    },
+    {
+      question: "What infections does chloramphenicol treat?",
+      answer:
+        "Chloramphenicol treats bacterial infections including respiratory, skin, eye, and systemic infections caused by susceptible organisms.",
+    },
+    {
+      question: "Can dexamethasone be used for infection?",
+      answer:
+        "Dexamethasone is not used alone for infections but helps reduce inflammation when combined with antibiotics.",
+    },
+    {
+      question: "Is chloramphenicol a strong antibiotic?",
+      answer:
+        "Yes, chloramphenicol is a broad-spectrum antibiotic effective against many bacteria, but it is used cautiously due to potential side effects.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is dexamethasone and chloramphenicol used for?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Used for infections with inflammation such as ENT and eye infections.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is dexamethasone an antibiotic?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "No, it is a corticosteroid.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What infections does chloramphenicol treat?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Respiratory, skin, and bacterial infections.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can dexamethasone be used for infection?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Only when combined with antibiotics.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is chloramphenicol a strong antibiotic?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes, but used cautiously.",
+        },
+      },
+    ],
+  },
+},
+"doxycycline-tabs": {
+  seo: {
+    title:
+      "Doxycycline Tablets 100mg – Broad-Spectrum Tetracycline Antibiotic | Ivexia Pharma",
+    description:
+      "Explore Doxycycline Tablets 100mg by Ivexia Pharma, a globally trusted tetracycline antibiotic for respiratory, skin, and infectious diseases. Learn dosage, uses, CAS details, precautions, and international manufacturing standards.",
+  },
+
+  meta: {
+    productName: "Doxycycline Tablets",
+    strength: "100mg",
+    form: "Tablets",
+    category: "Other Antibiotics (Tetracycline Class)",
+    cas: "564-25-0",
+  },
+
+  hero: {
+    title:
+      "Doxycycline Tablets – Broad-Spectrum Infection Management",
+    description: [
+      "Highly effective tetracycline antibiotic.",
+      "Broad-spectrum antibacterial coverage.",
+      "Excellent tissue penetration and long action.",
+      "Suitable for multiple infection types.",
+      "Manufactured under global pharmaceutical standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Doxycycline Tablets 100mg belong to the tetracycline class of antibiotics used to treat a wide range of bacterial infections.",
+      "They work by inhibiting bacterial protein synthesis, preventing the growth of infection-causing microorganisms.",
+      "This formulation is widely used in respiratory, dermatological, and systemic infections.",
+      "It is also effective in treating vector-borne diseases.",
+      "Ivexia Pharma ensures high-quality manufacturing and global compliance.",
+    ],
+
+    importantInformation: [
+      "Product Name: Doxycycline Tablets",
+      "Strength: 100mg",
+      "Category: Other Antibiotics (Tetracycline)",
+      "Form: Oral Tablets",
+      "CAS Number: 564-25-0",
+      "Manufacturer: Ivexia Pharma",
+    ],
+
+    indications: [
+      "Respiratory tract infections",
+      "Bronchitis and pneumonia",
+      "Skin infections and acne",
+      "Urinary tract infections",
+      "Sexually transmitted infections",
+      "Malaria prophylaxis and treatment",
+      "Lyme disease",
+      "Eye infections",
+    ],
+
+    maintenance: [
+      "Complete full prescribed course",
+      "Maintain consistent dosing schedule",
+      "Avoid skipping doses",
+      "Monitor prolonged therapy if required",
+    ],
+
+    dosage: {
+      general: [
+        "Adults: 100mg once or twice daily",
+        "Children: Only if prescribed",
+        "Dose based on infection severity",
+      ],
+      administration: [
+        "Take with a full glass of water",
+        "Avoid lying down immediately",
+        "Can be taken with food if needed",
+        "Avoid dairy near dosing time",
+      ],
+    },
+
+    storage: [
+      "Store below 25°C",
+      "Protect from moisture and sunlight",
+      "Keep in original packaging",
+      "Keep out of reach of children",
+    ],
+
+    shelfLife: [
+      "24 to 36 months under recommended conditions",
+    ],
+
+    manufacturing: [
+      "Manufactured in WHO-GMP certified facilities",
+      "High-quality API sourcing",
+      "Advanced tablet formulation technology",
+      "Strict quality control processes",
+      "Compliance with global standards",
+    ],
+
+    precautions: [
+      "Avoid in pregnancy unless prescribed",
+      "Not recommended for children under 8 years",
+      "Avoid excessive sunlight exposure",
+      "Use cautiously in liver disease",
+      "Avoid interaction with calcium or antacids",
+    ],
+
+    sideEffects: [
+      "Nausea",
+      "Diarrhea",
+      "Photosensitivity",
+      "Skin rash",
+      "Headache",
+      "Tooth discoloration in children",
+      "Rare: liver toxicity",
+    ],
+
+    whyChoose: [
+      "Broad-spectrum antibacterial activity",
+      "Long-lasting therapeutic effect",
+      "Globally accepted treatment option",
+      "Reliable Ivexia Pharma quality",
+      "International manufacturing standards",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "What are doxycycline tablets taken for?",
+      answer:
+        "Doxycycline Tablets are used to treat bacterial infections such as respiratory infections, acne, urinary infections, and sexually transmitted diseases.",
+    },
+    {
+      question: "What are the major side effects of doxycycline?",
+      answer:
+        "Common side effects include nausea, diarrhea, and photosensitivity, with rare serious effects like liver issues.",
+    },
+    {
+      question: "What is doxycycline 300 mg used for?",
+      answer:
+        "Doxycycline 300mg may be used for severe infections or specific conditions as prescribed by a healthcare provider.",
+    },
+    {
+      question: "Is doxycycline 100 a strong antibiotic?",
+      answer:
+        "Yes, doxycycline 100mg is a strong broad-spectrum antibiotic effective against many bacteria.",
+    },
+    {
+      question: "How many days to take 100mg doxycycline?",
+      answer:
+        "Typically taken for 5 to 14 days depending on the infection and medical advice.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What are doxycycline tablets taken for?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Used to treat bacterial infections such as respiratory and skin infections.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What are the major side effects of doxycycline?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Includes nausea, diarrhea, and photosensitivity.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is doxycycline 300 mg used for?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Used for severe infections as prescribed.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is doxycycline 100 a strong antibiotic?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes, it is a broad-spectrum antibiotic.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How many days to take 100mg doxycycline?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Typically 5–14 days depending on condition.",
+        },
+      },
+    ],
+  },
+},
+"tetracycline-caps": {
+  seo: {
+    title:
+      "Tetracycline Capsules 250mg/500mg – Broad-Spectrum Antibiotic | Ivexia Pharma",
+    description:
+      "Tetracycline Capsules 250mg & 500mg by Ivexia Pharma offer reliable broad-spectrum antibacterial therapy for respiratory, gastrointestinal, and skin infections. Explore dosage, uses, CAS details, safety, and global manufacturing excellence.",
+  },
+
+  meta: {
+    productName: "Tetracycline Capsules",
+    strength: "250mg / 500mg",
+    form: "Capsules",
+    category: "Other Antibiotics (Tetracycline Class)",
+    cas: "60-54-8",
+  },
+
+  hero: {
+    title:
+      "Tetracycline Capsules – Broad-Spectrum Antibiotic Therapy",
+    description: [
+      "Time-tested tetracycline antibiotic formulation.",
+      "Effective for multiple bacterial infections.",
+      "Broad-spectrum antibacterial coverage.",
+      "Reliable and versatile therapeutic option.",
+      "Manufactured under global pharmaceutical standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Tetracycline Capsules 250mg/500mg belong to the tetracycline class of antibiotics and are widely used in treating bacterial infections across multiple organ systems.",
+      "They work by inhibiting bacterial protein synthesis, preventing the growth and spread of infection-causing microorganisms.",
+      "This formulation provides reliable antibacterial action against both Gram-positive and Gram-negative bacteria.",
+      "Tetracycline remains a foundational antibiotic due to its broad-spectrum activity.",
+      "Ivexia Pharma ensures high-quality manufacturing and global compliance.",
+    ],
+
+    importantInformation: [
+      "Product Name: Tetracycline Capsules",
+      "Strength: 250mg / 500mg",
+      "Category: Other Antibiotics (Tetracycline Class)",
+      "Form: Oral Capsules",
+      "CAS Number: 60-54-8",
+      "Manufacturer: Ivexia Pharma",
+    ],
+
+    indications: [
+      "Respiratory tract infections",
+      "Gastrointestinal infections",
+      "Skin and soft tissue infections",
+      "Urinary tract infections",
+      "Acne and dermatological conditions",
+      "Cholera and intestinal infections",
+    ],
+
+    maintenance: [
+      "Complete full course of treatment",
+      "Maintain consistent dosing schedule",
+      "Avoid skipping doses",
+      "Monitor long-term therapy if required",
+    ],
+
+    dosage: {
+      general: [
+        "Adults: 250mg to 500mg every 6 hours",
+        "Children: Only if prescribed",
+        "Dose depends on infection severity",
+      ],
+      administration: [
+        "Take on an empty stomach",
+        "Avoid dairy products near dosing time",
+        "Swallow with plenty of water",
+        "Maintain consistent intervals",
+      ],
+    },
+
+    storage: [
+      "Store below 25°C",
+      "Protect from moisture and light",
+      "Keep in original packaging",
+      "Keep out of reach of children",
+    ],
+
+    shelfLife: [
+      "24 to 36 months under recommended conditions",
+    ],
+
+    manufacturing: [
+      "Manufactured in WHO-GMP certified facilities",
+      "High-quality API sourcing",
+      "Advanced encapsulation technology",
+      "Strict quality control processes",
+      "Compliance with global standards",
+    ],
+
+    precautions: [
+      "Avoid in pregnant women",
+      "Not recommended for children under 8 years",
+      "Avoid exposure to sunlight",
+      "Use cautiously in liver or kidney disorders",
+      "Avoid taking with dairy or antacids",
+    ],
+
+    sideEffects: [
+      "Nausea",
+      "Vomiting",
+      "Diarrhea",
+      "Photosensitivity",
+      "Skin rash",
+      "Tooth discoloration in children",
+      "Rare: liver toxicity",
+      "Rare: kidney complications",
+    ],
+
+    whyChoose: [
+      "Broad-spectrum antibacterial activity",
+      "Proven clinical effectiveness",
+      "Versatile treatment option",
+      "Cost-effective therapy",
+      "International manufacturing standards",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "What is the use of tetracycline cap?",
+      answer:
+        "Tetracycline capsules are used to treat bacterial infections such as respiratory, skin, and gastrointestinal infections by inhibiting bacterial growth.",
+    },
+    {
+      question: "Is tetracycline a powerful antibiotic?",
+      answer:
+        "Yes, tetracycline is a broad-spectrum antibiotic effective against many types of bacteria.",
+    },
+    {
+      question: "Does tetracycline stop stooling?",
+      answer:
+        "It helps treat bacterial infections causing diarrhea but does not directly stop stooling.",
+    },
+    {
+      question: "Is tetracycline good for the stomach?",
+      answer:
+        "It is used for gastrointestinal infections but may sometimes cause mild stomach irritation.",
+    },
+    {
+      question: "What are the two serious side effects of tetracycline?",
+      answer:
+        "Serious side effects include liver toxicity and severe allergic reactions, though these are rare.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is the use of tetracycline cap?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Used for treating bacterial infections such as respiratory and skin infections.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is tetracycline a powerful antibiotic?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, it is a broad-spectrum antibiotic.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Does tetracycline stop stooling?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "It treats infection but does not directly stop stooling.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is tetracycline good for the stomach?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Used for GI infections but may cause irritation.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What are the two serious side effects of tetracycline?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Liver toxicity and allergic reactions.",
+        },
+      },
+    ],
+  },
+},
+"satronidazole-tabs": {
+  seo: {
+    title:
+      "Satranidazole Tablets 300mg – Advanced Nitroimidazole Antiprotozoal & Antibacterial | Ivexia Pharma",
+    description:
+      "Satranidazole Tablets 300mg by Ivexia Pharma deliver targeted treatment for protozoal and anaerobic infections. Learn dosage, indications, CAS details, safety profile, and global manufacturing quality standards.",
+  },
+
+  meta: {
+    productName: "Satranidazole Tablets",
+    strength: "300mg",
+    form: "Tablets",
+    category: "Other Antibiotics (Nitroimidazole Derivative)",
+    cas: "104776-59-6",
+  },
+
+  hero: {
+    title:
+      "Satranidazole Tablets 300mg – Advanced Antiprotozoal & Antibacterial Therapy",
+    description: [
+      "Advanced nitroimidazole antimicrobial formulation.",
+      "Effective for protozoal and anaerobic infections.",
+      "Improved tolerability and longer duration of action.",
+      "Reliable gastrointestinal infection control.",
+      "Manufactured under global pharmaceutical standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Satranidazole Tablets 300mg belong to the nitroimidazole class of antimicrobial agents, widely used for treating protozoal infections and anaerobic bacterial infections.",
+      "They work by disrupting the DNA structure of microorganisms, leading to their destruction.",
+      "This formulation offers improved tolerability and pharmacokinetics compared to traditional therapies.",
+      "It is particularly suitable for gastrointestinal and parasitic infections.",
+      "Ivexia Pharma ensures high-quality manufacturing and global compliance.",
+    ],
+
+    importantInformation: [
+      "Product Name: Satranidazole Tablets",
+      "Strength: 300mg",
+      "Category: Other Antibiotics (Nitroimidazole Derivative)",
+      "Form: Oral Tablets",
+      "CAS Number: 104776-59-6",
+      "Manufacturer: Ivexia Pharma",
+    ],
+
+    indications: [
+      "Amoebiasis (intestinal and hepatic)",
+      "Giardiasis",
+      "Trichomoniasis",
+      "Anaerobic bacterial infections",
+      "Gastrointestinal infections",
+      "Diarrhea and dysentery",
+      "Mixed protozoal and bacterial infections",
+    ],
+
+    maintenance: [
+      "Complete full course of treatment",
+      "Maintain consistent dosing schedule",
+      "Avoid skipping doses",
+      "Follow physician’s instructions strictly",
+    ],
+
+    dosage: {
+      general: [
+        "Adults: Typically 300mg once or twice daily",
+        "Children: As prescribed by physician",
+        "Dose depends on condition severity",
+      ],
+      administration: [
+        "Take with or after food",
+        "Swallow with water",
+        "Maintain regular dosing schedule",
+        "Do not exceed recommended dose",
+      ],
+    },
+
+    storage: [
+      "Store below 25°C",
+      "Protect from moisture and direct sunlight",
+      "Keep in original packaging",
+      "Keep out of reach of children",
+    ],
+
+    shelfLife: [
+      "24 to 36 months under recommended conditions",
+    ],
+
+    manufacturing: [
+      "Manufactured in WHO-GMP certified facilities",
+      "High-quality API sourcing",
+      "Advanced tablet compression technology",
+      "Strict quality control processes",
+      "Compliance with global regulatory standards",
+    ],
+
+    precautions: [
+      "Avoid alcohol during treatment",
+      "Use cautiously in liver disorders",
+      "Avoid prolonged use without supervision",
+      "Inform doctor about other medications",
+      "Use with caution in pregnant or breastfeeding women",
+    ],
+
+    sideEffects: [
+      "Nausea",
+      "Vomiting",
+      "Metallic taste",
+      "Headache",
+      "Dizziness",
+      "Abdominal discomfort",
+      "Rare: allergic reactions",
+      "Very rare: neurological effects",
+    ],
+
+    whyChoose: [
+      "Improved tolerability compared to similar drugs",
+      "Effective protozoal and anaerobic coverage",
+      "Reduced dosing frequency",
+      "Reliable clinical outcomes",
+      "International manufacturing standards",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "Is satranidazole safe?",
+      answer:
+        "Satranidazole is generally safe when used as prescribed by a healthcare professional.",
+    },
+    {
+      question: "Is satrogyl 300 used for loose motion?",
+      answer:
+        "Yes, Satranidazole 300mg is used to treat loose motion caused by protozoal infections like amoebiasis and giardiasis.",
+    },
+    {
+      question: "What is Satranidazole 300mg and Ofloxacin 200mg tablets?",
+      answer:
+        "This combination is used for mixed infections involving bacteria and protozoa.",
+    },
+    {
+      question: "What is metronidazole mainly used to treat?",
+      answer:
+        "Metronidazole is mainly used to treat anaerobic bacterial and protozoal infections.",
+    },
+    {
+      question: "Is metronidazole a powerful antibiotic?",
+      answer:
+        "Yes, it is a strong antimicrobial effective against anaerobic bacteria and protozoa.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Is satranidazole safe?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Satranidazole is generally safe when used under medical supervision.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is satrogyl 300 used for loose motion?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, it is used for treating loose motion caused by protozoal infections.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is Satranidazole 300mg and Ofloxacin 200mg tablets?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "It is used for mixed bacterial and protozoal infections.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is metronidazole mainly used to treat?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Used for anaerobic and protozoal infections.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is metronidazole a powerful antibiotic?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, it is a strong antimicrobial agent.",
+        },
+      },
+    ],
+  },
+},
+"metronidazole-bp-uncoated-tabs": {
+  seo: {
+    title:
+      "Metronidazole BP Tablets 200mg/400mg (Uncoated) – Anaerobic & Antiprotozoal Therapy | Ivexia Pharma",
+    description:
+      "Metronidazole BP (Uncoated) Tablets 200mg & 400mg by Ivexia Pharma provide effective treatment for anaerobic bacterial and protozoal infections. Discover dosage, uses, CAS details, precautions, and global manufacturing excellence.",
+  },
+
+  meta: {
+    productName: "Metronidazole BP (Uncoated) Tablets",
+    strength: "200mg, 400mg",
+    form: "Uncoated Tablets",
+    category: "Other Antibiotics (Nitroimidazole Class)",
+    cas: "443-48-1",
+  },
+
+  hero: {
+    title:
+      "Metronidazole BP (Uncoated) Tablets – Anaerobic & Antiprotozoal Therapy",
+    description: [
+      "Clinically proven antimicrobial solution.",
+      "Targets anaerobic bacteria and protozoa.",
+      "Rapid symptom relief with dependable action.",
+      "Widely used in gastrointestinal and systemic infections.",
+      "Manufactured under strict international standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Metronidazole BP (Uncoated) Tablets 200mg/400mg belong to the nitroimidazole class of antimicrobial agents and are widely used to treat infections caused by anaerobic bacteria and protozoa.",
+      "This medication works by disrupting microbial DNA, ultimately leading to the death of the organism.",
+      "Metronidazole BP (Uncoated) Tablets are one of the most essential antimicrobial formulations in global healthcare.",
+      "Their broad therapeutic application and proven clinical effectiveness make them a preferred choice in treating gastrointestinal, gynecological, and systemic infections.",
+      "Ivexia Pharma ensures quality, safety, and global acceptance.",
+    ],
+
+    importantInformation: [
+      "Product Name: Metronidazole BP (Uncoated) Tablets",
+      "Dosage: 200mg, 400mg",
+      "Form: Uncoated Tablets",
+      "Category: Other Antibiotics (Nitroimidazole Class)",
+      "CAS Number: 443-48-1",
+      "Brand: Ivexia Pharma",
+    ],
+
+    indications: [
+      "Amoebiasis (intestinal and hepatic)",
+      "Giardiasis",
+      "Trichomoniasis",
+      "Anaerobic bacterial infections",
+      "Dental infections",
+      "Pelvic inflammatory disease",
+      "Gastrointestinal infections such as diarrhea and dysentery",
+    ],
+
+    maintenance: [
+      "Complete full course of treatment",
+      "Maintain consistent dosing intervals",
+      "Avoid skipping doses",
+      "Follow physician’s guidance strictly",
+    ],
+
+    dosage: {
+      general: [
+        "Adults: 200mg to 400mg two to three times daily",
+        "Children: As prescribed based on condition",
+      ],
+      administration: [
+        "Take with or after food",
+        "Swallow with water",
+        "Maintain regular intervals",
+        "Avoid alcohol during treatment",
+      ],
+    },
+
+    storage: [
+      "Store below 25°C",
+      "Protect from moisture and light",
+      "Keep in original packaging",
+      "Keep out of reach of children",
+    ],
+
+    shelfLife: [
+      "Typical shelf life: 24–36 months",
+      "Do not use after expiry",
+      "Check label for details",
+    ],
+
+    manufacturing: [
+      "Manufactured in WHO-GMP certified facilities",
+      "High-quality API sourcing",
+      "Advanced tablet formulation",
+      "Multi-stage quality control",
+      "Compliance with global standards",
+      "Stability and efficacy testing",
+    ],
+
+    precautions: [
+      "Avoid alcohol during treatment",
+      "Use cautiously in liver disorders",
+      "Avoid prolonged use without supervision",
+      "Inform doctor about other medications",
+      "Use with caution in pregnancy",
+    ],
+
+    sideEffects: [
+      "Nausea and vomiting",
+      "Metallic taste",
+      "Headache",
+      "Dizziness",
+      "Abdominal discomfort",
+      "Allergic reactions (rare)",
+      "Neurological disturbances (very rare)",
+    ],
+
+    whyChoose: [
+      "Strong activity against anaerobic bacteria",
+      "Effective protozoal infection control",
+      "Rapid symptom relief",
+      "Proven clinical reliability",
+      "Global pharmaceutical standards",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "What are metronidazole tablets BP used for?",
+      answer:
+        "Metronidazole BP tablets are used to treat infections caused by anaerobic bacteria and protozoa, including gastrointestinal infections, dental infections, and sexually transmitted diseases.",
+    },
+    {
+      question: "What is metronidazole BP 400 medicine?",
+      answer:
+        "Metronidazole BP 400mg is a higher-strength antimicrobial tablet used for treating more severe infections requiring stronger therapeutic action.",
+    },
+    {
+      question: "What is metronidazole suspension BP?",
+      answer:
+        "Metronidazole suspension BP is a liquid formulation used primarily in children or patients who have difficulty swallowing tablets.",
+    },
+    {
+      question: "Is metronidazole a strong antibiotic?",
+      answer:
+        "Yes, metronidazole is considered a strong antimicrobial agent effective against anaerobic bacteria and protozoa.",
+    },
+    {
+      question: "What is the main side effect of metronidazole?",
+      answer:
+        "The most common side effect is a metallic taste in the mouth along with nausea and mild gastrointestinal discomfort.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What are metronidazole tablets BP used for?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Used for anaerobic bacterial and protozoal infections.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is metronidazole BP 400 medicine?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "A higher-strength tablet for severe infections.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is metronidazole suspension BP?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "A liquid form used mainly for children.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is metronidazole a strong antibiotic?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes, effective against anaerobic bacteria and protozoa.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is the main side effect of metronidazole?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Metallic taste is most common.",
+        },
+      },
+    ],
+  },
+},
+"metronidazole-bp-suspension": {
+  seo: {
+    title:
+      "Metronidazole BP Tablets 200mg/400mg (Uncoated) – Anaerobic & Antiprotozoal Therapy | Ivexia Pharma",
+    description:
+      "Metronidazole BP (Uncoated) Tablets 200mg & 400mg by Ivexia Pharma provide effective treatment for anaerobic bacterial and protozoal infections. Discover dosage, uses, CAS details, precautions, and global manufacturing excellence.",
+  },
+
+  meta: {
+    productName: "Metronidazole BP (Uncoated) Tablets",
+    strength: "200mg, 400mg",
+    form: "Uncoated Tablets",
+    category: "Other Antibiotics (Nitroimidazole Class)",
+    cas: "443-48-1",
+  },
+
+  hero: {
+    title:
+      "Metronidazole BP (Uncoated) Tablets – Anaerobic & Antiprotozoal Therapy",
+    description: [
+      "Clinically proven antimicrobial solution.",
+      "Targets anaerobic bacteria and protozoa.",
+      "Rapid symptom relief with dependable action.",
+      "Widely used in gastrointestinal and systemic infections.",
+      "Manufactured under strict international standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Metronidazole BP (Uncoated) Tablets 200mg/400mg belong to the nitroimidazole class of antimicrobial agents and are widely used to treat infections caused by anaerobic bacteria and protozoa.",
+      "This medication works by disrupting microbial DNA, ultimately leading to the death of the organism.",
+      "Metronidazole BP (Uncoated) Tablets are one of the most essential antimicrobial formulations in global healthcare.",
+      "Their broad therapeutic application and proven clinical effectiveness make them a preferred choice in treating gastrointestinal, gynecological, and systemic infections.",
+      "Ivexia Pharma ensures quality, safety, and global acceptance.",
+    ],
+
+    importantInformation: [
+      "Product Name: Metronidazole BP (Uncoated) Tablets",
+      "Dosage: 200mg, 400mg",
+      "Form: Uncoated Tablets",
+      "Category: Other Antibiotics (Nitroimidazole Class)",
+      "CAS Number: 443-48-1",
+      "Brand: Ivexia Pharma",
+    ],
+
+    indications: [
+      "Amoebiasis (intestinal and hepatic)",
+      "Giardiasis",
+      "Trichomoniasis",
+      "Anaerobic bacterial infections",
+      "Dental infections",
+      "Pelvic inflammatory disease",
+      "Gastrointestinal infections such as diarrhea and dysentery",
+    ],
+
+    maintenance: [
+      "Complete full course of treatment",
+      "Maintain consistent dosing intervals",
+      "Avoid skipping doses",
+      "Follow physician’s guidance strictly",
+    ],
+
+    dosage: {
+      general: [
+        "Adults: 200mg to 400mg two to three times daily",
+        "Children: As prescribed based on condition",
+      ],
+      administration: [
+        "Take with or after food",
+        "Swallow with water",
+        "Maintain regular intervals",
+        "Avoid alcohol during treatment",
+      ],
+    },
+
+    storage: [
+      "Store below 25°C",
+      "Protect from moisture and light",
+      "Keep in original packaging",
+      "Keep out of reach of children",
+    ],
+
+    shelfLife: [
+      "Typical shelf life: 24–36 months",
+      "Do not use after expiry",
+      "Check label for details",
+    ],
+
+    manufacturing: [
+      "Manufactured in WHO-GMP certified facilities",
+      "High-quality API sourcing",
+      "Advanced tablet formulation",
+      "Multi-stage quality control",
+      "Compliance with global standards",
+      "Stability and efficacy testing",
+    ],
+
+    precautions: [
+      "Avoid alcohol during treatment",
+      "Use cautiously in liver disorders",
+      "Avoid prolonged use without supervision",
+      "Inform doctor about other medications",
+      "Use with caution in pregnancy",
+    ],
+
+    sideEffects: [
+      "Nausea and vomiting",
+      "Metallic taste",
+      "Headache",
+      "Dizziness",
+      "Abdominal discomfort",
+      "Allergic reactions (rare)",
+      "Neurological disturbances (very rare)",
+    ],
+
+    whyChoose: [
+      "Strong activity against anaerobic bacteria",
+      "Effective protozoal infection control",
+      "Rapid symptom relief",
+      "Proven clinical reliability",
+      "Global pharmaceutical standards",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "What are metronidazole tablets BP used for?",
+      answer:
+        "Metronidazole BP tablets are used to treat infections caused by anaerobic bacteria and protozoa, including gastrointestinal infections, dental infections, and sexually transmitted diseases.",
+    },
+    {
+      question: "What is metronidazole BP 400 medicine?",
+      answer:
+        "Metronidazole BP 400mg is a higher-strength antimicrobial tablet used for treating more severe infections requiring stronger therapeutic action.",
+    },
+    {
+      question: "What is metronidazole suspension BP?",
+      answer:
+        "Metronidazole suspension BP is a liquid formulation used primarily in children or patients who have difficulty swallowing tablets.",
+    },
+    {
+      question: "Is metronidazole a strong antibiotic?",
+      answer:
+        "Yes, metronidazole is considered a strong antimicrobial agent effective against anaerobic bacteria and protozoa.",
+    },
+    {
+      question: "What is the main side effect of metronidazole?",
+      answer:
+        "The most common side effect is a metallic taste in the mouth along with nausea and mild gastrointestinal discomfort.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What are metronidazole tablets BP used for?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Metronidazole BP tablets are used to treat anaerobic bacterial and protozoal infections such as gastrointestinal infections.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is metronidazole BP 400 medicine?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "It is a higher-strength tablet used for more severe infections requiring stronger antimicrobial action.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is metronidazole suspension BP?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "It is a liquid form of metronidazole used for easier administration in children.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is metronidazole a strong antibiotic?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes, it is a powerful antimicrobial effective against anaerobic bacteria and protozoa.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is the main side effect of metronidazole?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "The most common side effect is a metallic taste, along with nausea and mild discomfort.",
+        },
+      },
+    ],
+  },
+},
+"trimethoprim-sulphamethoxazole-bp-tabs": {
+  seo: {
+    title:
+      "Trimethoprim + Sulphamethoxazole BP Tablets 480mg/960mg – Broad-Spectrum Antibacterial | Ivexia Pharma",
+    description:
+      "Trimethoprim + Sulphamethoxazole BP Tablets 480mg & 960mg by Ivexia Pharma provide dual-action antibacterial therapy for respiratory, urinary, and gastrointestinal infections. Explore dosage, CAS details, safety profile, and global manufacturing standards.",
+  },
+
+  meta: {
+    productName: "Trimethoprim + Sulphamethoxazole BP Tablets",
+    strength: "480mg, 960mg",
+    form: "Tablets",
+    category: "Other Antibiotics (Combination Antibacterial)",
+    cas: "Combination (Trimethoprim: 738-70-5, Sulphamethoxazole: 723-46-6)",
+  },
+
+  hero: {
+    title:
+      "Trimethoprim + Sulphamethoxazole BP Tablets – Dual Action Antibacterial Therapy",
+    description: [
+      "Clinically proven combination antibacterial.",
+      "Targets bacterial growth through dual mechanism.",
+      "Broad-spectrum infection control.",
+      "Reduces bacterial resistance when used appropriately.",
+      "Manufactured under strict international standards.",
+    ],
+  },
+
+  content: {
+    introduction: [
+      "Trimethoprim + Sulphamethoxazole BP Tablets 480mg/960mg belong to the sulfonamide class of antibiotics combined with a dihydrofolate reductase inhibitor.",
+      "This dual-action combination works by blocking two consecutive steps in bacterial folic acid synthesis, leading to effective bacterial elimination.",
+      "Trimethoprim + Sulphamethoxazole BP Tablets are one of the most effective combination therapies for treating a wide range of infections.",
+      "Their ability to target multiple bacterial pathways makes them highly valuable in clinical practice.",
+      "Ivexia Pharma ensures global quality, safety, and compliance.",
+    ],
+
+    importantInformation: [
+      "Product Name: Trimethoprim + Sulphamethoxazole BP Tablets",
+      "Dosage: 480mg, 960mg",
+      "Form: Tablets",
+      "Category: Other Antibiotics (Combination Antibacterial)",
+      "CAS Numbers: Trimethoprim: 738-70-5, Sulphamethoxazole: 723-46-6",
+      "Brand: Ivexia Pharma",
+    ],
+
+    indications: [
+      "Urinary tract infections (UTIs)",
+      "Respiratory tract infections",
+      "Gastrointestinal infections",
+      "Skin and soft tissue infections",
+      "Pneumocystis pneumonia (PCP)",
+      "Traveler’s diarrhea",
+    ],
+
+    maintenance: [
+      "Complete full prescribed course",
+      "Maintain consistent dosing schedule",
+      "Avoid skipping doses",
+      "Monitor long-term therapy if required",
+    ],
+
+    dosage: {
+      general: [
+        "Adults: Typically 480mg or 960mg twice daily",
+        "Children: As prescribed based on body weight",
+      ],
+      administration: [
+        "Take with a full glass of water",
+        "Can be taken with or without food",
+        "Maintain regular dosing intervals",
+        "Ensure adequate hydration",
+      ],
+    },
+
+    storage: [
+      "Store below 25°C",
+      "Protect from moisture and sunlight",
+      "Keep in original packaging",
+      "Keep out of reach of children",
+    ],
+
+    shelfLife: [
+      "Typical shelf life: 24–36 months",
+      "Check expiry date before use",
+      "Do not use expired medication",
+    ],
+
+    manufacturing: [
+      "Manufactured in WHO-GMP certified facilities",
+      "High-quality API sourcing",
+      "Advanced tablet compression technology",
+      "Strict quality control processes",
+      "Compliance with international standards",
+      "Stability and efficacy testing",
+    ],
+
+    precautions: [
+      "Avoid in patients with sulfa allergy",
+      "Use cautiously in kidney or liver disorders",
+      "Ensure adequate hydration",
+      "Avoid prolonged use without supervision",
+      "Inform doctor about other medications",
+    ],
+
+    sideEffects: [
+      "Nausea and vomiting",
+      "Skin rash",
+      "Diarrhea",
+      "Allergic reactions",
+      "Photosensitivity",
+      "Rare: blood disorders",
+      "Very rare: severe skin reactions",
+    ],
+
+    whyChoose: [
+      "Dual mechanism of action",
+      "Broad-spectrum antibacterial coverage",
+      "Proven clinical effectiveness",
+      "Cost-effective treatment option",
+      "Global pharmaceutical standards",
+    ],
+  },
+
+  faqs: [
+    {
+      question: "What is a serious side effect of trimethoprim sulfamethoxazole?",
+      answer:
+        "A serious side effect includes severe allergic skin reactions such as Stevens-Johnson syndrome, which requires immediate medical attention.",
+    },
+    {
+      question: "What kind of antibiotic is trimethoprim sulfamethoxazole?",
+      answer:
+        "It is a combination antibiotic that works by blocking bacterial folic acid synthesis, providing synergistic antibacterial action.",
+    },
+    {
+      question: "What is trimethoprim bp 160 mg sulfamethoxazole bp 800 mg?",
+      answer:
+        "This represents a higher-strength formulation (960mg total) used for moderate to severe infections.",
+    },
+    {
+      question: "What is sulfamethoxazole bp 400mg trimethoprim bp 80mg?",
+      answer:
+        "This is a lower-strength formulation (480mg total) used for mild to moderate infections.",
+    },
+    {
+      question: "Is trimethoprim a strong antibiotic?",
+      answer:
+        "Yes, trimethoprim is considered a strong antibacterial agent, especially when combined with sulphamethoxazole.",
+    },
+  ],
+
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is a serious side effect of trimethoprim sulfamethoxazole?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "A serious side effect includes severe allergic skin reactions such as Stevens-Johnson syndrome.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What kind of antibiotic is trimethoprim sulfamethoxazole?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "It is a combination antibiotic that inhibits bacterial folic acid synthesis.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is trimethoprim bp 160 mg sulfamethoxazole bp 800 mg?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "It is a higher-strength combination used for moderate to severe infections.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is sulfamethoxazole bp 400mg trimethoprim bp 80mg?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "It is a lower-strength combination used for mild infections.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is trimethoprim a strong antibiotic?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes, it is effective, especially when combined with sulphamethoxazole.",
+        },
+      },
+    ],
+  },
+},
   },
 
 };

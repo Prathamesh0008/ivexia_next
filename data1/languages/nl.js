@@ -62,6 +62,53 @@ export default {
   facilities: "Productiefaciliteiten",
   rnd: "R&D Centra"
 },
+accordSection: {
+  title: "Wereldwijde Aanwezigheid",
+  regions: {
+    asia: {
+      label: "Azië",
+      paragraphs: [
+        "Positieve regelgevingstrends helpen veel Aziatische landen te integreren in wereldwijde markten en versnellen de vraag naar geavanceerde gezondheidszorgoplossingen.",
+        "In Oost-Azië, ASEAN en Zuid-Aziatische markten blijven we de toegang uitbreiden met betaalbare producten die zijn afgestemd op lage- en middeninkomensgroepen."
+      ]
+    },
+    africa: {
+      label: "Afrika",
+      paragraphs: [
+        "Een gerichte regionale strategie en toegewijde ontwikkelingsuitvoering blijven de marktaanpassing in de Afrikaanse regio versterken.",
+        "Met een sterk distributienetwerk in West-, Noord-, Oost- en Zuid-Afrika blijft de groei consistent in zowel grote als opkomende markten."
+      ]
+    },
+    "north-america": {
+      label: "Noord-Amerika",
+      paragraphs: [
+        "Hoge innovatiematuriteit en robuuste gezondheidszorginfrastructuur maken Noord-Amerika tot een kritieke markt voor premium en speciale aanbiedingen.",
+        "Ons model benadrukt regelgevende responsiviteit en sterke kanaalpartnerschappen om consistente schaal in de VS, Canada en naburige markten te ondersteunen."
+      ]
+    },
+    "latin-america": {
+      label: "Latijns-Amerika",
+      paragraphs: [
+        "Latijns-Amerika biedt een hoogpotentiële mix van gevestigde en snelgroeiende markten waar gelokaliseerde strategie langetermijngroei stimuleert.",
+        "Van Mexico tot de zuidelijke kegel helpt land-voor-land aanpassing ons om kwalitatieve, kosteneffectieve gezondheidszorgoplossingen snel te leveren."
+      ]
+    },
+    "middle-east": {
+      label: "Midden-Oosten",
+      paragraphs: [
+        "Het Midden-Oosten blijft strategisch belangrijk vanwege verbeterende regelgevingsecosystemen en sterke investeringen in modernisering van de gezondheidszorg.",
+        "Door aan te sluiten bij regionale inkoopmodellen en distributie-ecosystemen breiden we betrouwbare toegang tot essentiële therapieën uit."
+      ]
+    },
+    europe: {
+      label: "Europa",
+      paragraphs: [
+        "Europa blijft stabiele, sterk compliance-gerichte markten bieden met een grote vraag naar kwaliteitsgedreven, evidence-based gezondheidszorgproducten.",
+        "Onze focus ligt op langetermijnpartnerschappen, leveringsbetrouwbaarheid en gedifferentieerde portfoliopositionering in zowel volwassen als groeicorridors."
+      ]
+    }
+  }
+},
 about: {
   video: {
     title: "Over Ivexia Pharmaceuticals",

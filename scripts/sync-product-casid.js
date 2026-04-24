@@ -8,14 +8,42 @@ const { default: dbConnect } = await import("../lib/dbConnect.js");
 const { default: Product } = await import("../models/Product.js");
 
 function normalizeSeedProduct(product) {
+  let casRaw =
+    product.casId ||
+    product["CAS-ID"] ||
+    product["CAS_ID"] ||
+    "";
+
+  let casArray = [];
+
+  // ✅ CASE 1: OBJECT (your current format)
+  if (typeof casRaw === "object" && !Array.isArray(casRaw)) {
+    casArray = Object.entries(casRaw).map(
+      ([name, cas]) => `${name}: ${cas}`
+    );
+  }
+
+  // ✅ CASE 2: ARRAY
+  else if (Array.isArray(casRaw)) {
+    casArray = casRaw;
+  }
+
+  // ✅ CASE 3: STRING
+  else if (typeof casRaw === "string") {
+    casArray = casRaw
+      .split(",")
+      .map((c) => c.trim())
+      .filter(Boolean);
+  }
+
   return {
     category: product.category || "",
     name: product.name || "",
     dosage: product.dosage || "",
-    form: product.form || "",
+    form: product.form || product["Column5"] || "",
     packSize: product.packSize || product["PACK SIZE"] || "",
     type: product.type || product["TYPE OF FORMLN"] || "",
-    casId: (product.casId || product["CAS-ID"] || "").trim(),
+    casId: casArray, // ✅ ALWAYS ARRAY
     slug: product.slug || "",
   };
 }

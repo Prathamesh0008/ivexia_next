@@ -62,6 +62,53 @@ ivexia_numbers: {
   facilities: "Instalações de Fabricação",
   rnd: "Centros de P&D"
 },
+accordSection: {
+  title: "Presença Global",
+  regions: {
+    asia: {
+      label: "Ásia",
+      paragraphs: [
+        "Tendências regulatórias positivas estão ajudando muitos países asiáticos a se integrar aos mercados globais e acelerando a demanda por soluções avançadas de saúde.",
+        "Nos mercados do Leste Asiático, ASEAN e Sul Asiático, continuamos expandindo o acesso com produtos acessíveis adaptados para populações de baixa e média renda."
+      ]
+    },
+    africa: {
+      label: "África",
+      paragraphs: [
+        "Uma estratégia regional focada e execução de desenvolvimento dedicada continuam a fortalecer a adaptação ao mercado em toda a região africana.",
+        "Com uma forte rede de distribuição na África Ocidental, Norte, Oriental e Austral, o crescimento permanece consistente tanto em grandes mercados quanto em mercados emergentes."
+      ]
+    },
+    "north-america": {
+      label: "América do Norte",
+      paragraphs: [
+        "Alta maturidade em inovação e infraestrutura de saúde robusta tornam a América do Norte um mercado crítico para ofertas premium e especializadas.",
+        "Nosso modelo enfatiza capacidade de resposta regulatória e parcerias de canal fortes para apoiar escala consistente nos EUA, Canadá e mercados próximos."
+      ]
+    },
+    "latin-america": {
+      label: "América Latina",
+      paragraphs: [
+        "A América Latina apresenta uma mistura de alto potencial de mercados estabelecidos e de rápido crescimento, onde a estratégia localizada impulsiona o crescimento de longo prazo.",
+        "Do México ao Cone Sul, a adaptação país por país nos ajuda a entregar soluções de saúde de qualidade e econômicas com rapidez."
+      ]
+    },
+    "middle-east": {
+      label: "Oriente Médio",
+      paragraphs: [
+        "O Oriente Médio continua estrategicamente importante devido à melhoria dos ecossistemas regulatórios e fortes investimentos na modernização da saúde.",
+        "Ao nos alinharmos com modelos de compras regionais e ecossistemas de distribuição, estamos expandindo o acesso confiável a terapias essenciais."
+      ]
+    },
+    europe: {
+      label: "Europa",
+      paragraphs: [
+        "A Europa continua a oferecer mercados estáveis e de alta conformidade com forte demanda por produtos de saúde baseados em evidências e orientados à qualidade.",
+        "Nosso foco está em parcerias de longo prazo, confiabilidade de fornecimento e posicionamento diferenciado de portfólio em corredores maduros e de crescimento."
+      ]
+    }
+  }
+},
 about: {
   video: {
     title: "Sobre Ivexia Pharmaceuticals",

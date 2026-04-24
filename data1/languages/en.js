@@ -97,6 +97,53 @@ about: {
     "desc": "Skin care excellence with dermatological innovation and safety."
   }
 },
+accordSection: {
+  title: "Global Presence",
+  regions: {
+    asia: {
+      label: "Asia",
+      paragraphs: [
+        "Positive regulatory trends are helping many Asian countries integrate into global markets and accelerating demand for advanced healthcare solutions.",
+        "Across East Asia, ASEAN and South Asian markets, we continue expanding access with affordable products tailored to low and middle income demographics."
+      ]
+    },
+    africa: {
+      label: "Africa",
+      paragraphs: [
+        "A focused regional strategy and dedicated development execution continue to strengthen market adaptation across the African region.",
+        "With a strong distribution network across West, North, East and Southern Africa, growth remains consistent in both large and emerging markets."
+      ]
+    },
+    "north-america": {
+      label: "North America",
+      paragraphs: [
+        "High innovation maturity and robust healthcare infrastructure make North America a critical market for premium and specialty offerings.",
+        "Our model emphasizes regulatory responsiveness and strong channel partnerships to support consistent scale across the US, Canada and nearby markets."
+      ]
+    },
+    "latin-america": {
+      label: "Latin America",
+      paragraphs: [
+        "Latin America presents a high-potential mix of established and fast-rising markets where localized strategy drives long-term growth.",
+        "From Mexico to the Southern Cone, country-by-country adaptation helps us deliver quality, cost-effective healthcare solutions with speed."
+      ]
+    },
+    "middle-east": {
+      label: "Middle East",
+      paragraphs: [
+        "The Middle East remains strategically important due to improving regulatory ecosystems and strong investments in healthcare modernization.",
+        "By aligning with regional procurement models and distribution ecosystems, we are expanding reliable access to essential therapies."
+      ]
+    },
+    europe: {
+      label: "Europe",
+      paragraphs: [
+        "Europe continues to offer stable, high-compliance markets with strong demand for quality-driven, evidence-backed healthcare products.",
+        "Our focus is on long-term partnerships, supply reliability and differentiated portfolio positioning across both mature and growth corridors."
+      ]
+    }
+  }
+},
 about: {
   video: {
     title: "Shaping the Future of Global Healthcare",
@@ -295,6 +342,7 @@ contactPage: {
   messageError: "Message is required",
   messageLengthError: "Message should be at least 10 characters"
 },
+
 offeringsOverview: {
   badge: "Ivexia Offerings Overview",
   title: "Practical Healthcare Offerings for Real Market Execution",
