@@ -195,7 +195,7 @@ const languages = [
     height={70}
     priority
     unoptimized
-   className="object-contain w-[140px] sm:w-[160px] md:w-[190px] lg:w-[220px]"
+   className="object-contain w-[110px] sm:w-[125px] md:w-[145px] lg:w-[165px]"
   />
 </Link>
 
