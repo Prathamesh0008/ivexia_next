@@ -47,7 +47,7 @@ export default function AppBootLayout({ children }) {
       <Suspense fallback={null}>
         <Navbar />
       </Suspense>
-      <main className="pt-[88px] min-h-screen text-[#0d2d47]">{children}</main>
+      <main className="pt-[72px] min-h-screen text-[#0d2d47]">{children}</main>
       <Footer />
     </>
   );

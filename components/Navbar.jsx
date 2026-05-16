@@ -185,7 +185,7 @@ const languages = [
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 h-[88px] bg-white/95 backdrop-blur-md shadow-md z-50">
+    <nav className="fixed top-0 left-0 right-0 h-[72px] bg-white/95 backdrop-blur-md shadow-md z-50">
       <div className="flex justify-between items-center px-4 md:px-8 h-full">
         <Link href="/">
   <Image
@@ -195,7 +195,7 @@ const languages = [
     height={70}
     priority
     unoptimized
-   className="object-contain w-[140px] sm:w-[160px] md:w-[190px] lg:w-[220px]"
+   className="object-contain w-[110px] sm:w-[125px] md:w-[145px] lg:w-[165px]"
   />
 </Link>
 
