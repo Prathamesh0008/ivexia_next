@@ -40,7 +40,7 @@ export default function Footer() {
               alt="Ivexia Logo"
               width={400}
               height={240}
-             className="w-[220px] sm:w-[240px] md:w-[260px] lg:w-[280px] block -ml-3 sm:-ml-2 md:ml-0"
+             className="w-[170px] sm:w-[185px] md:w-[200px] lg:w-[220px] block -ml-2 sm:-ml-1 md:ml-0"
             />
 
            <p className="text-gray-300 text-sm md:text-base leading-relaxed max-w-sm">

@@ -185,7 +185,7 @@ const languages = [
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 h-[88px] bg-white/95 backdrop-blur-md shadow-md z-50">
+    <nav className="fixed top-0 left-0 right-0 h-[72px] bg-white/95 backdrop-blur-md shadow-md z-50">
       <div className="flex justify-between items-center px-4 md:px-8 h-full">
         <Link href="/">
   <Image

@@ -146,7 +146,7 @@ export default function TestKitDetailPage() {
 
   return (
     <div className="min-h-screen bg-[#FFF8F5] pt-[110px]">
-      <section className="fixed top-[88px] left-0 right-0 z-40 bg-white border-b border-gray-100 shadow-sm">
+      <section className="fixed top-[72px] left-0 right-0 z-40 bg-white border-b border-gray-100 shadow-sm">
         <div className="mx-auto max-w-7xl px-6 md:px-16 py-3">
           <nav className="flex items-center text-sm text-gray-500 gap-2">
             <Link href="/" className="hover:text-[#0d2d47] transition">
