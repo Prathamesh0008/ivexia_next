@@ -27,7 +27,7 @@ export default function LeadershipSection() {
       <div className="relative min-h-[80vh] md:min-h-[150vh] flex flex-col justify-center items-center text-center px-2 md:px-16 py-4 md:py-20 overflow-hidden bg-white">
         {/* Banner Image - No Side Crop */}
         <img
-          src="/images/ceo.jpeg"
+          src="/images/leadershipbanner5.jpg"
           alt="Leadership Banner"
           className="absolute inset-0 w-full h-full object-contain object-center"
         />
