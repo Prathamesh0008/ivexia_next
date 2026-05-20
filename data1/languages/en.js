@@ -895,21 +895,21 @@ aboutPage: {
     products: "Products",
     employees: "Employees"
   },
-  story: {
-    badge: "Our Story",
-    title: "Committed to Pharmaceutical Excellence Since 2018",
-    p1: "Founded with a commitment to innovation, Ivexia Pharmaceuticals delivers world-class pharmaceutical manufacturing aligned with global standards.",
-    p2: "We combine regulatory expertise, advanced research, and manufacturing precision to serve international markets.",
-    p3: "Today, Ivexia operates across multiple regions with strategic expansion into Europe and MENA."
-  },
-  purpose: {
-    title: "Our Purpose",
-    subtitle: "Driven by innovation, guided by integrity",
-    visionTitle: "Our Vision",
-    visionDesc: "To become a globally trusted pharmaceutical partner delivering innovation and safety.",
-    missionTitle: "Our Mission",
-    missionDesc: "To manufacture high-quality medicines through research excellence and compliance."
-  },
+story: {
+  badge: "Our Story",
+  title: "Committed to Pharmaceutical Excellence Since 2018",
+  p1: "Ivexia Pharma is a progressive pharmaceutical company built on a strong commitment to quality, innovation, and global healthcare advancement.",
+  p2: "Since its beginning, Ivexia Pharma has focused on delivering reliable pharmaceutical products that meet international standards and support healthcare providers, distributors, importers, and patients across different markets.",
+  p3: "Today, Ivexia Pharma serves as a reliable partner for pharmaceutical manufacturing, product development, export supply, and market expansion."
+},
+purpose: {
+  title: "Our Purpose",
+  subtitle: "Driven by innovation, guided by integrity",
+  visionTitle: "Our Vision",
+  visionDesc: "To become a globally recognized pharmaceutical company known for quality, reliability, innovation, and responsible healthcare contribution across Europe, MENA, Africa, CIS, Southeast Asia, and other growing healthcare regions.",
+  missionTitle: "Our Mission",
+  missionDesc: "To make quality pharmaceutical products accessible to global markets through safe manufacturing, reliable export systems, strong regulatory compliance, transparent partnerships, and dependable supply support."
+},
   global: {
     badge: "Global Footprint",
     title: "Worldwide Operations",
@@ -948,7 +948,7 @@ aboutPage: {
     {
       title: "Oncology",
       img: "/images/Oncology.jpg",
-      desc: "Specialized oncology portfolio with targeted therapies."
+      desc: "Revolutionary treatments that harness the patient's own immune system to recognize and destroy cancer cells."
     }
   ],
   leadership: {
@@ -985,27 +985,27 @@ aboutPage: {
     {
       year: "2018",
       event: "Company founded with vision for global pharmaceutical excellence",
-      icon: "rocket"
+      icon: "Rocket"
     },
     {
       year: "2020",
       event: "First WHO-GMP certified manufacturing facility established",
-      icon: "industry"
+      icon: "Industry"
     },
     {
       year: "2023",
       event: "Expanded operations to European markets",
-      icon: "globe"
+      icon: "Globe"
     },
     {
       year: "2025",
       event: "Launched oncology division with 10+ products",
-      icon: "microscope"
+      icon: "Microscope"
     },
     {
       year: "2030",
       event: "Vision to become top 50 global pharma company",
-      icon: "bullseye"
+      icon: "Bullseye"
     }
   ],
   certifications: {
@@ -1067,11 +1067,101 @@ aboutPage: {
       year: "2024"
     }
   ],
+    whoWeAre: {
+    badge: "Who We Are",
+    title: "A Trusted Global Pharmaceutical Partner",
+    desc: "Ivexia Pharma is a global pharmaceutical manufacturer and exporter offering high-quality medicines, product development support, regulatory documentation, packaging solutions, and reliable export supply for healthcare distributors, importers, hospitals, and pharmaceutical partners worldwide."
+  },
+
+  qualityInfo: {
+    badge: "Quality First",
+    title: "Quality at the Core of Everything",
+    desc: "Quality is the foundation of Ivexia Pharma. Our approach covers raw material evaluation, production monitoring, in-process checks, finished product testing, packaging inspection, documentation review, and proper storage control.",
+    points: [
+      "GMP-aligned manufacturing standards",
+      "Verified raw material sourcing",
+      "Batch-wise quality control testing",
+      "Safe and compliant packaging",
+      "Strong documentation and process validation"
+    ]
+  },
+
+  exportInfo: {
+    badge: "Global Export Focus",
+    title: "Reliable Pharmaceutical Export Supply",
+    desc: "Ivexia Pharma supports distributors, importers, healthcare companies, and institutional buyers with export-ready pharmaceutical products, proper documentation, packaging support, regulatory coordination, and market-focused supply solutions."
+  },
   cta: {
     title: "Partner With Us",
     subtitle: "Join us in delivering quality healthcare solutions worldwide.",
     button: "Contact Us"
-  }
+  },
+    detailedInfo: {
+    badge: "About Ivexia Pharma",
+    title: "Building Pharmaceutical Excellence Since 2018",
+    sections: [
+      {
+        title: "Who We Are",
+        desc: "Ivexia Pharma is a global pharmaceutical manufacturer and exporter offering a broad range of pharmaceutical products for regulated and emerging markets. Our company focuses on quality medicines, modern processes, strong documentation systems, and strict quality checks."
+      },
+      {
+        title: "What We Do",
+        desc: "We provide pharmaceutical manufacturing, export supply, product development, formulation planning, regulatory documentation, quality assurance, packaging, labeling, contract manufacturing, and global market supply coordination."
+      },
+      {
+        title: "Regulatory and Compliance Strength",
+        desc: "Ivexia Pharma follows a systematic approach to regulatory requirements, documentation, product dossiers, COA support, GMP-related documentation, stability data, specifications, labeling, and export documentation."
+      },
+      {
+        title: "Innovation and Research-Driven Growth",
+        desc: "We focus on improving formulations, manufacturing efficiency, product stability, packaging quality, and regulatory readiness through practical and market-focused innovation."
+      },
+      {
+        title: "Our Commitment to Healthcare",
+        desc: "Ivexia Pharma is committed to contributing to global healthcare by providing safe, reliable, and affordable pharmaceutical products with responsibility, trust, and excellence."
+      },
+      {
+        title: "Building the Future",
+        desc: "Ivexia Pharma is moving forward with global expansion, modern manufacturing, product diversification, and stronger regulatory capabilities."
+      }
+    ]
+  },
+
+  valuesInfo: {
+    badge: "Our Values",
+    title: "Values That Guide Ivexia Pharma",
+    points: [
+      "Quality",
+      "Integrity",
+      "Innovation",
+      "Compliance",
+      "Partnership",
+      "Responsibility"
+    ]
+  },
+
+  faqs: [
+    {
+      question: "What does Ivexia Pharma do?",
+      answer: "Ivexia Pharma is a pharmaceutical manufacturer and exporter offering quality medicines, product development support, export supply, regulatory documentation, and packaging solutions for healthcare distributors, importers, and pharmaceutical partners worldwide."
+    },
+    {
+      question: "Is Ivexia Pharma a global pharmaceutical company?",
+      answer: "Yes, Ivexia Pharma focuses on international pharmaceutical markets and supports global healthcare partners with export-ready pharmaceutical products, quality documentation, and reliable supply solutions."
+    },
+    {
+      question: "What makes Ivexia Pharma a trusted pharmaceutical partner?",
+      answer: "Ivexia Pharma focuses on quality manufacturing, GMP-aligned processes, regulatory support, timely delivery, ethical business practices, and long-term partnership value."
+    },
+    {
+      question: "Does Ivexia Pharma support pharmaceutical exports?",
+      answer: "Yes, Ivexia Pharma supports pharmaceutical exports with product supply, documentation assistance, packaging support, regulatory coordination, and market-focused pharmaceutical solutions."
+    },
+    {
+      question: "Which markets does Ivexia Pharma serve?",
+      answer: "Ivexia Pharma aims to serve Europe, MENA, Africa, CIS, Southeast Asia, and other growing healthcare regions."
+    }
+  ],
 },
 testKitDetailPage: {
   home: "Home",

@@ -841,68 +841,68 @@ testKitsPage: {
 aboutPage: {
   hero: {
     title: "Over Ivexia Pharmaceuticals",
-    subtitle: "Innovatie in de gezondheidszorg met wereldwijde farmaceutische excellentie en onwankelbare toewijding aan kwaliteit."
+    subtitle: "Innovatie in de gezondheidszorg met wereldwijde farmaceutische excellentie en een sterke toewijding aan kwaliteit."
   },
   stats: {
-    years: "Jaar Excellentie",
+    years: "Jaren van Excellentie",
     markets: "Wereldwijde Markten",
     products: "Producten",
     employees: "Medewerkers"
   },
   story: {
     badge: "Ons Verhaal",
-    title: "Toegewijd aan Farmaceutische Excellentie Sinds 2018",
-    p1: "Opgericht met een toewijding aan innovatie, levert Ivexia Pharmaceuticals wereldklasse farmaceutische productie afgestemd op wereldwijde normen.",
-    p2: "We combineren regelgevende expertise, geavanceerd onderzoek en productieprecisie om internationale markten te bedienen.",
-    p3: "Vandaag de dag opereert Ivexia in meerdere regio's met strategische uitbreiding naar Europa en MENA."
+    title: "Toegewijd aan Farmaceutische Excellentie sinds 2018",
+    p1: "Ivexia Pharma is een vooruitstrevend farmaceutisch bedrijf, gebouwd op een sterke toewijding aan kwaliteit, innovatie en wereldwijde vooruitgang in de gezondheidszorg.",
+    p2: "Sinds de oprichting richt Ivexia Pharma zich op het leveren van betrouwbare farmaceutische producten die voldoen aan internationale normen en zorgverleners, distributeurs, importeurs en patiënten in verschillende markten ondersteunen.",
+    p3: "Vandaag is Ivexia Pharma een betrouwbare partner voor farmaceutische productie, productontwikkeling, exportlevering en marktuitbreiding."
   },
   purpose: {
     title: "Ons Doel",
     subtitle: "Gedreven door innovatie, geleid door integriteit",
     visionTitle: "Onze Visie",
-    visionDesc: "Een wereldwijd vertrouwde farmaceutische partner worden die innovatie en veiligheid levert.",
+    visionDesc: "Een wereldwijd erkend farmaceutisch bedrijf worden dat bekendstaat om kwaliteit, betrouwbaarheid, innovatie en een verantwoordelijke bijdrage aan de gezondheidszorg in Europa, MENA, Afrika, CIS, Zuidoost-Azië en andere groeiende gezondheidsregio’s.",
     missionTitle: "Onze Missie",
-    missionDesc: "Hoogwaardige geneesmiddelen produceren door onderzoeksexcellentie en naleving."
+    missionDesc: "Hoogwaardige farmaceutische producten toegankelijk maken voor wereldwijde markten via veilige productie, betrouwbare exportsystemen, sterke naleving van regelgeving, transparante partnerschappen en betrouwbare leveringsondersteuning."
   },
   global: {
     badge: "Wereldwijde Voetafdruk",
-    title: "Wereldwijde Operaties",
-    subtitle: "Strategisch gelegen om wereldwijde markten efficiënt te bedienen"
+    title: "Wereldwijde Activiteiten",
+    subtitle: "Strategisch gevestigd om wereldwijde markten efficiënt te bedienen"
   },
   globalLocations: [
     {
       loc: "India",
-      desc: "Strategische farmaceutische aanwezigheid met geavanceerde productiefaciliteiten en R&D-centra."
+      desc: "Strategische farmaceutische aanwezigheid met moderne productiefaciliteiten en R&D-centra."
     },
     {
       loc: "Noord-Macedonië",
-      desc: "Europese hub voor productie en distributie, die EU-markten met excellentie bedient."
+      desc: "Europees centrum voor productie en distributie, dat EU-markten met excellentie bedient."
     },
     {
       loc: "Qatar",
-      desc: "MENA regionaal hoofdkantoor, uitbreiding van gezondheidszorgtoegang in het Midden-Oosten."
+      desc: "Regionaal hoofdkantoor voor MENA, gericht op uitbreiding van toegang tot gezondheidszorg in het Midden-Oosten."
     }
   ],
   expertise: {
-    badge: "Wat We Doen",
+    badge: "Wat Wij Doen",
     title: "Expertisegebieden",
-    subtitle: "Gespecialiseerde farmaceutische oplossingen voor complexe gezondheidszorgbehoeften"
+    subtitle: "Gespecialiseerde farmaceutische oplossingen voor complexe zorgbehoeften"
   },
   expertiseList: [
     {
       title: "Onderzoek & Ontwikkeling",
       img: "/images/R&D.jpg",
-      desc: "Geavanceerde onderzoeksfaciliteiten gericht op innovatieve geneesmiddeltoedieningssystemen."
+      desc: "Geavanceerde onderzoeksfaciliteiten gericht op innovatieve systemen voor medicijnafgifte."
     },
     {
       title: "Productie",
       img: "/images/Manufacturing.jpg",
-      desc: "WHO-GMP gecertificeerde faciliteiten met geavanceerde productiemogelijkheden."
+      desc: "WHO-GMP-gecertificeerde faciliteiten met geavanceerde productiecapaciteiten."
     },
     {
       title: "Oncologie",
       img: "/images/Oncology.jpg",
-      desc: "Gespecialiseerd oncologieportfolio met gerichte therapieën."
+      desc: "Innovatieve behandelingen die het eigen immuunsysteem van de patiënt ondersteunen om kankercellen te herkennen en te vernietigen."
     }
   ],
   leadership: {
@@ -915,51 +915,51 @@ aboutPage: {
       name: "Dr. Michael Carter",
       title: "Chief Executive Officer",
       img: "/images/leader1.jpg",
-      desc: "30+ jaar in farmaceutisch leiderschap"
+      desc: "Meer dan 30 jaar ervaring in farmaceutisch leiderschap"
     },
     {
       name: "James Wilson",
-      title: "Directeur Operations",
+      title: "Director of Operations",
       img: "/images/leader2.jpg",
-      desc: "Expert in wereldwijde supply chain"
+      desc: "Expert in wereldwijde supply chains"
     },
     {
       name: "Sophia Bennett",
-      title: "Hoofd Operations",
+      title: "Head of Operations",
       img: "/images/leader3.jpg",
       desc: "Specialist in productie-excellentie"
     }
   ],
   timeline: {
     badge: "Onze Reis",
-    title: "Groei Mijlpalen",
-    subtitle: "Belangrijke prestaties op ons pad naar farmaceutische excellentie"
+    title: "Mijlpalen van Groei",
+    subtitle: "Belangrijke prestaties op onze weg naar farmaceutische excellentie"
   },
   timelineList: [
     {
       year: "2018",
-      event: "Bedrijf opgericht met visie op wereldwijde farmaceutische excellentie",
-      icon: "rocket"
+      event: "Bedrijf opgericht met een visie op wereldwijde farmaceutische excellentie",
+      icon: "Rocket"
     },
     {
       year: "2020",
-      event: "Eerste WHO-GMP gecertificeerde productiefaciliteit gevestigd",
-      icon: "industry"
+      event: "Eerste WHO-GMP-gecertificeerde productiefaciliteit opgericht",
+      icon: "Industry"
     },
     {
       year: "2023",
-      event: "Uitbreiding naar Europese markten",
-      icon: "globe"
+      event: "Uitbreiding van activiteiten naar Europese markten",
+      icon: "Globe"
     },
     {
       year: "2025",
-      event: "Oncologie divisie gelanceerd met 10+ producten",
-      icon: "microscope"
+      event: "Lancering van de oncologiedivisie met meer dan 10 producten",
+      icon: "Microscope"
     },
     {
       year: "2030",
-      event: "Visie om top 50 wereldwijd farmaceutisch bedrijf te worden",
-      icon: "bullseye"
+      event: "Visie om tot de top 50 farmaceutische bedrijven wereldwijd te behoren",
+      icon: "Bullseye"
     }
   ],
   certifications: {
@@ -968,29 +968,29 @@ aboutPage: {
     subtitle: "Voldoen aan internationale kwaliteitsnormen"
   },
   statement: {
-    title: "Gedreven door Innovatie. Aangedreven door Kwaliteit.",
-    subtitle: "Ivexia staat voorop in farmaceutische vooruitgang."
+    title: "Gedreven door Innovatie. Versterkt door Kwaliteit.",
+    subtitle: "Ivexia staat aan de voorhoede van farmaceutische vooruitgang."
   },
   facilities: {
-    title: "State-of-the-Art Faciliteiten",
-    subtitle: "Ontworpen om te voldoen aan wereldwijde regelgevende normen."
+    title: "Geavanceerde Faciliteiten",
+    subtitle: "Ontworpen om te voldoen aan wereldwijde regelgevingsnormen."
   },
   rnd: {
-    badge: "Innovatiehub",
+    badge: "Innovatiecentrum",
     title: "Onderzoek & Ontwikkeling",
-    subtitle: "Grenzen verleggen in farmaceutisch onderzoek"
+    subtitle: "De grenzen van farmaceutisch onderzoek verleggen"
   },
   labs: {
-    title: "Geavanceerde R&D Faciliteit",
+    title: "Geavanceerde R&D-Faciliteit",
     desc: "Uitgerust met geavanceerde onderzoeksinfrastructuur en wereldwijde GMP-normen."
   },
   sustainability: {
     badge: "Milieu",
     title: "Toewijding aan Duurzaamheid",
-    desc: "We geven prioriteit aan milieuvriendelijke productie en verantwoorde inkoop.",
+    desc: "Wij geven prioriteit aan milieuvriendelijke productie en verantwoord inkopen.",
     points: [
-      "Zero-waste productie-initiatieven",
-      "Zonne-energie aangedreven faciliteiten",
+      "Initiatieven voor afvalvrije productie",
+      "Faciliteiten op zonne-energie",
       "Duurzame verpakkingsoplossingen"
     ]
   },
@@ -1001,12 +1001,12 @@ aboutPage: {
   },
   awards: {
     badge: "Erkenning",
-    title: "Prijzen & Erkenning",
-    subtitle: "Excellentie in farmaceutische innovatie vieren"
+    title: "Prijzen & Erkenningen",
+    subtitle: "Het vieren van excellentie in farmaceutische innovatie"
   },
   awardsList: [
     {
-      award: "Farmaceutische Excellentie Award 2023",
+      award: "Pharmaceutical Excellence Award 2023",
       org: "Global Health Council",
       year: "2023"
     },
@@ -1016,16 +1016,106 @@ aboutPage: {
       year: "2022"
     },
     {
-      award: "Beste Opkomende Farmaceutische Bedrijf",
+      award: "Beste Opkomende Farmaceutische Onderneming",
       org: "Healthcare Asia",
       year: "2024"
     }
   ],
+  whoWeAre: {
+    badge: "Wie Wij Zijn",
+    title: "Een Betrouwbare Wereldwijde Farmaceutische Partner",
+    desc: "Ivexia Pharma is een wereldwijde farmaceutische fabrikant en exporteur die hoogwaardige geneesmiddelen, ondersteuning bij productontwikkeling, regelgevende documentatie, verpakkingsoplossingen en betrouwbare exportlevering biedt aan zorgdistributeurs, importeurs, ziekenhuizen en farmaceutische partners wereldwijd."
+  },
+
+  qualityInfo: {
+    badge: "Kwaliteit Eerst",
+    title: "Kwaliteit Staat Centraal in Alles",
+    desc: "Kwaliteit vormt de basis van Ivexia Pharma. Onze aanpak omvat beoordeling van grondstoffen, productiemonitoring, procescontroles, testen van eindproducten, verpakkingsinspectie, documentatiebeoordeling en correcte opslagcontrole.",
+    points: [
+      "GMP-afgestemde productienormen",
+      "Geverifieerde inkoop van grondstoffen",
+      "Kwaliteitscontrole per batch",
+      "Veilige en conforme verpakking",
+      "Sterke documentatie en procesvalidatie"
+    ]
+  },
+
+  exportInfo: {
+    badge: "Wereldwijde Exportfocus",
+    title: "Betrouwbare Farmaceutische Exportlevering",
+    desc: "Ivexia Pharma ondersteunt distributeurs, importeurs, zorgbedrijven en institutionele kopers met exportklare farmaceutische producten, correcte documentatie, verpakkingsondersteuning, regelgevende coördinatie en marktgerichte leveringsoplossingen."
+  },
   cta: {
-    title: "Partner met Ons",
-    subtitle: "Doe met ons mee in het leveren van kwalitatieve gezondheidszorgoplossingen wereldwijd.",
+    title: "Werk met Ons Samen",
+    subtitle: "Sluit u bij ons aan om wereldwijd hoogwaardige gezondheidsoplossingen te leveren.",
     button: "Neem Contact Op"
-  }
+  },
+  detailedInfo: {
+    badge: "Over Ivexia Pharma",
+    title: "Farmaceutische Excellentie Opbouwen sinds 2018",
+    sections: [
+      {
+        title: "Wie Wij Zijn",
+        desc: "Ivexia Pharma is een wereldwijde farmaceutische fabrikant en exporteur die een breed scala aan farmaceutische producten aanbiedt voor gereguleerde en opkomende markten. Ons bedrijf richt zich op kwaliteitsgeneesmiddelen, moderne processen, sterke documentatiesystemen en strikte kwaliteitscontroles."
+      },
+      {
+        title: "Wat Wij Doen",
+        desc: "Wij bieden farmaceutische productie, exportlevering, productontwikkeling, formulatieplanning, regelgevende documentatie, kwaliteitsborging, kwaliteitscontrole, verpakking, etikettering, contractproductie en coördinatie van wereldwijde marktlevering."
+      },
+      {
+        title: "Regelgevende Kracht en Compliance",
+        desc: "Ivexia Pharma volgt een systematische aanpak voor regelgevende vereisten, documentatie, productdossiers, COA-ondersteuning, GMP-gerelateerde documentatie, stabiliteitsgegevens, specificaties, etikettering en exportdocumentatie."
+      },
+      {
+        title: "Innovatie- en Onderzoeksgedreven Groei",
+        desc: "Wij richten ons op het verbeteren van formuleringen, productie-efficiëntie, productstabiliteit, verpakkingskwaliteit en regelgevende gereedheid via praktische en marktgerichte innovatie."
+      },
+      {
+        title: "Onze Toewijding aan Gezondheidszorg",
+        desc: "Ivexia Pharma zet zich in om bij te dragen aan wereldwijde gezondheidszorg door veilige, betrouwbare en betaalbare farmaceutische producten te leveren met verantwoordelijkheid, vertrouwen en excellentie."
+      },
+      {
+        title: "De Toekomst Opbouwen",
+        desc: "Ivexia Pharma gaat vooruit met wereldwijde expansie, moderne productie, productdiversificatie en sterkere regelgevende capaciteiten."
+      }
+    ]
+  },
+
+  valuesInfo: {
+    badge: "Onze Waarden",
+    title: "Waarden die Ivexia Pharma Leiden",
+    points: [
+      "Kwaliteit",
+      "Integriteit",
+      "Innovatie",
+      "Compliance",
+      "Partnerschap",
+      "Verantwoordelijkheid"
+    ]
+  },
+
+  faqs: [
+    {
+      question: "Wat doet Ivexia Pharma?",
+      answer: "Ivexia Pharma is een farmaceutische fabrikant en exporteur die kwaliteitsgeneesmiddelen, ondersteuning bij productontwikkeling, exportlevering, regelgevende documentatie en verpakkingsoplossingen biedt aan zorgdistributeurs, importeurs en farmaceutische partners wereldwijd."
+    },
+    {
+      question: "Is Ivexia Pharma een wereldwijd farmaceutisch bedrijf?",
+      answer: "Ja, Ivexia Pharma richt zich op internationale farmaceutische markten en ondersteunt wereldwijde zorgpartners met exportklare farmaceutische producten, kwaliteitsdocumentatie en betrouwbare leveringsoplossingen."
+    },
+    {
+      question: "Wat maakt Ivexia Pharma een betrouwbare farmaceutische partner?",
+      answer: "Ivexia Pharma richt zich op kwaliteitsproductie, GMP-afgestemde processen, regelgevende ondersteuning, tijdige levering, ethische bedrijfspraktijken en langdurige partnerschapswaarde."
+    },
+    {
+      question: "Ondersteunt Ivexia Pharma farmaceutische export?",
+      answer: "Ja, Ivexia Pharma ondersteunt farmaceutische export met productlevering, documentatiehulp, verpakkingsondersteuning, regelgevende coördinatie en marktgerichte farmaceutische oplossingen."
+    },
+    {
+      question: "Welke markten bedient Ivexia Pharma?",
+      answer: "Ivexia Pharma wil Europa, MENA, Afrika, CIS, Zuidoost-Azië en andere groeiende gezondheidsregio’s bedienen."
+    }
+  ],
 },
 testKitDetailPage: {
   home: "Home",

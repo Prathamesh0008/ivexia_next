@@ -735,8 +735,8 @@ testKitsPage: {
 },
 aboutPage: {
   hero: {
-    title: "Sobre Ivexia Pharmaceuticals",
-    subtitle: "Innovando en atención médica con excelencia farmacéutica global y compromiso inquebrantable con la calidad."
+    title: "Acerca de Ivexia Pharmaceuticals",
+    subtitle: "Innovando en la atención médica con excelencia farmacéutica global y un compromiso firme con la calidad."
   },
   stats: {
     years: "Años de Excelencia",
@@ -746,36 +746,36 @@ aboutPage: {
   },
   story: {
     badge: "Nuestra Historia",
-    title: "Comprometidos con la Excelencia Farmacéutica Desde 2018",
-    p1: "Fundada con un compromiso con la innovación, Ivexia Pharmaceuticals ofrece fabricación farmacéutica de clase mundial alineada con los estándares globales.",
-    p2: "Combinamos experiencia regulatoria, investigación avanzada y precisión en fabricación para servir a los mercados internacionales.",
-    p3: "Hoy, Ivexia opera en múltiples regiones con expansión estratégica en Europa y MENA."
+    title: "Comprometidos con la Excelencia Farmacéutica desde 2018",
+    p1: "Ivexia Pharma es una empresa farmacéutica progresiva construida sobre un firme compromiso con la calidad, la innovación y el avance de la atención médica global.",
+    p2: "Desde sus inicios, Ivexia Pharma se ha centrado en ofrecer productos farmacéuticos confiables que cumplen con estándares internacionales y apoyan a proveedores de salud, distribuidores, importadores y pacientes en diferentes mercados.",
+    p3: "Hoy, Ivexia Pharma es un socio confiable para la fabricación farmacéutica, el desarrollo de productos, el suministro de exportación y la expansión de mercado."
   },
   purpose: {
     title: "Nuestro Propósito",
     subtitle: "Impulsados por la innovación, guiados por la integridad",
     visionTitle: "Nuestra Visión",
-    visionDesc: "Convertirnos en un socio farmacéutico globalmente confiable que ofrece innovación y seguridad.",
+    visionDesc: "Convertirnos en una empresa farmacéutica reconocida globalmente por su calidad, confiabilidad, innovación y contribución responsable a la atención médica en Europa, MENA, África, CEI, Sudeste Asiático y otras regiones sanitarias en crecimiento.",
     missionTitle: "Nuestra Misión",
-    missionDesc: "Fabricar medicamentos de alta calidad a través de la excelencia en investigación y cumplimiento."
+    missionDesc: "Hacer que los productos farmacéuticos de alta calidad sean accesibles para los mercados globales mediante fabricación segura, sistemas de exportación confiables, sólido cumplimiento regulatorio, alianzas transparentes y soporte de suministro confiable."
   },
   global: {
-    badge: "Huella Global",
+    badge: "Presencia Global",
     title: "Operaciones Mundiales",
-    subtitle: "Ubicados estratégicamente para servir a los mercados globales de manera eficiente"
+    subtitle: "Ubicados estratégicamente para servir eficientemente a los mercados globales"
   },
   globalLocations: [
     {
       loc: "India",
-      desc: "Presencia farmacéutica estratégica con instalaciones de fabricación de última generación y centros de I+D."
+      desc: "Presencia farmacéutica estratégica con instalaciones de fabricación avanzadas y centros de I+D."
     },
     {
       loc: "Macedonia del Norte",
-      desc: "Centro europeo de fabricación y distribución, sirviendo a los mercados de la UE con excelencia."
+      desc: "Centro europeo de fabricación y distribución que atiende los mercados de la UE con excelencia."
     },
     {
       loc: "Qatar",
-      desc: "Sede regional de MENA, expandiendo el acceso a la atención médica en todo el Medio Oriente."
+      desc: "Sede regional para MENA, ampliando el acceso a la atención médica en Oriente Medio."
     }
   ],
   expertise: {
@@ -787,7 +787,7 @@ aboutPage: {
     {
       title: "Investigación y Desarrollo",
       img: "/images/R&D.jpg",
-      desc: "Instalaciones de investigación de vanguardia centradas en sistemas innovadores de administración de fármacos."
+      desc: "Instalaciones de investigación avanzadas enfocadas en sistemas innovadores de administración de medicamentos."
     },
     {
       title: "Fabricación",
@@ -797,7 +797,7 @@ aboutPage: {
     {
       title: "Oncología",
       img: "/images/Oncology.jpg",
-      desc: "Portafolio de oncología especializado con terapias dirigidas."
+      desc: "Tratamientos innovadores que aprovechan el propio sistema inmunitario del paciente para reconocer y destruir células cancerosas."
     }
   ],
   leadership: {
@@ -810,7 +810,7 @@ aboutPage: {
       name: "Dr. Michael Carter",
       title: "Director Ejecutivo",
       img: "/images/leader1.jpg",
-      desc: "30+ años en liderazgo farmacéutico"
+      desc: "Más de 30 años en liderazgo farmacéutico"
     },
     {
       name: "James Wilson",
@@ -822,69 +822,69 @@ aboutPage: {
       name: "Sophia Bennett",
       title: "Jefa de Operaciones",
       img: "/images/leader3.jpg",
-      desc: "Especialista en excelencia en fabricación"
+      desc: "Especialista en excelencia de fabricación"
     }
   ],
   timeline: {
-    badge: "Nuestro Viaje",
+    badge: "Nuestro Recorrido",
     title: "Hitos de Crecimiento",
     subtitle: "Logros clave en nuestro camino hacia la excelencia farmacéutica"
   },
   timelineList: [
     {
       year: "2018",
-      event: "Empresa fundada con visión de excelencia farmacéutica global",
-      icon: "rocket"
+      event: "Empresa fundada con una visión de excelencia farmacéutica global",
+      icon: "Rocket"
     },
     {
       year: "2020",
       event: "Primera instalación de fabricación certificada por WHO-GMP establecida",
-      icon: "industry"
+      icon: "Industry"
     },
     {
       year: "2023",
-      event: "Operaciones expandidas a los mercados europeos",
-      icon: "globe"
+      event: "Expansión de operaciones a mercados europeos",
+      icon: "Globe"
     },
     {
       year: "2025",
-      event: "División de oncología lanzada con más de 10 productos",
-      icon: "microscope"
+      event: "Lanzamiento de la división de oncología con más de 10 productos",
+      icon: "Microscope"
     },
     {
       year: "2030",
-      event: "Visión de convertirnos en una empresa farmacéutica entre las 50 principales del mundo",
-      icon: "bullseye"
+      event: "Visión de convertirse en una de las 50 principales empresas farmacéuticas globales",
+      icon: "Bullseye"
     }
   ],
   certifications: {
-    badge: "Aseguramiento de Calidad",
+    badge: "Garantía de Calidad",
     title: "Certificaciones Globales",
-    subtitle: "Cumpliendo con los estándares internacionales de calidad"
+    subtitle: "Cumpliendo estándares internacionales de calidad"
   },
   statement: {
-    title: "Impulsados por la Innovación. Potenciados por la Calidad.",
+    title: "Impulsados por la Innovación. Fortalecidos por la Calidad.",
     subtitle: "Ivexia está a la vanguardia del avance farmacéutico."
   },
   facilities: {
     title: "Instalaciones de Última Generación",
-    subtitle: "Diseñadas para cumplir con los estándares regulatorios globales."
+    subtitle: "Diseñadas para cumplir con estándares regulatorios globales."
   },
   rnd: {
     badge: "Centro de Innovación",
     title: "Investigación y Desarrollo",
-    subtitle: "Superando límites en la investigación farmacéutica"
+    subtitle: "Superando los límites de la investigación farmacéutica"
   },
   labs: {
     title: "Instalación Avanzada de I+D",
-    desc: "Equipada con infraestructura de investigación de vanguardia y estándares GMP globales."
+    desc: "Equipada con infraestructura de investigación avanzada y estándares GMP globales."
   },
   sustainability: {
     badge: "Medio Ambiente",
     title: "Compromiso con la Sostenibilidad",
     desc: "Priorizamos la fabricación ecológica y el abastecimiento responsable.",
     points: [
-      "Iniciativas de fabricación sin residuos",
+      "Iniciativas de fabricación con cero residuos",
       "Instalaciones alimentadas por energía solar",
       "Soluciones de embalaje sostenibles"
     ]
@@ -892,12 +892,12 @@ aboutPage: {
   presence: {
     badge: "Alcance Mundial",
     title: "Presencia Global",
-    subtitle: "Sirviendo a pacientes en más de 50 países"
+    subtitle: "Atendiendo a pacientes en más de 50 países"
   },
   awards: {
     badge: "Reconocimiento",
     title: "Premios y Reconocimientos",
-    subtitle: "Celebrando la excelencia en la innovación farmacéutica"
+    subtitle: "Celebrando la excelencia en innovación farmacéutica"
   },
   awardsList: [
     {
@@ -916,11 +916,101 @@ aboutPage: {
       year: "2024"
     }
   ],
+  whoWeAre: {
+    badge: "Quiénes Somos",
+    title: "Un Socio Farmacéutico Global de Confianza",
+    desc: "Ivexia Pharma es un fabricante y exportador farmacéutico global que ofrece medicamentos de alta calidad, soporte para el desarrollo de productos, documentación regulatoria, soluciones de embalaje y suministro de exportación confiable para distribuidores de salud, importadores, hospitales y socios farmacéuticos en todo el mundo."
+  },
+
+  qualityInfo: {
+    badge: "Calidad Primero",
+    title: "La Calidad en el Centro de Todo",
+    desc: "La calidad es la base de Ivexia Pharma. Nuestro enfoque cubre la evaluación de materias primas, el monitoreo de producción, controles en proceso, pruebas de producto terminado, inspección de embalaje, revisión documental y control adecuado de almacenamiento.",
+    points: [
+      "Estándares de fabricación alineados con GMP",
+      "Abastecimiento verificado de materias primas",
+      "Pruebas de control de calidad por lote",
+      "Embalaje seguro y conforme",
+      "Documentación sólida y validación de procesos"
+    ]
+  },
+
+  exportInfo: {
+    badge: "Enfoque Global de Exportación",
+    title: "Suministro Farmacéutico de Exportación Confiable",
+    desc: "Ivexia Pharma apoya a distribuidores, importadores, empresas de salud y compradores institucionales con productos farmacéuticos listos para exportación, documentación adecuada, soporte de embalaje, coordinación regulatoria y soluciones de suministro orientadas al mercado."
+  },
   cta: {
-    title: "Asóciese Con Nosotros",
-    subtitle: "Únase a nosotros para ofrecer soluciones de atención médica de calidad en todo el mundo.",
+    title: "Asóciese con Nosotros",
+    subtitle: "Únase a nosotros para ofrecer soluciones sanitarias de calidad en todo el mundo.",
     button: "Contáctenos"
-  }
+  },
+  detailedInfo: {
+    badge: "Acerca de Ivexia Pharma",
+    title: "Construyendo Excelencia Farmacéutica desde 2018",
+    sections: [
+      {
+        title: "Quiénes Somos",
+        desc: "Ivexia Pharma es un fabricante y exportador farmacéutico global que ofrece una amplia gama de productos farmacéuticos para mercados regulados y emergentes. Nuestra empresa se centra en medicamentos de calidad, procesos modernos, sistemas documentales sólidos y controles estrictos de calidad."
+      },
+      {
+        title: "Lo Que Hacemos",
+        desc: "Ofrecemos fabricación farmacéutica, suministro de exportación, desarrollo de productos, planificación de formulaciones, documentación regulatoria, garantía de calidad, control de calidad, embalaje, etiquetado, fabricación por contrato y coordinación de suministro para mercados globales."
+      },
+      {
+        title: "Fortaleza Regulatoria y Cumplimiento",
+        desc: "Ivexia Pharma sigue un enfoque sistemático para requisitos regulatorios, documentación, dossiers de productos, soporte de COA, documentación relacionada con GMP, datos de estabilidad, especificaciones, etiquetado y documentación de exportación."
+      },
+      {
+        title: "Crecimiento Impulsado por la Innovación y la Investigación",
+        desc: "Nos enfocamos en mejorar formulaciones, eficiencia de fabricación, estabilidad del producto, calidad del embalaje y preparación regulatoria mediante innovación práctica y orientada al mercado."
+      },
+      {
+        title: "Nuestro Compromiso con la Salud",
+        desc: "Ivexia Pharma está comprometida a contribuir a la atención médica global proporcionando productos farmacéuticos seguros, confiables y asequibles con responsabilidad, confianza y excelencia."
+      },
+      {
+        title: "Construyendo el Futuro",
+        desc: "Ivexia Pharma avanza con expansión global, fabricación moderna, diversificación de productos y capacidades regulatorias más sólidas."
+      }
+    ]
+  },
+
+  valuesInfo: {
+    badge: "Nuestros Valores",
+    title: "Valores que Guían a Ivexia Pharma",
+    points: [
+      "Calidad",
+      "Integridad",
+      "Innovación",
+      "Cumplimiento",
+      "Colaboración",
+      "Responsabilidad"
+    ]
+  },
+
+  faqs: [
+    {
+      question: "¿Qué hace Ivexia Pharma?",
+      answer: "Ivexia Pharma es un fabricante y exportador farmacéutico que ofrece medicamentos de calidad, soporte para desarrollo de productos, suministro de exportación, documentación regulatoria y soluciones de embalaje para distribuidores de salud, importadores y socios farmacéuticos en todo el mundo."
+    },
+    {
+      question: "¿Ivexia Pharma es una empresa farmacéutica global?",
+      answer: "Sí, Ivexia Pharma se enfoca en mercados farmacéuticos internacionales y apoya a socios globales de salud con productos farmacéuticos listos para exportación, documentación de calidad y soluciones de suministro confiables."
+    },
+    {
+      question: "¿Qué hace que Ivexia Pharma sea un socio farmacéutico confiable?",
+      answer: "Ivexia Pharma se enfoca en fabricación de calidad, procesos alineados con GMP, soporte regulatorio, entrega puntual, prácticas comerciales éticas y valor de colaboración a largo plazo."
+    },
+    {
+      question: "¿Ivexia Pharma apoya las exportaciones farmacéuticas?",
+      answer: "Sí, Ivexia Pharma apoya las exportaciones farmacéuticas con suministro de productos, asistencia documental, soporte de embalaje, coordinación regulatoria y soluciones farmacéuticas orientadas al mercado."
+    },
+    {
+      question: "¿Qué mercados atiende Ivexia Pharma?",
+      answer: "Ivexia Pharma tiene como objetivo atender Europa, MENA, África, CEI, Sudeste Asiático y otras regiones sanitarias en crecimiento."
+    }
+  ],
 },
 testKitDetailPage: {
   home: "Inicio",

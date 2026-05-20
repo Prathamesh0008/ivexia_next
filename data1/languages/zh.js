@@ -676,81 +676,81 @@ testKitsPage: {
 aboutPage: {
   hero: {
     title: "关于 Ivexia Pharmaceuticals",
-    subtitle: "以全球制药卓越品质和对质量的坚定承诺，创新医疗保健服务。"
+    subtitle: "以全球制药卓越能力和对质量的坚定承诺，推动医疗健康创新。"
   },
   stats: {
-    years: "年卓越历程",
+    years: "卓越发展年数",
     markets: "全球市场",
     products: "产品",
     employees: "员工"
   },
   story: {
     badge: "我们的故事",
-    title: "自2018年以来致力于制药卓越",
-    p1: "Ivexia Pharmaceuticals 成立于对创新的承诺，提供符合全球标准的世界级制药生产。",
-    p2: "我们结合监管专业知识、先进研究和制造精度，服务于国际市场。",
-    p3: "如今，Ivexia 在多个地区运营，并战略性地扩展到欧洲和中东北非地区。"
+    title: "自 2018 年以来致力于制药卓越",
+    p1: "Ivexia Pharma 是一家不断发展的制药公司，建立在对质量、创新和全球医疗健康进步的坚定承诺之上。",
+    p2: "自成立以来，Ivexia Pharma 专注于提供符合国际标准的可靠药品，支持不同市场中的医疗服务提供者、分销商、进口商和患者。",
+    p3: "如今，Ivexia Pharma 是药品生产、产品开发、出口供应和市场拓展方面值得信赖的合作伙伴。"
   },
   purpose: {
-    title: "我们的宗旨",
-    subtitle: "创新驱动，诚信引导",
+    title: "我们的目标",
+    subtitle: "以创新驱动，以诚信引领",
     visionTitle: "我们的愿景",
-    visionDesc: "成为全球值得信赖的制药合作伙伴，提供创新和安全性。",
+    visionDesc: "成为一家在质量、可靠性、创新和负责任医疗贡献方面享誉全球的制药公司，服务欧洲、中东和北非、非洲、独联体、东南亚及其他不断发展的医疗健康地区。",
     missionTitle: "我们的使命",
-    missionDesc: "通过卓越的研究和合规性，制造高品质药品。"
+    missionDesc: "通过安全生产、可靠出口体系、严格法规合规、透明合作关系和稳定供应支持，让高质量药品进入全球市场。"
   },
   global: {
-    badge: "全球足迹",
-    title: "全球运营",
-    subtitle: "战略布局，高效服务全球市场"
+    badge: "全球布局",
+    title: "全球业务运营",
+    subtitle: "战略性布局，高效服务全球市场"
   },
   globalLocations: [
     {
       loc: "印度",
-      desc: "战略性的制药布局，拥有最先进的生产设施和研发中心。"
+      desc: "拥有先进生产设施和研发中心的战略性制药基地。"
     },
     {
       loc: "北马其顿",
-      desc: "欧洲制造和分销中心，以卓越品质服务欧盟市场。"
+      desc: "服务欧盟市场的欧洲制造与分销中心，专注卓越运营。"
     },
     {
       loc: "卡塔尔",
-      desc: "中东北非地区总部，扩大整个中东地区的医疗保健服务。"
+      desc: "中东和北非区域总部，推动中东地区医疗可及性提升。"
     }
   ],
   expertise: {
     badge: "我们的业务",
     title: "专业领域",
-    subtitle: "为复杂的医疗需求提供专业制药解决方案"
+    subtitle: "为复杂医疗需求提供专业制药解决方案"
   },
   expertiseList: [
     {
       title: "研发",
       img: "/images/R&D.jpg",
-      desc: "专注于创新药物输送系统的尖端研究设施。"
+      desc: "专注于创新给药系统的先进研发设施。"
     },
     {
       title: "生产制造",
       img: "/images/Manufacturing.jpg",
-      desc: "通过WHO-GMP认证的设施，具有先进的生产能力。"
+      desc: "具备先进制造能力的 WHO-GMP 认证设施。"
     },
     {
       title: "肿瘤学",
       img: "/images/Oncology.jpg",
-      desc: "专业肿瘤学产品组合，提供靶向治疗。"
+      desc: "创新治疗方案，帮助患者自身免疫系统识别并清除癌细胞。"
     }
   ],
   leadership: {
-    badge: "我们的领导",
-    title: "执行领导团队",
-    subtitle: "推动制药创新的经验丰富的专业人士"
+    badge: "我们的领导团队",
+    title: "执行领导层",
+    subtitle: "经验丰富的专业人士推动制药创新"
   },
   leadershipList: [
     {
-      name: "Michael Carter 博士",
+      name: "Dr. Michael Carter",
       title: "首席执行官",
       img: "/images/leader1.jpg",
-      desc: "30年以上制药领导经验"
+      desc: "拥有 30 多年制药行业领导经验"
     },
     {
       name: "James Wilson",
@@ -760,41 +760,41 @@ aboutPage: {
     },
     {
       name: "Sophia Bennett",
-      title: "运营主管",
+      title: "运营负责人",
       img: "/images/leader3.jpg",
-      desc: "制造卓越专家"
+      desc: "制造卓越管理专家"
     }
   ],
   timeline: {
     badge: "我们的历程",
     title: "成长里程碑",
-    subtitle: "我们走向制药卓越之路的关键成就"
+    subtitle: "迈向制药卓越过程中的关键成就"
   },
   timelineList: [
     {
       year: "2018",
-      event: "公司成立，愿景成为全球制药卓越企业",
-      icon: "rocket"
+      event: "公司成立，确立全球制药卓越愿景",
+      icon: "Rocket"
     },
     {
       year: "2020",
-      event: "建立首个通过WHO-GMP认证的生产设施",
-      icon: "industry"
+      event: "建立首个 WHO-GMP 认证生产设施",
+      icon: "Industry"
     },
     {
       year: "2023",
-      event: "业务扩展至欧洲市场",
-      icon: "globe"
+      event: "业务拓展至欧洲市场",
+      icon: "Globe"
     },
     {
       year: "2025",
-      event: "推出肿瘤学部门，拥有10多种产品",
-      icon: "microscope"
+      event: "推出肿瘤事业部，拥有 10 多种产品",
+      icon: "Microscope"
     },
     {
       year: "2030",
-      event: "愿景成为全球前50大制药公司",
-      icon: "bullseye"
+      event: "愿景成为全球前 50 强制药公司",
+      icon: "Bullseye"
     }
   ],
   certifications: {
@@ -803,64 +803,154 @@ aboutPage: {
     subtitle: "符合国际质量标准"
   },
   statement: {
-    title: "创新驱动。品质为本。",
-    subtitle: "Ivexia 站在制药进步的前沿。"
+    title: "创新驱动，质量赋能。",
+    subtitle: "Ivexia 站在制药发展的前沿。"
   },
   facilities: {
-    title: "最先进的设施",
-    subtitle: "设计符合全球监管标准。"
+    title: "先进设施",
+    subtitle: "按照全球监管标准设计。"
   },
   rnd: {
     badge: "创新中心",
     title: "研发",
-    subtitle: "突破制药研究的界限"
+    subtitle: "不断突破制药研究边界"
   },
   labs: {
     title: "先进研发设施",
-    desc: "配备尖端研究基础设施和全球GMP标准。"
+    desc: "配备先进研究基础设施并符合全球 GMP 标准。"
   },
   sustainability: {
     badge: "环境",
     title: "可持续发展承诺",
-    desc: "我们优先考虑环保制造和负责任采购。",
+    desc: "我们优先采用环保制造方式和负责任采购。",
     points: [
-      "零浪费制造倡议",
+      "零废弃制造倡议",
       "太阳能供电设施",
       "可持续包装解决方案"
     ]
   },
   presence: {
     badge: "全球覆盖",
-    title: "全球布局",
-    subtitle: "为50多个国家的患者提供服务"
+    title: "全球存在",
+    subtitle: "服务 50 多个国家的患者"
   },
   awards: {
     badge: "荣誉认可",
     title: "奖项与认可",
-    subtitle: "庆祝制药创新领域的卓越成就"
+    subtitle: "表彰制药创新领域的卓越表现"
   },
   awardsList: [
     {
-      award: "2023年制药卓越奖",
-      org: "全球卫生理事会",
+      award: "2023 年制药卓越奖",
+      org: "Global Health Council",
       year: "2023"
     },
     {
       award: "制造创新奖",
-      org: "制药领袖论坛",
+      org: "Pharma Leaders Forum",
       year: "2022"
     },
     {
       award: "最佳新兴制药公司",
-      org: "亚洲医疗保健",
+      org: "Healthcare Asia",
       year: "2024"
     }
   ],
+  whoWeAre: {
+    badge: "我们是谁",
+    title: "值得信赖的全球制药合作伙伴",
+    desc: "Ivexia Pharma 是一家全球制药制造商和出口商，为全球医疗分销商、进口商、医院和制药合作伙伴提供高质量药品、产品开发支持、监管文件、包装解决方案和可靠的出口供应。"
+  },
+
+  qualityInfo: {
+    badge: "质量第一",
+    title: "质量是所有工作的核心",
+    desc: "质量是 Ivexia Pharma 的基础。我们的质量方法涵盖原材料评估、生产监控、过程检查、成品检测、包装检查、文件审核以及适当的仓储控制。",
+    points: [
+      "符合 GMP 的生产标准",
+      "经过验证的原材料采购",
+      "按批次进行质量控制检测",
+      "安全且合规的包装",
+      "完善的文件体系和工艺验证"
+    ]
+  },
+
+  exportInfo: {
+    badge: "全球出口重点",
+    title: "可靠的药品出口供应",
+    desc: "Ivexia Pharma 为分销商、进口商、医疗企业和机构买家提供出口就绪的药品、适当文件、包装支持、监管协调和面向市场的供应解决方案。"
+  },
   cta: {
     title: "与我们合作",
-    subtitle: "加入我们在全球范围内提供优质医疗解决方案的行列。",
+    subtitle: "加入我们，共同向全球提供高质量医疗健康解决方案。",
     button: "联系我们"
-  }
+  },
+  detailedInfo: {
+    badge: "关于 Ivexia Pharma",
+    title: "自 2018 年以来打造制药卓越",
+    sections: [
+      {
+        title: "我们是谁",
+        desc: "Ivexia Pharma 是一家全球制药制造商和出口商，为受监管市场和新兴市场提供广泛的药品组合。公司专注于高质量药品、现代化流程、完善文件系统和严格质量检查。"
+      },
+      {
+        title: "我们的业务",
+        desc: "我们提供药品生产、出口供应、产品开发、处方规划、监管文件、质量保证、质量控制、包装、标签、合同制造以及全球市场供应协调。"
+      },
+      {
+        title: "法规与合规能力",
+        desc: "Ivexia Pharma 对监管要求、文件、产品注册资料、COA 支持、GMP 相关文件、稳定性数据、产品规格、标签和出口文件采取系统化方法。"
+      },
+      {
+        title: "创新与研发驱动增长",
+        desc: "我们通过务实且面向市场的创新，专注于改进处方、制造效率、产品稳定性、包装质量和法规准备能力。"
+      },
+      {
+        title: "我们对医疗健康的承诺",
+        desc: "Ivexia Pharma 致力于以责任、信任和卓越为基础，提供安全、可靠且可负担的药品，为全球医疗健康作出贡献。"
+      },
+      {
+        title: "建设未来",
+        desc: "Ivexia Pharma 正通过全球扩张、现代化制造、产品多元化和更强的法规能力持续前进。"
+      }
+    ]
+  },
+
+  valuesInfo: {
+    badge: "我们的价值观",
+    title: "引领 Ivexia Pharma 的价值观",
+    points: [
+      "质量",
+      "诚信",
+      "创新",
+      "合规",
+      "合作伙伴关系",
+      "责任"
+    ]
+  },
+
+  faqs: [
+    {
+      question: "Ivexia Pharma 是做什么的？",
+      answer: "Ivexia Pharma 是一家制药制造商和出口商，为全球医疗分销商、进口商和制药合作伙伴提供高质量药品、产品开发支持、出口供应、监管文件和包装解决方案。"
+    },
+    {
+      question: "Ivexia Pharma 是一家全球制药公司吗？",
+      answer: "是的，Ivexia Pharma 专注于国际制药市场，并通过出口就绪药品、质量文件和可靠供应解决方案支持全球医疗合作伙伴。"
+    },
+    {
+      question: "是什么让 Ivexia Pharma 成为值得信赖的制药合作伙伴？",
+      answer: "Ivexia Pharma 专注于高质量制造、符合 GMP 的流程、法规支持、及时交付、道德商业实践以及长期合作价值。"
+    },
+    {
+      question: "Ivexia Pharma 是否支持药品出口？",
+      answer: "是的，Ivexia Pharma 通过产品供应、文件协助、包装支持、监管协调和面向市场的制药解决方案支持药品出口。"
+    },
+    {
+      question: "Ivexia Pharma 服务哪些市场？",
+      answer: "Ivexia Pharma 目标服务欧洲、中东和北非、非洲、独联体、东南亚以及其他不断发展的医疗健康地区。"
+    }
+  ],
 },
 testKitDetailPage: {
   home: "首页",
