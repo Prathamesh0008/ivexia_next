@@ -1,23 +1,21 @@
 //ivexia\app\about\page.jsx
+
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { Suspense } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import {
-  FaRocket,
   FaIndustry,
   FaGlobeEurope,
-  FaMicroscope,
-  FaBullseye,
+  FaFlask,
+  FaLeaf,
+  FaChartLine,
+  FaUsers,
 } from "react-icons/fa";
 
-/* =========================
-   AUTO SCROLL LABS
-========================= */
 function AutoScrollLabs({ t }) {
   const scrollRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
@@ -73,6 +71,7 @@ function AutoScrollLabs({ t }) {
               className="object-cover hover:scale-105 transition-transform duration-700"
             />
           </div>
+
           <div className="p-4 sm:p-6">
             <h3 className="font-semibold text-[#0d2d47] text-base sm:text-lg">
               {t?.labs?.title} {i + 1}
@@ -87,193 +86,371 @@ function AutoScrollLabs({ t }) {
   );
 }
 
-/* =========================
-   STATS COUNTER
-========================= */
+function AnimatedNumber({ value, suffix = "", duration = 1600 }) {
+  const ref = useRef(null);
+  const [count, setCount] = useState(0);
+  const [started, setStarted] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !started) {
+          setStarted(true);
+        }
+      },
+      { threshold: 0.4 }
+    );
+
+    observer.observe(el);
+
+    return () => observer.disconnect();
+  }, [started]);
+
+  useEffect(() => {
+    if (!started) return;
+
+    let startTime = null;
+
+    const animate = (time) => {
+      if (!startTime) startTime = time;
+
+      const progress = Math.min((time - startTime) / duration, 1);
+      const easedProgress = 1 - Math.pow(1 - progress, 3);
+      const current = Math.floor(easedProgress * value);
+
+      setCount(current);
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  }, [started, value, duration]);
+
+  return (
+    <span ref={ref}>
+      {count}
+      {suffix}
+    </span>
+  );
+}
+
 function StatsCounter({ t }) {
   const stats = [
-    { number: "15+", label: t?.stats?.years },
-    { number: "50+", label: t?.stats?.markets },
-    { number: "200+", label: t?.stats?.products },
-    { number: "1000+", label: t?.stats?.employees },
+    { value: 15, suffix: "+", label: t?.stats?.years, icon: <FaChartLine /> },
+    { value: 50, suffix: "+", label: t?.stats?.markets, icon: <FaGlobeEurope /> },
+    { value: 200, suffix: "+", label: t?.stats?.products, icon: <FaFlask /> },
+    { value: 1000, suffix: "+", label: t?.stats?.employees, icon: <FaUsers /> },
   ];
+
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 max-w-5xl mx-auto px-4">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-10 sm:gap-y-12">
       {stats.map((stat, i) => (
         <motion.div
           key={i}
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: i * 0.1 }}
-          className="text-center"
+          transition={{ duration: 0.45, delay: i * 0.08 }}
+          viewport={{ once: true }}
+          className="relative text-center px-4"
         >
-          <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#E2004F] mb-1 sm:mb-2">
-            {stat.number}
+          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#0d2d47]/10 text-[#0d2d47] text-2xl">
+            {stat.icon}
           </div>
-          <div className="text-xs sm:text-sm uppercase tracking-wider text-gray-600">
+
+          <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#0d2d47] tracking-tight">
+            <AnimatedNumber value={stat.value} suffix={stat.suffix} />
+          </div>
+
+          <p className="mt-3 text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] text-gray-500">
             {stat.label}
-          </div>
+          </p>
+
+          <div className="mx-auto mt-4 h-[2px] w-10 bg-[#E2004F]" />
         </motion.div>
       ))}
     </div>
   );
 }
 
-/* =========================
-   MAIN ABOUT PAGE
-========================= */
+function ParallaxSection({ children, bgImage }) {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+
+  return (
+    <section ref={ref} className="relative overflow-hidden">
+      <motion.div style={{ y }} className="absolute inset-0 z-0">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${bgImage})` }}
+        />
+        <div className="absolute inset-0 bg-[#0d2d47]/70" />
+      </motion.div>
+
+      <div className="relative z-10">{children}</div>
+    </section>
+  );
+}
+
 export default function AboutPage() {
   const { translations } = useLanguage();
   const t = translations?.aboutPage;
-  
+
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
     whileInView: { opacity: 1, y: 0 },
     transition: { duration: 0.6 },
   };
 
-  // Get the expertise list from translations
-  const expertiseList = t?.expertiseList || [
-    { title: "Research & Development", img: "/images/R&D.jpg", desc: "Cutting-edge research facilities focused on innovative drug delivery systems." },
-    { title: "Manufacturing", img: "/images/Manufacturing.jpg", desc: "WHO-GMP certified facilities with advanced manufacturing capabilities." },
-    { title: "Oncology", img: "/images/Oncology.jpg", desc: "Specialized oncology portfolio with targeted therapies." }
+  const faqSchema = t?.faqs?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: t.faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      }
+    : null;
+
+  const expertiseList = t?.expertiseList || [];
+
+  const leadershipImages = [
+    "/images/leader6.jpg",
+    "/images/leader2.jpg",
+    "/images/leader5.jpg",
   ];
 
-  // Get leadership list from translations
-  const leadershipList = t?.leadershipList || [
-    { name: "Dr. Michael Carter", title: "Chief Executive Officer", img: "/images/leader1.jpg", desc: "30+ years in pharmaceutical leadership" },
-    { name: "James Wilson", title: "Director of Operations", img: "/images/leader2.jpg", desc: "Expert in global supply chain" },
-    { name: "Sophia Bennett", title: "Head of Operations", img: "/images/leader3.jpg", desc: "Specialist in manufacturing excellence" }
-  ];
-
-  // Get timeline list from translations
-  const timelineList = t?.timelineList || [
-    { year: "2018", event: "Company founded with vision for global pharmaceutical excellence", icon: <FaRocket /> },
-    { year: "2020", event: "First WHO-GMP certified manufacturing facility established", icon: <FaIndustry /> },
-    { year: "2023", event: "Expanded operations to European markets", icon: <FaGlobeEurope /> },
-    { year: "2025", event: "Launched oncology division with 10+ products", icon: <FaMicroscope /> },
-    { year: "2030", event: "Vision to become top 50 global pharma company", icon: <FaBullseye /> }
-  ];
-
-  // Get awards list from translations
-  const awardsList = t?.awardsList || [
-    { award: "Pharmaceutical Excellence Award 2023", org: "Global Health Council", year: "2023" },
-    { award: "Innovation in Manufacturing", org: "Pharma Leaders Forum", year: "2022" },
-    { award: "Best Emerging Pharma Company", org: "Healthcare Asia", year: "2024" }
-  ];
+  const leadershipList = (t?.leadershipList || []).map((member, i) => ({
+    ...member,
+    img: leadershipImages[i],
+  }));
 
   return (
     <div className="bg-white overflow-hidden">
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
 
-      {/* 1️⃣ HERO */}
-      <section
-        className="relative w-full min-h-[500px] sm:h-screen sm:max-h-[800px] bg-cover bg-center overflow-hidden"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(13,45,71,0.85), rgba(13,45,71,0.6)), url('/images/abouthero.jpg')",
-        }}
-      >
+      {/* HERO */}
+      <section className="relative w-full min-h-[600px] sm:h-screen sm:max-h-[900px] overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/abouthero.jpg')" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0d2d47]/85 via-[#0d2d47]/75 to-[#0d2d47]/60" />
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="absolute bottom-10 sm:bottom-20 left-1/2 -translate-x-1/2 w-full px-4 sm:px-6"
+          className="absolute bottom-1/4 left-1/2 -translate-x-1/2 w-full px-4 sm:px-6"
         >
-          <div className="bg-white/10 backdrop-blur-md px-4 sm:px-6 md:px-10 py-8 sm:py-10 md:py-12 rounded-2xl sm:rounded-3xl text-center border border-white/20 max-w-[90%] sm:max-w-2xl md:max-w-4xl mx-auto">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 leading-tight">
+          <div className="text-center">
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ delay: 0.3, type: "spring", stiffness: 100 }}
+              className="inline-block mb-6 px-6 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20"
+            >
+              <span className="text-white text-sm font-semibold tracking-wider">
+                {t?.hero?.badge || "INNOVATION FOR LIFE"}
+              </span>
+            </motion.div>
+
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
               {t?.hero?.title}
             </h1>
-            <p className="text-gray-200 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto">
+
+            <p className="text-gray-200 text-base sm:text-lg md:text-xl max-w-2xl mx-auto">
               {t?.hero?.subtitle}
             </p>
           </div>
         </motion.div>
+
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
       </section>
 
-      {/* Stats Counter */}
-      <section className="py-12 sm:py-16 bg-white border-b border-gray-100">
-        <StatsCounter t={t} />
+      {/* STATS */}
+      <section className="py-16 sm:py-20 bg-white relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <StatsCounter t={t} />
+        </div>
       </section>
 
-      {/* 2️⃣ BRAND STORY */}
-      <motion.section 
-        {...fadeInUp}
-        className="py-16 sm:py-20 md:py-32 px-4 sm:px-6 md:px-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center"
-      >
-        <div className="relative order-2 md:order-1">
-          <div className="absolute -top-4 -left-4 w-16 sm:w-24 h-16 sm:h-24"></div>
-          <Image
-            src="/images/ivexia-factory1.jpg"
-            width={700}
-            height={600}
-            alt="Factory"
-            className="rounded-2xl sm:rounded-3xl shadow-2xl object-cover relative z-10 w-full h-auto"
-          />
-        </div>
-        <div className="order-1 md:order-2">
-          <span className="text-[#E2004F] font-semibold tracking-wider text-xs sm:text-sm uppercase mb-2 sm:mb-4 block">
-            {t?.story?.badge}
-          </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-4 sm:mb-6 leading-tight">
-            {t?.story?.title}
-          </h2>
-          <p className="text-gray-600 mb-4 sm:mb-6 text-base sm:text-lg leading-relaxed">
-            {t?.story?.p1}
-          </p>
-          <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">
-            {t?.story?.p2}
-          </p>
-          <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-            {t?.story?.p3}
-          </p>
-        </div>
-      </motion.section>
+      {/* BRAND STORY */}
+      <section className="py-20 sm:py-28 md:py-36 px-4 sm:px-6 md:px-10 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="relative order-2 md:order-1"
+          >
+            <div className="relative">
+              <div className="absolute -top-6 -left-6 w-32 h-32 bg-[#E2004F]/10 rounded-full blur-2xl" />
+              <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-[#19a6b5]/10 rounded-full blur-2xl" />
 
-      {/* 3️⃣ VISION + MISSION */}
-      <section className="py-16 sm:py-20 md:py-32 bg-[#0d2d47] text-white px-4 sm:px-6 md:px-10">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">
+              <Image
+                src="/images/ivexia-factory1.jpg"
+                width={700}
+                height={600}
+                alt="Factory"
+                className="rounded-2xl sm:rounded-3xl shadow-2xl object-cover relative z-10 w-full h-auto"
+              />
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="order-1 md:order-2"
+          >
+            <span className="text-[#E2004F] font-semibold tracking-wider text-sm uppercase mb-4 block inline-block px-3 py-1 bg-[#E2004F]/10 rounded-full">
+              {t?.story?.badge}
+            </span>
+
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-6 leading-tight">
+              {t?.story?.title}
+            </h2>
+
+            <p className="text-gray-600 mb-6 text-base sm:text-lg leading-relaxed">
+              {t?.story?.p1}
+            </p>
+
+            <p className="text-gray-600 mb-6 text-sm sm:text-base leading-relaxed">
+              {t?.story?.p2}
+            </p>
+
+            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+              {t?.story?.p3}
+            </p>
+
+            <div className="mt-8 flex gap-4">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-[#E2004F] rounded-full" />
+                <span className="text-sm text-gray-500">Quality First</span>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-[#19a6b5] rounded-full" />
+                <span className="text-sm text-gray-500">Innovation Driven</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* EXTRA INFO */}
+      <section className="py-16 sm:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+            {[t?.whoWeAre, t?.qualityInfo, t?.exportInfo]
+              .filter(Boolean)
+              .map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: i * 0.08 }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300"
+                >
+                  <span className="text-[#E2004F] font-semibold tracking-wider text-xs uppercase mb-3 block">
+                    {item?.badge}
+                  </span>
+
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#0d2d47] mb-4">
+                    {item?.title}
+                  </h3>
+
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                    {item?.desc}
+                  </p>
+
+                  {item?.points && (
+                    <ul className="mt-5 space-y-3">
+                      {item.points.map((point, index) => (
+                        <li
+                          key={index}
+                          className="flex gap-3 text-sm text-gray-700"
+                        >
+                          <span className="mt-1 h-2 w-2 rounded-full bg-[#19a6b5] flex-shrink-0" />
+                          {point}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </motion.div>
+              ))}
+          </div>
+        </div>
+      </section>
+
+      {/* VISION + MISSION */}
+      <section className="py-20 sm:py-28 md:py-36 bg-[#0d2d47] text-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <motion.div {...fadeInUp} className="text-center mb-12 sm:mb-20">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
               {t?.purpose?.title}
             </h2>
-            <p className="text-gray-300 text-sm sm:text-base max-w-2xl mx-auto px-4">
+            <p className="text-gray-300 text-base max-w-2xl mx-auto">
               {t?.purpose?.subtitle}
             </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
-            <motion.div 
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="bg-white/5 backdrop-blur-sm p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl border border-white/10"
+              className="group relative backdrop-blur-sm bg-white/5 p-8 md:p-10 rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-500"
             >
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#FF7A00]/20 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
-                <svg className="w-6 h-6 sm:w-8 sm:h-8 text-[#FF7A00]" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                </svg>
+              <div className="w-16 h-16 bg-[#19a6b5]/20 rounded-xl flex items-center justify-center mb-6">
+                <FaGlobeEurope className="w-8 h-8 text-[#19a6b5]" />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-[#FF7A00] mb-3 sm:mb-4">
+
+              <h3 className="text-2xl md:text-3xl font-bold text-[#19a6b5] mb-4">
                 {t?.purpose?.visionTitle}
-              </h2>
-              <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
+              </h3>
+
+              <p className="text-gray-300 text-base md:text-lg leading-relaxed">
                 {t?.purpose?.visionDesc}
               </p>
             </motion.div>
-            <motion.div 
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-white/5 backdrop-blur-sm p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl border border-white/10"
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="group relative backdrop-blur-sm bg-white/5 p-8 md:p-10 rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-500"
             >
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#19a6b5]/20 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
-                <svg className="w-6 h-6 sm:w-8 sm:h-8 text-[#19a6b5]" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM8 14H6v-2h2v2zm3 0H9v-2h2v2zm3 0h-2v-2h2v2zm3 0h-2v-2h2v2z"/>
-                </svg>
+              <div className="w-16 h-16 bg-[#19a6b5]/20 rounded-xl flex items-center justify-center mb-6">
+                <FaIndustry className="w-8 h-8 text-[#19a6b5]" />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-[#19a6b5] mb-3 sm:mb-4">
+
+              <h3 className="text-2xl md:text-3xl font-bold text-[#19a6b5] mb-4">
                 {t?.purpose?.missionTitle}
-              </h2>
-              <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
+              </h3>
+
+              <p className="text-gray-300 text-base md:text-lg leading-relaxed">
                 {t?.purpose?.missionDesc}
               </p>
             </motion.div>
@@ -281,81 +458,44 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 4️⃣ GLOBAL OPERATIONS */}
-      <section className="py-16 sm:py-20 md:py-32 bg-gray-50 px-4 sm:px-6 md:px-10">
-        <div className="max-w-7xl mx-auto">
-          <motion.div {...fadeInUp} className="text-center mb-10 sm:mb-16">
-            <span className="text-[#E2004F] font-semibold tracking-wider text-xs sm:text-sm uppercase mb-2 sm:mb-4 block">
+      {/* GLOBAL OPERATIONS */}
+      <section className="py-20 sm:py-28 md:py-36 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <motion.div {...fadeInUp} className="text-center mb-12 sm:mb-20">
+            <span className="text-[#E2004F] font-semibold tracking-wider text-sm uppercase mb-4 block">
               {t?.global?.badge}
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-3 sm:mb-4">
+
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-4">
               {t?.global?.title}
             </h2>
-            <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto px-4">
+
+            <p className="text-gray-600 text-base max-w-2xl mx-auto">
               {t?.global?.subtitle}
             </p>
           </motion.div>
-          
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {t?.globalLocations?.map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="group bg-white p-6 sm:p-8 shadow-lg hover:shadow-2xl rounded-xl sm:rounded-2xl transition-all duration-300 border border-gray-100"
+                className="group relative overflow-hidden bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500"
               >
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#0d2d47]/10 rounded-lg mb-4 sm:mb-6 flex items-center justify-center group-hover:bg-[#0d2d47] transition-colors duration-300">
-                  <span className="text-lg sm:text-xl font-bold text-[#0d2d47] group-hover:text-white">{i + 1}</span>
-                </div>
-                <h3 className="text-xl sm:text-2xl font-semibold text-[#0d2d47] mb-2 sm:mb-3">
-                  {item.loc}
-                </h3>
-                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                  {item.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+                <div className="p-8">
+                  <div className="w-14 h-14 bg-gradient-to-br from-[#0d2d47] to-[#1a3a5a] rounded-xl flex items-center justify-center mb-6">
+                    <span className="text-xl font-bold text-white">
+                      {i + 1}
+                    </span>
+                  </div>
 
-      {/* 5️⃣ EXPERTISE - USING TRANSLATED DATA */}
-      <section className="py-16 sm:py-20 md:py-32 px-4 sm:px-6 md:px-10 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <motion.div {...fadeInUp} className="text-center mb-10 sm:mb-16">
-            <span className="text-[#E2004F] font-semibold tracking-wider text-xs sm:text-sm uppercase mb-2 sm:mb-4 block">
-              {t?.expertise?.badge}
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-3 sm:mb-4">
-              {t?.expertise?.title}
-            </h2>
-            <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto px-4">
-              {t?.expertise?.subtitle}
-            </p>
-          </motion.div>
+                  <h3 className="text-xl md:text-2xl font-bold text-[#0d2d47] mb-3">
+                    {item.loc}
+                  </h3>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-            {expertiseList.map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="group relative overflow-hidden rounded-2xl sm:rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500"
-              >
-                <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden">
-                  <Image
-                    src={item.img}
-                    fill
-                    alt={item.title}
-                    className="object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0d2d47] via-[#0d2d47]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8 text-white transform translate-y-0 group-hover:translate-y-0 transition-transform duration-500">
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-1 sm:mb-2">{item.title}</h3>
-                  <p className="text-white/80 text-xs sm:text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
+                  <p className="text-gray-600 leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
@@ -365,357 +505,343 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 6️⃣ LEADERSHIP - USING TRANSLATED DATA */}
-      <section className="py-16 sm:py-20 md:py-32 bg-gray-50 px-4 sm:px-6 md:px-16">
-        <div className="max-w-7xl mx-auto">
-          <motion.div {...fadeInUp} className="text-center mb-10 sm:mb-16">
-            <span className="text-[#E2004F] font-semibold tracking-wider text-xs sm:text-sm uppercase mb-2 sm:mb-4 block">
-              {t?.leadership?.badge}
+      {/* EXPERTISE */}
+      <section className="py-20 sm:py-28 md:py-36 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <motion.div {...fadeInUp} className="text-center mb-12 sm:mb-20">
+            <span className="text-[#E2004F] font-semibold tracking-wider text-sm uppercase mb-4 block">
+              {t?.expertise?.badge}
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-3 sm:mb-4">
-              {t?.leadership?.title}
+
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-4">
+              {t?.expertise?.title}
             </h2>
-            <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto px-4">
-              {t?.leadership?.subtitle}
+
+            <p className="text-gray-600 text-base max-w-2xl mx-auto">
+              {t?.expertise?.subtitle}
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 justify-items-center">
-            {leadershipList.map((member, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="group w-full max-w-[280px] sm:max-w-none"
-              >
-                <div className="bg-white rounded-2xl sm:rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 sm:p-8 text-center">
-                  <div className="relative mb-4 sm:mb-6">
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#19a6b5] to-[#0d2d47] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 -m-1"></div>
-                    <Image
-                      src={member.img}
-                      width={120}
-                      height={120}
-                      alt={member.name}
-                      className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 mx-auto object-cover rounded-full border-4 border-white shadow-lg relative z-10"
-                    />
-                  </div>
-                  <h4 className="font-bold text-[#0d2d47] text-lg sm:text-xl mb-1">
-                    {member.name}
-                  </h4>
-                  <p className="text-[#E2004F] font-medium text-xs sm:text-sm mb-2 sm:mb-3">
-                    {member.title}
-                  </p>
-                  <p className="text-gray-500 text-xs sm:text-sm">
-                    {member.desc}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 7️⃣ TIMELINE - USING TRANSLATED DATA */}
-      <section className="py-16 sm:py-20 md:py-32 px-4 sm:px-6 md:px-10 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <motion.div {...fadeInUp} className="text-center mb-10 sm:mb-16">
-            <span className="text-[#E2004F] font-semibold tracking-wider text-xs sm:text-sm uppercase mb-2 sm:mb-4 block">
-              {t?.timeline?.badge}
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-3 sm:mb-4">
-              {t?.timeline?.title}
-            </h2>
-            <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto px-4">
-              {t?.timeline?.subtitle}
-            </p>
-          </motion.div>
-
-          <div className="relative">
-            {/* Hide timeline line on mobile, show on md and up */}
-            <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-[#E2004F] via-[#19a6b5] to-[#0d2d47]"></div>
-            
-            {/* Mobile timeline (stacked) */}
-            <div className="md:hidden space-y-6">
-              {timelineList.map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="bg-gray-50 p-6 rounded-2xl shadow-lg"
-                >
-                  <span className="text-3xl mb-2 block">{item.icon}</span>
-                  <h3 className="text-2xl font-bold text-[#E2004F] mb-2">{item.year}</h3>
-                  <p className="text-gray-600">{item.event}</p>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Desktop timeline */}
-            <div className="hidden md:block">
-              {timelineList.map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: i % 2 === 0 ? -50 : 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: i * 0.1 }}
-                  className={`relative flex items-center mb-16 ${
-                    i % 2 === 0 ? "flex-row" : "flex-row-reverse"
-                  }`}
-                >
-                  <div className={`flex-1 ${i % 2 === 0 ? "text-right pr-12" : "text-left pl-12"}`}>
-                    <div className="bg-gray-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                      <span className="text-4xl mb-2 block">{item.icon}</span>
-                      <h3 className="text-3xl font-bold text-[#E2004F] mb-2">{item.year}</h3>
-                      <p className="text-gray-600">{item.event}</p>
-                    </div>
-                  </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#19a6b5] rounded-full border-4 border-white shadow-lg"></div>
-                  <div className="flex-1"></div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 8️⃣ CERTIFICATIONS */}
-      <section className="py-16 sm:py-20 md:py-32 bg-gray-50 px-4 sm:px-6 md:px-10">
-        <div className="max-w-7xl mx-auto">
-          <motion.div {...fadeInUp} className="text-center mb-10 sm:mb-16">
-            <span className="text-[#E2004F] font-semibold tracking-wider text-xs sm:text-sm uppercase mb-2 sm:mb-4 block">
-              {t?.certifications?.badge}
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-3 sm:mb-4">
-              {t?.certifications?.title}
-            </h2>
-            <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto px-4">
-              {t?.certifications?.subtitle}
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 md:gap-6">
-            {["EU-GMP", "WHO-GMP", "ISO 9001", "ISO 14001", "HACCP", "PIC/S"].map((cert, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="group bg-white p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 text-center border border-gray-100"
-              >
-                <div className="w-12 h-12 sm:w-14 md:w-16 mx-auto mb-2 sm:mb-3 md:mb-4 bg-[#0d2d47]/5 rounded-full flex items-center justify-center group-hover:bg-[#0d2d47] transition-colors duration-300">
-                  <svg className="w-5 h-5 sm:w-6 md:w-8 text-[#0d2d47] group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                  </svg>
-                </div>
-                <p className="font-semibold text-[#0d2d47] text-xs sm:text-sm md:text-lg">{cert}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 9️⃣ BIG STATEMENT */}
-      <section className="py-16 sm:py-20 md:py-32 bg-[#0d2d47] text-center text-white px-4 sm:px-6 md:px-10">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto"
-        >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-            {t?.statement?.title}
-          </h2>
-          <p className="text-gray-300 text-base sm:text-lg md:text-xl max-w-2xl mx-auto px-4">
-            {t?.statement?.subtitle}
-          </p>
-        </motion.div>
-      </section>
-
-      {/* 🔟 FACILITIES PARALLAX */}
-      <section className="relative py-24 sm:py-32 md:py-48 bg-fixed bg-center bg-cover text-center text-white"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1581093502863-50b395c221e5?auto=format&fit=crop&q=80')",
-        }}
-      >
-        <div className="absolute inset-0 bg-[#0d2d47]/70"></div>
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6"
-        >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
-            {t?.facilities?.title}
-          </h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed">
-            {t?.facilities?.subtitle}
-          </p>
-        </motion.div>
-      </section>
-
-      {/* 11️⃣ R&D LABS */}
-      <section className="py-16 sm:py-20 md:py-32 px-4 sm:px-6 md:px-10 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <motion.div {...fadeInUp} className="text-center mb-10 sm:mb-16">
-            <span className="text-[#E2004F] font-semibold tracking-wider text-xs sm:text-sm uppercase mb-2 sm:mb-4 block">
-              {t?.rnd?.badge}
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-3 sm:mb-4">
-              {t?.rnd?.title}
-            </h2>
-            <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto px-4">
-              {t?.rnd?.subtitle}
-            </p>
-          </motion.div>
-          <AutoScrollLabs t={t} />
-        </div>
-      </section>
-
-      {/* 12️⃣ SUSTAINABILITY */}
-      <section className="py-16 sm:py-20 md:py-32 bg-gradient-to-br from-[#f0f9f7] to-white px-4 sm:px-6 md:px-10">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="order-2 md:order-1"
-          >
-            <span className="text-[#E2004F] font-semibold tracking-wider text-xs sm:text-sm uppercase mb-2 sm:mb-4 block">
-              {t?.sustainability?.badge}
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-4 sm:mb-6 leading-tight">
-              {t?.sustainability?.title}
-            </h2>
-            <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
-              {t?.sustainability?.desc}
-            </p>
-            <div className="space-y-3 sm:space-y-4">
-              {t?.sustainability?.points?.map((item, i) => (
-                <div key={i} className="flex items-center gap-2 sm:gap-3">
-                  <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#19a6b5] rounded-full"></div>
-                  <p className="text-gray-600 text-xs sm:text-sm md:text-base">
-                    {item}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="relative order-1 md:order-2"
-          >
-            <div className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 w-20 sm:w-24 md:w-32 h-20 sm:h-24 md:h-32 bg-[#19a6b5]/10 rounded-full"></div>
-            <Image
-              src="/images/sustainability.jpg"
-              width={600}
-              height={400}
-              alt="Sustainability"
-              className="rounded-2xl sm:rounded-3xl shadow-2xl object-cover relative z-10 w-full h-auto"
-            />
-          </motion.div>
-        </div>
-      </section>
-
-      {/* 13️⃣ GLOBAL PRESENCE */}
-      <section className="py-16 sm:py-20 md:py-32 text-center px-4 sm:px-6 md:px-10 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <motion.div {...fadeInUp} className="mb-10 sm:mb-16">
-            <span className="text-[#E2004F] font-semibold tracking-wider text-xs sm:text-sm uppercase mb-2 sm:mb-4 block">
-              {t?.presence?.badge}
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-3 sm:mb-4">
-              {t?.presence?.title}
-            </h2>
-            <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto px-4">
-              {t?.presence?.subtitle}
-            </p>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="relative px-4 sm:px-0"
-          >
-            <Image
-              src="/images/worldmap.jpg"
-              width={900}
-              height={500}
-              alt="World Map"
-              className="mx-auto rounded-xl sm:rounded-2xl shadow-2xl w-full h-auto"
-            />
-          </motion.div>
-        </div>
-      </section>
-
-      {/* 14️⃣ AWARDS - USING TRANSLATED DATA */}
-      <section className="py-16 sm:py-20 md:py-32 bg-gray-50 px-4 sm:px-6 md:px-10">
-        <div className="max-w-7xl mx-auto">
-          <motion.div {...fadeInUp} className="text-center mb-10 sm:mb-16">
-            <span className="text-[#E2004F] font-semibold tracking-wider text-xs sm:text-sm uppercase mb-2 sm:mb-4 block">
-              {t?.awards?.badge}
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-3 sm:mb-4">
-              {t?.awards?.title}
-            </h2>
-            <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto px-4">
-              {t?.awards?.subtitle}
-            </p>
-          </motion.div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-            {awardsList.map((item, i) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {expertiseList.map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-white p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center border border-gray-100"
+                className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500"
               >
-                <div className="w-12 h-12 sm:w-14 md:w-16 mx-auto mb-4 sm:mb-6 bg-gradient-to-br from-[#E2004F] to-[#FF7A00] rounded-xl sm:rounded-2xl flex items-center justify-center">
-                  <svg className="w-5 h-5 sm:w-6 md:w-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
+                <div className="relative h-80 overflow-hidden">
+                  <Image
+                    src={item.img}
+                    fill
+                    alt={item.title}
+                    className="object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0d2d47] via-[#0d2d47]/40 to-transparent opacity-80" />
                 </div>
-                <h3 className="font-bold text-[#0d2d47] text-base sm:text-lg md:text-xl mb-1 sm:mb-2">{item.award}</h3>
-                <p className="text-[#E2004F] font-medium text-xs sm:text-sm mb-1">{item.org}</p>
-                <p className="text-gray-400 text-xs sm:text-sm">{item.year}</p>
+
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                  <h3 className="text-xl md:text-2xl font-bold mb-2">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-white/90 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
+                    {item.desc}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 15️⃣ CTA */}
-      <section className="py-16 sm:py-20 md:py-32 bg-gradient-to-r from-[#0d2d47] to-[#1a3a5a] text-center text-white px-4 sm:px-6 md:px-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="max-w-3xl mx-auto"
-        >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-            {t?.cta?.title}
-          </h2>
-          <p className="text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 leading-relaxed px-4">
-            {t?.cta?.subtitle}
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-white text-[#0d2d47] px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1 text-sm sm:text-base"
-          >
-            {t?.cta?.button}
-            <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
-        </motion.div>
+      {/* LEADERSHIP */}
+      <section className="py-16 sm:py-24 md:py-32 bg-[#f8fafc]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <motion.div {...fadeInUp} className="text-center mb-10 sm:mb-16">
+            <span className="text-[#E2004F] font-semibold tracking-wider text-xs sm:text-sm uppercase mb-3 block">
+              {t?.leadership?.badge}
+            </span>
+
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-4">
+              {t?.leadership?.title}
+            </h2>
+
+            <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto">
+              {t?.leadership?.subtitle}
+            </p>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {leadershipList.map((member, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.55, delay: i * 0.08 }}
+                className="group"
+              >
+                <div className="h-full bg-white rounded-3xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-500">
+                  <div className="relative h-[300px] sm:h-[340px] bg-[#eef3f7] overflow-hidden">
+                    <Image
+                      src={member.img}
+                      fill
+                      alt={member.name}
+                      className="object-contain p-4 sm:p-5 group-hover:scale-105 transition-transform duration-700"
+                    />
+
+                    <div className="absolute left-0 right-0 bottom-0 h-20 bg-gradient-to-t from-white via-white/80 to-transparent" />
+                  </div>
+
+                  <div className="px-6 pb-7 pt-2 text-center">
+                    <h4 className="font-bold text-[#0d2d47] text-lg sm:text-xl mb-1">
+                      {member.name}
+                    </h4>
+
+                    <p className="text-[#E2004F] font-semibold text-sm mb-4">
+                      {member.title}
+                    </p>
+
+                    <div className="w-12 h-[2px] bg-[#19a6b5] mx-auto mb-4" />
+
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {member.desc}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </section>
 
+      {/* CERTIFICATIONS */}
+      <section className="py-20 sm:py-28 md:py-36 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <motion.div {...fadeInUp} className="text-center mb-12 sm:mb-20">
+            <span className="text-[#E2004F] font-semibold tracking-wider text-sm uppercase mb-4 block">
+              {t?.certifications?.badge}
+            </span>
+
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-4">
+              {t?.certifications?.title}
+            </h2>
+
+            <p className="text-gray-600 text-base max-w-2xl mx-auto">
+              {t?.certifications?.subtitle}
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+            {[
+              { name: "EU-GMP", img: "/images/EU-GMP.jpg" },
+              { name: "WHO-GMP", img: "/images/WHO-GMP.jpg" },
+              { name: "ISO 9001", img: "/images/IS09001.jpg" },
+              { name: "ISO 14001", img: "/images/ISO14001.jpg" },
+              { name: "HACCP", img: "/images/HACCP.png" },
+              { name: "PIC/S", img: "/images/PIclogo.jpg" },
+            ].map((cert, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: i * 0.05 }}
+                className="group bg-white p-5 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 text-center border border-gray-100 hover:border-[#E2004F]/20"
+              >
+                <div className="relative w-full h-20 sm:h-24 mb-4">
+                  <Image
+                    src={cert.img}
+                    fill
+                    alt={cert.name}
+                    className="object-contain group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+
+                <p className="font-bold text-[#0d2d47] text-sm sm:text-base">
+                  {cert.name}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* STATEMENT */}
+      <ParallaxSection bgImage="https://images.unsplash.com/photo-1581093502863-50b395c221e5?auto=format&fit=crop&q=80">
+        <div className="py-24 sm:py-32 md:py-48 text-center text-white">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto px-4"
+          >
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              {t?.statement?.title}
+            </h2>
+
+            <p className="text-gray-200 text-lg md:text-xl max-w-2xl mx-auto">
+              {t?.statement?.subtitle}
+            </p>
+          </motion.div>
+        </div>
+      </ParallaxSection>
+
+      {/* SUSTAINABILITY */}
+      <section className="py-20 sm:py-28 md:py-36 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="text-[#E2004F] font-semibold tracking-wider text-sm uppercase mb-4 block inline-block px-3 py-1 bg-[#E2004F]/10 rounded-full">
+              {t?.sustainability?.badge}
+            </span>
+
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-6 leading-tight">
+              {t?.sustainability?.title}
+            </h2>
+
+            <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-6">
+              {t?.sustainability?.desc}
+            </p>
+
+            <div className="space-y-4">
+              {t?.sustainability?.points?.map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl"
+                >
+                  <div className="w-8 h-8 bg-[#19a6b5]/10 rounded-full flex items-center justify-center">
+                    <FaLeaf className="w-4 h-4 text-[#19a6b5]" />
+                  </div>
+
+                  <p className="text-gray-700 text-sm md:text-base">
+                    {item}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="relative"
+          >
+            <Image
+              src="/images/sustainability.jpg"
+              width={600}
+              height={400}
+              alt="Sustainability"
+              className="rounded-2xl shadow-2xl object-cover relative z-10 w-full h-auto"
+            />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* R&D LABS */}
+      <section className="py-20 sm:py-28 md:py-36 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <motion.div {...fadeInUp} className="text-center mb-12 sm:mb-20">
+            <span className="text-[#E2004F] font-semibold tracking-wider text-sm uppercase mb-4 block">
+              {t?.rnd?.badge}
+            </span>
+
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-4">
+              {t?.rnd?.title}
+            </h2>
+
+            <p className="text-gray-600 text-base max-w-2xl mx-auto">
+              {t?.rnd?.subtitle}
+            </p>
+          </motion.div>
+
+          <AutoScrollLabs t={t} />
+        </div>
+      </section>
+
+      {/* GLOBAL PRESENCE */}
+      <section className="py-20 sm:py-28 md:py-36 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <motion.div {...fadeInUp} className="text-center mb-12 sm:mb-20">
+            <span className="text-[#E2004F] font-semibold tracking-wider text-sm uppercase mb-4 block">
+              {t?.presence?.badge}
+            </span>
+
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0d2d47] mb-4">
+              {t?.presence?.title}
+            </h2>
+
+            <p className="text-gray-600 text-base max-w-2xl mx-auto">
+              {t?.presence?.subtitle}
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="relative rounded-2xl overflow-hidden shadow-2xl"
+          >
+            <Image
+              src="/images/worldmap.png"
+              width={1200}
+              height={600}
+              alt="World Map"
+              className="w-full h-auto"
+            />
+
+            <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent pointer-events-none" />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 sm:py-28 md:py-36 bg-gradient-to-r from-[#0d2d47] to-[#1a3a5a]">
+        <div className="max-w-4xl mx-auto text-center px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              {t?.cta?.title}
+            </h2>
+
+            <p className="text-white/80 text-base md:text-lg mb-8">
+              {t?.cta?.subtitle}
+            </p>
+
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-white text-[#0d2d47] px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1 text-base shadow-lg"
+            >
+              {t?.cta?.button}
+
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 }
