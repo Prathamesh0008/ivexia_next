@@ -885,10 +885,11 @@ testKitsPage: {
 },
 
 aboutPage: {
-  hero: {
-    title: "About Ivexia Pharmaceuticals",
-    subtitle: "Innovating healthcare with global pharmaceutical excellence and unwavering commitment to quality."
-  },
+hero: {
+  badge: "PHARMACEUTICAL EXCELLENCE",
+  title: "About Ivexia Pharmaceuticals",
+  subtitle: "Innovating healthcare with global pharmaceutical excellence and unwavering commitment to quality."
+},
   stats: {
     years: "Years of Excellence",
     markets: "Global Markets",

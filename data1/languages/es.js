@@ -735,6 +735,7 @@ testKitsPage: {
 },
 aboutPage: {
   hero: {
+    badge: "EXCELENCIA FARMACÉUTICA",
     title: "Acerca de Ivexia Pharmaceuticals",
     subtitle: "Innovando en la atención médica con excelencia farmacéutica global y un compromiso firme con la calidad."
   },
@@ -749,7 +750,8 @@ aboutPage: {
     title: "Comprometidos con la Excelencia Farmacéutica desde 2018",
     p1: "Ivexia Pharma es una empresa farmacéutica progresiva construida sobre un firme compromiso con la calidad, la innovación y el avance de la atención médica global.",
     p2: "Desde sus inicios, Ivexia Pharma se ha centrado en ofrecer productos farmacéuticos confiables que cumplen con estándares internacionales y apoyan a proveedores de salud, distribuidores, importadores y pacientes en diferentes mercados.",
-    p3: "Hoy, Ivexia Pharma es un socio confiable para la fabricación farmacéutica, el desarrollo de productos, el suministro de exportación y la expansión de mercado."
+    p3: "Hoy, Ivexia Pharma es un socio confiable para la fabricación farmacéutica, el desarrollo de productos, el suministro de exportación y la expansión de mercado.",
+    highlights: ["Calidad Primero", "Impulsados por la Innovación"]
   },
   purpose: {
     title: "Nuestro Propósito",
@@ -921,7 +923,6 @@ aboutPage: {
     title: "Un Socio Farmacéutico Global de Confianza",
     desc: "Ivexia Pharma es un fabricante y exportador farmacéutico global que ofrece medicamentos de alta calidad, soporte para el desarrollo de productos, documentación regulatoria, soluciones de embalaje y suministro de exportación confiable para distribuidores de salud, importadores, hospitales y socios farmacéuticos en todo el mundo."
   },
-
   qualityInfo: {
     badge: "Calidad Primero",
     title: "La Calidad en el Centro de Todo",
@@ -934,7 +935,6 @@ aboutPage: {
       "Documentación sólida y validación de procesos"
     ]
   },
-
   exportInfo: {
     badge: "Enfoque Global de Exportación",
     title: "Suministro Farmacéutico de Exportación Confiable",
@@ -975,7 +975,6 @@ aboutPage: {
       }
     ]
   },
-
   valuesInfo: {
     badge: "Nuestros Valores",
     title: "Valores que Guían a Ivexia Pharma",
@@ -988,7 +987,10 @@ aboutPage: {
       "Responsabilidad"
     ]
   },
-
+  faqSection: {
+    badge: "FAQ",
+    title: "Preguntas Frecuentes"
+  },
   faqs: [
     {
       question: "¿Qué hace Ivexia Pharma?",

@@ -719,11 +719,12 @@ testKitsPage: {
 },
 aboutPage: {
   hero: {
+    badge: "PHARMAZEUTISCHE EXZELLENZ",
     title: "Über Ivexia Pharmaceuticals",
-    subtitle: "Innovation im Gesundheitswesen durch globale pharmazeutische Exzellenz und ein kompromissloses Engagement für Qualität."
+    subtitle: "Innovation im Gesundheitswesen durch globale pharmazeutische Exzellenz und kompromissloses Qualitätsbewusstsein."
   },
   stats: {
-    years: "Jahre Exzellenz",
+    years: "Jahre der Exzellenz",
     markets: "Globale Märkte",
     products: "Produkte",
     employees: "Mitarbeiter"
@@ -731,15 +732,16 @@ aboutPage: {
   story: {
     badge: "Unsere Geschichte",
     title: "Der pharmazeutischen Exzellenz seit 2018 verpflichtet",
-    p1: "Ivexia Pharma ist ein fortschrittliches Pharmaunternehmen, das auf einem starken Engagement für Qualität, Innovation und die Weiterentwicklung der globalen Gesundheitsversorgung basiert.",
-    p2: "Seit der Gründung konzentriert sich Ivexia Pharma darauf, zuverlässige pharmazeutische Produkte bereitzustellen, die internationalen Standards entsprechen und Gesundheitsdienstleister, Vertriebspartner, Importeure und Patienten in verschiedenen Märkten unterstützen.",
-    p3: "Heute ist Ivexia Pharma ein zuverlässiger Partner für pharmazeutische Herstellung, Produktentwicklung, Exportversorgung und Marktexpansion."
+    p1: "Ivexia Pharma ist ein fortschrittliches pharmazeutisches Unternehmen, das auf einem starken Engagement für Qualität, Innovation und die Weiterentwicklung der globalen Gesundheitsversorgung aufgebaut ist.",
+    p2: "Seit der Gründung konzentriert sich Ivexia Pharma darauf, zuverlässige pharmazeutische Produkte bereitzustellen, die internationalen Standards entsprechen und Gesundheitsdienstleister, Distributoren, Importeure und Patienten in verschiedenen Märkten unterstützen.",
+    p3: "Heute ist Ivexia Pharma ein verlässlicher Partner für pharmazeutische Herstellung, Produktentwicklung, Exportversorgung und Marktexpansion.",
+    highlights: ["Qualität zuerst", "Innovationsgetrieben"]
   },
   purpose: {
     title: "Unser Ziel",
-    subtitle: "Angetrieben von Innovation, geleitet von Integrität",
+    subtitle: "Von Innovation angetrieben, von Integrität geleitet",
     visionTitle: "Unsere Vision",
-    visionDesc: "Ein weltweit anerkanntes Pharmaunternehmen zu werden, das für Qualität, Zuverlässigkeit, Innovation und einen verantwortungsvollen Beitrag zur Gesundheitsversorgung in Europa, MENA, Afrika, der GUS, Südostasien und weiteren wachsenden Gesundheitsregionen bekannt ist.",
+    visionDesc: "Ein weltweit anerkanntes pharmazeutisches Unternehmen zu werden, das für Qualität, Zuverlässigkeit, Innovation und einen verantwortungsvollen Beitrag zur Gesundheitsversorgung in Europa, MENA, Afrika, GUS, Südostasien und anderen wachsenden Gesundheitsregionen bekannt ist.",
     missionTitle: "Unsere Mission",
     missionDesc: "Hochwertige pharmazeutische Produkte durch sichere Herstellung, zuverlässige Exportsysteme, starke regulatorische Compliance, transparente Partnerschaften und verlässliche Lieferunterstützung für globale Märkte zugänglich zu machen."
   },
@@ -751,27 +753,27 @@ aboutPage: {
   globalLocations: [
     {
       loc: "Indien",
-      desc: "Strategische pharmazeutische Präsenz mit modernen Produktionsstätten und Forschungs- und Entwicklungszentren."
+      desc: "Strategische pharmazeutische Präsenz mit hochmodernen Produktionsanlagen und F&E-Zentren."
     },
     {
       loc: "Nordmazedonien",
-      desc: "Europäisches Zentrum für Herstellung und Vertrieb, das EU-Märkte mit Exzellenz bedient."
+      desc: "Europäisches Zentrum für Herstellung und Distribution, das EU-Märkte mit Exzellenz bedient."
     },
     {
       loc: "Katar",
-      desc: "Regionaler Hauptsitz für MENA mit dem Ziel, den Zugang zur Gesundheitsversorgung im Nahen Osten zu erweitern."
+      desc: "Regionale MENA-Zentrale zur Erweiterung des Zugangs zur Gesundheitsversorgung im Nahen Osten."
     }
   ],
   expertise: {
     badge: "Was wir tun",
-    title: "Kompetenzbereiche",
-    subtitle: "Spezialisierte pharmazeutische Lösungen für komplexe Gesundheitsanforderungen"
+    title: "Fachgebiete",
+    subtitle: "Spezialisierte pharmazeutische Lösungen für komplexe Gesundheitsbedürfnisse"
   },
   expertiseList: [
     {
       title: "Forschung & Entwicklung",
       img: "/images/R&D.jpg",
-      desc: "Moderne Forschungseinrichtungen mit Fokus auf innovative Arzneimittelabgabesysteme."
+      desc: "Modernste Forschungseinrichtungen mit Fokus auf innovative Arzneimittelabgabesysteme."
     },
     {
       title: "Herstellung",
@@ -781,12 +783,12 @@ aboutPage: {
     {
       title: "Onkologie",
       img: "/images/Oncology.jpg",
-      desc: "Fortschrittliche Behandlungen, die das körpereigene Immunsystem des Patienten dabei unterstützen, Krebszellen zu erkennen und zu zerstören."
+      desc: "Innovative Behandlungen, die das Immunsystem des Patienten dabei unterstützen, Krebszellen zu erkennen und zu zerstören."
     }
   ],
   leadership: {
     badge: "Unsere Führungskräfte",
-    title: "Geschäftsführung",
+    title: "Executive Leadership",
     subtitle: "Erfahrene Fachleute, die pharmazeutische Innovation vorantreiben"
   },
   leadershipList: [
@@ -806,7 +808,7 @@ aboutPage: {
       name: "Sophia Bennett",
       title: "Head of Operations",
       img: "/images/leader3.jpg",
-      desc: "Spezialistin für exzellente Herstellungsprozesse"
+      desc: "Spezialistin für Fertigungsexzellenz"
     }
   ],
   timeline: {
@@ -822,12 +824,12 @@ aboutPage: {
     },
     {
       year: "2020",
-      event: "Errichtung der ersten WHO-GMP-zertifizierten Produktionsstätte",
+      event: "Erste WHO-GMP-zertifizierte Produktionsanlage eingerichtet",
       icon: "Industry"
     },
     {
       year: "2023",
-      event: "Ausweitung der Aktivitäten auf europäische Märkte",
+      event: "Expansion in europäische Märkte",
       icon: "Globe"
     },
     {
@@ -847,17 +849,17 @@ aboutPage: {
     subtitle: "Erfüllung internationaler Qualitätsstandards"
   },
   statement: {
-    title: "Angetrieben von Innovation. Gestärkt durch Qualität.",
+    title: "Von Innovation angetrieben. Von Qualität gestärkt.",
     subtitle: "Ivexia steht an der Spitze des pharmazeutischen Fortschritts."
   },
   facilities: {
-    title: "Modernste Einrichtungen",
+    title: "Hochmoderne Einrichtungen",
     subtitle: "Entwickelt, um globale regulatorische Standards zu erfüllen."
   },
   rnd: {
     badge: "Innovationszentrum",
     title: "Forschung & Entwicklung",
-    subtitle: "Wir erweitern die Grenzen pharmazeutischer Forschung"
+    subtitle: "Neue Grenzen in der pharmazeutischen Forschung erschließen"
   },
   labs: {
     title: "Fortschrittliche F&E-Einrichtung",
@@ -866,7 +868,7 @@ aboutPage: {
   sustainability: {
     badge: "Umwelt",
     title: "Engagement für Nachhaltigkeit",
-    desc: "Wir legen Wert auf umweltfreundliche Herstellung und verantwortungsvolle Beschaffung.",
+    desc: "Wir priorisieren umweltfreundliche Herstellung und verantwortungsvolle Beschaffung.",
     points: [
       "Initiativen für abfallarme Herstellung",
       "Solarbetriebene Einrichtungen",
@@ -876,12 +878,12 @@ aboutPage: {
   presence: {
     badge: "Weltweite Reichweite",
     title: "Globale Präsenz",
-    subtitle: "Versorgung von Patienten in über 50 Ländern"
+    subtitle: "Patientenversorgung in über 50 Ländern"
   },
   awards: {
     badge: "Anerkennung",
     title: "Auszeichnungen & Anerkennungen",
-    subtitle: "Würdigung von Exzellenz in pharmazeutischer Innovation"
+    subtitle: "Exzellenz in pharmazeutischer Innovation feiern"
   },
   awardsList: [
     {
@@ -902,44 +904,42 @@ aboutPage: {
   ],
   whoWeAre: {
     badge: "Wer wir sind",
-    title: "Ein vertrauenswürdiger globaler Pharmapartner",
-    desc: "Ivexia Pharma ist ein globaler pharmazeutischer Hersteller und Exporteur, der hochwertige Arzneimittel, Unterstützung bei der Produktentwicklung, regulatorische Dokumentation, Verpackungslösungen und zuverlässige Exportversorgung für Gesundheitsvertriebe, Importeure, Krankenhäuser und pharmazeutische Partner weltweit anbietet."
+    title: "Ein vertrauenswürdiger globaler pharmazeutischer Partner",
+    desc: "Ivexia Pharma ist ein globaler pharmazeutischer Hersteller und Exporteur, der hochwertige Arzneimittel, Unterstützung bei der Produktentwicklung, regulatorische Dokumentation, Verpackungslösungen und zuverlässige Exportversorgung für Gesundheitsdistributoren, Importeure, Krankenhäuser und pharmazeutische Partner weltweit anbietet."
   },
-
   qualityInfo: {
     badge: "Qualität zuerst",
-    title: "Qualität steht im Mittelpunkt von allem",
-    desc: "Qualität ist die Grundlage von Ivexia Pharma. Unser Ansatz umfasst die Bewertung von Rohstoffen, Produktionsüberwachung, In-Prozess-Kontrollen, Prüfung fertiger Produkte, Verpackungsinspektion, Dokumentationsprüfung und ordnungsgemäße Lagerkontrolle.",
+    title: "Qualität im Mittelpunkt von allem",
+    desc: "Qualität ist die Grundlage von Ivexia Pharma. Unser Ansatz umfasst die Bewertung von Rohstoffen, Produktionsüberwachung, In-Prozess-Kontrollen, Prüfung des Fertigprodukts, Verpackungsinspektion, Dokumentationsprüfung und ordnungsgemäße Lagerkontrolle.",
     points: [
-      "GMP-konforme Herstellungsstandards",
+      "GMP-ausgerichtete Herstellungsstandards",
       "Verifizierte Rohstoffbeschaffung",
-      "Chargenweise Qualitätskontrollprüfungen",
+      "Chargenweise Qualitätskontrollprüfung",
       "Sichere und konforme Verpackung",
       "Starke Dokumentation und Prozessvalidierung"
     ]
   },
-
   exportInfo: {
     badge: "Globaler Exportfokus",
     title: "Zuverlässige pharmazeutische Exportversorgung",
-    desc: "Ivexia Pharma unterstützt Vertriebspartner, Importeure, Gesundheitsunternehmen und institutionelle Käufer mit exportbereiten pharmazeutischen Produkten, geeigneter Dokumentation, Verpackungsunterstützung, regulatorischer Koordination und marktorientierten Lieferlösungen."
+    desc: "Ivexia Pharma unterstützt Distributoren, Importeure, Gesundheitsunternehmen und institutionelle Käufer mit exportbereiten pharmazeutischen Produkten, geeigneter Dokumentation, Verpackungsunterstützung, regulatorischer Koordination und marktorientierten Lieferlösungen."
   },
   cta: {
-    title: "Partnern Sie mit uns",
-    subtitle: "Schließen Sie sich uns an, um weltweit hochwertige Gesundheitslösungen bereitzustellen.",
+    title: "Werden Sie unser Partner",
+    subtitle: "Arbeiten Sie mit uns zusammen, um weltweit hochwertige Gesundheitslösungen bereitzustellen.",
     button: "Kontaktieren Sie uns"
   },
   detailedInfo: {
     badge: "Über Ivexia Pharma",
-    title: "Aufbau pharmazeutischer Exzellenz seit 2018",
+    title: "Pharmazeutische Exzellenz seit 2018 aufbauen",
     sections: [
       {
         title: "Wer wir sind",
-        desc: "Ivexia Pharma ist ein globaler pharmazeutischer Hersteller und Exporteur, der eine breite Palette pharmazeutischer Produkte für regulierte und aufstrebende Märkte anbietet. Unser Unternehmen konzentriert sich auf hochwertige Arzneimittel, moderne Prozesse, starke Dokumentationssysteme und strenge Qualitätsprüfungen."
+        desc: "Ivexia Pharma ist ein globaler pharmazeutischer Hersteller und Exporteur mit einem breiten Sortiment pharmazeutischer Produkte für regulierte und aufstrebende Märkte. Unser Unternehmen konzentriert sich auf hochwertige Arzneimittel, moderne Prozesse, starke Dokumentationssysteme und strenge Qualitätskontrollen."
       },
       {
         title: "Was wir tun",
-        desc: "Wir bieten pharmazeutische Herstellung, Exportversorgung, Produktentwicklung, Formulierungsplanung, regulatorische Dokumentation, Qualitätssicherung, Qualitätskontrolle, Verpackung, Etikettierung, Auftragsfertigung und Koordination der globalen Marktversorgung."
+        desc: "Wir bieten pharmazeutische Herstellung, Exportversorgung, Produktentwicklung, Formulierungsplanung, regulatorische Dokumentation, Qualitätssicherung, Qualitätskontrolle, Verpackung, Kennzeichnung, Auftragsfertigung und globale Lieferkoordination."
       },
       {
         title: "Regulatorische Stärke und Compliance",
@@ -951,15 +951,14 @@ aboutPage: {
       },
       {
         title: "Unser Engagement für die Gesundheitsversorgung",
-        desc: "Ivexia Pharma verpflichtet sich, durch sichere, zuverlässige und erschwingliche pharmazeutische Produkte mit Verantwortung, Vertrauen und Exzellenz zur globalen Gesundheitsversorgung beizutragen."
+        desc: "Ivexia Pharma setzt sich dafür ein, durch sichere, zuverlässige und erschwingliche pharmazeutische Produkte mit Verantwortung, Vertrauen und Exzellenz zur globalen Gesundheitsversorgung beizutragen."
       },
       {
         title: "Die Zukunft gestalten",
-        desc: "Ivexia Pharma schreitet mit globaler Expansion, moderner Herstellung, Produktdiversifizierung und stärkeren regulatorischen Fähigkeiten voran."
+        desc: "Ivexia Pharma entwickelt sich mit globaler Expansion, moderner Herstellung, Produktdiversifizierung und stärkeren regulatorischen Fähigkeiten weiter."
       }
     ]
   },
-
   valuesInfo: {
     badge: "Unsere Werte",
     title: "Werte, die Ivexia Pharma leiten",
@@ -972,19 +971,22 @@ aboutPage: {
       "Verantwortung"
     ]
   },
-
+  faqSection: {
+    badge: "FAQ",
+    title: "Häufig gestellte Fragen"
+  },
   faqs: [
     {
       question: "Was macht Ivexia Pharma?",
-      answer: "Ivexia Pharma ist ein pharmazeutischer Hersteller und Exporteur, der hochwertige Arzneimittel, Unterstützung bei der Produktentwicklung, Exportversorgung, regulatorische Dokumentation und Verpackungslösungen für Gesundheitsvertriebe, Importeure und pharmazeutische Partner weltweit anbietet."
+      answer: "Ivexia Pharma ist ein pharmazeutischer Hersteller und Exporteur, der hochwertige Arzneimittel, Unterstützung bei der Produktentwicklung, Exportversorgung, regulatorische Dokumentation und Verpackungslösungen für Gesundheitsdistributoren, Importeure und pharmazeutische Partner weltweit anbietet."
     },
     {
-      question: "Ist Ivexia Pharma ein globales Pharmaunternehmen?",
+      question: "Ist Ivexia Pharma ein globales pharmazeutisches Unternehmen?",
       answer: "Ja, Ivexia Pharma konzentriert sich auf internationale Pharmamärkte und unterstützt globale Gesundheitspartner mit exportbereiten pharmazeutischen Produkten, Qualitätsdokumentation und zuverlässigen Lieferlösungen."
     },
     {
-      question: "Was macht Ivexia Pharma zu einem vertrauenswürdigen Pharmapartner?",
-      answer: "Ivexia Pharma konzentriert sich auf hochwertige Herstellung, GMP-konforme Prozesse, regulatorische Unterstützung, pünktliche Lieferung, ethische Geschäftspraktiken und langfristigen Partnerschaftswert."
+      question: "Was macht Ivexia Pharma zu einem vertrauenswürdigen pharmazeutischen Partner?",
+      answer: "Ivexia Pharma konzentriert sich auf Qualitätsherstellung, GMP-ausgerichtete Prozesse, regulatorische Unterstützung, pünktliche Lieferung, ethische Geschäftspraktiken und langfristigen Partnerschaftswert."
     },
     {
       question: "Unterstützt Ivexia Pharma pharmazeutische Exporte?",
@@ -992,7 +994,7 @@ aboutPage: {
     },
     {
       question: "Welche Märkte bedient Ivexia Pharma?",
-      answer: "Ivexia Pharma möchte Europa, MENA, Afrika, die GUS, Südostasien und weitere wachsende Gesundheitsregionen bedienen."
+      answer: "Ivexia Pharma zielt darauf ab, Europa, MENA, Afrika, GUS, Südostasien und andere wachsende Gesundheitsregionen zu bedienen."
     }
   ],
 },
