@@ -38,10 +38,13 @@ export const metadata = {
       "max-video-preview": -1,
     },
   },
-
-  icons: {
-    icon: "/icon.png",
-  },
+icons: {
+  icon: [
+    { url: "/favicon.ico" },
+    { url: "/icon.png", type: "image/png" },
+  ],
+  shortcut: "/favicon.ico",
+},
 
   verification: {
     google: "_I5LLkQe5LBhnq6DBrhjM5ItivBo3Gk4tDuYDMT6BGo",
