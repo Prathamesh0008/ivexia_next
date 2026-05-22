@@ -154,7 +154,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative min-h-[120vh] md:min-h-[105vh] lg:min-h-screen w-full overflow-hidden bg-[linear-gradient(135deg,#FF7A00_0%,#E2004F_58%,#FF9B3D_100%)]"
+      className="relative min-h-[120svh] w-full overflow-hidden bg-[linear-gradient(135deg,#FF7A00_0%,#E2004F_58%,#FF9B3D_100%)] sm:min-h-[115svh] md:min-h-[110svh] lg:min-h-[100svh]"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onTouchStart={handleTouchStart}
@@ -221,8 +221,8 @@ export default function Hero() {
           />
           <div className="absolute inset-0 bg-[linear-gradient(104deg,rgba(5,18,31,0.74)_18%,rgba(5,18,31,0.42)_54%,rgba(5,18,31,0.16)_100%)]" />
           <div className="absolute inset-0 bg-black/18" />
-<div className="relative z-20 flex min-h-[120vh] md:min-h-[105vh] lg:min-h-screen items-center py-24 md:py-28 lg:py-32">
-            <div className="mx-auto grid w-full max-w-7xl items-start md:items-center gap-10 px-6 sm:px-10 md:px-16 lg:grid-cols-[minmax(0,1.15fr)_360px]">
+          <div className="relative z-20 flex min-h-[120svh] items-start py-24 pb-36 sm:min-h-[115svh] sm:py-28 sm:pb-40 md:min-h-[110svh] md:py-28 md:pb-40 lg:min-h-[100svh] lg:items-center lg:py-28">
+            <div className="mx-auto grid w-full max-w-7xl items-center gap-10 px-6 sm:px-10 md:px-16 lg:grid-cols-[minmax(0,1.15fr)_360px]">
               <motion.div
                 initial={{ opacity: 0, y: reduceMotion ? 0 : 34 }}
                 animate={{ opacity: 1, y: 0 }}
