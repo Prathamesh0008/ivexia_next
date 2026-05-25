@@ -5,6 +5,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { FaSearch } from "react-icons/fa";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { en as enProductLang } from "@/data2/languages/en";
 export default function ProductsPageClient({
   initialProducts = [],
   initialTestKits = [],
@@ -17,12 +18,51 @@ export default function ProductsPageClient({
   );
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [error, setError] = useState("");
-const { translations } = useLanguage();
+  const [localizedProductLang, setLocalizedProductLang] = useState(enProductLang);
+const { translations, language } = useLanguage();
 const t = translations?.productsPage;
+const testKitsLabel = t?.testKitsLabel || "TEST KITS";
   const [category, setCategory] = useState("");
   const [form, setForm] = useState("");
   const [dosage, setDosage] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
+
+  function openProductPath(event, path) {
+    if (event.ctrlKey || event.metaKey) {
+      window.open(path, "_blank", "noopener,noreferrer");
+      return;
+    }
+
+    router.push(path);
+  }
+
+  useEffect(() => {
+    let cancelled = false;
+    const selectedLanguage = language || "en";
+
+    async function loadProductLanguage() {
+      try {
+        const langModule = await import(`@/data2/languages/${selectedLanguage}.js`);
+        const nextProductLang = langModule[selectedLanguage] || enProductLang;
+
+        if (!cancelled) {
+          setLocalizedProductLang(nextProductLang);
+        }
+      } catch (error) {
+        console.error("Product language load failed", error);
+
+        if (!cancelled) {
+          setLocalizedProductLang(enProductLang);
+        }
+      }
+    }
+
+    loadProductLanguage();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [language]);
 
   useEffect(() => {
     let cancelled = false;
@@ -108,24 +148,44 @@ const t = translations?.productsPage;
     [testKits]
   );
 
+  const localizedProducts = useMemo(
+    () =>
+      products.map((product) => {
+        const localizedProduct =
+          localizedProductLang.products?.[product.slug?.toLowerCase()] ||
+          enProductLang.products[product.slug?.toLowerCase()];
+        const meta = localizedProduct?.meta || {};
+
+        return {
+          ...product,
+          displayName: meta.productName || product.name,
+          displayForm: meta.form || product.form,
+          displayCategory: meta.category || product.category,
+          displayDosage: meta.strength || product.dosage,
+          displayCasId: meta.cas || product.casId,
+        };
+      }),
+    [products, localizedProductLang]
+  );
+
 const categoryOptions = useMemo(
   () => [
     ...new Set([
-      ...products.map((p) => p.category),
-      t?.testKitsLabel || "TEST KITS",
+      ...localizedProducts.map((p) => p.displayCategory),
+      testKitsLabel,
     ]),
   ],
-  [products, t]
+  [localizedProducts, testKitsLabel]
 );
 
   const formOptions = useMemo(
-    () => ["", ...new Set(products.map((p) => p.form))].filter(Boolean),
-    [products]
+    () => ["", ...new Set(localizedProducts.map((p) => p.displayForm))].filter(Boolean),
+    [localizedProducts]
   );
 
   const dosageOptions = useMemo(
-    () => ["", ...new Set(products.map((p) => p.dosage))].filter(Boolean),
-    [products]
+    () => ["", ...new Set(localizedProducts.map((p) => p.displayDosage))].filter(Boolean),
+    [localizedProducts]
   );
 
   function getDosageOptionLabel(value) {
@@ -151,7 +211,7 @@ const categoryOptions = useMemo(
   const filtered = useMemo(() => {
     const q = searchTerm.trim().toLowerCase();
 
-   if (category === (t?.testKitsLabel || "TEST KITS")){
+   if (category === testKitsLabel){
       return flatTestKits.filter((item) => {
         return (
           !q ||
@@ -162,13 +222,18 @@ const categoryOptions = useMemo(
       });
     }
 
-    return products.filter((p) => {
-      const matchCategory = !category || p.category === category;
-      const matchForm = !form || p.form === form;
-      const matchDosage = !dosage || p.dosage === dosage;
+    return localizedProducts.filter((p) => {
+      const matchCategory = !category || p.displayCategory === category;
+      const matchForm = !form || p.displayForm === form;
+      const matchDosage = !dosage || p.displayDosage === dosage;
 
       const matchSearch =
         !q ||
+        p.displayName?.toLowerCase().includes(q) ||
+        p.displayCategory?.toLowerCase().includes(q) ||
+        p.displayForm?.toLowerCase().includes(q) ||
+        p.displayDosage?.toLowerCase().includes(q) ||
+        String(p.displayCasId || "").toLowerCase().includes(q) ||
         p.name?.toLowerCase().includes(q) ||
         p.category?.toLowerCase().includes(q) ||
         p.form?.toLowerCase().includes(q) ||
@@ -177,10 +242,11 @@ const categoryOptions = useMemo(
 
       return matchCategory && matchForm && matchDosage && matchSearch;
     });
-  }, [category, form, dosage, searchTerm, flatTestKits, products]);
+  }, [category, form, dosage, searchTerm, flatTestKits, localizedProducts, testKitsLabel]);
 
+  const isTestKitsCategory = category === testKitsLabel;
   const tableClasses =
-    category === "TEST KITS"
+    isTestKitsCategory
       ? "min-w-[980px] w-full text-sm"
       : "w-full min-w-[720px] md:min-w-0 md:table-fixed text-sm";
   const filterSelectClass =
@@ -287,7 +353,7 @@ const categoryOptions = useMemo(
 
         <div className="w-full max-w-full overflow-x-auto bg-white shadow-sm">
           <table className={tableClasses}>
-            {category !== "TEST KITS" && (
+            {!isTestKitsCategory && (
               <colgroup>
                 <col className="w-[32%]" />
                 <col className="w-[13%]" />
@@ -298,7 +364,7 @@ const categoryOptions = useMemo(
             )}
             <thead>
               <tr className="bg-[#0d2d47] text-white">
-                {category === "TEST KITS" ? (
+                {isTestKitsCategory ? (
                   <>
                     <th>{t?.testKits?.product || "Product"}</th>
 <th>{t?.testKits?.description || "Description"}</th>
@@ -321,11 +387,13 @@ const categoryOptions = useMemo(
             </thead>
 
             <tbody>
-              {category === "TEST KITS"
+              {isTestKitsCategory
                 ? filtered.map((item, index) => (
                     <tr
                       key={`${item._id}-${index}`}
-                      onClick={() => router.push(`/test-kits/${item.slug}`)}
+                      onClick={(event) =>
+                        openProductPath(event, `/test-kits/${item.slug}`)
+                      }
                       className={`cursor-pointer ${
                         index % 2 === 0 ? "bg-white" : "bg-gray-50"
                       }`}
@@ -342,21 +410,29 @@ const categoryOptions = useMemo(
                 : filtered.map((p, i) => (
                     <tr
                       key={p._id}
-                      onClick={() => router.push(`/products/${p.slug}`)}
+                      onClick={(event) =>
+                        openProductPath(event, `/products/${p.slug}`)
+                      }
                       className={`cursor-pointer ${
                         i % 2 === 0 ? "bg-white" : "bg-gray-50"
                       }`}
                     >
-                      <td className="px-4 py-3 align-top break-words">{p.name}</td>
-                      <td className="px-4 py-3 align-top whitespace-nowrap">{p.form}</td>
-                      <td className="px-4 py-3 align-top whitespace-nowrap">{p.category}</td>
+                      <td className="px-4 py-3 align-top break-words">{p.displayName}</td>
+                      <td className="px-4 py-3 align-top whitespace-nowrap">{p.displayForm}</td>
+                      <td className="px-4 py-3 align-top whitespace-nowrap">{p.displayCategory}</td>
                       <td
                         className="px-4 py-3 align-top overflow-hidden text-ellipsis whitespace-nowrap"
-                        title={p.dosage || "-"}
+                        title={p.displayDosage || "-"}
                       >
-                        {p.dosage || "-"}
+                        {p.displayDosage || "-"}
                       </td>
-                      <td className="px-4 py-3 align-top whitespace-nowrap">{p.casId || "-"}</td>
+                 <td className="px-4 py-3 align-top whitespace-nowrap">
+  {p.displayCasId && typeof p.displayCasId === "object"
+    ? Object.entries(p.displayCasId)
+        .map(([key, val]) => `${key}: ${val}`)
+        .join(", ")
+    : p.displayCasId || "-"}
+</td>
                     </tr>
                   ))}
             </tbody>

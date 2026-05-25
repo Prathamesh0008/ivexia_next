@@ -18,6 +18,15 @@ const t = translations?.testKitsPage;
   const [specimen, setSpecimen] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
 
+  function openTestKitPath(event, path) {
+    if (event.ctrlKey || event.metaKey) {
+      window.open(path, "_blank", "noopener,noreferrer");
+      return;
+    }
+
+    router.push(path);
+  }
+
   useEffect(() => {
     let cancelled = false;
 
@@ -230,7 +239,9 @@ const t = translations?.testKitsPage;
               {filtered.map((item, index) => (
                 <tr
                   key={`${item._id}-${index}`}
-                  onClick={() => router.push(`/test-kits/${item.slug}`)}
+                  onClick={(event) =>
+                    openTestKitPath(event, `/test-kits/${item.slug}`)
+                  }
                   className={`cursor-pointer ${
                     index % 2 === 0 ? "bg-white" : "bg-gray-50"
                   }`}

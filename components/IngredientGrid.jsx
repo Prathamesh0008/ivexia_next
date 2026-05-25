@@ -11,6 +11,16 @@ export default function IngredientGrid({
 }) {
   const router = useRouter();
 const { translations } = useLanguage();
+
+  function openIngredientPath(event, path) {
+    if (event.ctrlKey || event.metaKey) {
+      window.open(path, "_blank", "noopener,noreferrer");
+      return;
+    }
+
+    router.push(path);
+  }
+
   return (
     <div className="w-full">
       <div className="hidden overflow-x-auto rounded-lg border border-gray-300 bg-white shadow-sm md:block">
@@ -35,7 +45,9 @@ const { translations } = useLanguage();
               items.map((item, index) => (
                 <tr
                   key={item.id || item.slug || index}
-                  onClick={() => router.push(`/portfolio/${item.slug}`)}
+                  onClick={(event) =>
+                    openIngredientPath(event, `/portfolio/${item.slug}`)
+                  }
                   className={`cursor-pointer ${
                     index % 2 === 0 ? "bg-white" : "bg-gray-50"
                   }`}
@@ -61,7 +73,9 @@ const { translations } = useLanguage();
             <button
               key={item.id || item.slug || index}
               type="button"
-              onClick={() => router.push(`/portfolio/${item.slug}`)}
+              onClick={(event) =>
+                openIngredientPath(event, `/portfolio/${item.slug}`)
+              }
               className="w-full rounded-xl border border-gray-300 bg-white p-4 text-left shadow-sm transition active:scale-[0.98]"
             >
               <p className="text-base font-semibold leading-snug text-[#0d2d47]">
