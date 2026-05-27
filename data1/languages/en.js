@@ -496,7 +496,7 @@ ingredientGrid: {
   name: "Name",
   category: "Category",
   dosageForms: "Dosage Forms",
-  noResults: "No results. Try different filters.",
+  noResults: "Therapeutic Area ",
 
   prev: "Prev",
   next: "Next",

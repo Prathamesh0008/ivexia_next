@@ -432,7 +432,7 @@ ingredientGrid: {
   name: "Nom",
   category: "Catégorie",
   dosageForms: "Formes posologiques",
-  noResults: "Aucun résultat. Essayez d'autres filtres.",
+  noResults: "Domaine thérapeutique",
 
   prev: "Précédent",
   next: "Suivant",

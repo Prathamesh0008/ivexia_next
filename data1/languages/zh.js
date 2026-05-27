@@ -419,7 +419,7 @@ ingredientGrid: {
   name: "名称",
   category: "类别",
   dosageForms: "剂型",
-  noResults: "没有结果，请尝试其他筛选条件。",
+  noResults: "治疗领域",
 
   prev: "上一页",
   next: "下一页",

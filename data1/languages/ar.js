@@ -417,7 +417,7 @@ ingredientGrid: {
   name: "الاسم",
   category: "الفئة",
   dosageForms: "أشكال الجرعات",
-  noResults: "لا توجد نتائج. جرب فلاتر أخرى.",
+  noResults: "لالمجال العلاجي",
 
   prev: "السابق",
   next: "التالي",

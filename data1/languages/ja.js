@@ -417,7 +417,7 @@ ingredientGrid: {
   name: "名称",
   category: "カテゴリ",
   dosageForms: "剤形",
-  noResults: "結果がありません。他のフィルターを試してください。",
+  noResults: "治療分野。",
 
   prev: "前へ",
   next: "次へ",

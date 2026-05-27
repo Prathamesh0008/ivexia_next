@@ -452,7 +452,7 @@ ingredientGrid: {
   name: "Naam",
   category: "Categorie",
   dosageForms: "Doseringsvormen",
-  noResults: "Geen resultaten. Probeer andere filters.",
+  noResults: "Therapeutisch gebied",
 
   prev: "Vorige",
   next: "Volgende",
