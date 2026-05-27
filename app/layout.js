@@ -134,6 +134,54 @@ export default function RootLayout({ children }) {
             }),
           }}
         />
+        {/* 🔥 WEBPAGE SCHEMA */}
+<Script
+  id="webpage-schema"
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.ivexiapharma.com/#webpage",
+      url: "https://www.ivexiapharma.com/",
+      name: "Ivexia Pharma - Pharmaceutical Company",
+      headline: "Ivexia Pharma - Global Pharmaceutical & Healthcare Solutions",
+      description:
+        "Ivexia Pharma offers pharmaceutical products, healthcare solutions, medicine exports, and bulk pharmaceutical supply services worldwide.",
+      inLanguage: "en-US",
+      isPartOf: {
+        "@id": "https://www.ivexiapharma.com/#website",
+      },
+      about: {
+        "@id": "https://www.ivexiapharma.com/#organization",
+      },
+      breadcrumb: {
+        "@id": "https://www.ivexiapharma.com/#breadcrumb",
+      },
+    }),
+  }}
+/>
+
+{/* 🔥 BREADCRUMB SCHEMA */}
+<Script
+  id="breadcrumb-schema"
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "@id": "https://www.ivexiapharma.com/#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://www.ivexiapharma.com/",
+        },
+      ],
+    }),
+  }}
+/>
       </head>
 
       <body>

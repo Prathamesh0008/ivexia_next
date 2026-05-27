@@ -1,6 +1,6 @@
 
 //ivexia\data\ingredients.js
-const COMMON_IMAGE = "/images/capsuleimage.jpg";
+const COMMON_IMAGE = "/images/capsule.jpg";
 
 const INGREDIENTS = [
     
@@ -11,7 +11,7 @@ const INGREDIENTS = [
     id: "amiodarone",
     name: "Amiodarone Hydrochloride",
     category: "Cardiology",
-    slug: "amiodarone-hcl",
+    slug: "amiodarone-hydrochloride",
     cas: "",
     image: COMMON_IMAGE,
     
@@ -76,7 +76,7 @@ const INGREDIENTS = [
     id: "tramadol",
     name: "Tramadol Hydrochloride",
     category: "Analgesic / Pain Management",
-    slug: "tramadol-hcl",
+    slug: "tramadol-hydrochloride",
     cas: "",
     image: COMMON_IMAGE,
   },
@@ -96,7 +96,7 @@ const INGREDIENTS = [
     id: "metformin",
     name: "Metformin Hydrochloride",
     category: "Endocrinology / Diabetes",
-    slug: "metformin-hcl",
+    slug: "metformin-hydrochloride",
     cas: "",
     image: COMMON_IMAGE,
   },
@@ -156,7 +156,7 @@ const INGREDIENTS = [
     id: "vitamin-c",
     name: "Vitamin C (Ascorbic Acid)",
     category: "Nutraceutical",
-    slug: "vitamin-c",
+    slug: "vitamin-c-ascorbic-acid",
     cas: "",
     image: COMMON_IMAGE,
   },
@@ -164,7 +164,7 @@ const INGREDIENTS = [
     id: "vitamin-b12",
     name: "Vitamin B12 (Cyanocobalamin)",
     category: "Nutraceutical",
-    slug: "vitamin-b12",
+    slug: "vitamin-b12-cyanocobalamin",
     cas: "",
     image: COMMON_IMAGE,
   },

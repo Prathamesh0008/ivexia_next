@@ -294,14 +294,14 @@ export default function AboutPage() {
       </section>
 
       {/* STATS */}
-      <section className="py-16 sm:py-20 bg-white relative z-10">
+      <section className="py-10 sm:py-12 bg-white relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <StatsCounter t={t} />
         </div>
       </section>
 
       {/* BRAND STORY */}
-      <section className="py-20 sm:py-28 md:py-36 px-4 sm:px-6 md:px-10 max-w-7xl mx-auto">
+      <section className="py-10 sm:py-14 md:py-16 px-4 sm:px-6 md:px-10 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -365,7 +365,7 @@ export default function AboutPage() {
       </section>
 
       {/* EXTRA INFO */}
-      <section className="py-16 sm:py-20 bg-gray-50">
+      <section className="py-10 sm:py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {[t?.whoWeAre, t?.qualityInfo, t?.exportInfo]
@@ -413,7 +413,7 @@ export default function AboutPage() {
 {detailedSections.length > 0 && (
   <section className="py-20 sm:py-28 bg-white">
     <div className="max-w-7xl mx-auto px-4 sm:px-6">
-      <motion.div {...fadeInUp} className="text-center mb-12 sm:mb-16">
+      <motion.div {...fadeInUp} className="text-center mb-8 sm:mb-10">
         <span className="text-[#E2004F] font-semibold tracking-wider text-sm uppercase mb-4 block">
           {t?.detailedInfo?.badge}
         </span>
@@ -452,9 +452,9 @@ export default function AboutPage() {
 )}
 
       {/* VISION + MISSION */}
-      <section className="py-20 sm:py-28 md:py-36 bg-[#0d2d47] text-white">
+      <section className="py-10 sm:py-14 md:py-16 bg-[#0d2d47] text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <motion.div {...fadeInUp} className="text-center mb-12 sm:mb-20">
+          <motion.div {...fadeInUp} className="text-center mb-8 sm:mb-10">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
               {t?.purpose?.title}
             </h2>
@@ -509,7 +509,7 @@ export default function AboutPage() {
 {valuePoints.length > 0 && (
   <section className="py-20 sm:py-28 bg-gray-50">
     <div className="max-w-7xl mx-auto px-4 sm:px-6">
-      <motion.div {...fadeInUp} className="text-center mb-12 sm:mb-16">
+      <motion.div {...fadeInUp} className="text-center mb-8 sm:mb-10">
         <span className="text-[#E2004F] font-semibold tracking-wider text-sm uppercase mb-4 block">
           {t?.valuesInfo?.badge}
         </span>
@@ -544,9 +544,9 @@ export default function AboutPage() {
 )}
 
       {/* GLOBAL OPERATIONS */}
-      <section className="py-20 sm:py-28 md:py-36 bg-gray-50">
+      <section className="py-10 sm:py-14 md:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <motion.div {...fadeInUp} className="text-center mb-12 sm:mb-20">
+          <motion.div {...fadeInUp} className="text-center mb-8 sm:mb-10">
             <span className="text-[#E2004F] font-semibold tracking-wider text-sm uppercase mb-4 block">
               {t?.global?.badge}
             </span>
@@ -591,9 +591,9 @@ export default function AboutPage() {
       </section>
 
       {/* EXPERTISE */}
-      <section className="py-20 sm:py-28 md:py-36 bg-white">
+      <section className="py-10 sm:py-14 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <motion.div {...fadeInUp} className="text-center mb-12 sm:mb-20">
+          <motion.div {...fadeInUp} className="text-center mb-8 sm:mb-10">
             <span className="text-[#E2004F] font-semibold tracking-wider text-sm uppercase mb-4 block">
               {t?.expertise?.badge}
             </span>
@@ -703,9 +703,9 @@ export default function AboutPage() {
       </section>
 
       {/* CERTIFICATIONS */}
-      <section className="py-20 sm:py-28 md:py-36 bg-gray-50">
+      <section className="py-10 sm:py-14 md:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <motion.div {...fadeInUp} className="text-center mb-12 sm:mb-20">
+          <motion.div {...fadeInUp} className="text-center mb-8 sm:mb-10">
             <span className="text-[#E2004F] font-semibold tracking-wider text-sm uppercase mb-4 block">
               {t?.certifications?.badge}
             </span>
@@ -774,7 +774,7 @@ export default function AboutPage() {
       </ParallaxSection>
 
       {/* SUSTAINABILITY */}
-      <section className="py-20 sm:py-28 md:py-36 bg-white">
+      <section className="py-10 sm:py-14 md:py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -832,9 +832,9 @@ export default function AboutPage() {
       </section>
 
       {/* R&D LABS */}
-      <section className="py-20 sm:py-28 md:py-36 bg-gray-50">
+      <section className="py-10 sm:py-14 md:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <motion.div {...fadeInUp} className="text-center mb-12 sm:mb-20">
+          <motion.div {...fadeInUp} className="text-center mb-8 sm:mb-10">
             <span className="text-[#E2004F] font-semibold tracking-wider text-sm uppercase mb-4 block">
               {t?.rnd?.badge}
             </span>
@@ -853,9 +853,9 @@ export default function AboutPage() {
       </section>
 
       {/* GLOBAL PRESENCE */}
-      <section className="py-20 sm:py-28 md:py-36 bg-white">
+      <section className="py-10 sm:py-14 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <motion.div {...fadeInUp} className="text-center mb-12 sm:mb-20">
+          <motion.div {...fadeInUp} className="text-center mb-8 sm:mb-10">
             <span className="text-[#E2004F] font-semibold tracking-wider text-sm uppercase mb-4 block">
               {t?.presence?.badge}
             </span>
@@ -889,7 +889,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 sm:py-28 md:py-36 bg-gradient-to-r from-[#0d2d47] to-[#1a3a5a]">
+      <section className="py-10 sm:py-14 md:py-16 bg-gradient-to-r from-[#0d2d47] to-[#1a3a5a]">
         <div className="max-w-4xl mx-auto text-center px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -933,7 +933,7 @@ export default function AboutPage() {
 {faqs.length > 0 && (
   <section className="py-20 sm:py-28 bg-gray-50">
     <div className="max-w-5xl mx-auto px-4 sm:px-6">
-      <motion.div {...fadeInUp} className="text-center mb-12 sm:mb-16">
+      <motion.div {...fadeInUp} className="text-center mb-8 sm:mb-10">
         <span className="text-[#E2004F] font-semibold tracking-wider text-sm uppercase mb-4 block">
           FAQ
         </span>
@@ -1263,14 +1263,14 @@ export default function AboutPage() {
 //       </section>
 
 //       {/* STATS */}
-//       <section className="py-16 sm:py-20 bg-white relative z-10">
+//       <section className="py-10 sm:py-12 bg-white relative z-10">
 //         <div className="max-w-7xl mx-auto px-4 sm:px-6">
 //           <StatsCounter t={t} />
 //         </div>
 //       </section>
 
 //       {/* BRAND STORY */}
-//       <section className="py-20 sm:py-28 md:py-36 px-4 sm:px-6 md:px-10 max-w-7xl mx-auto">
+//       <section className="py-10 sm:py-14 md:py-16 px-4 sm:px-6 md:px-10 max-w-7xl mx-auto">
 //         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
 //           <motion.div
 //             initial={{ opacity: 0, x: -50 }}
@@ -1334,7 +1334,7 @@ export default function AboutPage() {
 //       </section>
 
 //       {/* EXTRA INFO */}
-//       <section className="py-16 sm:py-20 bg-gray-50">
+//       <section className="py-10 sm:py-12 bg-gray-50">
 //         <div className="max-w-7xl mx-auto px-4 sm:px-6">
 //           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
 //             {[t?.whoWeAre, t?.qualityInfo, t?.exportInfo]
@@ -1380,9 +1380,9 @@ export default function AboutPage() {
 //       </section>
 
 //       {/* VISION + MISSION */}
-//       <section className="py-20 sm:py-28 md:py-36 bg-[#0d2d47] text-white">
+//       <section className="py-10 sm:py-14 md:py-16 bg-[#0d2d47] text-white">
 //         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-//           <motion.div {...fadeInUp} className="text-center mb-12 sm:mb-20">
+//           <motion.div {...fadeInUp} className="text-center mb-8 sm:mb-10">
 //             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
 //               {t?.purpose?.title}
 //             </h2>
@@ -1434,9 +1434,9 @@ export default function AboutPage() {
 //       </section>
 
 //       {/* GLOBAL OPERATIONS */}
-//       <section className="py-20 sm:py-28 md:py-36 bg-gray-50">
+//       <section className="py-10 sm:py-14 md:py-16 bg-gray-50">
 //         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-//           <motion.div {...fadeInUp} className="text-center mb-12 sm:mb-20">
+//           <motion.div {...fadeInUp} className="text-center mb-8 sm:mb-10">
 //             <span className="text-[#E2004F] font-semibold tracking-wider text-sm uppercase mb-4 block">
 //               {t?.global?.badge}
 //             </span>
@@ -1481,9 +1481,9 @@ export default function AboutPage() {
 //       </section>
 
 //       {/* EXPERTISE */}
-//       <section className="py-20 sm:py-28 md:py-36 bg-white">
+//       <section className="py-10 sm:py-14 md:py-16 bg-white">
 //         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-//           <motion.div {...fadeInUp} className="text-center mb-12 sm:mb-20">
+//           <motion.div {...fadeInUp} className="text-center mb-8 sm:mb-10">
 //             <span className="text-[#E2004F] font-semibold tracking-wider text-sm uppercase mb-4 block">
 //               {t?.expertise?.badge}
 //             </span>
@@ -1593,9 +1593,9 @@ export default function AboutPage() {
 //       </section>
 
 //       {/* CERTIFICATIONS */}
-//       <section className="py-20 sm:py-28 md:py-36 bg-gray-50">
+//       <section className="py-10 sm:py-14 md:py-16 bg-gray-50">
 //         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-//           <motion.div {...fadeInUp} className="text-center mb-12 sm:mb-20">
+//           <motion.div {...fadeInUp} className="text-center mb-8 sm:mb-10">
 //             <span className="text-[#E2004F] font-semibold tracking-wider text-sm uppercase mb-4 block">
 //               {t?.certifications?.badge}
 //             </span>
@@ -1664,7 +1664,7 @@ export default function AboutPage() {
 //       </ParallaxSection>
 
 //       {/* SUSTAINABILITY */}
-//       <section className="py-20 sm:py-28 md:py-36 bg-white">
+//       <section className="py-10 sm:py-14 md:py-16 bg-white">
 //         <div className="max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
 //           <motion.div
 //             initial={{ opacity: 0, x: -30 }}
@@ -1722,9 +1722,9 @@ export default function AboutPage() {
 //       </section>
 
 //       {/* R&D LABS */}
-//       <section className="py-20 sm:py-28 md:py-36 bg-gray-50">
+//       <section className="py-10 sm:py-14 md:py-16 bg-gray-50">
 //         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-//           <motion.div {...fadeInUp} className="text-center mb-12 sm:mb-20">
+//           <motion.div {...fadeInUp} className="text-center mb-8 sm:mb-10">
 //             <span className="text-[#E2004F] font-semibold tracking-wider text-sm uppercase mb-4 block">
 //               {t?.rnd?.badge}
 //             </span>
@@ -1743,9 +1743,9 @@ export default function AboutPage() {
 //       </section>
 
 //       {/* GLOBAL PRESENCE */}
-//       <section className="py-20 sm:py-28 md:py-36 bg-white">
+//       <section className="py-10 sm:py-14 md:py-16 bg-white">
 //         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-//           <motion.div {...fadeInUp} className="text-center mb-12 sm:mb-20">
+//           <motion.div {...fadeInUp} className="text-center mb-8 sm:mb-10">
 //             <span className="text-[#E2004F] font-semibold tracking-wider text-sm uppercase mb-4 block">
 //               {t?.presence?.badge}
 //             </span>
@@ -1779,7 +1779,7 @@ export default function AboutPage() {
 //       </section>
 
 //       {/* CTA */}
-//       <section className="py-20 sm:py-28 md:py-36 bg-gradient-to-r from-[#0d2d47] to-[#1a3a5a]">
+//       <section className="py-10 sm:py-14 md:py-16 bg-gradient-to-r from-[#0d2d47] to-[#1a3a5a]">
 //         <div className="max-w-4xl mx-auto text-center px-4">
 //           <motion.div
 //             initial={{ opacity: 0, y: 30 }}

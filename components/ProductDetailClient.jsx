@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { en as productLang } from "@/data2/languages/en";
+import { en as enProductLang } from "@/data2/languages/en";
 import { Building2, Package, Truck, Clock, Shield, CheckCircle, Award, Store, Pharmacy, Pill } from "lucide-react";
 const fallbackImage = "/images/medicineproduct.jpg";
 const capsuleIcon = "/images/capsule.svg";
@@ -107,6 +107,7 @@ function UnderMaintenancePage() {
 
 export default function ProductDetailClient({ initialProduct }) {
   const [product, setProduct] = useState(initialProduct);
+  const [localizedProductLang, setLocalizedProductLang] = useState(enProductLang);
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [imageError, setImageError] = useState(false);
   const [activeTab, setActiveTab] = useState("introduction");
@@ -115,17 +116,46 @@ export default function ProductDetailClient({ initialProduct }) {
   const [openPrecaution, setOpenPrecaution] = useState(null);
   const [openFaq, setOpenFaq] = useState(null);
 
+  const { translations, language } = useLanguage();
+  const t = translations?.productDetail;
+
   const productData =
-    productLang.products[product?.slug?.toLowerCase()] ||
-    productLang.products["cefpodoxime-proxetil-50mg"] ||
+    localizedProductLang.products?.[product?.slug?.toLowerCase()] ||
+    enProductLang.products[product?.slug?.toLowerCase()] ||
+    enProductLang.products["cefpodoxime-proxetil-50mg"] ||
     {};
   // const productData = {};
 
-  const { translations } = useLanguage();
-  const t = translations?.productDetail;
-
   // UNDER MAINTENANCE FLAG - Set to true to show maintenance page
-  const UNDER_MAINTENANCE = true; // Change to false to show normal product page or true
+  const UNDER_MAINTENANCE = false; // Change to false to show normal product page or true
+
+  useEffect(() => {
+    let cancelled = false;
+    const selectedLanguage = language || "en";
+
+    async function loadProductLanguage() {
+      try {
+        const langModule = await import(`@/data2/languages/${selectedLanguage}.js`);
+        const nextProductLang = langModule[selectedLanguage] || enProductLang;
+
+        if (!cancelled) {
+          setLocalizedProductLang(nextProductLang);
+        }
+      } catch (error) {
+        console.error("Product language load failed", error);
+
+        if (!cancelled) {
+          setLocalizedProductLang(enProductLang);
+        }
+      }
+    }
+
+    loadProductLanguage();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [language]);
 
   useEffect(() => {
     if (!initialProduct?.slug) {

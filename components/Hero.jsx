@@ -1,3 +1,4 @@
+//components\Hero.jsx
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -318,18 +319,18 @@ export default function Hero() {
                   initial={{ opacity: 0, y: reduceMotion ? 0 : 22 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.75, delay: 0.78 }}
-               className="mt-8 md:mt-10 grid max-w-2xl gap-3 grid-cols-2 sm:grid-cols-3"
+            className="mt-8 grid max-w-2xl grid-cols-1 gap-3 sm:grid-cols-3 md:mt-10"
                 >
                   {(activeSlide.stats || []).map((stat, index) => (
                     <motion.div
                       key={`${stat.label}-${index}`}
-                      className="rounded-2xl border border-white/12 bg-white/10 px-4 py-4 backdrop-blur-md"
+                      className="min-h-[118px] rounded-2xl border border-white/12 bg-white/10 px-4 py-4 backdrop-blur-md"
                       whileHover={reduceMotion ? undefined : { y: -3, backgroundColor: "rgba(255,255,255,0.16)" }}
                     >
                       <div className="text-2xl font-bold text-white md:text-3xl">
                         {stat.value}
                       </div>
-                      <div className="mt-1 text-xs uppercase tracking-[0.18em] text-white/72">
+                      <div className="mt-2 break-words text-[10px] font-semibold uppercase leading-relaxed tracking-[0.08em] text-white/72 sm:text-[9px] md:text-[10px]">
                         {stat.label}
                       </div>
                     </motion.div>

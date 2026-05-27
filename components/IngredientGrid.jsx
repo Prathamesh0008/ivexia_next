@@ -46,7 +46,7 @@ const { translations } = useLanguage();
                 <tr
                   key={item.id || item.slug || index}
                   onClick={(event) =>
-                    openIngredientPath(event, `/portfolio/${item.slug}`)
+                    openIngredientPath(event, `/products/ingredient/${item.slug}`)
                   }
                   className={`cursor-pointer ${
                     index % 2 === 0 ? "bg-white" : "bg-gray-50"
@@ -74,7 +74,7 @@ const { translations } = useLanguage();
               key={item.id || item.slug || index}
               type="button"
               onClick={(event) =>
-                openIngredientPath(event, `/portfolio/${item.slug}`)
+                openIngredientPath(event, `/products/ingredient/${item.slug}`)
               }
               className="w-full rounded-xl border border-gray-300 bg-white p-4 text-left shadow-sm transition active:scale-[0.98]"
             >

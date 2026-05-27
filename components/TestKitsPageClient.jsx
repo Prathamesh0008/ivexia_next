@@ -27,6 +27,10 @@ const t = translations?.testKitsPage;
     router.push(path);
   }
 
+  function getTestKitPath(item) {
+    return `/test-kits/${item.slug?.trim() || ""}`;
+  }
+
   useEffect(() => {
     let cancelled = false;
 
@@ -240,7 +244,7 @@ const t = translations?.testKitsPage;
                 <tr
                   key={`${item._id}-${index}`}
                   onClick={(event) =>
-                    openTestKitPath(event, `/test-kits/${item.slug}`)
+                    openTestKitPath(event, getTestKitPath(item))
                   }
                   className={`cursor-pointer ${
                     index % 2 === 0 ? "bg-white" : "bg-gray-50"

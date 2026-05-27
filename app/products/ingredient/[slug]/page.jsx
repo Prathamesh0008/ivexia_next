@@ -605,7 +605,7 @@ const ingredientContent =
               {suggested.map((item) => (
                 <Link
                   key={item.id}
-                  href={`/portfolio/${item.slug}`}
+                  href={`/products/ingredient/${item.slug}`}
                   className="rounded-3xl border border-gray-100 bg-white p-6 text-center transition hover:shadow-lg hover:-translate-y-1"
                 >
                   <img

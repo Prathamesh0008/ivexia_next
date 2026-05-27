@@ -6,6 +6,88 @@ import { useRouter } from "next/navigation";
 import { FaSearch } from "react-icons/fa";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { en as enProductLang } from "@/data2/languages/en";
+
+function normalizeProductValue(value) {
+  if (Array.isArray(value)) {
+    return value.map(normalizeProductValue).join("|");
+  }
+
+  if (value && typeof value === "object") {
+    return Object.entries(value)
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([key, val]) => `${normalizeProductValue(key)}:${normalizeProductValue(val)}`)
+      .join("|");
+  }
+
+  return String(value || "")
+    .toLowerCase()
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function normalizeStrengthValue(value) {
+  return normalizeProductValue(value)
+    .replace(/\s*\/\s*/g, "/")
+    .replace(/\s*\+\s*/g, "+")
+    .replace(/\s+(mg|gm|g|ml)\b/g, "$1")
+    .replace(/\b(\d+(?:\.\d+)?)(mg|gm|g|ml)\b/g, "$1$2");
+}
+
+function getCategoryFilterKey(value) {
+  return normalizeProductValue(value);
+}
+
+function shouldPreferCategoryLabel(currentLabel, nextLabel) {
+  return (
+    currentLabel === currentLabel.toUpperCase() &&
+    nextLabel !== nextLabel.toUpperCase()
+  );
+}
+
+function getProductForm(product) {
+  return product.form || product.Column5 || product.PACK_SIZE || "";
+}
+
+function getProductCas(product) {
+  return (
+    product.casId ||
+    product["CAS-ID"] ||
+    product.CAS_ID ||
+    product["API-CAS"] ||
+    ""
+  );
+}
+
+function getProductDuplicateKey(product) {
+  return [
+    product.name,
+    product.category,
+    getProductForm(product),
+    normalizeStrengthValue(product.dosage),
+    getProductCas(product),
+  ]
+    .map((value) =>
+      typeof value === "string" ? normalizeProductValue(value) : value
+    )
+    .map(normalizeProductValue)
+    .join("||");
+}
+
+function removeDuplicateProducts(products) {
+  const seen = new Set();
+
+  return products.filter((product) => {
+    const key = getProductDuplicateKey(product);
+
+    if (seen.has(key)) {
+      return false;
+    }
+
+    seen.add(key);
+    return true;
+  });
+}
+
 export default function ProductsPageClient({
   initialProducts = [],
   initialTestKits = [],
@@ -148,9 +230,14 @@ const testKitsLabel = t?.testKitsLabel || "TEST KITS";
     [testKits]
   );
 
+  const uniqueProducts = useMemo(
+    () => removeDuplicateProducts(products),
+    [products]
+  );
+
   const localizedProducts = useMemo(
     () =>
-      products.map((product) => {
+      uniqueProducts.map((product) => {
         const localizedProduct =
           localizedProductLang.products?.[product.slug?.toLowerCase()] ||
           enProductLang.products[product.slug?.toLowerCase()];
@@ -165,17 +252,41 @@ const testKitsLabel = t?.testKitsLabel || "TEST KITS";
           displayCasId: meta.cas || product.casId,
         };
       }),
-    [products, localizedProductLang]
+    [uniqueProducts, localizedProductLang]
   );
 
-const categoryOptions = useMemo(
-  () => [
-    ...new Set([
-      ...localizedProducts.map((p) => p.displayCategory),
-      testKitsLabel,
-    ]),
-  ],
-  [localizedProducts, testKitsLabel]
+const categoryOptions = useMemo(() => {
+  const categoriesByKey = new Map();
+
+  localizedProducts
+    .map((p) => p.displayCategory)
+    .filter(Boolean)
+    .forEach((categoryLabel) => {
+      const key = getCategoryFilterKey(categoryLabel);
+      const currentLabel = categoriesByKey.get(key);
+
+      if (!currentLabel || shouldPreferCategoryLabel(currentLabel, categoryLabel)) {
+        categoriesByKey.set(key, categoryLabel);
+      }
+    });
+
+  return [...categoriesByKey.values(), testKitsLabel].sort((a, b) =>
+    a.localeCompare(b)
+  );
+}, [localizedProducts, testKitsLabel]);
+
+// const formOptions = useMemo(
+//   () =>
+//     [...new Set(localizedProducts.map((p) => p.displayForm).filter(Boolean))]
+//       .sort((a, b) => a.localeCompare(b)),
+//   [localizedProducts]
+// );
+
+const dosageOptions = useMemo(
+  () =>
+    [...new Set(localizedProducts.map((p) => p.displayDosage).filter(Boolean))]
+      .sort((a, b) => a.localeCompare(b)),
+  [localizedProducts]
 );
 
   const formOptions = useMemo(
@@ -183,10 +294,10 @@ const categoryOptions = useMemo(
     [localizedProducts]
   );
 
-  const dosageOptions = useMemo(
-    () => ["", ...new Set(localizedProducts.map((p) => p.displayDosage))].filter(Boolean),
-    [localizedProducts]
-  );
+  // const dosageOptions = useMemo(
+  //   () => ["", ...new Set(localizedProducts.map((p) => p.displayDosage))].filter(Boolean),
+  //   [localizedProducts]
+  // );
 
   function getDosageOptionLabel(value) {
     if (!value) {
@@ -207,48 +318,72 @@ const categoryOptions = useMemo(
 
     return `${normalized.slice(0, 23)}...`;
   }
+  const sortAlphabetically = (items, key) => {
+  return [...items].sort((a, b) =>
+    String(a?.[key] || "")
+      .toLowerCase()
+      .localeCompare(String(b?.[key] || "").toLowerCase())
+  );
+};
 
-  const filtered = useMemo(() => {
-    const q = searchTerm.trim().toLowerCase();
+const filtered = useMemo(() => {
+  const q = searchTerm.trim().toLowerCase();
 
-   if (category === testKitsLabel){
-      return flatTestKits.filter((item) => {
-        return (
-          !q ||
-          item.product?.toLowerCase().includes(q) ||
-          item.category?.toLowerCase().includes(q) ||
-          item.specimen?.toLowerCase().includes(q)
-        );
-      });
-    }
-
-    return localizedProducts.filter((p) => {
-      const matchCategory = !category || p.displayCategory === category;
-      const matchForm = !form || p.displayForm === form;
-      const matchDosage = !dosage || p.displayDosage === dosage;
-
-      const matchSearch =
+  if (category === testKitsLabel) {
+    const result = flatTestKits.filter((item) => {
+      return (
         !q ||
-        p.displayName?.toLowerCase().includes(q) ||
-        p.displayCategory?.toLowerCase().includes(q) ||
-        p.displayForm?.toLowerCase().includes(q) ||
-        p.displayDosage?.toLowerCase().includes(q) ||
-        String(p.displayCasId || "").toLowerCase().includes(q) ||
-        p.name?.toLowerCase().includes(q) ||
-        p.category?.toLowerCase().includes(q) ||
-        p.form?.toLowerCase().includes(q) ||
-        p.dosage?.toLowerCase().includes(q) ||
-        String(p.casId || "").toLowerCase().includes(q);
-
-      return matchCategory && matchForm && matchDosage && matchSearch;
+        item.product?.toLowerCase().includes(q) ||
+        item.category?.toLowerCase().includes(q) ||
+        item.specimen?.toLowerCase().includes(q)
+      );
     });
-  }, [category, form, dosage, searchTerm, flatTestKits, localizedProducts, testKitsLabel]);
+
+    return sortAlphabetically(result, "product");
+  }
+
+  const result = localizedProducts.filter((p) => {
+    const matchCategory =
+      !category ||
+      getCategoryFilterKey(p.displayCategory) === getCategoryFilterKey(category);
+    const matchForm = !form || p.displayForm === form;
+    const matchDosage = !dosage || p.displayDosage === dosage;
+
+    const matchSearch =
+      !q ||
+      p.displayName?.toLowerCase().includes(q) ||
+      p.displayCategory?.toLowerCase().includes(q) ||
+      p.displayForm?.toLowerCase().includes(q) ||
+      p.displayDosage?.toLowerCase().includes(q) ||
+      String(p.displayCasId || "").toLowerCase().includes(q) ||
+      p.name?.toLowerCase().includes(q) ||
+      p.category?.toLowerCase().includes(q) ||
+      p.form?.toLowerCase().includes(q) ||
+      p.dosage?.toLowerCase().includes(q) ||
+      String(p.casId || "").toLowerCase().includes(q);
+
+    return matchCategory && matchForm && matchDosage && matchSearch;
+  });
+
+  return sortAlphabetically(result, "displayName");
+}, [
+  category,
+  form,
+  dosage,
+  searchTerm,
+  flatTestKits,
+  localizedProducts,
+  testKitsLabel,
+]);
 
   const isTestKitsCategory = category === testKitsLabel;
   const tableClasses =
     isTestKitsCategory
       ? "min-w-[980px] w-full text-sm"
       : "w-full min-w-[720px] md:min-w-0 md:table-fixed text-sm";
+  const tableHeaderClass = "px-4 py-3 text-left align-top";
+  const wrappingCellClass =
+    "px-4 py-3 align-top whitespace-normal break-words [overflow-wrap:anywhere]";
   const filterSelectClass =
     "w-full sm:w-56 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#19a6b5]";
 
@@ -366,21 +501,21 @@ const categoryOptions = useMemo(
               <tr className="bg-[#0d2d47] text-white">
                 {isTestKitsCategory ? (
                   <>
-                    <th>{t?.testKits?.product || "Product"}</th>
-<th>{t?.testKits?.description || "Description"}</th>
-<th>{t?.testKits?.category || "Category"}</th>
-<th>{t?.testKits?.method || "Method"}</th>
-<th>{t?.testKits?.specimen || "Specimen"}</th>
-<th>{t?.testKits?.cutoff || "Cut-Off"}</th>
-<th>{t?.testKits?.certificate || "Certificate"}</th>
+                    <th className={tableHeaderClass}>{t?.testKits?.product || "Product"}</th>
+<th className={tableHeaderClass}>{t?.testKits?.description || "Description"}</th>
+<th className={tableHeaderClass}>{t?.testKits?.category || "Category"}</th>
+<th className={tableHeaderClass}>{t?.testKits?.method || "Method"}</th>
+<th className={tableHeaderClass}>{t?.testKits?.specimen || "Specimen"}</th>
+<th className={tableHeaderClass}>{t?.testKits?.cutoff || "Cut-Off"}</th>
+<th className={tableHeaderClass}>{t?.testKits?.certificate || "Certificate"}</th>
                   </>
                 ) : (
                   <>
-                    <th>{t?.table?.name || "Name"}</th>
-<th>{t?.table?.form || "Form"}</th>
-<th>{t?.table?.category || "Category"}</th>
-<th>{t?.table?.dosage || "Dosage"}</th>
-<th>{t?.table?.cas || "CAS-ID"}</th>
+                    <th className={tableHeaderClass}>{t?.table?.name || "Name"}</th>
+<th className={tableHeaderClass}>{t?.table?.form || "Form"}</th>
+<th className={tableHeaderClass}>{t?.table?.category || "Category"}</th>
+<th className={tableHeaderClass}>{t?.table?.dosage || "Dosage"}</th>
+<th className={tableHeaderClass}>{t?.table?.cas || "CAS-ID"}</th>
                   </>
                 )}
               </tr>
@@ -398,11 +533,11 @@ const categoryOptions = useMemo(
                         index % 2 === 0 ? "bg-white" : "bg-gray-50"
                       }`}
                     >
-                      <td className="px-4 py-3 font-semibold">{item.product}</td>
-                      <td className="px-4 py-3">{item.description || "-"}</td>
-                      <td className="px-4 py-3">{item.category || "-"}</td>
-                      <td className="px-4 py-3">{item.method || "-"}</td>
-                      <td className="px-4 py-3">{item.specimen || "-"}</td>
+                      <td className={`${wrappingCellClass} font-semibold`}>{item.product}</td>
+                      <td className={wrappingCellClass}>{item.description || "-"}</td>
+                      <td className={wrappingCellClass}>{item.category || "-"}</td>
+                      <td className={wrappingCellClass}>{item.method || "-"}</td>
+                      <td className={wrappingCellClass}>{item.specimen || "-"}</td>
                       <td className="px-4 py-3 whitespace-nowrap">{item.cut_off || "-"}</td>
                       <td className="px-4 py-3 whitespace-nowrap">{item.certificate || "-"}</td>
                     </tr>
@@ -417,16 +552,16 @@ const categoryOptions = useMemo(
                         i % 2 === 0 ? "bg-white" : "bg-gray-50"
                       }`}
                     >
-                      <td className="px-4 py-3 align-top break-words">{p.displayName}</td>
-                      <td className="px-4 py-3 align-top whitespace-nowrap">{p.displayForm}</td>
-                      <td className="px-4 py-3 align-top whitespace-nowrap">{p.displayCategory}</td>
+                      <td className={wrappingCellClass}>{p.displayName}</td>
+                      <td className={wrappingCellClass}>{p.displayForm}</td>
+                      <td className={wrappingCellClass}>{p.displayCategory}</td>
                       <td
-                        className="px-4 py-3 align-top overflow-hidden text-ellipsis whitespace-nowrap"
+                        className={wrappingCellClass}
                         title={p.displayDosage || "-"}
                       >
                         {p.displayDosage || "-"}
                       </td>
-                 <td className="px-4 py-3 align-top whitespace-nowrap">
+                 <td className={wrappingCellClass}>
   {p.displayCasId && typeof p.displayCasId === "object"
     ? Object.entries(p.displayCasId)
         .map(([key, val]) => `${key}: ${val}`)

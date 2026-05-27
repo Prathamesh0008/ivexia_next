@@ -1,11 +1,9 @@
-
-//ivexia\components\Navbar.jsx
+// ivexia/components/Navbar.jsx
 "use client";
-
 
 import { useEffect, useRef, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { FaBars, FaGlobe, FaSearch, FaTimes } from "react-icons/fa";
+import { FaBars, FaSearch, FaTimes } from "react-icons/fa";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -13,14 +11,6 @@ import Link from "next/link";
 
 export default function Navbar() {
   const [ingredients, setIngredients] = useState([]);
-  useEffect(() => {
-  fetch("/api/ingredients")
-    .then((res) => res.json())
-    .then((data) => {
-      setIngredients(Array.isArray(data) ? data : []);
-    })
-    .catch(() => setIngredients([]));
-}, []);
   const [showSearch, setShowSearch] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [showLanguages, setShowLanguages] = useState(false);
@@ -28,8 +18,9 @@ export default function Navbar() {
   const [suggestions, setSuggestions] = useState([]);
   const [productsOpen, setProductsOpen] = useState(false);
   const [magOpen, setMagOpen] = useState(false);
- const { translations, loadLanguage, language } = useLanguage();
   const [products, setProducts] = useState([]);
+
+  const { translations, loadLanguage, language } = useLanguage();
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -40,17 +31,33 @@ export default function Navbar() {
   const langRef = useRef(null);
   const searchRef = useRef(null);
 
-const languages = [
-  { code: "en", label: "English", flag: "gb" },
-  { code: "nl", label: "Dutch", flag: "nl" },
-  { code: "es", label: "Spanish", flag: "es" },
-  { code: "de", label: "German", flag: "de" },
-  { code: "pt", label: "Portuguese", flag: "pt" },
-  { code: "fr", label: "French", flag: "fr" },
-  { code: "zh", label: "Chinese", flag: "cn" },
-  { code: "ja", label: "Japanese", flag: "jp" },
-  { code: "ar", label: "Arabic", flag: "sa" },
-];
+  const languages = [
+    { code: "en", label: "English", flag: "gb" },
+    { code: "nl", label: "Dutch", flag: "nl" },
+    { code: "es", label: "Spanish", flag: "es" },
+    { code: "de", label: "German", flag: "de" },
+    { code: "pt", label: "Portuguese", flag: "pt" },
+    { code: "fr", label: "French", flag: "fr" },
+    { code: "zh", label: "Chinese", flag: "cn" },
+    { code: "ja", label: "Japanese", flag: "jp" },
+    { code: "ar", label: "Arabic", flag: "sa" },
+  ];
+
+  const currentLang = languages.find((l) => l.code === language) || languages[0];
+
+  useEffect(() => {
+    fetch("/api/ingredients")
+      .then((res) => res.json())
+      .then((data) => setIngredients(Array.isArray(data) ? data : []))
+      .catch(() => setIngredients([]));
+  }, []);
+
+  useEffect(() => {
+    fetch("/api/products", { cache: "no-store" })
+      .then((res) => res.json())
+      .then((data) => setProducts(Array.isArray(data) ? data : []))
+      .catch(() => setProducts([]));
+  }, []);
 
   const isIngredientPath =
     pathname === "/products/ingredient" ||
@@ -74,38 +81,21 @@ const languages = [
 
   const activeTopLinkClass =
     "bg-[#e8f6fb] text-[#FF7A00] font-semibold shadow-sm";
+
   const topLinkClass =
-    "cursor-pointer px-3 py-1.5 rounded-full transition-all duration-300 ease-out hover:bg-[#f3f8fb] hover:text-[#0d2d47]";
-  const activeDropdownItemClass = "bg-[#e8f6fb] text-[#0d2d47] font-semibold";
+    "cursor-pointer px-3 py-2 rounded-full transition-all duration-300 hover:bg-[#f3f8fb] hover:text-[#0d2d47]";
+
   const dropdownItemClass =
-    "px-4 py-2 text-sm cursor-pointer rounded-md transition-colors duration-200";
+    "px-4 py-2.5 text-sm cursor-pointer rounded-md transition-colors duration-200";
+
+  const activeDropdownItemClass = "bg-[#e8f6fb] text-[#0d2d47] font-semibold";
 
   const mobileSubItemClass = (isActive) =>
-    `px-2 py-1 rounded-md transition-all duration-200 cursor-pointer ${
+    `px-3 py-2 rounded-lg transition-all duration-200 cursor-pointer ${
       isActive
         ? "bg-[#e8f6fb] text-[#0d2d47] font-semibold"
-        : "hover:text-[#0d2d47]"
+        : "hover:bg-gray-50 hover:text-[#0d2d47]"
     }`;
-
-  useEffect(() => {
-    fetch("/api/products", { cache: "no-store" })
-      .then(async (res) => {
-        const data = await res.json();
-
-        if (!res.ok) {
-          throw new Error(data?.error || "Failed to load products");
-        }
-
-        return data;
-      })
-      .then((data) => {
-        setProducts(Array.isArray(data) ? data : []);
-      })
-      .catch((error) => {
-        console.error(error);
-        setProducts([]);
-      });
-  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -123,9 +113,7 @@ const languages = [
         !searchRef.current.contains(event.target) &&
         !event.target.closest(".search-icon")
       ) {
-        if (!searchTerm) {
-          setShowSearch(false);
-        }
+        if (!searchTerm) setShowSearch(false);
       }
     };
 
@@ -133,25 +121,24 @@ const languages = [
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [searchTerm]);
 
- const goTo = (path) => {
-  setMenuOpen(false);
-  setProductsOpen(false);
-  setMagOpen(false);
-  setShowLanguages(false); // ADD THIS (important)
+  const goTo = (path) => {
+    setMenuOpen(false);
+    setProductsOpen(false);
+    setMagOpen(false);
+    setShowLanguages(false);
 
-  setTimeout(() => {
     router.push(path);
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, 50);
-};
+  };
 
- const selectLanguage = (langCode, label) => {
-  loadLanguage(langCode);
-  setShowLanguages(false);
-};
+  const selectLanguage = (langCode) => {
+    loadLanguage(langCode);
+    setShowLanguages(false);
+  };
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
+
     const query = searchTerm.trim().toLowerCase();
     if (!query) return;
 
@@ -160,22 +147,20 @@ const languages = [
     );
 
     if (product) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      router.push(`/products/${product.slug}`);
+      goTo(`/products/${product.slug}`);
       setSearchTerm("");
       setShowSearch(false);
       return;
     }
 
-   const ingredient = ingredients.find(
-  (item) =>
-    item.id?.toLowerCase().includes(query) ||
-    item.slug?.toLowerCase().includes(query)
-);
+    const ingredient = ingredients.find(
+      (item) =>
+        item.id?.toLowerCase().includes(query) ||
+        item.slug?.toLowerCase().includes(query)
+    );
 
     if (ingredient) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      router.push(`/ingredients/${ingredient.slug}`);
+      goTo(`/products/ingredient/${ingredient.slug}`);
       setSearchTerm("");
       setShowSearch(false);
       return;
@@ -185,142 +170,72 @@ const languages = [
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 h-[72px] bg-white/95 backdrop-blur-md shadow-md z-50">
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 md:px-16 h-full">
-        <Link href="/">
-  <Image
-    src="/images/Ivexia.svg"
-    alt="Ivexia Logo"
-    width={220}
-    height={70}
-    priority
-    unoptimized
-   className="object-contain w-[110px] sm:w-[125px] md:w-[145px] lg:w-[165px]"
-  />
-</Link>
+    <nav className="fixed left-0 right-0 top-0 z-50 bg-white/95 shadow-md backdrop-blur-md">
+      <div className="mx-auto flex h-[64px] max-w-7xl items-center justify-between px-4 sm:h-[70px] sm:px-6 xl:px-10 2xl:px-0">
+        <Link href="/" className="shrink-0">
+          <Image
+            src="/images/Ivexia.svg"
+            alt="Ivexia Logo"
+            width={220}
+            height={70}
+            priority
+            unoptimized
+            className="h-auto w-[115px] sm:w-[135px] lg:w-[150px] xl:w-[165px]"
+          />
+        </Link>
 
-        <ul className="hidden lg:flex h-full gap-8 text-lg md:text-lg text-gray-800 items-center">
+        <ul className="hidden items-center gap-2 text-[15px] font-medium text-gray-800 lg:flex xl:gap-4 xl:text-base">
           <li
             onClick={() => goTo("/")}
             className={`${topLinkClass} ${
               pathname === "/" ? activeTopLinkClass : ""
             }`}
           >
-           {translations?.nav?.home}
+            {translations?.nav?.home || "Home"}
           </li>
 
           <li
             ref={productsRef}
+            onClick={() => setProductsOpen((prev) => !prev)}
             className={`relative ${topLinkClass} ${
               isOfferingsActive ? activeTopLinkClass : ""
             }`}
-            onClick={() => setProductsOpen((prev) => !prev)}
           >
-            <span className="inline-flex items-center gap-2">
-              <span>{translations?.nav?.offerings}</span>
+            <span className="inline-flex items-center gap-1.5">
+              {translations?.nav?.offerings || "Offerings"}
               <ChevronDown
                 size={16}
-                strokeWidth={2.2}
-                className={`transition-transform duration-200 ${
+                className={`transition-transform ${
                   productsOpen ? "rotate-180" : ""
                 }`}
               />
             </span>
 
             {productsOpen && (
-             <ul
-  className={`absolute top-full left-0 mt-2 bg-white shadow-md rounded-md w-64 font-normal z-40
-  transition-all duration-300 ease-out origin-top
-  ${
-    productsOpen
-      ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
-      : "opacity-0 -translate-y-2 scale-95 pointer-events-none"
-  }`}
->
-                <li
-                  onClick={(e) => {
-  e.stopPropagation();
-  goTo("/offerings-overview");
-}}
-                  className={`${dropdownItemClass} ${
-                    pathname === "/offerings-overview"
-                      ? activeDropdownItemClass
-                      : "hover:bg-gray-100 text-gray-700"
-                  }`}
-                >
-                  {translations?.nav?.overview}
-                </li>
-                <li
-                  onClick={(e) => {
-  e.stopPropagation();
-  goTo("/products/ingredient")}}
-                  className={`${dropdownItemClass} ${
-                    isIngredientPath
-                      ? activeDropdownItemClass
-                      : "hover:bg-gray-100 text-gray-700"
-                  }`}
-                >
-                 {translations?.nav?.api}
-                </li>
-                <li
-              onClick={(e) => {
-  e.stopPropagation();
-  goTo("/products");
-}}
-                  className={`${dropdownItemClass} ${
-                    isFinishedProductsPath
-                      ? activeDropdownItemClass
-                      : "hover:bg-gray-100 text-gray-700"
-                  }`}
-                >
-                 {translations?.nav?.products}
-                </li>
-                <li
-                  onClick={(e) => {
-  e.stopPropagation();
-  goTo("/otc")}}
-                  className={`${dropdownItemClass} ${
-                    pathname === "/otc"
-                      ? activeDropdownItemClass
-                      : "hover:bg-gray-100 text-gray-700"
-                  }`}
-                >
-                 {translations?.nav?.otc}
-                </li>
-                <li
-                 onClick={(e) => {
-  e.stopPropagation();
-  goTo("/private-label-manufacturing-oem")}}
-                  className={`${dropdownItemClass} ${
-                    pathname === "/private-label-manufacturing-oem"
-                      ? activeDropdownItemClass
-                      : "hover:bg-gray-100 text-gray-700"
-                  }`}
-                >
-                  Private Label Manufacturing / OEM
-                </li>
-                <li
-                 onClick={(e) => {
-  e.stopPropagation();
-  goTo("/test-kits")}}
-                  className={`${dropdownItemClass} ${
-                    pathname === "/test-kits"
-                      ? activeDropdownItemClass
-                      : "hover:bg-gray-100 text-gray-700"
-                  }`}
-                >
-                  Test Kits
-                </li>
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setProductsOpen(false);
-                  }}
-                  className="absolute top-2 right-2 text-gray-500 hover:text-black cursor-pointer"
-                  type="button"
-                >
-                  <FaTimes />
-                </button>
+              <ul className="absolute left-0 top-full z-40 mt-3 w-72 rounded-xl bg-white p-2 shadow-xl ring-1 ring-black/5">
+                {[
+                  ["/offerings-overview", translations?.nav?.overview || "Overview", pathname === "/offerings-overview"],
+                  ["/products/ingredient", translations?.nav?.api || "API / Ingredients", isIngredientPath],
+                  ["/products", translations?.nav?.products || "Finished Products", isFinishedProductsPath],
+                  ["/otc", translations?.nav?.otc || "OTC", pathname === "/otc"],
+                  ["/private-label-manufacturing-oem", "Private Label Manufacturing / OEM", pathname === "/private-label-manufacturing-oem"],
+                  ["/test-kits", "Test Kits", pathname === "/test-kits"],
+                ].map(([href, label, active]) => (
+                  <li
+                    key={href}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      goTo(href);
+                    }}
+                    className={`${dropdownItemClass} ${
+                      active
+                        ? activeDropdownItemClass
+                        : "text-gray-700 hover:bg-gray-100"
+                    }`}
+                  >
+                    {label}
+                  </li>
+                ))}
               </ul>
             )}
           </li>
@@ -331,71 +246,53 @@ const languages = [
               pathname === "/about" ? activeTopLinkClass : ""
             }`}
           >
-            {translations?.nav?.about}
+            {translations?.nav?.about || "About"}
           </li>
 
           <li
             ref={magRef}
+            onClick={() => setMagOpen((prev) => !prev)}
             className={`relative ${topLinkClass} ${
               isMagazineActive ? activeTopLinkClass : ""
             }`}
-            onClick={() => setMagOpen((prev) => !prev)}
           >
-            <span className="inline-flex items-center gap-2">
-              <span>{translations?.nav?.mag}</span>
+            <span className="inline-flex items-center gap-1.5">
+              {translations?.nav?.mag || "Ivexia Mag"}
               <ChevronDown
                 size={16}
-                strokeWidth={2.2}
-                className={`transition-transform duration-200 ${
-                  magOpen ? "rotate-180" : ""
-                }`}
+                className={`transition-transform ${magOpen ? "rotate-180" : ""}`}
               />
             </span>
 
             {magOpen && (
-              <ul
-  className={`absolute top-full  left-0 mt-2 bg-white shadow-md rounded-md w-64 font-normal z-40
-  transition-all duration-300 ease-out origin-top
-  ${
-    magOpen
-      ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
-      : "opacity-0 -translate-y-2 scale-95 pointer-events-none"
-  }`}
->
+              <ul className="absolute left-0 top-full z-40 mt-3 w-56 rounded-xl bg-white p-2 shadow-xl ring-1 ring-black/5">
                 <li
                   onClick={(e) => {
-    e.stopPropagation();
-    goTo("/ivexia-mag?category=news")}}
+                    e.stopPropagation();
+                    goTo("/ivexia-mag?category=news");
+                  }}
                   className={`${dropdownItemClass} ${
                     pathname === "/ivexia-mag" && magCategory === "news"
                       ? activeDropdownItemClass
-                      : "hover:bg-gray-100 text-gray-700"
+                      : "text-gray-700 hover:bg-gray-100"
                   }`}
                 >
-                  {translations?.nav?.mag_news}
+                  {translations?.nav?.mag_news || "News"}
                 </li>
+
                 <li
-                onClick={(e) => {
-    e.stopPropagation();
-    goTo("/ivexia-mag?category=health")}}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    goTo("/ivexia-mag?category=health");
+                  }}
                   className={`${dropdownItemClass} ${
                     pathname === "/ivexia-mag" && magCategory === "health"
                       ? activeDropdownItemClass
-                      : "hover:bg-gray-100 text-gray-700"
+                      : "text-gray-700 hover:bg-gray-100"
                   }`}
                 >
-               {translations?.nav?.mag_health}
+                  {translations?.nav?.mag_health || "Health"}
                 </li>
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setMagOpen(false);
-                  }}
-                  className="absolute top-2 right-2 text-gray-500 hover:text-black cursor-pointer"
-                  type="button"
-                >
-                  <FaTimes />
-                </button>
               </ul>
             )}
           </li>
@@ -406,75 +303,75 @@ const languages = [
               pathname === "/contact" ? activeTopLinkClass : ""
             }`}
           >
-           {translations?.nav?.contact}
+            {translations?.nav?.contact || "Contact"}
           </li>
         </ul>
 
-        <div className="h-full flex items-center gap-4 relative">
+        <div className="flex items-center gap-3 sm:gap-4">
           <FaSearch
-            className="cursor-pointer search-icon text-gray-600 hover:text-[#0d2d47]"
+            className="search-icon cursor-pointer text-gray-600 hover:text-[#0d2d47]"
             onClick={() => setShowSearch((prev) => !prev)}
           />
 
           <div ref={langRef} className="relative">
-            <div
-              className="flex items-center gap-1 cursor-pointer text-gray-600 hover:text-[#0d2d47]"
-              onClick={() => setShowLanguages((prev) => !prev)}
+            <button
+              type="button"
+              onClick={() => {
+  setShowLanguages((prev) => !prev);
+  setMenuOpen(false);
+}}
+              className="flex cursor-pointer items-center gap-1.5 text-sm text-gray-600 hover:text-[#0d2d47]"
             >
-         
-<span className="text-sm flex items-center gap-1">
- <img
-  src={`https://flagcdn.com/w20/${languages.find((l) => l.code === language)?.flag}.png`}
-  alt="flag"
-  className="w-5 h-4 rounded-sm"
-/>
-  {languages.find((l) => l.code === language)?.label}
-</span>
-            </div>
+              <img
+                src={`https://flagcdn.com/w20/${currentLang.flag}.png`}
+                alt={currentLang.label}
+                className="h-4 w-5 rounded-sm"
+              />
+              <span className="hidden sm:inline">{currentLang.label}</span>
+            </button>
 
             {showLanguages && (
-              <ul className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-md text-sm font-medium z-50">
+            <ul className="absolute right-0 z-50 mt-3 w-52 rounded-2xl border border-gray-100 bg-white/95 p-2 text-sm font-medium shadow-2xl backdrop-blur-md
+animate-[dropdownFade_0.22s_ease-out] max-h-[320px] overflow-y-auto lg:max-h-none lg:overflow-visible">
                 {languages.map((lng) => (
                   <li
                     key={lng.code}
-                    onClick={() => selectLanguage(lng.code, lng.label)}
-                    className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"
+                    onClick={() => selectLanguage(lng.code)}
+                    className="flex cursor-pointer items-center gap-2 rounded-lg px-3 py-2 hover:bg-gray-100"
                   >
-                  <img
-  src={`https://flagcdn.com/w20/${lng.flag}.png`}
-  alt={lng.label}
-  className="w-5 h-4 rounded-sm"
-/>
-<span>{lng.label}</span>
+                    <img
+                      src={`https://flagcdn.com/w20/${lng.flag}.png`}
+                      alt={lng.label}
+                      className="h-4 w-5 rounded-sm"
+                    />
+                    <span>{lng.label}</span>
                   </li>
                 ))}
               </ul>
             )}
           </div>
 
-          <div className="lg:hidden">
+          <button
+            type="button"
+            className="lg:hidden"
+            onClick={() => setMenuOpen((prev) => !prev)}
+          >
             {menuOpen ? (
-              <FaTimes
-                className="text-gray-700 text-xl cursor-pointer"
-                onClick={() => setMenuOpen(false)}
-              />
+              <FaTimes className="text-xl text-gray-700" />
             ) : (
-              <FaBars
-                className="text-gray-700 text-xl cursor-pointer"
-                onClick={() => setMenuOpen(true)}
-              />
+              <FaBars className="text-xl text-gray-700" />
             )}
-          </div>
+          </button>
         </div>
       </div>
 
       {showSearch && (
         <div
           ref={searchRef}
-          className="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-16 py-2 bg-gray-50 border-t border-gray-200"
+          className="border-t border-gray-200 bg-gray-50 px-4 py-3 sm:px-6 lg:px-10"
         >
-          <form onSubmit={handleSearchSubmit}>
-            <div className="flex items-center relative">
+          <form onSubmit={handleSearchSubmit} className="mx-auto max-w-7xl">
+            <div className="relative">
               <input
                 type="text"
                 value={searchTerm}
@@ -490,9 +387,7 @@ const languages = [
                   const query = value.toLowerCase();
 
                   const productMatches = products
-                    .filter((item) =>
-                      item.name?.toLowerCase().includes(query)
-                    )
+                    .filter((item) => item.name?.toLowerCase().includes(query))
                     .slice(0, 5)
                     .map((item) => ({
                       type: "product",
@@ -501,22 +396,22 @@ const languages = [
                     }));
 
                   const ingredientMatches = ingredients
-  .filter(
-    (item) =>
-      item.slug?.toLowerCase().includes(query) ||
-      item.id?.toLowerCase().includes(query)
-  )
-  .slice(0, 5)
-  .map((item) => ({
-    type: "ingredient",
-    name: item.name,
-    slug: item.slug,
-  }));
+                    .filter(
+                      (item) =>
+                        item.slug?.toLowerCase().includes(query) ||
+                        item.id?.toLowerCase().includes(query)
+                    )
+                    .slice(0, 5)
+                    .map((item) => ({
+                      type: "ingredient",
+                      name: item.name || item.slug,
+                      slug: item.slug,
+                    }));
 
                   setSuggestions([...productMatches, ...ingredientMatches]);
                 }}
                 placeholder="Search products or ingredients..."
-                className="w-full border border-gray-300 rounded-md px-4 py-2 pr-10 focus:outline-none focus:border-[#0d2d47]"
+                className="w-full rounded-lg border border-gray-300 px-4 py-2.5 pr-10 text-sm outline-none focus:border-[#0d2d47]"
               />
 
               <button
@@ -526,7 +421,7 @@ const languages = [
                   setSearchTerm("");
                   setSuggestions([]);
                 }}
-                className="absolute right-3 text-gray-500 hover:text-black"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-black"
               >
                 <FaTimes />
               </button>
@@ -534,21 +429,21 @@ const languages = [
           </form>
 
           {suggestions.length > 0 && (
-            <div className="absolute left-4 right-4 bg-white shadow-lg border border-gray-200 mt-2 rounded-md z-50 max-h-60 overflow-y-auto">
+            <div className="mx-auto mt-2 max-h-60 max-w-7xl overflow-y-auto rounded-lg border border-gray-200 bg-white shadow-lg">
               {suggestions.map((item, index) => (
                 <div
                   key={`${item.slug}-${index}`}
                   onClick={() => {
-                    if (item.type === "product") {
-                      router.push(`/products/${item.slug}`);
-                    } else {
-                      router.push(`/ingredients/${item.slug}`);
-                    }
+                    goTo(
+                      item.type === "product"
+                        ? `/products/${item.slug}`
+                        : `/products/ingredient/${item.slug}`
+                    );
                     setSearchTerm("");
                     setSuggestions([]);
                     setShowSearch(false);
                   }}
-                  className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-sm"
+                  className="cursor-pointer px-4 py-2 text-sm hover:bg-gray-100"
                 >
                   {item.name}
                 </div>
@@ -559,187 +454,133 @@ const languages = [
       )}
 
       {menuOpen && (
-        <ul className="max-w-7xl mx-auto lg:hidden flex flex-col gap-4 bg-white shadow-md border-t border-gray-100 px-6 md:px-16 py-4 font-medium text-gray-800">
-          <li
-            onClick={() => goTo("/")}
-            className={`${topLinkClass} ${
-              pathname === "/" ? activeTopLinkClass : ""
-            }`}
-          >
-            Home
-          </li>
+      <div className="max-h-[calc(100vh-64px)] overflow-y-auto border-t border-gray-100 bg-white/95 px-4 py-4 shadow-2xl backdrop-blur-md lg:hidden animate-[mobileMenuSlide_0.28s_ease-out]">
+          <ul className="mx-auto flex max-w-7xl flex-col gap-2 text-sm font-medium text-gray-800">
+            <li
+              onClick={() => goTo("/")}
+              className={`${topLinkClass} ${
+                pathname === "/" ? activeTopLinkClass : ""
+              }`}
+            >
+              {translations?.nav?.home || "Home"}
+            </li>
 
-          <li className="cursor-pointer">
-            <details className="group">
-              <summary className="flex justify-between items-center py-2 text-[#0d2d47] cursor-pointer">
-                <span
-                  className={`px-3 py-1 rounded-full transition-all duration-300 ${
-                    isOfferingsActive ? activeTopLinkClass : ""
-                  }`}
-                >
-                  Our Products
-                </span>
-                <ChevronDown
-                  size={16}
-                  strokeWidth={2.2}
-                  className="transition-transform group-open:rotate-180"
-                />
-              </summary>
-
-              <div className="ml-4 mt-1 flex flex-col gap-2 text-gray-700 text-sm">
-                <span
-                 onClick={(e) => {
-    e.stopPropagation();   // ✅ ADD THIS
-    goTo("/offerings-overview");
-  }}
-                  className={mobileSubItemClass(pathname === "/offerings-overview")}
-                >
-                  Overview
-                </span>
-                <span
-                  onClick={(e) => {
-  e.stopPropagation();
-  goTo("/products/ingredient")}}
-                  className={mobileSubItemClass(isIngredientPath)}
-                >
-                  API / Ingredients
-                </span>
-                <span
-                  onClick={(e) => {
-  e.stopPropagation();
-  goTo("/products");
-}}
-                  className={mobileSubItemClass(isFinishedProductsPath)}
-                >
-                  Finished Products
-                </span>
-                <span
-                  onClick={() => goTo("/otc")}
-                  className={mobileSubItemClass(pathname === "/otc")}
-                >
-                  OTC
-                </span>
-                <span
-                  onClick={() => goTo("/test-kits")}
-                  className={mobileSubItemClass(pathname === "/test-kits")}
-                >
-                  Test Kits
-                </span>
-                <span
-                  onClick={(e) => {
-  e.stopPropagation();
-  goTo("/private-label-manufacturing-oem")}}
-                  className={mobileSubItemClass(
-                    pathname === "/private-label-manufacturing-oem"
-                  )}
-                >
-                  Private Label Manufacturing / OEM
-                </span>
-              </div>
-            </details>
-          </li>
-
-          <li
-            onClick={() => goTo("/about")}
-            className={`${topLinkClass} ${
-              pathname === "/about" ? activeTopLinkClass : ""
-            }`}
-          >
-           {translations?.nav?.about}
-          </li>
-
-          <li className="cursor-pointer">
-            <details className="group">
-              <summary className="flex justify-between items-center py-2 text-[#0d2d47]">
-                <span
-                  className={`px-3 py-1 rounded-full transition-all duration-300 ${
-                    isMagazineActive ? activeTopLinkClass : ""
-                  }`}
-                >
-                  Ivexia Mag
-                </span>
-              </summary>
-
-              <div className="ml-4 mt-1 flex flex-col gap-2 text-gray-700 text-sm">
-                <span
-                 onClick={(e) => {
-  e.stopPropagation();
-  goTo("/ivexia-mag?category=news");
-}}
-                  className={mobileSubItemClass(
-                    pathname === "/ivexia-mag" && magCategory === "news"
-                  )}
-                >
-                  News
-                </span>
-                <span
-                  onClick={(e) => {
-  e.stopPropagation();
-  goTo("/ivexia-mag?category=health")}}
-                  className={mobileSubItemClass(
-                    pathname === "/ivexia-mag" && magCategory === "health"
-                  )}
-                >
-                  Health
-                </span>
-              </div>
-            </details>
-          </li>
-
-          <li
-            onClick={() => goTo("/contact")}
-            className={`${topLinkClass} ${
-              pathname === "/contact" ? activeTopLinkClass : ""
-            }`}
-          >
-            Contact
-          </li>
-
-          <li className="cursor-pointer">
-            <details>
-              <summary className="py-2 text-[#0d2d47] flex items-center gap-2">
-               
-                <span>
-  {languages.find((l) => l.code === language)?.label || "English"}
-</span>
-              </summary>
-              <div className="ml-4 mt-2 flex flex-col gap-2 text-gray-700 text-sm">
-                {languages.map((lng) => (
+            <li>
+              <details className="group rounded-xl bg-gray-50 p-2">
+                <summary className="flex cursor-pointer items-center justify-between px-2 py-2 text-[#0d2d47]">
                   <span
-                    key={lng.code}
-                    onClick={() => selectLanguage(lng.code, lng.label)}
-                    className="flex items-center gap-2 hover:text-[#0d2d47] cursor-pointer"
+                    className={`rounded-full px-3 py-1 ${
+                      isOfferingsActive ? activeTopLinkClass : ""
+                    }`}
                   >
-         <img
-  src={`https://flagcdn.com/w20/${lng.flag}.png`}
-  alt={lng.label}
-  className="w-5 h-4 rounded-sm"
-/>
-<span>{lng.label}</span>
+                    {translations?.nav?.offerings || "Our Products"}
                   </span>
-                ))}
-              </div>
-            </details>
-          </li>
-        </ul>
+                  <ChevronDown
+                    size={16}
+                    className="transition-transform group-open:rotate-180"
+                  />
+                </summary>
+
+                <div className="mt-2 flex flex-col gap-1 pl-2">
+                  <span
+                    onClick={() => goTo("/offerings-overview")}
+                    className={mobileSubItemClass(pathname === "/offerings-overview")}
+                  >
+                    Overview
+                  </span>
+                  <span
+                    onClick={() => goTo("/products/ingredient")}
+                    className={mobileSubItemClass(isIngredientPath)}
+                  >
+                    API / Ingredients
+                  </span>
+                  <span
+                    onClick={() => goTo("/products")}
+                    className={mobileSubItemClass(isFinishedProductsPath)}
+                  >
+                    Finished Products
+                  </span>
+                  <span
+                    onClick={() => goTo("/otc")}
+                    className={mobileSubItemClass(pathname === "/otc")}
+                  >
+                    OTC
+                  </span>
+                  <span
+                    onClick={() => goTo("/test-kits")}
+                    className={mobileSubItemClass(pathname === "/test-kits")}
+                  >
+                    Test Kits
+                  </span>
+                  <span
+                    onClick={() => goTo("/private-label-manufacturing-oem")}
+                    className={mobileSubItemClass(
+                      pathname === "/private-label-manufacturing-oem"
+                    )}
+                  >
+                    Private Label Manufacturing / OEM
+                  </span>
+                </div>
+              </details>
+            </li>
+
+            <li
+              onClick={() => goTo("/about")}
+              className={`${topLinkClass} ${
+                pathname === "/about" ? activeTopLinkClass : ""
+              }`}
+            >
+              {translations?.nav?.about || "About"}
+            </li>
+
+            <li>
+              <details className="group rounded-xl bg-gray-50 p-2">
+                <summary className="flex cursor-pointer items-center justify-between px-2 py-2 text-[#0d2d47]">
+                  <span
+                    className={`rounded-full px-3 py-1 ${
+                      isMagazineActive ? activeTopLinkClass : ""
+                    }`}
+                  >
+                    {translations?.nav?.mag || "Ivexia Mag"}
+                  </span>
+                  <ChevronDown
+                    size={16}
+                    className="transition-transform group-open:rotate-180"
+                  />
+                </summary>
+
+                <div className="mt-2 flex flex-col gap-1 pl-2">
+                  <span
+                    onClick={() => goTo("/ivexia-mag?category=news")}
+                    className={mobileSubItemClass(
+                      pathname === "/ivexia-mag" && magCategory === "news"
+                    )}
+                  >
+                    News
+                  </span>
+                  <span
+                    onClick={() => goTo("/ivexia-mag?category=health")}
+                    className={mobileSubItemClass(
+                      pathname === "/ivexia-mag" && magCategory === "health"
+                    )}
+                  >
+                    Health
+                  </span>
+                </div>
+              </details>
+            </li>
+
+            <li
+              onClick={() => goTo("/contact")}
+              className={`${topLinkClass} ${
+                pathname === "/contact" ? activeTopLinkClass : ""
+              }`}
+            >
+              {translations?.nav?.contact || "Contact"}
+            </li>
+          </ul>
+        </div>
       )}
     </nav>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

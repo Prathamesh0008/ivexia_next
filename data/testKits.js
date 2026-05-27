@@ -17,7 +17,7 @@ export const TEST_KITS = [
     method: "Colloidal Gold",
     product: "hCG",
     description: "hCG One Step Pregnancy Test Strip (Serum/Urine)",
-    cut_off: "",
+    cut_off: "None",
     specimen: "Serum/Urine",
     certificate: "CE",
     id: 2,
@@ -39,7 +39,7 @@ export const TEST_KITS = [
     method: "Colloidal Gold",
     product: "LH",
     description: "LH One Step Ovulation Test Strip (Urine)",
-    cut_off: "",
+    cut_off: "None",
     specimen: "Urine",
     certificate: "CE",
     id: 4,
@@ -62,7 +62,7 @@ export const TEST_KITS = [
     method: "Colloidal Gold",
     product: "iGFBP-1",
     description: "iGFBP-1 Rapid Test Strip (Vaginal secretion)",
-    cut_off: "",
+    cut_off: "None",
     specimen: "Urine",
     certificate: "CE",
     id: 6,
@@ -84,7 +84,7 @@ export const TEST_KITS = [
     method: "Colloidal Gold",
     product: "fFN",
     description: "fFN rapid test Strip (Vaginal secretion)",
-    cut_off: "",
+    cut_off: "None",
     specimen: "Urine",
     certificate: "CE",
     id: 8,
@@ -95,7 +95,7 @@ export const TEST_KITS = [
     method: "Colloidal Gold",
     product: "FSH",
     description: "FSH rapid test Device (Urine)",
-    cut_off: "",
+    cut_off: "None",
     specimen: "Urine",
     certificate: "CE",
     id: 9,
@@ -107,7 +107,7 @@ export const TEST_KITS = [
     method: "Colloidal Gold",
     product: "FSH",
     description: "FSH rapid test Strip (Urine)",
-    cut_off: "",
+    cut_off: "None",
     specimen: "Urine",
     certificate: "CE",
     id: 10,
@@ -118,7 +118,7 @@ export const TEST_KITS = [
     method: "Colloidal Gold",
     product: "HPV",
     description: "HPV rapid test Device (Urine)",
-    cut_off: "",
+    cut_off: "None",
     specimen: "Urine",
     certificate: "CE",
     id: 11,
@@ -129,7 +129,7 @@ export const TEST_KITS = [
     method: "Colloidal Gold",
     product: "HPV",
     description: "HPV rapid test Strip (Urine)",
-    cut_off: "",
+    cut_off: "None",
     specimen: "Urine",
     certificate: "CE",
     id: 12,
@@ -141,7 +141,7 @@ export const TEST_KITS = [
     method: "Fluorescence",
     product: "PE (sFlt-1/PlGF)",
     description: "PE (sFlt-1/PlGF) Test (Serum)",
-    cut_off: "/",
+    cut_off: "None",
     specimen: "Serum",
     certificate: "CE",
     id: 13,
@@ -152,9 +152,9 @@ export const TEST_KITS = [
     method: "Fluorescence",
     product: "ST2",
     description: "ST2 rapid test Device (Serum)",
-    cut_off: "/",
+    cut_off: "None",
     specimen: "Serum",
-    certificate: "/",
+    certificate: "None",
     id: 14,
     slug: "st2-device"
   },
@@ -163,9 +163,9 @@ export const TEST_KITS = [
     method: "Fluorescence",
     product: "PAPPA",
     description: "PAPPA rapid test Device (Serum)",
-    cut_off: "/",
+    cut_off: "None",
     specimen: "Serum",
-    certificate: "/",
+    certificate: "None",
     id: 15,
     slug: "pappa-device"
   },
@@ -174,9 +174,9 @@ export const TEST_KITS = [
     method: "Fluorescence",
     product: "AMH",
     description: "AMH rapid test Device (Serum)",
-    cut_off: "/",
+    cut_off: "None",
     specimen: "Serum",
-    certificate: "/",
+    certificate: "None",
     id: 16,
     slug: "amh-device"
   },
@@ -242,7 +242,7 @@ export const TEST_KITS = [
     product: "6-Monoacetylmorphine (6-MAM)",
     cut_off: "50ng/ml",
     specimen: "Urine",
-    certificate: "/",
+    certificate: "None",
     id: 22,
     slug: "6-mam-urine-test"
   },
@@ -302,7 +302,7 @@ export const TEST_KITS = [
     product: "Acetaminophen (ACE)",
     cut_off: "5000ng/ml",
     specimen: "Urine",
-    certificate: "/",
+    certificate: "None",
     id: 28,
     slug: "acetaminophen-urine-test"
   },
@@ -382,7 +382,7 @@ export const TEST_KITS = [
     product: "Lysergic Acid Diethylamide (LSD)",
     cut_off: "50ng/ml",
     specimen: "Urine",
-    certificate: "/",
+    certificate: "None",
     id: 36,
     slug: "lsd-urine-test"
   },
@@ -402,7 +402,7 @@ export const TEST_KITS = [
     product: "Methylphenidate (MPD)",
     cut_off: "300ng/ml",
     specimen: "Urine",
-    certificate: "/",
+    certificate: "None",
     id: 38,
     slug: "methylphenidate-urine-test"
   },
@@ -462,7 +462,7 @@ export const TEST_KITS = [
     product: "Zolpidem (ZOL)",
     cut_off: "50ng/ml",
     specimen: "Urine",
-    certificate: "/",
+    certificate: "None",
     id: 44,
     slug: "zolpidem-urine-test"
   },
@@ -502,7 +502,7 @@ export const TEST_KITS = [
     product: "Carisoprodol (SOMA)",
     cut_off: "1000ng/ml",
     specimen: "Urine",
-    certificate: "/",
+    certificate: "None",
     id: 48,
     slug: "carisoprodol-urine-test"
   },
@@ -510,7 +510,7 @@ export const TEST_KITS = [
     category: "DRUG OF ABUSE",
     method: "Rapid Test",
     product: "One Step Drugs Urine Cup",
-    cut_off: "/",
+    cut_off: "None",
     specimen: "Urine",
     certificate: "CE",
     id: 49,
@@ -520,7 +520,7 @@ export const TEST_KITS = [
     category: "DRUG OF ABUSE",
     method: "Rapid Test",
     product: "One Step Drugs Urine Key Cup",
-    cut_off: "/",
+    cut_off: "None",
     specimen: "Urine",
     certificate: "CE",
     id: 50,
@@ -530,7 +530,7 @@ export const TEST_KITS = [
     category: "DRUG OF ABUSE",
     method: "Rapid Test",
     product: "Multi-Drug (1-14) Drugs Test Panel",
-    cut_off: "/",
+    cut_off: "None",
     specimen: "Urine",
     certificate: "CE",
     id: 51,
@@ -542,7 +542,7 @@ export const TEST_KITS = [
     product: "Morphine (MOR)",
     cut_off: "20ng/ml",
     specimen: "Hair",
-    certificate: "/",
+    certificate: "None",
     id: 52,
     slug: "morphine-hair-test"
   },
@@ -552,7 +552,7 @@ export const TEST_KITS = [
     product: "Methamphetamine (MET)",
     cut_off: "20ng/ml",
     specimen: "Hair",
-    certificate: "/",
+    certificate: "None",
     id: 53,
     slug: "morphine-hair-test"
   },
@@ -562,7 +562,7 @@ export const TEST_KITS = [
     product: "Ketamine (KET)",
     cut_off: "20ng/ml",
     specimen: "Hair",
-    certificate: "/",
+    certificate: "None",
     id: 54,
     slug: "ketamine-hair-test"
   },
@@ -572,7 +572,7 @@ export const TEST_KITS = [
     product: "Ketamine (KET)",
     cut_off: "20ng/ml",
     specimen: "Saliva",
-    certificate: "/",
+    certificate: "None",
     id: 55,
     slug: "ketamine-saliva-test"
   },
@@ -582,7 +582,7 @@ export const TEST_KITS = [
     product: "Cocaine (COC)",
     cut_off: "20ng/ml",
     specimen: "Saliva",
-    certificate: "/",
+    certificate: "None",
     id: 56,
     slug: "cocaine-saliva-test"
   },
@@ -592,7 +592,7 @@ export const TEST_KITS = [
     product: "Phencyclidine (PCP)",
     cut_off: "20ng/ml",
     specimen: "Saliva",
-    certificate: "/",
+    certificate: "None",
     id: 57,
     slug: "pcp-saliva-test"
   },
@@ -602,7 +602,7 @@ export const TEST_KITS = [
     product: "Morphine (MOR)",
     cut_off: "20ng/ml",
     specimen: "Saliva",
-    certificate: "/",
+    certificate: "None",
     id: 58,
     slug: "morphine-saliva-test"
   },
@@ -612,7 +612,7 @@ export const TEST_KITS = [
     product: "Methamphetamine (MET)",
     cut_off: "20ng/ml",
     specimen: "Saliva",
-    certificate: "/",
+    certificate: "None",
     id: 59,
     slug: "methamphetamine-saliva-test"
   },
@@ -635,7 +635,7 @@ export const TEST_KITS = [
     product: "CHL",
     description: "Chlamydia Rapid Test Device/Strip (Urine/Male Urethral Swab/Female Cervical Swab)",
     cut_off: "1e5 org/test",
-    certificate: "/",
+    certificate: "None",
     id: 61,
     slug: "chl-rapid-test"
   },
@@ -955,7 +955,7 @@ export const TEST_KITS = [
     product: "HCV",
     description: "HCV Rapid Test Device/Strip (WB/S/P)",
     cut_off: "N/A",
-    certificate: "/",
+    certificate: "N/A",
     id: 93,
     slug: "hcv-rapid-test"
   },
@@ -985,7 +985,7 @@ export const TEST_KITS = [
     product: "ToRCH",
     description: "TOXO IgG/IgM Rapid Test (WB/S/P)",
     cut_off: "N/A",
-    certificate: "/",
+    certificate: "N/A",
     id: 96,
     slug: "toxoplasma-rapid-test"
   },
@@ -1005,7 +1005,7 @@ export const TEST_KITS = [
     product: "ToRCH",
     description: "CMV IgG/IgM Rapid Test (WB/S/P)",
     cut_off: "N/A",
-    certificate: "/",
+    certificate: "N/A",
     id: 98,
     slug: "cmv-rapid-test"
   },
@@ -1017,7 +1017,7 @@ export const TEST_KITS = [
     cut_off: "N/A",
     certificate: "/",
     id: 99,
-    slug: " hsv-rapid-test"
+    slug: "hsv-rapid-test"
   },
   {
     category: "INFECTIOUS DISEASE",
@@ -1027,7 +1027,7 @@ export const TEST_KITS = [
     cut_off: "N/A",
     certificate: "CE",
     id: 100,
-    slug: " rsv-rapid-test"
+    slug: "rsv-rapid-test"
   },
     {
     category: "INFECTIOUS DISEASE",
@@ -1037,7 +1037,7 @@ export const TEST_KITS = [
     cut_off: "N/A",
     certificate: "/",
     id: 101,
-    slug: " norovirus-rapid-test"
+    slug: "norovirus-rapid-test"
   },
      {
     category: "INFECTIOUS DISEASE",
@@ -1065,7 +1065,7 @@ export const TEST_KITS = [
     product: "Zika",
     description: "Zika Rapid Test Device (WB/S/P)",
     cut_off: "N/A",
-    certificate: "/",
+    certificate: "N/A",
     id: 104,
     slug: "zika-rapid-test"
   },
@@ -1181,7 +1181,7 @@ export const TEST_KITS = [
     specimen: "WB/S/P",
     certificate: "CE",
     id: 115,
-    slug: "fob-test"
+    slug: "fob-test" 
   },
     {
     category: "TUMOR MARKER",
