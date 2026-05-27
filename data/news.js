@@ -40,7 +40,7 @@ stronger export readiness.
     `,
     category: "Manufacturing",
     date: "June 02, 2025",
-    img: "/images/Manufacturing.jpg",
+    img: "/images/Manufacturing1.jpg",
   },
 
   {
