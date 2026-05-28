@@ -5588,206 +5588,7 @@ export const nl = {
     ]
   }
 },
-"6-mam-urine-test": {
-  meta: {
-    title: "PE sFlt-1/PlGF-testserum – Fluorescentie-immunoassay | Ivexia Pharma",
-    description: "PE (sFlt-1/PlGF) Test (Serum) van Ivexia Pharma is een op fluorescentie gebaseerde immunofluorescentietest voor pre-eclampsierisicobeoordeling met behulp van de sFlt-1/PlGF-verhouding in serum."
-  },
-  hero: {
-    title: "PE (sFlt-1/PlGF)-test (serum)",
-    description: "PE (sFlt-1/PlGF) Test (Serum) van Ivexia Pharma is een professionele diagnostische immunofluorescentietest ontworpen om de risicobeoordeling van pre-eclampsie te ondersteunen door de relatie te meten tussen sFlt-1, oplosbaar fms-achtig tyrosinekinase-1, en PlGF, placentaire groeifactor, in menselijk serum. Deze op serum gebaseerde PE-test is gebaseerd op de fluorescentiemethode en ondersteunt ziekenhuizen, kraamcentra, gynaecologische klinieken, diagnostische laboratoria en prenatale zorgverleners bij het evalueren van vermoedelijke hypertensieve aandoeningen tijdens de zwangerschap. De sFlt-1/PlGF-ratio wordt veel gebruikt als hulpmiddel voor risicostratificatie bij zwangere vrouwen met klinische symptomen van pre-eclampsie, maar is niet bedoeld ter vervanging van het klinische oordeel of als op zichzelf staande diagnose."
-  },
-  content: {
-    introduction: {
-      title: "Introductie",
-      sections: [
-        "De PE (sFlt-1/PlGF) Test (Serum) is een geavanceerd immunofluorescentietestapparaat dat wordt gebruikt voor pre-eclampsie-gerelateerde biomarkerevaluatie. Pre-eclampsie is een zwangerschapscomplicatie die verband houdt met hoge bloeddruk en mogelijke orgaanbetrokkenheid, meestal na 20 weken zwangerschap.",
-        "De sFlt-1/PlGF-ratiotest is klinisch belangrijk omdat pre-eclampsie verband houdt met een onevenwicht tussen anti-angiogene en pro-angiogene placentaire factoren. Bij pre-eclampsie hebben de sFlt-1 l-niveaus de neiging te stijgen, terwijl de vrije PlGF-niveaus de neiging hebben te dalen in vergelijking met normale zwangerschappen.",
-        "De PE (sFlt-1/PlGF) Test (Serum) van Ivexia Pharma ondersteunt professionele gezondheidszorgomgevingen zoals kraamklinieken, gynaecologische klinieken, diagnostische laboratoria, prenatale zorgcentra en internationale diagnostische distributienetwerken."
-      ]
-    },
-    productOverview: {
-      title: "Productoverzicht",
-      details: [
-        { label: "Productnaam", value: "PE (sFlt-1/PlGF)-test (serum)" },
-        { label: "Merk", value: "Ivexia Pharma" },
-        { label: "Categorie", value: "Immunofluorescentie" },
-        { label: "Methode", value: "Fluorescentie" },
-        { label: "Voorbeeld", value: "Serum" },
-        { label: "Doelmarkeringen", value: "sFlt-1 en PlGF-verhouding" },
-        { label: "Toepassing", value: "Ondersteuning van risicobeoordeling van pre-eclampsie" },
-        { label: "Gebruik Type", value: "Professioneel in vitro diagnostisch gebruik" }
-      ],
-      note: "De PE (sFlt-1/PlGF)-test is ontworpen om de risicobeoordeling te ondersteunen. Het mag niet worden gebruikt als een op zichzelf staande diagnostische test of als enige basis voor veranderingen in de behandeling."
-    },
-    whatIsRatio: {
-      title: "Wat is de sFlt-1/PlGF-ratio?",
-      content: "De sFlt-1/PlGF-ratio vergelijkt twee belangrijke zwangerschapsgerelateerde biomarkers. sFlt-1 is een anti-angiogene proteïne die grotendeels in de placenta wordt geproduceerd, terwijl PlGF een pro-angiogene factor is die de ontwikkeling van de bloedvaten in de placenta en de normale functie van de placenta ondersteunt. Tijdens een normale zwangerschap stijgt PlGF gewoonlijk tijdens het eerste en tweede trimester en neemt vervolgens af naarmate de zwangerschap vordert. Bij pre-eclampsie is de sFlt-1 gewoonlijk verhoogd en de vrije PlGF gewoonlijk verlaagd."
-    },
-    intendedUse: {
-      title: "Beoogd gebruik",
-      description: "De PE (sFlt-1/PlGF)-test (serum) is bedoeld voor professioneel in-vitrodiagnostisch gebruik als hulpmiddel bij de risicobeoordeling van pre-eclampsie. Het ondersteunt de klinische evaluatie wanneer pre-eclampsie of hypertensieve zwangerschapsaandoeningen worden vermoed.",
-      applications: [
-        "Risicobeoordeling van pre-eclampsie",
-        "Evaluatie van vermoedelijke hypertensieve aandoeningen tijdens de zwangerschap",
-        "Testen van serumbiomarkers van de moeder",
-        "Risicostratificatie van patiënten met klinische symptomen",
-        "Ondersteuning van prenatale zorgbeslissingen met ander onderzoek",
-        "Monitoring van zwangerschapscomplicaties waarbij een disfunctie van de placenta wordt vermoed",
-        "Laboratoriumgebaseerde rapportage voor kraamklinieken en diagnostische centra"
-      ]
-    },
-    clinicalImportance: {
-      title: "Klinisch belang van PE-testen (sFlt-1/PlGF).",
-      sections: [
-        "De PE-test (sFlt-1/PlGF) is bedoeld ter ondersteuning van de risicobeoordeling, niet om pre-eclampsie zelfstandig te diagnosticeren of te behandelen.",
-        "De sFlt-1/PlGF-ratio kan beroepsbeoefenaren in de gezondheidszorg helpen patiënten in te delen in groepen met een lager of hoger risico bij gebruik met bloeddruk, urine-eiwit, leverfunctie, nierfunctie, aantal bloedplaatjes, symptomen, echografieën en verloskundige geschiedenis.",
-        "Bij klinische interpretatie wordt vaak een ratio-cut-off gebruikt. Resultaten moeten altijd worden geïnterpreteerd met volledige klinische evaluatie en standaardzorgprocedures."
-      ]
-    },
-    method: {
-      title: "Technologie en testmethode",
-      description: "De PE (sFlt-1/PlGF)-test (serum) maakt gebruik van een fluorescentie-immunoassay-methode. Op fluorescentie gebaseerde immunoassaytechnologie wordt veel gebruikt in de moderne diagnostiek omdat deze de detectie van gevoelige biomarkers uit biologische monsters ondersteunt.",
-      benefits: [
-        "Op fluorescentie gebaseerde immunofluorescentiemethode",
-        "Compatibiliteit van serumspecimens",
-        "Ondersteunt de risicobeoordeling van pre-eclampsie",
-        "Handig voor kraamklinieken en gynaecologische klinieken",
-        "Helpt bij het evalueren van de onbalans van biomarkers in de placenta",
-        "Geschikt voor professionele laboratoriumworkflows",
-        "Ondersteunt snellere klinische informatie in de prenatale zorg",
-        "Ontworpen voor internationale diagnostische markten"
-      ]
-    },
-    specimen: {
-      title: "Voorbeeld: Serum",
-      description: "Het juiste monster voor de PE (sFlt-1/PlGF)-test is serum. Het correct verzamelen, scheiden, hanteren en testen van serum is belangrijk voor betrouwbare diagnostische prestaties.",
-      guidance: [
-        "Gebruik uitsluitend serummonsters",
-        "Volg de goedgekeurde procedures voor bloedafname",
-        "Scheid serum volgens laboratoriumprotocol",
-        "Vermijd onjuiste behandeling van specimens",
-        "Gebruik waar nodig compatibele fluorescentieanalysesystemen",
-        "Interpreteer de resultaten alleen door getrainde professionals",
-        "Volg zorgvuldig de productbijsluiter van Ivexia Pharma"
-      ],
-      note: "De PE (sFlt-1/PlGF)-test mag alleen worden gebruikt in professionele diagnostische omgevingen door opgeleide gezondheidszorg- of laboratoriumprofessionals."
-    },
-    resultInterpretation: {
-      title: "Resultaatinterpretatie",
-      positive: "Een hogere sFlt-1/PlGF-ratio kan wijzen op een verhoogd risico op progressie van pre-eclampsie of disfunctie van de placenta, afhankelijk van de zwangerschapsduur, de klinische toestand en de gevalideerde grenswaarde die door het laboratorium wordt gebruikt.",
-      negative: "Een lagere sFlt-1/PlGF-ratio kan duiden op een lager kortetermijnrisico wanneer dit wordt geïnterpreteerd met klinische bevindingen, maar neemt de noodzaak van medische follow-up niet weg als er symptomen of risicofactoren aanwezig zijn.",
-      invalid: "Als de analysator, het controlesysteem of het testapparaat een ongeldig resultaat aangeeft, moeten de tests herhaald worden volgens de productbijsluiter en de laboratoriumkwaliteitscontroleprocedure."
-    },
-    storage: {
-      title: "Richtlijnen voor opslag en hantering",
-      instructions: [
-        "Bewaren volgens de temperatuur vermeld op het productetiket",
-        "Houd het testapparaat tot gebruik afgesloten",
-        "Beschermen tegen vocht en direct zonlicht",
-        "Gebruik geen verlopen testapparaten",
-        "Gebruik geen beschadigde of vervuilde verpakkingen",
-        "Gebruik waar nodig compatibele fluorescentieanalysesystemen",
-        "Voer gebruikte materialen af volgens de laboratoriumveiligheidsregels"
-      ]
-    },
-    precautions: {
-      title: "Voorzorgsmaatregelen",
-      instructions: [
-        "Uitsluitend voor professioneel in vitro diagnostisch gebruik",
-        "Niet bedoeld voor thuisgebruik",
-        "Geen op zichzelf staande diagnostische test voor pre-eclampsie",
-        "Geen vervanging voor klinisch oordeel",
-        "De resultaten moeten worden gebruikt bij standaard klinische evaluatie",
-        "Klinische beslissingen mogen niet alleen gebaseerd zijn op de sFlt-1/PlGF-ratio",
-        "Meerlingzwangerschappen en bepaalde behandelingsomstandigheden kunnen speciale voorzichtigheid vereisen, afhankelijk van de assayrichtlijnen",
-        "Zorgverleners moeten de lokale richtlijnen voor zwangerschapszorg en diagnose volgen"
-      ]
-    },
-    whyChoose: {
-      title: "Waarom kiezen voor de Ivexia Pharma PE (sFlt-1/PlGF)-test?",
-      description: "Ivexia Pharma biedt diagnostische oplossingen die zijn ontworpen voor professionele gezondheidszorg, laboratorium- en internationale distributievereisten. De PE (sFlt-1/PlGF)-test (serum) is ontwikkeld voor klinische omgevingen die betrouwbare ondersteuning voor het testen van pre-eclampsie-biomarkers nodig hebben.",
-      advantages: [
-        "Op fluorescentie gebaseerde immunofluorescentiemethode",
-        "Compatibiliteit van serumspecimens",
-        "Ondersteunt de risicobeoordeling van pre-eclampsie",
-        "Handig voor kraamklinieken en gynaecologische klinieken",
-        "Helpt bij het evalueren van de onbalans van biomarkers in de placenta",
-        "Geschikt voor professionele laboratoriumworkflows",
-        "Ondersteunt snellere klinische informatie in de prenatale zorg",
-        "Ontworpen voor internationale diagnostische markten"
-      ]
-    }
-  },
-  faqs: [
-    {
-      question: "Wat zijn normale PlGF-waarden tijdens de zwangerschap?",
-      answer: "Normale PlGF-niveaus variëren afhankelijk van de zwangerschapsduur, het testplatform en het laboratoriumreferentiebereik. Bij een normale zwangerschap neemt PlGF over het algemeen toe tijdens het eerste en tweede trimester en neemt vervolgens af richting de volledige termijn. De resultaten moeten worden geïnterpreteerd door een beroepsbeoefenaar in de gezondheidszorg."
-    },
-    {
-      question: "Wat zijn de kosten van een PlGF-test tijdens de zwangerschap?",
-      answer: "De kosten van een PlGF- of sFlt-1/PlGF-ratiotest zijn afhankelijk van land, stad, laboratorium en testpanel. Prijzen kunnen variëren afhankelijk van de diagnostische aanbieder, locatie en testplatform."
-    },
-    {
-      question: "Wat is een PlGF-bloedtest?",
-      answer: "Een PlGF-bloedtest meet de placentaire groeifactor, een zwangerschapsgerelateerd eiwit dat betrokken is bij de ontwikkeling van de placentaire bloedvaten. Het wordt vaak gebruikt in combinatie met sFlt-1 om de sFlt-1/PlGF-ratio te berekenen voor de risicobeoordeling van pre-eclampsie."
-    },
-    {
-      question: "Wat is een lage PlGF tijdens de zwangerschap?",
-      answer: "Een lage PlGF tijdens de zwangerschap kan duiden op verminderde angiogene activiteit in de placenta en kan in verband worden gebracht met placentadysfunctie of een verhoogd risico op pre-eclampsie. Het bevestigt op zichzelf geen pre-eclampsie en moet worden geïnterpreteerd met klinische symptomen en andere tests."
-    },
-    {
-      question: "Wat is de normale rol van PlGF in de placenta?",
-      answer: "PlGF ondersteunt placentale angiogenese, dat wil zeggen de ontwikkeling van bloedvaten die helpen de groeiende foetus van zuurstof en voedingsstoffen te voorzien. PlGF is nauw verbonden met de functie van de placenta, en abnormale waarden kunnen in verband worden gebracht met het risico op pre-eclampsie."
-    }
-  ],
-  faqSchema: {
-    "@context": "https://schema.org",
-    "@type": "FAQ-pagina",
-    "mainEntity": [
-      {
-        "@type": "Vraag",
-        "name": "Wat zijn normale PlGF-waarden tijdens de zwangerschap?",
-        "acceptedAnswer": {
-          "@type": "Antwoord",
-          "text": "Normale PlGF-niveaus variëren afhankelijk van de zwangerschapsduur, het testplatform en het laboratoriumreferentiebereik. Bij een normale zwangerschap neemt PlGF over het algemeen toe tijdens het eerste en tweede trimester en neemt vervolgens af richting de volledige termijn. De resultaten moeten worden geïnterpreteerd door een beroepsbeoefenaar in de gezondheidszorg."
-        }
-      },
-      {
-        "@type": "Vraag",
-        "name": "Wat zijn de kosten van een PlGF-test tijdens de zwangerschap?",
-        "acceptedAnswer": {
-          "@type": "Antwoord",
-          "text": "De kosten van een PlGF- of sFlt-1/PlGF-ratiotest zijn afhankelijk van land, stad, laboratorium en testpanel. Prijzen kunnen variëren afhankelijk van de diagnostische aanbieder, locatie en testplatform."
-        }
-      },
-      {
-        "@type": "Vraag",
-        "name": "Wat is een PlGF-bloedtest?",
-        "acceptedAnswer": {
-          "@type": "Antwoord",
-          "text": "Een PlGF-bloedtest meet de placentaire groeifactor, een zwangerschapsgerelateerd eiwit dat betrokken is bij de ontwikkeling van de placentaire bloedvaten. Het wordt vaak gebruikt in combinatie met sFlt-1 om de sFlt-1/PlGF-ratio te berekenen voor de risicobeoordeling van pre-eclampsie."
-        }
-      },
-      {
-        "@type": "Vraag",
-        "name": "Wat is een lage PlGF tijdens de zwangerschap?",
-        "acceptedAnswer": {
-          "@type": "Antwoord",
-          "text": "Een lage PlGF tijdens de zwangerschap kan duiden op verminderde angiogene activiteit in de placenta en kan in verband worden gebracht met placentadysfunctie of een verhoogd risico op pre-eclampsie. Het bevestigt op zichzelf geen pre-eclampsie en moet worden geïnterpreteerd met klinische symptomen en andere tests."
-        }
-      },
-      {
-        "@type": "Vraag",
-        "name": "Wat is de normale rol van PlGF in de placenta?",
-        "acceptedAnswer": {
-          "@type": "Antwoord",
-          "text": "PlGF ondersteunt placentale angiogenese, dat wil zeggen de ontwikkeling van bloedvaten die helpen de groeiende foetus van zuurstof en voedingsstoffen te voorzien. PlGF is nauw verbonden met de functie van de placenta, en abnormale waarden kunnen in verband worden gebracht met het risico op pre-eclampsie."
-        }
-      }
-    ]
-  }
-},
+
 "acetaminophen-urine-test": {
   meta: {
     title: "Acetaminophen ACE Sneltest Urine 500 ng/ml | Ivexia Pharma",
@@ -35555,6 +35356,174 @@ export const nl = {
     ]
   }
 },
+ "6-mam-urine-test": {
+    meta: {
+      title: "6-Monoacetylmorfine 6-MAM Sneltest Urine 50 ng/mL | Ivexia Pharma",
+      description:
+        "De 6-Monoacetylmorfine (6-MAM) Rapid Test Device van Ivexia Pharma is een urinegebaseerde sneltest voor drugsscreening met een cut-off van 50 ng/mL.",
+    },
+    hero: {
+      title: "6-Monoacetylmorfine (6-MAM) Rapid Test Device",
+      description:
+        "De 6-Monoacetylmorfine (6-MAM) Rapid Test Device van Ivexia Pharma is een professionele urinegebaseerde sneltest voor kwalitatieve screening van 6-MAM, een specifieke metaboliet die verband houdt met blootstelling aan heroïne.",
+    },
+    content: {
+      introduction: {
+        title: "Introductie",
+        sections: [
+          "De 6-MAM Rapid Test Device is een professioneel diagnostisch screeningsproduct voor kwalitatieve detectie van 6-MAM in urinemonsters.",
+          "6-MAM, ook bekend als 6-Acetylmorfine, is een belangrijke toxicologische marker.",
+          "Deze test is bedoeld als voorlopig screeningsproduct en niet als definitieve conclusie zonder bevestiging.",
+        ],
+      },
+      productOverview: {
+        title: "Productoverzicht",
+        details: [
+          { label: "Productnaam", value: "6-Monoacetylmorfine (6-MAM) Rapid Test Device" },
+          { label: "Merk", value: "Ivexia Pharma" },
+          { label: "Categorie", value: "Drug of Abuse" },
+          { label: "Methode", value: "Sneltest" },
+          { label: "Monster", value: "Urine" },
+          { label: "Cut-off", value: "50 ng/mL" },
+          { label: "Doelanalyte", value: "6-Monoacetylmorfine" },
+          { label: "Certificaat", value: "Geen" },
+        ],
+        note:
+          "Deze test biedt een eenvoudig urinegebaseerd sneltestformaat voor professionele drugscreening.",
+      },
+      whatIsHPV: {
+        title: "Wat is 6-Monoacetylmorfine (6-MAM)?",
+        content:
+          "6-Monoacetylmorfine, vaak 6-MAM genoemd, is een metaboliet die verband houdt met heroïnemetabolisme.",
+      },
+      intendedUse: {
+        title: "Beoogd gebruik van de 6-MAM Rapid Test Device",
+        description:
+          "De test is bedoeld voor professionele urinegebaseerde screening en helpt monsters te identificeren die bevestiging kunnen vereisen.",
+        applications: [
+          "Programma's voor screening op drugsgebruik",
+          "Toxicologische laboratoria",
+          "Revalidatiecentra",
+          "Arboscreening",
+          "Klinische screeningsomgevingen",
+          "Forensische screening",
+          "Drugsmonitoringprogramma's",
+        ],
+      },
+      method: {
+        title: "Methode: Sneltest",
+        description:
+          "De test detecteert 6-MAM kwalitatief in urine bij een cut-off van 50 ng/mL.",
+        benefits: [
+          "Snelle voorlopige screening",
+          "Eenvoudige urineworkflow",
+          "Geen complex instrument nodig",
+          "Nuttig voor heroïnemetabolieten",
+          "Voor professionele omgevingen",
+          "Ondersteunt bevestigende tests",
+          "Praktisch voor internationale levering",
+        ],
+      },
+      specimen: {
+        title: "Monster: Urine",
+        description:
+          "De test gebruikt urine als monster.",
+        guidance: [
+          "Gebruik alleen urinemonsters",
+          "Gebruik een schone droge container",
+          "Volg de bijsluiter",
+          "Vermijd besmette monsters",
+          "Gebruik direct na opening",
+          "Lees binnen de juiste tijd",
+          "Niet hergebruiken",
+        ],
+      },
+      clinicalImportance: {
+        title: "Klinisch en toxicologisch belang",
+        sections: [
+          "6-MAM is nuttig voor heroïnespecifieke screening.",
+          "Een negatief resultaat sluit eerdere blootstelling niet altijd uit.",
+          "Resultaten moeten door professionals worden geïnterpreteerd.",
+        ],
+      },
+      resultInterpretation: {
+        title: "Resultaatinterpretatie",
+        positive:
+          "Een positief resultaat suggereert aanwezigheid van 6-MAM op of boven de cut-off.",
+        negative:
+          "Een negatief resultaat suggereert dat 6-MAM niet werd gedetecteerd.",
+        invalid:
+          "Als de controle niet verschijnt, is het resultaat ongeldig.",
+      },
+      limitations: {
+        title: "Beperkingen en voorzorgsmaatregelen",
+        description:
+          "Deze test vervangt geen bevestigende test of professioneel oordeel.",
+        guidance: [
+          "Alleen voor professionele in-vitro diagnostiek",
+          "Volg de officiële bijsluiter",
+          "Gebruik geen verlopen apparaten",
+          "Niet hergebruiken",
+          "Vermijd besmetting",
+          "Lees binnen aanbevolen tijd",
+          "Bevestig positieve resultaten indien nodig",
+        ],
+      },
+      storage: {
+        title: "Opslag en hantering",
+        instructions: [
+          "Droog en schoon bewaren",
+          "Uit direct zonlicht houden",
+          "Beschermen tegen hitte en vocht",
+          "Gesloten bewaren tot gebruik",
+          "Gebruik vóór vervaldatum",
+          "Niet gebruiken bij beschadigde pouch",
+          "Volg temperatuur op verpakking",
+        ],
+      },
+      whyChoose: {
+        title: "Waarom kiezen voor Ivexia Pharma 6-MAM Rapid Test Device?",
+        description:
+          "Ivexia Pharma levert diagnostische producten voor internationale professionele markten.",
+        advantages: [
+          "Urinegebaseerd sneltestformaat",
+          "Cut-off van 50 ng/mL",
+          "Richt zich op 6-MAM",
+          "Ondersteunt heroïnescreening",
+          "Voor drugtestprogramma's",
+          "Voor laboratoriumworkflows",
+          "Internationale positionering",
+        ],
+      },
+    },
+    faqs: [
+      {
+        question: "Wat betekent 6-MAM op een drugstest?",
+        answer:
+          "6-MAM betekent 6-Monoacetylmorfine.",
+      },
+      {
+        question: "Tot welke klasse behoort 6-MAM?",
+        answer:
+          "Het behoort tot opiaat- of opioïdemetabolieten.",
+      },
+      {
+        question: "Welk monster wordt gebruikt?",
+        answer:
+          "Deze test gebruikt urine.",
+      },
+      {
+        question: "Wat is de cut-off?",
+        answer:
+          "De cut-off is 50 ng/mL.",
+      },
+      {
+        question: "Is een positief resultaat definitief?",
+        answer:
+          "Nee, het is voorlopig en kan bevestiging vereisen.",
+      },
+    ],
+  },
   } 
 };
 export default nl;

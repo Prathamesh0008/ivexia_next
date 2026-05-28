@@ -5588,206 +5588,7 @@ export const ar = {
     ]
   }
 },
-"6-mam-urine-test": {
-  meta: {
-    title: "مصل اختبار PE sFlt-1/PlGF – المقايسة المناعية الفلورة | ايفيكسيا فارما",
-    description: "اختبار PE (sFlt-1/PlGF) (المصل) من Ivexia Pharma هو اختبار التألق المناعي القائم على التألق لتقييم مخاطر مقدمات الارتعاج باستخدام نسبة sFlt-1/PlGF في المصل."
-  },
-  hero: {
-    title: "اختبار PE (sFlt-1/PlGF) (المصل)",
-    description: "اختبار PE (sFlt-1/PlGF) (المصل) من Ivexia Pharma هو اختبار تشخيصي احترافي للتألق المناعي مصمم لدعم تقييم مخاطر مقدمات الارتعاج عن طريق قياس العلاقة بين sFlt-1، تيروزين كيناز-1 القابل للذوبان الشبيه بـ fms، وPlGF، عامل نمو المشيمة، في مصل الدم البشري. استنادًا إلى طريقة التألق، يدعم اختبار PE القائم على المصل المستشفيات ومراكز الولادة وعيادات أمراض النساء ومختبرات التشخيص ومقدمي الرعاية قبل الولادة في تقييم اضطرابات ارتفاع ضغط الدم المشتبه بها أثناء الحمل. تُستخدم نسبة sFlt-1/PlGF على نطاق واسع كوسيلة مساعدة لتقسيم المخاطر لدى النساء الحوامل اللاتي لديهن علامات سريرية لمقدمات الارتعاج، ولكن ليس المقصود منها أن تحل محل الحكم السريري أو أن تكون بمثابة تشخيص مستقل."
-  },
-  content: {
-    introduction: {
-      title: "مقدمة",
-      sections: [
-        "اختبار PE (sFlt-1/PlGF) (المصل) هو جهاز اختبار تألق مناعي متقدم يستخدم لتقييم العلامات الحيوية المرتبطة بمقدمات الارتعاج. تسمم الحمل هو أحد مضاعفات الحمل المرتبطة بارتفاع ضغط الدم واحتمال إصابة الأعضاء، بشكل عام بعد 20 أسبوعًا من الحمل.",
-        "يعد اختبار نسبة sFlt-1/PlGF مهمًا سريريًا لأن مقدمات الارتعاج مرتبطة بخلل في التوازن بين عوامل المشيمة المضادة للتولد الوعائي والمؤيدة للتولد الوعائي. في مقدمات الارتعاج، تميل مستويات sFlt-1 l إلى الارتفاع، بينما تميل مستويات PlGF الحرة إلى الانخفاض مقارنة بحالات الحمل الطبيعية.",
-        "يدعم اختبار PE (sFlt-1/PlGF) (المصل) من Ivexia Pharma بيئات الرعاية الصحية المهنية مثل مستشفيات الولادة وعيادات أمراض النساء ومختبرات التشخيص ومراكز رعاية ما قبل الولادة وشبكات توزيع التشخيص الدولية."
-      ]
-    },
-    productOverview: {
-      title: "نظرة عامة على المنتج",
-      details: [
-        { label: "اسم المنتج", value: "اختبار PE (sFlt-1/PlGF) (المصل)" },
-        { label: "العلامة التجارية", value: "ايفيكسيا فارما" },
-        { label: "الفئة", value: "التألق المناعي" },
-        { label: "الطريقة", value: "مضان" },
-        { label: "عينة", value: "مصل" },
-        { label: "علامات الهدف", value: "sFlt-1 ونسبة PlGF" },
-        { label: "التطبيق", value: "دعم تقييم مخاطر مقدمات الارتعاج" },
-        { label: "نوع الاستخدام", value: "المهنية في استخدام التشخيص في المختبر" }
-      ],
-      note: "تم تصميم اختبار PE (sFlt-1/PlGF) لدعم تقييم المخاطر. ولا ينبغي استخدامه كاختبار تشخيصي مستقل أو كأساس وحيد لتغييرات العلاج."
-    },
-    whatIsRatio: {
-      title: "ما هي نسبة sFlt-1/PlGF؟",
-      content: "تقارن نسبة sFlt-1/PlGF بين اثنين من المؤشرات الحيوية المهمة المرتبطة بالحمل. sFlt-1 هو بروتين مضاد لتولد الأوعية الدموية يتم إنتاجه بشكل كبير في المشيمة، في حين أن PlGF هو عامل مؤيد لتولد الأوعية الدموية يدعم نمو الأوعية الدموية المشيمية ووظيفة المشيمة الطبيعية. أثناء الحمل الطبيعي، يرتفع PlGF عادة خلال الثلث الأول والثاني ثم ينخفض ​​مع اقتراب موعد الحمل. في مقدمات الارتعاج، عادةً ما يتم زيادة sFlt-1 وتقليل PlGF الحر بشكل شائع."
-    },
-    intendedUse: {
-      title: "الاستخدام المقصود",
-      description: "تم تصميم اختبار PE (sFlt-1/PlGF) (المصل) للاستخدام المهني في التشخيص المختبري كوسيلة مساعدة في تقييم مخاطر مقدمات الارتعاج. وهو يدعم التقييم السريري عند الاشتباه في الإصابة بتسمم الحمل أو اضطرابات ارتفاع ضغط الدم أثناء الحمل.",
-      applications: [
-        "تقييم مخاطر ما قبل تسمم الحمل",
-        "تقييم اضطرابات ارتفاع ضغط الدم المشتبه بها أثناء الحمل",
-        "اختبار العلامات الحيوية في مصل الأم",
-        "التقسيم الطبقي للخطر للمرضى الذين يعانون من الأعراض السريرية",
-        "دعم قرارات الرعاية السابقة للولادة من خلال التحقيقات الأخرى",
-        "مراقبة مضاعفات الحمل حيث يشتبه في وجود خلل في المشيمة",
-        "التقارير المختبرية لمستشفيات الولادة ومراكز التشخيص"
-      ]
-    },
-    clinicalImportance: {
-      title: "الأهمية السريرية لاختبار PE (sFlt-1/PlGF).",
-      sections: [
-        "تم تصميم اختبار PE (sFlt-1/PlGF) لدعم تقييم المخاطر، وليس لتشخيص أو علاج تسمم الحمل بشكل مستقل.",
-        "قد تساعد نسبة sFlt-1/PlGF متخصصي الرعاية الصحية على تصنيف المرضى إلى مجموعات أقل خطورة أو أكثر عرضة للخطر عند استخدامها مع ضغط الدم وبروتين البول ووظائف الكبد ووظائف الكلى وعدد الصفائح الدموية والأعراض ونتائج الموجات فوق الصوتية وتاريخ الولادة.",
-        "غالبًا ما يتم استخدام النسبة المقطوعة في التفسير السريري. يجب دائمًا تفسير النتائج من خلال التقييم السريري الكامل وإجراءات الرعاية القياسية."
-      ]
-    },
-    method: {
-      title: "التكنولوجيا وطريقة الاختبار",
-      description: "يستخدم اختبار PE (sFlt-1/PlGF) (المصل) طريقة المقايسة المناعية الفلورية. تُستخدم تقنية المقايسة المناعية القائمة على التألق على نطاق واسع في التشخيص الحديث لأنها تدعم اكتشاف العلامات الحيوية الحساسة من العينات البيولوجية.",
-      benefits: [
-        "طريقة التألق المناعي القائم على التألق",
-        "توافق عينة المصل",
-        "يدعم تقييم مخاطر تسمم الحمل",
-        "مفيد لمستشفيات الولادة وعيادات أمراض النساء",
-        "يساعد في تقييم خلل العلامات الحيوية المشيمية",
-        "مناسبة لسير العمل في المختبرات المهنية",
-        "يدعم المعلومات السريرية بشكل أسرع في رعاية ما قبل الولادة",
-        "مصممة لأسواق التشخيص الدولية"
-      ]
-    },
-    specimen: {
-      title: "العينة: المصل",
-      description: "العينة الصحيحة لاختبار PE (sFlt-1/PlGF) هي المصل. يعد جمع المصل وفصله ومعالجته واختباره أمرًا مهمًا لتحقيق أداء تشخيصي موثوق.",
-      guidance: [
-        "استخدم عينات المصل فقط",
-        "اتبع إجراءات جمع الدم المعتمدة",
-        "مصل منفصل وفقا لبروتوكول المختبر",
-        "تجنب التعامل غير السليم مع العينات",
-        "استخدم أنظمة تحليل الفلورسنت المتوافقة عند الاقتضاء",
-        "تفسير النتائج فقط من قبل المتخصصين المدربين",
-        "اتبع النشرة الداخلية لمنتج Ivexia Pharma بعناية"
-      ],
-      note: "يجب استخدام اختبار PE (sFlt-1/PlGF) فقط في بيئات التشخيص الاحترافية بواسطة متخصصين مدربين في مجال الرعاية الصحية أو المختبرات."
-    },
-    resultInterpretation: {
-      title: "تفسير النتيجة",
-      positive: "قد تشير نسبة sFlt-1/PlGF الأعلى إلى زيادة خطر تطور مقدمات الارتعاج أو خلل في المشيمة، اعتمادًا على عمر الحمل والحالة السريرية والفاصل الزمني المعتمد الذي يستخدمه المختبر.",
-      negative: "قد يشير انخفاض نسبة sFlt-1/PlGF إلى انخفاض المخاطر على المدى القصير عند تفسيرها مع النتائج السريرية، لكنه لا يلغي الحاجة إلى المتابعة الطبية في حالة وجود أعراض أو عوامل خطر.",
-      invalid: "إذا أشار المحلل أو نظام التحكم أو جهاز الاختبار إلى نتيجة غير صالحة، فيجب إجراء الاختبار المتكرر وفقًا لمدخل المنتج وإجراءات مراقبة الجودة في المختبر."
-    },
-    storage: {
-      title: "إرشادات التخزين والمناولة",
-      instructions: [
-        "يُخزن وفقًا لدرجة الحرارة المذكورة على ملصق المنتج",
-        "أبقِ جهاز الاختبار مغلقًا حتى الاستخدام",
-        "حماية من الرطوبة وأشعة الشمس المباشرة",
-        "لا تستخدم أجهزة اختبار منتهية الصلاحية",
-        "لا تستخدم العبوات التالفة أو الملوثة",
-        "استخدم أنظمة تحليل الفلورسنت المتوافقة عند الاقتضاء",
-        "التخلص من المواد المستعملة وفق قواعد السلامة المخبرية"
-      ]
-    },
-    precautions: {
-      title: "الاحتياطات",
-      instructions: [
-        "للاستخدام الاحترافي في التشخيص المختبري فقط",
-        "غير مخصص للاستخدام المنزلي",
-        "ليس اختبارًا تشخيصيًا مستقلاً لمقدمات الارتعاج",
-        "ليس بديلاً عن الحكم السريري",
-        "ينبغي استخدام النتائج مع التقييم السريري القياسي",
-        "لا ينبغي أن تعتمد القرارات السريرية فقط على نسبة sFlt-1/PlGF",
-        "قد يتطلب الحمل المتعدد وحالات علاجية معينة الحذر الخاص اعتمادًا على إرشادات الفحص",
-        "يجب على مقدمي الرعاية الصحية اتباع الإرشادات المحلية لرعاية الحمل والتشخيص"
-      ]
-    },
-    whyChoose: {
-      title: "لماذا تختار اختبار Ivexia Pharma PE (sFlt-1/PlGF)؟",
-      description: "توفر Ivexia Pharma حلولاً تشخيصية مصممة لتلبية متطلبات الرعاية الصحية المهنية والمختبرات والتوزيع الدولي. تم تطوير اختبار PE (sFlt-1/PlGF) (المصل) للإعدادات السريرية التي تحتاج إلى دعم موثوق لاختبار العلامات الحيوية لتسمم الحمل.",
-      advantages: [
-        "طريقة التألق المناعي القائم على التألق",
-        "توافق عينة المصل",
-        "يدعم تقييم مخاطر تسمم الحمل",
-        "مفيد لمستشفيات الولادة وعيادات أمراض النساء",
-        "يساعد في تقييم خلل العلامات الحيوية المشيمية",
-        "مناسبة لسير العمل في المختبرات المهنية",
-        "يدعم المعلومات السريرية بشكل أسرع في رعاية ما قبل الولادة",
-        "مصممة لأسواق التشخيص الدولية"
-      ]
-    }
-  },
-  faqs: [
-    {
-      question: "ما هي مستويات PlGF الطبيعية أثناء الحمل؟",
-      answer: "تختلف مستويات PLGF الطبيعية حسب عمر الحمل ومنصة الاختبار والنطاق المرجعي المختبري. في الحمل الطبيعي، يزداد مستوى PlGF بشكل عام خلال الثلث الأول والثاني ثم يتناقص نحو فترة الحمل الكاملة. ينبغي تفسير النتائج من قبل أخصائي الرعاية الصحية."
-    },
-    {
-      question: "ما هي تكلفة اختبار PlGF في الحمل؟",
-      answer: "تعتمد تكلفة اختبار نسبة PlGF أو sFlt-1/PlGF على البلد والمدينة والمختبر ولوحة الاختبار. قد يختلف السعر اعتمادًا على مزود التشخيص والموقع ومنصة الاختبار."
-    },
-    {
-      question: "ما هو اختبار الدم PlGF؟",
-      answer: "يقيس اختبار الدم PlGF عامل نمو المشيمة، وهو بروتين مرتبط بالحمل يشارك في تطور الأوعية الدموية المشيمية. وغالبًا ما يُستخدم مع sFlt-1 لحساب نسبة sFlt-1/PlGF لتقييم مخاطر مقدمات الارتعاج."
-    },
-    {
-      question: "ما هو انخفاض PlGF أثناء الحمل؟",
-      answer: "قد يشير انخفاض PlGF أثناء الحمل إلى انخفاض النشاط الوعائي المشيمي وقد يترافق مع خلل في المشيمة أو زيادة خطر الإصابة بتسمم الحمل. وهو لا يؤكد الإصابة بتسمم الحمل في حد ذاته ويجب تفسيره بالعلامات السريرية والاختبارات الأخرى."
-    },
-    {
-      question: "ما هو الدور الطبيعي لـ PlGF في المشيمة؟",
-      answer: "يدعم PlGF تكوين الأوعية الدموية المشيمية، مما يعني تطور الأوعية الدموية التي تساعد على إمداد الجنين بالأكسجين والمواد المغذية. يرتبط PlGF ارتباطًا وثيقًا بوظيفة المشيمة، وقد تترافق المستويات غير الطبيعية مع خطر الإصابة بتسمم الحمل."
-    }
-  ],
-  faqSchema: {
-    "@context": "https://schema.org",
-    "@type": "صفحة الأسئلة الشائعة",
-    "mainEntity": [
-      {
-        "@type": "سؤال",
-        "name": "ما هي مستويات PlGF الطبيعية أثناء الحمل؟",
-        "acceptedAnswer": {
-          "@type": "الإجابة",
-          "text": "تختلف مستويات PLGF الطبيعية حسب عمر الحمل ومنصة الاختبار والنطاق المرجعي المختبري. في الحمل الطبيعي، يزداد مستوى PlGF بشكل عام خلال الثلث الأول والثاني ثم يتناقص نحو فترة الحمل الكاملة. ينبغي تفسير النتائج من قبل أخصائي الرعاية الصحية."
-        }
-      },
-      {
-        "@type": "سؤال",
-        "name": "ما هي تكلفة اختبار PlGF في الحمل؟",
-        "acceptedAnswer": {
-          "@type": "الإجابة",
-          "text": "تعتمد تكلفة اختبار نسبة PlGF أو sFlt-1/PlGF على البلد والمدينة والمختبر ولوحة الاختبار. قد يختلف السعر اعتمادًا على مزود التشخيص والموقع ومنصة الاختبار."
-        }
-      },
-      {
-        "@type": "سؤال",
-        "name": "ما هو اختبار الدم PlGF؟",
-        "acceptedAnswer": {
-          "@type": "الإجابة",
-          "text": "يقيس اختبار الدم PlGF عامل نمو المشيمة، وهو بروتين مرتبط بالحمل يشارك في تطور الأوعية الدموية المشيمية. وغالبًا ما يُستخدم مع sFlt-1 لحساب نسبة sFlt-1/PlGF لتقييم مخاطر مقدمات الارتعاج."
-        }
-      },
-      {
-        "@type": "سؤال",
-        "name": "ما هو انخفاض PlGF أثناء الحمل؟",
-        "acceptedAnswer": {
-          "@type": "الإجابة",
-          "text": "قد يشير انخفاض PlGF أثناء الحمل إلى انخفاض النشاط الوعائي المشيمي وقد يترافق مع خلل في المشيمة أو زيادة خطر الإصابة بتسمم الحمل. وهو لا يؤكد الإصابة بتسمم الحمل في حد ذاته ويجب تفسيره بالعلامات السريرية والاختبارات الأخرى."
-        }
-      },
-      {
-        "@type": "سؤال",
-        "name": "ما هو الدور الطبيعي لـ PlGF في المشيمة؟",
-        "acceptedAnswer": {
-          "@type": "الإجابة",
-          "text": "يدعم PlGF تكوين الأوعية الدموية المشيمية، مما يعني تطور الأوعية الدموية التي تساعد على إمداد الجنين بالأكسجين والمواد المغذية. يرتبط PlGF ارتباطًا وثيقًا بوظيفة المشيمة، وقد تترافق المستويات غير الطبيعية مع خطر الإصابة بتسمم الحمل."
-        }
-      }
-    ]
-  }
-},
+
 "acetaminophen-urine-test": {
   meta: {
     title: "اسيتامينوفين ACE اختبار سريع للبول 500 نانوجرام/مل | ايفيكسيا فارما",
@@ -35729,6 +35530,174 @@ export const ar = {
     }
   }
 },
+ "6-mam-urine-test": {
+    meta: {
+      title: "اختبار 6-MAM السريع للبول 50 ng/mL | Ivexia Pharma",
+      description:
+        "جهاز اختبار 6-مونوأسيتيل مورفين (6-MAM) السريع by Ivexia Pharma is a urine-based rapid screening test with a 50 ng/mL cut-off.",
+    },
+    hero: {
+      title: "جهاز اختبار 6-مونوأسيتيل مورفين (6-MAM) السريع",
+      description:
+        "جهاز اختبار 6-مونوأسيتيل مورفين (6-MAM) السريع by Ivexia Pharma is a professional urine-based rapid test designed for qualitative screening of 6-MAM.",
+    },
+    content: {
+      introduction: {
+        title: "Introduction",
+        sections: [
+          "This product supports qualitative screening of 6-MAM in urine specimens.",
+          "6-MAM is an important marker associated with heroin metabolism.",
+          "This product is intended for preliminary screening only and may require confirmatory testing.",
+        ],
+      },
+      productOverview: {
+        title: "Product Overview",
+        details: [
+          { label: "Product Name", value: "جهاز اختبار 6-مونوأسيتيل مورفين (6-MAM) السريع" },
+          { label: "Brand", value: "Ivexia Pharma" },
+          { label: "Category", value: "Drug of Abuse" },
+          { label: "Method", value: "Rapid Test" },
+          { label: "Specimen", value: "Urine" },
+          { label: "Cut-off", value: "50 ng/mL" },
+          { label: "Target Analyte", value: "6-Monoacetylmorphine" },
+          { label: "Certificate", value: "None" },
+        ],
+        note:
+          "This product offers a simple urine-based rapid screening format for professional drug testing programs.",
+      },
+      whatIsHPV: {
+        title: "What is 6-Monoacetylmorphine (6-MAM)?",
+        content:
+          "6-MAM is a metabolite linked with heroin metabolism and is used as a heroin-specific screening marker.",
+      },
+      intendedUse: {
+        title: "Intended Use of 6-MAM Rapid Test Device",
+        description:
+          "This product is intended for professional urine-based screening support.",
+        applications: [
+          "Drug of abuse screening programs",
+          "Toxicology laboratories",
+          "Rehabilitation centers",
+          "Occupational health screening",
+          "Clinical screening settings",
+          "Forensic screening support",
+          "Drug monitoring programs",
+        ],
+      },
+      method: {
+        title: "Method: Rapid Test",
+        description:
+          "The device is designed for qualitative detection of 6-MAM in urine at a 50 ng/mL cut-off.",
+        benefits: [
+          "Fast preliminary screening",
+          "Simple urine workflow",
+          "No complex instrument required",
+          "Useful for heroin metabolite screening",
+          "Suitable for professional settings",
+          "Supports confirmatory workflows",
+          "Practical for international supply",
+        ],
+      },
+      specimen: {
+        title: "Specimen: Urine",
+        description:
+          "The device uses urine as the specimen.",
+        guidance: [
+          "Use urine specimens only",
+          "Collect in a clean dry container",
+          "Follow the product insert",
+          "Avoid contaminated samples",
+          "Use after opening the pouch",
+          "Read within the approved time",
+          "Do not reuse the device",
+        ],
+      },
+      clinicalImportance: {
+        title: "Clinical and Toxicology Importance",
+        sections: [
+          "6-MAM testing supports heroin-specific screening.",
+          "A negative result does not always rule out previous exposure.",
+          "Results should be interpreted by trained professionals.",
+        ],
+      },
+      resultInterpretation: {
+        title: "Result Interpretation",
+        positive:
+          "A positive result suggests 6-MAM may be present at or above the cut-off.",
+        negative:
+          "A negative result suggests 6-MAM was not detected or was below the detection level.",
+        invalid:
+          "If the control indicator does not appear, the result is invalid.",
+      },
+      limitations: {
+        title: "Limitations and Precautions",
+        description:
+          "This product is a professional screening-support test and does not replace confirmatory testing.",
+        guidance: [
+          "Use only for professional in vitro diagnostic screening",
+          "Follow the official product insert",
+          "Do not use expired or damaged devices",
+          "Do not reuse the device",
+          "Avoid contaminated samples",
+          "Interpret within the recommended time",
+          "Confirm positive results where required",
+        ],
+      },
+      storage: {
+        title: "Storage and Handling",
+        instructions: [
+          "Store in a clean and dry place",
+          "Keep away from direct sunlight",
+          "Protect from heat and moisture",
+          "Keep sealed until use",
+          "Use before expiry",
+          "Do not use damaged pouch",
+          "Follow the printed temperature range",
+        ],
+      },
+      whyChoose: {
+        title: "Why Choose Ivexia Pharma جهاز اختبار 6-مونوأسيتيل مورفين (6-MAM) السريع?",
+        description:
+          "Ivexia Pharma provides diagnostic products for professional international markets.",
+        advantages: [
+          "Urine-based rapid format",
+          "50 ng/mL cut-off",
+          "Targets 6-MAM",
+          "Supports heroin metabolite screening",
+          "Suitable for drug testing programs",
+          "Useful for laboratory workflows",
+          "International product positioning",
+        ],
+      },
+    },
+    faqs: [
+      {
+        question: "What does 6-MAM mean on a drug test?",
+        answer:
+          "6-MAM means 6-Monoacetylmorphine, a heroin-specific metabolite.",
+      },
+      {
+        question: "What drug class is 6-MAM?",
+        answer:
+          "6-MAM belongs to the opiate or opioid metabolite category.",
+      },
+      {
+        question: "What specimen type is used?",
+        answer:
+          "This product is designed for urine specimens.",
+      },
+      {
+        question: "What is the cut-off level?",
+        answer:
+          "The stated cut-off level is 50 ng/mL.",
+      },
+      {
+        question: "Is a positive result final?",
+        answer:
+          "No. A positive rapid result is preliminary and may require confirmation.",
+      },
+    ],
+  },
 
 
 

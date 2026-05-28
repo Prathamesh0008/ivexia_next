@@ -5,7 +5,6 @@ import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { FaSearch } from "react-icons/fa";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { en as enProductLang } from "@/data2/languages/en";
 
 function normalizeProductValue(value) {
   if (Array.isArray(value)) {
@@ -91,6 +90,7 @@ function removeDuplicateProducts(products) {
 export default function ProductsPageClient({
   initialProducts = [],
   initialTestKits = [],
+  initialProductMetaMap = {},
 }) {
   const router = useRouter();
   const [products, setProducts] = useState(initialProducts);
@@ -100,7 +100,7 @@ export default function ProductsPageClient({
   );
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [error, setError] = useState("");
-  const [localizedProductLang, setLocalizedProductLang] = useState(enProductLang);
+  const [productMetaMap, setProductMetaMap] = useState(initialProductMetaMap);
 const { translations, language } = useLanguage();
 const t = translations?.productsPage;
 const testKitsLabel = t?.testKitsLabel || "TEST KITS";
@@ -122,29 +122,34 @@ const testKitsLabel = t?.testKitsLabel || "TEST KITS";
     let cancelled = false;
     const selectedLanguage = language || "en";
 
-    async function loadProductLanguage() {
+    async function loadProductMetadata() {
       try {
-        const langModule = await import(`@/data2/languages/${selectedLanguage}.js`);
-        const nextProductLang = langModule[selectedLanguage] || enProductLang;
+        const res = await fetch(
+          `/api/products/content?language=${selectedLanguage}`
+        );
+
+        if (!res.ok) return;
+
+        const data = await res.json();
 
         if (!cancelled) {
-          setLocalizedProductLang(nextProductLang);
+          setProductMetaMap(data);
         }
       } catch (error) {
-        console.error("Product language load failed", error);
-
-        if (!cancelled) {
-          setLocalizedProductLang(enProductLang);
-        }
+        console.error("Product metadata load failed", error);
       }
     }
 
-    loadProductLanguage();
+    loadProductMetadata();
 
     return () => {
       cancelled = true;
     };
   }, [language]);
+
+  useEffect(() => {
+    setProductMetaMap(initialProductMetaMap);
+  }, [initialProductMetaMap]);
 
   useEffect(() => {
     let cancelled = false;
@@ -238,10 +243,7 @@ const testKitsLabel = t?.testKitsLabel || "TEST KITS";
   const localizedProducts = useMemo(
     () =>
       uniqueProducts.map((product) => {
-        const localizedProduct =
-          localizedProductLang.products?.[product.slug?.toLowerCase()] ||
-          enProductLang.products[product.slug?.toLowerCase()];
-        const meta = localizedProduct?.meta || {};
+        const meta = productMetaMap?.[product.slug?.toLowerCase()] || {};
 
         return {
           ...product,
@@ -252,7 +254,7 @@ const testKitsLabel = t?.testKitsLabel || "TEST KITS";
           displayCasId: meta.cas || product.casId,
         };
       }),
-    [uniqueProducts, localizedProductLang]
+    [uniqueProducts, productMetaMap]
   );
 
 const categoryOptions = useMemo(() => {

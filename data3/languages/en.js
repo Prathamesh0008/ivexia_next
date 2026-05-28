@@ -5588,206 +5588,7 @@ export const en = {
     ]
   }
 },
-"6-mam-urine-test": {
-  meta: {
-    title: "PE sFlt-1/PlGF Test Serum – Fluorescence Immunoassay | Ivexia Pharma",
-    description: "PE (sFlt-1/PlGF) Test (Serum) by Ivexia Pharma is a fluorescence-based immunofluorescence test for pre-eclampsia risk assessment using the sFlt-1/PlGF ratio in serum."
-  },
-  hero: {
-    title: "PE (sFlt-1/PlGF) Test (Serum)",
-    description: "PE (sFlt-1/PlGF) Test (Serum) by Ivexia Pharma is a professional immunofluorescence diagnostic test designed to support pre-eclampsia risk assessment by measuring the relationship between sFlt-1, soluble fms-like tyrosine kinase-1, and PlGF, placental growth factor, in human serum. Based on the fluorescence method, this serum-based PE test supports hospitals, maternity centers, gynecology clinics, diagnostic laboratories, and prenatal care providers in evaluating suspected hypertensive disorders of pregnancy. The sFlt-1/PlGF ratio is widely used as an aid for risk stratification in pregnant women with clinical signs of pre-eclampsia, but it is not intended to replace clinical judgment or act as a standalone diagnosis."
-  },
-  content: {
-    introduction: {
-      title: "Introduction",
-      sections: [
-        "The PE (sFlt-1/PlGF) Test (Serum) is an advanced immunofluorescence test device used for pre-eclampsia-related biomarker evaluation. Pre-eclampsia is a pregnancy complication linked with high blood pressure and possible organ involvement, generally after 20 weeks of pregnancy.",
-        "The sFlt-1/PlGF ratio test is clinically important because pre-eclampsia is linked with an imbalance between anti-angiogenic and pro-angiogenic placental factors. In pre-eclampsia, sFlt-1 levels tend to increase, while free PlGF levels tend to decrease compared with normal pregnancies.",
-        "The PE (sFlt-1/PlGF) Test (Serum) by Ivexia Pharma supports professional healthcare environments such as maternity hospitals, gynecology clinics, diagnostic laboratories, prenatal care centers, and international diagnostic distribution networks."
-      ]
-    },
-    productOverview: {
-      title: "Product Overview",
-      details: [
-        { label: "Product Name", value: "PE (sFlt-1/PlGF) Test (Serum)" },
-        { label: "Brand", value: "Ivexia Pharma" },
-        { label: "Category", value: "Immunofluorescence" },
-        { label: "Method", value: "Fluorescence" },
-        { label: "Specimen", value: "Serum" },
-        { label: "Target Markers", value: "sFlt-1 and PlGF Ratio" },
-        { label: "Application", value: "Pre-eclampsia risk assessment support" },
-        { label: "Use Type", value: "Professional in vitro diagnostic use" }
-      ],
-      note: "The PE (sFlt-1/PlGF) Test is designed to support risk assessment. It should not be used as a standalone diagnostic test or as the only basis for treatment changes."
-    },
-    whatIsRatio: {
-      title: "What is the sFlt-1/PlGF Ratio?",
-      content: "The sFlt-1/PlGF ratio compares two important pregnancy-related biomarkers. sFlt-1 is an anti-angiogenic protein largely produced in the placenta, while PlGF is a pro-angiogenic factor that supports placental blood vessel development and normal placental function. During normal pregnancy, PlGF usually rises through the first and second trimester and then decreases toward term. In pre-eclampsia, sFlt-1 is commonly increased and free PlGF is commonly reduced."
-    },
-    intendedUse: {
-      title: "Intended Use",
-      description: "The PE (sFlt-1/PlGF) Test (Serum) is intended for professional in vitro diagnostic use as an aid in pre-eclampsia risk assessment. It supports clinical evaluation when pre-eclampsia or hypertensive disorders of pregnancy are suspected.",
-      applications: [
-        "Pre-eclampsia risk assessment",
-        "Evaluation of suspected hypertensive disorders of pregnancy",
-        "Maternal serum biomarker testing",
-        "Risk stratification of patients with clinical symptoms",
-        "Supporting prenatal care decisions with other investigations",
-        "Monitoring pregnancy complications where placental dysfunction is suspected",
-        "Laboratory-based reporting for maternity hospitals and diagnostic centers"
-      ]
-    },
-    clinicalImportance: {
-      title: "Clinical Importance of PE (sFlt-1/PlGF) Testing",
-      sections: [
-        "The PE (sFlt-1/PlGF) Test is designed to support risk assessment, not to independently diagnose or treat pre-eclampsia.",
-        "The sFlt-1/PlGF ratio may help healthcare professionals classify patients into lower-risk or higher-risk groups when used with blood pressure, urine protein, liver function, kidney function, platelet count, symptoms, ultrasound findings, and obstetric history.",
-        "A ratio cut-off is often used in clinical interpretation. Results must always be interpreted with complete clinical evaluation and standard care procedures."
-      ]
-    },
-    method: {
-      title: "Technology and Testing Method",
-      description: "The PE (sFlt-1/PlGF) Test (Serum) uses a fluorescence immunoassay method. Fluorescence-based immunoassay technology is widely used in modern diagnostics because it supports sensitive biomarker detection from biological samples.",
-      benefits: [
-        "Fluorescence-based immunofluorescence method",
-        "Serum specimen compatibility",
-        "Supports pre-eclampsia risk assessment",
-        "Useful for maternity hospitals and gynecology clinics",
-        "Helps evaluate placental biomarker imbalance",
-        "Suitable for professional laboratory workflows",
-        "Supports faster clinical information in prenatal care",
-        "Designed for international diagnostic markets"
-      ]
-    },
-    specimen: {
-      title: "Specimen: Serum",
-      description: "The correct specimen for the PE (sFlt-1/PlGF) Test is serum. Proper serum collection, separation, handling, and testing are important for reliable diagnostic performance.",
-      guidance: [
-        "Use serum specimens only",
-        "Follow approved blood collection procedures",
-        "Separate serum according to laboratory protocol",
-        "Avoid improper specimen handling",
-        "Use compatible fluorescence analyzer systems where required",
-        "Interpret results only by trained professionals",
-        "Follow the Ivexia Pharma product insert carefully"
-      ],
-      note: "The PE (sFlt-1/PlGF) Test should be used only in professional diagnostic environments by trained healthcare or laboratory professionals."
-    },
-    resultInterpretation: {
-      title: "Result Interpretation",
-      positive: "A higher sFlt-1/PlGF ratio may indicate increased risk of pre-eclampsia progression or placental dysfunction, depending on gestational age, clinical condition, and the validated cut-off used by the laboratory.",
-      negative: "A lower sFlt-1/PlGF ratio may indicate lower short-term risk when interpreted with clinical findings, but it does not remove the need for medical follow-up if symptoms or risk factors are present.",
-      invalid: "If the analyzer, control system, or test device indicates an invalid result, repeat testing should be performed according to the product insert and laboratory quality-control procedure."
-    },
-    storage: {
-      title: "Storage and Handling Guidance",
-      instructions: [
-        "Store according to the temperature stated on the product label",
-        "Keep the test device sealed until use",
-        "Protect from moisture and direct sunlight",
-        "Do not use expired test devices",
-        "Do not use damaged or contaminated packaging",
-        "Use compatible fluorescence analyzer systems where required",
-        "Dispose of used materials according to laboratory safety rules"
-      ]
-    },
-    precautions: {
-      title: "Precautions",
-      instructions: [
-        "For professional in vitro diagnostic use only",
-        "Not intended for home use",
-        "Not a standalone diagnostic test for pre-eclampsia",
-        "Not a replacement for clinical judgment",
-        "Results should be used with standard clinical evaluation",
-        "Clinical decisions should not rely only on the sFlt-1/PlGF ratio",
-        "Multiple pregnancy and certain treatment conditions may require special caution depending on assay guidance",
-        "Healthcare providers should follow local pregnancy-care and diagnostic guidelines"
-      ]
-    },
-    whyChoose: {
-      title: "Why Choose Ivexia Pharma PE (sFlt-1/PlGF) Test?",
-      description: "Ivexia Pharma provides diagnostic solutions designed for professional healthcare, laboratory, and international distribution requirements. The PE (sFlt-1/PlGF) Test (Serum) is developed for clinical settings that need reliable pre-eclampsia biomarker testing support.",
-      advantages: [
-        "Fluorescence-based immunofluorescence method",
-        "Serum specimen compatibility",
-        "Supports pre-eclampsia risk assessment",
-        "Useful for maternity hospitals and gynecology clinics",
-        "Helps evaluate placental biomarker imbalance",
-        "Suitable for professional laboratory workflows",
-        "Supports faster clinical information in prenatal care",
-        "Designed for international diagnostic markets"
-      ]
-    }
-  },
-  faqs: [
-    {
-      question: "What are normal PlGF levels in pregnancy?",
-      answer: "Normal PlGF levels vary by gestational age, testing platform, and laboratory reference range. In normal pregnancy, PlGF generally increases during the first and second trimester and then decreases toward full term. Results should be interpreted by a healthcare professional."
-    },
-    {
-      question: "What is the cost of PlGF test in pregnancy?",
-      answer: "The cost of a PlGF or sFlt-1/PlGF ratio test depends on country, city, laboratory, and test panel. Pricing may vary depending on the diagnostic provider, location, and testing platform."
-    },
-    {
-      question: "What is a PlGF blood test?",
-      answer: "A PlGF blood test measures placental growth factor, a pregnancy-related protein involved in placental blood vessel development. It is often used with sFlt-1 to calculate the sFlt-1/PlGF ratio for pre-eclampsia risk assessment."
-    },
-    {
-      question: "What is low PlGF in pregnancy?",
-      answer: "Low PlGF in pregnancy may suggest reduced placental angiogenic activity and may be associated with placental dysfunction or increased pre-eclampsia risk. It does not confirm pre-eclampsia by itself and must be interpreted with clinical signs and other tests."
-    },
-    {
-      question: "What is the normal role of PlGF in the placenta?",
-      answer: "PlGF supports placental angiogenesis, meaning the development of blood vessels that help supply oxygen and nutrients to the growing fetus. PlGF is closely linked to placental function, and abnormal levels may be associated with pre-eclampsia risk."
-    }
-  ],
-  faqSchema: {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What are normal PlGF levels in pregnancy?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Normal PlGF levels vary by gestational age, testing platform, and laboratory reference range. In normal pregnancy, PlGF generally increases during the first and second trimester and then decreases toward full term. Results should be interpreted by a healthcare professional."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the cost of PlGF test in pregnancy?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The cost of a PlGF or sFlt-1/PlGF ratio test depends on country, city, laboratory, and test panel. Pricing may vary depending on the diagnostic provider, location, and testing platform."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is a PlGF blood test?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A PlGF blood test measures placental growth factor, a pregnancy-related protein involved in placental blood vessel development. It is often used with sFlt-1 to calculate the sFlt-1/PlGF ratio for pre-eclampsia risk assessment."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is low PlGF in pregnancy?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Low PlGF in pregnancy may suggest reduced placental angiogenic activity and may be associated with placental dysfunction or increased pre-eclampsia risk. It does not confirm pre-eclampsia by itself and must be interpreted with clinical signs and other tests."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the normal role of PlGF in the placenta?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "PlGF supports placental angiogenesis, meaning the development of blood vessels that help supply oxygen and nutrients to the growing fetus. PlGF is closely linked to placental function, and abnormal levels may be associated with pre-eclampsia risk."
-        }
-      }
-    ]
-  }
-},
+
 "acetaminophen-urine-test": {
   meta: {
     title: "Acetaminophen ACE Rapid Test Urine 500 ng/mL | Ivexia Pharma",
@@ -34626,6 +34427,174 @@ export const en = {
     ]
   }
 },
+ "6-mam-urine-test": {
+    meta: {
+      title: "6-Monoacetylmorphine 6-MAM Rapid Test Urine 50 ng/mL | Ivexia Pharma",
+      description:
+        "6-Monoacetylmorphine (6-MAM) Rapid Test Device by Ivexia Pharma is a urine-based rapid drug of abuse screening test with 50 ng/mL cut-off for detecting 6-MAM, a specific heroin metabolite.",
+    },
+    hero: {
+      title: "6-Monoacetylmorphine (6-MAM) Rapid Test Device",
+      description:
+        "6-Monoacetylmorphine (6-MAM) Rapid Test Device by Ivexia Pharma is a professional urine-based rapid test designed for qualitative screening of 6-MAM, a specific metabolite associated with heroin exposure. With a 50 ng/mL cut-off, this 6-MAM rapid test device supports clinical laboratories, rehabilitation centers, occupational health programs, forensic screening settings, and drug monitoring facilities where fast and dependable urine drug screening is required.",
+    },
+    content: {
+      introduction: {
+        title: "Introduction",
+        sections: [
+          "The 6-Monoacetylmorphine (6-MAM) Rapid Test Device is a professional diagnostic screening product used to support the qualitative detection of 6-MAM in urine specimens.",
+          "6-MAM, also known as 6-Acetylmorphine, is an important toxicology marker because it is associated with heroin metabolism and supports heroin-specific screening workflows.",
+          "The 6-MAM Rapid Test Device should be used as a preliminary screening product and not as a final diagnostic, legal, workplace, or forensic conclusion without appropriate confirmation.",
+        ],
+      },
+      productOverview: {
+        title: "Product Overview",
+        details: [
+          { label: "Product Name", value: "6-Monoacetylmorphine (6-MAM) Rapid Test Device" },
+          { label: "Brand", value: "Ivexia Pharma" },
+          { label: "Category", value: "Drug of Abuse" },
+          { label: "Method", value: "Rapid Test" },
+          { label: "Specimen", value: "Urine" },
+          { label: "Cut-off", value: "50 ng/mL" },
+          { label: "Target Analyte", value: "6-Monoacetylmorphine" },
+          { label: "Certificate", value: "None" },
+        ],
+        note:
+          "The 6-MAM Rapid Test Device offers a simple urine-based rapid testing format for professional drug screening programs where fast preliminary results are needed before confirmatory testing.",
+      },
+      whatIsHPV: {
+        title: "What is 6-Monoacetylmorphine (6-MAM)?",
+        content:
+          "6-Monoacetylmorphine, commonly called 6-MAM or 6-Acetylmorphine, is a metabolite linked with heroin metabolism. In drug screening, it is valued because it is considered more specific to heroin exposure than general opiate markers such as morphine.",
+      },
+      intendedUse: {
+        title: "Intended Use of 6-MAM Rapid Test Device",
+        description:
+          "The 6-MAM Rapid Test Device is intended for professional urine-based screening support. It helps trained users identify urine samples that may require further review or confirmatory testing according to laboratory policy.",
+        applications: [
+          "Drug of abuse screening programs",
+          "Toxicology laboratories",
+          "Rehabilitation and de-addiction centers",
+          "Occupational health screening",
+          "Emergency and clinical screening settings",
+          "Forensic and compliance screening support",
+          "Institutional drug monitoring programs",
+        ],
+      },
+      method: {
+        title: "Method: Rapid Test",
+        description:
+          "The 6-MAM Rapid Test Device is designed for qualitative detection of 6-MAM in urine at the stated 50 ng/mL cut-off. Rapid urine drug screening devices commonly use immunoassay-based principles to provide a preliminary visual result.",
+        benefits: [
+          "Fast preliminary screening support",
+          "Simple urine sample workflow",
+          "No complex instrument required for basic screening",
+          "Useful for heroin metabolite screening",
+          "Suitable for professional testing environments",
+          "Supports screening before confirmatory laboratory methods",
+          "Practical format for international diagnostic supply",
+        ],
+      },
+      specimen: {
+        title: "Specimen: Urine",
+        description:
+          "The 6-MAM Rapid Test Device uses urine as the specimen. Proper sample collection, handling, and interpretation are important for reliable screening performance.",
+        guidance: [
+          "Use urine specimens only",
+          "Collect urine in a clean and dry container",
+          "Follow the exact sample volume and testing steps in the product insert",
+          "Avoid contaminated or improperly stored urine samples",
+          "Use the test device immediately after opening the sealed pouch",
+          "Read the result only within the approved time window",
+          "Do not reuse the test device",
+        ],
+      },
+      clinicalImportance: {
+        title: "Clinical and Toxicology Importance",
+        sections: [
+          "6-MAM testing is useful because 6-MAM is associated specifically with heroin metabolism and may help support heroin-focused screening workflows.",
+          "Because 6-MAM can have a short detection window, a positive result may be meaningful, while a negative result does not always rule out previous exposure.",
+          "Results should be interpreted by trained professionals together with sample history, testing policy, chain-of-custody requirements where applicable, and confirmatory methods when needed.",
+        ],
+      },
+      resultInterpretation: {
+        title: "Result Interpretation",
+        positive:
+          "A positive result suggests that 6-MAM may be present in the urine specimen at or above the stated cut-off. The result should be treated as preliminary unless confirmed by a validated laboratory method.",
+        negative:
+          "A negative result suggests that 6-MAM was not detected or was below the test detection level at the time of testing. It does not always rule out previous exposure.",
+        invalid:
+          "If the control indicator does not appear, the result is invalid. The test should be repeated with a new 6-MAM Rapid Test Device and a suitable urine specimen.",
+      },
+      limitations: {
+        title: "Limitations and Precautions",
+        description:
+          "The 6-MAM Rapid Test Device is a professional screening-support test. It should not replace confirmatory testing, medical judgment, laboratory policy, or legal procedures where those are required.",
+        guidance: [
+          "Use only for professional in vitro diagnostic screening support",
+          "Follow the official product insert carefully",
+          "Do not use expired or damaged devices",
+          "Do not reuse the test device",
+          "Avoid contaminated samples",
+          "Interpret results within the recommended time only",
+          "Confirm positive results through appropriate laboratory methods where required",
+        ],
+      },
+      storage: {
+        title: "Storage and Handling",
+        instructions: [
+          "Store in a clean and dry place",
+          "Keep away from direct sunlight",
+          "Protect from excessive heat and moisture",
+          "Keep sealed until use",
+          "Use before the expiry date",
+          "Do not use if the pouch is damaged",
+          "Follow the printed temperature range on the pack",
+        ],
+      },
+      whyChoose: {
+        title: "Why Choose Ivexia Pharma 6-MAM Rapid Test Device?",
+        description:
+          "Ivexia Pharma provides diagnostic products for international healthcare, laboratory, and distribution markets with a focus on professional product presentation and dependable screening support.",
+        advantages: [
+          "Urine-based rapid screening format",
+          "50 ng/mL cut-off level",
+          "Targets 6-Monoacetylmorphine specifically",
+          "Supports heroin metabolite screening",
+          "Suitable for drug of abuse testing programs",
+          "Useful for professional laboratory workflows",
+          "International product positioning under Ivexia Pharma",
+        ],
+      },
+    },
+    faqs: [
+      {
+        question: "What does 6-MAM mean on a drug test?",
+        answer:
+          "6-MAM means 6-Monoacetylmorphine, also called 6-Acetylmorphine. On a drug test, it refers to a heroin-specific metabolite that may require confirmatory testing.",
+      },
+      {
+        question: "What drug class is 6-MAM?",
+        answer:
+          "6-MAM belongs to the opiate or opioid metabolite category in drug testing. It is tested because it is associated with heroin metabolism.",
+      },
+      {
+        question: "What is the specimen type for this 6-MAM rapid test?",
+        answer:
+          "This Ivexia Pharma 6-MAM Rapid Test Device is designed for urine specimens. Other specimen types may require different validated testing methods.",
+      },
+      {
+        question: "What is the cut-off level of the 6-MAM Rapid Test Device?",
+        answer:
+          "The stated cut-off level is 50 ng/mL. Results should be interpreted according to the official product insert and laboratory policy.",
+      },
+      {
+        question: "Is a positive 6-MAM rapid test result final?",
+        answer:
+          "No. A positive rapid screening result is preliminary and may need confirmatory testing by a validated laboratory method, especially for legal, workplace, or compliance decisions.",
+      },
+    ],
+  },
  
   } 
 };

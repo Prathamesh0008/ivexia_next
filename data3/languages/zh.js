@@ -5588,206 +5588,7 @@ export const zh = {
     ]
   }
 },
-"6-mam-urine-test": {
-  meta: {
-    title: "PE sFlt-1/PlGF 测试血清 – 荧光免疫分析 |依维夏制药公司",
-    description: "Ivexia Pharma 的 PE (sFlt-1/PlGF) 测试（血清）是一种基于荧光的免疫荧光测试，使用血清中的 sFlt-1/PlGF 比率进行先兆子痫风险评估。"
-  },
-  hero: {
-    title: "PE (sFlt-1/PlGF) 测试（血清）",
-    description: "Ivexia Pharma 的 PE (sFlt-1/PlGF) 测试（血清）是一种专业的免疫荧光诊断测试，旨在通过测量人血清中 sFlt-1（可溶性 fms 样酪氨酸激酶-1）和 PlGF（胎盘生长因子）之间的关系来支持先兆子痫风险评估。这种基于血清的 PE 检测基于荧光方法，支持医院、妇产中心、妇科诊所、诊断实验室和产前护理人员评估疑似妊娠期高血压疾病。 sFlt-1/PlGF 比率广泛用于辅助有先兆子痫临床症状的孕妇进行风险分层，但其无意取代临床判断或作为独立诊断。"
-  },
-  content: {
-    introduction: {
-      title: "简介",
-      sections: [
-        "PE (sFlt-1/PlGF) 测试（血清）是一种先进的免疫荧光测试设备，用于先兆子痫相关生物标志物评估。先兆子痫是一种与高血压和可能的器官受累有关的妊娠并发症，通常发生在妊娠 20 周后。",
-        "sFlt-1/PlGF 比率测试在临床上很重要，因为先兆子痫与抗血管生成和促血管生成胎盘因子之间的不平衡有关。在先兆子痫中，与正常妊娠相比，sFlt-1 l水平往往会增加，而游离 PlGF 水平往往会降低。",
-        "Ivexia Pharma 的 PE (sFlt-1/PlGF) 测试（血清）支持专业医疗保健环境，例如妇产医院、妇科诊所、诊断实验室、产前护理中心和国际诊断分销网络。"
-      ]
-    },
-    productOverview: {
-      title: "产品概述",
-      details: [
-        { label: "产品名称", value: "PE (sFlt-1/PlGF) 测试（血清）" },
-        { label: "品牌", value: "依维夏制药公司" },
-        { label: "类别", value: "免疫荧光" },
-        { label: "方法", value: "荧光" },
-        { label: "标本", value: "血清" },
-        { label: "目标标记", value: "sFlt-1 和 PlGF 比率" },
-        { label: "应用", value: "先兆子痫风险评估支持" },
-        { label: "使用类型", value: "专业体外诊断用途" }
-      ],
-      note: "PE (sFlt-1/PlGF) 测试旨在支持风险评估。它不应用作独立的诊断测试或作为治疗改变的唯一依据。"
-    },
-    whatIsRatio: {
-      title: "sFlt-1/PlGF 比率是多少？",
-      content: "sFlt-1/PlGF 比率比较了两个重要的妊娠相关生物标志物。 sFlt-1是一种主要在胎盘中产生的抗血管生成蛋白，而PlGF是一种促血管生成因子，支持胎盘血管发育和正常胎盘功能。在正常妊娠期间，PlGF 通常在妊娠早期和中期升高，然后在足月前下降。在先兆子痫中，sFlt-1 通常升高，游离 PlGF 通常降低。"
-    },
-    intendedUse: {
-      title: "预期用途",
-      description: "PE (sFlt-1/PlGF) 测试（血清）旨在用于专业体外诊断用途，作为先兆子痫风险评估的辅助手段。当怀疑先兆子痫或妊娠期高血压疾病时，它支持临床评估。",
-      applications: [
-        "先兆子痫风险评估",
-        "疑似妊娠期高血压疾病的评估",
-        "母体血清生物标志物检测",
-        "有临床症状的患者的危险分层",
-        "通过其他调查支持产前护理决策",
-        "监测怀疑胎盘功能障碍的妊娠并发症",
-        "妇产医院和诊断中心的实验室报告"
-      ]
-    },
-    clinicalImportance: {
-      title: "PE (sFlt-1/PlGF) 测试的临床重要性",
-      sections: [
-        "PE (sFlt-1/PlGF) 测试旨在支持风险评估，而不是独立诊断或治疗先兆子痫。",
-        "当与血压、尿蛋白、肝功能、肾功能、血小板计数、症状、超声检查结果和产科病史结合使用时，sFlt-1/PlGF 比率可以帮助医疗保健专业人员将患者分为低风险或高风险组。",
-        "临床解释中经常使用比率截止值。结果必须始终通过完整的临床评估和标准护理程序来解释。"
-      ]
-    },
-    method: {
-      title: "技术及检测方法",
-      description: "PE (sFlt-1/PlGF) 测试（血清）采用荧光免疫分析方法。基于荧光的免疫分析技术广泛应用于现代诊断，因为它支持从生物样本中进行灵敏的生物标志物检测。",
-      benefits: [
-        "基于荧光的免疫荧光方法",
-        "血清标本兼容性",
-        "支持先兆子痫风险评估",
-        "适用于妇产医院和妇科诊所",
-        "帮助评估胎盘生物标志物失衡",
-        "适用于专业实验室工作流程",
-        "支持更快的产前护理临床信息",
-        "专为国际诊断市场而设计"
-      ]
-    },
-    specimen: {
-      title: "标本：血清",
-      description: "PE (sFlt-1/PlGF) 测试的正确样本是血清。正确的血清采集、分离、处理和测试对于可靠的诊断性能非常重要。",
-      guidance: [
-        "仅使用血清标本",
-        "遵循批准的血液采集程序",
-        "根据实验室方案分离血清",
-        "避免样本处理不当",
-        "根据需要使用兼容的荧光分析仪系统",
-        "仅由经过培训的专业人员解释结果",
-        "仔细遵循 Ivexia Pharma 产品说明书"
-      ],
-      note: "PE (sFlt-1/PlGF) 测试只能由经过培训的医疗保健或实验室专业人员在专业诊断环境中使用。"
-    },
-    resultInterpretation: {
-      title: "结果解读",
-      positive: "较高的 sFlt-1/PlGF 比率可能表明先兆子痫进展或胎盘功能障碍的风险增加，具体取决于胎龄、临床状况和实验室使用的验证临界值。",
-      negative: "根据临床结果解释，较低的 sFlt-1/PlGF 比率可能表明短期风险较低，但如果出现症状或危险因素，并不能消除进行医疗随访的需要。",
-      invalid: "如果分析仪、控制系统或测试设备显示无效结果，则应根据产品说明书和实验室质量控制程序进行重复测试。"
-    },
-    storage: {
-      title: "储存和处理指南",
-      instructions: [
-        "按照产品标签上注明的温度储存",
-        "使用前保持测试装置密封",
-        "防止潮湿和阳光直射",
-        "请勿使用过期的测试设备",
-        "请勿使用损坏或受污染的包装",
-        "根据需要使用兼容的荧光分析仪系统",
-        "根据实验室安全规则处理用过的材料"
-      ]
-    },
-    precautions: {
-      title: "注意事项",
-      instructions: [
-        "仅供专业体外诊断用途",
-        "不适合家庭使用",
-        "不是先兆子痫的独立诊断测试",
-        "不能替代临床判断",
-        "结果应与标准临床评估一起使用",
-        "临床决策不应仅依赖于 sFlt-1/PlGF 比率",
-        "多胎妊娠和某些治疗条件可能需要特别小心，具体取决于检测指南",
-        "医疗保健提供者应遵循当地妊娠护理和诊断指南"
-      ]
-    },
-    whyChoose: {
-      title: "为什么选择 Ivexia Pharma PE (sFlt-1/PlGF) 测试？",
-      description: "Ivexia Pharma 提供专为专业医疗保健、实验室和国际分销要求而设计的诊断解决方案。 PE (sFlt-1/PlGF) 测试（血清）专为需要可靠的先兆子痫生物标志物测试支持的临床环境而开发。",
-      advantages: [
-        "基于荧光的免疫荧光方法",
-        "血清标本兼容性",
-        "支持先兆子痫风险评估",
-        "适用于妇产医院和妇科诊所",
-        "帮助评估胎盘生物标志物失衡",
-        "适用于专业实验室工作流程",
-        "支持更快的产前护理临床信息",
-        "专为国际诊断市场而设计"
-      ]
-    }
-  },
-  faqs: [
-    {
-      question: "怀孕期间 PlGF 的正常水平是多少？",
-      answer: "正常 PlGF 水平因胎龄、检测平台和实验室参考范围而异。在正常妊娠中，PlGF 通常在妊娠早期和中期增加，然后在足月时减少。结果应由医疗保健专业人员解释。"
-    },
-    {
-      question: "怀孕期间进行 PlGF 测试的费用是多少？",
-      answer: "PlGF 或 sFlt-1/PlGF 比率测试的费用取决于国家、城市、实验室和测试小组。定价可能会根据诊断提供商、位置和测试平台的不同而有所不同。"
-    },
-    {
-      question: "什么是 PlGF 血液检查？",
-      answer: "PlGF 血液测试可测量胎盘生长因子，这是一种与胎盘血管发育有关的妊娠相关蛋白质。它经常与 sFlt-1 一起使用来计算 sFlt-1/PlGF 比率，以进行先兆子痫风险评估。"
-    },
-    {
-      question: "什么是妊娠期 PlGF 低？",
-      answer: "妊娠期低 PlGF 可能表明胎盘血管生成活性降低，并可能与胎盘功能障碍或先兆子痫风险增加有关。它本身并不能确诊先兆子痫，必须结合临床体征和其他测试来解释。"
-    },
-    {
-      question: "PlGF 在胎盘中的正常作用是什么？",
-      answer: "PlGF 支持胎盘血管生成，这意味着血管的发育有助于为生长中的胎儿提供氧气和营养。 PlGF 与胎盘功能密切相关，异常水平可能与先兆子痫风险相关。"
-    }
-  ],
-  faqSchema: {
-    "@context": "https://schema.org",
-    "@type": "常见问题页面",
-    "mainEntity": [
-      {
-        "@type": "问题",
-        "name": "怀孕期间 PlGF 的正常水平是多少？",
-        "acceptedAnswer": {
-          "@type": "回答",
-          "text": "正常 PlGF 水平因胎龄、检测平台和实验室参考范围而异。在正常妊娠中，PlGF 通常在妊娠早期和中期增加，然后在足月时减少。结果应由医疗保健专业人员解释。"
-        }
-      },
-      {
-        "@type": "问题",
-        "name": "怀孕期间进行 PlGF 测试的费用是多少？",
-        "acceptedAnswer": {
-          "@type": "回答",
-          "text": "PlGF 或 sFlt-1/PlGF 比率测试的费用取决于国家、城市、实验室和测试小组。定价可能会根据诊断提供商、位置和测试平台的不同而有所不同。"
-        }
-      },
-      {
-        "@type": "问题",
-        "name": "什么是 PlGF 血液检查？",
-        "acceptedAnswer": {
-          "@type": "回答",
-          "text": "PlGF 血液测试可测量胎盘生长因子，这是一种与胎盘血管发育有关的妊娠相关蛋白质。它经常与 sFlt-1 一起使用来计算 sFlt-1/PlGF 比率，以进行先兆子痫风险评估。"
-        }
-      },
-      {
-        "@type": "问题",
-        "name": "什么是妊娠期 PlGF 低？",
-        "acceptedAnswer": {
-          "@type": "回答",
-          "text": "妊娠期低 PlGF 可能表明胎盘血管生成活性降低，并可能与胎盘功能障碍或先兆子痫风险增加有关。它本身并不能确诊先兆子痫，必须结合临床体征和其他测试来解释。"
-        }
-      },
-      {
-        "@type": "问题",
-        "name": "PlGF 在胎盘中的正常作用是什么？",
-        "acceptedAnswer": {
-          "@type": "回答",
-          "text": "PlGF 支持胎盘血管生成，这意味着血管的发育有助于为生长中的胎儿提供氧气和营养。 PlGF 与胎盘功能密切相关，异常水平可能与先兆子痫风险相关。"
-        }
-      }
-    ]
-  }
-},
+
 "acetaminophen-urine-test": {
   meta: {
     title: "对乙酰氨基酚 ACE 快速检测尿液 500 ng/mL |依维夏制药公司",
@@ -36022,7 +35823,175 @@ export const zh = {
         }
       ]
     }
-  }
+  },
+    "6-mam-urine-test": {
+    meta: {
+      title: "6-单乙酰吗啡 6-MAM 尿液快速检测 50 ng/mL | Ivexia Pharma",
+      description:
+        "6-单乙酰吗啡（6-MAM）快速检测装置 by Ivexia Pharma is a urine-based rapid screening test with a 50 ng/mL cut-off.",
+    },
+    hero: {
+      title: "6-单乙酰吗啡（6-MAM）快速检测装置",
+      description:
+        "6-单乙酰吗啡（6-MAM）快速检测装置 by Ivexia Pharma is a professional urine-based rapid test designed for qualitative screening of 6-MAM.",
+    },
+    content: {
+      introduction: {
+        title: "Introduction",
+        sections: [
+          "This product supports qualitative screening of 6-MAM in urine specimens.",
+          "6-MAM is an important marker associated with heroin metabolism.",
+          "This product is intended for preliminary screening only and may require confirmatory testing.",
+        ],
+      },
+      productOverview: {
+        title: "Product Overview",
+        details: [
+          { label: "Product Name", value: "6-单乙酰吗啡（6-MAM）快速检测装置" },
+          { label: "Brand", value: "Ivexia Pharma" },
+          { label: "Category", value: "Drug of Abuse" },
+          { label: "Method", value: "Rapid Test" },
+          { label: "Specimen", value: "Urine" },
+          { label: "Cut-off", value: "50 ng/mL" },
+          { label: "Target Analyte", value: "6-Monoacetylmorphine" },
+          { label: "Certificate", value: "None" },
+        ],
+        note:
+          "This product offers a simple urine-based rapid screening format for professional drug testing programs.",
+      },
+      whatIsHPV: {
+        title: "What is 6-Monoacetylmorphine (6-MAM)?",
+        content:
+          "6-MAM is a metabolite linked with heroin metabolism and is used as a heroin-specific screening marker.",
+      },
+      intendedUse: {
+        title: "Intended Use of 6-MAM Rapid Test Device",
+        description:
+          "This product is intended for professional urine-based screening support.",
+        applications: [
+          "Drug of abuse screening programs",
+          "Toxicology laboratories",
+          "Rehabilitation centers",
+          "Occupational health screening",
+          "Clinical screening settings",
+          "Forensic screening support",
+          "Drug monitoring programs",
+        ],
+      },
+      method: {
+        title: "Method: Rapid Test",
+        description:
+          "The device is designed for qualitative detection of 6-MAM in urine at a 50 ng/mL cut-off.",
+        benefits: [
+          "Fast preliminary screening",
+          "Simple urine workflow",
+          "No complex instrument required",
+          "Useful for heroin metabolite screening",
+          "Suitable for professional settings",
+          "Supports confirmatory workflows",
+          "Practical for international supply",
+        ],
+      },
+      specimen: {
+        title: "Specimen: Urine",
+        description:
+          "The device uses urine as the specimen.",
+        guidance: [
+          "Use urine specimens only",
+          "Collect in a clean dry container",
+          "Follow the product insert",
+          "Avoid contaminated samples",
+          "Use after opening the pouch",
+          "Read within the approved time",
+          "Do not reuse the device",
+        ],
+      },
+      clinicalImportance: {
+        title: "Clinical and Toxicology Importance",
+        sections: [
+          "6-MAM testing supports heroin-specific screening.",
+          "A negative result does not always rule out previous exposure.",
+          "Results should be interpreted by trained professionals.",
+        ],
+      },
+      resultInterpretation: {
+        title: "Result Interpretation",
+        positive:
+          "A positive result suggests 6-MAM may be present at or above the cut-off.",
+        negative:
+          "A negative result suggests 6-MAM was not detected or was below the detection level.",
+        invalid:
+          "If the control indicator does not appear, the result is invalid.",
+      },
+      limitations: {
+        title: "Limitations and Precautions",
+        description:
+          "This product is a professional screening-support test and does not replace confirmatory testing.",
+        guidance: [
+          "Use only for professional in vitro diagnostic screening",
+          "Follow the official product insert",
+          "Do not use expired or damaged devices",
+          "Do not reuse the device",
+          "Avoid contaminated samples",
+          "Interpret within the recommended time",
+          "Confirm positive results where required",
+        ],
+      },
+      storage: {
+        title: "Storage and Handling",
+        instructions: [
+          "Store in a clean and dry place",
+          "Keep away from direct sunlight",
+          "Protect from heat and moisture",
+          "Keep sealed until use",
+          "Use before expiry",
+          "Do not use damaged pouch",
+          "Follow the printed temperature range",
+        ],
+      },
+      whyChoose: {
+        title: "Why Choose Ivexia Pharma 6-单乙酰吗啡（6-MAM）快速检测装置?",
+        description:
+          "Ivexia Pharma provides diagnostic products for professional international markets.",
+        advantages: [
+          "Urine-based rapid format",
+          "50 ng/mL cut-off",
+          "Targets 6-MAM",
+          "Supports heroin metabolite screening",
+          "Suitable for drug testing programs",
+          "Useful for laboratory workflows",
+          "International product positioning",
+        ],
+      },
+    },
+    faqs: [
+      {
+        question: "What does 6-MAM mean on a drug test?",
+        answer:
+          "6-MAM means 6-Monoacetylmorphine, a heroin-specific metabolite.",
+      },
+      {
+        question: "What drug class is 6-MAM?",
+        answer:
+          "6-MAM belongs to the opiate or opioid metabolite category.",
+      },
+      {
+        question: "What specimen type is used?",
+        answer:
+          "This product is designed for urine specimens.",
+      },
+      {
+        question: "What is the cut-off level?",
+        answer:
+          "The stated cut-off level is 50 ng/mL.",
+      },
+      {
+        question: "Is a positive result final?",
+        answer:
+          "No. A positive rapid result is preliminary and may require confirmation.",
+      },
+    ],
+  },
 
 
 

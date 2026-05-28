@@ -5588,206 +5588,7 @@ export const fr = {
     ]
   }
 },
-"6-mam-urine-test": {
-  meta: {
-    title: "Sérum de test PE sFlt-1/PlGF – Test immunologique par fluorescence | Ivexia Pharma",
-    description: "Le test PE (sFlt-1/PlGF) (sérum) d'Ivexia Pharma est un test d'immunofluorescence basé sur la fluorescence pour l'évaluation du risque de pré-éclampsie en utilisant le rapport sFlt-1/PlGF dans le sérum."
-  },
-  hero: {
-    title: "Test PE (sFlt-1/PlGF) (sérum)",
-    description: "Le test PE (sFlt-1/PlGF) (sérum) d'Ivexia Pharma est un test de diagnostic professionnel par immunofluorescence conçu pour soutenir l'évaluation du risque de pré-éclampsie en mesurant la relation entre le sFlt-1, la tyrosine kinase-1 soluble de type fms, et le PlGF, le facteur de croissance placentaire, dans le sérum humain. Basé sur la méthode de fluorescence, ce test PE basé sur le sérum aide les hôpitaux, les maternités, les cliniques de gynécologie, les laboratoires de diagnostic et les prestataires de soins prénatals à évaluer les troubles hypertensifs suspectés de la grossesse. Le rapport sFlt-1/PlGF est largement utilisé comme aide à la stratification du risque chez les femmes enceintes présentant des signes cliniques de pré-éclampsie, mais il n'est pas destiné à remplacer le jugement clinique ou à servir de diagnostic autonome."
-  },
-  content: {
-    introduction: {
-      title: "Présentation",
-      sections: [
-        "Le test PE (sFlt-1/PlGF) (sérum) est un dispositif de test d'immunofluorescence avancé utilisé pour l'évaluation des biomarqueurs liés à la pré-éclampsie. La pré-éclampsie est une complication de la grossesse liée à l'hypertension artérielle et à une éventuelle atteinte d'un organe, généralement après 20 semaines de grossesse.",
-        "Le test du rapport sFlt-1/PlGF est cliniquement important car la pré-éclampsie est liée à un déséquilibre entre les facteurs placentaires anti-angiogéniques et pro-angiogéniques. Dans la pré-éclampsie, les niveaux de sFlt-1 l ont tendance à augmenter, tandis que les niveaux de PlGF libre ont tendance à diminuer par rapport aux grossesses normales.",
-        "Le test PE (sFlt-1/PlGF) (sérum) d'Ivexia Pharma prend en charge les environnements professionnels de santé tels que les maternités, les cliniques de gynécologie, les laboratoires de diagnostic, les centres de soins prénatals et les réseaux internationaux de distribution de diagnostics."
-      ]
-    },
-    productOverview: {
-      title: "Présentation du produit",
-      details: [
-        { label: "Nom du produit", value: "Test PE (sFlt-1/PlGF) (sérum)" },
-        { label: "Marque", value: "Ivexia Pharma" },
-        { label: "Catégorie", value: "Immunofluorescence" },
-        { label: "Méthode", value: "Fluorescence" },
-        { label: "Spécimen", value: "Sérum" },
-        { label: "Marqueurs cibles", value: "Rapport sFlt-1 et PlGF" },
-        { label: "Demande", value: "Aide à l'évaluation du risque de pré-éclampsie" },
-        { label: "Type d'utilisation", value: "Utilisation professionnelle pour le diagnostic in vitro" }
-      ],
-      note: "Le test PE (sFlt-1/PlGF) est conçu pour soutenir l'évaluation des risques. Il ne doit pas être utilisé comme test de diagnostic autonome ou comme seule base pour modifier le traitement."
-    },
-    whatIsRatio: {
-      title: "Quel est le rapport sFlt-1/PlGF ?",
-      content: "Le rapport sFlt-1/PlGF compare deux biomarqueurs importants liés à la grossesse. sFlt-1 est une protéine anti-angiogénique largement produite dans le placenta, tandis que le PlGF est un facteur pro-angiogénique qui soutient le développement des vaisseaux sanguins placentaires et la fonction placentaire normale. Au cours d'une grossesse normale, le PlGF augmente généralement au cours du premier et du deuxième trimestre, puis diminue vers le terme. Dans la pré-éclampsie, le sFlt-1 est généralement augmenté et le PlGF libre est généralement réduit."
-    },
-    intendedUse: {
-      title: "Utilisation prévue",
-      description: "Le test PE (sFlt-1/PlGF) (sérum) est destiné à un usage professionnel de diagnostic in vitro pour faciliter l'évaluation du risque de pré-éclampsie. Il soutient l'évaluation clinique lorsqu'une pré-éclampsie ou des troubles hypertensifs de la grossesse sont suspectés.",
-      applications: [
-        "Évaluation du risque de pré-éclampsie",
-        "Évaluation des troubles hypertensifs suspectés de grossesse",
-        "Tests de biomarqueurs sériques maternels",
-        "Stratification du risque des patients présentant des symptômes cliniques",
-        "Soutenir les décisions en matière de soins prénatals avec d'autres investigations",
-        "Surveillance des complications de la grossesse en cas de suspicion d'un dysfonctionnement placentaire",
-        "Rapports en laboratoire pour les maternités et les centres de diagnostic"
-      ]
-    },
-    clinicalImportance: {
-      title: "Importance clinique des tests PE (sFlt-1/PlGF)",
-      sections: [
-        "Le test PE (sFlt-1/PlGF) est conçu pour soutenir l'évaluation des risques, et non pour diagnostiquer ou traiter de manière indépendante la pré-éclampsie.",
-        "Le rapport sFlt-1/PlGF peut aider les professionnels de la santé à classer les patients en groupes à risque faible ou élevé lorsqu'il est utilisé avec la tension artérielle, les protéines urinaires, la fonction hépatique, la fonction rénale, la numération plaquettaire, les symptômes, les résultats de l'échographie et les antécédents obstétricaux.",
-        "Un seuil de ratio est souvent utilisé dans l’interprétation clinique. Les résultats doivent toujours être interprétés avec une évaluation clinique complète et des procédures de soins standard."
-      ]
-    },
-    method: {
-      title: "Technologie et méthode de test",
-      description: "Le test PE (sFlt-1/PlGF) (sérum) utilise une méthode de dosage immunologique par fluorescence. La technologie de dosage immunologique basée sur la fluorescence est largement utilisée dans les diagnostics modernes car elle prend en charge la détection sensible de biomarqueurs à partir d'échantillons biologiques.",
-      benefits: [
-        "Méthode d'immunofluorescence basée sur la fluorescence",
-        "Compatibilité des échantillons de sérum",
-        "Prend en charge l'évaluation du risque de pré-éclampsie",
-        "Utile pour les maternités et les cliniques de gynécologie",
-        "Aide à évaluer le déséquilibre des biomarqueurs placentaires",
-        "Convient aux flux de travail de laboratoire professionnels",
-        "Prend en charge des informations cliniques plus rapides dans les soins prénatals",
-        "Conçu pour les marchés internationaux du diagnostic"
-      ]
-    },
-    specimen: {
-      title: "Spécimen : Sérum",
-      description: "L’échantillon correct pour le test PE (sFlt-1/PlGF) est le sérum. Une collecte, une séparation, une manipulation et des tests appropriés du sérum sont importants pour des performances diagnostiques fiables.",
-      guidance: [
-        "Utiliser uniquement des échantillons de sérum",
-        "Suivre les procédures approuvées de collecte de sang",
-        "Séparer le sérum selon le protocole du laboratoire",
-        "Éviter une manipulation inappropriée des échantillons",
-        "Utiliser des systèmes d’analyseurs de fluorescence compatibles si nécessaire",
-        "Interpréter les résultats uniquement par des professionnels qualifiés",
-        "Suivez attentivement la notice du produit Ivexia Pharma"
-      ],
-      note: "Le test PE (sFlt-1/PlGF) doit être utilisé uniquement dans des environnements de diagnostic professionnels par des professionnels de santé ou de laboratoire formés."
-    },
-    resultInterpretation: {
-      title: "Interprétation des résultats",
-      positive: "Un rapport sFlt-1/PlGF plus élevé peut indiquer un risque accru de progression de la pré-éclampsie ou de dysfonctionnement placentaire, en fonction de l'âge gestationnel, de l'état clinique et du seuil validé utilisé par le laboratoire.",
-      negative: "Un rapport sFlt-1/PlGF inférieur peut indiquer un risque plus faible à court terme lorsqu'il est interprété avec les résultats cliniques, mais il ne supprime pas la nécessité d'un suivi médical si des symptômes ou des facteurs de risque sont présents.",
-      invalid: "Si l'analyseur, le système de contrôle ou le dispositif de test indique un résultat invalide, des tests répétés doivent être effectués conformément à la notice du produit et à la procédure de contrôle qualité du laboratoire."
-    },
-    storage: {
-      title: "Conseils de stockage et de manipulation",
-      instructions: [
-        "Conserver selon la température indiquée sur l'étiquette du produit",
-        "Conserver le dispositif de test scellé jusqu'à son utilisation",
-        "Protéger de l'humidité et de la lumière directe du soleil",
-        "N'utilisez pas d'appareils de test périmés",
-        "Ne pas utiliser d'emballages endommagés ou contaminés",
-        "Utiliser des systèmes d’analyseurs de fluorescence compatibles si nécessaire",
-        "Éliminer les matériaux usagés conformément aux règles de sécurité du laboratoire"
-      ]
-    },
-    precautions: {
-      title: "Précautions",
-      instructions: [
-        "Pour usage professionnel de diagnostic in vitro uniquement",
-        "Non destiné à un usage domestique",
-        "Il ne s'agit pas d'un test de diagnostic autonome pour la pré-éclampsie",
-        "Ne remplace pas le jugement clinique",
-        "Les résultats doivent être utilisés avec une évaluation clinique standard",
-        "Les décisions cliniques ne doivent pas reposer uniquement sur le rapport sFlt-1/PlGF",
-        "Les grossesses multiples et certaines conditions de traitement peuvent nécessiter une prudence particulière en fonction des directives du test.",
-        "Les prestataires de soins de santé doivent suivre les directives locales en matière de soins de grossesse et de diagnostic."
-      ]
-    },
-    whyChoose: {
-      title: "Pourquoi choisir le test Ivexia Pharma PE (sFlt-1/PlGF) ?",
-      description: "Ivexia Pharma fournit des solutions de diagnostic conçues pour les besoins des professionnels de la santé, des laboratoires et de la distribution internationale. Le test PE (sFlt-1/PlGF) (sérum) est développé pour les contextes cliniques qui nécessitent un support fiable pour les tests de biomarqueurs de la pré-éclampsie.",
-      advantages: [
-        "Méthode d'immunofluorescence basée sur la fluorescence",
-        "Compatibilité des échantillons de sérum",
-        "Prend en charge l'évaluation du risque de pré-éclampsie",
-        "Utile pour les maternités et les cliniques de gynécologie",
-        "Aide à évaluer le déséquilibre des biomarqueurs placentaires",
-        "Convient aux flux de travail de laboratoire professionnels",
-        "Prend en charge des informations cliniques plus rapides dans les soins prénatals",
-        "Conçu pour les marchés internationaux du diagnostic"
-      ]
-    }
-  },
-  faqs: [
-    {
-      question: "Quels sont les taux normaux de PlGF pendant la grossesse ?",
-      answer: "Les niveaux normaux de PlGF varient selon l'âge gestationnel, la plate-forme de test et la plage de référence du laboratoire. Lors d'une grossesse normale, le PlGF augmente généralement au cours du premier et du deuxième trimestre, puis diminue vers le terme. Les résultats doivent être interprétés par un professionnel de la santé."
-    },
-    {
-      question: "Quel est le coût du test PlGF pendant la grossesse ?",
-      answer: "Le coût d'un test de rapport PlGF ou sFlt-1/PlGF dépend du pays, de la ville, du laboratoire et du panel de test. Le prix peut varier en fonction du fournisseur de diagnostic, de l'emplacement et de la plateforme de test."
-    },
-    {
-      question: "Qu'est-ce qu'une prise de sang PlGF ?",
-      answer: "Un test sanguin PlGF mesure le facteur de croissance placentaire, une protéine liée à la grossesse impliquée dans le développement des vaisseaux sanguins placentaires. Il est souvent utilisé avec sFlt-1 pour calculer le rapport sFlt-1/PlGF pour l'évaluation du risque de pré-éclampsie."
-    },
-    {
-      question: "Qu'est-ce qu'un faible PlGF pendant la grossesse ?",
-      answer: "Un faible taux de PlGF pendant la grossesse peut suggérer une activité angiogénique placentaire réduite et peut être associé à un dysfonctionnement placentaire ou à un risque accru de pré-éclampsie. Il ne confirme pas à lui seul la pré-éclampsie et doit être interprété avec des signes cliniques et d'autres tests."
-    },
-    {
-      question: "Quel est le rôle normal du PlGF dans le placenta ?",
-      answer: "Le PlGF soutient l’angiogenèse placentaire, c’est-à-dire le développement de vaisseaux sanguins qui aident à fournir de l’oxygène et des nutriments au fœtus en croissance. Le PlGF est étroitement lié à la fonction placentaire et des niveaux anormaux peuvent être associés à un risque de pré-éclampsie."
-    }
-  ],
-  faqSchema: {
-    "@context": "https://schema.org",
-    "@type": "Page FAQ",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Quels sont les taux normaux de PlGF pendant la grossesse ?",
-        "acceptedAnswer": {
-          "@type": "Réponse",
-          "text": "Les niveaux normaux de PlGF varient selon l'âge gestationnel, la plate-forme de test et la plage de référence du laboratoire. Lors d'une grossesse normale, le PlGF augmente généralement au cours du premier et du deuxième trimestre, puis diminue vers le terme. Les résultats doivent être interprétés par un professionnel de la santé."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Quel est le coût du test PlGF pendant la grossesse ?",
-        "acceptedAnswer": {
-          "@type": "Réponse",
-          "text": "Le coût d'un test de rapport PlGF ou sFlt-1/PlGF dépend du pays, de la ville, du laboratoire et du panel de test. Le prix peut varier en fonction du fournisseur de diagnostic, de l'emplacement et de la plateforme de test."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Qu'est-ce qu'une prise de sang PlGF ?",
-        "acceptedAnswer": {
-          "@type": "Réponse",
-          "text": "Un test sanguin PlGF mesure le facteur de croissance placentaire, une protéine liée à la grossesse impliquée dans le développement des vaisseaux sanguins placentaires. Il est souvent utilisé avec sFlt-1 pour calculer le rapport sFlt-1/PlGF pour l'évaluation du risque de pré-éclampsie."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Qu'est-ce qu'un faible PlGF pendant la grossesse ?",
-        "acceptedAnswer": {
-          "@type": "Réponse",
-          "text": "Un faible taux de PlGF pendant la grossesse peut suggérer une activité angiogénique placentaire réduite et peut être associé à un dysfonctionnement placentaire ou à un risque accru de pré-éclampsie. Il ne confirme pas à lui seul la pré-éclampsie et doit être interprété avec des signes cliniques et d'autres tests."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Quel est le rôle normal du PlGF dans le placenta ?",
-        "acceptedAnswer": {
-          "@type": "Réponse",
-          "text": "Le PlGF soutient l’angiogenèse placentaire, c’est-à-dire le développement de vaisseaux sanguins qui aident à fournir de l’oxygène et des nutriments au fœtus en croissance. Le PlGF est étroitement lié à la fonction placentaire et des niveaux anormaux peuvent être associés à un risque de pré-éclampsie."
-        }
-      }
-    ]
-  }
-},
+
 "acetaminophen-urine-test": {
   meta: {
     title: "Acétaminophène ACE Test rapide Urine 500 ng/mL | Ivexia Pharma",
@@ -36013,7 +35814,174 @@ export const fr = {
     }
 
   },
-
+ "6-mam-urine-test": {
+    meta: {
+      title: "Test Rapide 6-Monoacétylmorphine 6-MAM Urine 50 ng/mL | Ivexia Pharma",
+      description:
+        "Dispositif de Test Rapide 6-Monoacétylmorphine (6-MAM) by Ivexia Pharma is a urine-based rapid screening test with a 50 ng/mL cut-off.",
+    },
+    hero: {
+      title: "Dispositif de Test Rapide 6-Monoacétylmorphine (6-MAM)",
+      description:
+        "Dispositif de Test Rapide 6-Monoacétylmorphine (6-MAM) by Ivexia Pharma is a professional urine-based rapid test designed for qualitative screening of 6-MAM.",
+    },
+    content: {
+      introduction: {
+        title: "Introduction",
+        sections: [
+          "This product supports qualitative screening of 6-MAM in urine specimens.",
+          "6-MAM is an important marker associated with heroin metabolism.",
+          "This product is intended for preliminary screening only and may require confirmatory testing.",
+        ],
+      },
+      productOverview: {
+        title: "Product Overview",
+        details: [
+          { label: "Product Name", value: "Dispositif de Test Rapide 6-Monoacétylmorphine (6-MAM)" },
+          { label: "Brand", value: "Ivexia Pharma" },
+          { label: "Category", value: "Drug of Abuse" },
+          { label: "Method", value: "Rapid Test" },
+          { label: "Specimen", value: "Urine" },
+          { label: "Cut-off", value: "50 ng/mL" },
+          { label: "Target Analyte", value: "6-Monoacetylmorphine" },
+          { label: "Certificate", value: "None" },
+        ],
+        note:
+          "This product offers a simple urine-based rapid screening format for professional drug testing programs.",
+      },
+      whatIsHPV: {
+        title: "What is 6-Monoacetylmorphine (6-MAM)?",
+        content:
+          "6-MAM is a metabolite linked with heroin metabolism and is used as a heroin-specific screening marker.",
+      },
+      intendedUse: {
+        title: "Intended Use of 6-MAM Rapid Test Device",
+        description:
+          "This product is intended for professional urine-based screening support.",
+        applications: [
+          "Drug of abuse screening programs",
+          "Toxicology laboratories",
+          "Rehabilitation centers",
+          "Occupational health screening",
+          "Clinical screening settings",
+          "Forensic screening support",
+          "Drug monitoring programs",
+        ],
+      },
+      method: {
+        title: "Method: Rapid Test",
+        description:
+          "The device is designed for qualitative detection of 6-MAM in urine at a 50 ng/mL cut-off.",
+        benefits: [
+          "Fast preliminary screening",
+          "Simple urine workflow",
+          "No complex instrument required",
+          "Useful for heroin metabolite screening",
+          "Suitable for professional settings",
+          "Supports confirmatory workflows",
+          "Practical for international supply",
+        ],
+      },
+      specimen: {
+        title: "Specimen: Urine",
+        description:
+          "The device uses urine as the specimen.",
+        guidance: [
+          "Use urine specimens only",
+          "Collect in a clean dry container",
+          "Follow the product insert",
+          "Avoid contaminated samples",
+          "Use after opening the pouch",
+          "Read within the approved time",
+          "Do not reuse the device",
+        ],
+      },
+      clinicalImportance: {
+        title: "Clinical and Toxicology Importance",
+        sections: [
+          "6-MAM testing supports heroin-specific screening.",
+          "A negative result does not always rule out previous exposure.",
+          "Results should be interpreted by trained professionals.",
+        ],
+      },
+      resultInterpretation: {
+        title: "Result Interpretation",
+        positive:
+          "A positive result suggests 6-MAM may be present at or above the cut-off.",
+        negative:
+          "A negative result suggests 6-MAM was not detected or was below the detection level.",
+        invalid:
+          "If the control indicator does not appear, the result is invalid.",
+      },
+      limitations: {
+        title: "Limitations and Precautions",
+        description:
+          "This product is a professional screening-support test and does not replace confirmatory testing.",
+        guidance: [
+          "Use only for professional in vitro diagnostic screening",
+          "Follow the official product insert",
+          "Do not use expired or damaged devices",
+          "Do not reuse the device",
+          "Avoid contaminated samples",
+          "Interpret within the recommended time",
+          "Confirm positive results where required",
+        ],
+      },
+      storage: {
+        title: "Storage and Handling",
+        instructions: [
+          "Store in a clean and dry place",
+          "Keep away from direct sunlight",
+          "Protect from heat and moisture",
+          "Keep sealed until use",
+          "Use before expiry",
+          "Do not use damaged pouch",
+          "Follow the printed temperature range",
+        ],
+      },
+      whyChoose: {
+        title: "Why Choose Ivexia Pharma Dispositif de Test Rapide 6-Monoacétylmorphine (6-MAM)?",
+        description:
+          "Ivexia Pharma provides diagnostic products for professional international markets.",
+        advantages: [
+          "Urine-based rapid format",
+          "50 ng/mL cut-off",
+          "Targets 6-MAM",
+          "Supports heroin metabolite screening",
+          "Suitable for drug testing programs",
+          "Useful for laboratory workflows",
+          "International product positioning",
+        ],
+      },
+    },
+    faqs: [
+      {
+        question: "What does 6-MAM mean on a drug test?",
+        answer:
+          "6-MAM means 6-Monoacetylmorphine, a heroin-specific metabolite.",
+      },
+      {
+        question: "What drug class is 6-MAM?",
+        answer:
+          "6-MAM belongs to the opiate or opioid metabolite category.",
+      },
+      {
+        question: "What specimen type is used?",
+        answer:
+          "This product is designed for urine specimens.",
+      },
+      {
+        question: "What is the cut-off level?",
+        answer:
+          "The stated cut-off level is 50 ng/mL.",
+      },
+      {
+        question: "Is a positive result final?",
+        answer:
+          "No. A positive rapid result is preliminary and may require confirmation.",
+      },
+    ],
+  },
 
  
   } 

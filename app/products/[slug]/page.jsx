@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 
 import ProductDetailClient from "@/components/ProductDetailClient";
 import { getFallbackProducts } from "@/lib/catalogFallback";
+import { getProductContent } from "@/lib/productContent";
 
 async function getProduct(slug) {
   const fallbackProduct = getFallbackProducts().find((item) => item.slug === slug);
@@ -41,5 +42,12 @@ export default async function FinishedProductDetailPage({ params }) {
     notFound();
   }
 
-  return <ProductDetailClient initialProduct={product} />;
+  const productData = await getProductContent(slug, "en");
+
+  return (
+    <ProductDetailClient
+      initialProduct={product}
+      initialProductData={productData}
+    />
+  );
 }
