@@ -65,8 +65,6 @@ export async function GET(req, { params }) {
       },
     });
   } catch (error) {
-    console.error("INGREDIENT DETAIL API ERROR:", error);
-
     return Response.json(getErrorPayload(error), {
       status: 500,
       headers: {

@@ -1,640 +1,143 @@
-// //app\test-kits\[slug]\page.jsx
-// "use client";
-
-// import Link from "next/link";
-// import { notFound, useParams } from "next/navigation";
-// import { useEffect, useState } from "react";
-// import { AnimatePresence, motion } from "framer-motion";
-// import { useLanguage } from "@/contexts/LanguageContext";
-// import { getFallbackTestKits } from "@/lib/catalogFallback";
-
-// function DetailRow({ label, value }) {
-//   return (
-//     <div className="rounded-2xl border border-[#0d2d47]/10 bg-white px-5 py-4 shadow-sm">
-//       <div className="text-xs uppercase tracking-[0.18em] text-[#0d2d47]/55">
-//         {label}
-//       </div>
-//       <div className="mt-2 text-base font-semibold text-[#0d2d47]">
-//         {value || "-"}
-//       </div>
-//     </div>
-//   );
-// }
-
-// function RenderSection({ section }) {
-//   if (!section) return null;
-
-//   return (
-//     <div className="mb-10 rounded-2xl bg-white border border-[#0d2d47]/10 p-6 shadow-sm">
-//       {section.title && (
-//         <h2 className="text-2xl font-bold text-[#0d2d47] mb-4">
-//           {section.title}
-//         </h2>
-//       )}
-
-//       {section.description && (
-//         <p className="text-gray-700 leading-relaxed mb-4">
-//           {section.description}
-//         </p>
-//       )}
-
-//       {section.content && (
-//         <p className="text-gray-700 leading-relaxed mb-4">
-//           {section.content}
-//         </p>
-//       )}
-
-//       {Array.isArray(section.sections) && (
-//         <div className="space-y-4 mb-4">
-//           {section.sections.map((item, idx) => (
-//             <p key={idx} className="text-gray-700 leading-relaxed">
-//               {item}
-//             </p>
-//           ))}
-//         </div>
-//       )}
-
-//       {Array.isArray(section.details) && (
-//         <div className="overflow-hidden rounded-xl border border-[#0d2d47]/10 mt-4">
-//           <table className="w-full text-sm">
-//             <tbody>
-//               {section.details.map((item, idx) => (
-//                 <tr
-//                   key={idx}
-//                   className="border-b border-[#0d2d47]/10 last:border-0"
-//                 >
-//                   <td className="px-4 py-3 font-semibold text-[#0d2d47] w-1/3">
-//                     {item.label}
-//                   </td>
-//                   <td className="px-4 py-3 text-gray-700">{item.value}</td>
-//                 </tr>
-//               ))}
-//             </tbody>
-//           </table>
-//         </div>
-//       )}
-
-//       {Array.isArray(section.applications) && (
-//         <ul className="list-disc list-inside space-y-2 text-gray-700 mt-4">
-//           {section.applications.map((item, idx) => (
-//             <li key={idx}>{item}</li>
-//           ))}
-//         </ul>
-//       )}
-
-//       {Array.isArray(section.benefits) && (
-//         <ul className="list-disc list-inside space-y-2 text-gray-700 mt-4">
-//           {section.benefits.map((item, idx) => (
-//             <li key={idx}>{item}</li>
-//           ))}
-//         </ul>
-//       )}
-
-//       {Array.isArray(section.guidance) && (
-//         <ul className="list-disc list-inside space-y-2 text-gray-700 mt-4">
-//           {section.guidance.map((item, idx) => (
-//             <li key={idx}>{item}</li>
-//           ))}
-//         </ul>
-//       )}
-
-//       {Array.isArray(section.steps) && (
-//         <ol className="list-decimal list-inside space-y-2 text-gray-700 mt-4">
-//           {section.steps.map((item, idx) => (
-//             <li key={idx}>{item}</li>
-//           ))}
-//         </ol>
-//       )}
-
-//       {Array.isArray(section.instructions) && (
-//         <ul className="list-disc list-inside space-y-2 text-gray-700 mt-4">
-//           {section.instructions.map((item, idx) => (
-//             <li key={idx}>{item}</li>
-//           ))}
-//         </ul>
-//       )}
-
-//       {Array.isArray(section.advantages) && (
-//         <ul className="list-disc list-inside space-y-2 text-gray-700 mt-4">
-//           {section.advantages.map((item, idx) => (
-//             <li key={idx}>{item}</li>
-//           ))}
-//         </ul>
-//       )}
-
-//       {section.positive && (
-//         <p className="text-gray-700 mb-2">
-//           <span className="font-semibold text-green-600">Positive:</span>{" "}
-//           {section.positive}
-//         </p>
-//       )}
-
-//       {section.negative && (
-//         <p className="text-gray-700 mb-2">
-//           <span className="font-semibold text-blue-600">Negative:</span>{" "}
-//           {section.negative}
-//         </p>
-//       )}
-
-//       {section.invalid && (
-//         <p className="text-gray-700 mb-2">
-//           <span className="font-semibold text-red-600">Invalid:</span>{" "}
-//           {section.invalid}
-//         </p>
-//       )}
-
-//       {section.note && (
-//         <p className="text-gray-600 text-sm italic mt-4">{section.note}</p>
-//       )}
-//     </div>
-//   );
-// }
-
-// function FAQSection({ faqs }) {
-//   const [openIndex, setOpenIndex] = useState(null);
-
-//   if (!faqs || faqs.length === 0) return null;
-
-//   return (
-//     <div className="mt-12">
-//       <h2 className="mb-6 text-2xl font-bold text-[#0d2d47]">
-//         Frequently Asked Questions
-//       </h2>
-
-//       <div className="space-y-4">
-//         {faqs.map((faq, idx) => {
-//           const isOpen = openIndex === idx;
-
-//           return (
-//             <div
-//               key={idx}
-//               className="overflow-hidden rounded-xl border border-[#0d2d47]/10 bg-white shadow-sm"
-//             >
-//               <button
-//                 type="button"
-//                 onClick={() => setOpenIndex(isOpen ? null : idx)}
-//                 className="flex w-full items-center justify-between gap-4 px-6 py-4 text-left transition hover:bg-[#FFF8F5]"
-//               >
-//                 <span className="font-semibold text-[#0d2d47]">
-//                   {faq.question}
-//                 </span>
-
-//                 <span
-//                   className={`flex h-8 w-8 shrink-0 items-center justify-center cursor-pointer rounded-full bg-[#19a6b5]/10 text-xl text-[#19a6b5] transition-transform duration-300 ${
-//                     isOpen ? "rotate-180" : ""
-//                   }`}
-//                 >
-//                   {isOpen ? "−" : "+"}
-//                 </span>
-//               </button>
-
-//               <AnimatePresence initial={false}>
-//                 {isOpen && (
-//                   <motion.div
-//                     initial={{ height: 0, opacity: 0 }}
-//                     animate={{ height: "auto", opacity: 1 }}
-//                     exit={{ height: 0, opacity: 0 }}
-//                     transition={{
-//                       duration: 0.28,
-//                       ease: [0.22, 1, 0.36, 1],
-//                     }}
-//                     className="overflow-hidden"
-//                   >
-//                     <div className="px-6 pb-5 pt-1 text-gray-700 leading-relaxed">
-//                       {faq.answer}
-//                     </div>
-//                   </motion.div>
-//                 )}
-//               </AnimatePresence>
-//             </div>
-//           );
-//         })}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default function TestKitDetailPage() {
-//   const params = useParams();
-//   const slug = params.slug;
-
-//   const { translations } = useLanguage();
-//   const t = translations?.testKitDetailPage;
-//   const testKitContent = translations?.testKits?.[slug];
-
-//   const [testKit, setTestKit] = useState(null);
-//   const [loading, setLoading] = useState(true);
-
-//   useEffect(() => {
-//     async function fetchTestKit() {
-//       const fallbackTestKit = getFallbackTestKits().find(
-//         (item) => item.slug?.trim() === slug
-//       );
-
-//       if (fallbackTestKit) {
-//         setTestKit(fallbackTestKit);
-//         setLoading(false);
-//         return;
-//       }
-
-//       try {
-//         const res = await fetch("/api/testkits");
-
-//         if (res.ok) {
-//           const data = await res.json();
-
-//           if (Array.isArray(data)) {
-//             const found = data.find((item) => item?.slug?.trim() === slug);
-
-//             if (found) {
-//               setTestKit(found);
-//               setLoading(false);
-//               return;
-//             }
-//           }
-//         }
-//       } catch (error) {
-//         console.error("Failed to fetch test kit details:", error);
-//       }
-
-//       setLoading(false);
-//     }
-
-//     if (slug) fetchTestKit();
-//   }, [slug]);
-
-//   useEffect(() => {
-//     if (testKitContent?.meta) {
-//       document.title = testKitContent.meta.title;
-
-//       const metaDescription = document.querySelector(
-//         'meta[name="description"]'
-//       );
-
-//       if (metaDescription) {
-//         metaDescription.setAttribute(
-//           "content",
-//           testKitContent.meta.description
-//         );
-//       }
-//     }
-//   }, [testKitContent]);
-
-//   if (loading) {
-//     return (
-//       <div className="min-h-screen bg-[#FFF8F5] pt-[110px] flex items-center justify-center">
-//         <div className="text-[#0d2d47]">{t?.loading || "Loading..."}</div>
-//       </div>
-//     );
-//   }
-
-//   if (!testKit && !testKitContent) {
-//     notFound();
-//   }
-
-//   const productTitle =
-//     testKitContent?.hero?.title || testKit?.product || "Test Kit";
-
-//   const productDescription =
-//     testKitContent?.hero?.description ||
-//     testKit?.description ||
-//     "Detailed product information will be shared on request.";
-
-//   return (
-//     <div className="min-h-screen bg-[#FFF8F5] pt-[110px]">
-//       <section className="fixed top-[72px] left-0 right-0 z-40 bg-white border-b border-gray-100 shadow-sm">
-//         <div className="mx-auto max-w-7xl px-6 md:px-16 py-3">
-//           <nav className="flex items-center text-sm text-gray-500 gap-2 flex-wrap">
-//             <Link href="/" className="hover:text-[#0d2d47] transition">
-//               {t?.home || "Home"}
-//             </Link>
-
-//             <span className="text-gray-300">/</span>
-
-//             <Link href="/test-kits" className="hover:text-[#0d2d47] transition">
-//               {t?.testKits || "Test Kits"}
-//             </Link>
-
-//             <span className="text-gray-300">/</span>
-
-//             <span className="font-semibold text-[#0d2d47] truncate max-w-[250px]">
-//               {productTitle}
-//             </span>
-//           </nav>
-//         </div>
-//       </section>
-
-//       <section className="mx-auto max-w-7xl px-6 py-14 md:px-16 md:py-20">
-//         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] mb-12">
-//           <div>
-//             <div className="inline-flex rounded-full border border-[#19a6b5]/20 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#0d2d47] shadow-sm">
-//               {testKitContent?.hero?.badge || t?.badge || "Diagnostic Test Kit"}
-//             </div>
-
-//             <h1 className="mt-5 text-4xl font-bold leading-tight text-[#0d2d47] md:text-5xl">
-//               {productTitle}
-//             </h1>
-
-//             {Array.isArray(productDescription) ? (
-//               <div className="mt-5 space-y-4">
-//                 {productDescription.map((para, idx) => (
-//                   <p
-//                     key={idx}
-//                     className="text-base leading-8 text-gray-700 md:text-lg"
-//                   >
-//                     {para}
-//                   </p>
-//                 ))}
-//               </div>
-//             ) : (
-//               <p className="mt-5 max-w-3xl text-base leading-8 text-gray-700 md:text-lg">
-//                 {productDescription}
-//               </p>
-//             )}
-
-//             <div className="mt-8 flex flex-wrap gap-3">
-//               <span className="rounded-full bg-[#0d2d47] px-4 py-2 text-sm font-semibold text-white">
-//                 {testKit?.category ||
-//                   testKitContent?.content?.productOverview?.details?.find(
-//                     (x) => x.label === "Category"
-//                   )?.value ||
-//                   "Category Pending"}
-//               </span>
-
-//               {(testKit?.certificate || testKitContent?.certificate) && (
-//                 <span className="rounded-full border border-[#FF7A00]/35 bg-white px-4 py-2 text-sm font-semibold text-[#0d2d47]">
-//                   {testKit?.certificate || testKitContent?.certificate}
-//                 </span>
-//               )}
-//             </div>
-
-//             <div className="mt-10 flex flex-wrap gap-4">
-//               <Link
-//                 href="/contact"
-//                 className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-[#FF7A00] to-[#E2004F] px-6 py-3 font-semibold text-white shadow-lg transition hover:opacity-90"
-//               >
-//                 {t?.requestInfo || "Request Information"}
-//               </Link>
-
-//               <Link
-//                 href="/test-kits"
-//                 className="inline-flex items-center justify-center rounded-xl border border-[#0d2d47]/15 bg-white px-6 py-3 font-semibold text-[#0d2d47] shadow-sm transition hover:bg-[#f8fbfd]"
-//               >
-//                 {t?.backButton || "Back To Test Kits"}
-//               </Link>
-//             </div>
-//           </div>
-
-//           <div className="rounded-[28px] border border-[#0d2d47]/10 bg-white p-6 shadow-[0_18px_45px_rgba(15,23,42,0.08)]">
-//             <div className="text-sm font-semibold uppercase tracking-[0.2em] text-[#0d2d47]/55">
-//               {t?.productDetails || "Product Details"}
-//             </div>
-
-//             <div className="mt-6 grid gap-4">
-//               <DetailRow
-//                 label={t?.method || "Method"}
-//                 value={
-//                   testKit?.method ||
-//                   testKitContent?.content?.productOverview?.details?.find(
-//                     (x) => x.label === "Method"
-//                   )?.value
-//                 }
-//               />
-
-//               <DetailRow
-//                 label={t?.specimen || "Specimen"}
-//                 value={
-//                   testKit?.specimen ||
-//                   testKitContent?.content?.productOverview?.details?.find(
-//                     (x) => x.label === "Specimen"
-//                   )?.value
-//                 }
-//               />
-
-//               <DetailRow
-//                 label={t?.cutOff || "Cut-Off"}
-//                 value={
-//                   testKit?.cut_off ||
-//                   testKitContent?.content?.productOverview?.details?.find(
-//                     (x) => x.label === "Cut-off"
-//                   )?.value ||
-//                   testKitContent?.content?.productOverview?.details?.find(
-//                     (x) => x.label === "Cut-Off"
-//                   )?.value
-//                 }
-//               />
-
-//               <DetailRow
-//                 label={t?.certificate || "Certificate"}
-//                 value={testKit?.certificate}
-//               />
-//             </div>
-//           </div>
-//         </div>
-
-//         {testKitContent?.content && (
-//           <div className="mt-12 border-t border-[#0d2d47]/10 pt-12">
-//             {Object.entries(testKitContent.content).map(([key, section]) => (
-//               <RenderSection key={key} section={section} />
-//             ))}
-//           </div>
-//         )}
-
-//         {testKitContent?.faqs && <FAQSection faqs={testKitContent.faqs} />}
-//       </section>
-
-//       {testKitContent?.faqSchema && (
-//         <script
-//           type="application/ld+json"
-//           dangerouslySetInnerHTML={{
-//             __html: JSON.stringify(testKitContent.faqSchema),
-//           }}
-//         />
-//       )}
-//     </div>
-//   );
-// }
-
-//app\test-kits\[slug]\page.jsx
+// app/test-kits/[slug]/page.jsx
 "use client";
 
 import Link from "next/link";
 import { notFound, useParams } from "next/navigation";
-import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useMemo, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { getFallbackTestKits } from "@/lib/catalogFallback";
 
-function RenderSection({ section }) {
-  if (!section) return null;
+function formatLabel(key = "") {
+  return key
+    .replace(/([A-Z])/g, " $1")
+    .replace(/[_-]/g, " ")
+    .replace(/\b\w/g, (c) => c.toUpperCase());
+}
 
-  const listKeys = [
-    "applications",
-    "benefits",
-    "guidance",
-    "instructions",
-    "advantages",
-    "steps",
-  ];
+function RenderPlain({ value }) {
+  if (!value) return "-";
+
+  if (Array.isArray(value)) {
+    return value.map((item) => RenderPlain({ value: item })).join(", ");
+  }
+
+  if (typeof value === "object") {
+    return Object.entries(value)
+      .map(([key, val]) => `${formatLabel(key)}: ${RenderPlain({ value: val })}`)
+      .join(", ");
+  }
+
+  return String(value);
+}
+
+function RenderContent({ value }) {
+  if (!value) return <p className="break-words text-sm text-[#475569]">-</p>;
+
+  if (Array.isArray(value)) {
+    return (
+      <ul className="mt-3 list-disc space-y-1.5 break-words pl-5 text-sm leading-relaxed text-[#475569] marker:text-[#19a6b5]">
+        {value.map((item, index) => (
+          <li key={index}>
+            {typeof item === "object" ? (
+              <RenderContent value={item} />
+            ) : (
+              String(item)
+            )}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
+  if (typeof value === "object") {
+    return (
+      <div className="mt-4 grid min-w-0 gap-3 sm:grid-cols-2">
+        {Object.entries(value).map(([key, val]) => (
+          <div
+            key={key}
+            className="min-w-0 rounded-lg bg-[#FFF8F5] p-3 ring-1 ring-[#f2d8cd]"
+          >
+            <p className="break-words text-xs font-bold uppercase tracking-wider text-[#0d2d47]">
+              {formatLabel(key)}
+            </p>
+            <div className="mt-1 min-w-0">
+              <RenderContent value={val} />
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  }
 
   return (
-    <section className="border-b border-[#0d2d47]/10 py-10 last:border-b-0">
-      {section.title && (
-        <h2 className="mb-5 text-3xl font-bold uppercase leading-tight text-[#0d2d47]">
-          {section.title}
-        </h2>
-      )}
+    <p className="mt-3 break-words text-sm leading-relaxed text-[#475569] sm:text-base">
+      {String(value)}
+    </p>
+  );
+}
 
-      {section.description && (
-        <p className="mb-4 text-base leading-8 text-[#0d2d47]/72">
-          {section.description}
-        </p>
-      )}
+function InfoCard({ label, value }) {
+  return (
+    <div className="min-w-0 rounded-lg bg-[#FFF8F5] p-3 ring-1 ring-[#f2d8cd]">
+      <p className="break-words text-[11px] font-bold uppercase tracking-[0.08em] text-[#5c7390]">
+        {label}
+      </p>
+      <p className="mt-1 break-words text-sm font-semibold text-[#0d2d47]">
+        <RenderPlain value={value} />
+      </p>
+    </div>
+  );
+}
 
-      {section.content && (
-        <p className="mb-4 text-base leading-8 text-[#0d2d47]/72">
-          {section.content}
-        </p>
-      )}
-
-      {Array.isArray(section.sections) && (
-        <div className="space-y-4">
-          {section.sections.map((item, idx) => (
-            <p key={idx} className="text-base leading-8 text-[#0d2d47]/72">
-              {item}
-            </p>
-          ))}
-        </div>
-      )}
-
-      {Array.isArray(section.details) && (
-        <div className="mt-6 grid gap-4 sm:grid-cols-2">
-          {section.details.map((item, idx) => (
-            <div key={idx} className="border-l-2 border-[#19a6b5] pl-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#0d2d47]/45">
-                {item.label}
-              </p>
-              <p className="mt-1 text-sm font-semibold text-[#0d2d47]/80">
-                {item.value}
-              </p>
-            </div>
-          ))}
-        </div>
-      )}
-
-      {listKeys.map((key) =>
-        Array.isArray(section[key]) ? (
-          <ul key={key} className="mt-6 space-y-3">
-            {section[key].map((item, idx) => (
-              <li
-                key={idx}
-                className="flex gap-3 text-base leading-7 text-[#0d2d47]/72"
-              >
-                <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#19a6b5]" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        ) : null
-      )}
-
-      {section.positive && (
-        <p className="mt-5 text-[#0d2d47]/75">
-          <span className="font-semibold text-green-600">Positive:</span>{" "}
-          {section.positive}
-        </p>
-      )}
-
-      {section.negative && (
-        <p className="mt-5 text-[#0d2d47]/75">
-          <span className="font-semibold text-blue-600">Negative:</span>{" "}
-          {section.negative}
-        </p>
-      )}
-
-      {section.invalid && (
-        <p className="mt-5 text-[#0d2d47]/75">
-          <span className="font-semibold text-red-600">Invalid:</span>{" "}
-          {section.invalid}
-        </p>
-      )}
-
-      {section.note && (
-        <p className="mt-6 border-l-2 border-[#FF7A00] pl-4 text-sm italic text-[#0d2d47]/60">
-          {section.note}
-        </p>
-      )}
-    </section>
+function SectionNav({ sections }) {
+  return (
+    <nav className="min-w-0 space-y-1">
+      {sections.map((item) => (
+        <a
+          key={item.id}
+          href={`#${item.id}`}
+          className="block rounded-lg px-3 py-2 text-sm font-semibold text-[#475569] transition hover:bg-[#FFF8F5] hover:text-[#19a6b5] break-words"
+        >
+          {item.title}
+        </a>
+      ))}
+    </nav>
   );
 }
 
 function FAQSection({ faqs }) {
-  const [openIndex, setOpenIndex] = useState(null);
-
   if (!faqs || faqs.length === 0) return null;
 
   return (
-    <section className="mt-16">
-      <div className="mb-8">
-        <p className="mb-4 inline-flex rounded-full bg-[#0d2d47] px-5 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white">
-          FAQ
-        </p>
+    <section id="faq" className="mt-6 scroll-mt-24 border-t border-[#f2d8cd] pt-6">
+      <h3 className="text-xl font-bold text-[#0d2d47]">
+        Frequently Asked Questions
+      </h3>
 
-        <h2 className="text-3xl font-bold uppercase leading-tight text-[#0d2d47] md:text-5xl">
-          Frequently Asked Questions
-        </h2>
-      </div>
+      <p className="mt-1 text-sm text-[#64748b]">
+        Click any question to expand the answer.
+      </p>
 
-      <div className="space-y-3">
-        {faqs.map((faq, idx) => {
-          const isOpen = openIndex === idx;
+      <div className="mt-4 space-y-3">
+        {faqs.map((faq, index) => (
+          <details
+            key={`faq-${index}`}
+            className="group rounded-lg bg-[#FFF8F5] p-4 ring-1 ring-[#f2d8cd]"
+          >
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-semibold text-[#0d2d47]">
+              <span className="min-w-0 break-words">{faq.question}</span>
+              <span className="text-[#19a6b5] group-open:hidden">+</span>
+              <span className="hidden text-[#19a6b5] group-open:block">-</span>
+            </summary>
 
-          return (
-            <div
-              key={idx}
-              className="border-b border-[#0d2d47]/10 last:border-b-0"
-            >
-              <button
-                type="button"
-                onClick={() => setOpenIndex(isOpen ? null : idx)}
-                className="flex w-full cursor-pointer items-center justify-between gap-4 py-5 text-left"
-              >
-                <span className="text-lg font-semibold text-[#0d2d47]">
-                  {faq.question}
-                </span>
-
-                <span
-                  className={`flex h-9 w-9 shrink-0 cursor-pointer items-center justify-center rounded-full text-xl font-semibold transition-all duration-300 ${
-                    isOpen
-                      ? "rotate-180 bg-[#19a6b5] text-white"
-                      : "bg-[#19a6b5]/10 text-[#19a6b5]"
-                  }`}
-                >
-                  {isOpen ? "−" : "+"}
-                </span>
-              </button>
-
-              <AnimatePresence initial={false}>
-                {isOpen && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{
-                      duration: 0.3,
-                      ease: [0.22, 1, 0.36, 1],
-                    }}
-                    className="overflow-hidden"
-                  >
-                    <div className="pb-5 text-base leading-8 text-[#0d2d47]/72">
-                      {faq.answer}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+            <div className="grid grid-rows-[0fr] transition-all duration-300 ease-in-out group-open:grid-rows-[1fr]">
+              <div className="overflow-hidden">
+                <div className="mt-3 border-t border-[#f2d8cd] pt-3">
+                  <RenderContent value={faq.answer} />
+                </div>
+              </div>
             </div>
-          );
-        })}
+          </details>
+        ))}
       </div>
     </section>
   );
@@ -644,44 +147,28 @@ export default function TestKitDetailPage() {
   const params = useParams();
   const slug = params.slug;
 
-  const { translations } = useLanguage();
+  const { translations, language } = useLanguage();
   const t = translations?.testKitDetailPage;
-  const testKitContent = translations?.testKits?.[slug];
 
   const [testKit, setTestKit] = useState(null);
+  const [detailContent, setDetailContent] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchTestKit() {
-      const fallbackTestKit = getFallbackTestKits().find(
-        (item) => item.slug?.trim() === slug
-      );
-
-      if (fallbackTestKit) {
-        setTestKit(fallbackTestKit);
-        setLoading(false);
-        return;
-      }
-
       try {
-        const res = await fetch("/api/testkits");
+        const res = await fetch(`/api/testkits/${slug}`);
 
         if (res.ok) {
           const data = await res.json();
 
-          if (Array.isArray(data)) {
-            const found = data.find((item) => item?.slug?.trim() === slug);
-
-            if (found) {
-              setTestKit(found);
-              setLoading(false);
-              return;
-            }
+          if (data && !data.error) {
+            setTestKit(data);
+            setLoading(false);
+            return;
           }
         }
-      } catch (error) {
-        console.error("Failed to fetch test kit details:", error);
-      }
+      } catch (error) {}
 
       setLoading(false);
     }
@@ -690,21 +177,150 @@ export default function TestKitDetailPage() {
   }, [slug]);
 
   useEffect(() => {
-    if (testKitContent?.meta) {
-      document.title = testKitContent.meta.title;
+    if (!slug) return;
 
-      const metaDescription = document.querySelector(
-        'meta[name="description"]'
-      );
+    let cancelled = false;
+    const activeLanguage = language || "en";
 
-      if (metaDescription) {
-        metaDescription.setAttribute(
-          "content",
-          testKitContent.meta.description
+    async function loadDetailContent() {
+      try {
+        const res = await fetch(
+          `/api/testkits/${slug}/content?language=${activeLanguage}`
         );
+
+        if (!res.ok) {
+          if (!cancelled) setDetailContent({});
+          return;
+        }
+
+        const data = await res.json();
+
+        if (!cancelled) setDetailContent(data);
+      } catch (error) {
+        if (!cancelled) setDetailContent({});
       }
     }
-  }, [testKitContent]);
+
+    loadDetailContent();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [slug, language]);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [slug]);
+
+  useEffect(() => {
+    const title = detailContent?.meta?.title || testKit?.product;
+
+    if (title) {
+      document.title = title;
+    }
+
+    if (detailContent?.meta?.description) {
+      let metaDescription = document.querySelector('meta[name="description"]');
+
+      if (!metaDescription) {
+        metaDescription = document.createElement("meta");
+        metaDescription.setAttribute("name", "description");
+        document.head.appendChild(metaDescription);
+      }
+
+      metaDescription.setAttribute("content", detailContent.meta.description);
+    }
+  }, [detailContent, testKit]);
+
+  const content = detailContent?.content || testKit?.content || {};
+  const hero = detailContent?.hero || testKit?.hero || {};
+  const meta = detailContent?.meta || testKit?.meta || {};
+  const faqs = Array.isArray(detailContent?.faqs)
+    ? detailContent.faqs
+    : Array.isArray(testKit?.faqs)
+      ? testKit.faqs
+      : [];
+
+  const productTitle = hero.title || testKit?.product || "Test Kit";
+
+  const productDescription =
+    hero.description ||
+    testKit?.description ||
+    "Detailed product information will be shared on request.";
+
+  const getDetailValue = (label) =>
+    content?.productOverview?.details?.find(
+      (item) => item.label?.toLowerCase() === label.toLowerCase()
+    )?.value;
+
+  const category = testKit?.category || getDetailValue("Category");
+  const method = testKit?.method || getDetailValue("Method");
+  const specimen = testKit?.specimen || getDetailValue("Specimen");
+  const cutOff =
+    testKit?.cut_off || getDetailValue("Cut-off") || getDetailValue("Cut-Off");
+  const certificate = testKit?.certificate || testKit?.Certificate;
+
+  const topInfo = [
+    ["Product Name", productTitle],
+    ["Category", category],
+    ["Method", method],
+    ["Specimen", specimen],
+    ["Cut-Off", cutOff],
+    ["Certificate", certificate],
+  ].filter(([, value]) => value);
+
+  const technicalInfo = [
+    ["Product", testKit?.product],
+    ["Description", testKit?.description],
+    ["Category", testKit?.category],
+    ["Method", testKit?.method],
+    ["Specimen", testKit?.specimen],
+    ["Cut-Off", testKit?.cut_off],
+    ["Certificate", testKit?.certificate],
+    ...Object.entries(meta).map(([key, value]) => [formatLabel(key), value]),
+  ].filter(([, value]) => value);
+
+  const contentBlocks = useMemo(() => {
+    const blocks = [];
+
+    if (hero && Object.keys(hero).length > 0) {
+      blocks.push({
+        id: "hero",
+        title: "Hero Information",
+        value: hero,
+      });
+    }
+
+    if (meta && Object.keys(meta).length > 0) {
+      blocks.push({
+        id: "meta",
+        title: "Meta Information",
+        value: meta,
+      });
+    }
+
+    Object.entries(content)
+      .filter(([, value]) => value)
+      .forEach(([key, value]) => {
+        blocks.push({
+          id: key,
+          title: value?.title || formatLabel(key),
+          value,
+        });
+      });
+
+    return blocks;
+  }, [hero, meta, content]);
+
+  const navSections = [
+    { id: "key-information", title: "Key Information" },
+    { id: "technical-information", title: "Technical Information" },
+    ...contentBlocks.map((block) => ({
+      id: block.id,
+      title: block.title,
+    })),
+    ...(faqs.length > 0 ? [{ id: "faq", title: "FAQ" }] : []),
+  ];
 
   if (loading) {
     return (
@@ -714,177 +330,151 @@ export default function TestKitDetailPage() {
     );
   }
 
-  if (!testKit && !testKitContent) {
+  if (!testKit) {
     notFound();
   }
 
-  const productTitle =
-    testKitContent?.hero?.title || testKit?.product || "Test Kit";
-
-  const productDescription =
-    testKitContent?.hero?.description ||
-    testKit?.description ||
-    "Detailed product information will be shared on request.";
-
-  const category =
-    testKit?.category ||
-    testKitContent?.content?.productOverview?.details?.find(
-      (x) => x.label === "Category"
-    )?.value ||
-    "Category Pending";
-
-  const method =
-    testKit?.method ||
-    testKitContent?.content?.productOverview?.details?.find(
-      (x) => x.label === "Method"
-    )?.value;
-
-  const specimen =
-    testKit?.specimen ||
-    testKitContent?.content?.productOverview?.details?.find(
-      (x) => x.label === "Specimen"
-    )?.value;
-
-  const cutOff =
-    testKit?.cut_off ||
-    testKitContent?.content?.productOverview?.details?.find(
-      (x) => x.label === "Cut-off"
-    )?.value ||
-    testKitContent?.content?.productOverview?.details?.find(
-      (x) => x.label === "Cut-Off"
-    )?.value;
-
-  const certificate = testKit?.certificate || testKitContent?.certificate;
-
   return (
-    <main className="min-h-screen overflow-hidden bg-[#FFF8F5] text-[#0d2d47]">
-      <section className="fixed left-0 right-0 top-[72px] z-40 border-b border-[#0d2d47]/10 bg-white/85 shadow-sm backdrop-blur-xl">
-        <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 md:px-16">
-          <nav className="flex flex-wrap items-center gap-2 text-sm text-[#0d2d47]/55">
-            <Link href="/" className="cursor-pointer transition hover:text-[#0d2d47]">
-              {t?.home || "Home"}
-            </Link>
+    <main id="page-top" className="w-full overflow-x-hidden bg-[#FFF8F5] pb-12 pt-8 text-[#0d2d47]">
+      <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-[#f2d8cd]">
+          <div className="border-b border-[#f2d8cd] px-5 py-4 sm:px-8">
+            <nav className="flex min-w-0 flex-wrap items-center gap-2 text-sm text-[#6c7b8d]">
+              <Link href="/" className="hover:text-[#19a6b5]">
+                {t?.home || "Home"}
+              </Link>
 
-            <span className="text-[#0d2d47]/25">/</span>
+              <span>/</span>
 
-            <Link
-              href="/test-kits"
-              className="cursor-pointer transition hover:text-[#0d2d47]"
-            >
-              {t?.testKits || "Test Kits"}
-            </Link>
+              <Link href="/test-kits" className="hover:text-[#19a6b5]">
+                {t?.testKits || "Test Kits"}
+              </Link>
 
-            <span className="text-[#0d2d47]/25">/</span>
+              <span>/</span>
 
-            <span className="max-w-[240px] truncate font-semibold text-[#0d2d47]">
-              {productTitle}
-            </span>
-          </nav>
+              <span className="min-w-0 truncate font-semibold text-[#0d2d47]">
+                {productTitle}
+              </span>
+            </nav>
+          </div>
+
+          <div className="grid gap-8 p-5 sm:p-8 lg:grid-cols-[360px_1fr]">
+            <div className="flex min-h-[320px] min-w-0 items-center justify-center rounded-xl bg-[#FFF8F5] p-4 ring-1 ring-[#f2d8cd]">
+              <div className="flex h-44 w-44 max-w-full items-center justify-center rounded-full bg-white text-center shadow-sm ring-1 ring-[#f2d8cd]">
+                <div>
+                  <p className="text-5xl font-black text-[#19a6b5]">+</p>
+                  <p className="mt-1 text-xs font-bold uppercase tracking-[0.18em] text-[#0d2d47]">
+                    Test Kit
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="min-w-0">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#19a6b5]">
+                {hero.badge || t?.badge || "Diagnostic Test Kit"}
+              </p>
+
+              <h1 className="mt-3 break-words text-3xl font-bold leading-tight text-[#0d2d47] sm:text-4xl">
+                {productTitle}
+              </h1>
+
+              <RenderContent value={productDescription} />
+
+              {topInfo.length > 0 && (
+                <div className="mt-6 grid min-w-0 gap-3 sm:grid-cols-2">
+                  {topInfo.slice(0, 4).map(([label, value], idx) => (
+                    <InfoCard key={`${label}-${idx}`} label={label} value={value} />
+                  ))}
+                </div>
+              )}
+
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Link
+                  href="/contact"
+                  className="inline-flex max-w-full justify-center rounded-full bg-[#0d2d47] px-7 py-3 text-center text-sm font-semibold text-white shadow-md transition hover:bg-[#19a6b5]"
+                >
+                  {t?.requestInfo || "Request Information"}
+                </Link>
+
+                <Link
+                  href="/test-kits"
+                  className="inline-flex max-w-full justify-center rounded-full border border-[#f2d8cd] bg-[#FFF8F5] px-7 py-3 text-center text-sm font-semibold text-[#0d2d47] transition hover:border-[#19a6b5] hover:text-[#19a6b5]"
+                >
+                  {t?.backButton || "Back To Test Kits"}
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section
-        className="relative px-4 pb-14 pt-[150px] sm:px-6 md:px-16 md:pb-20"
-        style={{
-          background:
-            "linear-gradient(135deg, #FFF8F5 0%, #EAEBDB 35%, #C4CFE3 72%, #8EA5F1 100%)",
-        }}
-      >
-        <div className="pointer-events-none absolute left-[-120px] top-20 h-[320px] w-[320px] rounded-full bg-[#19a6b5]/15 blur-3xl" />
-        <div className="pointer-events-none absolute bottom-[-140px] right-[-140px] h-[360px] w-[360px] rounded-full bg-[#FF7A00]/10 blur-3xl" />
+      <section className="mx-auto mt-6 grid w-full max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-[220px_minmax(0,1fr)] lg:px-8">
+       <aside className="min-w-0 h-fit rounded-xl bg-white p-4 shadow-sm ring-1 ring-[#f2d8cd] lg:sticky lg:top-24 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto">
+          <SectionNav sections={navSections} />
+        </aside>
 
-        <div className="relative mx-auto max-w-6xl">
-          <p className="mb-5 inline-flex rounded-full border border-[#0d2d47]/10 bg-white/35 px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] backdrop-blur-md">
-            {testKitContent?.hero?.badge || t?.badge || "Diagnostic Test Kit"}
-          </p>
+        <div className="min-w-0 rounded-xl bg-white p-5 shadow-sm ring-1 ring-[#f2d8cd] sm:p-6">
+          {topInfo.length > 0 && (
+            <section id="key-information" className="scroll-mt-24">
+              <h2 className="text-sm font-bold uppercase tracking-[0.1em] text-[#0d2d47]">
+                Key Information
+              </h2>
 
-          <h1 className="max-w-5xl text-[38px] font-bold uppercase leading-[0.95] tracking-tight text-[#0d2d47] sm:text-5xl md:text-[72px]">
-            {productTitle}
-          </h1>
-
-          {Array.isArray(productDescription) ? (
-            <div className="mt-6 max-w-4xl space-y-4">
-              {productDescription.map((para, idx) => (
-                <p
-                  key={idx}
-                  className="text-base leading-8 text-[#0d2d47]/72 md:text-lg"
-                >
-                  {para}
-                </p>
-              ))}
-            </div>
-          ) : (
-            <p className="mt-6 max-w-4xl text-base leading-8 text-[#0d2d47]/72 md:text-lg">
-              {productDescription}
-            </p>
+              <div className="mt-3 grid min-w-0 gap-3 sm:grid-cols-2">
+                {topInfo.map(([label, value], idx) => (
+                  <InfoCard key={`${label}-${idx}`} label={label} value={value} />
+                ))}
+              </div>
+            </section>
           )}
 
-          <div className="mt-8 flex flex-wrap gap-3">
-            {[category, method, specimen, cutOff, certificate]
-              .filter(Boolean)
-              .map((item) => (
-                <span
-                  key={item}
-                  className="rounded-full border border-[#0d2d47]/10 bg-white/35 px-4 py-2 text-sm font-semibold text-[#0d2d47] backdrop-blur-md"
-                >
-                  {item}
-                </span>
-              ))}
-          </div>
-
-          <div className="mt-9 flex flex-wrap gap-4">
-            <Link
-              href="/contact"
-              className="inline-flex cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#FF7A00] to-[#E2004F] px-7 py-3 text-sm font-semibold text-white shadow-lg transition hover:opacity-90"
+          {technicalInfo.length > 0 && (
+            <section
+              id="technical-information"
+              className="mt-6 scroll-mt-24 border-t border-[#f2d8cd] pt-6"
             >
-              {t?.requestInfo || "Request Information"}
-            </Link>
+              <div className="break-words border-b border-[#f2d8cd] bg-[#FFF8F5] px-5 py-3 text-sm font-bold uppercase tracking-[0.1em] text-[#0d2d47]">
+                Technical Information
+              </div>
 
-            <Link
-              href="/test-kits"
-              className="inline-flex cursor-pointer items-center justify-center rounded-full border border-[#0d2d47]/15 bg-white/35 px-7 py-3 text-sm font-semibold text-[#0d2d47] backdrop-blur-md transition hover:bg-white/60"
+              <div className="max-w-full overflow-x-auto">
+                <table className="w-full table-fixed divide-y divide-[#f2d8cd]">
+                  <tbody className="divide-y divide-[#f2d8cd]">
+                    {technicalInfo.map(([label, value], idx) => (
+                      <tr key={`${label}-${idx}`} className="bg-white odd:bg-[#fffdfc]">
+                        <td className="w-28 break-words px-3 py-3 text-sm font-semibold text-[#0d2d47] sm:w-56 sm:px-5">
+                          {label}
+                        </td>
+                        <td className="break-words px-3 py-3 text-sm text-[#334155] sm:px-5">
+                          <RenderPlain value={value} />
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          )}
+
+          {contentBlocks.map((block, index) => (
+            <section
+              id={block.id}
+              key={`${block.id}-${index}`}
+              className="mt-6 scroll-mt-24 border-t border-[#f2d8cd] pt-6"
             >
-              {t?.backButton || "Back To Test Kits"}
-            </Link>
-          </div>
+              <h3 className="break-words text-xl font-bold text-[#0d2d47]">
+                {block.title}
+              </h3>
+
+              <RenderContent value={block.value} />
+            </section>
+          ))}
+
+          <FAQSection faqs={faqs} />
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-4 py-12 sm:px-6 md:px-10 md:py-16">
-        {testKitContent?.content && (
-          <div>
-            {Object.entries(testKitContent.content).map(([key, section]) => (
-              <RenderSection key={key} section={section} />
-            ))}
-          </div>
-        )}
-
-        {testKitContent?.faqs && <FAQSection faqs={testKitContent.faqs} />}
-      </section>
-
-      {testKitContent?.faqSchema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(testKitContent.faqSchema),
-          }}
-        />
-      )}
     </main>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -18,6 +18,10 @@ const t = translations?.testKitsPage;
   const [specimen, setSpecimen] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, []);
+
   function openTestKitPath(event, path) {
     if (event.ctrlKey || event.metaKey) {
       window.open(path, "_blank", "noopener,noreferrer");
@@ -70,7 +74,6 @@ const t = translations?.testKitsPage;
           return;
         }
 
-        console.error(err);
       setError(t?.error || "Test kits are temporarily unavailable...");
       } finally {
         if (!cancelled) {

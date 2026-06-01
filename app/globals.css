@@ -204,7 +204,18 @@ body {
     transform: translateY(0);
   }
 }
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 
 

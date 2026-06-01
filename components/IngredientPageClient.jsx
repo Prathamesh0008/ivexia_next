@@ -23,7 +23,11 @@ const { translations } = useLanguage();
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(12);
   const gridRef = useRef(null);
+  const didMountRef = useRef(false);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, []);
 
   useEffect(() => {
     function updatePageSize() {
@@ -45,6 +49,11 @@ const { translations } = useLanguage();
   }, []);
 
   useEffect(() => {
+    if (!didMountRef.current) {
+      didMountRef.current = true;
+      return;
+    }
+
     if (!gridRef.current) {
       return;
     }

@@ -2,16 +2,9 @@
 import { notFound } from "next/navigation";
 
 import ProductDetailClient from "@/components/ProductDetailClient";
-import { getFallbackProducts } from "@/lib/catalogFallback";
 import { getProductContent } from "@/lib/productContent";
 
 async function getProduct(slug) {
-  const fallbackProduct = getFallbackProducts().find((item) => item.slug === slug);
-
-  if (fallbackProduct) {
-    return fallbackProduct;
-  }
-
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
     ? process.env.NEXT_PUBLIC_SITE_URL
     : process.env.VERCEL_URL
@@ -29,7 +22,6 @@ async function getProduct(slug) {
 
     return res.json();
   } catch (error) {
-    console.error("Failed to fetch product details:", error);
     return null;
   }
 }

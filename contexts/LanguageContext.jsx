@@ -10,7 +10,6 @@ import {
 } from "react";
 
 import enSiteTranslations from "@/data1/languages/en";
-import * as enTestKitModule from "@/data3/languages/en";
 
 const LanguageContext = createContext(null);
 
@@ -18,29 +17,7 @@ function getModuleData(module, langCode) {
   return module?.default || module?.[langCode] || {};
 }
 
-function mergeTranslations(siteTranslations = {}, testKitTranslations = {}) {
-  return {
-    ...siteTranslations,
-    ...testKitTranslations,
-
-    testKits: {
-      ...(siteTranslations.testKits || {}),
-      ...(testKitTranslations.testKits || {}),
-    },
-
-    testKitDetailPage: {
-      ...(siteTranslations.testKitDetailPage || {}),
-      ...(testKitTranslations.testKitDetailPage || {}),
-    },
-  };
-}
-
-const enTestKitTranslations = getModuleData(enTestKitModule, "en");
-
-const fallbackTranslations = mergeTranslations(
-  enSiteTranslations,
-  enTestKitTranslations
-);
+const fallbackTranslations = enSiteTranslations;
 
 export function LanguageProvider({ children }) {
   const [language, setLanguage] = useState("en");
@@ -52,36 +29,15 @@ export function LanguageProvider({ children }) {
 
     try {
       const siteModule = await import(`@/data1/languages/${langCode}.js`);
-
-      let testKitModule = null;
-
-      try {
-        testKitModule = await import(`@/data3/languages/${langCode}.js`);
-      } catch (testKitError) {
-        console.warn(
-          `No test kit language file found for ${langCode}, using English test kit data.`
-        );
-
-        testKitModule = enTestKitModule;
-      }
-
       const siteTranslations = getModuleData(siteModule, langCode);
-      const testKitTranslations = getModuleData(testKitModule, langCode);
 
-      const mergedTranslations = mergeTranslations(
-        siteTranslations,
-        testKitTranslations
-      );
-
-      setTranslations(mergedTranslations);
+      setTranslations(siteTranslations);
       setLanguage(langCode);
 
       localStorage.setItem("ivexia-lang", langCode);
       document.documentElement.lang = langCode;
-      document.documentElement.dir = mergedTranslations?.dir || "ltr";
+      document.documentElement.dir = siteTranslations?.dir || "ltr";
     } catch (error) {
-      console.error("Language load failed", error);
-
       setTranslations(fallbackTranslations);
       setLanguage("en");
 

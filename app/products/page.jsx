@@ -1,6 +1,5 @@
 //ivexia\app\products\page.jsx
 import ProductsPageClient from "@/components/ProductsPageClient";
-import { getFallbackProducts, getFallbackTestKits } from "@/lib/catalogFallback";
 import { getProductMetaMap } from "@/lib/productContent";
 
 export default async function ProductsPage() {
@@ -8,8 +7,8 @@ export default async function ProductsPage() {
 
   return (
     <ProductsPageClient
-      initialProducts={getFallbackProducts()}
-      initialTestKits={getFallbackTestKits()}
+      initialProducts={[]}
+      initialTestKits={[]}
       initialProductMetaMap={productMetaMap}
     />
   );

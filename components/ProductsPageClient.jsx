@@ -109,6 +109,10 @@ const testKitsLabel = t?.testKitsLabel || "TEST KITS";
   const [dosage, setDosage] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, []);
+
   function openProductPath(event, path) {
     if (event.ctrlKey || event.metaKey) {
       window.open(path, "_blank", "noopener,noreferrer");
@@ -135,9 +139,7 @@ const testKitsLabel = t?.testKitsLabel || "TEST KITS";
         if (!cancelled) {
           setProductMetaMap(data);
         }
-      } catch (error) {
-        console.error("Product metadata load failed", error);
-      }
+      } catch (error) {}
     }
 
     loadProductMetadata();
@@ -201,8 +203,6 @@ const testKitsLabel = t?.testKitsLabel || "TEST KITS";
 
       if (testKitsResult.status === "fulfilled") {
         setTestKits(testKitsResult.value);
-      } else {
-        console.error(testKitsResult.reason);
       }
 
       setLoading(false);
@@ -214,7 +214,6 @@ const testKitsLabel = t?.testKitsLabel || "TEST KITS";
         return;
       }
 
-      console.error(err);
      setError(
   t?.error || "Products are temporarily unavailable. Please try again shortly."
 );
