@@ -11,6 +11,8 @@ const { default: TestKit } = await import("../models/TestKit.js");
 const { default: Product } = await import("../models/Product.js");
 
 function normalizeSeedProduct(product) {
+  const casId = product.casId || product["CAS-ID"] || "";
+
   return {
     category: product.category || "",
     name: product.name || "",
@@ -18,13 +20,17 @@ function normalizeSeedProduct(product) {
     form: product.form || "",
     packSize: product.packSize || product["PACK SIZE"] || "",
     type: product.type || product["TYPE OF FORMLN"] || "",
-    casId: (product.casId || product["CAS-ID"] || "").trim(),
+    casId: Array.isArray(casId)
+      ? casId
+      : String(casId)
+          .split(",")
+          .map((item) => item.trim())
+          .filter(Boolean),
     slug: product.slug || "",
   };
 }
 
 console.log("🚀 Starting seed...");
-console.log("ENV:", process.env.MONGODB_URI); // debug
 
 await dbConnect();
 console.log("✅ DB connected");

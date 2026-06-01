@@ -7,7 +7,9 @@
     "build": "next build ",
     "start": "next start",
     "lint": "eslint",
+    "seed:catalog": "node scripts/seed.js",
     "seed:translations": "node scripts/seedTranslations.js",
+    "seed:all": "npm run seed:catalog && npm run seed:translations",
     "check:translations": "node scripts/checkTranslations.js"
   },
   "dependencies": {

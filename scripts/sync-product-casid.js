@@ -1,4 +1,4 @@
-//ivexia\scripts\sync-product-casid.js
+// scripts/sync-product-casid.js
 import dotenv from "dotenv";
 dotenv.config({ path: ".env.local" });
 
@@ -17,10 +17,12 @@ function normalizeSeedProduct(product) {
     type: product.type || product["TYPE OF FORMLN"] || "",
     casId: (product.casId || product["CAS-ID"] || "").trim(),
     slug: product.slug || "",
+    image: product.image || "/images/medicineproduct.jpg",
+    description: product.description || "",
   };
 }
 
-console.log("Starting CAS-ID sync...");
+console.log("Starting PRODUCT sync...");
 
 await dbConnect();
 
@@ -28,36 +30,28 @@ const sourceProducts = FINISHED_PRODUCTS.map(normalizeSeedProduct).filter(
   (product) => product.slug
 );
 
+console.log("Source products:", sourceProducts.length);
+console.log("First product:", sourceProducts[0]);
+
+let insertedCount = 0;
 let updatedCount = 0;
+let matchedCount = 0;
 
 for (const sourceProduct of sourceProducts) {
-  const update = {};
+  const result = await Product.updateOne(
+    { slug: sourceProduct.slug },
+    { $set: sourceProduct },
+    { upsert: true }
+  );
 
-  if (sourceProduct.casId) {
-    update.casId = sourceProduct.casId;
-  }
-
-  if (sourceProduct.packSize) {
-    update.packSize = sourceProduct.packSize;
-  }
-
-  if (sourceProduct.type) {
-    update.type = sourceProduct.type;
-  }
-
-  if (Object.keys(update).length === 0) {
-    continue;
-  }
-
-const result = await Product.updateOne(
-  { slug: sourceProduct.slug },
-  { $set: sourceProduct },
-  { upsert: true }
-);
-  if (result.modifiedCount > 0) {
-    updatedCount += 1;
-  }
+  matchedCount += result.matchedCount || 0;
+  updatedCount += result.modifiedCount || 0;
+  insertedCount += result.upsertedCount || 0;
 }
 
-console.log(`CAS-ID sync complete. Updated ${updatedCount} products.`);
+console.log("Matched:", matchedCount);
+console.log("Updated:", updatedCount);
+console.log("Inserted:", insertedCount);
+console.log("Total in Mongo:", await Product.countDocuments());
+
 process.exit();
