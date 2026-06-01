@@ -49,11 +49,11 @@ for (const sourceProduct of sourceProducts) {
     continue;
   }
 
-  const result = await Product.updateOne(
-    { slug: sourceProduct.slug },
-    { $set: update }
-  );
-
+const result = await Product.updateOne(
+  { slug: sourceProduct.slug },
+  { $set: sourceProduct },
+  { upsert: true }
+);
   if (result.modifiedCount > 0) {
     updatedCount += 1;
   }
