@@ -2,6 +2,7 @@
 "use client";
 
 import Link from "next/link";
+import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -45,7 +46,11 @@ function RenderContent({ value }) {
       <ul className="mt-3 list-disc space-y-1.5 break-words pl-5 text-sm leading-relaxed text-[#475569] marker:text-[#19a6b5]">
         {value.map((item, index) => (
           <li key={index}>
-            {typeof item === "object" ? <RenderContent value={item} /> : String(item)}
+            {typeof item === "object" ? (
+              <RenderContent value={item} />
+            ) : (
+              String(item)
+            )}
           </li>
         ))}
       </ul>
@@ -142,8 +147,12 @@ export default function ProductDetailClient({
   initialProduct,
   initialProductData,
 }) {
-  const [product, setProduct] = useState(initialProduct);
+  const params = useParams();
+  const slug = params?.slug;
+
+  const [product, setProduct] = useState(initialProduct || null);
   const [productData, setProductData] = useState(initialProductData || {});
+  const [loading, setLoading] = useState(!initialProduct);
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [imageError, setImageError] = useState(false);
 
@@ -158,14 +167,14 @@ export default function ProductDetailClient({
   const UNDER_MAINTENANCE = false;
 
   useEffect(() => {
+    if (!slug) return;
+
     let cancelled = false;
 
     async function loadProductContent() {
-      if (!initialProduct?.slug) return;
-
       try {
         const res = await fetch(
-          `/api/products/${initialProduct.slug}/content?language=${language}`
+          `/api/products/${slug}/content?language=${language}`
         );
 
         if (!res.ok) {
@@ -174,8 +183,10 @@ export default function ProductDetailClient({
         }
 
         const data = await res.json();
-        if (!cancelled) setProductData(data);
-      } catch (error) {}
+        if (!cancelled) setProductData(data || {});
+      } catch (error) {
+        if (!cancelled) setProductData({});
+      }
     }
 
     loadProductContent();
@@ -183,24 +194,33 @@ export default function ProductDetailClient({
     return () => {
       cancelled = true;
     };
-  }, [initialProduct?.slug, language]);
+  }, [slug, language]);
 
   useEffect(() => {
-    if (!initialProduct?.slug) return;
+    if (!slug) return;
 
     let cancelled = false;
 
     async function refreshProduct() {
-      setIsRefreshing(true);
+      if (product) {
+        setIsRefreshing(true);
+      } else {
+        setLoading(true);
+      }
 
       try {
-        const res = await fetch(`/api/products/${initialProduct.slug}`);
+        const res = await fetch(`/api/products/${slug}`);
         const data = await res.json();
 
-        if (!cancelled && res.ok) setProduct(data);
+        if (!cancelled && res.ok && data && !data.error) {
+          setProduct(data);
+        }
       } catch (error) {
       } finally {
-        if (!cancelled) setIsRefreshing(false);
+        if (!cancelled) {
+          setLoading(false);
+          setIsRefreshing(false);
+        }
       }
     }
 
@@ -209,7 +229,7 @@ export default function ProductDetailClient({
     return () => {
       cancelled = true;
     };
-  }, [initialProduct]);
+  }, [slug]);
 
   useEffect(() => {
     const faqSchema = productData?.faqSchema || product?.faqSchema;
@@ -228,10 +248,12 @@ export default function ProductDetailClient({
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [initialProduct?.slug]);
+  }, [slug]);
 
   useEffect(() => {
-    setProductData(initialProductData || {});
+    if (initialProductData) {
+      setProductData(initialProductData);
+    }
   }, [initialProductData]);
 
   const hero = productData?.hero || product?.hero || {};
@@ -261,6 +283,16 @@ export default function ProductDetailClient({
 
   if (UNDER_MAINTENANCE) return <UnderMaintenancePage />;
 
+  if (loading) {
+    return (
+      <div className="flex min-h-[60vh] items-center justify-center bg-[#FFF8F5] px-4 text-center">
+        <p className="text-sm font-semibold text-[#0d2d47]">
+          {t?.loading || "Loading product..."}
+        </p>
+      </div>
+    );
+  }
+
   if (!product) {
     return (
       <div className="flex min-h-[60vh] items-center justify-center px-4 text-center">
@@ -283,9 +315,7 @@ export default function ProductDetailClient({
   const imgSrc = !imageError ? product.image || fallbackImage : fallbackImage;
   const productTitle = hero.title || product.name;
   const productDescription =
-    hero.description ||
-    product.description ||
-    content.introduction;
+    hero.description || product.description || content.introduction;
 
   const topInfo = [
     ["Product Name", productTitle],
@@ -296,11 +326,25 @@ export default function ProductDetailClient({
   ].filter(([, value]) => value);
 
   const technicalInfo = [
-    ...Object.entries(product || {}).map(([key, value]) => [formatLabel(key), value]),
-    ...Object.entries(meta || {}).map(([key, value]) => [formatLabel(key), value]),
+    ...Object.entries(product || {}).map(([key, value]) => [
+      formatLabel(key),
+      value,
+    ]),
+    ...Object.entries(meta || {}).map(([key, value]) => [
+      formatLabel(key),
+      value,
+    ]),
   ].filter(([label, value]) => {
     if (!value) return false;
-    return !["_id", "__v", "Hero", "Meta", "Content", "Faqs", "Faq Schema"].includes(label);
+    return ![
+      "_id",
+      "__v",
+      "Hero",
+      "Meta",
+      "Content",
+      "Faqs",
+      "Faq Schema",
+    ].includes(label);
   });
 
   const navSections = [
@@ -314,7 +358,10 @@ export default function ProductDetailClient({
   ];
 
   return (
-    <main id="page-top" className="w-full overflow-x-hidden bg-[#FFF8F5] pb-12 pt-8 text-[#0d2d47]">
+    <main
+      id="page-top"
+      className="w-full overflow-x-hidden bg-[#FFF8F5] pb-12 pt-8 text-[#0d2d47]"
+    >
       <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-[#f2d8cd]">
           <div className="border-b border-[#f2d8cd] px-5 py-4 sm:px-8">
@@ -363,7 +410,11 @@ export default function ProductDetailClient({
               {topInfo.length > 0 && (
                 <div className="mt-6 grid min-w-0 gap-3 sm:grid-cols-2">
                   {topInfo.slice(0, 4).map(([label, value], idx) => (
-                    <InfoCard key={`${label}-${idx}`} label={label} value={value} />
+                    <InfoCard
+                      key={`${label}-${idx}`}
+                      label={label}
+                      value={value}
+                    />
                   ))}
                 </div>
               )}
@@ -393,7 +444,11 @@ export default function ProductDetailClient({
 
               <div className="mt-3 grid min-w-0 gap-3 sm:grid-cols-2">
                 {topInfo.map(([label, value], idx) => (
-                  <InfoCard key={`${label}-${idx}`} label={label} value={value} />
+                  <InfoCard
+                    key={`${label}-${idx}`}
+                    label={label}
+                    value={value}
+                  />
                 ))}
               </div>
             </section>
@@ -412,7 +467,10 @@ export default function ProductDetailClient({
                 <table className="w-full table-fixed divide-y divide-[#f2d8cd]">
                   <tbody className="divide-y divide-[#f2d8cd]">
                     {technicalInfo.map(([label, value], idx) => (
-                      <tr key={`${label}-${idx}`} className="bg-white odd:bg-[#fffdfc]">
+                      <tr
+                        key={`${label}-${idx}`}
+                        className="bg-white odd:bg-[#fffdfc]"
+                      >
                         <td className="w-28 break-words px-3 py-3 text-sm font-semibold text-[#0d2d47] sm:w-56 sm:px-5">
                           {label}
                         </td>
@@ -457,9 +515,15 @@ export default function ProductDetailClient({
                     className="group rounded-lg bg-[#FFF8F5] p-4 ring-1 ring-[#f2d8cd]"
                   >
                     <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-semibold text-[#0d2d47]">
-                      <span className="min-w-0 break-words">{faq.question}</span>
-                      <span className="text-[#19a6b5] group-open:hidden">+</span>
-                      <span className="hidden text-[#19a6b5] group-open:block">-</span>
+                      <span className="min-w-0 break-words">
+                        {faq.question}
+                      </span>
+                      <span className="text-[#19a6b5] group-open:hidden">
+                        +
+                      </span>
+                      <span className="hidden text-[#19a6b5] group-open:block">
+                        -
+                      </span>
                     </summary>
 
                     <div className="grid grid-rows-[0fr] transition-all duration-300 ease-in-out group-open:grid-rows-[1fr]">
