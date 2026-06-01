@@ -1,29 +1,31 @@
 import dbConnect from "@/lib/dbConnect";
 import { getMongoErrorPayload } from "@/lib/mongoErrorPayload";
-import Ingredient from "@/models/Ingredient";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 export async function GET() {
   try {
-    await dbConnect();
-    const data = await Ingredient.find().lean();
+    const conn = await dbConnect();
 
-    return Response.json(data, {
-      headers: {
-        "Cache-Control": "no-store",
-      },
-    });
-  } catch (error) {
     return Response.json(
-      getMongoErrorPayload(error, "INGREDIENTS_FETCH_FAILED"),
       {
-        status: 500,
+        ok: true,
+        readyState: conn.connection.readyState,
+        database: conn.connection.name,
+      },
+      {
         headers: {
           "Cache-Control": "no-store",
         },
       }
     );
+  } catch (error) {
+    return Response.json(getMongoErrorPayload(error), {
+      status: 500,
+      headers: {
+        "Cache-Control": "no-store",
+      },
+    });
   }
 }

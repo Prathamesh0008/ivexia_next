@@ -1,5 +1,6 @@
 //
 import dbConnect from "@/lib/dbConnect";
+import { getMongoErrorPayload } from "@/lib/mongoErrorPayload";
 import Product from "@/models/Product";
 
 export const runtime = "nodejs";
@@ -13,7 +14,7 @@ export async function GET() {
     return Response.json(data);
   } catch (error) {
     return Response.json(
-      { error: "Failed to load products" },
+      getMongoErrorPayload(error, "PRODUCTS_FETCH_FAILED"),
       { status: 500 }
     );
   }

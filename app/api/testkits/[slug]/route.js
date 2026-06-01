@@ -1,4 +1,5 @@
 import dbConnect from "@/lib/dbConnect";
+import { getMongoErrorPayload } from "@/lib/mongoErrorPayload";
 import TestKit from "@/models/TestKit";
 
 export const runtime = "nodejs";
@@ -22,7 +23,7 @@ export async function GET(req, { params }) {
     });
   } catch (error) {
     return Response.json(
-      { error: "Failed to load test kit" },
+      getMongoErrorPayload(error, "TEST_KIT_FETCH_FAILED"),
       {
         status: 500,
         headers: {
