@@ -3,24 +3,17 @@ import { notFound } from "next/navigation";
 
 import ProductDetailClient from "@/components/ProductDetailClient";
 import { getProductContent } from "@/lib/productContent";
+import dbConnect from "@/lib/dbConnect";
+import Product from "@/models/Product";
 
 async function getProduct(slug) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
-    ? process.env.NEXT_PUBLIC_SITE_URL
-    : process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : "http://localhost:3000";
+  if (!slug) {
+    return null;
+  }
 
   try {
-    const res = await fetch(`${baseUrl}/api/products/${slug}`, {
-      cache: "no-store",
-    });
-
-    if (!res.ok) {
-      return null;
-    }
-
-    return res.json();
+    await dbConnect();
+    return await Product.findOne({ slug }).lean();
   } catch (error) {
     return null;
   }
