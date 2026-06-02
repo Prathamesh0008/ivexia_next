@@ -109,9 +109,15 @@ const testKitsLabel = t?.testKitsLabel || "TEST KITS";
   const [dosage, setDosage] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "auto" });
-  }, []);
+ useEffect(() => {
+  if (typeof window === "undefined") return;
+
+  window.history.scrollRestoration = "manual";
+
+  requestAnimationFrame(() => {
+    window.scrollTo(0, 0);
+  });
+}, []);
 
   function openProductPath(event, path) {
     if (event.ctrlKey || event.metaKey) {
@@ -417,7 +423,7 @@ const filtered = useMemo(() => {
   }
 
   return (
-    <div className="pt-16 bg-[#FFF8F5] min-h-screen">
+    <div  id="products-page-top" className="pt-16 bg-[#FFF8F5] min-h-screen">
       <section className="max-w-7xl mx-auto px-6 md:px-16 pb-40">
         <header className="text-center mt-4 mb-6">
           <h1 className="text-3xl md:text-4xl font-extrabold text-[#0d2d47]">

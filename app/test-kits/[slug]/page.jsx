@@ -37,11 +37,7 @@ function RenderContent({ value }) {
       <ul className="mt-3 list-disc space-y-1.5 break-words pl-5 text-sm leading-relaxed text-[#475569] marker:text-[#19a6b5]">
         {value.map((item, index) => (
           <li key={index}>
-            {typeof item === "object" ? (
-              <RenderContent value={item} />
-            ) : (
-              String(item)
-            )}
+            <RenderContent value={item} />
           </li>
         ))}
       </ul>
@@ -49,19 +45,22 @@ function RenderContent({ value }) {
   }
 
   if (typeof value === "object") {
+    const { title, ...rest } = value;
+
     return (
-      <div className="mt-4 grid min-w-0 gap-3 sm:grid-cols-2">
-        {Object.entries(value).map(([key, val]) => (
-          <div
-            key={key}
-            className="min-w-0 rounded-lg bg-[#FFF8F5] p-3 ring-1 ring-[#f2d8cd]"
-          >
-            <p className="break-words text-xs font-bold uppercase tracking-wider text-[#0d2d47]">
-              {formatLabel(key)}
-            </p>
-            <div className="mt-1 min-w-0">
+      <div className="mt-3 space-y-3">
+        {Object.entries(rest).map(([key, val]) => (
+          <div key={key} className="min-w-0">
+            {typeof val === "object" && !Array.isArray(val) ? (
+              <div>
+                <p className="text-sm font-bold text-[#0d2d47]">
+                  {formatLabel(key)}
+                </p>
+                <RenderContent value={val} />
+              </div>
+            ) : (
               <RenderContent value={val} />
-            </div>
+            )}
           </div>
         ))}
       </div>
@@ -269,58 +268,30 @@ export default function TestKitDetailPage() {
     ["Certificate", certificate],
   ].filter(([, value]) => value);
 
-  const technicalInfo = [
-    ["Product", testKit?.product],
-    ["Description", testKit?.description],
-    ["Category", testKit?.category],
-    ["Method", testKit?.method],
-    ["Specimen", testKit?.specimen],
-    ["Cut-Off", testKit?.cut_off],
-    ["Certificate", testKit?.certificate],
-    ...Object.entries(meta).map(([key, value]) => [formatLabel(key), value]),
-  ].filter(([, value]) => value);
+const contentBlocks = useMemo(() => {
+  const blocks = [];
 
-  const contentBlocks = useMemo(() => {
-    const blocks = [];
-
-    if (hero && Object.keys(hero).length > 0) {
+  Object.entries(content)
+    .filter(([, value]) => value)
+    .forEach(([key, value]) => {
       blocks.push({
-        id: "hero",
-        title: "Hero Information",
-        value: hero,
+        id: key,
+        title: value?.title || formatLabel(key),
+        value,
       });
-    }
+    });
 
-    if (meta && Object.keys(meta).length > 0) {
-      blocks.push({
-        id: "meta",
-        title: "Meta Information",
-        value: meta,
-      });
-    }
+  return blocks;
+}, [content]);
 
-    Object.entries(content)
-      .filter(([, value]) => value)
-      .forEach(([key, value]) => {
-        blocks.push({
-          id: key,
-          title: value?.title || formatLabel(key),
-          value,
-        });
-      });
-
-    return blocks;
-  }, [hero, meta, content]);
-
-  const navSections = [
-    { id: "key-information", title: "Key Information" },
-    { id: "technical-information", title: "Technical Information" },
-    ...contentBlocks.map((block) => ({
-      id: block.id,
-      title: block.title,
-    })),
-    ...(faqs.length > 0 ? [{ id: "faq", title: "FAQ" }] : []),
-  ];
+const navSections = [
+  { id: "key-information", title: "Key Information" },
+  ...contentBlocks.map((block) => ({
+    id: block.id,
+    title: block.title,
+  })),
+  ...(faqs.length > 0 ? [{ id: "faq", title: "FAQ" }] : []),
+];
 
   if (loading) {
     return (
@@ -429,33 +400,6 @@ export default function TestKitDetailPage() {
             </section>
           )}
 
-          {technicalInfo.length > 0 && (
-            <section
-              id="technical-information"
-              className="mt-6 scroll-mt-24 border-t border-[#f2d8cd] pt-6"
-            >
-              <div className="break-words border-b border-[#f2d8cd] bg-[#FFF8F5] px-5 py-3 text-sm font-bold uppercase tracking-[0.1em] text-[#0d2d47]">
-                Technical Information
-              </div>
-
-              <div className="max-w-full overflow-x-auto">
-                <table className="w-full table-fixed divide-y divide-[#f2d8cd]">
-                  <tbody className="divide-y divide-[#f2d8cd]">
-                    {technicalInfo.map(([label, value], idx) => (
-                      <tr key={`${label}-${idx}`} className="bg-white odd:bg-[#fffdfc]">
-                        <td className="w-28 break-words px-3 py-3 text-sm font-semibold text-[#0d2d47] sm:w-56 sm:px-5">
-                          {label}
-                        </td>
-                        <td className="break-words px-3 py-3 text-sm text-[#334155] sm:px-5">
-                          <RenderPlain value={value} />
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </section>
-          )}
 
           {contentBlocks.map((block, index) => (
             <section

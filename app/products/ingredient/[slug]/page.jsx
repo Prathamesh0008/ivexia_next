@@ -188,11 +188,19 @@ function RenderPlain({ value }) {
     return value.map((item) => RenderPlain({ value: item })).join(", ");
   }
 
-  if (typeof value === "object") {
-    return Object.entries(value)
-      .map(([key, val]) => `${formatLabel(key)}: ${RenderPlain({ value: val })}`)
-      .join(", ");
-  }
+if (typeof value === "object") {
+  const { title, ...rest } = value;
+
+  return (
+    <div className="mt-3 space-y-3">
+      {Object.entries(rest).map(([key, val]) => (
+        <div key={key} className="min-w-0">
+          <RenderContent value={val} />
+        </div>
+      ))}
+    </div>
+  );
+}
 
   return String(value);
 }
@@ -205,7 +213,7 @@ function RenderContent({ value }) {
       <ul className="mt-3 list-disc space-y-1.5 break-words pl-5 text-sm leading-relaxed text-[#475569] marker:text-[#19a6b5]">
         {value.map((item, index) => (
           <li key={index}>
-            {typeof item === "object" ? <RenderContent value={item} /> : String(item)}
+            <RenderContent value={item} />
           </li>
         ))}
       </ul>
@@ -213,19 +221,22 @@ function RenderContent({ value }) {
   }
 
   if (typeof value === "object") {
+    const { title, ...rest } = value;
+
     return (
-      <div className="mt-4 grid min-w-0 gap-3 sm:grid-cols-2">
-        {Object.entries(value).map(([key, val]) => (
-          <div
-            key={key}
-            className="min-w-0 rounded-lg bg-[#FFF8F5] p-3 ring-1 ring-[#f2d8cd]"
-          >
-            <p className="break-words text-xs font-bold uppercase tracking-wider text-[#0d2d47]">
-              {formatLabel(key)}
-            </p>
-            <div className="mt-1 min-w-0">
+      <div className="mt-3 space-y-3">
+        {Object.entries(rest).map(([key, val]) => (
+          <div key={key} className="min-w-0">
+            {typeof val === "object" && !Array.isArray(val) ? (
+              <div>
+                <p className="text-sm font-bold text-[#0d2d47]">
+                  {formatLabel(key)}
+                </p>
+                <RenderContent value={val} />
+              </div>
+            ) : (
               <RenderContent value={val} />
-            </div>
+            )}
           </div>
         ))}
       </div>
@@ -238,7 +249,6 @@ function RenderContent({ value }) {
     </p>
   );
 }
-
 function InfoCard({ label, value }) {
   return (
     <div className="min-w-0 rounded-lg bg-[#FFF8F5] p-3 ring-1 ring-[#f2d8cd]">
@@ -456,24 +466,17 @@ export default function IngredientDetail() {
     ["Grade", product?.grade || meta?.grade],
   ].filter(([, value]) => value);
 
-  const technicalInfo = [
-    ...Object.entries(product || {}).map(([key, value]) => [formatLabel(key), value]),
-    ...Object.entries(meta || {}).map(([key, value]) => [formatLabel(key), value]),
-  ].filter(([label, value]) => {
-    if (!value) return false;
-    return !["_id", "__v", "Content", "Faqs", "Meta"].includes(label);
-  });
+ 
 
-  const navSections = [
-    { id: "key-information", title: labels.keyInfo },
-    { id: "technical-information", title: labels.technicalInfo },
-    ...allBlocks.map((block) => ({
-      id: block.id,
-      title: block.title,
-    })),
-    ...(faqs.length > 0 ? [{ id: "faq", title: labels.faq }] : []),
-    { id: "explore-more", title: labels.exploreMore },
-  ];
+const navSections = [
+  { id: "key-information", title: labels.keyInfo },
+  ...allBlocks.map((block) => ({
+    id: block.id,
+    title: block.title,
+  })),
+  ...(faqs.length > 0 ? [{ id: "faq", title: labels.faq }] : []),
+  { id: "explore-more", title: labels.exploreMore },
+];
 
   const suggested = allIngredients
     .filter((item) => item.slug !== slug)
@@ -603,33 +606,6 @@ export default function IngredientDetail() {
             </section>
           )}
 
-          {technicalInfo.length > 0 && (
-            <section
-              id="technical-information"
-              className="mt-6 scroll-mt-24 border-t border-[#f2d8cd] pt-6"
-            >
-              <div className="break-words border-b border-[#f2d8cd] bg-[#FFF8F5] px-5 py-3 text-sm font-bold uppercase tracking-[0.1em] text-[#0d2d47]">
-                {labels.technicalInfo}
-              </div>
-
-              <div className="max-w-full overflow-x-auto">
-                <table className="w-full table-fixed divide-y divide-[#f2d8cd]">
-                  <tbody className="divide-y divide-[#f2d8cd]">
-                    {technicalInfo.map(([label, value], idx) => (
-                      <tr key={`${label}-${idx}`} className="bg-white odd:bg-[#fffdfc]">
-                        <td className="w-28 break-words px-3 py-3 text-sm font-semibold text-[#0d2d47] sm:w-56 sm:px-5">
-                          {label}
-                        </td>
-                        <td className="break-words px-3 py-3 text-sm text-[#334155] sm:px-5">
-                          <RenderPlain value={value} />
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </section>
-          )}
 
           {allBlocks.map((block, index) => (
             <section
