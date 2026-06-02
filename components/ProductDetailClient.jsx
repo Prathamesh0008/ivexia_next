@@ -232,21 +232,6 @@ export default function ProductDetailClient({
   }, [slug]);
 
   useEffect(() => {
-    const faqSchema = productData?.faqSchema || product?.faqSchema;
-
-    if (!faqSchema) return;
-
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.innerHTML = JSON.stringify(faqSchema);
-    document.head.appendChild(script);
-
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, [productData, product]);
-
-  useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [slug]);
 
@@ -325,37 +310,15 @@ export default function ProductDetailClient({
     ["CAS-ID", meta.cas || product.casId],
   ].filter(([, value]) => value);
 
-  const technicalInfo = [
-    ...Object.entries(product || {}).map(([key, value]) => [
-      formatLabel(key),
-      value,
-    ]),
-    ...Object.entries(meta || {}).map(([key, value]) => [
-      formatLabel(key),
-      value,
-    ]),
-  ].filter(([label, value]) => {
-    if (!value) return false;
-    return ![
-      "_id",
-      "__v",
-      "Hero",
-      "Meta",
-      "Content",
-      "Faqs",
-      "Faq Schema",
-    ].includes(label);
-  });
 
-  const navSections = [
-    { id: "key-information", title: "Key Information" },
-    { id: "technical-information", title: "Technical Information" },
-    ...allBlocks.map((block) => ({
-      id: block.id,
-      title: block.title,
-    })),
-    ...(faqs.length > 0 ? [{ id: "faq", title: "FAQ" }] : []),
-  ];
+const navSections = [
+  { id: "key-information", title: "Key Information" },
+  ...allBlocks.map((block) => ({
+    id: block.id,
+    title: block.title,
+  })),
+  ...(faqs.length > 0 ? [{ id: "faq", title: "FAQ" }] : []),
+];
 
   return (
     <main
@@ -454,37 +417,7 @@ export default function ProductDetailClient({
             </section>
           )}
 
-          {technicalInfo.length > 0 && (
-            <section
-              id="technical-information"
-              className="mt-6 scroll-mt-24 border-t border-[#f2d8cd] pt-6"
-            >
-              <div className="break-words border-b border-[#f2d8cd] bg-[#FFF8F5] px-5 py-3 text-sm font-bold uppercase tracking-[0.1em] text-[#0d2d47]">
-                Technical Information
-              </div>
-
-              <div className="max-w-full overflow-x-auto">
-                <table className="w-full table-fixed divide-y divide-[#f2d8cd]">
-                  <tbody className="divide-y divide-[#f2d8cd]">
-                    {technicalInfo.map(([label, value], idx) => (
-                      <tr
-                        key={`${label}-${idx}`}
-                        className="bg-white odd:bg-[#fffdfc]"
-                      >
-                        <td className="w-28 break-words px-3 py-3 text-sm font-semibold text-[#0d2d47] sm:w-56 sm:px-5">
-                          {label}
-                        </td>
-                        <td className="break-words px-3 py-3 text-sm text-[#334155] sm:px-5">
-                          <RenderPlain value={value} />
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </section>
-          )}
-
+        
           {allBlocks.map((block, index) => (
             <section
               id={block.id}

@@ -24,7 +24,9 @@ export default function Navbar() {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const magCategory = searchParams.get("category");
+  const magCategory = pathname.startsWith("/ivexia-mag/category/")
+    ? pathname.split("/").filter(Boolean).at(-1)
+    : searchParams.get("category");
 
   const productsRef = useRef(null);
   const magRef = useRef(null);
@@ -269,10 +271,10 @@ export default function Navbar() {
                 <li
                   onClick={(e) => {
                     e.stopPropagation();
-                    goTo("/ivexia-mag?category=news");
+                    goTo("/ivexia-mag/category/news");
                   }}
                   className={`${dropdownItemClass} ${
-                    pathname === "/ivexia-mag" && magCategory === "news"
+                    magCategory === "news"
                       ? activeDropdownItemClass
                       : "text-gray-700 hover:bg-gray-100"
                   }`}
@@ -283,10 +285,10 @@ export default function Navbar() {
                 <li
                   onClick={(e) => {
                     e.stopPropagation();
-                    goTo("/ivexia-mag?category=health");
+                   goTo("/ivexia-mag/category/health");
                   }}
                   className={`${dropdownItemClass} ${
-                    pathname === "/ivexia-mag" && magCategory === "health"
+                    magCategory === "health"
                       ? activeDropdownItemClass
                       : "text-gray-700 hover:bg-gray-100"
                   }`}
@@ -551,17 +553,17 @@ animate-[dropdownFade_0.22s_ease-out] max-h-[320px] overflow-y-auto lg:max-h-non
 
                 <div className="mt-2 flex flex-col gap-1 pl-2">
                   <span
-                    onClick={() => goTo("/ivexia-mag?category=news")}
+                    onClick={() => goTo("/ivexia-mag/category/news")}
                     className={mobileSubItemClass(
-                      pathname === "/ivexia-mag" && magCategory === "news"
+                      magCategory === "news"
                     )}
                   >
                     News
                   </span>
                   <span
-                    onClick={() => goTo("/ivexia-mag?category=health")}
+                    onClick={() => goTo("/ivexia-mag/category/health")}
                     className={mobileSubItemClass(
-                      pathname === "/ivexia-mag" && magCategory === "health"
+                      magCategory === "health"
                     )}
                   >
                     Health
