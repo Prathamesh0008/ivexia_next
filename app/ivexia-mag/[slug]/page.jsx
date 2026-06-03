@@ -14,15 +14,31 @@ export async function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const { article, details } = getArticleBySlug(slug);
+
+  if (!article || !details) {
+    return {};
+  }
+
+  return {
+    alternates: {
+      canonical: `https://www.ivexiapharma.com/ivexia-mag/${slug}`,
+    },
+  };
+}
+
 /* =========================
    PAGE
 ========================= */
 export default async function ArticlePage({ params }) {
   const { slug } = await params;
+  const { article, details } = getArticleBySlug(slug);
 
- 
+  if (!article || !details) {
+    notFound();
+  }
 
- 
-
-return <ArticleClient slug={slug} />;
+  return <ArticleClient slug={slug} />;
 }

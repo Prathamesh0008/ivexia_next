@@ -323,7 +323,7 @@ export default function GlobalPresence3D() {
           className="presence-wrap"
           aria-label="Global presence by region"
         >
-          <h1>{translations?.accordSection?.title || "Global Presence"}</h1>
+          <h2>{translations?.accordSection?.title || "Global Presence"}</h2>
 
           <div className="presence-grid">
             <nav className="region-nav" aria-label="Region selector">
@@ -415,12 +415,7 @@ export default function GlobalPresence3D() {
           margin-bottom: 0;
         }
 
-        .ivexia-presence .presence-wrap h1 {
-          font-size: clamp(1.8rem, 3vw, 2.5rem);
-          font-weight: 700;
-          color: #0d2d47;
-          margin-bottom: 32px;
-        }
+       
 
         .ivexia-presence .presence-grid {
           display: grid;
@@ -521,6 +516,13 @@ export default function GlobalPresence3D() {
             transform-origin: center;
           }
         }
+          .ivexia-presence .presence-wrap h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: #0d2d47;
+  margin-bottom: 32px;
+}
+        
       `}</style>
     </>
   );
