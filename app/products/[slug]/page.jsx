@@ -2,23 +2,13 @@
 import { notFound } from "next/navigation";
 
 import ProductDetailClient from "@/components/ProductDetailClient";
+import { getProductBySlug } from "@/lib/catalogData";
 import { getProductContent } from "@/lib/productContent";
-import dbConnect from "@/lib/dbConnect";
-import Product from "@/models/Product";
 
 const SITE_URL = "https://www.ivexiapharma.com";
 
 async function getProduct(slug) {
-  if (!slug) {
-    return null;
-  }
-
-  try {
-    await dbConnect();
-    return await Product.findOne({ slug }).lean();
-  } catch (error) {
-    return null;
-  }
+  return getProductBySlug(slug);
 }
 
 function getProductTitle(product, productData) {

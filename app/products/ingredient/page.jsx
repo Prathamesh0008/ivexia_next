@@ -1,6 +1,5 @@
 import IngredientPageClient from "@/components/IngredientPageClient";
-import dbConnect from "@/lib/dbConnect";
-import Ingredient from "@/models/Ingredient";
+import { getIngredients } from "@/lib/catalogData";
 
 export const dynamic = "force-dynamic";
 
@@ -12,15 +11,6 @@ export const metadata = {
     canonical: "https://www.ivexiapharma.com/products/ingredient",
   },
 };
-
-async function getIngredients() {
-  try {
-    await dbConnect();
-    return await Ingredient.find().lean();
-  } catch (error) {
-    return [];
-  }
-}
 
 export default async function IngredientPage() {
   const ingredients = await getIngredients();

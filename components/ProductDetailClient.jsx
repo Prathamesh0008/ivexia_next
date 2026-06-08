@@ -320,159 +320,140 @@ const navSections = [
   ...(faqs.length > 0 ? [{ id: "faq", title: "FAQ" }] : []),
 ];
 
-  return (
-    <main
-      id="page-top"
-      className="w-full overflow-x-hidden bg-[#FFF8F5] pb-12 pt-8 text-[#0d2d47]"
-    >
-      <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-[#f2d8cd]">
-          <div className="border-b border-[#f2d8cd] px-5 py-4 sm:px-8">
-            <nav className="flex min-w-0 flex-wrap items-center gap-2 text-sm text-[#6c7b8d]">
-              <Link href="/" className="hover:text-[#19a6b5]">
-                Home
-              </Link>
-              <span>/</span>
-              <Link href="/products" className="hover:text-[#19a6b5]">
-                Products
-              </Link>
-              <span>/</span>
-              <span className="min-w-0 truncate font-semibold text-[#0d2d47]">
-                {productTitle}
-              </span>
-            </nav>
+return (
+  <main
+    id="page-top"
+    className="w-full overflow-x-hidden bg-white pb-16 pt-10 text-[#0d2d47]"
+  >
+    <div className="mx-auto w-full max-w-7xl bg-[#FFF8F5] px-4 pb-16 pt-8 sm:px-6 lg:px-8">
+    <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <nav className="mb-8 flex flex-wrap items-center gap-2 text-sm text-[#6c7b8d]">
+        <Link href="/" className="hover:text-[#19a6b5]">
+          Home
+        </Link>
+        <span>/</span>
+        <Link href="/products" className="hover:text-[#19a6b5]">
+          Products
+        </Link>
+        <span>/</span>
+        <span className="font-semibold text-[#0d2d47]">{productTitle}</span>
+      </nav>
+
+      <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_340px] lg:items-start">
+        <div>
+          <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#19a6b5]">
+            Ivexia Product
+          </p>
+
+          <h1 className="mt-4 max-w-5xl break-words text-3xl font-extrabold leading-tight text-[#0d2d47] sm:text-5xl">
+            {productTitle}
+          </h1>
+
+          <div className="mt-5 max-w-4xl border-l-4 border-[#19a6b5] pl-5">
+            <RenderContent value={productDescription} />
           </div>
 
-          <div className="grid gap-8 p-5 sm:p-8 lg:grid-cols-[360px_1fr]">
-            <div className="flex min-h-[320px] min-w-0 items-center justify-center rounded-xl bg-[#FFF8F5] p-4 ring-1 ring-[#f2d8cd]">
-              <img
-                src={imgSrc}
-                alt={product.name}
-                className="h-auto w-full max-w-[330px] rounded-lg object-contain"
-                onError={() => setImageError(true)}
-              />
-            </div>
+          {isRefreshing && (
+            <p className="mt-4 text-sm font-semibold text-[#19a6b5]">
+              {t?.updating || "Updating product details..."}
+            </p>
+          )}
 
-            <div className="min-w-0">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#19a6b5]">
-                Ivexia Product
-              </p>
+          <Link
+            href="/contact"
+            className="mt-7 inline-flex rounded-full bg-[#0d2d47] px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-[#0d2d47]/20 transition hover:-translate-y-0.5 hover:bg-[#19a6b5]"
+          >
+            {t?.requestQuote || "Request Quote"}
+          </Link>
+        </div>
 
-              <h1 className="mt-3 break-words text-3xl font-bold leading-tight text-[#0d2d47] sm:text-4xl">
-                {productTitle}
-              </h1>
+        {topInfo.length > 0 && (
+          <div className="rounded-[24px] border border-[#f2d8cd] bg-[#FFF8F5] p-5 shadow-sm">
+            <h2 className="mb-4 text-sm font-bold uppercase tracking-[0.15em] text-[#0d2d47]">
+              Key Details
+            </h2>
 
-              <RenderContent value={productDescription} />
-
-              {isRefreshing && (
-                <p className="mt-3 text-sm font-semibold text-[#19a6b5]">
-                  {t?.updating || "Updating product details..."}
-                </p>
-              )}
-
-              {topInfo.length > 0 && (
-                <div className="mt-6 grid min-w-0 gap-3 sm:grid-cols-2">
-                  {topInfo.slice(0, 4).map(([label, value], idx) => (
-                    <InfoCard
-                      key={`${label}-${idx}`}
-                      label={label}
-                      value={value}
-                    />
-                  ))}
-                </div>
-              )}
-
-              <Link
-                href="/contact"
-                className="mt-6 inline-flex max-w-full justify-center rounded-full bg-[#0d2d47] px-7 py-3 text-center text-sm font-semibold text-white shadow-md transition hover:bg-[#19a6b5]"
-              >
-                {t?.requestQuote || "Request Quote"}
-              </Link>
+            <div className="space-y-3">
+              {topInfo.slice(0, 5).map(([label, value], idx) => (
+                <InfoCard key={`${label}-${idx}`} label={label} value={value} />
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        )}
+      </div>
+    </section>
 
-      <section className="mx-auto mt-6 grid w-full max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-[220px_minmax(0,1fr)] lg:px-8">
-        <aside className="min-w-0 h-fit rounded-xl bg-white p-4 shadow-sm ring-1 ring-[#f2d8cd] lg:sticky lg:top-24 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto">
-          <SectionNav sections={navSections} />
-        </aside>
+    <section className="mx-auto mt-10 grid w-full max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:px-8">
+      <aside className="h-fit rounded-[22px] border border-[#f2d8cd] bg-[#FFF8F5] p-4 lg:sticky lg:top-24">
+        <SectionNav sections={navSections} />
+      </aside>
 
-        <div className="min-w-0 rounded-xl bg-white p-5 shadow-sm ring-1 ring-[#f2d8cd] sm:p-6">
-          {topInfo.length > 0 && (
-            <section id="key-information" className="scroll-mt-24">
-              <h2 className="text-sm font-bold uppercase tracking-[0.1em] text-[#0d2d47]">
-                Key Information
-              </h2>
+      <div className="min-w-0">
+        {topInfo.length > 0 && (
+          <section id="key-information" className="scroll-mt-24">
+            <h2 className="text-xl font-bold text-[#0d2d47]">
+              Key Information
+            </h2>
 
-              <div className="mt-3 grid min-w-0 gap-3 sm:grid-cols-2">
-                {topInfo.map(([label, value], idx) => (
-                  <InfoCard
-                    key={`${label}-${idx}`}
-                    label={label}
-                    value={value}
-                  />
-                ))}
-              </div>
-            </section>
-          )}
+            <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {topInfo.map(([label, value], idx) => (
+                <InfoCard key={`${label}-${idx}`} label={label} value={value} />
+              ))}
+            </div>
+          </section>
+        )}
 
-        
-          {allBlocks.map((block, index) => (
-            <section
-              id={block.id}
-              key={`${block.id}-${index}`}
-              className="mt-6 scroll-mt-24 border-t border-[#f2d8cd] pt-6"
-            >
-              <h3 className="break-words text-xl font-bold text-[#0d2d47]">
-                {block.title}
-              </h3>
+        {allBlocks.map((block, index) => (
+          <section
+            id={block.id}
+            key={`${block.id}-${index}`}
+            className="mt-8 scroll-mt-24 border-t border-[#f2d8cd] pt-7"
+          >
+            <h3 className="break-words text-xl font-bold text-[#0d2d47]">
+              {block.title}
+            </h3>
 
-              <RenderContent value={block.value} />
-            </section>
-          ))}
+            <RenderContent value={block.value} />
+          </section>
+        ))}
 
-          {faqs.length > 0 && (
-            <section
-              id="faq"
-              className="mt-6 scroll-mt-24 border-t border-[#f2d8cd] pt-6"
-            >
-              <h3 className="break-words text-xl font-bold text-[#0d2d47]">
-                Frequently Asked Questions
-              </h3>
+        {faqs.length > 0 && (
+          <section
+            id="faq"
+            className="mt-8 scroll-mt-24 border-t border-[#f2d8cd] pt-7"
+          >
+            <h3 className="break-words text-xl font-bold text-[#0d2d47]">
+              Frequently Asked Questions
+            </h3>
 
-              <div className="mt-4 space-y-3">
-                {faqs.map((faq, index) => (
-                  <details
-                    key={index}
-                    className="group rounded-lg bg-[#FFF8F5] p-4 ring-1 ring-[#f2d8cd]"
-                  >
-                    <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-semibold text-[#0d2d47]">
-                      <span className="min-w-0 break-words">
-                        {faq.question}
-                      </span>
-                      <span className="text-[#19a6b5] group-open:hidden">
-                        +
-                      </span>
-                      <span className="hidden text-[#19a6b5] group-open:block">
-                        -
-                      </span>
-                    </summary>
+            <div className="mt-4 space-y-3">
+              {faqs.map((faq, index) => (
+                <details
+                  key={index}
+                  className="group rounded-2xl border border-[#f2d8cd] bg-[#FFF8F5] p-4 transition hover:shadow-md"
+                >
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-semibold text-[#0d2d47]">
+                    <span className="break-words">{faq.question}</span>
+                    <span className="text-lg text-[#19a6b5] group-open:hidden">
+                      +
+                    </span>
+                    <span className="hidden text-lg text-[#19a6b5] group-open:block">
+                      -
+                    </span>
+                  </summary>
 
-                    <div className="grid grid-rows-[0fr] transition-all duration-300 ease-in-out group-open:grid-rows-[1fr]">
-                      <div className="overflow-hidden">
-                        <div className="mt-3 border-t border-[#f2d8cd] pt-3">
-                          <RenderContent value={faq.answer} />
-                        </div>
-                      </div>
-                    </div>
-                  </details>
-                ))}
-              </div>
-            </section>
-          )}
-        </div>
-      </section>
-    </main>
-  );
+                  <div className="mt-3 border-t border-[#f2d8cd] pt-3">
+                    <RenderContent value={faq.answer} />
+                  </div>
+                </details>
+              ))}
+            </div>
+          </section>
+        )}
+      </div>
+    </section>
+    </div>
+  </main>
+);
+
 }

@@ -1,20 +1,8 @@
-import dbConnect from "@/lib/dbConnect";
-import { getMongoErrorPayload } from "@/lib/mongoErrorPayload";
-import TestKit from "@/models/TestKit";
+import { getTestKits } from "@/lib/catalogData";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 export async function GET() {
-  try {
-    await dbConnect();
-    const data = await TestKit.find().lean();
-
-    return Response.json(data);
-  } catch (error) {
-    return Response.json(
-      getMongoErrorPayload(error, "TEST_KITS_FETCH_FAILED"),
-      { status: 500 }
-    );
-  }
+  return Response.json(getTestKits());
 }

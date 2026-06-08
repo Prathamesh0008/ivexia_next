@@ -1,29 +1,12 @@
-import dbConnect from "@/lib/dbConnect";
-import { getMongoErrorPayload } from "@/lib/mongoErrorPayload";
-import Ingredient from "@/models/Ingredient";
+import { getIngredients } from "@/lib/catalogData";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 export async function GET() {
-  try {
-    await dbConnect();
-    const data = await Ingredient.find().lean();
-
-    return Response.json(data, {
-      headers: {
-        "Cache-Control": "no-store",
-      },
-    });
-  } catch (error) {
-    return Response.json(
-      getMongoErrorPayload(error, "INGREDIENTS_FETCH_FAILED"),
-      {
-        status: 500,
-        headers: {
-          "Cache-Control": "no-store",
-        },
-      }
-    );
-  }
+  return Response.json(getIngredients(), {
+    headers: {
+      "Cache-Control": "no-store",
+    },
+  });
 }

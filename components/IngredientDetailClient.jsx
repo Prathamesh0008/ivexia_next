@@ -1,3 +1,4 @@
+//components\IngredientDetailClient.jsx
 "use client";
 
 import Link from "next/link";
@@ -509,109 +510,107 @@ const navSections = [
     );
   }
 
-  return (
-    <main
-      id="page-top"
-      dir={isArabic ? "rtl" : "ltr"}
-      className="w-full overflow-x-hidden bg-[#FFF8F5] pb-12 pt-8 text-[#0d2d47]"
-    >
-      <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-[#f2d8cd]">
-          <div className="border-b border-[#f2d8cd] px-5 py-4 sm:px-8">
-            <nav className="flex min-w-0 flex-wrap items-center gap-2 text-sm text-[#6c7b8d]">
-              <Link href="/" className="hover:text-[#19a6b5]">
-                {labels.home}
-              </Link>
+return (
+  <main
+    id="page-top"
+    dir={isArabic ? "rtl" : "ltr"}
+    className="w-full overflow-x-hidden bg-white pb-16 pt-10 text-[#0d2d47]"
+  >
+    <div className="mx-auto w-full max-w-7xl bg-[#FFF8F5] px-4 pb-16 pt-8 sm:px-6 lg:px-8">
+      <section>
+        <nav className="mb-8 flex flex-wrap items-center gap-2 text-sm text-[#6c7b8d]">
+          <Link href="/" className="hover:text-[#19a6b5]">
+            {labels.home}
+          </Link>
+          <span>/</span>
+          <Link href="/products/ingredient" className="hover:text-[#19a6b5]">
+            {labels.apis}
+          </Link>
+          <span>/</span>
+          <span className="font-semibold text-[#0d2d47]">{pageTitle}</span>
+        </nav>
 
-              <span>/</span>
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_340px] lg:items-start">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#19a6b5]">
+              {labels.pharmaceuticalApi}
+            </p>
 
-              <Link href="/products/ingredient" className="hover:text-[#19a6b5]">
-                {labels.apis}
-              </Link>
+            <h1 className="mt-4 max-w-5xl break-words text-3xl font-extrabold leading-tight text-[#0d2d47] sm:text-5xl">
+              {pageTitle}
+            </h1>
 
-              <span>/</span>
-
-              <span className="min-w-0 truncate font-semibold text-[#0d2d47]">
-                {pageTitle}
-              </span>
-            </nav>
-          </div>
-
-          <div className="grid gap-8 p-5 sm:p-8 lg:grid-cols-[360px_1fr]">
-            <div className="flex min-h-[320px] min-w-0 items-center justify-center rounded-xl bg-[#FFF8F5] p-4 ring-1 ring-[#f2d8cd]">
-              <img
-                src={imgSrc}
-                alt={pageTitle}
-                className="h-auto w-full max-w-[330px] rounded-lg object-contain"
-              />
-            </div>
-
-            <div className="min-w-0">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#19a6b5]">
-                {labels.pharmaceuticalApi}
-              </p>
-
-              <h1 className="mt-3 break-words text-3xl font-bold leading-tight text-[#0d2d47] sm:text-4xl">
-                {pageTitle}
-              </h1>
-
+            <div className="mt-5 max-w-4xl border-l-4 border-[#19a6b5] pl-5">
               <RenderContent value={pageDescription} />
+            </div>
 
-              {topInfo.length > 0 && (
-                <div className="mt-6 grid min-w-0 gap-3 sm:grid-cols-2">
-                  {topInfo.slice(0, 4).map(([label, value], idx) => (
-                    <InfoCard key={`${label}-${idx}`} label={label} value={value} />
-                  ))}
-                </div>
-              )}
+            <div className="mt-7 flex flex-wrap gap-3">
+              <button
+                type="button"
+                onClick={() => setShowQuoteModal(true)}
+                className="rounded-full bg-[#0d2d47] px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-[#0d2d47]/20 transition hover:-translate-y-0.5 hover:bg-[#19a6b5]"
+              >
+                {labels.requestQuote}
+              </button>
 
-              <div className="mt-6 flex flex-wrap gap-3">
-                <button
-                  type="button"
-                  onClick={() => setShowQuoteModal(true)}
-                  className="max-w-full rounded-full bg-[#0d2d47] px-7 py-3 text-center text-sm font-semibold text-white shadow-md transition hover:bg-[#19a6b5]"
-                >
-                  {labels.requestQuote}
-                </button>
-
-                <Link
-                  href="/products/ingredient"
-                  className="max-w-full rounded-full border border-[#f2d8cd] bg-[#FFF8F5] px-7 py-3 text-center text-sm font-semibold text-[#0d2d47] transition hover:border-[#19a6b5] hover:text-[#19a6b5]"
-                >
-                  {labels.backToApis}
-                </Link>
-              </div>
+              <Link
+                href="/products/ingredient"
+                className="rounded-full border border-[#f2d8cd] bg-[#FFF8F5] px-7 py-3 text-sm font-semibold text-[#0d2d47] transition hover:border-[#19a6b5] hover:text-[#19a6b5]"
+              >
+                {labels.backToApis}
+              </Link>
             </div>
           </div>
-        </div>
-      </section>
 
-      <section className="mx-auto mt-6 grid w-full max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-[220px_minmax(0,1fr)] lg:px-8">
-       <aside className="min-w-0 h-fit rounded-xl bg-white p-4 shadow-sm ring-1 ring-[#f2d8cd] lg:sticky lg:top-24 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto">
-          <SectionNav sections={navSections} />
-        </aside>
-
-        <div className="min-w-0 rounded-xl bg-white p-5 shadow-sm ring-1 ring-[#f2d8cd] sm:p-6">
           {topInfo.length > 0 && (
-            <section id="key-information" className="scroll-mt-24">
-              <h2 className="text-sm font-bold uppercase tracking-[0.1em] text-[#0d2d47]">
+            <div className="rounded-[24px] border border-[#f2d8cd] bg-[#FFF8F5] p-5 shadow-sm">
+              <h2 className="mb-4 text-sm font-bold uppercase tracking-[0.15em] text-[#0d2d47]">
                 {labels.keyInfo}
               </h2>
 
-              <div className="mt-3 grid min-w-0 gap-3 sm:grid-cols-2">
+              <div className="space-y-3">
+                {topInfo.slice(0, 6).map(([label, value], idx) => (
+                  <InfoCard
+                    key={`${label}-${idx}`}
+                    label={label}
+                    value={value}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
+
+      <section className="mt-10 grid w-full gap-6 lg:grid-cols-[240px_minmax(0,1fr)]">
+        <aside className="h-fit rounded-[22px] border border-[#f2d8cd] bg-[#FFF8F5] p-4 lg:sticky lg:top-24">
+          <SectionNav sections={navSections} />
+        </aside>
+
+        <div className="min-w-0">
+          {topInfo.length > 0 && (
+            <section id="key-information" className="scroll-mt-24">
+              <h2 className="text-xl font-bold text-[#0d2d47]">
+                {labels.keyInfo}
+              </h2>
+
+              <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {topInfo.map(([label, value], idx) => (
-                  <InfoCard key={`${label}-${idx}`} label={label} value={value} />
+                  <InfoCard
+                    key={`${label}-${idx}`}
+                    label={label}
+                    value={value}
+                  />
                 ))}
               </div>
             </section>
           )}
 
-
           {allBlocks.map((block, index) => (
             <section
               id={block.id}
               key={`${block.id}-${index}`}
-              className="mt-6 scroll-mt-24 border-t border-[#f2d8cd] pt-6"
+              className="mt-8 scroll-mt-24 border-t border-[#f2d8cd] pt-7"
             >
               <h3 className="break-words text-xl font-bold text-[#0d2d47]">
                 {block.title}
@@ -624,7 +623,7 @@ const navSections = [
           {faqs.length > 0 && (
             <section
               id="faq"
-              className="mt-6 scroll-mt-24 border-t border-[#f2d8cd] pt-6"
+              className="mt-8 scroll-mt-24 border-t border-[#f2d8cd] pt-7"
             >
               <h3 className="break-words text-xl font-bold text-[#0d2d47]">
                 {labels.faqTitle}
@@ -634,20 +633,20 @@ const navSections = [
                 {faqs.map((faq, index) => (
                   <details
                     key={index}
-                    className="group rounded-lg bg-[#FFF8F5] p-4 ring-1 ring-[#f2d8cd]"
+                    className="group rounded-2xl border border-[#f2d8cd] bg-[#FFF8F5] p-4 transition hover:shadow-md"
                   >
                     <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-semibold text-[#0d2d47]">
-                      <span className="min-w-0 break-words">{faq.question}</span>
-                      <span className="text-[#19a6b5] group-open:hidden">+</span>
-                      <span className="hidden text-[#19a6b5] group-open:block">-</span>
+                      <span className="break-words">{faq.question}</span>
+                      <span className="text-lg text-[#19a6b5] group-open:hidden">
+                        +
+                      </span>
+                      <span className="hidden text-lg text-[#19a6b5] group-open:block">
+                        -
+                      </span>
                     </summary>
 
-                    <div className="grid grid-rows-[0fr] transition-all duration-300 ease-in-out group-open:grid-rows-[1fr]">
-                      <div className="overflow-hidden">
-                        <div className="mt-3 border-t border-[#f2d8cd] pt-3">
-                          <RenderContent value={faq.answer} />
-                        </div>
-                      </div>
+                    <div className="mt-3 border-t border-[#f2d8cd] pt-3">
+                      <RenderContent value={faq.answer} />
                     </div>
                   </details>
                 ))}
@@ -658,26 +657,20 @@ const navSections = [
           {suggested.length > 0 && (
             <section
               id="explore-more"
-              className="mt-6 scroll-mt-24 border-t border-[#f2d8cd] pt-6"
+              className="mt-8 scroll-mt-24 border-t border-[#f2d8cd] pt-7"
             >
               <h3 className="text-xl font-bold text-[#0d2d47]">
                 {labels.exploreMore}
               </h3>
 
-              <div className="mt-4 grid min-w-0 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 {suggested.map((item) => (
                   <Link
                     key={item.id || item.slug}
                     href={`/products/ingredient/${item.slug}`}
-                    className="min-w-0 rounded-xl border border-[#f2d8cd] bg-[#FFF8F5] p-4 text-center transition hover:-translate-y-1 hover:shadow-md"
+                    className="rounded-2xl border border-[#f2d8cd] bg-[#FFF8F5] p-4 transition hover:-translate-y-1 hover:shadow-md"
                   >
-                    <img
-                      src={item.image || fallbackImg}
-                      alt={item.name}
-                      className="mx-auto h-20 w-20 object-contain"
-                    />
-
-                    <p className="mt-3 break-words text-sm font-bold text-[#0d2d47]">
+                    <p className="break-words text-sm font-bold text-[#0d2d47]">
                       {item.name}
                     </p>
 
@@ -708,7 +701,7 @@ const navSections = [
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/contact"
-              className="max-w-full rounded-full bg-[#0d2d47] px-5 py-2 text-center font-semibold text-white transition hover:bg-[#19a6b5]"
+                className="rounded-full bg-[#0d2d47] px-5 py-2 text-center font-semibold text-white transition hover:bg-[#19a6b5]"
               >
                 {labels.goToContact}
               </Link>
@@ -724,6 +717,8 @@ const navSections = [
           </div>
         </div>
       )}
-    </main>
-  );
+    </div>
+  </main>
+);
+
 }

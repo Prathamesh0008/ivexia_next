@@ -1,4 +1,4 @@
-//components\Hero.jsx
+// components/Hero.jsx
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -82,39 +82,26 @@ export default function Hero() {
   const reduceMotion = useReducedMotion();
   const { translations } = useLanguage();
 
- const banners = baseBanners.map((item, index) => {
-  const t = translations?.hero?.[index] || {};
+  const banners = baseBanners.map((item, index) => {
+    const t = translations?.hero?.[index] || {};
 
-  return {
-    ...item,
-
-    // override fields safely
-    eyebrow: t.eyebrow || item.eyebrow,
-    title: t.title || item.title,
-    text: t.text || item.text,
-    cta: t.cta || item.cta,
-    secondaryCta: t.secondaryCta || item.secondaryCta,
-    spotlight: t.spotlight || item.spotlight,
-
-    // FIXED stats merge
-  //  stats:
-  // t?.stats?.length === item.stats.length
-  //   ? item.stats.map((baseStat, i) => ({
-  //       value: baseStat.value,              // keep original value
-  //       label: t.stats[i]?.label || baseStat.label, // translate label
-  //     }))
-  //   : item.stats,
-  stats: item.stats.map((baseStat, i) => ({
-  value: baseStat.value,
-  label: translations?.hero?.[index]?.stats?.[i]?.label || baseStat.label,
-})),
-  };
-});
+    return {
+      ...item,
+      eyebrow: t.eyebrow || item.eyebrow,
+      title: t.title || item.title,
+      text: t.text || item.text,
+      cta: t.cta || item.cta,
+      secondaryCta: t.secondaryCta || item.secondaryCta,
+      spotlight: t.spotlight || item.spotlight,
+      stats: item.stats.map((baseStat, i) => ({
+        value: baseStat.value,
+        label: translations?.hero?.[index]?.stats?.[i]?.label || baseStat.label,
+      })),
+    };
+  });
 
   useEffect(() => {
-    if (isHovered) {
-      return;
-    }
+    if (isHovered) return;
 
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % banners.length);
@@ -143,9 +130,11 @@ export default function Hero() {
 
   const goToSlide = (index) => setCurrentIndex(index);
   const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % banners.length);
-  const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + banners.length) % banners.length);
+  const prevSlide = () =>
+    setCurrentIndex((prev) => (prev - 1 + banners.length) % banners.length);
 
   const activeSlide = banners[currentIndex];
+
   const secondaryHref =
     currentIndex === 0
       ? "/offerings-overview"
@@ -172,6 +161,7 @@ export default function Hero() {
           }
           transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" }}
         />
+
         <motion.div
           className="absolute right-[-8%] top-20 h-72 w-72 rounded-full bg-[#FF7A00]/18 blur-3xl"
           animate={
@@ -181,6 +171,7 @@ export default function Hero() {
           }
           transition={{ duration: 13, repeat: Infinity, ease: "easeInOut" }}
         />
+
         <motion.div
           className="absolute bottom-[-8%] left-1/3 h-64 w-64 rounded-full bg-[#E2004F]/14 blur-3xl"
           animate={
@@ -190,6 +181,7 @@ export default function Hero() {
           }
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
         />
+
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:72px_72px] opacity-[0.12]" />
       </div>
 
@@ -208,7 +200,11 @@ export default function Hero() {
             animate={
               reduceMotion
                 ? undefined
-                : { scale: isHovered ? 1.05 : 1.12, x: [0, -12, 0], y: [0, 8, 0] }
+                : {
+                    scale: isHovered ? 1.05 : 1.12,
+                    x: [0, -12, 0],
+                    y: [0, 8, 0],
+                  }
             }
             transition={{
               scale: { duration: 8, ease: "easeOut" },
@@ -222,6 +218,7 @@ export default function Hero() {
           />
           <div className="absolute inset-0 bg-[linear-gradient(104deg,rgba(5,18,31,0.74)_18%,rgba(5,18,31,0.42)_54%,rgba(5,18,31,0.16)_100%)]" />
           <div className="absolute inset-0 bg-black/18" />
+
           <div className="relative z-20 flex min-h-[120svh] items-start py-24 pb-36 sm:min-h-[115svh] sm:py-28 sm:pb-40 md:min-h-[110svh] md:py-28 md:pb-40 lg:min-h-[100svh] lg:items-center lg:py-28">
             <div className="mx-auto grid w-full max-w-7xl items-center gap-10 px-6 sm:px-10 md:px-16 lg:grid-cols-[minmax(0,1.15fr)_360px]">
               <motion.div
@@ -230,21 +227,11 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.18 }}
                 className="max-w-3xl"
               >
-                {/* <motion.div
-                  initial={{ opacity: 0, x: reduceMotion ? 0 : -18 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.28 }}
-                  className="mb-5 inline-flex items-start md:items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs uppercase tracking-[0.28em] text-white/90 backdrop-blur-sm md:text-sm"
-                >
-                  <span className="h-2 w-2 rounded-full" style={{ backgroundColor: activeSlide.accent }} />
-                  {activeSlide.subtitle || activeSlide.eyebrow}
-                </motion.div> */}
-
                 <motion.h1
                   initial={{ opacity: 0, y: reduceMotion ? 0 : 22 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.75, delay: 0.34 }}
-                  className="max-w-4xl  font-bold leading-[1.02] text-white text-3xl sm:text-4xl md:text-6xl"
+                  className="max-w-4xl font-bold leading-[1.02] text-white text-3xl sm:text-4xl md:text-6xl"
                 >
                   {activeSlide.title}
                 </motion.h1>
@@ -267,7 +254,7 @@ export default function Hero() {
                   {floatingNotes.map((item, index) => (
                     <motion.span
                       key={item.label}
-                      className={`inline-flex items-start md:items-center rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] backdrop-blur-sm md:text-[11px] ${item.tone}`}
+                      className={`inline-flex items-start rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] backdrop-blur-sm md:items-center md:text-[11px] ${item.tone}`}
                       animate={reduceMotion ? undefined : { y: [0, -4, 0] }}
                       transition={{
                         duration: 4.5,
@@ -285,11 +272,11 @@ export default function Hero() {
                   initial={{ opacity: 0, y: reduceMotion ? 0 : 22 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.75, delay: 0.64 }}
-                  className="mt-10 flex flex-wrap items-start md:items-center gap-4"
+                  className="mt-10 flex flex-wrap items-start gap-4 md:items-center"
                 >
                   <Link
                     href="/contact"
-                    className="group inline-flex items-start md:items-center gap-3 rounded-xl bg-gradient-to-r from-[#FF7A00] to-[#E2004F] px-5 py-3 sm:px-8 sm:py-4 font-semibold text-[#0d2d47] shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(0,0,0,0.28)]"
+                    className="group inline-flex items-start gap-3 rounded-xl bg-gradient-to-r from-[#FF7A00] to-[#E2004F] px-5 py-3 font-semibold text-[#0d2d47] shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(0,0,0,0.28)] sm:px-8 sm:py-4 md:items-center"
                   >
                     <span>{activeSlide.cta}</span>
                     <svg
@@ -309,88 +296,57 @@ export default function Hero() {
 
                   <Link
                     href={secondaryHref}
-                    className="inline-flex items-start md:items-center gap-3 rounded-xl border border-white/18 bg-white/10 px-7 py-4 font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/16"
+                    className="inline-flex items-start gap-3 rounded-xl border border-white/18 bg-white/10 px-7 py-4 font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/16 md:items-center"
                   >
                     <span>{activeSlide.secondaryCta}</span>
                   </Link>
                 </motion.div>
 
-                <motion.div
-                  initial={{ opacity: 0, y: reduceMotion ? 0 : 22 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.75, delay: 0.78 }}
-            className="mt-8 grid max-w-2xl grid-cols-1 gap-3 sm:grid-cols-3 md:mt-10"
-                >
-                  {(activeSlide.stats || []).map((stat, index) => (
-                    <motion.div
-                      key={`${stat.label}-${index}`}
-                      className="min-h-[118px] rounded-2xl border border-white/12 bg-white/10 px-4 py-4 backdrop-blur-md"
-                      whileHover={reduceMotion ? undefined : { y: -3, backgroundColor: "rgba(255,255,255,0.16)" }}
-                    >
-                      <div className="text-2xl font-bold text-white md:text-3xl">
-                        {stat.value}
-                      </div>
-                      <div className="mt-2 break-words text-[10px] font-semibold uppercase leading-relaxed tracking-[0.08em] text-white/72 sm:text-[9px] md:text-[10px]">
-                        {stat.label}
-                      </div>
-                    </motion.div>
-                  ))}
-                </motion.div>
+                {/* SMALL RESPONSIVE BOTTOM BOXES */}
+ {/* SMALL LAST THREE CONTAINERS */}
+<motion.div
+  initial={{ opacity: 0, y: reduceMotion ? 0 : 22 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.75, delay: 0.78 }}
+  className="mt-6 flex flex-wrap gap-2 md:mt-7"
+>
+  {(activeSlide.stats || []).map((stat, index) => (
+    <motion.div
+      key={`${stat.label}-${index}`}
+      className="w-[120px] rounded-lg border border-white/12 bg-white/10 px-2.5 py-2 backdrop-blur-md sm:w-[130px]"
+      whileHover={
+        reduceMotion
+          ? undefined
+          : { y: -3, backgroundColor: "rgba(255,255,255,0.16)" }
+      }
+    >
+      <div className="text-[26px] font-bold leading-none text-white md:text-[28px]">
+        {stat.value}
+      </div>
+
+      <div className="mt-1 text-[12px] font-semibold uppercase leading-tight tracking-normal text-white/85 md:text-[13px]">
+        {stat.label}
+      </div>
+    </motion.div>
+  ))}
+</motion.div>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, x: reduceMotion ? 0 : 30, y: reduceMotion ? 0 : 20 }}
+                initial={{
+                  opacity: 0,
+                  x: reduceMotion ? 0 : 30,
+                  y: reduceMotion ? 0 : 20,
+                }}
                 animate={{ opacity: 1, x: 0, y: 0 }}
                 transition={{ duration: 0.85, delay: 0.45 }}
                 className="relative hidden lg:block"
               >
-                {/* <motion.div
-                  className="absolute -right-8 top-8 h-24 w-24 rounded-full border border-white/12"
-                  animate={reduceMotion ? undefined : { y: [0, -10, 0], rotate: [0, 12, 0] }}
-                  transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-                /> */}
                 <motion.div
                   className="absolute -left-6 bottom-10 h-14 w-14 rounded-full bg-[#19a6b5]/24 blur-md"
                   animate={reduceMotion ? undefined : { scale: [1, 1.15, 1] }}
                   transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                 />
-
-                {/* <div className="relative overflow-hidden rounded-[28px] border border-white/12 bg-white/10 p-6 text-white shadow-[0_28px_80px_rgba(0,0,0,0.28)] backdrop-blur-xl">
-                  <div className="flex items-start md:items-center justify-between text-[11px] uppercase tracking-[0.24em] text-white/65">
-                    <span>Ivexia Focus</span>
-                    <span>{String(currentIndex + 1).padStart(2, "0")}</span>
-                  </div>
-
-                  <div className="mt-6 text-2xl font-semibold leading-snug">
-                    {activeSlide.spotlight}
-                  </div>
-
-                  <div className="mt-8 space-y-4">
-                    {(activeSlide.stats || []).map((stat, index) => (
-                      <motion.div
-                        key={`${stat.value}-${index}`}
-                        className="rounded-2xl border border-white/10 bg-black/12 px-4 py-4"
-                        animate={reduceMotion ? undefined : { x: [0, index % 2 === 0 ? 6 : -6, 0] }}
-                        transition={{ duration: 6 + index, repeat: Infinity, ease: "easeInOut" }}
-                      >
-                        <div className="flex items-start md:items-center justify-between gap-4">
-                          <div>
-                            <div className="text-sm uppercase tracking-[0.18em] text-white/55">
-                              {stat.label}
-                            </div>
-                            <div className="mt-2 text-xl font-bold text-white">
-                              {stat.value}
-                            </div>
-                          </div>
-                          <div
-                            className="h-3 w-3 rounded-full"
-                            style={{ backgroundColor: activeSlide.accent }}
-                          />
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div> */}
               </motion.div>
             </div>
           </div>
@@ -428,14 +384,9 @@ export default function Hero() {
         ))}
       </div>
 
-      {/* <div className="absolute right-6 top-6 z-30 hidden rounded-full border border-white/12 bg-black/16 px-4 py-2 text-sm font-medium text-white/92 backdrop-blur-sm md:block">
-        {String(currentIndex + 1).padStart(2, "0")} /{" "}
-        {String(banners.length).padStart(2, "0")}
-      </div> */}
-
       <button
         onClick={prevSlide}
-        className="group absolute left-6 top-1/2 z-30 hidden h-12 w-12 -translate-y-1/2 items-start md:items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/18 md:flex"
+        className="group absolute left-6 top-1/2 z-30 hidden h-12 w-12 -translate-y-1/2 items-start justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/18 md:flex md:items-center"
         aria-label="Previous slide"
       >
         <span className="text-3xl leading-none">‹</span>
@@ -443,27 +394,11 @@ export default function Hero() {
 
       <button
         onClick={nextSlide}
-        className="group absolute right-6 top-1/2 z-30 hidden h-12 w-12 -translate-y-1/2 items-start md:items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/18 md:flex"
+        className="group absolute right-6 top-1/2 z-30 hidden h-12 w-12 -translate-y-1/2 items-start justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/18 md:flex md:items-center"
         aria-label="Next slide"
       >
         <span className="text-3xl leading-none">›</span>
       </button>
-
-      <motion.div
-        initial={{ opacity: 0, y: reduceMotion ? 0 : -18 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.2, duration: 0.6 }}
-        className="absolute bottom-8 right-8 z-30 hidden md:block"
-      >
-        {/* <div className="flex flex-col items-start md:items-center gap-2 text-[11px] tracking-[0.24em] text-white/65">
-          <span>SCROLL</span>
-          <motion.div
-            className="w-px bg-gradient-to-b from-white/70 to-transparent"
-            animate={reduceMotion ? undefined : { height: [34, 52, 34] }}
-            transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
-          />
-        </div> */}
-      </motion.div>
     </section>
   );
 }

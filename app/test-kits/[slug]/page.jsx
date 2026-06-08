@@ -1,21 +1,11 @@
 import TestKitDetailClient from "@/components/TestKitDetailClient";
+import { getTestKitBySlug } from "@/lib/catalogData";
 import { getDetailContent } from "@/lib/detailContent";
-import dbConnect from "@/lib/dbConnect";
-import TestKit from "@/models/TestKit";
 
 const SITE_URL = "https://www.ivexiapharma.com";
 
 async function getTestKit(slug) {
-  if (!slug) {
-    return null;
-  }
-
-  try {
-    await dbConnect();
-    return await TestKit.findOne({ slug }).lean();
-  } catch (error) {
-    return null;
-  }
+  return getTestKitBySlug(slug);
 }
 
 async function getTestKitContent(slug, language = "en") {

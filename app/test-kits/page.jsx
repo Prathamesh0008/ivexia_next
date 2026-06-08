@@ -1,4 +1,5 @@
 import TestKitsPageClient from "@/components/TestKitsPageClient";
+import { getTestKits } from "@/lib/catalogData";
 
 export const metadata = {
   title: "Diagnostic Test Kits | Ivexia Pharma",
@@ -10,5 +11,5 @@ export const metadata = {
 };
 
 export default function TestKitsPage() {
-  return <TestKitsPageClient initialTestKits={[]} />;
+  return <TestKitsPageClient initialTestKits={getTestKits()} />;
 }

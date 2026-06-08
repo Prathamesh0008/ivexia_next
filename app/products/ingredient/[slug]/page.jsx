@@ -1,21 +1,12 @@
+//app\products\ingredient\[slug]\page.jsx
 import IngredientDetailClient from "@/components/IngredientDetailClient";
+import { getIngredientBySlug } from "@/lib/catalogData";
 import { getDetailContent } from "@/lib/detailContent";
-import dbConnect from "@/lib/dbConnect";
-import Ingredient from "@/models/Ingredient";
 
 const SITE_URL = "https://www.ivexiapharma.com";
 
 async function getIngredient(slug) {
-  if (!slug) {
-    return null;
-  }
-
-  try {
-    await dbConnect();
-    return await Ingredient.findOne({ slug }).lean();
-  } catch (error) {
-    return null;
-  }
+  return getIngredientBySlug(slug);
 }
 
 async function getIngredientContent(slug, language = "en") {
