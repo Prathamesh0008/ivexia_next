@@ -208,7 +208,27 @@ html,
 body {
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+  /* Clip horizontal spill without creating a nested scroll container. */
+  overflow-x: clip;
+}
+
+/* Keep the native page scrollbar distinguishable beside the white navbar. */
+html {
+  scrollbar-color: #7b8791 #eef2f4;
+}
+
+html::-webkit-scrollbar {
+  width: 12px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #eef2f4;
+}
+
+html::-webkit-scrollbar-thumb {
+  border: 3px solid #eef2f4;
+  border-radius: 999px;
+  background: #7b8791;
 }
 
 *,

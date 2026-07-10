@@ -12,7 +12,7 @@ export const FINISHED_PRODUCTS = [
     "CAS-ID": "41575-94-4",
     "id": 1,
     "slug": "carboplatin-injection"
-  },/*  */
+  },
   {
     "category": "ANTICANCER",
     "name": "Cisplatin Injection",
